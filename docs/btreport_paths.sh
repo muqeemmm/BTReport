@@ -8,17 +8,18 @@
 
 
 # Singularity / Apptainer images
-export SYNTHMORPH_SIF=/pscratch/sd/j/jehr/synthmorph/synthmorph_4.sif
-export SYNTHSEG_SIF=/pscratch/sd/j/jehr/synthseg/synthseg.sif
-export OLLAMA_SIF=/pscratch/sd/j/jehr/ollama/ollama.sif
+export SYNTHMORPH_SIF="/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/btreport/utils/synthmorph_4.sif"
+export SYNTHSEG_SIF="/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/btreport/utils/synthseg.sif"
+# export OLLAMA_SIF=/pscratch/sd/j/jehr/ollama/ollama.sif
 
-export SUBJECTS_DIR=/pscratch # Relative directory from which subject files are referenced inside containers. Usually I set this to the root of my scratch space.
+export SUBJECTS_DIR="/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Astrocytoma_IDH-mutant" # Relative directory from which subject files are referenced inside containers. Usually I set this to the root of my scratch space.
+export SF="/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/dataset/BraTS2021_00045" # Absolute path to the same directory on the host system. This is used for bind-mounting into the containers.
 
 # Ollama model storage (should be on large-capacity storage)
-export OLLAMA_MODELS=/pscratch/sd/j/jehr/ollama/ollama_models
-export OLLAMA_HOST='http://127.0.0.1:11434'
-unset http_proxy https_proxy all_proxy
-unset HTTP_PROXY HTTPS_PROXY ALL_PROXY
+# export OLLAMA_MODELS=/pscratch/sd/j/jehr/ollama/ollama_models
+# export OLLAMA_HOST='http://127.0.0.1:11434'
+# unset http_proxy https_proxy all_proxy
+# unset HTTP_PROXY HTTPS_PROXY ALL_PROXY
 
 export PATH=${PATH}:/cvmfs/oasis.opensciencegrid.org/mis/apptainer/1.3.3/x86_64/bin
 
@@ -27,14 +28,14 @@ if [ ! -x "$SYNTHMORPH_SIF" ]; then
 fi
 
 
-for var in SYNTHMORPH_SIF SYNTHSEG_SIF OLLAMA_SIF; do
+for var in SYNTHMORPH_SIF SYNTHSEG_SIF; do
     if [ ! -f "${!var}" ]; then
         echo "ERROR: $var does not exist or is not a file: ${!var}" >&2
         return 1
     fi
 done
 
-for var in SUBJECTS_DIR OLLAMA_MODELS; do
+for var in SUBJECTS_DIR; do
     if [ ! -d "${!var}" ]; then
         echo "ERROR: $var does not exist or is not a directory: ${!var}" >&2
         return 1
@@ -45,7 +46,8 @@ done
 echo "BTReport paths validated:"
 echo "  SYNTHMORPH_SIF : $SYNTHMORPH_SIF"
 echo "  SYNTHSEG_SIF  : $SYNTHSEG_SIF"
-echo "  OLLAMA_SIF    : $OLLAMA_SIF"
-echo "  OLLAMA_MODELS : $OLLAMA_MODELS"
+# echo "  OLLAMA_SIF    : $OLLAMA_SIF"
+# echo "  OLLAMA_MODELS : $OLLAMA_MODELS"
 echo "  SUBJECTS_DIR  : $SUBJECTS_DIR"
-echo "  OLLAMA_HOST   : $OLLAMA_HOST"
+echo "  SF            : $SF"
+# echo "  OLLAMA_HOST   : $OLLAMA_HOST"

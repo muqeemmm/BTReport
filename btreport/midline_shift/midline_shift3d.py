@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 SLAB_NAME = {1: "falx cerebri above", 2: "septum pellucidum", 3: "third ventricle", 4: "fourth ventricle", 5: "falx cerebri below"}
-
+MIDLINE_PATH = Path(__file__).resolve().parent / "midline_plane_regressed.nii.gz"
 
 def get_levels_zslabs(anat_seg, save_path=None):
     atlas_nii = nib.load(anat_seg)

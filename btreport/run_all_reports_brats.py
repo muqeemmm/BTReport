@@ -3,6 +3,8 @@ import subprocess
 import os
 import json
 from .utils.log import get_logger
+from os.path import join
+from pathlib import Path
 
 # logger = get_logger("btreport.run_all_reports", subject="run_all")
 logger = get_logger("batchgen")
@@ -11,34 +13,37 @@ logger = get_logger("batchgen")
 def main():
     parser = argparse.ArgumentParser(description="Run generate_report.py on ALL subject folders inside a directory.")
 
-    parser.add_argument("--save_dir", type=str, required=True, help="Path to save results.")
+    # parser.add_argument("--save_dir", type=str, required=True, help="Path to save results.")
 
-    root='/gscratch/kurtlab/brats2023/data/brats-gli/ASNR-MICCAI-BraTS2023-GLI-Challenge-TrainingData'
+    root='/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Astrocytoma_IDH-mutant'
 
     parser.add_argument("--clear_tmp", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
     parser.add_argument("--ncr_label", type=int, default=1)
     parser.add_argument("--ed_label", type=int, default=2)
-    parser.add_argument("--et_label", type=int, default=3)
+    parser.add_argument("--et_label", type=int, default=4)
     parser.add_argument("--llm", type=str, default="gpt-oss:120b")
     parser.add_argument("--eval", action="store_true", help="Running evaluation after generation.")
 
     args = parser.parse_args()
 
-    save_dir = os.path.realpath(args.save_dir)
+    # save_dir = os.path.realpath(args.save_dir)
     llm = args.llm
 
-    generate_script = "btreport.generate_brats_reports"
+    generate_script = "btreport.generate_report"
 
-    merged_path = os.path.join(save_dir, "merged_reports_btreport.json")
-    merged = {}
-    if os.path.exists(merged_path):
-        with open(merged_path, "r") as f:
-            merged = json.load(f)
+    # merged_path = os.path.join(save_dir, "merged_reports_btreport.json")
+    # merged = {}
+    # if os.path.exists(merged_path):
+    #     with open(merged_path, "r") as f:
+    #         merged = json.load(f)
 
     for entry in sorted(os.listdir(root)):
-        subject_dir = os.path.join(save_dir, entry)
-        paths = build_subject_paths(entry)
+        subject_dir = os.path.join(root, entry)
+        if os.path.exists(join(subject_dir, f"{Path(subject_dir).name}_metadata_no_clinical.json")):
+            logger.info(f"Skipping {entry} — metadata_no_clinical.json already exists.")
+            continue
+        # paths = build_subject_paths(entry)
 
         if not os.path.isdir(os.path.join(root, entry)):
             continue  # skip files
@@ -47,9 +52,9 @@ def main():
 
         predicted_key = f"Predicted Report ({llm})"
 
-        if (not args.overwrite and entry in merged and predicted_key in merged[entry]):
-            logger.info(f"Skipping {entry} [{llm}] — already merged.")
-            continue
+        # if (not args.overwrite and entry in merged and predicted_key in merged[entry]):
+        #     logger.info(f"Skipping {entry} [{llm}] — already merged.")
+        #     continue
 
         cmd = [
             "python3",
@@ -67,9 +72,9 @@ def main():
             llm,
         ]
 
-        for key, value in paths.items():
-            if value is not None:
-                cmd.extend([f"--{key}", value])
+        # for key, value in paths.items():
+        #     if value is not None:
+        #         cmd.extend([f"--{key}", value])
 
         if args.clear_tmp:
             cmd.append("--clear_tmp")
@@ -78,11 +83,11 @@ def main():
 
         subprocess.run(cmd, check=True)
 
-        update_merged_reports(
-            root_dir=save_dir,
-            subject_id=entry,
-            llm=llm,
-        )
+        # update_merged_reports(
+        #     root_dir=save_dir,
+        #     subject_id=entry,
+        #     llm=llm,
+        # )
     logger.info("\nFinished processing all subjects.")
 
 

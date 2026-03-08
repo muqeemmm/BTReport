@@ -1,3 +1,4 @@
+from pathlib import Path
 from .utils import register, plotting, anat_segmentation
 from .utils.log import get_logger
 from .llm_report_generation.ollama_report_gen import generate_llm_report
@@ -9,6 +10,8 @@ from .vasari_features import ExtractVASARI
 import os, shutil, glob, json
 import argparse
 from os.path import join
+import nibabel as nib
+import numpy as np
 
 """
 conda activate BTReport
@@ -23,8 +26,21 @@ python3 -m btreport.eval_json --skip_processed --no-parse-synthetic --do_details
 
 # python3 -m btreport.eval_json --skip_processed --no-parse-synthetic --do_details --json /pscratch/sd/j/jehr/MSFT/BTReport_evaluation/from-segmentation-to-explanation/savedv1/seg2exp_reports_uwimaging_22513869714470.json
 def main(args: argparse.Namespace):
-    t1_path = glob.glob(os.path.join(args.subject_folder, "*-t1n.nii.gz"))[0]
-    tumor_path = glob.glob(os.path.join(args.subject_folder, "*-seg.nii.gz"))[0]
+    t1_path = glob.glob(os.path.join(args.subject_folder, "*_t1.nii.gz"))[0]
+    try:
+        tumor_path = glob.glob(os.path.join(args.subject_folder, "*_seg_pred.nii.gz"))[0]
+    except:
+        tumor_path = glob.glob(os.path.join(args.subject_folder, "*_seg.nii.gz"))[0]
+
+    # Determine unique values in tumor segmentation
+    tumor_img = nib.load(tumor_path)
+    tumor_data = tumor_img.get_fdata()
+    unique_values = np.unique(tumor_data)
+
+    if 4 in unique_values:
+        et_label = 4
+    else:
+        et_label = 3
 
     tmp_dir = join(args.subject_folder, "tmp")
     os.makedirs(tmp_dir, exist_ok=True)
@@ -77,7 +93,7 @@ def main(args: argparse.Namespace):
         save_path=merged_seg,
         ncr_label=args.ncr_label,
         ed_label=args.ed_label,
-        et_label=args.et_label,
+        et_label=et_label,
         tumor_type=metadata.get("tumor-type", "glioma"),
         overwrite=args.overwrite,
     )
@@ -87,18 +103,26 @@ def main(args: argparse.Namespace):
 
     # Extract midline shift features
     logger.info(f"** [2/4] Starting midline shift processing...")
-    midline_summary = midline_shift_3d(tmp_dir=tmp_dir, tumor=tumor_path, ncr_label=args.ncr_label, ed_label=args.ed_label, et_label=args.et_label, overwrite=args.overwrite)
+    ideal_midline_out = join(tmp_dir, "ideal_midline.nii.gz")
+    midline_distances_out = join(tmp_dir, "midline_distances.nii.gz")
+    # midline_summary = midline_shift_3d(tmp_dir=tmp_dir, tumor=tumor_path, ncr_label=args.ncr_label, ed_label=args.ed_label, et_label=args.et_label, overwrite=args.overwrite)
+    midline_summary = midline_shift_3d(tumor=tumor_path, deformed_midline_path=midline_out, ideal_midline_path=ideal_midline_out, midline_distances_path=midline_distances_out, anat_seg_path=anatseg, ncr_label=args.ncr_label, ed_label=args.ed_label, et_label=et_label, overwrite=args.overwrite)
     metadata.update(midline_summary)
 
     # Extract VASARI features
     # vasari_summary = vasari_features(tumor=tumor_path, tumor_mni=tum_in_mni, metadata=metadata, merged=merged_seg, verbose=False, ncr_label=args.ncr_label, ed_label=args.ed_label, et_label=args.et_label)
     logger.info(f"** [3/4] Starting VASARI feature extraction steps...")
-    extractor = ExtractVASARI(enhancing_label=args.et_label, nonenhancing_label=args.ncr_label, oedema_label=args.ed_label, verbose=False)
+    extractor = ExtractVASARI(enhancing_label=et_label, nonenhancing_label=args.ncr_label, oedema_label=args.ed_label, verbose=False)
     vasari_summary = extractor(tumorseg_mni=tum_in_mni, tumorseg_ss=tumor_path, merged=merged_seg, metadata=metadata)
     metadata.update(vasari_summary)
 
     logger.info(f"** [4/4] Starting report generation with LLM ({args.llm})...")
     metadata_no_clinical = {k: v for k, v in metadata.items() if k != "Clinical Report"}
+    # Save metadata_no_clinical to tmp directory
+    metadata_no_clinical_path = join(args.subject_folder, f"{Path(args.subject_folder).name}_metadata_no_clinical.json")
+    with open(metadata_no_clinical_path, "w") as f:
+        json.dump(metadata_no_clinical, f, indent=2)
+    logger.info(f"Saved metadata (excluding clinical report) to {metadata_no_clinical_path}")
 
     keys_to_keep = [
         "Anatomical Overlap Regions",
@@ -134,17 +158,17 @@ def main(args: argparse.Namespace):
     ]
     refined_metadata = {k: v for k, v in metadata_no_clinical.items() if k in keys_to_keep}
 
-    if f"BTReport Generated Report ({args.llm})" not in metadata:
-        args.image_path = join(args.subject_folder, "tumor_maxslice.png") if args.image else None
-        report = generate_llm_report(args.subject_folder.split("/")[-1], refined_metadata, model=args.llm, image_path=args.image_path)
-        logger.info(f"* Finished LLM report generation using extracted metadata!")
-        metadata[f"BTReport Generated Report ({args.llm})"] = report
-    else:
-        logger.info(f'Key "BTReport Generated Report ({args.llm})" found in metadata, skipping LLM report')
+    # if f"BTReport Generated Report ({args.llm})" not in metadata:
+    #     args.image_path = join(args.subject_folder, "tumor_maxslice.png") if args.image else None
+    #     report = generate_llm_report(args.subject_folder.split("/")[-1], refined_metadata, model=args.llm, image_path=args.image_path)
+    #     logger.info(f"* Finished LLM report generation using extracted metadata!")
+    #     metadata[f"BTReport Generated Report ({args.llm})"] = report
+    # else:
+    #     logger.info(f'Key "BTReport Generated Report ({args.llm})" found in metadata, skipping LLM report')
 
-    with open(report_save_path, "w") as f:
-        json.dump(metadata, f, indent=2)
-    logger.info(f'Saved extracted metadata and LLM report to {join(args.subject_folder, "patient_metadata_btreport.json")}')
+    # with open(report_save_path, "w") as f:
+    #     json.dump(metadata, f, indent=2)
+    # logger.info(f'Saved extracted metadata and LLM report to {join(args.subject_folder, "patient_metadata_btreport.json")}')
 
     if args.clear_tmp:  # Delete intermediate files after processing, useful for memory reduction but you lose interpretability of results.
         shutil.rmtree(tmp_dir)
@@ -159,7 +183,7 @@ if __name__ == "__main__":
     parser.add_argument("--overwrite", action="store_true", help="Redo this step, overwriting previous results.")
     parser.add_argument("--ncr_label", type=int, default=1)
     parser.add_argument("--ed_label", type=int, default=2)
-    parser.add_argument("--et_label", type=int, default=3)
+    parser.add_argument("--et_label", type=int, default=4)
     parser.add_argument("--devices", type=str, default="0", help="String with cuda device IDs for use by synthseg and SynthMorph. E.g. '0,1' or '0'.")
 
     parser.add_argument(

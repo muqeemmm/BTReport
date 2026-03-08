@@ -55,6 +55,27 @@ def synthseg(input_path, output_path, parc=False, robust=False, fast=False, cpu=
     subprocess.run(cmd, check=True)
 
 
+# def synthseg(input_path, output_path, parc=False, robust=False, fast=False, cpu=False, sif=WRAPPER):
+#     if os.path.exists(output_path):
+#         return
+
+#     cmd = [
+#         "apptainer", "exec", "--nv",
+#         "--env", "TF_GPU_ALLOCATOR=cuda_malloc_async",
+#         "--env", "TF_FORCE_GPU_ALLOW_GROWTH=true",
+#         sif,
+#         "python", "/opt/SynthSeg/scripts/commands/SynthSeg_predict.py",
+#         "--i", os.path.realpath(input_path),
+#         "--o", os.path.realpath(output_path),
+#     ]
+
+#     if parc:   cmd.append("--parc")
+#     if robust: cmd.append("--robust")
+#     if fast:   cmd.append("--fast")
+#     if cpu:    cmd.append("--cpu")
+
+#     subprocess.run(cmd, check=True)
+
 TUMOR_LABEL_MAPS = {
     "brats-men": {1: 64, 2: 65, 3: 66},  # Meningioma NCR, ED, ET
     "brats-ped": {1: 67, 2: 68, 3: 69},  # Pediatric Glioma NCR, ED, ET

@@ -170,6 +170,7 @@ class ExtractVASARI:
         mid = segmentation_array.shape[self.z_dim] // 2
         right_hemi = (temp < mid).sum()
         left_hemi = (temp > mid).sum()
+        side = "Un-defined"
         if right_hemi > left_hemi:
             side = "Right"
         if left_hemi > right_hemi:
