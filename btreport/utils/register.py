@@ -4,7 +4,7 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 
-MNI152 = Path(__file__).resolve().parent / "MNI152_T1_1mm_Brain.nii.gz"
+MNI152 = Path(__file__).resolve().parent / "MNI152_T1_1mm_Brain-filled.nii.gz"
 MIDLINE = Path(__file__).resolve().parent / "midline_plane_regressed.nii.gz"
 
 SUBJECTS_DIR = os.path.realpath(os.environ.get("SUBJECTS_DIR"))

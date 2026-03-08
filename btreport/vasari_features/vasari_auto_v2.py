@@ -177,6 +177,8 @@ class ExtractVASARI:
             side = "Left"
         if right_hemi > self.focus_thresh and left_hemi > self.focus_thresh:
             side = "Bilateral"
+        else:
+            side = "Midline"
         return side
 
     def get_region_proportions(self, segmentation, atlas_regions):

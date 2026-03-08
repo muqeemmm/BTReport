@@ -21,6 +21,9 @@ export SF="/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTR
 # unset http_proxy https_proxy all_proxy
 # unset HTTP_PROXY HTTPS_PROXY ALL_PROXY
 
+mkdir -p $OLLAMA_MODELS
+
+
 export PATH=${PATH}:/cvmfs/oasis.opensciencegrid.org/mis/apptainer/1.3.3/x86_64/bin
 
 if [ ! -x "$SYNTHMORPH_SIF" ]; then

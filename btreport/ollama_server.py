@@ -4,8 +4,6 @@ import subprocess
 from pathlib import Path
 
 
-# ENV='OLLAMA_HOST=http://127.0.0.1:50505'
-
 
 def check_env_variables():
     if "OLLAMA_SIF" not in os.environ:
@@ -15,34 +13,72 @@ def check_env_variables():
     if "OLLAMA_HOST" not in os.environ:
         raise RuntimeError("Set OLLAMA_HOST. Syntax: export OLLAMA_HOST=http://127.0.0.1:50505")
 
+import os
+import subprocess
+from pathlib import Path
 
 def start_ollama(gpus="0"):
     check_env_variables()
     sif = os.environ["OLLAMA_SIF"]
     models = os.environ["OLLAMA_MODELS"]
+    ollama_host = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:50505")
 
     env = os.environ.copy()
     env["CUDA_VISIBLE_DEVICES"] = gpus
     env["APPTAINERENV_OLLAMA_MODELS"] = models
 
-    subprocess.run(
-        [
-            "apptainer",
-            "exec",
-            "--nv",
-            "--env",
-            f"OLLAMA_HOST={os.environ['OLLAMA_HOST']}",
-            # "--env", ENV,
-            # "-B", f"{Path(models).parent}:{Path(models).parent}",
-            "-B",
-            f"{Path(models)}:{Path(models)}",
-            sif,
-            "ollama",
-            "serve",
-        ],
-        check=True,
-        env=env,
-    )
+    # DYNAMIC CERTIFICATE DISCOVERY 
+    host_cert_locations = [
+        "/etc/pki/tls/certs/ca-bundle.crt",  # RHEL / CentOS / Hyak
+        "/etc/ssl/certs/ca-certificates.crt", # Ubuntu / Debian
+        "/etc/ssl/ca-bundle.pem",             # OpenSUSE
+        "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem" 
+    ]
+    
+    active_host_cert = next((p for p in host_cert_locations if os.path.exists(p)), None)
+    container_cert_path = "/etc/ssl/certs/ca-certificates.crt"
+
+    # CONSTRUCT BINDS 
+    binds = [f"{Path(models)}:{Path(models)}"]
+    if active_host_cert:
+        binds.append(f"{active_host_cert}:{container_cert_path}")
+
+    # LOGGING OUTPUT 
+    print("Ollama Server Launch Configuration ")
+    print(f"  Container SIF:  {sif}")
+    print(f"  Model Storage:  {models}")
+    print(f"  Ollama Host:    {ollama_host}")
+    print(f"  GPU(s) active:  {gpus}")
+    if active_host_cert:
+        print(f"  Cert Mapping:   [HOST] {active_host_cert} -> [CONTAINER] {container_cert_path}")
+    else:
+        print("  Cert Mapping:   NONE (System CA bundle not found on host)")
+    print("-")
+
+    bind_args = []
+    for b in binds:
+        bind_args.extend(["-B", b])
+
+    try:
+        subprocess.run(
+            [
+                "apptainer",
+                "exec",
+                "--nv",
+                "-e",
+                "--env", f"OLLAMA_HOST={ollama_host}",
+                *bind_args,
+                sif,
+                "ollama",
+                "serve",
+            ],
+            check=True,
+            env=env,
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"\nError: Ollama server exited with status {e.returncode}")
+    except KeyboardInterrupt:
+        print("\nShutting down Ollama server...")
 
 
 def check_ollama_server():
@@ -57,15 +93,16 @@ def check_ollama_server():
             check=True,
         )
         print(f"Ollama server found at {host}")
+        return True
     except Exception:
         raise RuntimeError(f"Ollama server at {host} not reachable")
-
-
 def pull_llm(model):
     check_env_variables()
-    check_ollama_server()
+    check_ollama_server() # This ensures the healthy server is already running
+    
     sif = os.environ["OLLAMA_SIF"]
     models = os.environ["OLLAMA_MODELS"]
+    
     env = os.environ.copy()
     env["APPTAINERENV_OLLAMA_MODELS"] = models
 
@@ -73,12 +110,9 @@ def pull_llm(model):
         [
             "apptainer",
             "exec",
-            "--env",
-            f"OLLAMA_HOST={os.environ['OLLAMA_HOST']}",
-            # "--env", ENV,
-            # "-B", f"{Path(models).parent}:{Path(models).parent}",
-            "-B",
-            f"{Path(models)}:{Path(models)}",
+            "-e", 
+            "--env", f"OLLAMA_HOST={os.environ['OLLAMA_HOST']}",
+            "-B", f"{models}:{models}",
             sif,
             "ollama",
             "pull",
@@ -87,6 +121,7 @@ def pull_llm(model):
         check=True,
         env=env,
     )
+
 
 
 def main():

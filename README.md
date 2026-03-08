@@ -6,12 +6,11 @@
     <a href="#clinical-evaluation-platform">Clinical Evaluation Platform</a>
 </p>
 
-
 <!-- [![arXiv](https://img.shields.io/badge/arXiv-2602.16006-b31b1b.svg)](https://arxiv.org/abs/2602.16006) -->
 
 
 <p align="center">
-<img src=assets/overview.gif />
+  <img src="assets/overview.gif" width="900">
 </p>
 
 ### [**BTReport: A Framework for Brain Tumor Radiology Report Generation with Clinically Relevant Features**](https://arxiv.org/abs/2602.16006)<br/>

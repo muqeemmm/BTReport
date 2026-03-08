@@ -73,7 +73,7 @@ if __name__ == "__main__":
     parser.add_argument("--real_report_key", type=str, default="Clinical Report")
     parser.add_argument("--synthetic_report_key", type=str, default="llm report")
     parser.add_argument("--devices", type=str, default="0,1,2,3", help="String with cuda device IDs for use by synthseg and SynthMorph. E.g. '0,1' or '0'.")
-    parser.add_argument("--llm", type=str, default="gpt-oss:120b")
+    parser.add_argument("--llm", type=str, default="deepseek-r1:70b")
 
     args = parser.parse_args()
 

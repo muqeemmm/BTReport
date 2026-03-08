@@ -13,18 +13,8 @@ from os.path import join
 import nibabel as nib
 import numpy as np
 
-"""
-conda activate BTReport
-export SYNTHMORPH_SIF=/pscratch/sd/j/jehr/synthmorph/synthmorph_4.sif
-export PATH=${PATH}:/cvmfs/oasis.opensciencegrid.org/mis/apptainer/1.3.3/x86_64/bin
-export SYNTHSEG_SIF=/pscratch/sd/j/jehr/synthseg/synthseg.sif
-python3 -m btreport.generate_report --subject_folder $SF --llm llama3:70b
-
-python3 -m btreport.eval_json --skip_processed --no-parse-synthetic --do_details --json /pscratch/sd/j/jehr/MSFT/BTReport/data/example/merged_reports_btreport_llama3_70b.json
-"""
 
 
-# python3 -m btreport.eval_json --skip_processed --no-parse-synthetic --do_details --json /pscratch/sd/j/jehr/MSFT/BTReport_evaluation/from-segmentation-to-explanation/savedv1/seg2exp_reports_uwimaging_22513869714470.json
 def main(args: argparse.Namespace):
     t1_path = glob.glob(os.path.join(args.subject_folder, "*_t1.nii.gz"))[0]
     try:
@@ -70,12 +60,14 @@ def main(args: argparse.Namespace):
 
     tum_in_mni = join(tmp_dir, "tumor_seg_in_MNI152_space.nii.gz")
 
-    midline_out = join(tmp_dir, "patient_midline.nii.gz")
+    patient_midline = join(tmp_dir, "patient_midline.nii.gz")
+    ideal_midline = join(tmp_dir, "ideal_midline.nii.gz")
+    midline_distances = join(tmp_dir, "midline_distances.nii.gz")
 
     logger.info(f"** [0/4] Starting registration steps...")
     register.register_mni_to_subject(fixed=t1_path, moved=mni_in_subj, transform=mni_tfm, overwrite=args.overwrite)  # register MNI152 to subject space
     register.register_to_mni(moving=t1_path, moved=sub_in_mni, transform=sub_tfm, overwrite=args.overwrite)  # register T1 to MNI152 space
-    register.register_midline_to_subject(moved=midline_out, transform=mni_tfm, overwrite=args.overwrite)  # register MNI152 midline to subject space using mni_tfm
+    register.register_midline_to_subject(moved=patient_midline, transform=mni_tfm, overwrite=args.overwrite)  # register MNI152 midline to subject space using mni_tfm
     register.apply_transform(moving=tumor_path, moved=tum_in_mni, transform=sub_tfm, is_seg=True)  # register tumor mask to MNI152 space using sub_tfm
     logger.info(f"* Finished registration steps!")
 
@@ -89,7 +81,7 @@ def main(args: argparse.Namespace):
     overlap_regions = anat_segmentation.merge_tumor_midline_and_anat_masks(
         synthseg_path=anatseg,
         tumor_path=tumor_path,
-        midline_path=midline_out,
+        midline_path=patient_midline,
         save_path=merged_seg,
         ncr_label=args.ncr_label,
         ed_label=args.ed_label,
@@ -103,10 +95,12 @@ def main(args: argparse.Namespace):
 
     # Extract midline shift features
     logger.info(f"** [2/4] Starting midline shift processing...")
-    ideal_midline_out = join(tmp_dir, "ideal_midline.nii.gz")
-    midline_distances_out = join(tmp_dir, "midline_distances.nii.gz")
-    # midline_summary = midline_shift_3d(tmp_dir=tmp_dir, tumor=tumor_path, ncr_label=args.ncr_label, ed_label=args.ed_label, et_label=args.et_label, overwrite=args.overwrite)
-    midline_summary = midline_shift_3d(tumor=tumor_path, deformed_midline_path=midline_out, ideal_midline_path=ideal_midline_out, midline_distances_path=midline_distances_out, anat_seg_path=anatseg, ncr_label=args.ncr_label, ed_label=args.ed_label, et_label=et_label, overwrite=args.overwrite)
+    midline_summary = midline_shift_3d(tumor=tumor_path, 
+                                        deformed_midline_path=patient_midline,
+                                        ideal_midline_path=ideal_midline,
+                                        midline_distances_path=midline_distances,
+                                        anat_seg_path=anatseg,
+                                        ncr_label=args.ncr_label, ed_label=args.ed_label, et_label=args.et_label, overwrite=args.overwrite)
     metadata.update(midline_summary)
 
     # Extract VASARI features
@@ -151,24 +145,28 @@ def main(args: argparse.Namespace):
         "Effaced Ventricle",
         "Lesion Sizes APxTVxCC (cm)",
         # "Region Proportions",
-        "level_max_shift",
-        "max_shift_mm",
+        # "max_shift_mm",
+        # "level_max_shift",
         "midline_shift_present",
         "Text Report",
     ]
+    if metadata_no_clinical['midline_shift_present'] == "Yes":
+        keys_to_keep+=["level_max_shift", "max_shift_mm"]
+
     refined_metadata = {k: v for k, v in metadata_no_clinical.items() if k in keys_to_keep}
+    
+    json_save_key = f"BTReport Generated Report ({args.llm}, run_name={args.run_name})"
+    if json_save_key not in metadata:
+        args.image_path = join(args.subject_folder, "tumor_maxslice.png") if args.image else None
+        report = generate_llm_report(args.subject_folder.split("/")[-1], refined_metadata, model=args.llm, image_path=args.image_path)
+        logger.info(f"* Finished LLM report generation using extracted metadata!")
+        metadata[json_save_key] = report
+    else:
+        logger.info(f'Key {json_save_key} found in metadata, skipping LLM report')
 
-    # if f"BTReport Generated Report ({args.llm})" not in metadata:
-    #     args.image_path = join(args.subject_folder, "tumor_maxslice.png") if args.image else None
-    #     report = generate_llm_report(args.subject_folder.split("/")[-1], refined_metadata, model=args.llm, image_path=args.image_path)
-    #     logger.info(f"* Finished LLM report generation using extracted metadata!")
-    #     metadata[f"BTReport Generated Report ({args.llm})"] = report
-    # else:
-    #     logger.info(f'Key "BTReport Generated Report ({args.llm})" found in metadata, skipping LLM report')
-
-    # with open(report_save_path, "w") as f:
-    #     json.dump(metadata, f, indent=2)
-    # logger.info(f'Saved extracted metadata and LLM report to {join(args.subject_folder, "patient_metadata_btreport.json")}')
+    with open(report_save_path, "w") as f:
+        json.dump(metadata, f, indent=2)
+    logger.info(f'Saved extracted metadata and LLM report to {join(args.subject_folder, "patient_metadata_btreport.json")} as {json_save_key}')
 
     if args.clear_tmp:  # Delete intermediate files after processing, useful for memory reduction but you lose interpretability of results.
         shutil.rmtree(tmp_dir)
@@ -185,6 +183,7 @@ if __name__ == "__main__":
     parser.add_argument("--ed_label", type=int, default=2)
     parser.add_argument("--et_label", type=int, default=4)
     parser.add_argument("--devices", type=str, default="0", help="String with cuda device IDs for use by synthseg and SynthMorph. E.g. '0,1' or '0'.")
+    parser.add_argument("--run_name", type=str, default='v0')
 
     parser.add_argument(
         "--image",
