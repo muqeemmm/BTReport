@@ -18,9 +18,9 @@ def compute_sphericity(seg_path: str) -> float:
     Sphericity = (pi^(1/3) * (6 * V)^(2/3)) / A
     where V is volume and A is surface area.
     """
-    seg_img     = ants.image_read(str(seg_path))
-    seg_array   = seg_img.numpy().astype(np.int16)
-    spacing     = seg_img.spacing
+    seg_img = NiftiImage(seg_path)
+    seg_array = seg_img.array.astype(np.int16)
+    spacing = tuple(float(s) for s in seg_img.spacing)
 
     wt_mask        = np.isin(seg_array, [1, 2, 3, 4])       # Whole Tumor
     tc_mask        = np.isin(seg_array, [1, 3, 4])          # Tumor Core
