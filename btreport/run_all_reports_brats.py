@@ -100,7 +100,7 @@ def main():
 
     logger.info("\nFinished processing all subjects.")
     if not_processed_list:
-        not_processed_path = os.path.join(root, "not_processed.txt")
+        not_processed_path = os.path.join("/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/docs", "not_processed.txt")
         with open(not_processed_path, "w") as f:
             for entry in not_processed_list:
                 f.write(entry + "\n")
