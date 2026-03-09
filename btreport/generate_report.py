@@ -4,6 +4,7 @@ from .utils.log import get_logger
 from .llm_report_generation.ollama_report_gen import generate_llm_report
 from .midline_shift.midline_shift3d import midline_shift_3d
 from .vasari_features import ExtractVASARI
+from .additional_features.additional_features_3d import compute_sphericity
 
 # from .vasari_features.extract_vasari_features import vasari_features
 
@@ -64,7 +65,7 @@ def main(args: argparse.Namespace):
     ideal_midline = join(tmp_dir, "ideal_midline.nii.gz")
     midline_distances = join(tmp_dir, "midline_distances.nii.gz")
 
-    logger.info(f"** [0/4] Starting registration steps...")
+    logger.info(f"** [0/5] Starting registration steps...")
     register.register_mni_to_subject(fixed=t1_path, moved=mni_in_subj, transform=mni_tfm, overwrite=args.overwrite)  # register MNI152 to subject space
     register.register_to_mni(moving=t1_path, moved=sub_in_mni, transform=sub_tfm, overwrite=args.overwrite)  # register T1 to MNI152 space
     register.register_midline_to_subject(moved=patient_midline, transform=mni_tfm, overwrite=args.overwrite)  # register MNI152 midline to subject space using mni_tfm
@@ -72,7 +73,7 @@ def main(args: argparse.Namespace):
     logger.info(f"* Finished registration steps!")
 
     # SynthSeg is unreliable on images with tumors, so we run it on the (healthy) MNI atlas registered to the subject space, then overlay the tumor mask.
-    logger.info(f"** [1/4] Starting anatomical segmentation steps...")
+    logger.info(f"** [1/5] Starting anatomical segmentation steps...")
     anatseg = mni_in_subj.replace(".nii.gz", "_synthseg.nii.gz")
     merged_seg = mni_in_subj.replace(".nii.gz", "_merged_seg.nii.gz")
     anat_segmentation.synthseg(input_path=mni_in_subj, output_path=anatseg)
@@ -94,7 +95,7 @@ def main(args: argparse.Namespace):
     logger.info(f"* Finished segmentation steps! Merged mask can be found in {merged_seg}")
 
     # Extract midline shift features
-    logger.info(f"** [2/4] Starting midline shift processing...")
+    logger.info(f"** [2/5] Starting midline shift processing...")
     midline_summary = midline_shift_3d(tumor=tumor_path, 
                                         deformed_midline_path=patient_midline,
                                         ideal_midline_path=ideal_midline,
@@ -105,12 +106,16 @@ def main(args: argparse.Namespace):
 
     # Extract VASARI features
     # vasari_summary = vasari_features(tumor=tumor_path, tumor_mni=tum_in_mni, metadata=metadata, merged=merged_seg, verbose=False, ncr_label=args.ncr_label, ed_label=args.ed_label, et_label=args.et_label)
-    logger.info(f"** [3/4] Starting VASARI feature extraction steps...")
+    logger.info(f"** [3/5] Starting VASARI feature extraction steps...")
     extractor = ExtractVASARI(enhancing_label=et_label, nonenhancing_label=args.ncr_label, oedema_label=args.ed_label, verbose=False)
     vasari_summary = extractor(tumorseg_mni=tum_in_mni, tumorseg_ss=tumor_path, merged=merged_seg, metadata=metadata)
     metadata.update(vasari_summary)
 
-    logger.info(f"** [4/4] Starting report generation with LLM ({args.llm})...")
+    logger.info(f"** [4/5] Starting Additional features extraction steps...")
+    sphericity = compute_sphericity(tumor_path)
+    metadata.update(sphericity)
+
+    logger.info(f"** [5/5] Starting report generation with LLM ({args.llm})...")
     metadata_no_clinical = {k: v for k, v in metadata.items() if k != "Clinical Report"}
     # Save metadata_no_clinical to tmp directory
     metadata_no_clinical_path = join(args.subject_folder, f"{Path(args.subject_folder).name}_metadata_no_clinical.json")
