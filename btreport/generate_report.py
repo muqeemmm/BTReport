@@ -112,6 +112,7 @@ def main(args: argparse.Namespace):
     metadata.update(vasari_summary)
 
     # logger.info(f"** [4/5] Starting Additional features extraction steps...")
+    laterility = metadata.get("Side of Tumor Epicenter", "None").lower()
     # sphericity = compute_sphericity(tumor_path)
     # metadata.update(sphericity)
 
