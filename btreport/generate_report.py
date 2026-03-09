@@ -4,7 +4,7 @@ from .utils.log import get_logger
 from .llm_report_generation.ollama_report_gen import generate_llm_report
 from .midline_shift.midline_shift3d import midline_shift_3d
 from .vasari_features import ExtractVASARI
-from .additional_features.additional_features_3d import compute_sphericity
+# from .additional_features.additional_features_3d import compute_sphericity
 
 # from .vasari_features.extract_vasari_features import vasari_features
 

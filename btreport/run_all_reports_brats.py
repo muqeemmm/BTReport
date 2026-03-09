@@ -16,7 +16,7 @@ def main():
 
     # parser.add_argument("--save_dir", type=str, required=True, help="Path to save results.")
 
-    root='/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Astrocytoma_IDH-mutant'
+    root='/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Glioblastoma_IDH-wildtype'
 
     parser.add_argument("--clear_tmp", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
@@ -40,8 +40,9 @@ def main():
     #         merged = json.load(f)
 
     not_processed_list = []
-    
-    for entry in sorted(os.listdir(root)):
+    sorted_entries = sorted(os.listdir(root))
+
+    for entry in sorted_entries:
         subject_dir = os.path.join(root, entry)
         if os.path.exists(join(subject_dir, f"{entry}_metadata_no_clinical.json")):
             logger.info(f"Skipping {entry} — metadata_no_clinical.json already exists.")
