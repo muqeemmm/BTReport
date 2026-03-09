@@ -111,9 +111,9 @@ def main(args: argparse.Namespace):
     vasari_summary = extractor(tumorseg_mni=tum_in_mni, tumorseg_ss=tumor_path, merged=merged_seg, metadata=metadata)
     metadata.update(vasari_summary)
 
-    logger.info(f"** [4/5] Starting Additional features extraction steps...")
-    sphericity = compute_sphericity(tumor_path)
-    metadata.update(sphericity)
+    # logger.info(f"** [4/5] Starting Additional features extraction steps...")
+    # sphericity = compute_sphericity(tumor_path)
+    # metadata.update(sphericity)
 
     logger.info(f"** [5/5] Starting report generation with LLM ({args.llm})...")
     metadata_no_clinical = {k: v for k, v in metadata.items() if k != "Clinical Report"}
