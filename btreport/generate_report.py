@@ -4,7 +4,10 @@ from .utils.log import get_logger
 from .llm_report_generation.ollama_report_gen import generate_llm_report
 from .midline_shift.midline_shift3d import midline_shift_3d
 from .vasari_features import ExtractVASARI
-# from .additional_features.additional_features_3d import compute_sphericity
+from .additional_features.additional_features_3d import (compute_sphericity,
+                                                         compute_vasari_style_morphometrics,
+                                                         compute_transition_zone_thickness,
+                                                         ExtractT2FLAIRMismatch)
 
 # from .vasari_features.extract_vasari_features import vasari_features
 
@@ -17,7 +20,10 @@ import numpy as np
 
 
 def main(args: argparse.Namespace):
-    t1_path = glob.glob(os.path.join(args.subject_folder, "*_t1.nii.gz"))[0]
+    t1_path    = glob.glob(os.path.join(args.subject_folder, "*_t1.nii.gz"))[0]
+    t2_path    = glob.glob(os.path.join(args.subject_folder, "*_t2.nii.gz"))[0]
+    t1ce_path  = glob.glob(os.path.join(args.subject_folder, "*_t1ce.nii.gz"))[0]
+    flair_path = glob.glob(os.path.join(args.subject_folder, "*_flair.nii.gz"))[0]
     try:
         tumor_path = glob.glob(os.path.join(args.subject_folder, "*_seg_pred.nii.gz"))[0]
     except:
@@ -96,24 +102,48 @@ def main(args: argparse.Namespace):
 
     # Extract midline shift features
     logger.info(f"** [2/5] Starting midline shift processing...")
-    midline_summary = midline_shift_3d(tumor=tumor_path, 
-                                        deformed_midline_path=patient_midline,
-                                        ideal_midline_path=ideal_midline,
-                                        midline_distances_path=midline_distances,
-                                        anat_seg_path=anatseg,
-                                        ncr_label=args.ncr_label, ed_label=args.ed_label, et_label=args.et_label, overwrite=args.overwrite)
+    midline_summary = midline_shift_3d(tumor = tumor_path, 
+                                       deformed_midline_path = patient_midline,
+                                       ideal_midline_path = ideal_midline,
+                                       midline_distances_path = midline_distances,
+                                       anat_seg_path = anatseg,
+                                       ncr_label = args.ncr_label, ed_label = args.ed_label, et_label = args.et_label, overwrite = args.overwrite)
     metadata.update(midline_summary)
 
     # Extract VASARI features
     # vasari_summary = vasari_features(tumor=tumor_path, tumor_mni=tum_in_mni, metadata=metadata, merged=merged_seg, verbose=False, ncr_label=args.ncr_label, ed_label=args.ed_label, et_label=args.et_label)
     logger.info(f"** [3/5] Starting VASARI feature extraction steps...")
-    extractor = ExtractVASARI(enhancing_label=et_label, nonenhancing_label=args.ncr_label, oedema_label=args.ed_label, verbose=False)
-    vasari_summary = extractor(tumorseg_mni=tum_in_mni, tumorseg_ss=tumor_path, merged=merged_seg, metadata=metadata)
+    extractor = ExtractVASARI(enhancing_label = et_label, nonenhancing_label = args.ncr_label, oedema_label = args.ed_label, verbose = False)
+    vasari_summary = extractor(tumorseg_mni = tum_in_mni, tumorseg_ss = tumor_path, merged = merged_seg, metadata = metadata)
     metadata.update(vasari_summary)
 
-    # logger.info(f"** [4/5] Starting Additional features extraction steps...")
-    # sphericity = compute_sphericity(tumor_path)
-    # metadata.update(sphericity)
+    logger.info(f"** [4/5] Starting Additional features extraction steps...")
+
+    # Get laterality of tumor epicenter for use in T2-FLAIR mismatch feature extraction
+    laterality = metadata.get("Side of Tumor Epicenter")
+
+    # Compute sphericity features
+    sphericity = compute_sphericity(seg_path = tumor_path)
+    metadata.update(sphericity)
+
+    # Compute transition zone thickness features
+    transition_zone_metrics = compute_transition_zone_thickness(t1ce_path = t1ce_path, seg_path = tumor_path)
+    metadata.update(transition_zone_metrics)
+    
+    # Compute morphometrics
+    morphometrics = compute_vasari_style_morphometrics(tumorseg_ss_path   = tumor_path, 
+                                                       intensity_path     = flair_path, 
+                                                       brain_mask_path    = None, 
+                                                       enhancing_label    = et_label, 
+                                                       nonenhancing_label = args.ncr_label, 
+                                                       oedema_label       = args.ed_label)
+    metadata.update(morphometrics)
+
+    # Compute T2-FLAIR mismatch features
+    t2_flair_mismatch_extractor = ExtractT2FLAIRMismatch(enhancing_label = et_label, nonenhancing_label = args.ncr_label, oedema_label = args.ed_label)
+    t2_flair_mismatch_metrics = t2_flair_mismatch_extractor(tumorseg_ss = tumor_path, 
+                                                            flair_path = flair_path, t2_path = t2_path,
+                                                            laterality = laterality, merged_seg = merged_seg, brain_mask_path = None)
 
     logger.info(f"** [5/5] Starting report generation with LLM ({args.llm})...")
     metadata_no_clinical = {k: v for k, v in metadata.items() if k != "Clinical Report"}
@@ -123,55 +153,55 @@ def main(args: argparse.Namespace):
         json.dump(metadata_no_clinical, f, indent=2)
     logger.info(f"Saved metadata (excluding clinical report) to {metadata_no_clinical_path}")
 
-    keys_to_keep = [
-        "Anatomical Overlap Regions",
-        "Tumor Location",
-        "Side of Tumor Epicenter",
-        "Number of lesions",
-        "Multifocal or Multicentric",
-        "Multiple satellites present",
-        "Cortical involvement",
-        "Deep WM invasion",
-        "Ependymal (ventricular) Invasion",
-        # "Eloquent Brain Involvement",
-        "Enlarged Ventricles",
-        "Asymmetrical Ventricles",
-        "Edema crosses midline",
-        "CET Crosses midline",
-        "Enhancement Quality",
-        "Thickness of enhancing margin",
-        # "NCR Volume (mL)",
-        # "ED Volume (mL)",
-        # "ET Volume (mL)",
-        # "Total tumor volume (mL)",
-        "Proportion Enhancing",
-        "Proportion Necrosis",
-        "Proportion of Oedema",
-        "Effaced Ventricle",
-        "Lesion Sizes APxTVxCC (cm)",
-        # "Region Proportions",
-        # "max_shift_mm",
-        # "level_max_shift",
-        "midline_shift_present",
-        "Text Report",
-    ]
-    if metadata_no_clinical['midline_shift_present'] == "Yes":
-        keys_to_keep+=["level_max_shift", "max_shift_mm"]
+    # keys_to_keep = [
+    #     "Anatomical Overlap Regions",
+    #     "Tumor Location",
+    #     "Side of Tumor Epicenter",
+    #     "Number of lesions",
+    #     "Multifocal or Multicentric",
+    #     "Multiple satellites present",
+    #     "Cortical involvement",
+    #     "Deep WM invasion",
+    #     "Ependymal (ventricular) Invasion",
+    #     # "Eloquent Brain Involvement",
+    #     "Enlarged Ventricles",
+    #     "Asymmetrical Ventricles",
+    #     "Edema crosses midline",
+    #     "CET Crosses midline",
+    #     "Enhancement Quality",
+    #     "Thickness of enhancing margin",
+    #     # "NCR Volume (mL)",
+    #     # "ED Volume (mL)",
+    #     # "ET Volume (mL)",
+    #     # "Total tumor volume (mL)",
+    #     "Proportion Enhancing",
+    #     "Proportion Necrosis",
+    #     "Proportion of Oedema",
+    #     "Effaced Ventricle",
+    #     "Lesion Sizes APxTVxCC (cm)",
+    #     # "Region Proportions",
+    #     # "max_shift_mm",
+    #     # "level_max_shift",
+    #     "midline_shift_present",
+    #     "Text Report",
+    # ]
+    # if metadata_no_clinical['midline_shift_present'] == "Yes":
+    #     keys_to_keep+=["level_max_shift", "max_shift_mm"]
 
-    refined_metadata = {k: v for k, v in metadata_no_clinical.items() if k in keys_to_keep}
+    # refined_metadata = {k: v for k, v in metadata_no_clinical.items() if k in keys_to_keep}
     
-    json_save_key = f"BTReport Generated Report ({args.llm}, run_name={args.run_name})"
-    if json_save_key not in metadata:
-        args.image_path = join(args.subject_folder, "tumor_maxslice.png") if args.image else None
-        report = generate_llm_report(args.subject_folder.split("/")[-1], refined_metadata, model=args.llm, image_path=args.image_path)
-        logger.info(f"* Finished LLM report generation using extracted metadata!")
-        metadata[json_save_key] = report
-    else:
-        logger.info(f'Key {json_save_key} found in metadata, skipping LLM report')
+    # json_save_key = f"BTReport Generated Report ({args.llm}, run_name={args.run_name})"
+    # if json_save_key not in metadata:
+    #     args.image_path = join(args.subject_folder, "tumor_maxslice.png") if args.image else None
+    #     report = generate_llm_report(args.subject_folder.split("/")[-1], refined_metadata, model=args.llm, image_path=args.image_path)
+    #     logger.info(f"* Finished LLM report generation using extracted metadata!")
+    #     metadata[json_save_key] = report
+    # else:
+    #     logger.info(f'Key {json_save_key} found in metadata, skipping LLM report')
 
-    with open(report_save_path, "w") as f:
-        json.dump(metadata, f, indent=2)
-    logger.info(f'Saved extracted metadata and LLM report to {join(args.subject_folder, "patient_metadata_btreport.json")} as {json_save_key}')
+    # with open(report_save_path, "w") as f:
+    #     json.dump(metadata, f, indent=2)
+    # logger.info(f'Saved extracted metadata and LLM report to {join(args.subject_folder, "patient_metadata_btreport.json")} as {json_save_key}')
 
     if args.clear_tmp:  # Delete intermediate files after processing, useful for memory reduction but you lose interpretability of results.
         shutil.rmtree(tmp_dir)

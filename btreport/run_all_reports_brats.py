@@ -44,7 +44,7 @@ def main():
 
     for entry in sorted_entries:
         subject_dir = os.path.join(root, entry)
-        if os.path.exists(join(subject_dir, f"{entry}_metadata_no_clinical.json")):
+        if not args.overwrite:
             logger.info(f"Skipping {entry} — metadata_no_clinical.json already exists.")
             continue
         # paths = build_subject_paths(entry)
