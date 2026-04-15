@@ -1,4 +1,5 @@
 import argparse
+import glob
 import subprocess
 import os
 import json
@@ -15,7 +16,7 @@ def main():
 
     # parser.add_argument("--save_dir", type=str, required=True, help="Path to save results.")
 
-    root='/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Astrocytoma_IDH-mutant'
+    root='/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Glioblastoma_IDH-wildtype'
 
     parser.add_argument("--clear_tmp", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
@@ -38,9 +39,12 @@ def main():
     #     with open(merged_path, "r") as f:
     #         merged = json.load(f)
 
-    for entry in sorted(os.listdir(root)):
+    not_processed_list = []
+    sorted_entries = sorted(os.listdir(root))
+
+    for entry in sorted_entries:
         subject_dir = os.path.join(root, entry)
-        if os.path.exists(join(subject_dir, f"{Path(subject_dir).name}_metadata_no_clinical.json")):
+        if not args.overwrite:
             logger.info(f"Skipping {entry} — metadata_no_clinical.json already exists.")
             continue
         # paths = build_subject_paths(entry)
@@ -55,6 +59,12 @@ def main():
         # if (not args.overwrite and entry in merged and predicted_key in merged[entry]):
         #     logger.info(f"Skipping {entry} [{llm}] — already merged.")
         #     continue
+
+        if not (os.path.exists(join(subject_dir, f"{entry}_seg.nii.gz")) 
+                or os.path.exists(join(subject_dir, f"{entry}_seg_pred.nii.gz"))):
+            logger.info(f"Skipping {entry} — no segmentation found.")
+            not_processed_list.append(entry)
+            continue
 
         cmd = [
             "python3",
@@ -88,7 +98,14 @@ def main():
         #     subject_id=entry,
         #     llm=llm,
         # )
+
     logger.info("\nFinished processing all subjects.")
+    if not_processed_list:
+        not_processed_path = os.path.join("/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/docs", "not_processed.txt")
+        with open(not_processed_path, "w") as f:
+            for entry in not_processed_list:
+                f.write(entry + "\n")
+        logger.info(f"Saved not-processed list to {not_processed_path}")
 
 
 def build_subject_paths(subject_id):
