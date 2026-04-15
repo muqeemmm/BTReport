@@ -558,11 +558,7 @@ class ExtractT2FLAIRMismatch:
         t2 = NiftiImage(t2_path)
         flair = NiftiImage(flair_path)
 
-        try:
-            brain_mask = NiftiImage(brain_mask_path).array.astype(bool)
-        except:
-            intensity = NiftiImage(flair_path).array.astype(np.float32)
-            brain_mask = np.isfinite(intensity) & (intensity != 0)
+        brain_mask = NiftiImage(brain_mask_path).array.astype(bool)
 
         whole_tumor_mask = self.get_whole_tumor_mask(segmentation)
         tumor_core_mask = self.get_tumor_core_mask(segmentation)
@@ -603,9 +599,10 @@ class ExtractT2FLAIRMismatch:
             }
             return result
 
-        brain_mask = self.get_brain_mask(t2, flair)
         t2_norm = self.robust_normalize(t2.array, brain_mask)
         flair_norm = self.robust_normalize(flair.array, brain_mask)
+
+        # Add assert statement later on
 
         center_mask, rim_mask = self.get_center_and_rim_masks(tumor_core_mask)
 
@@ -670,14 +667,14 @@ class ExtractT2FLAIRMismatch:
 
         return result
 
-    def __call__(self, tumorseg_ss: str, t2_path: str, flair_path: str, laterality: str, merged_seg: str, brain_mask_path: str = None) -> dict:
+    def __call__(self, tumorseg_ss: str, t2_path: str, flair_path: str, laterility: str, merged_seg: str, brain_mask_path: str) -> dict:
         report = self.extract_t2_flair_mismatch(
-            tumorseg_ss     = tumorseg_ss,
-            t2_path         = t2_path,
-            flair_path      = flair_path,
-            laterality      = laterality.lower(),
-            merged_seg      = merged_seg,
-            brain_mask_path = brain_mask_path
+            tumorseg_ss=tumorseg_ss,
+            t2_path=t2_path,
+            flair_path=flair_path,
+            laterility=laterility,
+            merged_seg=merged_seg,
+            brain_mask_path=brain_mask_path
         )
         logger.info("* Finished T2-FLAIR mismatch extraction!")
         return report.iloc[0].to_dict()
