@@ -603,10 +603,9 @@ class ExtractT2FLAIRMismatch:
             }
             return result
 
+        brain_mask = self.get_brain_mask(t2, flair)
         t2_norm = self.robust_normalize(t2.array, brain_mask)
         flair_norm = self.robust_normalize(flair.array, brain_mask)
-
-        # Add assert statement later on
 
         center_mask, rim_mask = self.get_center_and_rim_masks(tumor_core_mask)
 
