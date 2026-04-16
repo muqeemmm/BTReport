@@ -6,7 +6,11 @@ from .midline_shift.midline_shift3d import midline_shift_3d
 from .vasari_features import ExtractVASARI
 from .additional_features.additional_features_3d import (compute_sphericity,
                                                          compute_vasari_style_morphometrics,
+<<<<<<< Updated upstream
                                                          compute_transition_zone_thickness,
+=======
+                                                         transition_zone_thickness,
+>>>>>>> Stashed changes
                                                          ExtractT2FLAIRMismatch)
 
 # from .vasari_features.extract_vasari_features import vasari_features
@@ -20,10 +24,18 @@ import numpy as np
 
 
 def main(args: argparse.Namespace):
+<<<<<<< Updated upstream
     t1_path    = glob.glob(os.path.join(args.subject_folder, "*_t1.nii.gz"))[0]
     t2_path    = glob.glob(os.path.join(args.subject_folder, "*_t2.nii.gz"))[0]
     t1ce_path  = glob.glob(os.path.join(args.subject_folder, "*_t1ce.nii.gz"))[0]
     flair_path = glob.glob(os.path.join(args.subject_folder, "*_flair.nii.gz"))[0]
+=======
+    t1_path = glob.glob(os.path.join(args.subject_folder, "*_t1.nii.gz"))[0]
+    t1ce_path = glob.glob(os.path.join(args.subject_folder, "*_t1ce.nii.gz"))[0]
+    t2_path = glob.glob(os.path.join(args.subject_folder, "*_t2.nii.gz"))[0]
+    flair_path = glob.glob(os.path.join(args.subject_folder, "*_flair.nii.gz"))[0]
+
+>>>>>>> Stashed changes
     try:
         tumor_path = glob.glob(os.path.join(args.subject_folder, "*_seg_pred.nii.gz"))[0]
     except:
@@ -118,6 +130,7 @@ def main(args: argparse.Namespace):
     metadata.update(vasari_summary)
 
     logger.info(f"** [4/5] Starting Additional features extraction steps...")
+<<<<<<< Updated upstream
 
     # Get laterality of tumor epicenter for use in T2-FLAIR mismatch feature extraction
     laterality = metadata.get("Side of Tumor Epicenter")
@@ -144,6 +157,27 @@ def main(args: argparse.Namespace):
     t2_flair_mismatch_metrics = t2_flair_mismatch_extractor(tumorseg_ss = tumor_path, 
                                                             flair_path = flair_path, t2_path = t2_path,
                                                             laterality = laterality, merged_seg = merged_seg, brain_mask_path = None)
+=======
+    laterility = metadata.get("Side of Tumor Epicenter", "None").lower()
+    sphericity = compute_sphericity(tumor_path)
+    metadata.update(sphericity)
+    
+    transition_thickness = transition_zone_thickness(t1ce_pth=t1ce_path, seg_pth=tumor_path)
+    metadata.update(transition_thickness)
+
+    t2_flair_extractor = ExtractT2FLAIRMismatch(enhancing_label = et_label, nonenhancing_label=args.ncr_label, oedema_label=args.ed_label)
+    t2_flair_summary = t2_flair_extractor(tumorseg_ss = tumor_path,
+                                          t2_path = t2_path,
+                                          flair_path = flair_path,
+                                          laterility = laterility,
+                                          merged_seg = merged_seg)
+    metadata.update(t2_flair_summary)
+
+    morphometrics = compute_vasari_style_morphometrics(tumor_path, 
+                                                       brain_mask_path=mni_in_subj,
+                                                       enhancing_label=et_label, nonenhancing_label=args.ncr_label, oedema_label=args.ed_label)
+
+>>>>>>> Stashed changes
 
     logger.info(f"** [5/5] Starting report generation with LLM ({args.llm})...")
     metadata_no_clinical = {k: v for k, v in metadata.items() if k != "Clinical Report"}
