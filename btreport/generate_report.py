@@ -4,10 +4,10 @@ from .utils.log import get_logger
 from .llm_report_generation.ollama_report_gen import generate_llm_report
 from .midline_shift.midline_shift3d import midline_shift_3d
 from .vasari_features import ExtractVASARI
-from .additional_features.additional_features_3d import (compute_sphericity,
-                                                         compute_vasari_style_morphometrics,
-                                                         compute_transition_zone_thickness,
-                                                         ExtractT2FLAIRMismatch)
+# from .additional_features.additional_features_3d import (compute_sphericity,
+#                                                          compute_vasari_style_morphometrics,
+#                                                          compute_transition_zone_thickness,
+#                                                          ExtractT2FLAIRMismatch)
 
 # from .vasari_features.extract_vasari_features import vasari_features
 
@@ -117,33 +117,33 @@ def main(args: argparse.Namespace):
     vasari_summary = extractor(tumorseg_mni = tum_in_mni, tumorseg_ss = tumor_path, merged = merged_seg, metadata = metadata)
     metadata.update(vasari_summary)
 
-    logger.info(f"** [4/5] Starting Additional features extraction steps...")
+    # logger.info(f"** [4/5] Starting Additional features extraction steps...")
 
-    # Get laterality of tumor epicenter for use in T2-FLAIR mismatch feature extraction
-    laterality = metadata.get("Side of Tumor Epicenter")
+    # # Get laterality of tumor epicenter for use in T2-FLAIR mismatch feature extraction
+    # laterality = metadata.get("Side of Tumor Epicenter")
 
-    # Compute sphericity features
-    sphericity = compute_sphericity(seg_path = tumor_path)
-    metadata.update(sphericity)
+    # # Compute sphericity features
+    # sphericity = compute_sphericity(seg_path = tumor_path)
+    # metadata.update(sphericity)
 
-    # Compute transition zone thickness features
-    transition_zone_metrics = compute_transition_zone_thickness(t1ce_path = t1ce_path, seg_path = tumor_path)
-    metadata.update(transition_zone_metrics)
+    # # Compute transition zone thickness features
+    # transition_zone_metrics = compute_transition_zone_thickness(t1ce_path = t1ce_path, seg_path = tumor_path)
+    # metadata.update(transition_zone_metrics)
     
-    # Compute morphometrics
-    morphometrics = compute_vasari_style_morphometrics(tumorseg_ss_path   = tumor_path, 
-                                                       intensity_path     = flair_path, 
-                                                       brain_mask_path    = None, 
-                                                       enhancing_label    = et_label, 
-                                                       nonenhancing_label = args.ncr_label, 
-                                                       oedema_label       = args.ed_label)
-    metadata.update(morphometrics)
+    # # Compute morphometrics
+    # morphometrics = compute_vasari_style_morphometrics(tumorseg_ss_path   = tumor_path, 
+    #                                                    intensity_path     = flair_path, 
+    #                                                    brain_mask_path    = None, 
+    #                                                    enhancing_label    = et_label, 
+    #                                                    nonenhancing_label = args.ncr_label, 
+    #                                                    oedema_label       = args.ed_label)
+    # metadata.update(morphometrics)
 
-    # Compute T2-FLAIR mismatch features
-    t2_flair_mismatch_extractor = ExtractT2FLAIRMismatch(enhancing_label = et_label, nonenhancing_label = args.ncr_label, oedema_label = args.ed_label)
-    t2_flair_mismatch_metrics = t2_flair_mismatch_extractor(tumorseg_ss = tumor_path, 
-                                                            flair_path = flair_path, t2_path = t2_path,
-                                                            laterality = laterality, merged_seg = merged_seg, brain_mask_path = None)
+    # # Compute T2-FLAIR mismatch features
+    # t2_flair_mismatch_extractor = ExtractT2FLAIRMismatch(enhancing_label = et_label, nonenhancing_label = args.ncr_label, oedema_label = args.ed_label)
+    # t2_flair_mismatch_metrics = t2_flair_mismatch_extractor(tumorseg_ss = tumor_path, 
+    #                                                         flair_path = flair_path, t2_path = t2_path,
+    #                                                         laterality = laterality, merged_seg = merged_seg, brain_mask_path = None)
 
     logger.info(f"** [5/5] Starting report generation with LLM ({args.llm})...")
     metadata_no_clinical = {k: v for k, v in metadata.items() if k != "Clinical Report"}
