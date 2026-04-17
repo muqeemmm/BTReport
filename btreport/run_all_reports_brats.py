@@ -16,7 +16,7 @@ def main():
 
     # parser.add_argument("--save_dir", type=str, required=True, help="Path to save results.")
 
-    root='/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Glioblastoma_IDH-wildtype'
+    root='/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Astrocytoma_IDH-mutant_Grade_4'
 
     parser.add_argument("--clear_tmp", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
@@ -47,7 +47,7 @@ def main():
         if not args.overwrite:
             logger.info(f"Skipping {entry} — metadata_no_clinical.json already exists.")
             continue
-        # paths = build_subject_paths(entry)
+        paths = build_subject_paths(entry)
 
         if not os.path.isdir(os.path.join(root, entry)):
             continue  # skip files
