@@ -40,11 +40,13 @@ def main():
     #         merged = json.load(f)
 
     not_processed_list = []
-    sorted_entries = sorted(os.listdir(root))
+    sorted_entries = sorted(
+        entry for entry in os.listdir(root) if not entry.startswith(".")
+    )
 
     for entry in sorted_entries:
         subject_dir = os.path.join(root, entry)
-        if not args.overwrite:
+        if f"{entry}_metadata_no_clinical.json" in os.listdir(subject_dir):
             logger.info(f"Skipping {entry} — metadata_no_clinical.json already exists.")
             continue
         paths = build_subject_paths(entry)
