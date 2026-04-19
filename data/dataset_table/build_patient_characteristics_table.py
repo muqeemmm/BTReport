@@ -198,23 +198,32 @@ def normalise_1p19q(v):
     return "Unknown"
 
 
-def normalise_subtype(v):
-    """Map WHO-2021 diagnosis string to one of the three molecular subtypes."""
+def normalise_subtype(v, grade=None):
+    """Map WHO-2021 diagnosis string to a molecular subtype.
+
+    Grade 4 IDH-mutant astrocytomas are reported as their own subtype,
+    distinct from WHO grade 2/3 IDH-mutant astrocytomas.
+    """
     if _is_missing(v):
         return "Unknown"
     s = str(v).strip().lower()
+
+    # Resolve an integer grade if possible (used to split astrocytomas).
+    g = None
+    if not _is_missing(grade):
+        try:
+            g = int(float(grade))
+        except (TypeError, ValueError):
+            g = None
+
     if "oligodendroglioma" in s:
         return "Oligodendroglioma"
-    if "astrocytoma" in s and "idh-mut" in s.replace(" ", "-"):
-        return "IDH-mutant astrocytoma"
-    if "astrocytoma" in s and "mutant" in s:
-        return "IDH-mutant astrocytoma"
-    if "glioblastoma" in s and ("wildtype" in s or "wild-type" in s or "wild type" in s):
-        return "IDH-wildtype glioblastoma"
+    if "astrocytoma" in s and ("mutant" in s or "idh-mut" in s.replace(" ", "-")):
+        return "Grade 4 IDH-mutant astrocytoma" if g == 4 else "IDH-mutant astrocytoma"
     if "glioblastoma" in s:
         return "IDH-wildtype glioblastoma"
     if "astrocytoma" in s:
-        return "IDH-mutant astrocytoma"
+        return "Grade 4 IDH-mutant astrocytoma" if g == 4 else "IDH-mutant astrocytoma"
     return "Unknown"
 
 
@@ -259,7 +268,9 @@ def prepare_table_dataframe(merged: pd.DataFrame) -> pd.DataFrame:
     df["_Sex"] = df["Gender"].map(normalise_sex)
     df["_IDH"] = df["IDH (original)"].map(normalise_idh)
     df["_1p19q"] = df["1p/19q (original)"].map(normalise_1p19q)
-    df["_Subtype"] = df["Subtype_raw"].map(normalise_subtype)
+    df["_Subtype"] = df.apply(
+        lambda r: normalise_subtype(r["Subtype_raw"], r.get("Grade")), axis=1
+    )
     df["_Grade"] = df["Grade"].map(normalise_grade)
     df["_Seg"] = df["Multiclass Tumor Segmentation"].map(normalise_segmentation)
     df["_Age"] = pd.to_numeric(df["Age (years)"], errors="coerce")
@@ -297,8 +308,12 @@ def _cell(counts_by_ds: dict, ds: str, value: str, totals: dict) -> str:
     return _fmt_n_pct(n, totals[ds])
 
 
-def build_table_rows(df: pd.DataFrame, datasets: list[str]) -> list[list]:
-    """Return a list of rows ready to be written into the worksheet."""
+def build_table_rows(df: pd.DataFrame, datasets: list[str]) -> tuple[list[list], dict]:
+    """Return a list of rows ready to be written into the worksheet.
+
+    Sub-rows labelled ``Unknown`` whose counts are zero in every column
+    (including TOTAL) are omitted to keep the table tight.
+    """
     # Dataset-level totals (including TOTAL column).
     totals = {ds: int((df["Dataset"] == ds).sum()) for ds in datasets}
     totals["TOTAL"] = int(len(df))
@@ -308,8 +323,25 @@ def build_table_rows(df: pd.DataFrame, datasets: list[str]) -> list[list]:
 
     rows: list[list] = [header]
 
+    def _count_row(label: str, counts: dict) -> tuple[list, int]:
+        """Build one sub-row and return (row, total-count-across-columns)."""
+        row = [f"  {label}"]
+        total_n = 0
+        for ds in all_ds:
+            n = int(counts[ds].get(label, 0)) if ds != "TOTAL" else int(counts["TOTAL"].get(label, 0))
+            total_n += n
+            row.append(_fmt_n_pct(n, totals[ds]))
+        return row, total_n
+
+    def _append(label: str, counts: dict, row_list: list) -> None:
+        """Append a sub-row, skipping Unknown rows that are zero everywhere."""
+        row, total_n = _count_row(label, counts)
+        if label == "Unknown" and total_n == 0:
+            return
+        row_list.append(row)
+
     # ---- Age (years) ----
-    rows.append(["Age (years)", "", "", "", "", "", "", ""] if False else ["Age (years)"] + [""] * len(all_ds))
+    rows.append(["Age (years)"] + [""] * len(all_ds))
 
     known_row = ["  Known (mean ± SD)"]
     for ds in all_ds:
@@ -317,51 +349,34 @@ def build_table_rows(df: pd.DataFrame, datasets: list[str]) -> list[list]:
         known_row.append(_fmt_mean_sd(sub["_Age"]))
     rows.append(known_row)
 
+    # Age Unknown – only keep if any dataset has missing ages.
     unknown_row = ["  Unknown"]
+    total_unknown = 0
     for ds in all_ds:
         sub = df if ds == "TOTAL" else df[df["Dataset"] == ds]
         n_unknown = int(sub["_Age"].isna().sum())
+        total_unknown += n_unknown
         unknown_row.append(_fmt_n_pct(n_unknown, totals[ds]))
-    rows.append(unknown_row)
+    if total_unknown > 0:
+        rows.append(unknown_row)
 
     # ---- Sex ----
     rows.append(["Sex"] + [""] * len(all_ds))
     counts = _counts_by_dataset(df, "_Sex", datasets)
     for label in ["Female", "Male", "Unknown"]:
-        row = [f"  {label}"]
-        for ds in all_ds:
-            if ds == "TOTAL":
-                n = int(counts["TOTAL"].get(label, 0))
-            else:
-                n = int(counts[ds].get(label, 0))
-            row.append(_fmt_n_pct(n, totals[ds]))
-        rows.append(row)
+        _append(label, counts, rows)
 
     # ---- IDH ----
     rows.append(["IDH"] + [""] * len(all_ds))
     counts = _counts_by_dataset(df, "_IDH", datasets)
     for label in ["Mutated", "Wildtype", "Unknown"]:
-        row = [f"  {label}"]
-        for ds in all_ds:
-            if ds == "TOTAL":
-                n = int(counts["TOTAL"].get(label, 0))
-            else:
-                n = int(counts[ds].get(label, 0))
-            row.append(_fmt_n_pct(n, totals[ds]))
-        rows.append(row)
+        _append(label, counts, rows)
 
     # ---- 1p/19q ----
     rows.append(["1p/19q"] + [""] * len(all_ds))
     counts = _counts_by_dataset(df, "_1p19q", datasets)
     for label in ["Co-deleted", "Intact", "Unknown"]:
-        row = [f"  {label}"]
-        for ds in all_ds:
-            if ds == "TOTAL":
-                n = int(counts["TOTAL"].get(label, 0))
-            else:
-                n = int(counts[ds].get(label, 0))
-            row.append(_fmt_n_pct(n, totals[ds]))
-        rows.append(row)
+        _append(label, counts, rows)
 
     # ---- Molecular Subtype ----
     rows.append(["Molecular Subtype"] + [""] * len(all_ds))
@@ -369,43 +384,23 @@ def build_table_rows(df: pd.DataFrame, datasets: list[str]) -> list[list]:
     for label in [
         "Oligodendroglioma",
         "IDH-mutant astrocytoma",
+        "Grade 4 IDH-mutant astrocytoma",
         "IDH-wildtype glioblastoma",
         "Unknown",
     ]:
-        row = [f"  {label}"]
-        for ds in all_ds:
-            if ds == "TOTAL":
-                n = int(counts["TOTAL"].get(label, 0))
-            else:
-                n = int(counts[ds].get(label, 0))
-            row.append(_fmt_n_pct(n, totals[ds]))
-        rows.append(row)
+        _append(label, counts, rows)
 
     # ---- Tumor Grade ----
     rows.append(["Tumor Grade"] + [""] * len(all_ds))
     counts = _counts_by_dataset(df, "_Grade", datasets)
     for label in ["WHO grade 2", "WHO grade 3", "WHO grade 4", "Unknown"]:
-        row = [f"  {label}"]
-        for ds in all_ds:
-            if ds == "TOTAL":
-                n = int(counts["TOTAL"].get(label, 0))
-            else:
-                n = int(counts[ds].get(label, 0))
-            row.append(_fmt_n_pct(n, totals[ds]))
-        rows.append(row)
+        _append(label, counts, rows)
 
     # ---- Multi-class Segmentation ----
     rows.append(["Multi-class Segmentation"] + [""] * len(all_ds))
     counts = _counts_by_dataset(df, "_Seg", datasets)
     for label in ["Manual", "Automatic", "Unknown"]:
-        row = [f"  {label}"]
-        for ds in all_ds:
-            if ds == "TOTAL":
-                n = int(counts["TOTAL"].get(label, 0))
-            else:
-                n = int(counts[ds].get(label, 0))
-            row.append(_fmt_n_pct(n, totals[ds]))
-        rows.append(row)
+        _append(label, counts, rows)
 
     return rows, totals
 
