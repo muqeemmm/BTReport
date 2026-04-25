@@ -15,7 +15,8 @@ if SUBJECTS_DIR is None:
 
 # raise ValueError(Path(__file__).resolve().parent.parent)
 
-WRAPPER = os.environ.get("SYNTHMORPH_SIF")
+WRAPP
+ER = os.environ.get("SYNTHMORPH_SIF")
 if WRAPPER is None:
     raise RuntimeError("Environment variable SYNTHMORPH_SIF pointing to SynthMorph .sif is not set!")
 
