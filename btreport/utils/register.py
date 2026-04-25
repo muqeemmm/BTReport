@@ -15,8 +15,7 @@ if SUBJECTS_DIR is None:
 
 # raise ValueError(Path(__file__).resolve().parent.parent)
 
-WRAPP
-ER = os.environ.get("SYNTHMORPH_SIF")
+WRAPPER = os.environ.get("SYNTHMORPH_SIF")
 if WRAPPER is None:
     raise RuntimeError("Environment variable SYNTHMORPH_SIF pointing to SynthMorph .sif is not set!")
 
@@ -35,7 +34,11 @@ def run_registration(moving, fixed, moved, transform, wrapper=WRAPPER, subjects_
     logger.info(f"  Transform : {os.path.join(subjects_dir,transform)}")
     logger.info(f"========================================")
 
-    cmd = [wrapper, "register", "-g", "-o", moved, "-t", transform, moving, fixed]
+    # cmd = ["wrapper, "register", "-g", "-o", moved, "-t", transform, moving, fixed]
+    cmd = ["apptainer", "run", "--nv", wrapper,
+           "register", "-g", "-o", moved, "-t", transform,
+           moving, fixed]
+
     subprocess.run(cmd, check=True, env=env)
 
 
@@ -48,7 +51,8 @@ def run_apply(transform, moving, moved, wrapper, subjects_dir, is_seg=False):
     logger.info(f"  Output    : {os.path.join(subjects_dir,moved)}")
     logger.info(f"  Transform : {os.path.join(subjects_dir,transform)}")
     logger.info(f"========================================")
-    cmd = [wrapper, "apply"]
+    # cmd = [wrapper, "apply"]
+    cmd = ["apptainer", "run", "--nv", wrapper, "apply"]
     if is_seg:
         cmd += ["-m", "nearest"]
     cmd += [transform, moving, moved]

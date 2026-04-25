@@ -4,10 +4,10 @@ from .utils.log import get_logger
 from .llm_report_generation.ollama_report_gen import generate_llm_report
 from .midline_shift.midline_shift3d import midline_shift_3d
 from .vasari_features import ExtractVASARI
-from .additional_features.additional_features_3d import (compute_sphericity,
-                                                         compute_vasari_style_morphometrics,
-                                                         compute_transition_zone_thickness,
-                                                         ExtractT2FLAIRMismatch)
+# from .additional_features.additional_features_3d import (compute_sphericity,
+#                                                          compute_vasari_style_morphometrics,
+#                                                          compute_transition_zone_thickness,
+#                                                          ExtractT2FLAIRMismatch)
 
 # from .vasari_features.extract_vasari_features import vasari_features
 
@@ -44,7 +44,6 @@ def main(args: argparse.Namespace):
     os.makedirs(tmp_dir, exist_ok=True)
 
     # Load patient metadata from metadata.json in subject folder
-    ?? 
     # Run again and save age + gender now
     metadata_json_pth = join(args.subject_folder, "metadata.json")
     if not os.path.exists(metadata_json_pth):
