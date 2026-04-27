@@ -46,13 +46,18 @@ def main():
 
     for entry in sorted_entries:
         subject_dir = os.path.join(root, entry)
-        if f"{entry}_metadata_no_clinical.json" in os.listdir(subject_dir):
-            logger.info(f"Skipping {entry} — metadata_no_clinical.json already exists.")
+
+        if not os.path.isdir(subject_dir):
+            continue  # skip files at root level early
+
+        # Skip if final output already exists
+        if os.path.exists(os.path.join(subject_dir, f"{entry}_metadata_final.json")):
+            logger.info(f"Skipping {entry} — {entry}_metadata_final.json already exists.")
             continue
+
         paths = build_subject_paths(entry)
 
-        if not os.path.isdir(os.path.join(root, entry)):
-            continue  # skip files
+        # (isdir check already done above)
 
         logger.info(f"\n=== Processing {entry} ===")
 

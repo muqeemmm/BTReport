@@ -378,7 +378,6 @@ def transition_zone_thickness(
     for xyz in boundary_coords:
         x0, y0, z0 = xyz.astype(float)
 
-        ?? is xyz a tuple??
         u = outward_normals[tuple(xyz)].astype(float)
         nu = np.linalg.norm(u)
         if nu < 1e-8:
@@ -396,7 +395,7 @@ def transition_zone_thickness(
 
         # start sampling just outside tumor core
         p0 = p_boundary + u * step_vox
-        ?? is p0 outside the foreground? 
+        # ?? is p0 outside the foreground? 
 
         prev_int = map_coordinates(
             t1ce_array,
@@ -437,7 +436,7 @@ def transition_zone_thickness(
             if in_edema and (ed_lower <= I <= ed_upper):
                 p_hit = p.copy()
 
-                ?? Make this code easier. Avoid using alpha interpolation
+                # ?? Make this code easier. Avoid using alpha interpolation
                 if abs(I - prev_int) > 1e-6:
                     if prev_int > ed_upper and I <= ed_upper:
                         target = ed_upper
