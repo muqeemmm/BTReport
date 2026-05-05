@@ -164,7 +164,12 @@ def main(args: argparse.Namespace):
     metadata.update(sphericity)
 
     # Compute transition zone thickness features
-    transition_zone_metrics = compute_transition_zone_thickness(t1ce_path = t1ce_path, seg_path = tumor_path)
+    transition_zone_metrics = compute_transition_zone_thickness(
+        seg_path   = tumor_path,
+        flair_path = flair_path,   # used only by method_b; ignored by method_a
+        t1ce_path  = t1ce_path,    # used only by method_b for T1CE-based thickness
+        method     = args.tz_method,
+    )
     metadata.update(transition_zone_metrics)
 
     # Compute morphometrics
@@ -225,6 +230,17 @@ if __name__ == "__main__":
         help="Indicator as to whther the model will use images for generation. Will look for tumor_maxslice.png in subject_folder",
     )
     parser.add_argument("--llm", type=str, default="gpt-oss:120b")
+    parser.add_argument(
+        "--tz_method",
+        type=str,
+        default="method_a",
+        choices=["method_a", "method_b"],
+        help=(
+            "Transition zone thickness method. "
+            "'method_a': distance-transform local thickness (purely geometric, recommended). "
+            "'method_b': ray-casting along outward normals with FLAIR intensity band (research/exploratory)."
+        ),
+    )
 
     args = parser.parse_args()
 
