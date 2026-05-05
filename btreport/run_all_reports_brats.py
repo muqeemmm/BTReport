@@ -25,6 +25,17 @@ def main():
     parser.add_argument("--et_label", type=int, default=4)
     parser.add_argument("--llm", type=str, default="gpt-oss:120b")
     parser.add_argument("--eval", action="store_true", help="Running evaluation after generation.")
+    parser.add_argument(
+        "--tz_method",
+        type=str,
+        default="method_a",
+        choices=["method_a", "method_b"],
+        help=(
+            "Transition zone thickness method passed to generate_report. "
+            "'method_a': distance-transform (recommended). "
+            "'method_b': ray-casting with FLAIR."
+        ),
+    )
 
     args = parser.parse_args()
 
@@ -87,6 +98,8 @@ def main():
             str(args.et_label),
             "--llm",
             llm,
+            "--tz_method",
+            args.tz_method,
         ]
 
         # for key, value in paths.items():

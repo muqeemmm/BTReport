@@ -44,11 +44,25 @@ from openpyxl.utils import get_column_letter
 # ---------------------------------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent
 
-AKU_FILE = BASE_DIR / "aku_annotations_with_duplicates.xlsx"
+# The current cohort source. The new AKU export lives in the JSONs BTReport
+# folder and splits annotations across two sheets (Single Annotations +
+# Duplicates) which together yield 646 unique Subject IDs. We try several
+# plausible locations because the same project folder may be reached via
+# different mount points (e.g., the user's filesystem vs. a sandbox).
+_NEW_FILENAME = "AKU_Data_by_Observer_CenterID.xlsx"
+AKU_FILE_NEW_CANDIDATES = (
+    BASE_DIR / _NEW_FILENAME,
+    BASE_DIR.parent / "Dataset_AKU_WHO" / "JSONs BTReport" / _NEW_FILENAME,
+    BASE_DIR.parent / "JSONs BTReport" / _NEW_FILENAME,
+)
+AKU_FILE_LEGACY = BASE_DIR / "aku_annotations_with_duplicates.xlsx"
+AKU_SHEETS = ("Single Annotations", "Duplicates")
+
 MASTER_FILE = BASE_DIR / "master_file.xlsx"
 DISCARD_FILE = BASE_DIR / "subjects_to_discard.txt"
 
 OUT_TABLE = BASE_DIR / "patient_characteristics_table.xlsx"
+OUT_TABLE_SUPP = BASE_DIR / "patient_characteristics_table_supplementary.xlsx"
 OUT_MERGED = BASE_DIR / "cohort_merged.xlsx"
 
 # Column order in the final table (left to right).
@@ -76,9 +90,42 @@ def load_discard_list(path: Path) -> set[str]:
     return ids
 
 
+def _load_aku_subjects() -> pd.DataFrame:
+    """Load the AKU cohort.
+
+    Prefers the new export (AKU_Data_by_Observer_CenterID.xlsx) which splits
+    annotations into a 'Single Annotations' sheet plus a 'Duplicates' sheet
+    (subjects annotated by more than one observer). The two sheets are
+    concatenated, then deduplicated on Subject ID. Falls back to the legacy
+    single-sheet file if the new one is not available.
+    """
+    new_path = next((p for p in AKU_FILE_NEW_CANDIDATES if p.exists()), None)
+    if new_path is not None:
+        print(f"[cohort] reading AKU file: {new_path}")
+        single = pd.read_excel(new_path, sheet_name="Single Annotations")
+        # The Duplicates sheet has a banner row ("DUPLICATES") and no header;
+        # reuse the column names from the Single Annotations sheet.
+        dup_raw = pd.read_excel(
+            new_path, sheet_name="Duplicates", header=None, skiprows=1
+        )
+        if not dup_raw.empty:
+            dup_raw.columns = single.columns[: dup_raw.shape[1]]
+        else:
+            dup_raw = pd.DataFrame(columns=single.columns)
+        combined = pd.concat([single, dup_raw], ignore_index=True)
+        print(
+            f"[cohort] sheets: Single Annotations={len(single)} rows, "
+            f"Duplicates={len(dup_raw)} rows"
+        )
+        return combined
+
+    print(f"[cohort] reading legacy AKU file: {AKU_FILE_LEGACY.name}")
+    return pd.read_excel(AKU_FILE_LEGACY)
+
+
 def build_cohort() -> pd.DataFrame:
     """Load inputs, apply the Subject ID filter, and join to the master file."""
-    aku = pd.read_excel(AKU_FILE)
+    aku = _load_aku_subjects()
     master = pd.read_excel(MASTER_FILE)
 
     # Keep one row per unique Subject ID (first occurrence) and record its Center ID.
@@ -258,22 +305,59 @@ def normalise_segmentation(v):
 # Table construction
 # ---------------------------------------------------------------------------
 def prepare_table_dataframe(merged: pd.DataFrame) -> pd.DataFrame:
+    """Build the per-row classification columns used by the table.
+
+    Reads the post-transform cohort (cohort_merged.xlsx, 12 columns) when
+    that file exists, so molecular subtype is taken straight from WHO2021
+    (with the Grade-4 IDH-mutant astrocytoma split applied here). Falls
+    back to deriving values from raw master columns if only the legacy
+    schema is available.
+    """
     df = merged.copy()
-    # Pull best-available molecular values (original first, then generated).
-    df["Subtype_raw"] = df.apply(
-        lambda r: _coalesce(r, "WHO 2021 (original)", "WHO 2021 (generated)"),
-        axis=1,
-    )
-    # Normalised columns used for counting.
-    df["_Sex"] = df["Gender"].map(normalise_sex)
-    df["_IDH"] = df["IDH (original)"].map(normalise_idh)
-    df["_1p19q"] = df["1p/19q (original)"].map(normalise_1p19q)
-    df["_Subtype"] = df.apply(
-        lambda r: normalise_subtype(r["Subtype_raw"], r.get("Grade")), axis=1
-    )
+
+    # ----- molecular subtype -----
+    if "WHO2021" in df.columns:
+        df["_Subtype"] = df.apply(
+            lambda r: normalise_subtype(r.get("WHO2021"), r.get("Grade")),
+            axis=1,
+        )
+    else:
+        df["Subtype_raw"] = df.apply(
+            lambda r: _coalesce(r, "WHO 2021 (original)", "WHO 2021 (generated)"),
+            axis=1,
+        )
+        df["_Subtype"] = df.apply(
+            lambda r: normalise_subtype(r["Subtype_raw"], r.get("Grade")),
+            axis=1,
+        )
+
+    # ----- the rest (column names differ between cleaned vs. raw schema) -----
+    sex_col = "Gender" if "Gender" in df.columns else "Gender"
+    idh_col = "IDH" if "IDH" in df.columns else "IDH (original)"
+    p19_col = "1p/19q" if "1p/19q" in df.columns else "1p/19q (original)"
+
+    df["_Sex"] = df[sex_col].map(normalise_sex)
+    df["_IDH"] = df[idh_col].map(normalise_idh)
+    df["_1p19q"] = df[p19_col].map(normalise_1p19q)
     df["_Grade"] = df["Grade"].map(normalise_grade)
-    df["_Seg"] = df["Multiclass Tumor Segmentation"].map(normalise_segmentation)
     df["_Age"] = pd.to_numeric(df["Age (years)"], errors="coerce")
+
+    # Segmentation lives in master_file (it was dropped from the cleaned merged).
+    if "Multiclass Tumor Segmentation" in df.columns:
+        df["_Seg"] = df["Multiclass Tumor Segmentation"].map(normalise_segmentation)
+    else:
+        df["_Seg"] = "Unknown"
+
+    # Per-row WHO 2021 / WHO 2016 labels for the supplementary table.
+    df["_WHO2021"] = (
+        df["WHO2021"] if "WHO2021" in df.columns else pd.Series([None] * len(df))
+    )
+    df["_WHO2021"] = df["_WHO2021"].where(df["_WHO2021"].notna(), "Unknown")
+
+    if "WHO2016" in df.columns:
+        df["_WHO2016"] = df["WHO2016"].where(df["WHO2016"].notna(), "Unknown")
+    else:
+        df["_WHO2016"] = "Unknown"
     return df
 
 
@@ -405,17 +489,139 @@ def build_table_rows(df: pd.DataFrame, datasets: list[str]) -> tuple[list[list],
     return rows, totals
 
 
+# Labels that appear under each WHO heading in the supplementary table.
+WHO2021_LABELS = [
+    "Oligodendroglioma, IDH-mutant, 1p/19q-codeleted",
+    "Astrocytoma, IDH-mutant",
+    "Glioblastoma, IDH-wildtype",
+    "Unknown",
+]
+
+WHO2016_LABELS = [
+    "Oligodendroglioma, IDH-mutant, 1p/19q-codeleted",
+    "Oligodendroglioma",
+    "Oligoastrocytoma",
+    "Astrocytoma, IDH-mutant",
+    "Glioblastoma, IDH-mutant",
+    "Glioblastoma, IDH-wildtype",
+    "Unknown",
+]
+
+
+def build_supplementary_table_rows(
+    df: pd.DataFrame, datasets: list[str]
+) -> tuple[list[list], dict]:
+    """Supplementary version: same patient characteristics but with WHO 2021
+    and WHO 2016 classifications as separate row groups (Molecular Subtype
+    is dropped because it is replaced by these two groups).
+    """
+    totals = {ds: int((df["Dataset"] == ds).sum()) for ds in datasets}
+    totals["TOTAL"] = int(len(df))
+
+    all_ds = datasets + ["TOTAL"]
+    header = ["Characteristic"] + [f"{ds} (n={totals[ds]})" for ds in all_ds]
+    rows: list[list] = [header]
+
+    def _count_row(label: str, counts: dict) -> tuple[list, int]:
+        row = [f"  {label}"]
+        total_n = 0
+        for ds in all_ds:
+            n = (
+                int(counts["TOTAL"].get(label, 0))
+                if ds == "TOTAL"
+                else int(counts[ds].get(label, 0))
+            )
+            total_n += n
+            row.append(_fmt_n_pct(n, totals[ds]))
+        return row, total_n
+
+    def _append(label: str, counts: dict, row_list: list) -> None:
+        row, total_n = _count_row(label, counts)
+        if label == "Unknown" and total_n == 0:
+            return
+        row_list.append(row)
+
+    # ---- Age ----
+    rows.append(["Age (years)"] + [""] * len(all_ds))
+    known_row = ["  Known (mean ± SD)"]
+    for ds in all_ds:
+        sub = df if ds == "TOTAL" else df[df["Dataset"] == ds]
+        known_row.append(_fmt_mean_sd(sub["_Age"]))
+    rows.append(known_row)
+
+    unknown_row = ["  Unknown"]
+    total_unknown = 0
+    for ds in all_ds:
+        sub = df if ds == "TOTAL" else df[df["Dataset"] == ds]
+        n_unknown = int(sub["_Age"].isna().sum())
+        total_unknown += n_unknown
+        unknown_row.append(_fmt_n_pct(n_unknown, totals[ds]))
+    if total_unknown > 0:
+        rows.append(unknown_row)
+
+    # ---- Sex ----
+    rows.append(["Sex"] + [""] * len(all_ds))
+    counts = _counts_by_dataset(df, "_Sex", datasets)
+    for label in ["Female", "Male", "Unknown"]:
+        _append(label, counts, rows)
+
+    # ---- IDH ----
+    rows.append(["IDH"] + [""] * len(all_ds))
+    counts = _counts_by_dataset(df, "_IDH", datasets)
+    for label in ["Mutated", "Wildtype", "Unknown"]:
+        _append(label, counts, rows)
+
+    # ---- 1p/19q ----
+    rows.append(["1p/19q"] + [""] * len(all_ds))
+    counts = _counts_by_dataset(df, "_1p19q", datasets)
+    for label in ["Co-deleted", "Intact", "Unknown"]:
+        _append(label, counts, rows)
+
+    # ---- WHO 2021 Classification ----
+    rows.append(["WHO 2021 Classification"] + [""] * len(all_ds))
+    counts = _counts_by_dataset(df, "_WHO2021", datasets)
+    for label in WHO2021_LABELS:
+        _append(label, counts, rows)
+
+    # ---- WHO 2016 Classification ----
+    rows.append(["WHO 2016 Classification"] + [""] * len(all_ds))
+    counts = _counts_by_dataset(df, "_WHO2016", datasets)
+    for label in WHO2016_LABELS:
+        _append(label, counts, rows)
+
+    # ---- Tumor Grade ----
+    rows.append(["Tumor Grade"] + [""] * len(all_ds))
+    counts = _counts_by_dataset(df, "_Grade", datasets)
+    for label in ["WHO grade 2", "WHO grade 3", "WHO grade 4", "Unknown"]:
+        _append(label, counts, rows)
+
+    # ---- Multi-class Segmentation ----
+    rows.append(["Multi-class Segmentation"] + [""] * len(all_ds))
+    counts = _counts_by_dataset(df, "_Seg", datasets)
+    for label in ["Manual", "Automatic", "Unknown"]:
+        _append(label, counts, rows)
+
+    return rows, totals
+
+
 # ---------------------------------------------------------------------------
 # Excel writer
 # ---------------------------------------------------------------------------
-def write_table_xlsx(rows: list[list], totals: dict, datasets: list[str], out_path: Path) -> None:
+def write_table_xlsx(
+    rows: list[list],
+    totals: dict,
+    datasets: list[str],
+    out_path: Path,
+    title: str | None = None,
+) -> None:
     wb = Workbook()
     ws = wb.active
     ws.title = "Patient Characteristics"
 
     # Title row.
     n_cols = len(rows[0])
-    title = f"Table 1. Patient Characteristics Table (N = {totals['TOTAL']})"
+    if title is None:
+        title = f"Table 1. Patient Characteristics Table (N = {totals['TOTAL']})"
     ws.cell(row=1, column=1, value=title)
     ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=n_cols)
     title_cell = ws.cell(row=1, column=1)
@@ -434,6 +640,8 @@ def write_table_xlsx(rows: list[list], totals: dict, datasets: list[str], out_pa
         "IDH",
         "1p/19q",
         "Molecular Subtype",
+        "WHO 2021 Classification",
+        "WHO 2016 Classification",
         "Tumor Grade",
         "Multi-class Segmentation",
     }
@@ -471,9 +679,10 @@ def write_table_xlsx(rows: list[list], totals: dict, datasets: list[str], out_pa
     foot_row = start_row + len(rows) + 1
     footnote = (
         "Values are N (%), except Age which is reported as mean ± SD. "
-        "Cohort defined by the unique Subject IDs in aku_annotations_with_duplicates.xlsx; "
-        "subjects listed in subjects_to_discard.txt are excluded. "
-        "Metadata is sourced from master_file.xlsx, joined via the AKU Center ID."
+        "Cohort defined by the unique Subject IDs in AKU_Data_by_Observer_CenterID.xlsx "
+        "(Single Annotations + Duplicates sheets); subjects listed in "
+        "subjects_to_discard.txt are excluded. Metadata is sourced from "
+        "master_file.xlsx, joined via the AKU Center ID."
     )
     ws.cell(row=foot_row, column=1, value=footnote)
     ws.merge_cells(start_row=foot_row, start_column=1, end_row=foot_row, end_column=n_cols)
@@ -489,13 +698,41 @@ def write_table_xlsx(rows: list[list], totals: dict, datasets: list[str], out_pa
 # Main
 # ---------------------------------------------------------------------------
 def main() -> None:
-    merged = build_cohort()
+    merged_raw = build_cohort()
 
-    # Save the merged per-patient file for auditing.
-    merged.to_excel(OUT_MERGED, index=False)
-    print(f"[output] wrote merged cohort to {OUT_MERGED.name}")
+    # Apply the WHO2016 / WHO2021 derivation + column cleanup. The transform
+    # script defines the rules in one place; we reuse them here so the table
+    # is computed from the same cleaned columns the user audits in
+    # cohort_merged.xlsx.
+    import importlib.util
 
-    df = prepare_table_dataframe(merged)
+    transform_path = BASE_DIR / "transform_cohort_merged.py"
+    spec = importlib.util.spec_from_file_location("transform_cohort_merged", transform_path)
+    transform_mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(transform_mod)
+
+    augmented = merged_raw.copy()
+    augmented["WHO2021"] = augmented.apply(transform_mod.fill_who2021, axis=1)
+    augmented["WHO2016"] = augmented.apply(transform_mod.derive_who2016, axis=1)
+
+    # Build a tidy 12-column "cleaned" cohort matching the spec, and write it
+    # to disk; the table is computed from `augmented` which still has the
+    # extra columns (e.g., Multiclass Tumor Segmentation) needed for the
+    # remaining rows.
+    cleaned = augmented.copy()
+    cleaned = cleaned.drop(columns=[c for c in cleaned.columns if c.endswith("(generated)")])
+    rename_map = {c: c.rsplit("(original)", 1)[0].strip() for c in cleaned.columns if c.endswith("(original)")}
+    cleaned = cleaned.rename(columns=rename_map)
+    cleaned = cleaned.drop(columns=[c for c in ("Tumor Subtype",) if c in cleaned.columns])
+    final_cols = [
+        "Center ID", "Subject ID", "Dataset", "Hospital", "BraTS2021",
+        "Gender", "Age (years)", "IDH", "1p/19q", "Grade", "WHO2016", "WHO2021",
+    ]
+    cleaned = cleaned.loc[:, final_cols]
+    cleaned.to_excel(OUT_MERGED, index=False)
+    print(f"[output] wrote cleaned cohort to {OUT_MERGED.name} ({cleaned.shape})")
+
+    df = prepare_table_dataframe(augmented)
 
     # Keep only datasets that actually appear in the cohort, in the
     # preferred order, then append any stragglers alphabetically.
@@ -506,6 +743,19 @@ def main() -> None:
     rows, totals = build_table_rows(df, datasets)
     write_table_xlsx(rows, totals, datasets, OUT_TABLE)
     print(f"[output] wrote Patient Characteristics Table to {OUT_TABLE.name}")
+
+    supp_rows, _ = build_supplementary_table_rows(df, datasets)
+    write_table_xlsx(
+        supp_rows,
+        totals,
+        datasets,
+        OUT_TABLE_SUPP,
+        title=(
+            f"Supplementary Table. Patient Characteristics with WHO 2021 and "
+            f"WHO 2016 Classifications (N = {totals['TOTAL']})"
+        ),
+    )
+    print(f"[output] wrote Supplementary Table to {OUT_TABLE_SUPP.name}")
     print(f"[output] total patients in table: {totals['TOTAL']}")
     for ds in datasets:
         print(f"    {ds}: {totals[ds]}")
