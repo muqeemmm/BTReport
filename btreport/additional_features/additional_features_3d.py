@@ -555,9 +555,9 @@ class ExtractT2FLAIRMismatch:
         if not core_mask.any():
             return np.zeros_like(core_mask, dtype=bool), np.zeros_like(core_mask, dtype=bool)
 
-        dt = distance_transform_edt(~core_mask)
+        dt = distance_transform_edt(core_mask)
 
-        # center = deeper half of the lesion thickness (at least >0)
+        # center = voxels deeper than 10% of the max inward depth (far from boundary)
         max_dt = float(dt.max())
         if max_dt <= 0:
             return np.zeros_like(core_mask, dtype=bool), np.zeros_like(core_mask, dtype=bool)
