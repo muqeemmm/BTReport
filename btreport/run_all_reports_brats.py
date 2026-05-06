@@ -16,7 +16,7 @@ def main():
 
     # parser.add_argument("--save_dir", type=str, required=True, help="Path to save results.")
 
-    root='/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Glioblastoma_IDH-wildtype'
+    root='/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Oligodendroglioma_IDH-mutant_1p-19q-codeleted'
 
     parser.add_argument("--clear_tmp", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
@@ -33,7 +33,7 @@ def main():
         help=(
             "Transition zone thickness method passed to generate_report. "
             "'method_a': distance-transform (recommended). "
-            "'method_b': ray-casting with FLAIR."
+            "'method_b': ray-casting with FLAIR and T1CE."
         ),
     )
 

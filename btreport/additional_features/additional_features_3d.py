@@ -1,11 +1,13 @@
-import trimesh, ants
+from __future__ import annotations
+
+import trimesh
 import numpy as np
 import pandas as pd
 import time
 import os, logging
 from typing import Tuple
 from skimage import measure
-from vasari_features.vasari_auto_v2 import NiftiImage
+from ..vasari_features.vasari_auto_v2 import NiftiImage
 from scipy.ndimage import (
     label,
     binary_dilation,
@@ -434,7 +436,7 @@ def compute_transition_zone_thickness(
     is provided, "Transition Zone Thickness (T1CE)".
     The thickness_map array (Method A) is excluded as it is not JSON-serialisable.
     """
-    seg_img = NiftiImage(seg_path, canonical=True)
+    seg_img = NiftiImage(seg_path)
     seg_array = seg_img.array.astype(np.int16)
     voxel_spacing = tuple(float(s) for s in seg_img.spacing)
 
@@ -446,14 +448,14 @@ def compute_transition_zone_thickness(
     elif method == "method_b":
         if flair_path is None:
             raise ValueError("flair_path must be provided for method_b (ray-casting).")
-        flair_img = NiftiImage(flair_path, canonical=True)
+        flair_img = NiftiImage(flair_path)
         flair_array = flair_img.array.astype(np.float32)
         flair_result = transition_zone_thickness_raycast(flair_array, seg_array, voxel_spacing)
 
         out = {"Transition Zone Thickness (FLAIR)": flair_result}
 
         if t1ce_path is not None:
-            t1ce_img = NiftiImage(t1ce_path, canonical=True)
+            t1ce_img = NiftiImage(t1ce_path)
             t1ce_array = t1ce_img.array.astype(np.float32)
             t1ce_result = transition_zone_thickness_raycast(t1ce_array, seg_array, voxel_spacing)
             out["Transition Zone Thickness (T1CE)"] = t1ce_result
@@ -622,7 +624,7 @@ class ExtractT2FLAIRMismatch:
         t2_path: str,
         flair_path: str,
         brain_mask_path: str,
-        laterility: str | None = None,
+        laterality: str | None = None,
         merged_seg: str | None = None,
     ) -> pd.DataFrame:
         """
@@ -640,7 +642,10 @@ class ExtractT2FLAIRMismatch:
         t2 = NiftiImage(t2_path)
         flair = NiftiImage(flair_path)
 
-        brain_mask = NiftiImage(brain_mask_path).array.astype(bool)
+        if brain_mask_path is not None:
+            brain_mask = NiftiImage(brain_mask_path).array.astype(bool)
+        else:
+            brain_mask = np.isfinite(t2.array) & (t2.array != 0)
 
         whole_tumor_mask = self.get_whole_tumor_mask(segmentation)
         tumor_core_mask = self.get_tumor_core_mask(segmentation)
@@ -648,9 +653,9 @@ class ExtractT2FLAIRMismatch:
         merged_seg_array = merged_segmentation.array.astype(np.int16)
         wm_left = np.isin(merged_seg_array, [2, 7])     # left hemisphere white matter
         wm_right = np.isin(merged_seg_array, [41, 46])  # right hemisphere white matter
-        if laterility == "left":
+        if laterality == "left":
             cnwm_mask = wm_right
-        elif laterility == "right":
+        elif laterality == "right":
             cnwm_mask = wm_left
         else:
             cnwm_mask = wm_left | wm_right
@@ -698,6 +703,7 @@ class ExtractT2FLAIRMismatch:
             center_flair_mean = np.nan
             rim_flair_mean = np.nan
             mismatch_present = np.nan
+            mismatch_degree = np.nan
         else:
             (
                 mismatch_score,
@@ -749,12 +755,12 @@ class ExtractT2FLAIRMismatch:
 
         return result
 
-    def __call__(self, tumorseg_ss: str, t2_path: str, flair_path: str, laterility: str, merged_seg: str, brain_mask_path: str) -> dict:
+    def __call__(self, tumorseg_ss: str, t2_path: str, flair_path: str, laterality: str, merged_seg: str, brain_mask_path: str) -> dict:
         report = self.extract_t2_flair_mismatch(
             tumorseg_ss=tumorseg_ss,
             t2_path=t2_path,
             flair_path=flair_path,
-            laterility=laterility,
+            laterality=laterality,
             merged_seg=merged_seg,
             brain_mask_path=brain_mask_path
         )

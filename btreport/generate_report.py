@@ -8,6 +8,8 @@ from .additional_features.additional_features_3d import (compute_sphericity,
                                                          compute_vasari_style_morphometrics,
                                                          compute_transition_zone_thickness,
                                                          ExtractT2FLAIRMismatch)
+import ants
+from antspynet.utilities import brain_extraction as be
 
 # from .vasari_features.extract_vasari_features import vasari_features
 
@@ -44,16 +46,16 @@ def main(args: argparse.Namespace):
     tmp_dir = join(args.subject_folder, "tmp")
 
     # Intermediate file paths (all live inside tmp/)
-    mni_in_subj      = join(tmp_dir, "MNI152_in_subject_space.nii.gz")
-    mni_tfm          = join(tmp_dir, "MNI152_in_subject_space_transform.nii.gz")
-    sub_in_mni       = join(tmp_dir, "subject_in_MNI152_space.nii.gz")
-    sub_tfm          = join(tmp_dir, "subject_in_MNI152_space_transform.nii.gz")
-    tum_in_mni       = join(tmp_dir, "tumor_seg_in_MNI152_space.nii.gz")
-    patient_midline  = join(tmp_dir, "patient_midline.nii.gz")
-    ideal_midline    = join(tmp_dir, "ideal_midline.nii.gz")
+    mni_in_subj       = join(tmp_dir, "MNI152_in_subject_space.nii.gz")
+    mni_tfm           = join(tmp_dir, "MNI152_in_subject_space_transform.nii.gz")
+    sub_in_mni        = join(tmp_dir, "subject_in_MNI152_space.nii.gz")
+    sub_tfm           = join(tmp_dir, "subject_in_MNI152_space_transform.nii.gz")
+    tum_in_mni        = join(tmp_dir, "tumor_seg_in_MNI152_space.nii.gz")
+    patient_midline   = join(tmp_dir, "patient_midline.nii.gz")
+    ideal_midline     = join(tmp_dir, "ideal_midline.nii.gz")
     midline_distances = join(tmp_dir, "midline_distances.nii.gz")
-    anatseg          = mni_in_subj.replace(".nii.gz", "_synthseg.nii.gz")
-    merged_seg       = mni_in_subj.replace(".nii.gz", "_merged_seg.nii.gz")
+    anatseg           = mni_in_subj.replace(".nii.gz", "_synthseg.nii.gz")
+    merged_seg        = mni_in_subj.replace(".nii.gz", "_merged_seg.nii.gz")
 
     # Output paths
     metadata_clinical_path    = join(args.subject_folder, f"{subject_name}_metadata_clinical.json")
@@ -159,6 +161,12 @@ def main(args: argparse.Namespace):
     # Get laterality of tumor epicenter for use in T2-FLAIR mismatch feature extraction
     laterality = metadata.get("Side of Tumor Epicenter")
 
+    # Get brain mask for use in additional feature extraction. 
+    t1_img            = ants.image_read(mni_in_subj)
+    brain_mask_pth    = join(args.subject_folder, "tmp", "brain_mask.nii.gz")
+    brain_mask        = be(t1_img, modality = "t1", verbose=False)
+    ants.image_write(brain_mask, brain_mask_pth)
+
     # Compute sphericity features
     sphericity = compute_sphericity(seg_path = tumor_path)
     metadata.update(sphericity)
@@ -175,7 +183,7 @@ def main(args: argparse.Namespace):
     # Compute morphometrics
     morphometrics = compute_vasari_style_morphometrics(tumorseg_ss_path   = tumor_path,
                                                        intensity_path     = flair_path,
-                                                       brain_mask_path    = None,
+                                                       brain_mask_path    = brain_mask_pth,
                                                        enhancing_label    = et_label,
                                                        nonenhancing_label = args.ncr_label,
                                                        oedema_label       = args.ed_label)
