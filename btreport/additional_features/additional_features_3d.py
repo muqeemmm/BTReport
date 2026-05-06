@@ -415,7 +415,7 @@ def compute_transition_zone_thickness(
     seg_path: str,
     flair_path: str | None = None,
     t1ce_path: str | None = None,
-    method: str = "method_a",
+    method: str = "method_b",
 ) -> dict:
     """
     Wrapper around the two transition zone thickness methods.

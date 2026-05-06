@@ -241,7 +241,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--tz_method",
         type=str,
-        default="method_a",
+        default="method_b",
         choices=["method_a", "method_b"],
         help=(
             "Transition zone thickness method. "
