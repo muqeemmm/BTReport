@@ -8,8 +8,8 @@
 
 
 # Singularity / Apptainer images
-export SYNTHMORPH_SIF="/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/btreport/utils/synthmorph_4.sif"
-export SYNTHSEG_SIF="/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/btreport/utils/synthseg.sif"
+export SYNTHMORPH_SIF="/media/ameerhamza/DATA/Muqeem/BTReport/btreport/utils/synthmorph_4.sif"
+export SYNTHSEG_SIF="/media/ameerhamza/DATA/Muqeem/BTReport/btreport/utils/synthseg.sif"
 # export OLLAMA_SIF=/pscratch/sd/j/jehr/ollama/ollama.sif
 
 # export SUBJECTS_DIR="/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Astrocytoma_IDH-mutant" # Relative directory from which subject files are referenced inside containers. Usually I set this to the root of my scratch space.
