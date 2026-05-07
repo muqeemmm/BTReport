@@ -128,16 +128,50 @@
   "gender": "female",
   "whole_tumor_sphericity": 0.5484802357354236,
   "tumor_core_sphericity": 0.5846216631895715,
-  "Transition Zone Thickness": {
-    "method": "distance_transform_local_thickness",
-    "transition_zone_present": true,
-    "mean_mm": 2.6284432411193848,
-    "median_mm": 2.0,
-    "std_mm": 1.0317403078079224,
-    "min_mm": 2.0,
-    "max_mm": 8.485280990600586,
-    "p95_mm": 4.898979663848877,
-    "volume_mm3": 7314.0,
+  "Transition Zone Thickness (FLAIR)": {
+    "method": "raycast_intensity_band",
+    "transition_zone_thickness_mm": 0.75,
+    "mean_mm": 1.1469611922257434,
+    "median_mm": 0.75,
+    "std_mm": 0.8954872292204783,
+    "p95_mm": 3.1148070133848074,
+    "n_boundary_voxels": 2391,
+    "n_successful_rays": 1653,
+    "ray_outcomes": {
+      "hit": 1653,
+      "exited_no_hit": 727,
+      "hit_max_dist": 0,
+      "degenerate_normal": 11
+    },
+    "edema_intensity_band": [
+      688.2481985174,
+      815.7518014826
+    ],
+    "voxel_spacing": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "Transition Zone Thickness (T1CE)": {
+    "method": "raycast_intensity_band",
+    "transition_zone_thickness_mm": 0.75,
+    "mean_mm": 0.9189187116798018,
+    "median_mm": 0.75,
+    "std_mm": 0.6643521045237011,
+    "p95_mm": 2.259536679309728,
+    "n_boundary_voxels": 2391,
+    "n_successful_rays": 1390,
+    "ray_outcomes": {
+      "hit": 1390,
+      "exited_no_hit": 990,
+      "hit_max_dist": 0,
+      "degenerate_normal": 11
+    },
+    "edema_intensity_band": [
+      692.5219985174,
+      781.4780014826
+    ],
     "voxel_spacing": [
       1.0,
       1.0,

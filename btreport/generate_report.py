@@ -176,7 +176,7 @@ def main(args: argparse.Namespace):
         seg_path   = tumor_path,
         flair_path = flair_path,   # used only by method_b; ignored by method_a
         t1ce_path  = t1ce_path,    # used only by method_b for T1CE-based thickness
-        method     = args.tz_method,
+        method     = "method_b",
     )
     metadata.update(transition_zone_metrics)
 
