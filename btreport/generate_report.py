@@ -66,13 +66,14 @@ def main(args: argparse.Namespace):
     # Resume condition: tmp/ exists AND both checkpoint JSONs are present.
     resume_from_step4 = (
         os.path.isdir(tmp_dir)
+        and bool(os.listdir(tmp_dir))
         and os.path.exists(metadata_no_clinical_path)
         and os.path.exists(metadata_clinical_path)
     )
 
     if resume_from_step4:
         logger.info(
-            f"tmp/ and checkpoint JSONs found — skipping steps [0-3/5], "
+            f"non-empty tmp/ and checkpoint JSONs found — skipping steps [0-3/5], "
             f"resuming from step [4/5]."
         )
         # Load steps [0-3] results from checkpoint
