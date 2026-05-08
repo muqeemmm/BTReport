@@ -16,7 +16,7 @@ def main():
 
     # parser.add_argument("--save_dir", type=str, required=True, help="Path to save results.")
 
-    root='/media/ameerhamza/DATA/Muqeem/BTReport/data/Dataset_AKU_WHO/Astrocytoma_IDH-mutant'
+    root="/media/ist/24C2F6DEC2F6B2E2/Muqeem/BTReport/data/Dataset_AKU_WHO/Glioblastoma_IDH-wildtype"
 
     parser.add_argument("--clear_tmp", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
@@ -28,7 +28,7 @@ def main():
     parser.add_argument(
         "--tz_method",
         type=str,
-        default="method_a",
+        default="method_b",
         choices=["method_a", "method_b"],
         help=(
             "Transition zone thickness method passed to generate_report. "
