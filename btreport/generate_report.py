@@ -66,7 +66,7 @@ def main(args: argparse.Namespace):
     # Resume condition: tmp/ exists AND both checkpoint JSONs are present.
     resume_from_step4 = (
         os.path.isdir(tmp_dir)
-        and bool(os.listdir(tmp_dir))
+        and (len(os.listdir(tmp_dir)) == 11)  # crude check to ensure all expected intermediate files are present
         and os.path.exists(metadata_no_clinical_path)
         and os.path.exists(metadata_clinical_path)
     )
