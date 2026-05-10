@@ -16,7 +16,7 @@ def main():
 
     # parser.add_argument("--save_dir", type=str, required=True, help="Path to save results.")
 
-    root="/media/ameerhamza/DATA/Muqeem/BTReport/data/Dataset_AKU_WHO/Astrocytoma_IDH-mutant"
+    root="/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Astrocytoma_IDH-mutant"
 
     parser.add_argument("--clear_tmp", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
