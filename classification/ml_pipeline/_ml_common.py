@@ -153,8 +153,11 @@ class MLBTransformer(BaseEstimator, TransformerMixin):
 def discover_subject_jsons(data_root: Path, suffix: str) -> List[tuple]:
     """
     Walk Dataset_AKU_WHO/<WHO_FOLDER>/<subject>/<subject><suffix>, returning
-    (subject_id, who_folder, path) for each subject that has the requested
-    JSON file. The "JSONs BTReport" folder is excluded by design.
+    (subject_id, path) for each subject that has the requested JSON file.
+    The "JSONs BTReport" folder is excluded by design.
+
+    NOTE: the WHO subtype is intentionally NOT inferred from the folder name —
+    it is read from cohort_merged.xlsx (WHO2021 column) by `build_labels`.
     """
     rows = []
     for who_folder in sorted(p for p in data_root.iterdir() if p.is_dir()):
@@ -163,17 +166,21 @@ def discover_subject_jsons(data_root: Path, suffix: str) -> List[tuple]:
         for subj in sorted(p for p in who_folder.iterdir() if p.is_dir()):
             cand = subj / f"{subj.name}{suffix}"
             if cand.exists():
-                rows.append((subj.name, who_folder.name, cand))
+                rows.append((subj.name, cand))
     return rows
 
 
 def build_labels(subjects: pd.DataFrame, labels_xlsx: Path) -> pd.DataFrame:
     """
-    Attach (IDH, 1p_19q, Grade) labels read EXCLUSIVELY from cohort_merged.xlsx
-    (no folder-name inference). Folder names are used only for traceability.
+    Attach (WHO2021 subtype, IDH, 1p_19q, Grade) labels read EXCLUSIVELY from
+    cohort_merged.xlsx. Nothing is derived from folder names.
 
     cohort_merged.xlsx layout (relevant columns):
-        BraTS2021, Center ID, IDH ('mutated' | 'wild type'),
+        BraTS2021, Center ID,
+        WHO2021 ('Astrocytoma, IDH-mutant' |
+                 'Oligodendroglioma, IDH-mutant, 1p/19q-codeleted' |
+                 'Glioblastoma, IDH-wildtype'),
+        IDH    ('mutated' | 'wild type'),
         1p/19q ('intact' | 'co-deleted' | 'rel. co-deleted' | 'x'),
         Grade  (2 | 3 | 4)
 
@@ -193,13 +200,14 @@ def build_labels(subjects: pd.DataFrame, labels_xlsx: Path) -> pd.DataFrame:
                'rel. co-deleted'-> NaN (ambiguous, excluded from 1p/19q task)
                'x'              -> NaN (missing)
       Grade  : numeric int (NaN if 'x' / not parseable)
+      who_subtype : WHO2021 string, passed through unchanged.
     """
     if not labels_xlsx.exists():
         raise FileNotFoundError(
             f"Required labels file not found: {labels_xlsx}")
 
     labels = pd.read_excel(labels_xlsx)
-    needed = {"BraTS2021", "Center ID", "IDH", "1p/19q", "Grade"}
+    needed = {"BraTS2021", "Center ID", "WHO2021", "IDH", "1p/19q", "Grade"}
     missing = needed - set(labels.columns)
     if missing:
         raise ValueError(
@@ -212,14 +220,15 @@ def build_labels(subjects: pd.DataFrame, labels_xlsx: Path) -> pd.DataFrame:
         labels["Center ID"].astype(str),
     )
 
-    idh_map    = {"mutated": "mutant", "wild type": "wildtype"}
-    onep_map   = {"intact": "non-codeleted", "co-deleted": "codeleted"}
+    idh_map  = {"mutated": "mutant", "wild type": "wildtype"}
+    onep_map = {"intact": "non-codeleted", "co-deleted": "codeleted"}
 
-    labels["IDH"]    = labels["IDH"].map(idh_map)
-    labels["1p_19q"] = labels["1p/19q"].map(onep_map)   # drops 'x' / 'rel. co-deleted'
-    labels["Grade"]  = pd.to_numeric(labels["Grade"], errors="coerce")
+    labels["IDH"]         = labels["IDH"].map(idh_map)
+    labels["1p_19q"]      = labels["1p/19q"].map(onep_map)   # drops 'x' / 'rel. co-deleted'
+    labels["Grade"]       = pd.to_numeric(labels["Grade"], errors="coerce")
+    labels["who_subtype"] = labels["WHO2021"]
 
-    keep = ["_key", "IDH", "1p_19q", "Grade"]
+    keep = ["_key", "who_subtype", "IDH", "1p_19q", "Grade"]
     return subjects.merge(labels[keep], left_on="subject_id",
                           right_on="_key", how="left").drop(columns="_key")
 
@@ -380,25 +389,22 @@ def run_ml_pipeline(
     print(f"[1/5] Found {len(discovered)} subjects with suffix '{json_suffix}'.")
 
     if rebuild_csv or not csv_path.exists():
-        json_paths = [p for _, _, p in discovered]
+        json_paths = [p for _, p in discovered]
         json_to_csv(json_paths, csv_path)
         print(f"      Flattened -> {csv_path}")
     df = pd.read_csv(csv_path)
 
-    # 2) Attach folder-derived metadata + labels.
-    folder_meta = pd.DataFrame(
-        [{"subject_id": s, "who": w} for s, w, _ in discovered]
-    )
-    # source_file in CSV is the JSON stem -> drop the suffix to recover BraTS ID.
+    # 2) Recover subject_id from the CSV's source_file (JSON stem), then attach
+    #    every label (IDH, 1p/19q, Grade, WHO2021 subtype) from cohort_merged.xlsx.
     df["subject_id"] = df[ID_COLUMN].astype(str).str.replace(
         json_suffix.replace(".json", "") + "$", "", regex=True)
-    df = df.merge(folder_meta, on="subject_id", how="left")
     df = build_labels(df, labels_xlsx)
 
     n_idh    = df["IDH"].notna().sum()
     n_1p19q  = df["1p_19q"].notna().sum()
     n_grade  = df["Grade"].notna().sum()
-    print(f"[2/5] Labels from cohort_merged.xlsx: "
+    n_who    = df["who_subtype"].notna().sum()
+    print(f"[2/5] Labels from cohort_merged.xlsx: WHO2021={n_who}, "
           f"IDH={n_idh}, 1p/19q={n_1p19q}, Grade={n_grade} (of {len(df)} subjects)")
 
     # 3) Build preprocessor.
