@@ -120,50 +120,16 @@
   "Tumor Location": "frontal_lobe-cortex region",
   "whole_tumor_sphericity": 0.46370251713456856,
   "tumor_core_sphericity": 0.5381837669799443,
-  "Transition Zone Thickness (FLAIR)": {
-    "method": "raycast_intensity_band",
-    "transition_zone_thickness_mm": 0.75,
-    "mean_mm": 1.2584260364414805,
-    "median_mm": 0.75,
-    "std_mm": 1.3135200058978533,
-    "p95_mm": 3.8235173174620645,
-    "n_boundary_voxels": 4654,
-    "n_successful_rays": 3959,
-    "ray_outcomes": {
-      "hit": 3959,
-      "exited_no_hit": 693,
-      "hit_max_dist": 0,
-      "degenerate_normal": 2
-    },
-    "edema_intensity_band": [
-      625.2481985174,
-      752.7518014826
-    ],
-    "voxel_spacing": [
-      1.0,
-      1.0,
-      1.0
-    ]
-  },
-  "Transition Zone Thickness (T1CE)": {
-    "method": "raycast_intensity_band",
-    "transition_zone_thickness_mm": 0.75,
-    "mean_mm": 1.01217922945562,
-    "median_mm": 0.75,
-    "std_mm": 0.8766332882147598,
-    "p95_mm": 2.509606095217548,
-    "n_boundary_voxels": 4654,
-    "n_successful_rays": 3783,
-    "ray_outcomes": {
-      "hit": 3783,
-      "exited_no_hit": 869,
-      "hit_max_dist": 0,
-      "degenerate_normal": 2
-    },
-    "edema_intensity_band": [
-      1097.0229985174,
-      1526.9770014826
-    ],
+  "Transition Zone Thickness": {
+    "method": "distance_transform_local_thickness",
+    "transition_zone_present": true,
+    "mean_mm": 3.270636558532715,
+    "median_mm": 2.8284270763397217,
+    "std_mm": 1.572748064994812,
+    "min_mm": 2.0,
+    "max_mm": 11.48912525177002,
+    "p95_mm": 6.324555397033691,
+    "volume_mm3": 29496.0,
     "voxel_spacing": [
       1.0,
       1.0,
