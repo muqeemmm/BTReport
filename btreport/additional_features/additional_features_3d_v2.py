@@ -734,6 +734,12 @@ def validate(
         label = flags.label()
         logger.info("=== Running preset %s (%s) ===", preset, label)
         tp = tn = fp = fn = ns_pos = ns_neg = 0
+        # Track central-FLAIR values per truth class for the per-preset median.
+        # We accumulate every numeric Central Core FLAIR Mean returned by the
+        # extractor (including for FN / FP cases) so the median reflects what
+        # the rule was actually looking at — not just the cases it scored "1".
+        cfl_pos: list[float] = []
+        cfl_neg: list[float] = []
         for cid, truth in subjects:
             if cid not in file_index:
                 if truth == 1: ns_pos += 1
@@ -767,6 +773,13 @@ def validate(
             elif truth == 0 and int(pred) == 1: fp += 1
             else: tn += 1
 
+            # Accumulate central FLAIR values (regardless of decision) so the
+            # per-preset median reports what the extractor measured, not only
+            # what it labelled positive.
+            cfl = out.get("Central Core FLAIR Mean")
+            if isinstance(cfl, (int, float)) and not math.isnan(float(cfl)):
+                (cfl_pos if truth == 1 else cfl_neg).append(float(cfl))
+
             row = {"preset": label, "Center ID": cid, "truth": truth,
                    "prediction": float("nan") if is_nan else int(pred)}
             row.update({k: v for k, v in out.items() if k != "T2-FLAIR Mismatch Present"})
@@ -778,6 +791,8 @@ def validate(
         sens_excl   = tp / (tp + fn) if (tp + fn) else float("nan")   # NaN excluded
         spec_strict = tn / n_neg if n_neg else float("nan")
         spec_excl   = tn / (tn + fp) if (tn + fp) else float("nan")
+        med_cfl_pos = float(np.median(cfl_pos)) if cfl_pos else float("nan")
+        med_cfl_neg = float(np.median(cfl_neg)) if cfl_neg else float("nan")
         summary_rows.append({
             "preset": label,
             "TP": tp, "FN": fn, "NS_pos": ns_pos,
@@ -789,6 +804,15 @@ def validate(
             "agreement_pos": tp,
             "disagreement_pos": fn,
             "not_specified_pos": ns_pos,
+            # Per-preset median of Central Core FLAIR Mean (over scored
+            # subjects only — NaNs are excluded from the median). Watching
+            # this column move toward / below the central-FLAIR threshold
+            # is the most direct signal that the binding constraint is
+            # being addressed.
+            "median_cFL_pos": med_cfl_pos,
+            "median_cFL_neg": med_cfl_neg,
+            "n_cFL_pos": len(cfl_pos),
+            "n_cFL_neg": len(cfl_neg),
         })
 
     summary = pd.DataFrame(summary_rows)
