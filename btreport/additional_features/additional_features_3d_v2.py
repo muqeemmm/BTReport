@@ -176,11 +176,11 @@ class T2FlairMismatchV2:
     # Step 4 — ratio thresholds (used when Step 4 is ON)
     ratio_center_t2_high: float = 1.50
     ratio_center_flair_low: float = 1.55
-    ratio_rim_flair_high: float = 1.20
+    ratio_rim_flair_high: float = 1.55
     ratio_score_thresh: float = 0.10
 
     # Step 5 — soft score threshold (used when Step 5 is ON)
-    soft_score_thresh: float = 0.40
+    soft_score_thresh: float = 0.72
     soft_t2_span: float = 0.50      # ratio span over which s_t2 ramps 0->1
     soft_supp_span: float = 0.60    # ratio span for s_supp
     soft_rim_span: float = 0.50     # ratio span for s_rim
