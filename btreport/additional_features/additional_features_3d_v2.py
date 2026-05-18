@@ -174,15 +174,15 @@ class T2FlairMismatchV2:
     mismatch_score_thresh: float = 0.12
 
     # Step 4 — ratio thresholds (used when Step 4 is ON)
-    ratio_center_t2_high: float = 1.30
-    ratio_center_flair_low: float = 1.10
-    ratio_rim_flair_high: float = 1.30
+    ratio_center_t2_high: float = 1.50
+    ratio_center_flair_low: float = 1.55
+    ratio_rim_flair_high: float = 1.20
     ratio_score_thresh: float = 0.10
 
     # Step 5 — soft score threshold (used when Step 5 is ON)
     soft_score_thresh: float = 0.40
     soft_t2_span: float = 0.50      # ratio span over which s_t2 ramps 0->1
-    soft_supp_span: float = 0.30    # ratio span for s_supp
+    soft_supp_span: float = 0.60    # ratio span for s_supp
     soft_rim_span: float = 0.50     # ratio span for s_rim
     # When Step 3 is OFF and Step 5 is ON, the soft score interprets
     # normalised values [0,1]; spans below are used in that case.
@@ -330,7 +330,7 @@ class T2FlairMismatchV2:
     ) -> float:
         if ratio_mode:
             s_t2 = self._soft_ramp(center_t2, 1.0, self.soft_t2_span)
-            s_supp = self._soft_ramp(self.ratio_center_flair_low + 0.10 - center_flair,
+            s_supp = self._soft_ramp(self.ratio_center_flair_low + 0.30 - center_flair,
                                      0.0, self.soft_supp_span)
             s_rim = self._soft_ramp(rim_flair, 1.0, self.soft_rim_span)
         else:
