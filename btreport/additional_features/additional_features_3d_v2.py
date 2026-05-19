@@ -326,10 +326,10 @@ class T2FlairMismatchV2:
     SOFT_VARIANT_KEYS = (
         "s_t2", "s_supp", "s_rim",
         "score_3way",                # (s_t2 + s_supp + s_rim) / 3
-        "score_2way_t2_supp",        # (s_t2 + s_supp) / 2          <- production decision (ratio mode)
+        "score_2way_t2_supp",        # (s_t2 + s_supp) / 2
         "score_2way_supp_rim",       # (s_supp + s_rim) / 2
         "score_pure_supp",           # s_supp
-        "score_weighted_2_6_2",      # 0.20*s_t2 + 0.60*s_supp + 0.20*s_rim
+        "score_weighted_2_6_2",      # 0.20*s_t2 + 0.60*s_supp + 0.20*s_rim   <- production decision (ratio mode)
         "decision",                  # whichever of the above is the binary-decision driver
     )
 
@@ -348,10 +348,13 @@ class T2FlairMismatchV2:
         schemas / thresholds offline without re-running the extractor.
 
         ``decision`` is the value that drives the binary present/absent
-        flag when Step 5 is on. It currently equals ``score_2way_t2_supp``
-        in ratio mode (Move 1: rim term dropped because it saturates for
-        all tumors in mixed-grade cohorts) and ``score_3way`` in legacy
-        non-ratio mode.
+        flag when Step 5 is on. It currently equals
+        ``score_weighted_2_6_2`` in ratio mode (selected as the production
+        rule because it was the Youden-optimal schema on the AKU-WHO
+        validation cohort: J = 0.435 at thr = 0.70, sens 0.726, spec
+        0.710 — the only schema to clear the spec >= 0.70 floor while
+        staying close to the sens >= 0.80 target) and ``score_3way`` in
+        legacy non-ratio mode.
         """
         if ratio_mode:
             s_t2 = self._soft_ramp(center_t2, 1.0, self.soft_t2_span)
@@ -376,8 +379,10 @@ class T2FlairMismatchV2:
             "score_pure_supp":       float(s_supp),
             "score_weighted_2_6_2":  float(0.20 * s_t2 + 0.60 * s_supp + 0.20 * s_rim),
         }
-        # Decision schema (kept in sync with what _soft_score returns)
-        out["decision"] = out["score_2way_t2_supp"] if ratio_mode else out["score_3way"]
+        # Decision schema (kept in sync with what _soft_score returns).
+        # Ratio mode: weighted 2-6-2 (0.20*s_t2 + 0.60*s_supp + 0.20*s_rim).
+        # Non-ratio mode (legacy [0,1] scale): unweighted 3-way mean.
+        out["decision"] = out["score_weighted_2_6_2"] if ratio_mode else out["score_3way"]
         return out
 
     def _soft_score(

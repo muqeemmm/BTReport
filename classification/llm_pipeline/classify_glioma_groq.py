@@ -5,6 +5,15 @@ For each subject metadata JSON in `INPUT_FOLDER`, predicts IDH status,
 1p/19q co-deletion, and CNS WHO grade following WHO CNS5 (2021).
 Output is constrained to `glioma_classification_schema.json` (same folder)
 and the prompt mirrors `glioma_classification_prompt_base.pdf`.
+
+Confidence elicitation follows the Chain-of-Thought Confidence Elicitation
+(CoT CE) strategy of Tian et al. (2023), as benchmarked in Ren et al.,
+"Towards Reliable Medical LLMs" (arXiv:2601.15645): the model must produce
+its clinical reasoning BEFORE committing to a prediction and a confidence
+score, so the chain of thought informs the score rather than rationalising
+a number already chosen. The schema field order (reasoning -> features ->
+prediction -> confidence) enforces this generation order under strict
+structured output.
 """
 
 import json
@@ -15,14 +24,18 @@ from dotenv import dotenv_values
 from groq import Groq
 
 
-# --- Prompt (transcribed from glioma_classification_prompt_base.pdf) ---------
+# --- Prompt (transcribed from glioma_classification_prompt_base.pdf,
+# ---          adapted for Chain-of-Thought Confidence Elicitation) -----------
 
 SYSTEM_PROMPT = (
     "You are an expert neuroradiologist performing pre-operative molecular "
     "subtyping of adult-type diffuse glioma from structured MRI metadata, "
-    "following the WHO CNS5 (2021) classification. Output MUST be a single "
-    "valid JSON object that conforms exactly to the GliomaClassificationOutput "
-    "schema. No markdown, no prose, no code fences -- JSON only."
+    "following the WHO CNS5 (2021) classification. For every task you reason "
+    "step by step BEFORE stating any prediction or confidence score: first lay "
+    "out the clinically grounded explanation, then commit to the prediction, "
+    "then assign the confidence. Output MUST be a single valid JSON object that "
+    "conforms exactly to the GliomaClassificationOutput schema. No markdown, no "
+    "prose outside the JSON, no code fences -- JSON only."
 )
 
 USER_PROMPT_TEMPLATE = """# ROLE
@@ -37,12 +50,28 @@ CNS5 molecular classification. Based on this metadata, predict the following:
   (b) 1p/19q co-deletion status  -> {{"codeleted", "non-codeleted"}}
   (c) CNS WHO grade              -> {{2, 3, 4}}
 
-For each of the three tasks above, provide:
-- **Prediction**
-- **Confidence score** (between 0.0 and 1.0)
-- **Brief reasoning** (concise, clinically grounded)
-- **Supporting metadata fields** (exact field names, verbatim)
-- **Contradicting features** (fields arguing against the prediction)
+# CHAIN-OF-THOUGHT CONFIDENCE ELICITATION
+For each of the three tasks you MUST work in the following order. Do not skip,
+reorder, or shortcut these steps:
+
+  1. **Reasoning first.** Write a concise, clinically grounded explanation that
+     weighs the available metadata. Explicitly contrast the evidence that
+     supports each candidate answer against the evidence that argues against
+     it. Reach the prediction as the *conclusion* of this reasoning.
+  2. **Supporting metadata fields.** List the exact field names (verbatim) that
+     support the prediction you reasoned toward.
+  3. **Contradicting features.** List the fields that argue against it.
+  4. **Prediction.** State the prediction that follows from steps 1-3.
+  5. **Confidence score** (between 0.0 and 1.0). Derive the score *from* the
+     reasoning above -- it must reflect the balance of supporting vs.
+     contradicting evidence you already articulated, NOT a number chosen before
+     reasoning. Assign high confidence only when key features are well
+     supported and few contradict; assign low confidence when evidence is
+     thin, conflicting, or absent.
+
+The JSON schema lists `reasoning`, `supporting_features` and
+`contradicting_features` before `prediction` and `confidence` for exactly this
+reason: generate them in that order.
 
 # INPUT CONSTRAINTS
 - Input consists **only of structured MRI-derived metadata** (no images).
@@ -61,7 +90,9 @@ T1w, T2w, T2-FLAIR, T1-Gd.
 4. If evidence is insufficient: give a best estimate, set confidence in
    0.50-0.60, and state the uncertainty in reasoning.
 5. Confidence must be >= 0.50 for binary tasks (otherwise flip the prediction).
-6. Output must be **valid JSON only** (no markdown, no commentary).
+6. The confidence score must be the conclusion of the reasoning, not its
+   premise -- never write the reasoning to justify a pre-chosen score.
+7. Output must be **valid JSON only** (no markdown, no commentary).
 
 # INPUT
 Patient subject_id: {subject_id}
