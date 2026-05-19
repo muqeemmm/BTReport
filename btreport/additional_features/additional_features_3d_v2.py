@@ -180,7 +180,7 @@ class T2FlairMismatchV2:
     ratio_score_thresh: float = 0.10
 
     # Step 5 — soft score threshold (used when Step 5 is ON)
-    soft_score_thresh: float = 0.72
+    soft_score_thresh: float = 0.70
     soft_t2_span: float = 0.50      # ratio span over which s_t2 ramps 0->1
     soft_supp_span: float = 0.60    # ratio span for s_supp
     soft_rim_span: float = 0.50     # ratio span for s_rim
@@ -321,26 +321,43 @@ class T2FlairMismatchV2:
             return 1.0 if x >= lo else 0.0
         return float(np.clip((x - lo) / span, 0.0, 1.0))
 
-    def _soft_score(
+    # Keys returned by ``_soft_score_variants``. Listed here so callers know
+    # the schema without having to call into the helper.
+    SOFT_VARIANT_KEYS = (
+        "s_t2", "s_supp", "s_rim",
+        "score_3way",                # (s_t2 + s_supp + s_rim) / 3
+        "score_2way_t2_supp",        # (s_t2 + s_supp) / 2          <- production decision (ratio mode)
+        "score_2way_supp_rim",       # (s_supp + s_rim) / 2
+        "score_pure_supp",           # s_supp
+        "score_weighted_2_6_2",      # 0.20*s_t2 + 0.60*s_supp + 0.20*s_rim
+        "decision",                  # whichever of the above is the binary-decision driver
+    )
+
+    def _soft_score_variants(
         self,
         center_t2: float,
         center_flair: float,
         rim_flair: float,
         ratio_mode: bool,
-    ) -> float:
+    ) -> dict:
+        """Compute every soft-score variant for one subject.
+
+        The three component scores (``s_t2``, ``s_supp``, ``s_rim``) and
+        several aggregation schemas are returned together so that the
+        per-subject CSV carries enough information to sweep alternative
+        schemas / thresholds offline without re-running the extractor.
+
+        ``decision`` is the value that drives the binary present/absent
+        flag when Step 5 is on. It currently equals ``score_2way_t2_supp``
+        in ratio mode (Move 1: rim term dropped because it saturates for
+        all tumors in mixed-grade cohorts) and ``score_3way`` in legacy
+        non-ratio mode.
+        """
         if ratio_mode:
             s_t2 = self._soft_ramp(center_t2, 1.0, self.soft_t2_span)
             s_supp = self._soft_ramp(self.ratio_center_flair_low + 0.30 - center_flair,
                                      0.0, self.soft_supp_span)
-            # Rim-FLAIR component dropped in ratio mode: in this cohort it
-            # saturates at ~1.0 for both classes (rim brightness is a
-            # general property of tumors, not specific to T2-FLAIR
-            # mismatch), so including it in the 3-way average dilutes the
-            # central-suppression signal that is the actual discriminator.
-            # The unweighted mean of the two remaining discriminative
-            # components widens the positive/negative score gap from
-            # ~0.14 to ~0.23 at the cohort medians.
-            return float((s_t2 + s_supp) / 2.0)
+            s_rim = self._soft_ramp(rim_flair, 1.0, self.soft_rim_span)
         else:
             s_t2 = self._soft_ramp(center_t2, self.center_t2_high_thresh - 0.10,
                                    self.soft_t2_span_nonratio)
@@ -348,7 +365,34 @@ class T2FlairMismatchV2:
                                      0.0, self.soft_supp_span_nonratio)
             s_rim = self._soft_ramp(rim_flair, self.rim_flair_high_thresh - 0.10,
                                     self.soft_rim_span_nonratio)
-            return float((s_t2 + s_supp + s_rim) / 3.0)
+
+        out = {
+            "s_t2":   float(s_t2),
+            "s_supp": float(s_supp),
+            "s_rim":  float(s_rim),
+            "score_3way":            float((s_t2 + s_supp + s_rim) / 3.0),
+            "score_2way_t2_supp":    float((s_t2 + s_supp) / 2.0),
+            "score_2way_supp_rim":   float((s_supp + s_rim) / 2.0),
+            "score_pure_supp":       float(s_supp),
+            "score_weighted_2_6_2":  float(0.20 * s_t2 + 0.60 * s_supp + 0.20 * s_rim),
+        }
+        # Decision schema (kept in sync with what _soft_score returns)
+        out["decision"] = out["score_2way_t2_supp"] if ratio_mode else out["score_3way"]
+        return out
+
+    def _soft_score(
+        self,
+        center_t2: float,
+        center_flair: float,
+        rim_flair: float,
+        ratio_mode: bool,
+    ) -> float:
+        """Scalar soft score driving the binary decision (kept for backward
+        compatibility). Equivalent to
+        ``_soft_score_variants(...)['decision']``."""
+        return self._soft_score_variants(
+            center_t2, center_flair, rim_flair, ratio_mode
+        )["decision"]
 
     # -------------------------------------------------------------------------
     # Main extraction
@@ -542,9 +586,16 @@ class T2FlairMismatchV2:
 
         mismatch_score = (c_t2_excess + c_supp + r_excess) / 3.0
 
+        # Compute every soft-score variant on every run, regardless of whether
+        # Step 5 drives the decision. This lets the per-subject CSV carry
+        # enough information for offline schema / threshold sweeps without a
+        # re-run.
+        soft_variants = self._soft_score_variants(
+            center_t2_val, center_flair_val, rim_flair_val, ratio_mode=ratio_mode
+        )
+
         if flags.step5_soft_score:
-            soft = self._soft_score(center_t2_val, center_flair_val, rim_flair_val,
-                                    ratio_mode=ratio_mode)
+            soft = soft_variants["decision"]
             mismatch_score = soft  # surface the soft value in the JSON
             mismatch_present = int(soft >= self.soft_score_thresh)
             reason = f"soft={soft:.3f} thr={self.soft_score_thresh}"
@@ -566,7 +617,7 @@ class T2FlairMismatchV2:
             logger.info("[%s] %s -> present=%d", self.flags.label(), reason, mismatch_present)
             logger.info("elapsed %.2fs", time.time() - t0)
 
-        return {
+        result = {
             "T2-FLAIR Mismatch Present": mismatch_present,
             "T2-FLAIR Mismatch Score": float(mismatch_score),
             "T2-FLAIR Mismatch Degree": float(mismatch_degree) if mismatch_degree == mismatch_degree else float("nan"),
@@ -578,19 +629,43 @@ class T2FlairMismatchV2:
             "Lesion Mask Used": lesion_label,
             "Decision Reason": reason + (f" [cnwm={cnwm_source}]" if cnwm_source else ""),
         }
+        # Append every soft-score variant (components + aggregations) so
+        # downstream sweeps can pick any schema and any threshold without
+        # re-extracting features.
+        result["Soft s_t2"]                       = soft_variants["s_t2"]
+        result["Soft s_supp"]                     = soft_variants["s_supp"]
+        result["Soft s_rim"]                      = soft_variants["s_rim"]
+        result["Soft Score 3way (t2+supp+rim)"]   = soft_variants["score_3way"]
+        result["Soft Score 2way (t2+supp)"]       = soft_variants["score_2way_t2_supp"]
+        result["Soft Score 2way (supp+rim)"]      = soft_variants["score_2way_supp_rim"]
+        result["Soft Score pure supp"]            = soft_variants["score_pure_supp"]
+        result["Soft Score weighted 2-6-2"]       = soft_variants["score_weighted_2_6_2"]
+        result["Soft Score decision"]             = soft_variants["decision"]
+        return result
 
     def _nan_result(self, tc_ml: float, wt_ml: float, lesion_label: str, reason: str) -> dict:
+        nan = float("nan")
         return {
-            "T2-FLAIR Mismatch Present": float("nan"),
-            "T2-FLAIR Mismatch Score": float("nan"),
-            "T2-FLAIR Mismatch Degree": float("nan"),
-            "Central Core T2 Mean": float("nan"),
-            "Central Core FLAIR Mean": float("nan"),
-            "Peripheral Rim FLAIR Mean": float("nan"),
+            "T2-FLAIR Mismatch Present": nan,
+            "T2-FLAIR Mismatch Score": nan,
+            "T2-FLAIR Mismatch Degree": nan,
+            "Central Core T2 Mean": nan,
+            "Central Core FLAIR Mean": nan,
+            "Peripheral Rim FLAIR Mean": nan,
             "Tumor Core Volume (mL)": tc_ml,
             "Whole Tumor Volume (mL)": wt_ml,
             "Lesion Mask Used": lesion_label,
             "Decision Reason": f"NaN: {reason}",
+            # Keep CSV column count stable when the extractor short-circuits.
+            "Soft s_t2": nan,
+            "Soft s_supp": nan,
+            "Soft s_rim": nan,
+            "Soft Score 3way (t2+supp+rim)": nan,
+            "Soft Score 2way (t2+supp)": nan,
+            "Soft Score 2way (supp+rim)": nan,
+            "Soft Score pure supp": nan,
+            "Soft Score weighted 2-6-2": nan,
+            "Soft Score decision": nan,
         }
 
 
