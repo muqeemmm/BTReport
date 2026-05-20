@@ -1,0 +1,61 @@
+{
+  "subject_id": "BraTS2021_00132",
+  "idh": {
+    "reasoning": "The patient is 81 years old (age_years) which strongly favors IDH-wildtype gliomas that occur in older adults. The tumor shows marked enhancement (Enhancement Quality) and a high proportion of enhancing tissue (Proportion Enhancing) together with necrosis (Proportion Necrosis), both typical of IDH-wildtype glioblastoma. Large total tumor volume (Total tumor volume (mL)) and extensive edema (Proportion of Oedema) further support a high\u2011grade, IDH\u2011wildtype lesion. Deep white\u2011matter invasion (Deep WM invasion) and ependymal invasion (Ependymal (ventricular) Invasion) are also more common in IDH\u2011wildtype tumors. Contradictory evidence includes the presence of cortical involvement (Cortical involvement) and a relatively modest necrosis fraction (Proportion Necrosis) which can be seen in IDH\u2011mutant tumors. Overall the supporting evidence outweighs the contradictions, leading to a prediction of IDH\u2011wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion is characteristic of oligodendrogliomas, which usually occur in younger patients and show less aggressive imaging features such as minimal necrosis and modest enhancement. The patient\u2019s advanced age (age_years), marked enhancement (Enhancement Quality), presence of necrosis (Proportion Necrosis), deep white\u2011matter and ependymal invasion, and large tumor volume all argue against a 1p/19q\u2011codeleted tumor, supporting a non\u2011codeleted status. The only features that could suggest codeletion are the cortical location (Cortical involvement) and involvement of frontal lobe (Region Proportions), but these are outweighed by the strong opposing evidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement (Enhancement Quality), necrosis (Proportion Necrosis), large tumor volume (Total tumor volume (mL)), high edema proportion (Proportion of Oedema), deep white\u2011matter and ependymal invasion, and significant midline shift (midline_shift_present) are imaging hallmarks of WHO grade\u202f4 glioblastoma. The proportion of enhancing tissue (Proportion Enhancing) is also high. Features that argue against grade\u202f4 include the absence of crossing midline by contrast\u2011enhancing tumor (CET Crosses midline) and a relatively modest necrosis fraction (Proportion Necrosis). Nevertheless, the preponderance of high\u2011grade signs leads to a prediction of grade\u202f4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "CET Crosses midline",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.88
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging strongly points to an IDH-wildtype, 1p/19q non\u2011codeleted glioblastoma (WHO grade\u202f4). Absence of advanced sequences (DWI, perfusion, spectroscopy) limits confirmation of microvascular proliferation and molecular markers, so a small residual uncertainty remains, but confidence is high based on the available structural features."
+}
