@@ -24,13 +24,16 @@ structured output.
 
 import argparse
 import json
+import time
 from collections import defaultdict
 from pathlib import Path
 
 import openpyxl
+from colorama import Fore, Style, init as colorama_init
 from dotenv import dotenv_values
-from groq import Groq
+from groq import Groq, RateLimitError
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
+from tqdm import tqdm
 
 
 # --- Prompt (transcribed from glioma_classification_prompt_base.pdf,
@@ -115,9 +118,33 @@ MRI metadata:
 MODEL_ID    = "openai/gpt-oss-120b"
 HERE        = Path(__file__).parent
 SCHEMA_PATH = HERE / "glioma_classification_schema.json"
-ENV_PATH    = Path("/Users/muqeemmmm/GitHub/Report-Generation/classification/.env")
+ENV_PATH    = Path("/Users/muqeemmmm/GitHub/BTReport_v2/.env")
 JSONS_DIR   = Path("/Users/muqeemmmm/GitHub/BTReport_v2/data/Dataset_AKU_WHO/JSONs")
 COHORT_XLSX = Path("/Users/muqeemmmm/GitHub/BTReport_v2/data/dataset_table/cohort_merged.xlsx")
+
+
+# --- ID helpers --------------------------------------------------------------
+
+def load_id_map(xlsx_path: Path) -> dict:
+    """
+    Returns a dict keyed by any known folder name (Center ID or BraTS2021 ID)
+    mapping to {"center_id": str, "subject_id": str} where:
+      - center_id  = column 0 ("Center ID")   → used for output filenames
+      - subject_id = column 1 ("Subject ID")  → passed to the API (redacted form)
+    """
+    wb = openpyxl.load_workbook(xlsx_path)
+    ws = wb.active
+    id_map: dict = {}
+    for row in list(ws.iter_rows(values_only=True))[1:]:
+        center_id  = str(row[0]).strip() if row[0] else None
+        subject_id = str(row[1]).strip() if row[1] else None
+        brats_id   = str(row[4]).strip() if (row[4] and row[4] != "x") else None
+        entry = {"center_id": center_id, "subject_id": subject_id}
+        if center_id:
+            id_map[center_id] = entry
+        if brats_id:
+            id_map[brats_id] = entry
+    return id_map
 
 
 # --- Ground-truth helpers ----------------------------------------------------
@@ -309,6 +336,17 @@ def parse_args() -> argparse.Namespace:
 
 
 if __name__ == "__main__":
+    colorama_init(autoreset=True)
+
+    # Colour aliases (autoreset means no explicit RESET needed after each use)
+    C = Fore.CYAN
+    G = Fore.GREEN
+    Y = Fore.YELLOW
+    R = Fore.RED
+    M = Fore.MAGENTA
+    W = Style.BRIGHT       # bold/bright white for headers
+    D = Style.DIM
+
     args      = parse_args()
     json_type = args.json_type  # "btreport" or "btreport_pp"
 
@@ -317,59 +355,138 @@ if __name__ == "__main__":
 
     schema = json.load(open(SCHEMA_PATH))
     config = dotenv_values(ENV_PATH)
-    client = Groq(api_key=config["GROQ_API_KEY"])
+
+    # Build a pool of clients from all GROQ_API_KEY_* entries in .env.
+    # Keys are tried in order; on RateLimitError the next key is used.
+    api_keys = [
+        v for k, v in sorted(config.items())
+        if k.startswith("GROQ_API_KEY_") and v
+    ]
+    if not api_keys:
+        raise RuntimeError("No GROQ_API_KEY_* entries found in .env")
+    clients = [Groq(api_key=k) for k in api_keys]
+    key_idx = 0  # index of the currently active client
+    print(f"{C}Loaded {W}{len(clients)}{C} Groq API key(s).  "
+          f"Model: {W}{MODEL_ID}{C}  |  Output: {W}{OUTPUT_DIR.name}")
+
     gt     = load_ground_truth(COHORT_XLSX)
+    id_map = load_id_map(COHORT_XLSX)
 
     subjects = sorted(d.name for d in JSONS_DIR.iterdir() if d.is_dir())
 
-    for i, subject_id in enumerate(subjects, 1):
-        print(f"Processing {subject_id} ({i}/{len(subjects)})")
+    pbar = tqdm(
+        subjects,
+        desc=f"{C}Classifying{Style.RESET_ALL}",
+        unit="subj",
+        ncols=90,
+        bar_format=(
+            "{desc}: {percentage:3.0f}%|{bar:35}| "
+            "{n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}]"
+        ),
+        colour="cyan",
+    )
 
-        metadata_path = JSONS_DIR / subject_id / f"{subject_id}_metadata_{json_type}.json"
+    DIVIDER = f"{D}" + "─" * 72 + Style.RESET_ALL
+
+    for i, folder_name in enumerate(pbar, 1):
+        pbar.set_postfix_str(f"{folder_name[:28]}", refresh=True)
+
+        # Blank line + divider before each subject block for readability
+        tqdm.write("")
+        tqdm.write(DIVIDER)
+        tqdm.write(
+            f"{W}[{i}/{len(subjects)}]{Style.RESET_ALL}  "
+            f"{C}{folder_name}{Style.RESET_ALL}"
+        )
+
+        # Resolve Center ID (for filename) and Subject ID (for API prompt).
+        ids = id_map.get(folder_name)
+        if ids:
+            center_id      = ids["center_id"]
+            api_subject_id = ids["subject_id"]
+        else:
+            tqdm.write(
+                f"  {Y}WARN{Style.RESET_ALL}  no xlsx entry for {folder_name!r} "
+                f"— using folder name as fallback"
+            )
+            center_id      = folder_name
+            api_subject_id = folder_name
+
+        metadata_path = JSONS_DIR / folder_name / f"{folder_name}_metadata_{json_type}.json"
         if not metadata_path.exists():
-            print(f"  skip: missing {metadata_path}")
+            tqdm.write(f"  {Y}SKIP{Style.RESET_ALL}  metadata not found: {metadata_path.name}")
             continue
 
-        out_path = OUTPUT_DIR / f"{subject_id}_classification_gpt_oss_120b.json"
+        out_path = OUTPUT_DIR / f"{center_id}_classification_gpt_oss_120b.json"
         if out_path.exists():
-            print(f"  skip: {out_path} already exists")
+            tqdm.write(f"  {Y}SKIP{Style.RESET_ALL}  output already exists: {out_path.name}")
             continue
+
+        tqdm.write(
+            f"  {D}center_id={Style.RESET_ALL}{center_id}   "
+            f"{D}api_id={Style.RESET_ALL}{api_subject_id}"
+        )
 
         metadata    = json.load(open(metadata_path))
         user_prompt = USER_PROMPT_TEMPLATE.format(
-            subject_id=subject_id,
+            subject_id=api_subject_id,
             metadata_json=json.dumps(metadata, indent=2, default=str),
         )
 
-        response = client.chat.completions.create(
-            model=MODEL_ID,
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user",   "content": user_prompt},
-            ],
-            temperature=0.0,
-            seed=42,
-            max_completion_tokens=4096,
-            reasoning_effort="medium",
-            response_format={
-                "type": "json_schema",
-                "json_schema": {
-                    "name": "GliomaClassificationOutput",
-                    "schema": schema,
-                    "strict": True,
-                },
-            },
-        )
+        # Attempt the API call, rotating keys on RateLimitError.
+        response = None
+        for attempt in range(len(clients)):
+            try:
+                response = clients[key_idx].chat.completions.create(
+                    model=MODEL_ID,
+                    messages=[
+                        {"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "user",   "content": user_prompt},
+                    ],
+                    temperature=0.0,
+                    seed=42,
+                    max_completion_tokens=4096,
+                    reasoning_effort="medium",
+                    response_format={
+                        "type": "json_schema",
+                        "json_schema": {
+                            "name": "GliomaClassificationOutput",
+                            "schema": schema,
+                            "strict": True,
+                        },
+                    },
+                )
+                break  # success
+            except RateLimitError as e:
+                next_idx = (key_idx + 1) % len(clients)
+                tqdm.write(
+                    f"  {M}LIMIT{Style.RESET_ALL}  key {key_idx + 1}/{len(clients)} "
+                    f"exhausted → switching to key {next_idx + 1}  "
+                    f"{D}({e}){Style.RESET_ALL}"
+                )
+                key_idx = next_idx
+                time.sleep(2)
+
+        if response is None:
+            tqdm.write(
+                f"  {R}ERROR{Style.RESET_ALL}  all {len(clients)} keys rate-limited "
+                f"— skipping {folder_name}"
+            )
+            continue
 
         result = json.loads(response.choices[0].message.content)
-        result["subject_id"] = subject_id
+        # Store center_id so the metrics stage can join against ground truth.
+        result["subject_id"] = center_id
 
         with open(out_path, "w") as f:
             json.dump(result, f, indent=2)
-        print(f"  saved -> {out_path}")
+        tqdm.write(f"  {G}SAVED{Style.RESET_ALL}  {out_path.name}")
+
+    pbar.close()
 
     # --- Metrics -----------------------------------------------------------------
-    print("\nCollecting predictions for metric computation...")
+    print(f"\n{DIVIDER}")
+    print(f"{C}Collecting predictions for metric computation...{Style.RESET_ALL}")
     predictions: dict = {}
     for out_file in sorted(OUTPUT_DIR.glob("*_classification_gpt_oss_120b.json")):
         result = json.load(open(out_file))
@@ -387,4 +504,4 @@ if __name__ == "__main__":
     metrics_path = OUTPUT_DIR / "metrics.json"
     with open(metrics_path, "w") as f:
         json.dump(metrics, f, indent=2)
-    print(f"Metrics saved -> {metrics_path}")
+    print(f"{G}Metrics saved{Style.RESET_ALL} → {metrics_path}")

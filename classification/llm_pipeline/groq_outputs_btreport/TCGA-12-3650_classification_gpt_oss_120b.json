@@ -1,0 +1,47 @@
+{
+  "subject_id": "TCGA-12-3650",
+  "idh": {
+    "reasoning": "The patient is 46 years old (age_years) which is typical for IDH\u2011mutant gliomas; the tumor shows minimal necrosis (Proportion Necrosis) and does not cross the midline (CET Crosses midline) or invade deep white matter (Deep WM invasion) or ependyma (Ependymal (ventricular) Invasion), all features that favor IDH\u2011mutant status. Conversely, the presence of marked contrast enhancement (Enhancement Quality) and a thick enhancing margin (>3mm) (Thickness of enhancing margin) are more often seen in IDH\u2011wildtype tumors, providing some contradictory evidence. Balancing these, the IDH\u2011mutant prediction is favored.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The lesion is located in the parietal cortex (Region Proportions) rather than the typical frontal location of oligodendrogliomas, shows high edema proportion (Proportion of Oedema) and marked contrast enhancement (Enhancement Quality), which are more characteristic of IDH\u2011mutant astrocytomas that are 1p/19q non\u2011codeleted. No imaging evidence of calcification or homogeneous low\u2011grade appearance is provided, which would support codeletion. Thus the non\u2011codeleted status is more likely.",
+    "supporting_features": [
+      "Region Proportions",
+      "Proportion of Oedema",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement (Enhancement Quality) with a thick enhancing margin (>3mm) (Thickness of enhancing margin) and a measurable enhancing proportion (Proportion Enhancing) indicate a higher grade lesion, while the absence of necrosis (Proportion Necrosis) and lack of midline crossing (CET Crosses midline) argue against grade\u202f4. The combination of these findings best fits WHO grade\u202f3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "CET Crosses midline"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q non-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks diffusion, perfusion and spectroscopy data that could further refine molecular predictions; however, available structural features support the above classification with moderate confidence."
+}

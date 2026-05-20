@@ -1,0 +1,65 @@
+{
+  "subject_id": "UCSF-PDGM-086",
+  "idh": {
+    "reasoning": "The patient is 72 years old, an age at which IDH\u2011wildtype glioblastoma is far more common than IDH\u2011mutant diffuse glioma. Imaging shows marked contrast enhancement (Enhancement Quality = 'Marked') with a high proportion of enhancing tumor (Proportion Enhancing = 53.74%) and measurable necrosis (Proportion Necrosis = 6.12%). There is extensive peritumoral edema (Proportion of Oedema = 40.14%) that even crosses the midline (Edema crosses midline = 'True'), a pattern typical of aggressive IDH\u2011wildtype disease. Deep white\u2011matter invasion and cortical involvement are present, both compatible with high\u2011grade glioma. Although the enhancing component does not cross the midline, this alone does not outweigh the other high\u2011risk features. Therefore the balance of evidence favors an IDH\u2011wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Text Report",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "CET Crosses midline",
+      "Side of Tumor Epicenter",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion is characteristic of oligodendroglioma, which usually occurs in younger patients, shows less contrast enhancement, and often contains calcifications. In this case the patient is elderly (age 72) and the tumor displays marked enhancement, necrosis, and extensive edema, all arguing against an oligodendroglioma. The presence of deep white\u2011matter invasion and lack of ependymal involvement also favor a non\u2011codeleted tumor. While the lesion is frontal and cortical, these features are not sufficient to overturn the strong high\u2011grade imaging pattern. Hence the evidence supports a non\u2011codeleted status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Text Report"
+    ],
+    "contradicting_features": [
+      "Region Proportions (frontal_lobe high)",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "According to WHO CNS5, an IDH\u2011wildtype diffuse glioma with necrosis and marked contrast enhancement is classified as glioblastoma, which carries a CNS WHO grade 4. The tumor shows marked enhancement (Enhancement Quality = 'Marked'), necrosis (Proportion Necrosis = 6.12%), high edema (Proportion of Oedema = 40.14%), and a large total volume (35.086\u202fmL), all typical of grade\u202f4 disease. Although the enhancing component does not cross the midline and there is no ependymal invasion, these findings do not preclude grade\u202f4 classification when necrosis and aggressive imaging features are present. Therefore the most appropriate grade is 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Proportion Enhancing",
+      "Text Report"
+    ],
+    "contradicting_features": [
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "CET does not cross midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.73
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty. Absence of enhancement crossing the midline and lack of ependymal invasion are atypical for GBM but do not outweigh the strong high\u2011grade imaging pattern and patient age. Molecular testing is recommended for definitive classification."
+}

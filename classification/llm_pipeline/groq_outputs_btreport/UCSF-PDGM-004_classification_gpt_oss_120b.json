@@ -1,0 +1,53 @@
+{
+  "subject_id": "UCSF-PDGM-004",
+  "idh": {
+    "reasoning": "The patient is 66 years old, an age at which IDH\u2011wildtype glioblastoma is far more common than IDH\u2011mutant diffuse glioma. Imaging shows marked contrast enhancement, a measurable necrotic component (18% of tumor), and substantial edema (44.5%), all classic features of IDH\u2011wildtype glioblastoma. These findings outweigh the presence of cortical involvement, which can be seen in IDH\u2011mutant tumours but is not decisive. No deep white\u2011matter invasion or midline crossing is observed, which slightly argues against a classic glioblastoma, but the dominant high\u2011grade imaging characteristics and patient age make IDH\u2011wildtype the more likely status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Edema crosses midline"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion is most typical of oligodendroglioma, which often presents in younger patients, with frontal lobe predilection, calcifications and less aggressive enhancement. This tumour is older, located in parietal and temporal cortex, shows marked enhancement and necrosis, and lacks calcification data. These imaging traits favor a non\u2011codeleted status. The only feature that could suggest codeletion is cortical involvement, but that is not specific.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Age_years",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.74
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, necrosis (18%), and extensive edema (44.5%) together with a total tumour volume of ~42\u202fmL are characteristic of WHO grade\u202f4 glioblastoma. While the lesion does not cross the midline and lacks deep white\u2011matter invasion\u2014features sometimes seen in lower\u2011grade tumours\u2014these are outweighed by the high\u2011grade imaging hallmarks and the patient\u2019s age, supporting a grade\u202f4 assignment.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Edema crosses midline",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.81
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Predictions rely solely on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty, especially for distinguishing IDH\u2011mutant astrocytoma grade\u202f3 from IDH\u2011wildtype grade\u202f4. However, the imaging profile and patient age strongly favour an IDH\u2011wildtype, non\u2011codeleted, grade\u202f4 glioblastoma."
+}
