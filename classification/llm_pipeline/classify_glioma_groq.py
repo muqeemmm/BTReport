@@ -31,7 +31,7 @@ from pathlib import Path
 import openpyxl
 from colorama import Fore, Style, init as colorama_init
 from dotenv import dotenv_values
-from groq import Groq, RateLimitError
+from groq import BadRequestError, Groq, RateLimitError
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
 from tqdm import tqdm
 
@@ -417,7 +417,7 @@ if __name__ == "__main__":
             tqdm.write(f"  {Y}SKIP{Style.RESET_ALL}  metadata not found: {metadata_path.name}")
             continue
 
-        out_path = OUTPUT_DIR / f"{center_id}_classification_gpt_oss_120b.json"
+        out_path = OUTPUT_DIR / f"{folder_name}_classification_gpt_oss_120b.json"
         if out_path.exists():
             tqdm.write(f"  {Y}SKIP{Style.RESET_ALL}  output already exists: {out_path.name}")
             continue
@@ -433,50 +433,78 @@ if __name__ == "__main__":
             metadata_json=json.dumps(metadata, indent=2, default=str),
         )
 
-        # Attempt the API call, rotating keys on RateLimitError.
+        # Two-level retry:
+        #   outer loop — rotate API key on RateLimitError
+        #   inner loop — retry same key on json_validate_failed (BadRequestError)
+        MAX_JSON_RETRIES = 3
         response = None
-        for attempt in range(len(clients)):
-            try:
-                response = clients[key_idx].chat.completions.create(
-                    model=MODEL_ID,
-                    messages=[
-                        {"role": "system", "content": SYSTEM_PROMPT},
-                        {"role": "user",   "content": user_prompt},
-                    ],
-                    temperature=0.0,
-                    seed=42,
-                    max_completion_tokens=4096,
-                    reasoning_effort="medium",
-                    response_format={
-                        "type": "json_schema",
-                        "json_schema": {
-                            "name": "GliomaClassificationOutput",
-                            "schema": schema,
-                            "strict": True,
+        skip_subject = False
+
+        for _ in range(len(clients)):
+            for json_try in range(1, MAX_JSON_RETRIES + 1):
+                try:
+                    response = clients[key_idx].chat.completions.create(
+                        model=MODEL_ID,
+                        messages=[
+                            {"role": "system", "content": SYSTEM_PROMPT},
+                            {"role": "user",   "content": user_prompt},
+                        ],
+                        temperature=0.0,
+                        seed=42,
+                        max_completion_tokens=4096,
+                        reasoning_effort="medium",
+                        response_format={
+                            "type": "json_schema",
+                            "json_schema": {
+                                "name": "GliomaClassificationOutput",
+                                "schema": schema,
+                                "strict": True,
+                            },
                         },
-                    },
-                )
-                break  # success
-            except RateLimitError as e:
-                next_idx = (key_idx + 1) % len(clients)
+                    )
+                    break  # success → exit inner loop
+                except RateLimitError as e:
+                    next_idx = (key_idx + 1) % len(clients)
+                    tqdm.write(
+                        f"  {M}LIMIT{Style.RESET_ALL}  key {key_idx + 1}/{len(clients)} "
+                        f"exhausted → switching to key {next_idx + 1}  "
+                        f"{D}({e}){Style.RESET_ALL}"
+                    )
+                    key_idx = next_idx
+                    time.sleep(2)
+                    break  # rotate key → exit inner loop, continue outer
+                except BadRequestError as e:
+                    if "json_validate_failed" not in str(e):
+                        raise
+                    tqdm.write(
+                        f"  {Y}RETRY{Style.RESET_ALL}  JSON schema validation failed "
+                        f"(attempt {json_try}/{MAX_JSON_RETRIES}) — retrying same key"
+                    )
+                    time.sleep(1)
+                    # continue inner loop for next json_try
+            else:
+                # Inner for-else: exhausted all JSON retries without a break
                 tqdm.write(
-                    f"  {M}LIMIT{Style.RESET_ALL}  key {key_idx + 1}/{len(clients)} "
-                    f"exhausted → switching to key {next_idx + 1}  "
-                    f"{D}({e}){Style.RESET_ALL}"
+                    f"  {R}ERROR{Style.RESET_ALL}  JSON validation failed after "
+                    f"{MAX_JSON_RETRIES} attempts — skipping {folder_name}"
                 )
-                key_idx = next_idx
-                time.sleep(2)
+                skip_subject = True
+                break  # no point rotating keys for a schema error
+
+            if response is not None or skip_subject:
+                break  # success or terminal failure → exit outer loop
 
         if response is None:
-            tqdm.write(
-                f"  {R}ERROR{Style.RESET_ALL}  all {len(clients)} keys rate-limited "
-                f"— skipping {folder_name}"
-            )
+            if not skip_subject:
+                tqdm.write(
+                    f"  {R}ERROR{Style.RESET_ALL}  all {len(clients)} keys rate-limited "
+                    f"— skipping {folder_name}"
+                )
             continue
 
         result = json.loads(response.choices[0].message.content)
-        # Store center_id so the metrics stage can join against ground truth.
-        result["subject_id"] = center_id
+        # Store folder_name so the metrics stage can join against ground truth.
+        result["subject_id"] = folder_name
 
         with open(out_path, "w") as f:
             json.dump(result, f, indent=2)
