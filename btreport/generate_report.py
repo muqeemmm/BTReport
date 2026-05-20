@@ -220,10 +220,59 @@ def main(args: argparse.Namespace):
         shutil.rmtree(tmp_dir)
 
 
+def update_t2_flair_only(args: argparse.Namespace):
+    """Load *_final.json, recompute T2-FLAIR mismatch, save as *_final_t2_flair_update.json."""
+    t2_path    = glob.glob(os.path.join(args.subject_folder, "*_t2.nii.gz"))[0]
+    flair_path = glob.glob(os.path.join(args.subject_folder, "*_flair.nii.gz"))[0]
+    try:
+        tumor_path = glob.glob(os.path.join(args.subject_folder, "*_seg_pred.nii.gz"))[0]
+    except IndexError:
+        tumor_path = glob.glob(os.path.join(args.subject_folder, "*_seg.nii.gz"))[0]
+
+    subject_name = Path(args.subject_folder).name
+    tmp_dir      = join(args.subject_folder, "tmp")
+    merged_seg   = join(tmp_dir, "MNI152_in_subject_space_merged_seg.nii.gz")
+
+    metadata_final_path = join(args.subject_folder, f"{subject_name}_metadata_final.json")
+    output_path         = join(args.subject_folder, f"{subject_name}_metadata_final_t2_flair_update.json")
+
+    tumor_data    = nib.load(tumor_path).get_fdata()
+    unique_values = np.unique(tumor_data)
+    et_label      = 4 if 4 in unique_values else 3
+
+    with open(metadata_final_path, "r") as f:
+        metadata = json.load(f)
+
+    laterality = metadata.get("Side of Tumor Epicenter")
+
+    logger.info("** Recomputing T2-FLAIR mismatch metrics...")
+    extractor = ExtractT2FLAIRMismatch(
+        enhancing_label    = et_label,
+        nonenhancing_label = args.ncr_label,
+        oedema_label       = args.ed_label,
+    )
+    t2_flair_mismatch_metrics = extractor(
+        tumorseg_ss    = tumor_path,
+        flair_path     = flair_path,
+        t2_path        = t2_path,
+        laterality     = laterality,
+        merged_seg     = merged_seg,
+        brain_mask_path= None,
+    )
+    metadata.update(t2_flair_mismatch_metrics)
+
+    with open(output_path, "w") as f:
+        json.dump(metadata, f, indent=2)
+    logger.info(f"Saved T2-FLAIR-updated metadata to {output_path}")
+
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Generate a brain tumor report for one subject.")
     parser.add_argument("--subject_folder", type=str, help="Path to the subject folder containing the MRI data.")
+    parser.add_argument("--update_t2_flair", action="store_true",
+                        help="Load existing *_metadata_final.json and recompute only T2-FLAIR mismatch metrics, "
+                             "saving results to *_metadata_final_t2_flair_update.json.")
 
     parser.add_argument("--clear_tmp", action="store_true", help="Delete the temporary directory after processing.")
     parser.add_argument("--overwrite", action="store_true", help="Redo this step, overwriting previous results.")
@@ -259,4 +308,7 @@ if __name__ == "__main__":
     os.environ["CUDA_VISIBLE_DEVICES"] = str(args.devices)
     logger.info(f"Using GPUs: CUDA_VISIBLE_DEVICES={os.environ['CUDA_VISIBLE_DEVICES']}")
 
-    main(args)
+    if args.update_t2_flair:
+        update_t2_flair_only(args)
+    else:
+        main(args)
