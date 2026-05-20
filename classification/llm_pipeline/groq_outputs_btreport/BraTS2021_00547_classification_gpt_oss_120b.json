@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_00547",
+  "idh": {
+    "reasoning": "The patient is 76 years old, an age that strongly favors IDH-wildtype diffuse glioma. Marked contrast enhancement and a high proportion of edema (77.8%) are imaging hallmarks of IDH-wildtype tumors. While the low necrosis fraction (4.84%) and lack of midline crossing could suggest an IDH\u2011mutant lesion, the dominant evidence of advanced age and marked enhancement outweighs these opposing cues, leading to a prediction of wildtype IDH.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "CET Crosses midline"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion occurs only in IDH\u2011mutant gliomas; given the strong imaging and demographic evidence for IDH\u2011wildtype status, the tumor is most likely non\u2011codeleted. The presence of cortical involvement and frontal\u2011lobe location are features that can be seen in codeleted oligodendrogliomas, but they are outweighed by the IDH\u2011wildtype context, leading to a non\u2011codeleted prediction.",
+    "supporting_features": [
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "In IDH\u2011wildtype diffuse glioma, any contrast enhancement typically corresponds to WHO grade 4 (glioblastoma). The marked enhancement quality, substantial edema, and patient\u2019s advanced age support a high\u2011grade lesion. Counterbalancing factors include low necrosis, absence of midline crossing, and lack of deep white\u2011matter or ependymal invasion, which are more typical of lower grades; however, the preponderance of high\u2011grade imaging signs leads to a grade 4 assignment.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "age_years",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Predictions rely solely on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty, especially for distinguishing grade 3 from grade 4 and confirming 1p/19q status. The low necrosis and absence of midline crossing introduce some residual uncertainty, but the overall pattern favors an IDH-wildtype, non\u2011codeleted, WHO grade 4 glioma."
+}

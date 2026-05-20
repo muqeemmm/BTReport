@@ -1,0 +1,60 @@
+{
+  "subject_id": "BraTS2021_00418",
+  "idh": {
+    "reasoning": "The patient is 78 years old, and older age strongly favors IDH-wildtype glioma. Significant midline shift, large total tumor volume (174\u202fmL), high proportion of edema (82\u202f%), ependymal invasion and deep white\u2011matter infiltration are imaging hallmarks of aggressive, typically IDH\u2011wildtype tumors. Although the enhancement is only mild and necrosis is low, the presence of any contrast enhancement and the marked mass effect outweigh these lower\u2011grade features, leading to a conclusion of IDH\u2011wildtype.",
+    "supporting_features": [
+      "age_years",
+      "midline_shift_present",
+      "Proportion of Oedema",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.72
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Features such as deep white\u2011matter and ependymal invasion, high edema burden, and the patient\u2019s advanced age are more typical of non\u2011codeleted astrocytic tumors rather than oligodendrogliomas, which usually show less edema and are more common in younger patients. While the tumor is located in the frontal cortex and insula\u2014sites frequently associated with 1p/19q\u2011codeleted oligodendrogliomas\u2014these location cues are outweighed by the invasive and edematous phenotype, supporting a non\u2011codeleted status.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion of Oedema",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.68
+  },
+  "who_grade": {
+    "reasoning": "The lesion shows marked mass effect (midline shift), large volume, substantial edema, and contrast enhancement, all imaging correlates of high\u2011grade glioma. Ependymal invasion and involvement of eloquent cortex further indicate aggressive behavior. Although the enhancement is mild and necrosis is limited, the combination of these high\u2011risk features justifies assigning WHO grade\u202f4. The lack of necrosis and only mild enhancement temper confidence but do not outweigh the other high\u2011grade indicators.",
+    "supporting_features": [
+      "midline_shift_present",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "CET Crosses midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH-wildtype, non\u2011codeleted, WHO grade\u202f4 diffuse glioma. However, the absence of advanced sequences (perfusion, diffusion, spectroscopy) and the mild enhancement limit certainty; molecular testing remains essential for definitive classification."
+}

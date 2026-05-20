@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_00693",
+  "idh": {
+    "reasoning": "The tumor shows mild contrast enhancement (Enhancement Quality: Mild) and low necrosis (Proportion Necrosis: 1.17%), both typical of IDH\u2011mutant lower\u2011grade gliomas. The patient is 54 years old, an age range where IDH\u2011mutant astrocytomas are common. Cortical involvement and lack of midline crossing (CET Crosses midline: False, midline_shift_present: No) further support an IDH\u2011mutant phenotype. However, the overall tumor volume is large (Total tumor volume (mL): 131.654) and edema proportion is high (Proportion of Oedema: 88.54%), which can be seen in IDH\u2011wildtype tumors, creating some uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "age_years",
+      "midline_shift_present",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The lesion is located in the temporal lobe, insula and ventricles (Tumor Location: temporal, cortex, insula and ventricles lobes) rather than the typical frontal predilection of oligodendrogliomas, and no imaging features such as calcification are reported. These findings favor a non\u2011codeleted status. No contradictory imaging evidence is present.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Mild enhancement (Enhancement Quality: Mild) with a modest enhancing volume (Proportion Enhancing: 10.29%) and minimal necrosis (Proportion Necrosis: 1.17%) are more consistent with WHO grade 3 astrocytoma than grade 4 glioblastoma, which typically shows strong, ring\u2011enhancement and substantial necrosis. Nonetheless, the large total tumor volume (131.654\u202fmL) and extensive edema (88.54%) raise the possibility of a higher grade, so confidence is moderate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks advanced sequences (DWI, perfusion, spectroscopy) that could better differentiate IDH status and grade. While imaging favors an IDH\u2011mutant, non\u2011codeleted astrocytoma, the large tumor size and extensive edema introduce uncertainty; molecular testing remains essential for definitive classification."
+}

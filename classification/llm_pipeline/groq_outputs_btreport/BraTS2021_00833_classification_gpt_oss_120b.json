@@ -1,0 +1,59 @@
+{
+  "subject_id": "BraTS2021_00833",
+  "idh": {
+    "reasoning": "The patient is 51 years old, an age where IDH-wildtype glioblastoma becomes common. Imaging shows marked contrast enhancement, a necrotic component (16.39% necrosis), substantial edema (38.87%) and a high proportion of enhancing tumor (44.74%), all features that favor IDH-wildtype status. However, the tumor shows cortical involvement, lacks deep white\u2011matter invasion, does not cross the midline, and has no ependymal invasion, which are more typical of IDH\u2011mutant tumors. Balancing these opposing signs, the evidence leans toward IDH\u2011wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "Midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Marked enhancement, necrosis and extensive edema are atypical for 1p/19q\u2011codeleted oligodendroglioma, which usually shows less aggressive enhancement. The tumor is located in parietal/occipital cortex rather than the classic frontal predilection, further arguing against codeletion. The presence of cortical involvement could be seen in oligodendroglioma, but overall the imaging profile aligns better with a non\u2011codeleted tumor.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement, necrotic core, large total tumor volume (81.4\u202fmL), significant edema, and midline shift indicate a high\u2011grade lesion. These features are characteristic of WHO grade\u202f4 glioblastoma. The lack of midline crossing and deep white\u2011matter invasion are more typical of lower grades, but the aggressive imaging characteristics outweigh these, supporting grade\u202f4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "Midline_shift_present",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "CET Crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests a high\u2011grade IDH\u2011wildtype glioma, but lack of advanced sequences (perfusion, spectroscopy) and molecular testing limits certainty. The cortical location and absence of deep invasion introduce modest uncertainty, reflected in the confidence scores."
+}
