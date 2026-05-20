@@ -118,9 +118,9 @@ MRI metadata:
 MODEL_ID    = "openai/gpt-oss-120b"
 HERE        = Path(__file__).parent
 SCHEMA_PATH = HERE / "glioma_classification_schema.json"
-ENV_PATH    = Path("/Users/muqeemmmm/GitHub/BTReport_v2/.env")
-JSONS_DIR   = Path("/Users/muqeemmmm/GitHub/BTReport_v2/data/Dataset_AKU_WHO/JSONs")
-COHORT_XLSX = Path("/Users/muqeemmmm/GitHub/BTReport_v2/data/dataset_table/cohort_merged.xlsx")
+ENV_PATH    = Path(".env")
+JSONS_DIR   = Path("data/Dataset_AKU_WHO/JSONs")
+COHORT_XLSX = Path("data/dataset_table/cohort_merged.xlsx")
 
 
 # --- ID helpers --------------------------------------------------------------

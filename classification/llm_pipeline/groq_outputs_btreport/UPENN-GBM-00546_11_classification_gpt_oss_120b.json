@@ -1,0 +1,56 @@
+{
+  "subject_id": "UPENN-GBM-00546_11",
+  "idh": {
+    "reasoning": "The patient is 67 years old, an age where IDH-wildtype glioblastoma is most common. The tumor shows marked enhancement, a notable necrotic component (19% necrosis), extensive edema (57% of volume), deep white\u2011matter and ependymal invasion, and a large total volume (>100\u202fmL) with midline shift\u2014all imaging hallmarks of IDH\u2011wildtype, high\u2011grade glioma. While cortical involvement and lack of midline crossing could be seen in lower\u2011grade lesions, they are outweighed by the aggressive features listed.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "CET Crosses midline",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The lesion is located in the temporal and insular cortex, shows marked enhancement, necrosis, and extensive edema\u2014features more typical of astrocytic rather than oligodendroglial tumors. Oligodendrogliomas (IDH\u2011mutant\u202f+\u202f1p/19q\u2011codeleted) usually arise in the frontal lobe, have less necrosis and edema, and often display calcifications (not assessable here). The imaging profile therefore supports a non\u2011codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, necrosis, high edema fraction, large tumor volume, deep white\u2011matter and ependymal invasion, and significant midline shift are characteristic of WHO grade\u202f4 glioblastoma. Although the enhancing portion is only ~23\u202f% and the lesion does not cross the midline, these findings do not outweigh the aggressive imaging signs that define grade\u202f4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "CET Crosses midline",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.78
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Predictions are based solely on conventional MRI features; lack of molecular testing, diffusion, perfusion, and spectroscopy limits certainty. Advanced imaging could refine grade assessment, and histopathology is required for definitive molecular classification."
+}

@@ -1,0 +1,55 @@
+{
+  "subject_id": "UPENN-GBM-00246_11",
+  "idh": {
+    "reasoning": "Patient is 75 years old (age_years) which strongly favors IDH-wildtype gliomas. The tumor shows high edema proportion (Proportion of Oedema=75.8%) and deep white matter invasion (Deep WM invasion) both typical of IDH-wildtype. Necrosis is present (Proportion Necrosis=12.43%) and any contrast enhancement (Enhancement Quality=Mild, Proportion Enhancing=11.77%) also point toward wildtype. Conversely, cortical involvement (Cortical involvement) and the relatively low enhancement intensity could suggest IDH-mutant, but these are outweighed by the age and aggressive imaging features. Therefore the balance supports an IDH-wildtype prediction.",
+    "supporting_features": [
+      "age_years",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Codeleted oligodendrogliomas are more common in younger patients and usually have less edema and limited deep white matter invasion. This 75\u2011year\u2011old patient (age_years) shows extensive edema (Proportion of Oedema) and deep white matter invasion (Deep WM invasion), arguing against 1p/19q codeletion. The lesion is solitary (Multifocal or Multicentric) and lacks calcification data, further reducing likelihood of codeletion. While cortical involvement (Cortical involvement) can be seen in oligodendroglioma, the dominant imaging profile supports a non\u2011codeleted status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis=12.43%) and any contrast enhancement (Enhancement Quality=Mild, Proportion Enhancing=11.77%) fulfills the imaging criteria for WHO grade 4 in IDH\u2011wildtype diffuse astrocytic tumors per WHO CNS5. High edema (Proportion of Oedema) and deep white matter invasion also suggest aggressive behavior. Lack of ependymal invasion (Ependymal (ventricular) Invasion) and absence of midline crossing (CET Crosses midline) are atypical for classic glioblastoma but do not preclude grade 4 when necrosis is present. Therefore grade 4 is the most appropriate.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.78
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging suggests an IDH-wildtype, non\u2011codeleted high\u2011grade glioma (grade 4). Confidence is limited by the mild enhancement and absence of advanced sequences (perfusion, spectroscopy) that could better characterize tumor grade."
+}
