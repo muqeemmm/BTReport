@@ -23,9 +23,11 @@ structured output.
 """
 
 import argparse
+import csv
 import json
 import time
 from collections import defaultdict
+from datetime import datetime
 from pathlib import Path
 
 import openpyxl
@@ -353,6 +355,17 @@ if __name__ == "__main__":
     OUTPUT_DIR = HERE / f"groq_outputs_{json_type}"
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
+    TIMINGS_CSV = OUTPUT_DIR / "timings.csv"
+    _csv_is_new = not TIMINGS_CSV.exists()
+    _timings_fh = TIMINGS_CSV.open("a", newline="")
+    _timings_writer = csv.DictWriter(
+        _timings_fh,
+        fieldnames=["folder_name", "elapsed_s", "timestamp"],
+    )
+    if _csv_is_new:
+        _timings_writer.writeheader()
+        _timings_fh.flush()
+
     schema = json.load(open(SCHEMA_PATH))
     config = dotenv_values(ENV_PATH)
 
@@ -439,6 +452,7 @@ if __name__ == "__main__":
         MAX_JSON_RETRIES = 3
         response = None
         skip_subject = False
+        t0 = time.perf_counter()
 
         for _ in range(len(clients)):
             for json_try in range(1, MAX_JSON_RETRIES + 1):
@@ -502,15 +516,27 @@ if __name__ == "__main__":
                 )
             continue
 
+        elapsed = round(time.perf_counter() - t0, 2)
+
         result = json.loads(response.choices[0].message.content)
         # Store folder_name so the metrics stage can join against ground truth.
         result["subject_id"] = folder_name
 
         with open(out_path, "w") as f:
             json.dump(result, f, indent=2)
-        tqdm.write(f"  {G}SAVED{Style.RESET_ALL}  {out_path.name}")
+
+        _timings_writer.writerow({
+            "folder_name": folder_name,
+            "elapsed_s":   elapsed,
+            "timestamp":   datetime.now().isoformat(timespec="seconds"),
+        })
+        _timings_fh.flush()
+
+        tqdm.write(f"  {G}SAVED{Style.RESET_ALL}  {out_path.name}  {D}({elapsed}s){Style.RESET_ALL}")
 
     pbar.close()
+    _timings_fh.close()
+    print(f"{C}Timings saved{Style.RESET_ALL} → {TIMINGS_CSV}")
 
     # --- Metrics -----------------------------------------------------------------
     print(f"\n{DIVIDER}")
