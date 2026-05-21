@@ -1,0 +1,58 @@
+{
+  "subject_id": "BraTS2021_01666",
+  "idh": {
+    "reasoning": "The patient is 20 years old (age_years) and the lesion is non\u2011enhancing (Enhancement Quality, Proportion Enhancing) with cortical involvement (Cortical involvement) and a frontal\u2011insula location (Region Proportions, Tumor Location), features that favor an IDH\u2011mutant diffuse glioma. However, a high necrotic component (Proportion Necrosis) and aggressive imaging signs such as midline shift (midline_shift_present), ependymal invasion (Ependymal (ventricular) Invasion) and deep white\u2011matter invasion (Deep WM invasion) argue for a wildtype phenotype. The balance of younger age and non\u2011enhancement outweighs the necrosis, leading to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Features such as frontal\u2011lobe predominance (Region Proportions), cortical involvement (Cortical involvement) and the young age (age_years) are typical of 1p/19q\u2011codeleted oligodendroglioma, supporting a codeleted status. Conversely, the presence of extensive necrosis (Proportion Necrosis), ependymal invasion (Ependymal (ventricular) Invasion), deep white\u2011matter invasion (Deep WM invasion) and midline shift (midline_shift_present) are more characteristic of an astrocytic, non\u2011codeleted tumor. The latter set of aggressive features is stronger, so the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "age_years",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The lesion shows a high necrotic fraction (Proportion Necrosis) and aggressive imaging signs such as ependymal invasion (Ependymal (ventricular) Invasion), deep white\u2011matter invasion (Deep WM invasion) and edema crossing the midline (Edema crosses midline), which support a higher WHO grade (grade 3 or 4). However, there is no contrast enhancement (Enhancement Quality, Proportion Enhancing, ET Volume) and the tumor is solitary (Multifocal or Multicentric), which argue against grade 4. Balancing these, grade 3 is the most plausible.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of diffusion, perfusion or spectroscopy limits certainty, especially regarding 1p/19q status and exact grade. High necrosis without enhancement is atypical and introduces residual uncertainty."
+}

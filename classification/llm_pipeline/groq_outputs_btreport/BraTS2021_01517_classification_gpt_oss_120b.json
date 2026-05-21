@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_01517",
+  "idh": {
+    "reasoning": "The patient is 62 years old (age_years) which favors IDH-wildtype gliomas. There is a high proportion of necrosis (Proportion Necrosis=41.21) and extensive edema (Proportion of Oedema=58.79), both typical of high\u2011grade, IDH-wildtype disease. The tumor is multifocal (Multifocal or Multicentric=Multifocal), bilateral (Side of Tumor Epicenter=Bilateral) and invades deep white matter (Deep WM invasion=Present) and ependyma (Ependymal (ventricular) Invasion=Present), patterns more common in IDH-wildtype glioblastoma. The lack of contrast enhancement (Enhancement Quality=None, Proportion Enhancing=0.0) is atypical for IDH-wildtype but non\u2011enhancing glioblastoma does occur, especially when necrosis is present. Overall the weight of age, necrosis, multifocality and deep invasion outweighs the non\u2011enhancement, leading to a prediction of IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The lesion shows extensive necrosis (Proportion Necrosis=41.21) and is multifocal (Multifocal or Multicentric=Multifocal), features that are uncommon in 1p/19q\u2011codeleted oligodendrogliomas, which typically present as solitary, calcified, cortical tumors with less necrosis. No imaging evidence of calcification is available, and the non\u2011enhancing nature (Enhancement Quality=None) does not favor oligodendroglioma. Therefore the evidence points toward a non\u2011codeleted status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "Necrosis is present in 41.21% of the tumor (Proportion Necrosis) and the tumor is large (Total tumor volume=158.539\u202fmL) with multifocal, bilateral involvement (Multifocal or Multicentric=Multifocal, Side of Tumor Epicenter=Bilateral) and deep white\u2011matter and ependymal invasion (Deep WM invasion, Ependymal (ventricular) Invasion). These are hallmarks of WHO grade\u202f4 glioma. The only feature against grade\u202f4 is the absence of contrast enhancement (Enhancement Quality=None, Proportion Enhancing=0.0), but necrosis alone satisfies the histologic criterion for grade\u202f4 in IDH\u2011wildtype disease. Hence the most likely grade is 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI suggests a high\u2011grade IDH\u2011wildtype glioma despite lack of contrast enhancement. Molecular testing (IDH1/2 sequencing, 1p/19q FISH) is recommended to confirm the prediction. Absence of diffusion and perfusion data limits certainty, but the current evidence supports the grade\u202f4 assignment with moderate confidence."
+}

@@ -1,0 +1,57 @@
+{
+  "subject_id": "BraTS2021_01273",
+  "idh": {
+    "reasoning": "The patient is 66 years old, an age where IDH\u2011wildtype glioblastoma is common. MRI shows marked contrast enhancement, a substantial necrotic component (30.5% of the lesion), and a high proportion of oedema (48.5%), all features that favour IDH\u2011wildtype, high\u2011grade glioma. Conversely, the tumour is cortical, solitary, does not cross the midline, and lacks deep white\u2011matter or ependymal invasion, which are more typical of lower\u2011grade, IDH\u2011mutant tumours. We weigh the strong necrosis and enhancement evidence higher, leading to a prediction of IDH\u2011wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "Proportion Enhancing",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Side of Tumor Epicenter",
+      "Multifocal or Multicentric",
+      "Crosses_patient_midline"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.73
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of IDH\u2011wildtype, the tumour must be 1p/19q non\u2011codeleted according to WHO CNS5 rules. No imaging feature directly suggests codeletion, and the supporting evidence for a wildtype status reinforces a non\u2011codeleted status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.73
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, necrosis (30.5%) and extensive oedema are hallmarks of WHO grade\u202f4 glioblastoma, especially in an older patient. The tumour\u2019s small volume (7\u202fmL) and lack of midline crossing are atypical for classic glioblastoma, introducing some uncertainty, but the necrosis and enhancement dominate the assessment, supporting grade\u202f4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Side of Tumor Epicenter",
+      "Crosses_patient_midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Prediction relies on conventional MRI features; lack of diffusion, perfusion or spectroscopy limits certainty. While necrosis and strong enhancement favour IDH\u2011wildtype grade\u202f4, the cortical location and small volume introduce moderate uncertainty."
+}

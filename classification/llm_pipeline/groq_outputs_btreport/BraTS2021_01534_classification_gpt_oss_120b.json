@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_01534",
+  "idh": {
+    "reasoning": "The patient is young (age_years=31) and the tumor shows no contrast enhancement (Enhancement Quality='None', Proportion Enhancing=0.0), both features commonly associated with IDH\u2011mutant diffuse gliomas. However, the tumor has a high proportion of necrosis (Proportion Necrosis=72.74) and a large volume (Total tumor volume (mL)=62.931), which are more typical of IDH\u2011wildtype high\u2011grade gliomas. Balancing these opposing signs, the lack of enhancement and young age weigh slightly more, leading to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.62
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Imaging does not provide direct evidence for 1p/19q codeletion. The tumor is non\u2011enhancing and cortical, which can be seen in both oligodendroglioma and astrocytoma. Absence of calcification (not reported) and the high necrosis proportion make oligodendroglioma less likely. Therefore the safest estimate is non\u2011codeleted.",
+    "supporting_features": [
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The tumor lacks contrast enhancement (Enhancement Quality='None', Proportion Enhancing=0.0) and is solitary, features typical of lower\u2011grade gliomas (grade 2\u20113). However, the high necrosis proportion (Proportion Necrosis=72.74), large total volume (Total tumor volume (mL)=62.931), deep white\u2011matter and ependymal invasion, and involvement of eloquent visual cortex suggest a higher grade (grade\u202f4). The absence of enhancement argues against grade\u202f4, so the balance favors an anaplastic (grade\u202f3) lesion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 3,
+    "confidence": 0.58
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "High necrosis without enhancement creates uncertainty; molecular testing is required to confirm IDH and 1p/19q status and to rule out IDH\u2011wildtype glioblastoma."
+}

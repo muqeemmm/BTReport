@@ -1,0 +1,57 @@
+{
+  "subject_id": "BraTS2021_01524",
+  "idh": {
+    "reasoning": "Patient is 23 years old, which is typical for IDH\u2011mutant diffuse gliomas that occur in younger adults. The tumor shows no contrast enhancement (Enhancement Quality = 'None', Proportion Enhancing = 0.0) and is non\u2011enhancing on the report, a pattern frequently seen in IDH\u2011mutant astrocytomas and oligodendrogliomas. Cortical involvement is present, another feature common in IDH\u2011mutant tumors. Conversely, the lesion has a very high necrotic component (Proportion Necrosis = 70.97%) and causes marked midline shift and ependymal invasion, findings that are more typical of IDH\u2011wildtype glioblastoma. We weigh the age and lack of enhancement more heavily, leading to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Text Report"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.66
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor is non\u2011enhancing, cortical, solitary, and located in the temporal lobe. While cortical location can be seen in oligodendroglioma, the very high necrosis (70.97%) and deep white\u2011matter and ependymal invasion are atypical for 1p/19q\u2011codeleted oligodendroglioma, which usually shows less necrosis and more calcification. Therefore the imaging favors a non\u2011codeleted status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.71
+  },
+  "who_grade": {
+    "reasoning": "Necrosis >50% (Proportion Necrosis = 70.97%) meets the histologic criterion for WHO grade\u202f4 in IDH\u2011mutant astrocytoma. The tumor also produces a substantial midline shift, large total volume (115.032\u202fmL) and ependymal invasion, all suggestive of high\u2011grade behavior. The absence of contrast enhancement and the young age are more typical of lower grades, but necrosis is a decisive factor for grade\u202f4. Hence we assign WHO grade\u202f4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma with necrosis fulfilling grade\u202f4 criteria, but lack of advanced sequences (DWI, perfusion, spectroscopy) limits certainty. Molecular confirmation is recommended."
+}

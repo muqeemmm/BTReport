@@ -1,0 +1,60 @@
+{
+  "subject_id": "EGD-0024",
+  "idh": {
+    "reasoning": "The patient is 43 years old (age_years) which is borderline but older than typical IDH\u2011mutant gliomas. The lesion shows a high proportion of necrosis (Proportion Necrosis=41.85%) and extensive edema (Edema crosses midline=True, Total tumor volume (mL)=227.563) with midline shift (midline_shift_present=Yes). Deep white\u2011matter invasion (Deep WM invasion=Present) and ependymal invasion (Ependymal (ventricular) Invasion=Present) are features more common in IDH\u2011wildtype aggressive tumors. Although the enhancement is mild (Enhancement Quality=Mild, Proportion Enhancing=3.38) and the patient is relatively young, the necrosis and invasive features outweigh these, favoring an IDH\u2011wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "High necrosis (Proportion Necrosis), deep white\u2011matter invasion (Deep WM invasion) and ependymal invasion (Ependymal (ventricular) Invasion) are atypical for 1p/19q\u2011codeleted oligodendrogliomas, which usually have less necrosis and a more circumscribed appearance. The frontal\u2011lobe cortical location (Region Proportions, Tumor Location) and younger age could suggest codeletion, but the aggressive invasive imaging features dominate, supporting a non\u2011codeleted status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement",
+      "Tumor Location",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The lesion exhibits marked necrosis (Proportion Necrosis=41.85%) and extensive edema (Edema crosses midline=True) with midline shift (midline_shift_present=Yes) and ependymal invasion, all hallmarks of WHO grade\u202f4 glioblastoma. The total tumor volume is large (Total tumor volume (mL)=227.563). While the enhancement is mild (Enhancement Quality=Mild, Proportion Enhancing=3.38) and the patient is relatively young, necrosis and invasive features are decisive for grade\u202f4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Predictions rely solely on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty. Mild contrast enhancement and patient age introduce some uncertainty, but necrosis and invasive imaging characteristics strongly support an IDH-wildtype, non\u2011codeleted, WHO grade\u202f4 diagnosis."
+}
