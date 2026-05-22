@@ -1,0 +1,53 @@
+{
+  "subject_id": "EGD-0214",
+  "idh": {
+    "reasoning": "The tumor shows several aggressive imaging features that favor an IDH-wildtype status: substantial necrosis (Proportion Necrosis 18.95%), marked midline shift (midline_shift_present Yes), edema crossing the midline (Edema crosses midline True), ependymal invasion (Ependymal (ventricular) Invasion Present), deep white\u2011matter infiltration (Deep WM invasion Present) and a large total volume (Total tumor volume (mL) 192.128). These findings are typical of IDH\u2011wildtype glioblastoma. The absence of contrast enhancement (Enhancement Quality None, Proportion Enhancing 0.0) is more characteristic of IDH\u2011mutant low\u2011grade gliomas and therefore argues against wildtype, creating some uncertainty.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "IDH\u2011wildtype diffuse gliomas are by definition 1p/19q non\u2011codeleted; no imaging feature suggests codeletion, and the aggressive phenotype aligns with non\u2011codeleted tumors. No contradictory evidence is present.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "Key high\u2011grade indicators are present: necrosis (Proportion Necrosis 18.95%), significant midline shift, edema crossing midline, ependymal invasion, deep white\u2011matter involvement, large tumor and edema volumes, and eloquent\u2011area involvement. According to WHO CNS5, necrosis and these aggressive features define grade\u202f4. The lack of contrast enhancement is atypical for grade\u202f4 but does not outweigh the necrosis and mass\u2011effect findings, so grade\u202f4 is most likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The lack of contrast enhancement introduces some uncertainty; molecular testing (IDH, 1p/19q) is recommended to confirm the radiologic impression."
+}

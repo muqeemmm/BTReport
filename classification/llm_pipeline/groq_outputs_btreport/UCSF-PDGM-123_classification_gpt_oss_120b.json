@@ -1,0 +1,58 @@
+{
+  "subject_id": "UCSF-PDGM-123",
+  "idh": {
+    "reasoning": "The tumor shows marked enhancement (\"Enhancement Quality\"), appreciable necrosis (\"Proportion Necrosis\"), significant midline shift (\"Midline_shift_present\"), crossing of the contrast\u2011enhancing component across the midline (\"CET Crosses midline\"), ependymal invasion (\"Ependymal (ventricular) Invasion\"), deep white\u2011matter infiltration (\"Deep WM invasion\"), extensive edema that also crosses the midline (\"Edema crosses midline\") and a high edema proportion (\"Proportion of Oedema\"). These imaging hallmarks are typical of IDH\u2011wildtype glioblastoma and argue against an IDH\u2011mutant, lower\u2011grade glioma, which usually shows less necrosis, less edema and less aggressive crossing behavior. The only mildly opposing evidence is the predominant frontal\u2011lobe location (\"Region Proportions\") and cortical involvement (\"Cortical involvement\"), which can be seen in IDH\u2011mutant tumors, but they are outweighed by the aggressive features. Therefore the prediction is IDH\u2011wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Midline_shift_present",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging profile is characterized by marked enhancement, necrosis, extensive edema, midline crossing and ependymal invasion, which are more typical of astrocytic tumors that are 1p/19q non\u2011codeleted. Oligodendrogliomas (codeleted) often demonstrate calcifications and less aggressive necrotic enhancement, features not observed here. While the tumor is located in the frontal lobe (\"Region Proportions\"), a common site for oligodendroglioma, the aggressive imaging characteristics outweigh this, supporting a non\u2011codeleted status. Hence the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "Proportion of Oedema",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement (\"Enhancement Quality\"), necrosis (\"Proportion Necrosis\"), high edema fraction (\"Proportion of Oedema\"), large total tumor volume (\"Total tumor volume (mL)\"), midline shift (\"Midline_shift_present\"), crossing of the enhancing component across the midline (\"CET Crosses midline\"), and ependymal invasion (\"Ependymal (ventricular) Invasion\") are imaging hallmarks of WHO grade 4 glioblastoma. The presence of deep white\u2011matter invasion and eloquent\u2011area involvement further support a high\u2011grade lesion. No imaging features suggest a lower grade (e.g., lack of diffuse non\u2011enhancing T2/FLAIR hyperintensity without necrosis). Therefore the grade is predicted as 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Midline_shift_present",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.88
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty, but the aggressive imaging pattern strongly supports IDH\u2011wildtype glioblastoma (grade 4) with 1p/19q non\u2011codeleted status."
+}

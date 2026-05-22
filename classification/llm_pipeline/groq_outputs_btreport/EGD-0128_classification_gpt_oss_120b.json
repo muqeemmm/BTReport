@@ -1,0 +1,54 @@
+{
+  "subject_id": "EGD-0128",
+  "idh": {
+    "reasoning": "The tumor shows high necrosis (57.23%), multifocality, and moderate enhancement, which are typical of IDH-wildtype glioblastoma. However the patient is young (26) and the enhancement is only mild, which are more typical of IDH-mutant tumors. Balancing these, the imaging leans toward IDH-wildtype.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.66
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the imaging suggests IDH-wildtype, 1p/19q codeletion is unlikely. The high necrosis and multifocal pattern also argue against oligodendroglioma, which typically is IDH-mutant and 1p/19q-codeleted. No imaging features specifically support codeletion. Therefore predict non-codeleted.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "Presence of necrosis (57.23%), moderate enhancement, large tumor volume (58.124\u202fmL), and multifocal disease are characteristic of WHO grade\u202f4 glioblastoma. Mild enhancement and young age slightly temper confidence, but necrosis is a defining feature of grade\u202f4. Hence grade\u202f4 is most likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "age_years",
+      "Cortical involvement"
+    ],
+    "prediction": 4,
+    "confidence": 0.68
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks diffusion, perfusion, and spectroscopy; mild contrast enhancement introduces some uncertainty, but necrosis and multifocality favor IDH-wildtype glioblastoma grade 4."
+}

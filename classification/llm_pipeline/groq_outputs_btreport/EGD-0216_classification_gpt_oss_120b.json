@@ -1,0 +1,55 @@
+{
+  "subject_id": "EGD-0216",
+  "idh": {
+    "reasoning": "The patient is 72 years old, an age at which IDH-wildtype diffuse gliomas are most common. The tumor shows marked contrast enhancement (Enhancement Quality = 'Marked') and a high proportion of enhancing tissue (Proportion Enhancing = 39.62%), both typical of IDH-wildtype, high\u2011grade gliomas. Multifocal disease (Multifocal or Multicentric = 'Multifocal') and extensive peritumoral edema (Proportion of Oedema = 60.11%) further support an IDH\u2011wildtype phenotype. Cortical involvement is present, which can be seen in IDH\u2011mutant tumors, but the weight of the age and enhancement findings outweigh this. Therefore the imaging favors an IDH\u2011wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The lesion demonstrates marked enhancement, high edema, and occurs in an older patient, features that are more typical of non\u2011codeleted, IDH\u2011wildtype astrocytic tumors rather than oligodendroglioma, which usually shows less enhancement and often calcifications (not assessable). The presence of cortical involvement could suggest oligodendroglioma, but the overall imaging profile aligns with a non\u2011codeleted tumor. Hence the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "age_years",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.73
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement (Enhancement Quality = 'Marked'), a thick enhancing margin (>3mm), high proportion of enhancing tissue (39.62%), extensive edema (60.11%), and multifocal disease are imaging hallmarks of high\u2011grade (grade\u202f4) glioblastoma. Although necrosis proportion is low, the combination of these features in an older patient strongly points to WHO grade\u202f4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH-wildtype, non\u2011codeleted, WHO grade\u202f4 glioma, but molecular confirmation is lacking. Absence of advanced sequences (DWI, perfusion, spectroscopy) limits certainty, especially regarding necrosis assessment and potential IDH\u2011mutant subtypes."
+}

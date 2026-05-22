@@ -1,0 +1,55 @@
+{
+  "subject_id": "EGD-0254",
+  "idh": {
+    "reasoning": "The patient is elderly (72\u202fy) and the tumor shows marked contrast enhancement, necrosis, crossing of the midline, extensive edema, ependymal invasion and a large total volume (>300\u202fmL). These imaging hallmarks are strongly associated with IDH\u2011wildtype glioblastoma, while IDH\u2011mutant gliomas tend to occur in younger patients, have less aggressive enhancement and less necrosis. The presence of cortical involvement is ambiguous but does not outweigh the aggressive features. Hence the evidence favors IDH\u2011wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Midline_shift_present",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of IDH\u2011wildtype, the tumor cannot be an oligodendroglioma, which by definition requires both IDH mutation and 1p/19q codeletion. Moreover, the imaging lacks the classic oligodendroglioma pattern of calcified, well\u2011circumscribed frontal lesions. Therefore the most consistent interpretation is non\u2011codeleted.",
+    "supporting_features": [
+      "idh\",\"Enhancement Quality",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, necrosis, crossing of the midline, extensive peritumoral edema, ependymal invasion, and a very large tumor volume are characteristic of WHO grade\u202f4 glioblastoma. Lower grades (2\u20113) usually show less aggressive enhancement, minimal necrosis, and smaller volumes. Thus the imaging strongly supports grade\u202f4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Midline_shift_present",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests IDH-wildtype glioblastoma (grade\u202f4) with non\u2011codeleted 1p/19q. Absence of advanced sequences (DWI, perfusion, spectroscopy) limits confirmation of cellularity and metabolic markers, but the available features provide high confidence in this classification."
+}

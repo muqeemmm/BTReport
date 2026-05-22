@@ -1,0 +1,47 @@
+{
+  "subject_id": "UCSF-PDGM-307",
+  "idh": {
+    "reasoning": "The patient is 31 years old (age_years) which is typical for IDH\u2011mutant lower\u2011grade gliomas. The lesion shows no contrast enhancement (Enhancement Quality='None', Proportion Enhancing=0.0) and no necrosis (Proportion Necrosis=0.0), both favoring IDH\u2011mutant over IDH\u2011wildtype, which more often enhances and necroses. The tumor is small (ED Volume (mL)=10.391) and solitary (Multifocal or Multicentric='Solitary'), further supporting a low\u2011grade, IDH\u2011mutant phenotype. No imaging features strongly argue for wildtype, so we predict mutant with high confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Multifocal or Multicentric",
+      "Text Report"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "While cortical frontal location and lack of enhancement are compatible with both codeleted oligodendroglioma and non\u2011codeleted astrocytoma, the absence of typical oligodendroglioma imaging clues such as calcifications (not assessed) and the presence of pure edema without any enhancement leans slightly toward an astrocytoma, i.e., non\u2011codeleted. No definitive imaging marker for codeletion is present, so we assign non\u2011codeleted with moderate confidence.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The lesion is non\u2011enhancing (Enhancement Quality='None', Proportion Enhancing=0.0), lacks necrosis (Proportion Necrosis=0.0) and has a small volume (ED Volume (mL)=10.391) with no contrast\u2011enhancing tumor (ET Volume (mL)=0.0). These imaging hallmarks are characteristic of WHO grade 2 diffuse gliomas. There are no features such as marked edema, necrosis, or enhancement that would suggest grade 3 or 4. Therefore we predict grade 2 with high confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "Molecular testing (IDH sequencing, 1p/19q FISH) is required to confirm the radiologic impression; advanced perfusion or spectroscopy could further refine grade."
+}
