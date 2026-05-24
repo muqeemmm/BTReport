@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0312",
+  "idh": {
+    "reasoning": "The patient is 60 years old, an age where IDH-wildtype gliomas are more common. The T2-FLAIR mismatch is absent (value 0.0), which is a radiologic surrogate favoring IDH-wildtype over IDH\u2011mutant astrocytoma. The tumor shows a very high proportion of edema (99.91%) and only a tiny enhancing component (0.07 proportion, mild quality), patterns more typical of IDH\u2011wildtype diffuse astrocytoma rather than the lower\u2011grade IDH\u2011mutant phenotype that usually has less edema and may show T2\u2011FLAIR mismatch. These features collectively support an IDH\u2011wildtype status, while cortical location and mild enhancement argue against it but are not decisive.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "Necrosis proportion"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Frontal_lobe-cortex region",
+      "Side of Tumor Epicenter",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.58
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of IDH\u2011wildtype, a 1p/19q codeletion is highly unlikely because codeletion is only defined in the context of IDH\u2011mutant tumors. No imaging features (such as classic oligodendroglioma cortical frontal location with calcifications) are present to suggest a codeleted tumor, and the overall profile aligns with a non\u2011codeleted diffuse astrocytoma. Therefore the best estimate is non\u2011codeleted.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The lesion is large (total volume ~29\u202fmL) with extensive edema, but the enhancement is mild, necrosis is minimal, and there is no midline crossing or deep white\u2011matter invasion, which are typical of high\u2011grade (grade\u202f4) glioblastoma. These mixed findings suggest an intermediate grade (WHO\u202fgrade\u202f3) rather than grade\u202f4, while still being higher than a purely low\u2011grade (grade\u202f2) lesion because any enhancement is present. The balance of supporting (high edema, moderate size, mild enhancement) versus contradicting (lack of necrosis, no crossing) evidence leads to a grade\u202f3 assignment with modest confidence.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "Necrosis proportion",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Crosses_ideal_midline"
+    ],
+    "prediction": 3,
+    "confidence": 0.55
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-wildtype, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks advanced sequences (DWI, perfusion, spectroscopy) that could clarify molecular status. Absence of T2\u2011FLAIR mismatch and high edema favor IDH\u2011wildtype, but cortical location and mild enhancement introduce uncertainty. The grade assignment is tentative; additional histopathologic and molecular testing is recommended."
+}
