@@ -1,0 +1,44 @@
+{
+  "subject_id": "BraTS2021_01718",
+  "idh": {
+    "reasoning": "The T2-FLAIR mismatch is absent (T2-FLAIR Mismatch Present = 0.0), which is typical of IDH\u2011wildtype glioblastoma. A high proportion of necrosis (Proportion Necrosis = 52.6) also aligns with IDH\u2011wildtype, high\u2011grade disease. The patient\u2019s young age (age_years = 37) and cortical involvement (Cortical involvement = Present) are more common in IDH\u2011mutant tumors, providing contradictory evidence. Balancing these factors leads to a prediction of IDH\u2011wildtype with moderate confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of IDH\u2011wildtype and the lack of imaging features suggestive of oligodendroglioma (no calcifications, no classic T2\u2011FLAIR mismatch), the tumor is most consistent with 1p/19q non\u2011codeleted status. No specific metadata strongly supports codeletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "A high necrosis proportion (Proportion Necrosis = 52.6) and edema crossing the midline (Edema crosses midline = True) are hallmarks of WHO grade 4 glioblastoma. Deep white\u2011matter invasion and any enhancement further support high grade. The very low proportion of enhancing tumor (Proportion Enhancing = 0.02) and only mild enhancement slightly argue against grade 4, but the necrosis and midline edema outweigh these, leading to a grade 4 prediction with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Predictions rely solely on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty, especially for IDH status. The modest confidence reflects these constraints."
+}

@@ -1,0 +1,53 @@
+{
+  "subject_id": "EGD-0450",
+  "idh": {
+    "reasoning": "The patient is 53 years old, an age range more typical for IDH-wildtype diffuse glioma. The T2-FLAIR mismatch is absent (\"T2-FLAIR Mismatch Present\": 0.0), which is a strong imaging marker against IDH mutation. There is measurable necrosis (\"Proportion Necrosis\": 15.97) and any contrast enhancement (\"Enhancement Quality\": \"Mild\") which together favor IDH-wildtype status. While cortical involvement and mild enhancement can be seen in IDH\u2011mutant tumors, the weight of older age, lack of FLAIR mismatch and presence of necrosis outweigh these, leading to a prediction of wildtype.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of IDH-wildtype, the tumor is expected to be 1p/19q non\u2011codeleted. The absence of T2\u2011FLAIR mismatch and the presence of necrosis further support a non\u2011codeleted status, as 1p/19q codeletion is typically associated with IDH\u2011mutant oligodendrogliomas that often show a T2\u2011FLAIR mismatch pattern. No imaging features specifically suggest codeletion, so the best estimate is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The lesion shows contrast enhancement (\"Enhancement Quality\": \"Mild\") and measurable necrosis (\"Proportion Necrosis\": 15.97), both imaging hallmarks of higher\u2011grade glioma. The edema proportion is high (81.72%) and the patient\u2019s age is typical for glioblastoma. Although the enhancing tumor volume is low (\"ET Volume (mL)\": 0.592) and the lesion does not cross the midline, WHO criteria consider any IDH\u2011wildtype diffuse glioma with contrast enhancement as grade\u202f4. The balance of supporting versus contradicting imaging signs leads to a grade\u202f4 prediction.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Edema proportion (Proportion of Oedema)",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Low ET Volume (ET Volume (mL))",
+      "Mild enhancement",
+      "No midline crossing",
+      "No deep white matter invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging suggests an IDH-wildtype, non\u2011codeleted high\u2011grade glioma (grade\u202f4). However, the mild enhancement and very small enhancing component introduce some uncertainty; advanced imaging (perfusion, spectroscopy) and molecular testing would be valuable to confirm the diagnosis and rule out a lower\u2011grade IDH\u2011mutant astrocytoma."
+}

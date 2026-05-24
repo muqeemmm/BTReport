@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_00578",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present = 1.0, Score = 1.0, Degree = 1.22) is a highly specific imaging surrogate for IDH\u2011mutant diffuse glioma, especially astrocytoma. This strongly supports an IDH\u2011mutant status. Contrarily, the patient\u2019s older age (age_years = 67) and marked contrast enhancement (Enhancement Quality = Marked) are more typical of IDH\u2011wildtype glioblastoma, providing modest opposing evidence. We weigh the specific mismatch sign higher than the nonspecific age and enhancement features, leading to an IDH\u2011mutant prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Marked enhancement (Enhancement Quality = Marked) and substantial necrosis (Proportion Necrosis = 28.28) are more characteristic of astrocytoma rather than oligodendroglioma, which typically shows less necrosis and less aggressive enhancement. The same T2\u2011FLAIR mismatch that supports IDH\u2011mutation also favors an astrocytic lineage, i.e., 1p/19q non\u2011codeleted. No imaging features strongly suggest codeletion, so we predict non\u2011codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "Several high\u2011grade imaging hallmarks are present: marked contrast enhancement, high necrosis proportion (28.28%), enhancement crossing the midline (CET Crosses midline = True), ependymal invasion (Ependymal (ventricular) Invasion = Present), significant midline shift (midline_shift_present = Yes), large total tumor volume (Total tumor volume (mL) = 170.665) and deep white\u2011matter invasion. While T2\u2011FLAIR mismatch can be seen in lower\u2011grade IDH\u2011mutant tumors, the aggregate of aggressive features outweighs this, supporting a WHO grade\u202f4 classification.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.78
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma with high\u2011grade (grade\u202f4) features. Molecular testing is required for definitive confirmation, especially given the patient\u2019s older age and marked enhancement, which can also be seen in IDH\u2011wildtype glioblastoma."
+}

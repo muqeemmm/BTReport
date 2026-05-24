@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_00390",
+  "idh": {
+    "reasoning": "The patient is elderly (73 years) and shows absent T2-FLAIR mismatch (T2-FLAIR Mismatch Present = 0.0, low mismatch score). These features favor IDH-wildtype glioma. Mild enhancement, very low necrosis (Proportion Necrosis = 0.49) and low enhancing proportion (Proportion Enhancing = 2.59) argue against IDH-mutant, which often shows more pronounced T2-FLAIR mismatch and may have stronger enhancement in higher grades. Thus the balance of evidence supports an IDH-wildtype prediction.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion occurs only in IDH-mutant tumors; given the IDH-wildtype prediction, the tumor is most likely non\u2011codeleted. Additionally, the absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present = 0.0) and the lack of typical oligodendroglioma imaging features (e.g., calcifications, homogeneous T2 signal) further support a non\u2011codeleted status. The presence of cortical involvement could be seen in codeleted tumors, but overall the evidence points to non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "IDH prediction (derived)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The lesion is small (Total tumor volume 17.056\u202fmL) with only mild enhancement (Enhancement Quality = Mild) and negligible necrosis (Proportion Necrosis = 0.49). These imaging characteristics are more typical of a lower\u2011grade diffuse glioma (WHO grade\u202f2). Features that could suggest a higher grade, such as strong enhancement, necrosis, or crossing of the enhancing component, are absent. Edema crossing the midline is present but can occur in lower\u2011grade tumors with extensive peritumoral edema, so it does not outweigh the low\u2011grade indicators.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Edema crosses midline"
+    ],
+    "prediction": 2,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-wildtype, WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty, especially for distinguishing IDH-wildtype lower\u2011grade astrocytoma from early glioblastoma. Advanced molecular testing would be required for definitive classification."
+}

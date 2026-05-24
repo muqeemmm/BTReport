@@ -1,0 +1,56 @@
+{
+  "subject_id": "EGD-0773",
+  "idh": {
+    "reasoning": "The T2\u2011FLAIR mismatch is absent (\"T2-FLAIR Mismatch Present\":0.0) and the mismatch score is below the typical threshold (\"T2-FLAIR Mismatch Score\":0.494), both favoring IDH\u2011wildtype. Presence of necrosis (\"Proportion Necrosis\":20.54) and multifocal disease (\"Multifocal or Multicentric\":\"Multifocal\") are also characteristic of IDH\u2011wildtype glioblastoma. Contradicting evidence includes the young age (\"age_years\":36), cortical location (\"Cortical involvement\":\"Present\") and frontal\u2011lobe predilection (\"Region Proportions\" showing cortex 0.56), which are more common in IDH\u2011mutant astrocytomas. Balancing these, the evidence leans toward IDH\u2011wildtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "IDH\u2011wildtype status strongly implies lack of 1p/19q codeletion. Additional imaging features supporting a non\u2011codeleted tumor are multifocality (\"Multifocal or Multicentric\":\"Multifocal\"), necrosis (\"Proportion Necrosis\":20.54) and the presence of enhancement (\"Enhancement Quality\":\"Mild\"). Features that could suggest a codeleted oligodendroglioma\u2014cortical involvement (\"Cortical involvement\":\"Present\") and frontal\u2011lobe location (\"Region Proportions\")\u2014are present but are outweighed by the wildtype context and high\u2011grade imaging signs. Hence the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows necrosis (\"Proportion Necrosis\":20.54), mild contrast enhancement (\"Enhancement Quality\":\"Mild\"), a substantial edema component (\"Proportion of Oedema\":79.2) and multifocal growth, all hallmarks of WHO grade 4 glioblastoma. The total tumor volume is large (\"Total tumor volume (mL)\":79.546) and the enhancing proportion is 27% (\"Proportion Enhancing\":0.27). Contradicting points are the relatively low enhancing volume (ET Volume 0.211\u202fmL) and the patient\u2019s young age, which can be seen in lower\u2011grade IDH\u2011mutant tumors. Overall the high\u2011grade features dominate, supporting grade\u202f4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "Total tumor volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.72
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, 1p/19q-non-codeleted, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Molecular predictions rely solely on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty. The borderline T2\u2011FLAIR mismatch score and young age introduce some uncertainty, but the imaging pattern most closely matches an IDH\u2011wildtype, non\u2011codeleted glioblastoma (grade\u202f4)."
+}

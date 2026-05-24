@@ -1,0 +1,61 @@
+{
+  "subject_id": "BraTS2021_00274",
+  "idh": {
+    "reasoning": "The patient is elderly (age_years=82) and the tumor shows marked contrast enhancement (Enhancement Quality=Marked), necrosis (Proportion Necrosis=13.06), high edema proportion (Proportion of Oedema=63.27), and absence of T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present=0.0, T2-FLAIR Mismatch Score=0.4). These imaging features favor an IDH\u2011wildtype glioblastoma and argue against IDH\u2011mutant astrocytoma, which typically exhibits T2\u2011FLAIR mismatch. Therefore the prediction is IDH\u2011wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Enhancing",
+      "Multiple satellites present",
+      "CET Crosses midline",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "In the context of an IDH\u2011wildtype tumor, 1p/19q codeletion is exceedingly rare. The imaging shows marked enhancement, necrosis, lack of calcification (not reported), and absence of T2\u2011FLAIR mismatch, all supporting a non\u2011codeleted status. No imaging features suggest oligodendroglioma (e.g., calcifications, homogeneous T2 hyperintensity). Hence the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Multiple satellites present",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, presence of necrosis, high edema proportion, and large total tumor volume (~45.8\u202fmL) together with absence of T2\u2011FLAIR mismatch are characteristic of WHO grade\u202f4 glioblastoma. Although the proportion of enhancing tumor is moderate (23.67%), the necrotic component and aggressive imaging features outweigh this, supporting a grade\u202f4 assignment.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "Total tumor volume (mL)",
+      "Multiple satellites present",
+      "Proportion Enhancing",
+      "age_years",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Cortical involvement"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies solely on conventional MRI features; advanced sequences (diffusion, perfusion, spectroscopy) are unavailable, which limits definitive molecular confirmation. Nonetheless, the imaging profile strongly suggests IDH\u2011wildtype, 1p/19q non\u2011codeleted glioblastoma (grade\u202f4)."
+}

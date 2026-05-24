@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00084",
+  "idh": {
+    "reasoning": "The patient is 61 years old (age_years) and the tumor shows marked contrast enhancement (Enhancement Quality) with a necrotic component (Proportion Necrosis) and a multifocal distribution (Multifocal or Multicentric). These features are typical of IDH\u2011wildtype glioblastoma. Additionally, the T2\u2011FLAIR mismatch is absent (T2-FLAIR Mismatch Present = 0), which argues against IDH\u2011mutant astrocytoma where mismatch is often present. While cortical involvement (Cortical involvement) can be seen in both groups, the overall pattern favors wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the predicted IDH\u2011wildtype status and the absence of T2\u2011FLAIR mismatch, there is no imaging evidence supporting 1p/19q codeletion, which occurs almost exclusively with IDH\u2011mutant tumors. Therefore the tumor is predicted to be non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement (Enhancement Quality), presence of necrosis (Proportion Necrosis), high edema proportion (Proportion of Oedema), multifocal lesions (Multifocal or Multicentric) and patient age >60 are imaging hallmarks of WHO grade 4 glioblastoma. Although the necrotic fraction is modest, the combination of these high\u2011grade features outweighs the lower necrosis, leading to a grade 4 prediction.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Predictions rely solely on conventional MRI; lack of diffusion, perfusion, and spectroscopy limits certainty. Molecular status is inferred from imaging patterns; definitive classification requires tissue testing."
+}

@@ -1,0 +1,55 @@
+{
+  "subject_id": "BraTS2021_00241",
+  "idh": {
+    "reasoning": "The patient is 64 years old, an age range where IDH-wildtype diffuse gliomas are common. The tumor is multifocal, has mild contrast enhancement, a high proportion of edema (85.4%), and lacks a T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present = 0.0), all features that favor IDH\u2011wildtype over IDH\u2011mutant. Cortical involvement and a high cortical proportion are more typical of IDH\u2011mutant tumors and therefore constitute contradictory evidence, but they are outweighed by the strong age and imaging pattern supporting wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "Number of lesions"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of IDH\u2011wildtype, the tumor is expected to be 1p/19q non\u2011codeleted. The absence of a T2\u2011FLAIR mismatch, the patient\u2019s older age, multifocal disease, and the presence of contrast enhancement all align with a non\u2011codeleted status. Cortical involvement could suggest a codeleted oligodendroglioma, but without IDH\u2011mutation this is unlikely, making the contradictory evidence minimal.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "Multifocal or Multicentric",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Contrast enhancement is present (Enhancement Quality = Mild, Proportion Enhancing = 14.24%) and the tumor shows a measurable enhancing tumor volume (ET Volume = 6.204\u202fmL). In the WHO CNS5 framework, any enhancing IDH\u2011wildtype diffuse astrocytic tumor is classified as grade\u202f4, even in the absence of necrosis. The low necrosis proportion (0.36%) and lack of a T2\u2011FLAIR mismatch argue against a lower grade, but the presence of enhancement outweighs these, supporting grade\u202f4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "CET Crosses midline",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks advanced sequences (DWI, perfusion, spectroscopy) that could further refine molecular inference. Mild enhancement without necrosis introduces some uncertainty, but the combination of older age, multifocality, and absent T2\u2011FLAIR mismatch makes IDH\u2011wildtype grade\u202f4 glioblastoma the most likely diagnosis."
+}

@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_00636",
+  "idh": {
+    "reasoning": "The patient is 42 years old, an age range where IDH\u2011mutant gliomas are common. The MRI shows a T2\u2011FLAIR mismatch (field \"T2-FLAIR Mismatch Present\" = 1.0), a hallmark of IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. Cortical involvement (field \"Cortical involvement\" = \"Present\") and absence of deep white\u2011matter invasion (field \"Deep WM invasion\" = \"Absent\") further support a lower\u2011grade IDH\u2011mutant phenotype. The modest necrosis fraction (field \"Proportion Necrosis\" = 5.42) and solitary lesion (field \"Multifocal or Multicentric\" = \"Solitary\") argue against a wild\u2011type, highly aggressive tumor. While the enhancement is marked (field \"Enhancement Quality\" = \"Marked\"), this alone does not outweigh the strong IDH\u2011mutant imaging signatures. Therefore the balance favors IDH\u2011mutant.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch positivity (field \"T2-FLAIR Mismatch Present\" = 1.0) is typical for IDH\u2011mutant astrocytomas and uncommon in 1p/19q\u2011codeleted oligodendrogliomas. The lesion shows marked enhancement (field \"Enhancement Quality\" = \"Marked\") and a necrosis fraction of 5.42% (field \"Proportion Necrosis\"), patterns more frequent in astrocytomas than in oligodendrogliomas, which usually enhance less and lack necrosis. Absence of calcification data limits certainty, but the imaging profile collectively supports a non\u2011codeleted status. Hence the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits marked contrast enhancement (field \"Enhancement Quality\" = \"Marked\") and a substantial enhancing proportion (field \"Proportion Enhancing\" = 30.49), features that are uncommon in WHO grade 2 diffuse astrocytomas but typical of WHO grade 3 anaplastic astrocytoma. Necrosis is present but limited (field \"Proportion Necrosis\" = 5.42), arguing against grade 4, which usually shows extensive necrosis. The lesion size (total volume 31.924\u202fmL) and involvement of eloquent cortex (field \"Eloquent Brain Involvement\" = \"Speech motor and Motor\") further support a grade 3 classification rather than grade 2. Therefore the most likely grade is 3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, WHO grade 3. Lack of advanced sequences (DWI, perfusion, spectroscopy) limits definitive grading; the marked enhancement raises a slight possibility of higher grade, but overall confidence remains moderate to high."
+}

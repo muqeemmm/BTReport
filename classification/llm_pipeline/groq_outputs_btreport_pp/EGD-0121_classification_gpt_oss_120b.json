@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0121",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (field \"T2-FLAIR Mismatch Present\" = 1.0) is a validated imaging surrogate for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted diffuse glioma. This strongly supports an IDH\u2011mutant status. However, a high proportion of necrosis (field \"Proportion Necrosis\" = 42.58%) is more typical of IDH\u2011wildtype glioblastoma, which argues against mutation. Balancing these, the mismatch outweighs necrosis, leading to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch also indicates lack of 1p/19q codeletion, as codeleted oligodendrogliomas typically do not show this pattern. Thus field \"T2-FLAIR Mismatch Present\" supports non\u2011codeleted status. The high necrosis proportion could be seen in high\u2011grade tumors regardless of codeletion, but does not specifically support codeletion. Therefore prediction non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Necrosis proportion 42.58% (field \"Proportion Necrosis\") and presence of any contrast enhancement (field \"Enhancement Quality\" = Mild) are imaging hallmarks of WHO grade 4 glioma. The tumor volume is large (field \"Total tumor volume (mL)\" = 88.05) and the rim\u2011core adjacency fraction is high (field \"rim_core_adjacency\"), further supporting high grade. Conversely, the T2\u2011FLAIR mismatch (field \"T2-FLAIR Mismatch Present\") and relatively low enhancing proportion (field \"Proportion Enhancing\" = 8.77%) are more typical of lower\u2011grade (grade 2\u20113) IDH\u2011mutant astrocytomas. We weigh the necrosis and size as stronger indicators of grade 4, thus predict grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "rim_core_adjacency",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging shows classic T2\u2011FLAIR mismatch suggesting IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, yet the high necrosis and sizable tumor favor WHO grade\u202f4. Absence of advanced sequences (DWI, perfusion, spectroscopy) limits certainty; confidence moderate for grade."
+}

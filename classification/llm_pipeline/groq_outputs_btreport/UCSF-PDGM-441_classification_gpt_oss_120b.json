@@ -1,0 +1,51 @@
+{
+  "subject_id": "UCSF-PDGM-441",
+  "idh": {
+    "reasoning": "The patient is young (age_years 26) and the lesion shows only mild contrast enhancement (Enhancement Quality \"Mild\") with a very low proportion of enhancing tissue (Proportion Enhancing 0.01) and a thin enhancing margin (<3mm). Cortical involvement is present (Cortical involvement \"Present\") while deep white matter invasion is absent (Deep WM invasion \"Absent\") and there is no ependymal invasion (Ependymal (ventricular) Invasion \"Absent\"). These features are typical of IDH\u2011mutant diffuse gliomas, which often occur in younger adults, have limited enhancement and cortical location. No strong evidence of the aggressive imaging pattern seen in IDH\u2011wildtype glioblastoma (e.g., strong enhancement, necrosis).",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor is located in the frontal cortex (Region Proportions includes \"frontal_lobe\" and Tumor Location \"frontal_lobe-cortex region\") and shows mild enhancement, both compatible with oligodendroglioma, which is usually 1p/19q\u2011codeleted. However, the absence of calcification data (not provided) and the presence of any enhancement (even mild) are not definitive for codeletion, and IDH\u2011mutant astrocytomas can share these imaging traits. Given the lack of specific supporting evidence for codeletion, the balance leans slightly toward non\u2011codeleted status, but uncertainty remains.",
+    "supporting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The lesion has a large overall volume (Total tumor volume 70.143\u202fmL) dominated by edema (Proportion of Oedema 99.99%) and a very small enhancing component (ET Volume 0.005\u202fmL, Proportion Enhancing 0.01). While the enhancement is mild and the margin is thin (<3mm), the extensive edema and sizable tumor volume suggest a higher grade than a classic WHO grade\u202f2 lesion, which typically has minimal edema. The presence of mild enhancement raises the possibility of WHO grade\u202f3 rather than grade\u202f2, but the lack of necrosis and only mild enhancement argue against grade\u202f4. Therefore, WHO grade\u202f3 is the most plausible.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, non-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction of IDH\u2011mutant status is well supported by age and imaging features. 1p/19q codeletion status remains uncertain due to lack of calcification or molecular imaging data; the estimate leans toward non\u2011codeleted but confidence is modest. WHO grade 3 is favored given the large tumor volume and extensive edema despite only mild enhancement. Additional advanced imaging or histopathology would be needed to resolve the 1p/19q status and confirm grade."
+}

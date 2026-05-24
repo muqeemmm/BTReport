@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0123",
+  "idh": {
+    "reasoning": "The patient is 45 years old, which is typical for IDH\u2011mutant diffuse gliomas. The tumor shows no contrast enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) and is cortically based (Cortical involvement: Present) with no deep white\u2011matter invasion (Deep WM invasion: Absent). Absence of a T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) also favors an IDH\u2011mutant astrocytoma over an IDH\u2011wildtype glioblastoma. Contradicting evidence includes a relatively high necrosis proportion (Proportion Necrosis: 30.61) and edema crossing the midline (Edema crosses midline: True), which can be seen in higher\u2011grade or IDH\u2011wildtype tumors. Balancing these, the evidence leans toward IDH\u2011mutant with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Edema crosses midline"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "A T2\u2011FLAIR mismatch is absent (T2-FLAIR Mismatch Present: 0.0), which is a hallmark of 1p/19q\u2011codeleted oligodendrogliomas; its absence therefore supports a non\u2011codeleted status. Additionally, the presence of notable necrosis (Proportion Necrosis: 30.61) is more typical of astrocytic tumors, which are usually non\u2011codeleted. No imaging features strongly suggest codeletion. Hence the prediction is non\u2011codeleted with high confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The lesion is non\u2011enhancing (Enhancement Quality: None, Proportion Enhancing: 0.0) and solitary (Multifocal or Multicentric: Solitary), features that favor a lower WHO grade (grade 2). The cortical location and lack of necrotic enhancing core also support grade 2. However, the relatively high necrosis proportion (Proportion Necrosis: 30.61) and edema crossing the midline (Edema crosses midline: True) raise the possibility of a higher grade (grade 3). Considering the balance, grade 2 is the more likely assignment, but with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Edema crosses midline"
+    ],
+    "prediction": 2,
+    "confidence": 0.73
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "While imaging strongly suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, the notable necrosis fraction and midline\u2011crossing edema introduce some uncertainty regarding the exact WHO grade. Advanced imaging (e.g., perfusion, spectroscopy) would help refine grade assessment."
+}

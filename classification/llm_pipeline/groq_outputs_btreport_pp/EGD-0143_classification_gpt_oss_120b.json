@@ -1,0 +1,45 @@
+{
+  "subject_id": "EGD-0143",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present = 1.0) is a strong imaging surrogate for IDH\u2011mutant astrocytoma, especially in a young adult (age_years = 21). Mild enhancement (Enhancement Quality = Mild) and a very small enhancing tumor volume (ET Volume (mL) = 1.378) also favour IDH\u2011mutant status. The main opposing evidence is the relatively high necrotic component (Proportion Necrosis = 32.19) which is more typical of IDH\u2011wildtype glioblastoma, but necrosis can be seen in high\u2011grade IDH\u2011mutant tumors as well. Overall the supportive features outweigh the contradictory ones, leading to an IDH\u2011mutant prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is characteristic of IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma and is not seen in oligodendroglioma, which is the typical codeleted entity. No imaging features in the dataset (e.g., calcifications, classic oligodendroglial cortical\u2011subcortical pattern) suggest a codeleted tumor. Therefore the evidence points to a non\u2011codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows extensive necrosis (Proportion Necrosis = 32.19) and a large edema component (Proportion of Oedema = 66.8), both markers of high\u2011grade disease. Additional aggressive features include ependymal invasion (Ependymal (ventricular) Invasion = Present), deep white\u2011matter infiltration (Deep WM invasion = Present), and crossing of the midline (CET Crosses midline = True). Conversely, the enhancing portion is small (ET Volume (mL) = 1.378) and only mildly enhancing, which are more typical of lower\u2011grade lesions. We weigh the necrosis and invasive behavior more heavily, concluding a WHO grade 4 tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma with high\u2011grade features (necrosis, extensive edema, midline crossing). Lack of advanced sequences (perfusion, spectroscopy) limits certainty, especially regarding the exact grade; the modest enhancement could argue for grade 3, but necrosis fulfills WHO criteria for grade 4. Molecular confirmation is recommended."
+}

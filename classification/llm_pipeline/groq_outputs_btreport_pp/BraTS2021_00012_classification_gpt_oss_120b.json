@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_00012",
+  "idh": {
+    "reasoning": "The absence of T2\u2011FLAIR mismatch (\"T2-FLAIR Mismatch Present\":0.0) and the high necrotic component (\"Proportion Necrosis\":65.11) are classic for IDH\u2011wildtype glioblastoma. Large tumor burden (\"Total tumor volume (mL)\":263.755), midline shift (\"midline_shift_present\":\"Yes\"), ependymal invasion (\"Ependymal (ventricular) Invasion\":\"Present\") and bilateral involvement further support a wildtype phenotype. Contrastingly, the mild enhancement (\"Enhancement Quality\":\"Mild\"), low enhancing proportion (\"Proportion Enhancing\":0.08) and relatively young age (\"age_years\":46) are more typical of IDH\u2011mutant tumors, creating some uncertainty.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "age_years",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the IDH\u2011wildtype prediction and the lack of imaging hallmarks of oligodendroglioma (no calcifications, no classic homogeneous T2 signal), the data favor a non\u2011codeleted 1p/19q status. The high necrotic fraction and aggressive growth pattern are inconsistent with typical 1p/19q\u2011codeleted tumors, which usually show less necrosis and more uniform T2 signal. No specific feature suggests codeletion, so the best estimate is non\u2011codeleted.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows extensive necrosis (\"Proportion Necrosis\":65.11), significant mass effect with midline shift (\"midline_shift_present\":\"Yes\"), edema crossing the midline (\"Edema crosses midline\":\"True\"), ependymal invasion (\"Ependymal (ventricular) Invasion\":\"Present\"), and a very large volume (\"Total tumor volume (mL)\":263.755), all of which are strong indicators of WHO grade 4. However, the enhancement is mild (\"Enhancement Quality\":\"Mild\"), the enhancing margin is thin (\"Thickness of enhancing margin\":\"<3mm\"), and the proportion of enhancing tumor is low (\"Proportion Enhancing\":0.08), which are features more typical of lower\u2011grade lesions, tempering confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks advanced sequences (DWI, perfusion, spectroscopy) that could further refine molecular inference. Mild contrast enhancement and low enhancing fraction introduce some uncertainty, but the dominant necrotic component, extensive edema, and mass effect strongly support an IDH\u2011wildtype, non\u2011codeleted, WHO grade 4 glioblastoma."
+}

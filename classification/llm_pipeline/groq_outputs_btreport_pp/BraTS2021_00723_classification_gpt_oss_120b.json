@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00723",
+  "idh": {
+    "reasoning": "The tumor shows marked contrast enhancement, a notable necrotic component (11.64%), and extensive edema (61.42%), all imaging hallmarks of IDH\u2011wildtype glioblastoma. Additionally, the T2\u2011FLAIR mismatch is absent (value 0.0) and the mismatch score is low (0.45), which argues against an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma where a positive mismatch is typical. While cortical involvement and temporal location can be seen in IDH\u2011mutant tumors, the dominant imaging pattern favors wildtype status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of IDH\u2011wildtype, the tumor must be 1p/19q non\u2011codeleted, as 1p/19q codeletion only occurs in the context of IDH\u2011mutant gliomas. The imaging does not show features typical of oligodendroglioma (e.g., calcifications, frontal lobe predilection, homogeneous T2 signal), reinforcing a non\u2011codeleted status.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, measurable necrosis, and a high edema fraction are characteristic of WHO grade\u202f4 glioblastoma. The tumor volume is large (\u224879\u202fmL) and the enhancing margin exceeds 3\u202fmm, both supporting a high\u2011grade lesion. Although the proportion of enhancing tumor is modest (\u224827%), the presence of necrosis and aggressive imaging features outweigh this, leading to a grade\u202f4 assignment.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.88
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging strongly supports an IDH\u2011wildtype, 1p/19q non\u2011codeleted glioblastoma (grade\u202f4). Absence of advanced sequences (DWI, perfusion, spectroscopy) limits confirmation of cellularity and metabolic profile, but the available features provide high confidence in this classification."
+}

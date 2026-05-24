@@ -1,0 +1,45 @@
+{
+  "subject_id": "EGD-0518",
+  "idh": {
+    "reasoning": "The patient is 58 years old, an age that favors IDH-wildtype glioma. The T2\u2011FLAIR mismatch is absent (T2-FLAIR Mismatch Present = 0.0), a feature strongly associated with IDH\u2011mutant tumors when present, so its absence supports wildtype. The lesion is non\u2011enhancing, which is more typical of IDH\u2011mutant low\u2011grade gliomas, providing a contradictory clue toward mutant status. Overall, the age and lack of T2\u2011FLAIR mismatch outweigh the non\u2011enhancing nature, leading to a prediction of IDH\u2011wildtype.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Codeletion is characteristic of oligodendrogliomas, which are invariably IDH\u2011mutant. Since the IDH status is predicted to be wildtype, codeletion is unlikely. Additionally, the lesion shows no contrast enhancement and does not cross the midline, features that do not specifically support codeletion. The presence of cortical involvement could be seen in oligodendroglioma, but without IDH mutation this is contradictory. Thus the evidence points toward non\u2011codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The tumor is non\u2011enhancing with a very low enhancing proportion (0.0) and a small necrotic component (Proportion Necrosis = 0.15), suggesting a lower grade than glioblastoma. However, the edema occupies >99% of the total volume and there is a measurable necrotic fraction, which are more typical of a higher\u2011grade lesion (grade\u202f3). The lack of marked enhancement argues against grade\u202f4, while the presence of necrosis and extensive edema argue against grade\u202f2. Balancing these factors leads to a prediction of WHO grade\u202f3.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-wildtype, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of advanced imaging (perfusion, spectroscopy) and molecular testing limits certainty. Non\u2011enhancing nature creates some ambiguity for IDH status and grade. Recommend histopathologic and molecular confirmation, especially to assess EGFR amplification, +7/\u201110, or TERT promoter mutation which could reclassify the tumor as glioblastoma."
+}

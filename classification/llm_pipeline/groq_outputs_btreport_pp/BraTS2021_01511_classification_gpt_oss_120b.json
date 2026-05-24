@@ -1,0 +1,55 @@
+{
+  "subject_id": "BraTS2021_01511",
+  "idh": {
+    "reasoning": "The tumor shows a robust T2-FLAIR mismatch (present with a high score), which is a validated imaging surrogate for IDH mutation in diffuse gliomas, especially in patients under 40 years old. The lesion is non\u2011enhancing, another feature favoring IDH\u2011mutant astrocytoma. Contrastingly, the high necrosis proportion and marked midline shift are more typical of IDH\u2011wildtype glioblastoma, creating some conflict. Overall, the strong mismatch signal and young age outweigh the necrosis evidence, leading to an IDH\u2011mutant prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Midline Shift Present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is associated with IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma rather than oligodendroglioma. The lesion is non\u2011enhancing and lacks features typical of oligodendroglioma such as calcifications (not reported) and tends to be more infiltrative. High necrosis and multifocality are atypical for 1p/19q\u2011codeleted tumors, further supporting a non\u2011codeleted status. Therefore the best estimate is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Midline Shift Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.71
+  },
+  "who_grade": {
+    "reasoning": "Necrosis exceeds 50% of the tumor, which fulfills the histologic criterion for WHO grade\u202f4 irrespective of enhancement. The tumor is large (\u2248180\u202fmL), causes midline shift, invades ependymal surfaces and deep white matter, and is multifocal\u2014features indicative of aggressive behavior. Although there is no contrast enhancement, necrosis alone is sufficient for a grade\u202f4 designation in IDH\u2011mutant astrocytoma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Midline Shift Present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.81
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on strong T2\u2011FLAIR mismatch and necrosis data, but absence of diffusion, perfusion, and spectroscopy limits certainty. Necrosis without enhancement is unusual but permissible for grade\u202f4 IDH\u2011mutant astrocytoma. Advanced imaging could further clarify the nature of the necrotic component."
+}

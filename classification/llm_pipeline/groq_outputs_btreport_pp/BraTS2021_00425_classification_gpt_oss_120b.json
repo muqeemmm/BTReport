@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_00425",
+  "idh": {
+    "reasoning": "The patient is 69 years old, shows mild contrast enhancement, high edema proportion (92.28%), and lacks T2\u2011FLAIR mismatch (0). In WHO CNS5, older age, presence of enhancement and extensive edema are typical of IDH\u2011wildtype glioblastoma, while T2\u2011FLAIR mismatch is a surrogate for IDH\u2011mutant astrocytoma. Although necrosis is absent and enhancement is only mild, the balance of supporting features outweighs the contradictory ones, leading to prediction of IDH\u2011wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "High edema, lack of T2\u2011FLAIR mismatch, older age, and mild enhancement are more typical of non\u2011codeleted astrocytoma. Oligodendroglioma (codeleted) often presents with lower edema and may show calcifications, which are not reported. Therefore non\u2011codeleted is favored.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.66
+  },
+  "who_grade": {
+    "reasoning": "Presence of contrast enhancement, high edema, and patient age favor a high\u2011grade lesion. Absence of necrosis and only mild enhancement temper confidence, but WHO CNS5 classifies IDH\u2011wildtype diffuse glioma with any enhancement as grade\u202f4 unless molecular hallmarks of lower grade are present, which are not available. Thus grade\u202f4 is most likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "age_years",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks diffusion, perfusion, and spectroscopy; absence of necrosis and only mild enhancement introduce uncertainty; the lesion could represent a lower\u2011grade IDH\u2011mutant astrocytoma, but current imaging favors IDH\u2011wildtype grade\u202f4."
+}

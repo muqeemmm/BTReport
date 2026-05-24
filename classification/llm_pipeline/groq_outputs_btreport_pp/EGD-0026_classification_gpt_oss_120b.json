@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0026",
+  "idh": {
+    "reasoning": "The presence of a T2-FLAIR mismatch (field \"T2-FLAIR Mismatch Present\" = 1.0, high score \"T2-FLAIR Mismatch Score\") is a strong imaging surrogate for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. However, several aggressive imaging features \u2013 marked enhancement (\"Enhancement Quality\"), multifocal disease (\"Multifocal or Multicentric\"), ependymal invasion (\"Ependymal (ventricular) Invasion\"), deep white\u2011matter invasion (\"Deep WM invasion\"), and a relatively high proportion of enhancing tumor (\"Proportion Enhancing\" 21.62%) \u2013 are more typical of IDH\u2011wildtype glioblastoma. Balancing these, the T2\u2011FLAIR mismatch outweighs the contradictory signs, leading to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.62
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the IDH\u2011mutant prediction and the T2\u2011FLAIR mismatch, the tumor is most consistent with an astrocytoma rather than an oligodendroglioma, which would require 1p/19q codeletion. No imaging features (e.g., calcifications, classic oligodendroglial morphology) support codeletion, and the aggressive features further argue against an oligodendroglioma phenotype. Therefore the best estimate is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.66
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, multifocality, deep white\u2011matter and ependymal invasion, and a high edema proportion (\"Proportion of Oedema\" 77.41%) point toward a higher WHO grade. Conversely, the very low necrosis fraction (\"Proportion Necrosis\" 0.97%) and the presence of a T2\u2011FLAIR mismatch, which is typical of lower\u2011grade IDH\u2011mutant astrocytomas, argue against grade\u202f4. Integrating these opposing cues suggests an intermediate grade, i.e., WHO grade\u202f3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Proportion Enhancing",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, but the marked enhancement and multifocal pattern introduce uncertainty regarding the exact WHO grade. Lack of diffusion, perfusion, and spectroscopy limits definitive grading; histopathology and molecular testing are recommended for confirmation."
+}

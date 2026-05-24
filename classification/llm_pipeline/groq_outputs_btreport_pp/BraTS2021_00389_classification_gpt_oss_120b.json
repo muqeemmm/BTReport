@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_00389",
+  "idh": {
+    "reasoning": "The lesion shows marked enhancement (\"Enhancement Quality\":\"Marked\"), a notable necrotic component (\"Proportion Necrosis\":12.44), and lacks a T2\u2011FLAIR mismatch (\"T2-FLAIR Mismatch Present\":0.0). These imaging hallmarks are typical of IDH\u2011wildtype diffuse gliomas and argue against IDH\u2011mutant tumors, which often display a T2\u2011FLAIR mismatch and less necrosis. The patient\u2019s older age (\"age_years\":68) further supports a wildtype phenotype. While the overall enhancing proportion is moderate (\"Proportion Enhancing\":21.77) and the total tumor volume is modest (\"Total tumor volume (mL)\":16.585), the presence of necrosis and strong enhancement outweigh these points. Hence the prediction is IDH\u2011wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging profile lacks features commonly associated with 1p/19q\u2011codeleted oligodendrogliomas, such as calcifications or a pronounced T2\u2011FLAIR mismatch. The presence of marked enhancement (\"Enhancement Quality\":\"Marked\") and necrosis (\"Proportion Necrosis\":12.44) aligns more with IDH\u2011wildtype, non\u2011codeleted gliomas. Although the tumor is located in cortical regions (\"Cortical involvement\":\"Present\"), which can be seen in oligodendrogliomas, this alone is insufficient to infer codeletion. Therefore the best estimate is non\u2011codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "Necrosis is present (\"Proportion Necrosis\":12.44) and the enhancement is marked (\"Enhancement Quality\":\"Marked\"), both criteria that define WHO grade 4 in IDH\u2011wildtype diffuse glioma. The absence of a T2\u2011FLAIR mismatch further supports a higher\u2011grade lesion. While the tumor volume is relatively small (\"Total tumor volume (mL)\":16.585) and the enhancing fraction is modest (\"Proportion Enhancing\":21.77), necrosis and strong enhancement outweigh these factors, leading to a grade 4 assignment.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty, but the marked enhancement, necrosis, and absent T2\u2011FLAIR mismatch strongly favor an IDH\u2011wildtype, non\u2011codeleted glioblastoma (grade 4)."
+}

@@ -1,0 +1,61 @@
+{
+  "subject_id": "UCSF-PDGM-501",
+  "idh": {
+    "reasoning": "The patient is 26 years old, which strongly favors an IDH\u2011mutant glioma as these occur in younger adults. The tumor is located in the frontal lobe, shows only mild contrast enhancement (Enhancement Quality = \"Mild\", Proportion Enhancing = 0.17) and has no necrosis (Proportion Necrosis = 0.0). It is solitary (Multifocal or Multicentric = \"Solitary\") and does not cross the midline (CET Crosses midline = \"False\"). These imaging characteristics are typical of IDH\u2011mutant lower\u2011grade gliomas. Opposing evidence includes the presence of midline shift, ependymal invasion and deep white\u2011matter infiltration, which are more aggressive features and could suggest IDH\u2011wildtype disease, but they are not definitive. Balancing the strong age and imaging pattern against the limited aggressive signs leads to a prediction of IDH\u2011mutant with high confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Multifocal or Multicentric",
+      "Text Report"
+    ],
+    "contradicting_features": [
+      "Midline shift present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Features such as deep white\u2011matter invasion and ependymal invasion are more characteristic of astrocytic tumors, which are typically 1p/19q non\u2011codeleted. Although the lesion is frontal and cortical, which can be seen in oligodendroglioma, the lack of calcification data and the presence of aggressive infiltration patterns tip the balance toward a non\u2011codeleted status. The evidence for codeletion (frontal location, cortical involvement) is weaker than the evidence against it, leading to a prediction of non\u2011codeleted with moderate confidence.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Age"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows only mild enhancement, no necrosis, and a very low enhancing proportion, all favoring a lower WHO grade (2). The lesion is small (\u22481\u202fcm in each dimension) and solitary, supporting grade\u202f2. However, there is midline shift, edema crossing the midline, ependymal invasion, and involvement of eloquent cortex, which are features more typical of higher\u2011grade (3) disease. The balance of evidence leans slightly toward grade\u202f2, but the aggressive signs prevent a high certainty, resulting in a moderate confidence prediction of grade\u202f2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Multifocal or Multicentric",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "contradicting_features": [
+      "Midline shift present",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks advanced sequences (DWI, perfusion, spectroscopy) that could better differentiate grade and 1p/19q status. The presence of midline shift and ependymal invasion introduces some uncertainty about the exact WHO grade; histopathology and molecular testing remain essential for definitive classification."
+}

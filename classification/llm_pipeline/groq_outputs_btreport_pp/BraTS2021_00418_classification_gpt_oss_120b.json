@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_00418",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (T2\u2011FLAIR Mismatch Present = 1.0, score 0.76) is highly specific for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted diffuse glioma. The tumor shows only mild contrast enhancement (Enhancement Quality = Mild, Proportion Enhancing = 14.9\u202f%) and low necrosis (Proportion Necrosis = 2.68\u202f%), which are typical of lower\u2011grade, IDH\u2011mutant lesions. Although the patient is elderly (Age_years = 78) and there is a midline shift and ependymal invasion\u2014features that can be seen in higher\u2011grade, IDH\u2011wildtype tumors\u2014these findings are outweighed by the strong mismatch sign. Therefore the balance of evidence favors an IDH\u2011mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Age_years",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.72
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch points to astrocytoma rather than oligodendroglioma, and the lesion shows deep white\u2011matter and ependymal invasion, which are uncommon in 1p/19q\u2011codeleted tumors. No imaging evidence of calcification or homogeneous cortical\u2011only growth is present. Thus the data support a non\u2011codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.78
+  },
+  "who_grade": {
+    "reasoning": "The tumor has mild contrast enhancement (14.9\u202f% of volume) and low necrosis (2.68\u202f%), which are more typical of grade\u202f2\u20133 lesions. However, there is a measurable midline shift, eloquent\u2011brain involvement, and a sizable edema component (82\u202f% of total volume) indicating a more aggressive behavior than a pure grade\u202f2 tumor. The combination of these features aligns best with WHO grade\u202f3 (anaplastic astrocytoma). Grade\u202f4 would be expected to show strong, heterogeneous enhancement and extensive necrosis, which are absent.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Eloquent Brain Involvement",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 3,
+    "confidence": 0.66
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The case shows classic T2\u2011FLAIR mismatch supporting IDH\u2011mutant astrocytoma, but the patient\u2019s age and presence of midline shift introduce some uncertainty. Lack of advanced imaging (perfusion, spectroscopy) limits confidence in grade assessment; the best estimate is WHO grade\u202f3 with moderate confidence."
+}

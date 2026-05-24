@@ -33,7 +33,7 @@ from pathlib import Path
 import openpyxl
 from colorama import Fore, Style, init as colorama_init
 from dotenv import dotenv_values
-from groq import BadRequestError, Groq, RateLimitError
+from groq import APIStatusError, BadRequestError, Groq, RateLimitError
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
 from tqdm import tqdm
 
@@ -445,23 +445,29 @@ if __name__ == "__main__":
             subject_id=api_subject_id,
             metadata_json=json.dumps(metadata, indent=2, default=str),
         )
+        user_prompt_compact = USER_PROMPT_TEMPLATE.format(
+            subject_id=api_subject_id,
+            metadata_json=json.dumps(metadata, default=str),
+        )
 
         # Two-level retry:
-        #   outer loop — rotate API key on RateLimitError
+        #   outer loop — rotate API key on RateLimitError / too-large (413)
         #   inner loop — retry same key on json_validate_failed (BadRequestError)
         MAX_JSON_RETRIES = 3
         response = None
         skip_subject = False
+        use_compact = False
         t0 = time.perf_counter()
 
         for _ in range(len(clients)):
+            current_prompt = user_prompt_compact if use_compact else user_prompt
             for json_try in range(1, MAX_JSON_RETRIES + 1):
                 try:
                     response = clients[key_idx].chat.completions.create(
                         model=MODEL_ID,
                         messages=[
                             {"role": "system", "content": SYSTEM_PROMPT},
-                            {"role": "user",   "content": user_prompt},
+                            {"role": "user",   "content": current_prompt},
                         ],
                         temperature=0.0,
                         seed=42,
@@ -496,6 +502,20 @@ if __name__ == "__main__":
                     )
                     time.sleep(1)
                     # continue inner loop for next json_try
+                except APIStatusError as e:
+                    if e.status_code != 413:
+                        raise
+                    next_idx = (key_idx + 1) % len(clients)
+                    tqdm.write(
+                        f"  {M}LIMIT{Style.RESET_ALL}  key {key_idx + 1}/{len(clients)} "
+                        f"request too large (413) → compact JSON + switching to key "
+                        f"{next_idx + 1}  {D}({e}){Style.RESET_ALL}"
+                    )
+                    key_idx = next_idx
+                    use_compact = True
+                    current_prompt = user_prompt_compact
+                    time.sleep(1)
+                    break  # rotate key → exit inner loop, continue outer
             else:
                 # Inner for-else: exhausted all JSON retries without a break
                 tqdm.write(

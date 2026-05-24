@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_00840",
+  "idh": {
+    "reasoning": "The patient is young (36 years) and the tumor shows only mild contrast enhancement and a low proportion of necrosis (8.61%) and enhancing tissue (1.99%), which are typical of IDH\u2011mutant diffuse gliomas and argue against the aggressive, strongly enhancing, necrotic pattern of IDH\u2011wildtype glioblastoma. However, the T2\u2011FLAIR mismatch is absent (value 0.0, score 0.55), which is a classic imaging marker for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma and its absence weakens the IDH\u2011mutant inference. Balancing the supportive young age and low enhancement against the missing mismatch, the evidence favors IDH\u2011mutant but with some uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The lack of a T2\u2011FLAIR mismatch (present = 0.0) supports a non\u2011codeleted status, as the mismatch is more frequently seen in 1p/19q\u2011non\u2011codeleted astrocytomas. Deep white\u2011matter and ependymal invasion are also more characteristic of astrocytic tumors than oligodendroglial ones, further favoring a non\u2011codeleted profile. Conversely, the tumor\u2019s frontal\u2011lobe cortical location and high cortical involvement are features sometimes associated with oligodendroglioma, providing mild counter\u2011evidence for codeletion. Overall, the imaging favors 1p/19q non\u2011codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "Mild contrast enhancement, low necrosis (8.61%) and a low proportion of enhancing tissue (1.99%) are more compatible with a WHO grade 3 astrocytoma than with grade 4 glioblastoma, which typically shows strong, heterogeneous enhancement and extensive necrosis. The enhancing component does not cross the midline (CET Crosses midline = False), another feature against grade 4. The large edema proportion (89.4%) and tumor size are notable but not specific for grade 4. Absence of T2\u2011FLAIR mismatch and the overall imaging pattern therefore point toward grade 3, though some uncertainty remains because advanced perfusion or diffusion data are unavailable.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion of Oedema"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, non-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, likely WHO grade 3. Confidence is limited by the absence of advanced sequences (DWI, perfusion, spectroscopy) and the lack of a T2\u2011FLAIR mismatch, which introduces some uncertainty in the molecular inference."
+}

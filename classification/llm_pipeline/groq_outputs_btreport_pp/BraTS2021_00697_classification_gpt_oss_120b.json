@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_00697",
+  "idh": {
+    "reasoning": "The presence of a T2-FLAIR mismatch (T2-FLAIR Mismatch Present = 1.0, high mismatch score 0.8) is a strong imaging surrogate for IDH\u2011mutant diffuse glioma. While the patient\u2019s advanced age (Age_years = 83) and marked enhancement with necrosis (Enhancement Quality = Marked, Proportion Necrosis = 19.49) are more typical of IDH\u2011wildtype glioblastoma, the mismatch finding outweighs these opposing clues. Therefore the balance of evidence favors an IDH\u2011mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Marked enhancement (Enhancement Quality = Marked) and substantial necrosis (Proportion Necrosis = 19.49) are more characteristic of astrocytic tumors, which are typically 1p/19q non\u2011codeleted. The lesion\u2019s location in the frontal cortex and insula does not specifically indicate codeletion, and no imaging evidence of calcification (not provided) is present. Thus the preponderance of imaging features supports a non\u2011codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows marked contrast enhancement, a necrotic component (Proportion Necrosis = 19.49), edema crossing the midline (Edema crosses midline = True), and a significant midline shift (Midline shift present = Yes). These are radiologic hallmarks of high\u2011grade (grade\u202f4) glioma. Although T2\u2011FLAIR mismatch can be seen in lower\u2011grade IDH\u2011mutant tumors, the aggressive imaging features dominate the assessment, leading to a grade\u202f4 prediction.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "Midline shift present",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma with high\u2011grade features. Molecular confirmation (e.g., IDH sequencing, 1p/19q FISH) is required for definitive classification, especially given the patient\u2019s advanced age which slightly lowers the pre\u2011test probability of IDH mutation."
+}

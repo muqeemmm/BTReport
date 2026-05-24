@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_01527",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (field T2-FLAIR Mismatch Present = 1.0, high mismatch score) is a validated imaging surrogate for IDH\u2011mutant astrocytoma. The patient is young (27\u202fy) and the tumor shows only mild contrast enhancement, both typical of IDH\u2011mutant lesions. Conversely, the very high necrotic proportion (71.86\u202f%) is more typical of IDH\u2011wildtype GBM, creating some uncertainty.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.66
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch also indicates non\u2011codeleted status, as oligodendrogliomas (codeleted) usually lack this pattern. The tumor is located in the temporal cortex rather than the typical frontal location of oligodendroglioma, supporting a non\u2011codeleted astrocytoma. No imaging evidence suggests 1p/19q codeletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "High necrotic proportion (71.86\u202f%) and large total tumor volume (86.166\u202fmL) are features of WHO grade\u202f4 glioma. However, the contrast enhancement is mild (Enhancement Quality = Mild, Proportion Enhancing = 0.14) and the T2\u2011FLAIR mismatch pattern is more typical of lower\u2011grade IDH\u2011mutant astrocytoma, which would argue for grade\u202f2\u20113. Balancing these, the necrosis is the most decisive feature for grade\u202f4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.62
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "High necrosis proportion drives a grade\u202f4 assignment despite mild enhancement and T2\u2011FLAIR mismatch suggesting lower grade. Lack of perfusion, spectroscopy, and calcification data limits certainty of 1p/19q status. Confidence moderate for all predictions."
+}

@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_01485",
+  "idh": {
+    "reasoning": "The patient is 57 years old, an age where IDH-wildtype gliomas are more common. The T2\u2011FLAIR mismatch is absent (value 0.0), a feature that strongly favors IDH\u2011wildtype over IDH\u2011mutant. The lesion shows mild contrast enhancement and a relatively high proportion of edema (\u224898\u202f% of total volume), both typical of IDH\u2011wildtype tumors. While cortical involvement is present, which can be seen in IDH\u2011mutant tumors, the weight of the age and imaging biomarkers points toward an IDH\u2011wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the predicted IDH\u2011wildtype status, a 1p/19q co\u2011deletion would be biologically inconsistent; co\u2011deletion occurs only with IDH\u2011mutant gliomas. Moreover, the imaging lacks the classic oligodendroglioma features such as marked calcification (not assessed) and a homogeneous non\u2011enhancing appearance. Therefore the lesion is predicted to be non\u2011codeleted.",
+    "supporting_features": [
+      "idh",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows mild contrast enhancement, a measurable necrotic component (34\u202f% of the enhancing portion), and extensive peritumoral edema, all imaging hallmarks of high\u2011grade glioma. Although the enhancing volume is small (\u22480.7\u202fmL) and the lesion does not cross the midline, the presence of any enhancement in an IDH\u2011wildtype tumor is generally considered sufficient to assign WHO grade\u202f4 in the absence of molecular data. Consequently, a grade\u202f4 assignment is favored, albeit with some uncertainty due to the modest enhancement.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Necrosis low",
+      "No crossing midline",
+      "Solitary",
+      "Deep WM invasion absent"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Limited to conventional sequences; lack of perfusion, diffusion, and spectroscopy prevents definitive molecular confirmation. Grade assignment relies on enhancement alone and carries moderate uncertainty."
+}

@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0622",
+  "idh": {
+    "reasoning": "The patient is 75 years old, and the tumor shows marked enhancement, a substantial necrotic component (25.22% necrosis), and absence of T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present = 0). These features are typical of IDH\u2011wildtype glioblastoma and argue against an IDH\u2011mutant, which often presents in younger patients, lacks necrosis, and frequently shows T2\u2011FLAIR mismatch. While the proportion of enhancing tumor is moderate (49.46%), the combination of age, necrosis, and lack of mismatch strongly supports a wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "IDH\u2011wildtype gliomas are by definition non\u2011codeleted for 1p/19q. The imaging shows marked enhancement and necrosis, patterns more typical of IDH\u2011wildtype astrocytic tumors rather than oligodendroglioma, which usually has less necrosis and a more homogeneous appearance. No imaging feature suggests oligodendroglial morphology or calcification, so the evidence supports a non\u2011codeleted status.",
+    "supporting_features": [
+      "idh.prediction",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits marked enhancement, a high necrotic fraction (25.22%), a sizable enhancing tumor volume (ET Volume = 34.796\u202fmL), and an overall large size (total volume 70.35\u202fmL). These radiologic hallmarks, together with the patient\u2019s age, are characteristic of WHO grade\u202f4 glioblastoma. While the proportion of enhancing tumor is below 100%, the presence of necrosis and thick enhancing margins (>3\u202fmm) outweighs features of lower grade lesions.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin",
+      "Age_years"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of advanced sequences (perfusion, spectroscopy, diffusion) limits definitive molecular confirmation. Nonetheless, the imaging pattern strongly favors IDH\u2011wildtype glioblastoma, non\u2011codeleted 1p/19q, WHO grade\u202f4."
+}

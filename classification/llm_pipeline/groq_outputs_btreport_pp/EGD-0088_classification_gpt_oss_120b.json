@@ -1,0 +1,51 @@
+{
+  "subject_id": "EGD-0088",
+  "idh": {
+    "reasoning": "The presence of a T2-FLAIR mismatch (value 1.0, high mismatch score) is a well\u2011established imaging surrogate for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. Mild enhancement, low necrosis and low proportion of enhancing tumor further support a lower\u2011grade IDH\u2011mutant lesion. The patient\u2019s older age (71\u202fy) and the very high edema proportion are more typical of IDH\u2011wildtype glioblastoma, providing some contradictory evidence. Balancing these, the mismatch evidence outweighs the age factor, leading to an IDH\u2011mutant prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch strongly indicates a non\u2011codeleted 1p/19q status, as this pattern is rarely seen in oligodendrogliomas which are 1p/19q\u2011codeleted. No imaging features in the dataset (e.g., calcifications, frontal predilection) suggest codeletion, and the cortical temporal location is more typical of astrocytoma. Thus the evidence points to a non\u2011codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "Mild contrast enhancement (8\u202f% of tumor) and a measurable enhancing margin (>3\u202fmm) are characteristic of WHO grade\u202f3 astrocytoma, whereas grade\u202f2 lesions are usually non\u2011enhancing. The low necrosis fraction and modest tumor core volume argue for a lower grade, creating some uncertainty. Overall, the enhancement pattern tips the balance toward grade\u202f3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Tumor Core Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging strongly suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, but the patient\u2019s advanced age and extensive edema introduce some uncertainty. Lack of advanced sequences (DWI, perfusion, spectroscopy) limits definitive molecular inference; consider molecular testing for confirmation."
+}
