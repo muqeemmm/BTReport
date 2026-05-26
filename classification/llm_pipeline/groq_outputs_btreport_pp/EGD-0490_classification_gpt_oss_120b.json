@@ -1,0 +1,59 @@
+{
+  "subject_id": "EGD-0490",
+  "idh": {
+    "reasoning": "The tumor lacks a T2\u2011FLAIR mismatch (\"T2-FLAIR Mismatch Present\" = 0.0), a hallmark of IDH\u2011mutant gliomas. It shows aggressive imaging features typical of IDH\u2011wildtype glioblastoma: strong proportion of enhancing tissue (\"Proportion Enhancing\" 0.85), necrosis (\"Proportion Necrosis\" 16.25%), crossing the midline (\"CET Crosses midline\" = True), multifocality (\"Multifocal or Multicentric\" = \"Multifocal\"), ependymal invasion (\"Ependymal (ventricular) Invasion\" = \"Present\"), deep white\u2011matter invasion, cortical involvement and extensive edema crossing the midline. The only mildly contradictory element is the modest \"Enhancement Quality\" (Mild), which is less typical for classic IDH\u2011wildtype GBM but does not outweigh the bulk of evidence. Hence the prediction is IDH\u2011wildtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion is strongly associated with IDH\u2011mutant, T2\u2011FLAIR mismatch positive oligodendrogliomas. The tumor is IDH\u2011wildtype (see above) and lacks a T2\u2011FLAIR mismatch, and it displays aggressive, astrocytic features (multifocality, necrosis, ependymal invasion). No imaging characteristic supports a codeleted phenotype, so the tumor is predicted non\u2011codeleted. No clear contradictory imaging feature is present.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "High\u2011grade imaging hallmarks are present: a large enhancing component (85% of tumor), necrosis (16%), midline crossing, ependymal invasion, deep white\u2011matter infiltration, multifocal disease, substantial tumor volume (238.8\u202fmL) and marked midline shift (\"Midline shift present\" = Yes, \"Level_max_shift\" = \"falx cerebri above\"). These favor WHO grade\u202f4. The mild enhancement quality and a relatively small enhancing core (ET volume low) slightly argue for a lower grade, but the preponderance of high\u2011grade signs leads to a grade\u202f4 assignment.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Midline shift present",
+      "Level_max_shift",
+      "Total tumor volume (mL)",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011wildtype, 1p/19q non\u2011codeleted glioblastoma (WHO grade\u202f4). The mild enhancement and lack of diffusion/perfusion data introduce some uncertainty, but the combination of necrosis, extensive edema, midline crossing, ependymal invasion and multifocality outweighs these limitations."
+}

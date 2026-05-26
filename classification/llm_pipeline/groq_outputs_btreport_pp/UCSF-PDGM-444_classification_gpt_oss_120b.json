@@ -1,0 +1,50 @@
+{
+  "subject_id": "UCSF-PDGM-444",
+  "idh": {
+    "reasoning": "The presence of a clear T2\u2011FLAIR mismatch (T2\u2011FLAIR Mismatch Present = 1.0, high mismatch score) is strongly associated with IDH\u2011mutant diffuse gliomas. The patient is young (age_years = 32) and the lesion is non\u2011enhancing (Enhancement Quality = None, Proportion Enhancing = 0.0), both typical of IDH\u2011mutant lower\u2011grade tumors. While there is midline shift and ependymal invasion, these do not outweigh the specific mismatch and age evidence. Therefore the balance favors an IDH\u2011mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is characteristic of IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytomas and is less common in oligodendrogliomas that are 1p/19q codeleted. The lesion is non\u2011enhancing and lacks features such as calcification (not assessed) that would suggest oligodendroglioma. Thus the evidence points toward a non\u2011codeleted status, though the absence of direct genetic imaging makes certainty moderate.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.78
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows no contrast enhancement (Enhancement Quality = None, Proportion Enhancing = 0.0) and no necrosis (Proportion Necrosis = 0.0), which are hallmarks of WHO grade 2 diffuse gliomas. Although the lesion is large with midline shift (midline_shift_present = Yes) and ependymal invasion, these features alone do not mandate a higher grade without enhancement or necrosis. Consequently, grade 2 is the most consistent assignment.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": 2,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q non-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "Based solely on conventional MRI metadata, the findings support an IDH\u2011mutant, 1p/19q non\u2011codeleted diffuse astrocytoma, WHO grade 2. Absence of advanced imaging (perfusion, spectroscopy) and the presence of significant mass effect introduce some uncertainty, but the non\u2011enhancing nature and T2\u2011FLAIR mismatch drive the current best estimate."
+}

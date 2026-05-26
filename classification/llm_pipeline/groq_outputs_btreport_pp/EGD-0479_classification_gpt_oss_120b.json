@@ -1,0 +1,40 @@
+{
+  "subject_id": "EGD-0479",
+  "idh": {
+    "reasoning": "The presence of a T2-FLAIR mismatch (field \"T2-FLAIR Mismatch Present\" = 1.0) is a strong imaging surrogate for IDH\u2011mutant astrocytoma. This supports an IDH\u2011mutant prediction. Opposing evidence includes the patient\u2019s advanced age (field \"age_years\" = 73) and marked contrast enhancement (field \"Enhancement Quality\" = \"Marked\"), which are more typical of IDH\u2011wildtype glioblastoma. The mismatch finding outweighs the age and enhancement cues, leading to an IDH\u2011mutant call.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2-FLAIR mismatch (field \"T2-FLAIR Mismatch Present\") is characteristic of IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma and argues against a codeleted oligodendroglioma. No imaging features in the provided data suggest codeletion, so the best inference is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement (field \"Enhancement Quality\" = \"Marked\"), presence of necrosis (field \"Proportion Necrosis\" = 3.1), high edema proportion (field \"Proportion of Oedema\" = 76.79) and a sizable tumor volume (field \"Total tumor volume (mL)\" = 50.984) are imaging hallmarks of high\u2011grade glioma. Necrosis fulfills the WHO\u2011CNS5 criterion for grade\u202f4. Absence of explicit microvascular proliferation data does not outweigh the necrosis evidence, so grade\u202f4 is assigned.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.68
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging profile strongly suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, but the patient\u2019s age and marked enhancement introduce some uncertainty. Molecular confirmation is recommended, especially to rule out an IDH\u2011wildtype glioblastoma in this older patient."
+}

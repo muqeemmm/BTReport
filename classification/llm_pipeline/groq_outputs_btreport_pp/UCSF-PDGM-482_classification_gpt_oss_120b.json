@@ -1,0 +1,56 @@
+{
+  "subject_id": "UCSF-PDGM-482",
+  "idh": {
+    "reasoning": "The tumor is non\u2011enhancing, occurs in a 45\u2011year\u2011old, shows cortical and deep white\u2011matter involvement, and lacks necrosis, which are typical of IDH\u2011mutant astrocytoma. However, the T2\u2011FLAIR mismatch is absent (value 0) and the lesion is large with marked edema and midline shift, features more common in IDH\u2011wildtype high\u2011grade glioma. Balancing these, the evidence leans toward IDH\u2011mutant but is not definitive.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Edema crosses midline"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.66
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Absence of T2\u2011FLAIR mismatch and lack of typical oligodendroglioma imaging features (e.g., calcifications) argue against 1p/19q codeletion. The tumor is non\u2011enhancing and diffuse, which can be seen in both astrocytoma and oligodendroglioma, but overall the imaging does not support codeletion. Therefore the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.62
+  },
+  "who_grade": {
+    "reasoning": "Non\u2011enhancing, no necrosis, 0% enhancing and 0% necrosis suggest a low\u2011grade lesion (grade II). However, the large volume (157\u202fmL), marked midline shift, ependymal invasion, and involvement of eloquent motor\u2011speech areas are more typical of higher\u2011grade disease. Given the lack of enhancement, grade IV is unlikely, and the balance favors grade II with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma, likely WHO grade II, but the absence of T2\u2011FLAIR mismatch and the large, infiltrative nature of the lesion introduce uncertainty. Advanced sequences (e.g., perfusion, spectroscopy) would help refine grade and molecular status."
+}

@@ -1,0 +1,51 @@
+{
+  "subject_id": "EGD-0700",
+  "idh": {
+    "reasoning": "The patient is 66 years old, an age where IDH-wildtype glioblastoma is common. Absence of T2\u2011FLAIR mismatch (\"T2-FLAIR Mismatch Present\":0) argues against IDH\u2011mutant astrocytoma. Presence of necrosis (\"Proportion Necrosis\":13.83), ependymal invasion (\"Ependymal (ventricular) Invasion\":\"Present\"), midline crossing of the enhancing component (\"CET Crosses midline\":\"True\"), and marked midline shift (\"Midline_shift_present\":\"Yes\") are typical of IDH\u2011wildtype high\u2011grade tumors. Mild enhancement and low enhancing proportion slightly favor a lower grade but do not outweigh the strong age and necrosis evidence. Therefore the balance supports an IDH\u2011wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "IDH\u2011wildtype diffuse gliomas are by definition 1p/19q non\u2011codeleted. No imaging feature suggests oligodendroglial morphology or calcification, and the IDH\u2011wildtype inference already points to a non\u2011codeleted status. Hence the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Necrosis (13.8% of tumor), ependymal invasion, crossing of the enhancing component across the midline, substantial midline shift, and a large total tumor volume (207.395\u202fmL) are hallmarks of WHO grade\u202f4 glioblastoma. The mild enhancement and low enhancing proportion are atypical for classic GBM but do not negate the presence of necrosis and aggressive invasive features, which together outweigh the lower\u2011grade indicators. Thus grade\u202f4 is the most likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Midline_shift_present",
+      "Total tumor volume (mL)",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Mild contrast enhancement and low enhancing proportion introduce some uncertainty, and advanced sequences (DWI, perfusion, spectroscopy) are unavailable. Nonetheless, age, necrosis, midline crossing, ependymal invasion, and lack of T2\u2011FLAIR mismatch collectively favor an IDH\u2011wildtype glioblastoma, WHO grade\u202f4."
+}

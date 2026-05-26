@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0301",
+  "idh": {
+    "reasoning": "The tumor lacks a T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present = 0.0) and shows a high proportion of necrosis (Proportion Necrosis = 0.6) with mild enhancement, features that are typical of IDH\u2011wildtype glioblastoma. Younger age (36\u202fy) and cortical location favor IDH\u2011mutant status, but these are outweighed by the necrosis and absence of mismatch. Therefore the balance of evidence points to an IDH\u2011wildtype tumor.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.66
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "High necrosis and lack of T2\u2011FLAIR mismatch are more characteristic of astrocytic tumors than of oligodendrogliomas, which usually are 1p/19q\u2011codeleted and show less necrosis. No imaging features (e.g., calcifications) support codeletion. Consequently the evidence favors a non\u2011codeleted status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.71
+  },
+  "who_grade": {
+    "reasoning": "The presence of substantial necrosis (Proportion Necrosis = 0.6), edema crossing the midline, and a thick enhancing margin (>3\u202fmm) are hallmarks of WHO grade\u202f4 glioblastoma. Mild enhancement and low enhancing proportion slightly argue against grade\u202f4, but the necrotic component and aggressive edema dominate, leading to a grade\u202f4 assignment.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.62
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Predictions are based solely on conventional MRI features; lack of diffusion, perfusion, and molecular testing introduces uncertainty. Advanced imaging or histopathology could modify IDH/1p19q status and grade."
+}

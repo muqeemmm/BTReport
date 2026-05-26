@@ -1,0 +1,45 @@
+{
+  "subject_id": "EGD-0268",
+  "idh": {
+    "reasoning": "The presence of a strong T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present = 1.0, high mismatch score) is a well\u2011validated imaging surrogate for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma in adults. The patient\u2019s young age (age_years = 34) further supports an IDH\u2011mutant phenotype, as wild\u2011type glioblastomas are more common in older patients. The only feature that argues against IDH mutation is the high proportion of necrosis (Proportion Necrosis = 60.71%), which is more typical of IDH\u2011wildtype glioblastoma, but necrosis can also be seen in high\u2011grade IDH\u2011mutant astrocytomas. Overall the supporting evidence outweighs the contradictory evidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is specifically associated with IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytomas, not with oligodendrogliomas that carry the 1p/19q codeletion. No imaging features such as calcification or marked homogeneous enhancement that would suggest an oligodendroglioma are present. Therefore the evidence supports a non\u2011codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows mild contrast enhancement (Enhancement Quality = Mild, Proportion Enhancing = 0.09) and does not cross the midline (CET Crosses midline = False, Edema crosses midline = False), which are more typical of WHO grade 3 astrocytoma than grade 4 glioblastoma. However, the high proportion of necrosis (Proportion Necrosis = 60.71%) and relatively large total volume (Total tumor volume = 59.11\u202fmL) raise concern for grade\u202f4. Balancing these opposing signs, the pre\u2011operative imaging most closely aligns with grade\u202f3, but with some uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. The high necrotic component creates some ambiguity regarding WHO grade; while most features point to grade\u202f3, grade\u202f4 cannot be excluded without molecular or advanced imaging data. Consider histopathologic confirmation and, if possible, perfusion or spectroscopy to refine grading."
+}

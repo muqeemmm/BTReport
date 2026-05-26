@@ -1,0 +1,47 @@
+{
+  "subject_id": "UCSF-PDGM-243",
+  "idh": {
+    "reasoning": "The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present = 0.0) and the presence of multifocal disease (Multifocal or Multicentric = Multifocal) and a very high edema proportion (Proportion of Oedema = 97.03) are imaging patterns that favor IDH-wildtype glioma. Cortical involvement and frontal location are more typical of IDH\u2011mutant tumors, but they are outweighed by the lack of mismatch and the aggressive\u2011appearing edema, leading to a conclusion of IDH-wildtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Multifocal or Multicentric",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.62
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the IDH-wildtype prediction, the tumor must be 1p/19q non\u2011codeleted according to WHO CNS5 rules. No imaging evidence (e.g., calcifications) suggests codeletion, and the multifocal, high\u2011edema appearance also aligns with non\u2011codeleted behavior.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.66
+  },
+  "who_grade": {
+    "reasoning": "Mild contrast enhancement (Enhancement Quality = Mild) and very low necrosis (Proportion Necrosis = 0.13) argue against WHO grade 4 glioblastoma, while the high edema burden, patient age (59) and multifocality suggest a higher\u2011grade lesion than grade 2. The balance points to CNS WHO grade 3 as the most plausible grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 3,
+    "confidence": 0.61
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-wildtype, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging lacks diffusion, perfusion and spectroscopy, limiting certainty. Absence of T2-FLAIR mismatch and high edema favor IDH-wildtype, but cortical involvement and frontal location introduce some ambiguity. Grade 3 is chosen as a compromise between low necrosis/mild enhancement and aggressive edema/multifocality. Advanced molecular testing is recommended for definitive classification."
+}

@@ -1,0 +1,55 @@
+{
+  "subject_id": "UCSF-PDGM-182",
+  "idh": {
+    "reasoning": "The tumor shows marked contrast enhancement, a high proportion of necrosis (35.96%), and the patient is 65 years old, all features that strongly favor an IDH-wildtype glioblastoma phenotype. Additionally, the T2\u2011FLAIR mismatch is absent (score 0.4), which argues against an IDH\u2011mutant, 1p/19q\u2011intact astrocytoma. While cortical involvement can be seen in IDH\u2011mutant tumors, the preponderance of high\u2011grade imaging signs outweighs this. Hence the prediction is IDH\u2011wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.86
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Marked enhancement, substantial necrosis, lack of T2\u2011FLAIR mismatch, and the overall high\u2011grade appearance are inconsistent with the typical imaging profile of 1p/19q\u2011codeleted oligodendroglioma, which usually shows less aggressive enhancement and may have calcifications (not assessable here). Therefore the tumor is predicted to be non\u2011codeleted. The only feature that could suggest codeletion is its frontal\u2011lobe location, but this is outweighed by the high\u2011grade signs.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.81
+  },
+  "who_grade": {
+    "reasoning": "The lesion demonstrates marked contrast enhancement, a high necrotic fraction (\u224836%), a large total volume (88\u202fmL), and involvement of eloquent cortex, all hallmarks of WHO grade\u202f4 glioblastoma. While cortical involvement can be seen in lower\u2011grade tumors, the combination of necrosis and strong enhancement in an older patient makes grade\u202f4 the most likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement",
+      "age_years",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": 4,
+    "confidence": 0.87
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Predictions rely on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty, but imaging strongly supports an IDH\u2011wildtype, non\u2011codeleted, WHO grade\u202f4 glioblastoma."
+}

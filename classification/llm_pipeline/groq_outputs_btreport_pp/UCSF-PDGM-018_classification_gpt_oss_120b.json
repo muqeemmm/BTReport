@@ -1,0 +1,50 @@
+{
+  "subject_id": "UCSF-PDGM-018",
+  "idh": {
+    "reasoning": "The patient is 51 years old, an age range where IDH-wildtype diffuse gliomas become more common. Imaging shows marked contrast enhancement, a relatively high edema proportion (70.64%), and absence of the T2\u2011FLAIR mismatch sign (T2-FLAIR Mismatch Present = 0.0), which together favor an IDH\u2011wildtype phenotype. While cortical involvement and lack of visible necrosis could suggest IDH\u2011mutant disease, the strong enhancement and edema outweigh these points. Therefore the balance of evidence supports IDH\u2011wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Proportion Necrosis",
+      "Edema crosses midline"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.62
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "In the WHO CNS5 framework, IDH\u2011wildtype diffuse gliomas are defined as 1p/19q non\u2011codeleted. No imaging feature directly indicates codeletion, and the IDH\u2011wildtype prediction already implies non\u2011codeletion. Hence the most consistent assignment is non\u2011codeleted.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, substantial edema, and patient age are imaging hallmarks of high\u2011grade glioma. Although overt necrosis or midline crossing are absent, the solid enhancing component (Proportion Enhancing 27.14%) and thick enhancing margin (>3\u202fmm) suggest at least WHO grade\u202f3. Given the IDH\u2011wildtype status, WHO CNS5 classifies such tumors as glioblastoma, CNS WHO grade\u202f4, even without visible necrosis. The evidence leans toward grade\u202f4, but the lack of necrosis introduces some uncertainty, yielding moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "CET Crosses midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.64
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging lacks diffusion, perfusion, and spectroscopy data that could better discriminate IDH status and grade. Absence of necrosis and midline crossing reduces certainty for grade\u202f4, and the T2\u2011FLAIR mismatch sign is negative, which does not support an IDH\u2011mutant astrocytoma. Nonetheless, the combination of age, marked enhancement, and high edema favors an IDH\u2011wildtype, non\u2011codeleted high\u2011grade glioma. Further molecular testing is recommended."
+}

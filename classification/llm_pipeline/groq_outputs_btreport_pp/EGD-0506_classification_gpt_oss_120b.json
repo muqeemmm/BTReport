@@ -1,0 +1,57 @@
+{
+  "subject_id": "EGD-0506",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (\"T2-FLAIR Mismatch Present\":1.0, high score 0.93) is highly specific for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. Mild enhancement (\"Enhancement Quality\":\"Mild\") and low necrosis (\"Proportion Necrosis\":5.74) also favour a lower\u2011grade IDH\u2011mutant lesion. However, the patient\u2019s advanced age (\"age_years\":80), large total tumor volume (\"Total tumor volume (mL)\":233.996), multifocality (\"Multifocal or Multicentric\":\"Multifocal\"), edema crossing the midline (\"Edema crosses midline\":\"True\"), ependymal invasion (\"Ependymal (ventricular) Invasion\":\"Present\"), and marked midline shift (\"Midline shift present\":\"Yes\") are features more typical of IDH\u2011wildtype glioblastoma, creating some conflict. Balancing the highly specific T2\u2011FLAIR mismatch against these aggressive imaging signs leads to a prediction of IDH\u2011mutant with moderate\u2011high confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Midline shift present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch strongly points to an astrocytic lineage (IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted) rather than an oligodendroglial tumor, which typically lacks this sign. The lesion shows mild enhancement, deep white\u2011matter invasion, and multifocality, all more common in astrocytomas. No imaging evidence of classic oligodendroglioma features (e.g., calcifications, frontal lobe predilection) is present, supporting a non\u2011codeleted status. Thus the best estimate is non\u2011codeleted with fairly high confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "Mild contrast enhancement (\"Enhancement Quality\":\"Mild\") and a modest proportion of enhancing tumor (\"Proportion Enhancing\":12.38) are more typical of WHO grade\u202f3 astrocytoma than grade\u202f4 glioblastoma, which usually shows strong, heterogeneous enhancement and higher necrosis. The low necrosis fraction (5.74\u202f%) also argues against grade\u202f4. Conversely, the large tumor burden, extensive edema crossing the midline, midline shift, and multifocality are aggressive features that could suggest grade\u202f4. We weigh the imaging pattern of mild enhancement and low necrosis as slightly stronger, leading to a grade\u202f3 prediction with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Edema crosses midline",
+      "Midline shift present",
+      "Multifocal or Multicentric",
+      "age_years"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, likely WHO grade\u202f3. The patient\u2019s advanced age and several aggressive radiographic features introduce uncertainty; molecular testing (IDH sequencing, 1p/19q FISH) is recommended to confirm the diagnosis."
+}

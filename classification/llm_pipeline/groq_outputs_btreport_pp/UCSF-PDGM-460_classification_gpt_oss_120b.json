@@ -1,0 +1,48 @@
+{
+  "subject_id": "UCSF-PDGM-460",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (T2\u2011FLAIR Mismatch Present = 1.0, high mismatch score 0.9609) is a validated imaging surrogate for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. Mild contrast enhancement (Enhancement Quality = Mild) and negligible necrosis (Proportion Necrosis = 0.01) argue against IDH\u2011wildtype glioblastoma, which typically shows strong enhancement and necrosis. Therefore the evidence strongly favors an IDH\u2011mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.88
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is specific for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma; the tumor shows only mild enhancement and no imaging signs of oligodendroglioma such as calcification or homogeneous dense enhancement. Hence the most likely 1p/19q status is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The lesion exhibits mild contrast enhancement (Enhancement Quality = Mild, Proportion Enhancing = 1.54%) and virtually no necrosis (Proportion Necrosis = 0.01%), features typical of lower\u2011grade gliomas (grade 2\u20113). However, extensive peritumoral edema (Proportion of Oedema = 98.45%), midline shift, ependymal invasion, cortical involvement and deep white\u2011matter invasion are uncommon in pure grade\u20112 astrocytomas and suggest higher proliferative activity, favoring grade\u202f3 over grade\u202f2. Absence of necrosis and very low enhancing volume argue against grade\u202f4. Thus grade\u202f3 is the most plausible.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Midline shift present",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.68
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks diffusion, perfusion, and spectroscopy; while T2\u2011FLAIR mismatch strongly supports IDH\u2011mutant astrocytoma, grade assessment relies on indirect imaging signs and remains uncertain. Advanced imaging could refine grade and rule out rare IDH\u2011wildtype mimics."
+}

@@ -1,0 +1,53 @@
+{
+  "subject_id": "EGD-0669",
+  "idh": {
+    "reasoning": "The patient is 79 years old, an age strongly associated with IDH-wildtype glioblastoma. Imaging shows marked contrast enhancement (\"Enhancement Quality\":\"Marked\"), a high proportion of enhancing tumor (\"Proportion Enhancing\":71.48) and measurable necrosis (\"Proportion Necrosis\":11.15), all typical of IDH-wildtype high\u2011grade glioma. Deep white\u2011matter invasion (\"Deep WM invasion\":\"Present\") and edema crossing the midline (\"Edema crosses midline\":\"True\") further support a glioblastoma phenotype. The T2\u2011FLAIR mismatch sign is absent (\"T2-FLAIR Mismatch Present\":0.0), which argues against an IDH\u2011mutant astrocytoma. No cortical predominance or calcifications are noted, reducing the likelihood of an IDH\u2011mutant tumor. Therefore the balance of evidence points to an IDH\u2011wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "T2-FLAIR Mismatch Present",
+      "CET Crosses midline",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.86
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion is characteristic of oligodendroglioma, which typically presents with cortical involvement, calcifications and often a T2\u2011FLAIR mismatch sign. This tumor lacks cortical predominance (\"Cortical involvement\":\"Absent\"), shows deep white\u2011matter invasion (\"Deep WM invasion\":\"Present\"), and the T2\u2011FLAIR mismatch sign is absent (\"T2-FLAIR Mismatch Present\":0.0). The marked enhancement and necrosis are more typical of astrocytic glioblastoma than oligodendroglioma. Consequently, the imaging features collectively support a non\u2011codeleted status.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.84
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement (\"Enhancement Quality\":\"Marked\"), a substantial necrotic component (\"Proportion Necrosis\":11.15), a large enhancing tumor volume (\"ET Volume (mL)\":7.373) and total tumor volume (\"Total tumor volume (mL)\":10.314) are imaging hallmarks of WHO grade 4 glioblastoma. The tumor crosses the midline with edema (\"Edema crosses midline\":\"True\") and invades deep white matter (\"Deep WM invasion\":\"Present\"), both features of high\u2011grade disease. While the absence of a strong T2\u2011FLAIR mismatch sign could suggest a lower grade, the preponderance of high\u2011grade imaging characteristics outweighs this, leading to a grade 4 prediction.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.81
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits definitive molecular confirmation. Nonetheless, the imaging profile (older age, marked enhancement, necrosis, deep infiltration, absent T2\u2011FLAIR mismatch) strongly favors IDH\u2011wildtype glioblastoma, WHO grade 4, with non\u2011codeleted 1p/19q status."
+}

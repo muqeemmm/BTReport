@@ -1,0 +1,42 @@
+{
+  "subject_id": "UCSF-PDGM-113",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (T2\u2011FLAIR Mismatch Present = 1.0, high mismatch score 0.7756) is a highly specific imaging surrogate for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted diffuse glioma. No imaging features strongly suggest IDH\u2011wildtype, such as marked necrosis or extensive enhancement. Therefore the balance favors IDH\u2011mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is associated with IDH\u2011mutant astrocytoma rather than oligodendroglioma, indicating a non\u2011codeleted 1p/19q status. No imaging signs (e.g., calcifications, homogeneous intense enhancement) point toward codeletion. Hence the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows mild enhancement (Enhancement Quality = Mild, Proportion Enhancing = 10.4%) and ependymal invasion, features more common in WHO grade 3 astrocytoma than grade 2. Necrosis is minimal (Proportion Necrosis = 0.95%) and there is no evidence of high\u2011grade necrosis or marked perfusion that would suggest grade 4. Thus grade 3 is the most likely, though certainty is limited without advanced imaging.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Diagnosis relies on conventional MRI; absence of diffusion, perfusion, and spectroscopy limits certainty. T2\u2011FLAIR mismatch strongly supports IDH\u2011mutant, non\u2011codeleted astrocytoma, but grade assessment is less certain without advanced imaging."
+}

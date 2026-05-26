@@ -1,0 +1,51 @@
+{
+  "subject_id": "EGD-0730",
+  "idh": {
+    "reasoning": "Patient is 37 years old (age_years) which is typical for IDH\u2011mutant gliomas. The tumor shows only mild contrast enhancement (Enhancement Quality) and a low proportion of enhancing tissue (Proportion Enhancing), both favoring lower\u2011grade, IDH\u2011mutant disease. Cortical involvement (Cortical involvement) and deep white\u2011matter invasion (Deep WM invasion) are also common in IDH\u2011mutant astrocytomas. Conversely, a relatively high necrotic fraction (Proportion Necrosis) and the absence of a T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present) are more typical of IDH\u2011wildtype glioblastoma. We weigh the age and mild enhancement more heavily, leading to a prediction of IDH\u2011mutant with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The lesion has a notable necrotic component (Proportion Necrosis) and lacks the T2\u2011FLAIR mismatch that is often seen in oligodendrogliomas with 1p/19q codeletion. Absence of calcification data cannot be assessed, but the presence of necrosis and moderate enhancement (Enhancement Quality) are more characteristic of non\u2011codeleted astrocytomas. Therefore we predict non\u2011codeleted with confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The tumor volume is large (Total tumor volume) with extensive peritumoral edema (Proportion of Oedema) and a measurable necrotic fraction (Proportion Necrosis). Midline shift is present (midline_shift_present) and eloquent cortex is involved (Eloquent Brain Involvement), all suggesting a higher\u2011grade lesion. However, contrast enhancement is only mild (Enhancement Quality) and does not cross the midline (CET Crosses midline), which are more typical of grade\u202f3 rather than grade\u202f4. Balancing these findings, we assign WHO grade\u202f3 with confidence.",
+    "supporting_features": [
+      "Total tumor volume",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, non-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty. Absence of T2\u2011FLAIR mismatch and presence of necrosis introduce some doubt about IDH status and grade, but age and mild enhancement favor an IDH\u2011mutant, grade\u202f3 astrocytoma. Advanced imaging would help refine the molecular and grade assessment."
+}

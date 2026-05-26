@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0426",
+  "idh": {
+    "reasoning": "Patient is 41 years old (age_years) which is younger than typical IDH-wildtype glioblastoma, supporting IDH-mutant. Tumor is located in the frontal lobe with cortical involvement (Tumor Location, Cortical involvement), a pattern favoring IDH-mutant gliomas. The lesion is multifocal (Multifocal or Multicentric) and shows only mild contrast enhancement (Enhancement Quality), both of which are more common in IDH\u2011mutant tumors. However, the T2\u2011FLAIR mismatch is absent (T2-FLAIR Mismatch Present = 0), a strong imaging marker for IDH\u2011mutant astrocytoma, which argues against an IDH mutation. Overall, the supportive evidence outweighs the contradictory, leading to a prediction of IDH\u2011mutant with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.62
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Multifocal frontal lesions with cortical involvement (Multifocal or Multicentric, Tumor Location, Cortical involvement) are typical of oligodendroglioma, which is 1p/19q\u2011codeleted, supporting codeletion. However, a measurable necrotic component is present (Proportion Necrosis = 0.19), which is more characteristic of astrocytoma and argues against 1p/19q codeletion. Balancing these findings, the evidence leans toward a non\u2011codeleted status with modest confidence.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows a notable enhancing fraction (Proportion Enhancing = 0.36) and necrosis (Proportion Necrosis = 0.19), indicating higher grade than WHO grade 2. Extensive peritumoral edema (Proportion of Oedema = 99.45) and ependymal invasion (Ependymal (ventricular) Invasion) suggest aggressive behavior, supporting grade 3 or 4. The enhancement is only mild (Enhancement Quality) and the enhancing margin thickness is >3\u202fmm, which is less typical of grade\u202f4 glioblastoma, favoring WHO grade\u202f3. Thus the prediction is grade\u202f3 with relatively high confidence.",
+    "supporting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Ependymal (ventricular) Invasion",
+      "Thickness of enhancing margin",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.68
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The absence of T2\u2011FLAIR mismatch and lack of calcification information limit certainty regarding IDH status and 1p/19q codeletion. While imaging favors an IDH\u2011mutant, non\u2011codeleted astrocytoma, confidence remains moderate. Additional molecular testing is recommended."
+}

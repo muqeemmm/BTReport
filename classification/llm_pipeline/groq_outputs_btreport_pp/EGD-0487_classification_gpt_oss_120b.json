@@ -1,0 +1,56 @@
+{
+  "subject_id": "EGD-0487",
+  "idh": {
+    "reasoning": "The patient is 39 years old (age_years) which is typical for IDH\u2011mutant diffuse gliomas that occur in younger adults. The lesion shows no contrast enhancement (Enhancement Quality='None', Proportion Enhancing=0.0) and only modest necrosis (Proportion Necrosis=11.65%). It is confined to the cortex (Cortical involvement='Present') without deep white\u2011matter invasion (Deep WM invasion='Absent') and does not cross the midline (CET Crosses midline='False', Edema crosses midline='False'). These imaging hallmarks favor an IDH\u2011mutant, lower\u2011grade tumor. Opposing evidence includes a relatively high edema proportion (Proportion of Oedema=88.35%) which is more common in IDH\u2011wildtype high\u2011grade gliomas. Balancing the evidence, the imaging most strongly supports IDH\u2011mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The lesion is a solitary cortical mass (Cortical involvement='Present', Region Proportions shows parietal cortex) with no calcification data. 1p/19q\u2011codeleted oligodendrogliomas often have minimal edema and lack necrosis, whereas this tumor shows a high edema proportion (Proportion of Oedema=88.35%) and measurable necrosis (Proportion Necrosis=11.65%). The absence of the T2\u2011FLAIR mismatch sign (T2-FLAIR Mismatch Present=0.0) also leans away from an IDH\u2011mutant astrocytoma but does not confirm codeletion. Overall the imaging pattern (high edema, necrosis) is more consistent with a non\u2011codeleted IDH\u2011mutant astrocytoma than with an oligodendroglioma, so we predict non\u2011codeleted.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.71
+  },
+  "who_grade": {
+    "reasoning": "The tumor is non\u2011enhancing (Enhancement Quality='None', Proportion Enhancing=0.0), small (Lesion Sizes APxTVxCC ~1.6\u202fcm), with modest necrosis (Proportion Necrosis=11.65%) and no contrast\u2011enhancing rim. These features are typical of WHO grade\u202f2 diffuse gliomas. The relatively high peritumoral edema fraction (Proportion of Oedema=88.35%) and measurable necrosis could suggest a higher grade, but without enhancement or a necrotic core, grade\u202f3 is less likely. Therefore grade\u202f2 is the most plausible.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Lesion Sizes APxTVxCC",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "CET Crosses midline",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Proportion of Oedema"
+    ],
+    "prediction": 2,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, non\u2011codeleted astrocytoma, WHO grade\u202f2. Lack of diffusion, perfusion, and spectroscopy limits certainty, especially for 1p/19q status; the high edema proportion is atypical for a classic low\u2011grade astrocytoma and introduces some residual uncertainty."
+}

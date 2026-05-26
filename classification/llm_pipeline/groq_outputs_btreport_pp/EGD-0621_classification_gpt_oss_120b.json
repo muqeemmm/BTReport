@@ -1,0 +1,53 @@
+{
+  "subject_id": "EGD-0621",
+  "idh": {
+    "reasoning": "The patient is 71 years old, an age where IDH-wildtype gliomas predominate. Imaging shows marked contrast enhancement, necrosis (7.87% of tumor), extensive edema (68.37%), a large lesion (max dimension 8.6\u202fcm) and midline shift, all typical of IDH-wildtype glioblastoma. The T2\u2011FLAIR mismatch is absent (value 0.0), which argues against IDH\u2011mutant astrocytoma. While cortical involvement could be seen in IDH\u2011mutant tumors, the overall pattern strongly favors wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "T2-FLAIR Mismatch Present",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.86
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of IDH-wildtype, 1p/19q codeletion is highly unlikely, as codeletion occurs only in IDH\u2011mutant tumors. Imaging lacks features typical of oligodendroglioma such as calcifications or a predominantly non\u2011enhancing, cortical lesion. The marked enhancement, necrosis, and extensive edema further support a non\u2011codeleted status.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.88
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement, necrosis, extensive edema, large tumor volume (\u2248199\u202fmL), midline shift, and ependymal invasion are radiologic hallmarks of WHO grade\u202f4 glioblastoma. Although the proportion of enhancing tumor is modest (23.8%), the presence of necrosis and the aggressive growth pattern outweigh this, supporting grade\u202f4. No features strongly suggest a lower grade such as minimal enhancement or lack of necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "midmidline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.88
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Advanced imaging (perfusion, spectroscopy, diffusion) is unavailable, which limits definitive molecular inference. However, the combination of age, marked enhancement with necrosis, extensive edema, and absent T2\u2011FLAIR mismatch provides high confidence for an IDH-wildtype, 1p/19q non\u2011codeleted WHO grade\u202f4 glioblastoma."
+}

@@ -1,0 +1,47 @@
+{
+  "subject_id": "UCSF-PDGM-485",
+  "idh": {
+    "reasoning": "The patient is 65 years old, an age that statistically favors IDH-wildtype gliomas. The T2\u2011FLAIR mismatch is absent (value 0.0), which is more typical of IDH-wildtype tumors, whereas the presence of a mismatch would support IDH\u2011mutant status. These two pieces of evidence point toward a wildtype prediction. However, the lesion is non\u2011enhancing and involves cortex, features that are more common in IDH\u2011mutant, low\u2011grade gliomas, thus they argue against a wildtype classification. Balancing the stronger age and mismatch evidence against the contradictory imaging signs leads to a prediction of IDH\u2011wildtype with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.58
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion occurs only in IDH\u2011mutant gliomas. Since the IDH status is predicted to be wildtype, the lesion is expected to be non\u2011codeleted. Additionally, the tumor is located in the temporal cortex, a region less typical for oligodendroglioma, which often arise in the frontal lobes. No imaging evidence (e.g., calcifications) suggests a codeleted tumor. Therefore the most consistent prediction is non\u2011codeleted, with moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The lesion shows no contrast enhancement, no necrosis, and the entire tumor volume is accounted for by edema (100% proportion), all hallmarks of a low\u2011grade (grade\u202f2) diffuse glioma. The tumor volume (\u224832\u202fmL) is modest, and there is no midline shift, ependymal invasion, or deep white\u2011matter infiltration, further supporting a lower grade. The patient\u2019s older age could suggest a higher grade, but imaging lacks any high\u2011grade features, so the balance favors grade\u202f2 with reasonable confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 2,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-wildtype and 1p/19q non-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "Molecular predictions are based solely on imaging surrogates; definitive classification requires tissue testing. Age and lack of T2\u2011FLAIR mismatch favor IDH\u2011wildtype, while non\u2011enhancement and cortical location introduce uncertainty. 1p/19q status is inferred from the IDH prediction. Grade assignment is limited by absence of high\u2011grade imaging signs."
+}

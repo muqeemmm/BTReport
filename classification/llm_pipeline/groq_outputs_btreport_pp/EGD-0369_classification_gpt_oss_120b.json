@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0369",
+  "idh": {
+    "reasoning": "IDH-wildtype is favored because the tumor shows a high proportion of necrosis (Proportion Necrosis = 60.27%) and lacks the T2\u2011FLAIR mismatch sign (T2-FLAIR Mismatch Present = 0.0), both imaging hallmarks of IDH\u2011wildtype glioblastoma. Although the patient is young (age_years = 37) and the lesion is cortical and frontal (Cortical involvement = Present, Region Proportions includes frontal_lobe), these features are more typical of IDH\u2011mutant gliomas and therefore argue against the wildtype prediction.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the IDH\u2011wildtype prediction, 1p/19q codeletion is highly unlikely; codeletion occurs only with IDH\u2011mutant tumors. Moreover, the imaging pattern (high necrosis, absent T2\u2011FLAIR mismatch) aligns with IDH\u2011wildtype glioblastoma rather than oligodendroglioma. Features such as frontal cortical location and young age could suggest codeletion, but they are outweighed by the IDH\u2011wildtype context.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits extensive necrosis (Proportion Necrosis = 60.27%) and a necrotic core volume (NCR Volume = 20.433\u202fmL) that far exceeds the small enhancing component (ET Volume = 0.066\u202fmL), a classic pattern of WHO grade\u202f4 glioblastoma. While the enhancement is mild and the enhancing volume is low, necrosis is a defining criterion for grade\u202f4, outweighing the lower\u2011grade imaging signs.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging strongly suggests an IDH-wildtype, non\u2011codeleted glioblastoma (grade\u202f4) based on necrosis and lack of T2\u2011FLAIR mismatch. Age and frontal cortical location are atypical for IDH\u2011wildtype and introduce some uncertainty, but without advanced sequences (DWI, perfusion, spectroscopy) the confidence remains moderate."
+}
