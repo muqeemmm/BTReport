@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0312",
+  "idh": {
+    "reasoning": "The imaging features are highly suggestive of an IDH-mutant glioma. The tumor is located in the frontal lobe and is characterized by a large non-enhancing component, constituting over 99% of the total volume. There is minimal contrast enhancement and virtually no necrosis. This non-aggressive, infiltrative phenotype with cortical involvement but without deep white matter invasion is classic for IDH-mutant tumors and atypical for IDH-wildtype glioblastoma, which typically presents with significant enhancement and necrosis.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the high likelihood of an IDH-mutant tumor, the differential is between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). The tumor's location in the frontal lobe and its cortically-based nature are classic features often associated with oligodendroglioma. The absence of deep white matter invasion also slightly favors this diagnosis. However, these features are not specific, and there is significant overlap with astrocytomas. Key discriminators, such as the T2-FLAIR mismatch sign (for astrocytoma) or calcifications (for oligodendroglioma), cannot be assessed from the provided metadata. Therefore, while the location provides a slight inclination towards co-deletion, the confidence in this prediction is low.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The radiological features predominantly suggest a low-grade tumor. There is a near-total absence of necrosis and minimal mass effect, which argues against a WHO grade 4 diagnosis. The distinction between grade 2 and grade 3 is challenging. Grade 2 gliomas are typically non-enhancing, while grade 3 gliomas often show enhancement as a surrogate for microvascular proliferation. This tumor demonstrates 'Mild' enhancement, which could suggest grade 3. However, the volume of enhancement is exceedingly small (0.021 mL), and the vast majority of the tumor is non-enhancing. Given the overwhelmingly non-aggressive features, a WHO grade 2 is most likely, with the minimal enhancement being a minor contradictory feature.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": 2,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI metadata strongly indicates a low-grade, IDH-mutant diffuse glioma. The frontal lobe location, cortical involvement, and minimal enhancement favor an oligodendroglioma, CNS WHO grade 2. The prediction of 1p/19q co-deletion is made with low confidence due to the non-specific nature of the available imaging features. A data inconsistency was noted between the reported left-sided tumor epicenter and the right-sided volumetric measurements; the former was prioritized for interpretation."
+}

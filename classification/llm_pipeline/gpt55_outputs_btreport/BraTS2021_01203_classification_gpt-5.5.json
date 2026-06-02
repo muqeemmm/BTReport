@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favor IDH-wildtype over IDH-mutant because the patient is older than the typical IDH-mutant diffuse glioma population, and the lesion shows enhancing and necrotic tumor components with a large edema fraction and deep white-matter invasion, a pattern more typical of biologically aggressive IDH-wildtype glioma. Evidence against IDH-wildtype is that the tumor is temporal/insular with cortical involvement, which can be seen in IDH-mutant gliomas, and the enhancement is described as mild rather than overtly bulky. On balance, the aggressive enhancement/necrosis/edema pattern in a 52-year-old supports IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata favor non-codeleted status because the tumor is not described as a frontal-predominant cortical-subcortical mass and instead is temporal/insular with deep white-matter invasion, enhancing tumor, necrotic component, and extensive edema, which are less typical for classic 1p/19q-codeleted oligodendroglioma. Evidence that could argue toward codeletion is the presence of cortical involvement and some insular/cortical location, which may overlap with oligodendroglioma imaging patterns. However, without calcification/SWI information and given the aggressive enhancing-necrotic edematous phenotype, non-codeleted is favored.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without diffusion, perfusion, spectroscopy, SWI/GRE, or histology. The enhancing-necrotic lesion with extensive edema supports a high-grade IDH-wildtype, non-codeleted diagnosis, but molecular testing is required for definitive WHO CNS5 classification.",
+  "subject_id": "BraTS2021_01203",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "The grade assessment favors CNS WHO grade 4 because there is a measurable enhancing tumor component, a necrotic/nonenhancing core, substantial edema, large overall tumor volume, and deep white-matter invasion, all supporting high-grade aggressive behavior. Grade 2 is unlikely because enhancement and necrosis are present. Grade 3 remains a consideration because enhancement is described as mild and mass effect is minimal, with no multifocality or satellite lesions, but the documented necrotic component and edema make grade 4 more likely than grade 3.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

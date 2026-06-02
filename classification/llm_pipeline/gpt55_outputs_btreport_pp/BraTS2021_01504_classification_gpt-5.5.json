@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Multiple satellites present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest IDH-related MRI signal is a clear T2-FLAIR mismatch pattern, with high mismatch score/degree and a low-FLAIR central core relative to peripheral FLAIR signal; this pattern is highly associated with IDH-mutant diffuse astrocytic tumors. A large predominantly nonenhancing tumor core with only mild, very small enhancing component and cortical/frontal involvement also favors IDH-mutant biology over classic IDH-wildtype glioblastoma. Against IDH mutation, the patient is older, the metadata reports a high necrosis proportion, and satellites are present, which can be seen in more aggressive IDH-wildtype tumors. Overall, the mismatch pattern and limited enhancement outweigh the age/aggressive-feature concerns, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the dominant feature is the T2-FLAIR mismatch pattern, which is classically associated with IDH-mutant astrocytoma and argues strongly against oligodendroglioma/1p19q-codeleted status. The low central FLAIR signal relative to the peripheral rim further supports a non-codeleted astrocytic phenotype. Features that could argue toward codeletion include frontal/cortical involvement and age in the oligodendroglioma range, but the specific mismatch signature is a stronger discriminator than location alone. Therefore the best estimate is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the provided conventional MRI metadata. The most distinctive molecular imaging feature is the strong T2-FLAIR mismatch, favoring IDH-mutant, non-codeleted astrocytoma. WHO grade is less certain because the reported large necrosis/nonenhancing core and satellites suggest grade 4, while enhancement and mass effect are relatively limited. Histopathology and molecular testing remain required for definitive WHO CNS5 classification.",
+  "subject_id": "BraTS2021_01504",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "reasoning": "For grade assessment alone, the reported very high necrosis proportion, very large nonenhancing/necrotic core volume, thick enhancing margin, edema, large whole-tumor size, deep white matter invasion, and multiple satellites are concerning for high-grade aggressive glioma, with necrosis being most supportive of CNS WHO grade 4. Against grade 4, enhancement is described as mild with a very small enhancing volume, midline shift is minimal, ventricular asymmetry is absent, and T2-FLAIR mismatch can be seen in lower-grade astrocytoma. Because the metadata explicitly reports extensive necrosis and additional aggressive features, grade 4 is favored, but confidence is moderated by the limited enhancement and possibility that the NCR label may include nonenhancing tumor rather than true necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Tumor Core Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

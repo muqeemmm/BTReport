@@ -1,0 +1,53 @@
+{
+  "subject_id": "EGD-0193",
+  "idh": {
+    "reasoning": "The patient's age of 47 is indeterminate. However, there are multiple strong indicators for IDH-wildtype status. The tumor is described as 'Multifocal or Multicentric', which is a classic feature of IDH-wildtype glioblastoma and highly unusual for IDH-mutant gliomas. The tumor demonstrates aggressive infiltrative behavior, evidenced by 'Deep WM invasion', 'Ependymal (ventricular) Invasion', and the fact that all tumor components (enhancing, non-enhancing, and edema) cross the midline ('crosses_patient_midline'). The presence of necrosis ('NCR Volume (mL)' of 5.669) and enhancement ('ET Volume (mL)' of 5.86) also strongly favors an IDH-wildtype diagnosis. The absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0) argues against an IDH-mutant astrocytoma. The 'Mild' enhancement quality is a minor contradictory feature, but it is outweighed by the overwhelming evidence of aggressive, multifocal disease.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "crosses_patient_midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly inconsistent with a 1p/19q-codeleted oligodendroglioma. Key features arguing against codeletion include the tumor's 'Multifocal or Multicentric' nature, which is exceptionally rare in oligodendroglioma. Furthermore, the aggressive features such as extensive midline crossing by all tumor components ('crosses_patient_midline'), 'Deep WM invasion', and 'Ependymal (ventricular) Invasion' are characteristic of high-grade astrocytomas (non-codeleted). The presence of significant necrosis ('Proportion Necrosis': 4.79) and a thick enhancing margin ('Thickness of enhancing margin': '>3mm') are also much more typical for a non-codeleted tumor. While the relatively narrow FLAIR transition zone ('Transition Zone Thickness (FLAIR)' median of 1.25 mm) could suggest a sharper margin sometimes seen in oligodendrogliomas, this single feature is strongly contradicted by the overall aggressive and multifocal presentation.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "crosses_patient_midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of both contrast enhancement and necrosis are definitive imaging correlates for a CNS WHO grade 4 glioma. The metadata explicitly confirms the presence of an enhancing tumor volume ('ET Volume (mL)': 5.86) and a necrotic/non-enhancing core volume ('NCR Volume (mL)': 5.669). Additional features supporting a high-grade, aggressive tumor include its multifocal nature ('Multifocal or Multicentric'), large total volume ('Total tumor volume (mL)': 118.232), extensive peritumoral edema ('ED Volume (mL)': 106.703), invasion of deep white matter ('Deep WM invasion'), ependymal surfaces ('Ependymal (ventricular) Invasion'), and crossing of the midline ('CET Crosses midline'). There is no imaging evidence to support a grade 2 or 3 diagnosis.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a large, multifocal, and highly infiltrative tumor crossing the midline with involvement of deep white matter and ependymal surfaces. The presence of both significant contrast enhancement and central necrosis are key imaging hallmarks. These features are pathognomonic for a high-grade glioma, and the combination of multifocality and aggressive infiltration is most characteristic of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The confidence in this integrated diagnosis is very high."
+}

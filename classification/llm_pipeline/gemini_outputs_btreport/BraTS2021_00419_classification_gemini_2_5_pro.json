@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_00419",
+  "idh": {
+    "reasoning": "The presence of both central necrosis (Proportion Necrosis: 10.19%) and contrast enhancement (Proportion Enhancing: 13.87%) are strong radiological markers for IDH-wildtype status. Specifically, the thick enhancing margin (>3mm) is highly suggestive of a glioblastoma, which is by definition IDH-wildtype in adults. The patient's age of 45 is within the range for both subtypes, but the aggressive imaging features of necrosis and enhancement overwhelmingly favor an IDH-wildtype glioma. Features arguing against this, such as the absence of deep white matter invasion, are much weaker predictors and are outweighed by the presence of necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The tumor exhibits features highly uncharacteristic of an oligodendroglioma (the entity defined by 1p/19q co-deletion). These features include central necrosis (Proportion Necrosis: 10.19%), thick enhancement (Thickness of enhancing margin: \">3mm\"), and significant surrounding edema (Proportion of Oedema: 75.94%). Furthermore, the tumor involves the temporal lobe and deep gray matter structures like the thalamus and hippocampus, which is a more common location for astrocytomas than for oligodendrogliomas, which classically favor the frontal lobes. There are no specific imaging features to suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema",
+      "Anatomical Overlap Regions",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The single most critical imaging feature for grading is the presence of necrosis. The metadata explicitly reports a necrotic component (NCR Volume (mL): 3.279; Proportion Necrosis: 10.19%). In the WHO CNS5 classification for adult-type diffuse gliomas, the presence of necrosis, whether identified radiologically or histologically, is a defining feature of WHO grade 4. The presence of contrast enhancement, particularly with a thick margin (>3mm), further supports a high-grade designation. While features like the absence of midline shift or deep white matter invasion might be seen in lower-grade tumors, they do not negate the definitive grading implication of necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of imaging features, most notably the presence of central necrosis and thick contrast enhancement in a middle-aged adult, is highly characteristic of a Glioblastoma, IDH-wildtype (CNS WHO grade 4). The temporal location with deep gray matter involvement is consistent with this diagnosis. The predictions for IDH-wildtype, 1p/19q non-codeleted, and WHO grade 4 are all internally consistent and strongly supported by the provided MRI metadata."
+}

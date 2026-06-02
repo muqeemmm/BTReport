@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_01513",
+  "idh": {
+    "reasoning": "This case presents conflicting evidence. The strong T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.85) is a highly specific marker for IDH-mutant status. However, this is contradicted by a multitude of features classic for an IDH-wildtype glioma (glioblastoma). These include the patient's age (55 years), the presence of extensive necrosis ('Proportion Necrosis': 72.05%), very sharp tumor margins ('Transition Zone Thickness (FLAIR)' median 0.75 mm), multiple enhancing components ('n_components_enhancing': 4), and deep invasion ('Deep WM invasion', 'Ependymal (ventricular) Invasion'). The combination of extensive necrosis, sharp borders, and older age is a very strong profile for an IDH-wildtype tumor. While the T2-FLAIR mismatch is a powerful sign, its specificity is not absolute. Given the overwhelming weight of the other aggressive imaging features, an IDH-wildtype glioma is the more probable diagnosis, with the T2-FLAIR mismatch representing an atypical finding.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Transition Zone Thickness (FLAIR)",
+      "n_components_enhancing",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_ideal_midline"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q co-deletion status must be made independently of the IDH prediction. The most significant feature is the strong T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0). This sign is highly specific for IDH-mutant astrocytomas, which are by definition 1p/19q non-codeleted. While the tumor is located in the frontal lobe, a common site for oligodendrogliomas (which are codeleted), this is a non-specific finding. The involvement of deep gray matter structures ('Anatomical Overlap Regions') is also more typical of astrocytic lineage tumors. Therefore, the evidence strongly points towards a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is made with very high confidence based on the presence of extensive necrosis. The 'Proportion Necrosis' is reported as 72.05%, which is a hallmark feature of WHO grade 4 gliomas (either Glioblastoma, IDH-wildtype, or Astrocytoma, IDH-mutant, grade 4). This finding is strongly corroborated by other features of high-grade malignancy, including contrast enhancement ('ET Volume (mL)': 7.07), a thick enhancing margin ('Thickness of enhancing margin': '>3mm'), significant mass effect ('midline_shift_present': 'Yes'), and extensive infiltration ('Deep WM invasion', 'Ependymal (ventricular) Invasion'). There are no imaging features to suggest a lower grade (2 or 3).",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "n_components_enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a large, aggressive, deeply invasive frontal lobe tumor with extensive necrosis, consistent with a WHO grade 4 glioma. The primary diagnostic challenge lies in determining the IDH status due to conflicting imaging signs. While a strong T2-FLAIR mismatch sign favors an IDH-mutant astrocytoma, the preponderance of other features (older age, extensive necrosis, sharp margins, multifocal enhancement) is more characteristic of an IDH-wildtype glioblastoma. The final integrated diagnosis favors the latter, but with noted uncertainty regarding the IDH status."
+}

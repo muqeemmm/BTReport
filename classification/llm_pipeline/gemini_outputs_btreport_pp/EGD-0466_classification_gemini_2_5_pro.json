@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0466",
+  "idh": {
+    "reasoning": "The patient's age of 48 is ambiguous for IDH status. Features supporting an IDH-mutant prediction include the predominantly non-enhancing nature of the tumor (only 6.78% enhancing volume), the absence of deep white matter invasion, and very sharp tumor margins as indicated by a thin FLAIR transition zone. However, features strongly arguing for an IDH-wildtype status are the presence of any contrast enhancement and a small but definite necrotic core, a thick enhancing margin (>3mm), and the absence of a T2-FLAIR mismatch sign. In a middle-aged adult, the combination of enhancement and necrosis are powerful predictors of IDH-wildtype glioma (glioblastoma), often outweighing other features. Therefore, the balance of evidence favors an IDH-wildtype prediction.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Proportion Enhancing",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The most compelling feature for determining 1p/19q status is the tumor's boundary definition. This lesion demonstrates an extremely sharp margin, with a median FLAIR transition zone thickness of only 0.63 mm. This is a classic radiological sign strongly associated with 1p/19q co-deleted oligodendrogliomas. The frontal lobe location and cortical involvement also align well with this diagnosis. Conversely, the presence of contrast enhancement and a necrotic core are features more commonly seen in astrocytic tumors (non-codeleted). Despite these conflicting features, the exceptional sharpness of the border is a highly specific finding. When assessed independently, this feature provides strong, albeit not definitive, evidence for co-deletion.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The WHO grade is primarily determined by the presence of high-grade radiological features. This tumor clearly demonstrates both contrast enhancement (ET Volume > 0) and, most importantly, a necrotic core (NCR Volume > 0). The presence of radiographically evident necrosis in an adult-type diffuse glioma is the hallmark of a WHO Grade 4 tumor. While the absolute volumes of enhancement and necrosis are small compared to the overall tumor size, their existence is the critical factor for grading. The thick enhancing margin (>3mm) further corroborates a high-grade assignment. The evidence for a high-grade tumor is therefore very strong.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": false,
+  "overall_comment": "This case presents with highly conflicting imaging features. The presence of enhancement and necrosis strongly indicates a high-grade glioma, most consistent with a Glioblastoma, IDH-wildtype, CNS WHO Grade 4. However, the tumor also has an exceptionally sharp margin, which is a classic feature of an Oligodendroglioma, IDH-mutant and 1p/19q-codeleted. The independent evaluation of molecular markers resulted in an inconsistent prediction (IDH-wildtype and 1p/19q-codeleted), a combination not recognized by the WHO classification. The integrated diagnosis is based on the higher-confidence predictions for IDH status and grade, but definitive diagnosis requires histomolecular analysis to resolve this ambiguity."
+}

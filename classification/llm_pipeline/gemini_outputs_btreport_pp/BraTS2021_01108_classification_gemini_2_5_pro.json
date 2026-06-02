@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_01108",
+  "idh": {
+    "reasoning": "The patient's advanced age (73 years) is a very strong predictor for IDH-wildtype status. The imaging features are classic for glioblastoma, which is overwhelmingly IDH-wildtype. These features include marked, thick-rimmed enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm'), a large necrotic core ('Proportion Necrosis': 26.29%), and a very sharp tumor-edema boundary ('Transition Zone Thickness (FLAIR)' median of 0.75 mm). The absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0) further argues against an IDH-mutant astrocytoma. There is no significant evidence to support an IDH-mutant diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically show minimal or no enhancement and rarely exhibit central necrosis. This tumor, in contrast, has 'Marked' enhancement, a large necrotic core ('Proportion Necrosis': 26.29%), and a thick enhancing margin. These features are characteristic of an astrocytic lineage tumor, specifically a high-grade one. The very sharp tumor borders are also more typical of glioblastoma than oligodendroglioma. Therefore, a non-codeleted status is strongly favored.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic core ('Proportion Necrosis': 26.29%) and marked, thick-rimmed contrast enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm') are definitive radiological hallmarks of a CNS WHO grade 4 glioma. The presence of necrosis, in particular, is a key criterion for upgrading an adult-type diffuse astrocytic glioma to grade 4. There are no features suggestive of a lower grade (2 or 3), which would typically lack necrosis and show less aggressive enhancement patterns.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's advanced age and the MRI features of a solitary, right temporal lobe tumor with marked ring enhancement, a large necrotic core, and sharp T2-FLAIR boundaries are highly characteristic of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predictions for IDH status, 1p/19q status, and WHO grade are all internally consistent and strongly supported by the provided metadata."
+}

@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_01747",
+  "idh": {
+    "reasoning": "The patient's age of 43 falls within the typical range for IDH-mutant gliomas. The most compelling evidence is the complete absence of contrast enhancement and necrosis. The tumor is entirely non-enhancing (ET Volume (mL): 0.0, Enhancement Quality: 'None') and shows no significant necrosis (NCR Volume (mL): 0.001). These features are classic hallmarks of IDH-mutant gliomas. The primary contradicting feature is the absence of a T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 0.0), which is specific for IDH-mutant astrocytomas. However, its absence does not rule out an IDH-mutant status, particularly in oligodendrogliomas, and the strong evidence from the lack of enhancement and necrosis outweighs this single negative finding.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging due to overlapping features between oligodendrogliomas (codeleted) and astrocytomas (non-codeleted). The tumor's location in the frontal lobe with cortical involvement is common for both, but slightly more classic for oligodendroglioma. The complete lack of enhancement is also seen in both low-grade subtypes. A key differentiator can be tumor margins, but the provided 'boundary_sharpness' metric is difficult to interpret without a reference; indistinct margins would favor astrocytoma. Critically, the absence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0) argues against an IDH-mutant astrocytoma, thereby indirectly supporting an oligodendroglioma (codeleted) diagnosis. Given the ambiguous evidence, the absence of a feature specific to astrocytomas is the deciding factor, though with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The WHO grade is determined by histological and molecular features, but imaging provides strong correlates. The most significant imaging predictors for high grade (4) are contrast enhancement and central necrosis. This tumor shows a complete absence of both ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0, 'NCR Volume (mL)': 0.001). The absence of these aggressive features strongly argues against a WHO grade 4 diagnosis. Differentiating between grade 2 and 3 on imaging alone can be difficult, but the classic presentation of a purely non-enhancing, non-necrotic diffuse glioma is most consistent with a WHO grade 2 tumor. There are no features to suggest a higher grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging profile is highly characteristic of a low-grade diffuse glioma. The lack of enhancement or necrosis in a 43-year-old strongly supports an IDH-mutant, CNS WHO grade 2 tumor. The differentiation between astrocytoma and oligodendroglioma is less certain, but the absence of the T2-FLAIR mismatch sign provides weak evidence in favor of an oligodendroglioma. The integrated diagnosis is consistent with all findings."
+}

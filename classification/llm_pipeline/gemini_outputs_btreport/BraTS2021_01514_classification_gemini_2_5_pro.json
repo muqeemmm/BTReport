@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_01514",
+  "idh": {
+    "reasoning": "The patient's age of 51 is borderline but trends towards favoring IDH-wildtype. The most compelling evidence for IDH-wildtype status is the presence of a very large necrotic core, with a `Proportion Necrosis` of 65.85% and an `NCR Volume (mL)` of 103.478. This is a classic radiological hallmark of glioblastoma, which is the most common IDH-wildtype glioma. The tumor's location and infiltrative pattern further support this prediction: it involves deep gray matter structures (`left thalamus`, `left caudate`, `left putamen`), has a midline epicenter, and shows `Ependymal (ventricular) Invasion` and `Multiple satellites present`. These features are all characteristic of an aggressive, IDH-wildtype phenotype. The only contradictory feature is the `Enhancement Quality` being described as 'Mild', but the presence of extensive necrosis is a much stronger predictor of molecular status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "age_years",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification must be made independently of the IDH prediction. The imaging phenotype is highly uncharacteristic of a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically present as cortically-based tumors with indistinct margins and are not typically associated with large-scale central necrosis. This tumor exhibits a very large necrotic core (`Proportion Necrosis`: 65.85%), deep infiltration into the thalamus and basal ganglia (`Anatomical Overlap Regions`), and ependymal invasion. These are all strong features of an astrocytic lineage tumor (non-codeleted). While there is frontal lobe involvement, which is common in oligodendroglioma, the primary location is temporal, and the overall aggressive features strongly argue against a co-deleted status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive central necrosis is a definitive radiological feature of a WHO Grade 4 glioma. The metadata shows a `Proportion Necrosis` of 65.85% and a large `NCR Volume (mL)` of 103.478. This finding alone is sufficient for a Grade 4 prediction. Numerous other features corroborate a high-grade assessment, including significant mass effect (`midline_shift_present`: 'Yes', `max_shift_mm`: 8.0), deep white matter and ependymal invasion (`Deep WM invasion`: 'Present', `Ependymal (ventricular) Invasion`: 'Present'), and the presence of satellite lesions (`Multiple satellites present`). While the enhancement is described as 'Mild', the combination of any enhancement with clear evidence of necrosis firmly establishes the diagnosis as Grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Deep WM invasion",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The defining feature is the very large necrotic core in a 51-year-old patient. This is strongly supported by the tumor's deep, infiltrative nature involving midline structures and ventricles, significant mass effect, and the presence of satellite lesions. The mild enhancement is a less common feature but does not change the overall diagnosis in the face of overwhelming evidence for a high-grade, aggressive neoplasm."
+}

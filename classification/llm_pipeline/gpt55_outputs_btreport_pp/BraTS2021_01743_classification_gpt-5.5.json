@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the MRI pattern has several features that support an IDH-mutant diffuse glioma: a frontal cortical lesion, no enhancement, no necrosis, solitary presentation, no deep white-matter invasion, no ependymal invasion, and only minimal midline shift. These are more typical of a lower-grade, slower-growing glioma phenotype. Against IDH-mutant status, the patient is 74 years old, which strongly shifts the baseline probability toward IDH-wildtype glioma, and the T2-FLAIR mismatch marker is not present, removing a specific imaging clue for IDH-mutant astrocytoma. Balancing the low-grade nonenhancing frontal cortical phenotype against the advanced age, the imaging evidence slightly favors IDH-mutant status but with meaningful uncertainty.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the frontal cortical location, nonenhancing appearance, solitary lesion pattern, and absent T2-FLAIR mismatch are compatible with an oligodendroglioma-like imaging phenotype. Against co-deletion, the tumor epicenter is described as midline rather than a clearly hemispheric cortical-subcortical mass, and lesion size information is not available, limiting assessment of a classic oligodendroglial morphology. Because key discriminators such as calcification, susceptibility, diffusion, perfusion, and spectroscopy are unavailable, the evidence is limited; nevertheless, the available metadata slightly favors a 1p/19q-codeleted tumor.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility/calcification assessment. The major uncertainty is the advanced age, which argues against IDH-mutant disease, and the very limited measurable tumor characterization, with the lesion represented mainly as nonenhancing FLAIR abnormality.",
+  "subject_id": "BraTS2021_01743",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "age_years",
+      "Proportion of Oedema",
+      "Tumor Core Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "For CNS WHO grade, the absence of enhancement and necrosis, very small whole-tumor volume, solitary lesion, no deep white-matter invasion, no ependymal invasion, no ventricular asymmetry, and only minimal midline shift favor a lower-grade tumor, most consistent with grade 2 by imaging. Grade 3 remains possible because enhancement is not required for anaplastic glioma, and the patient age is high. Grade 4 is less supported because there is no enhancement, no necrosis, no multifocality, and minimal mass effect. The metadata also labels the abnormality as entirely oedema with no tumor core, which reduces confidence in grading because the segmented lesion characterization is limited. Overall, the imaging phenotype most strongly supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Whole Tumor Volume (mL)",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Asymmetrical Ventricles",
+      "midline_shift_present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

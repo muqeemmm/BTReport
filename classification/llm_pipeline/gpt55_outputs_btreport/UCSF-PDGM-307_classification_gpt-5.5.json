@@ -1,0 +1,71 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young adult age, the lesion is frontal/cortical, solitary, nonenhancing, and lacks necrosis, all of which are typical imaging-context features for lower-grade IDH-mutant glioma. The small tumor volume and minimal mass effect also fit a less aggressive biology. Evidence against IDH-mutant status is limited, but the reported midline epicenter and overlap with caudate/ventricular region are less specific and could be seen in other diffuse gliomas. Overall, the balance supports IDH mutation.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "Considering 1p/19q status independently from IDH status, the strongest MRI metadata pointing toward co-deletion are frontal-lobe/cortical location, cortical involvement, solitary presentation, and absence of enhancement or necrosis; this pattern is compatible with oligodendroglial-type diffuse glioma. However, the evidence is not specific: no imaging marker in the provided structured metadata directly establishes 1p/19q status, and the midline epicenter with caudate/ventricular overlap is less classic for a purely frontal cortical oligodendroglial tumor. The balance slightly favors co-deletion, but with only moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The nonenhancing, non-necrotic, small frontal cortical lesion in a young adult strongly favors a lower-grade IDH-mutant diffuse glioma. The 1p/19q call is the least certain because the provided metadata lack more specific discriminators, so molecular testing remains essential.",
+  "subject_id": "UCSF-PDGM-307",
+  "who_grade": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "n_slices_with_shift",
+      "level_max_shift"
+    ],
+    "prediction": 2,
+    "reasoning": "Assessing grade independently, the lesion is entirely nonenhancing with no enhancing tumor volume, no necrosis, small total volume, minimal midline shift, solitary configuration, no ependymal invasion, no deep white matter invasion, and no ventricular asymmetry. These features support CNS WHO grade 2 over grade 3 or 4. The main counterpoint is that many slices show measurable shift and the maximum shift is reported at the third ventricle level, but the shift is characterized as minimal and there is no enhancement or necrosis to suggest grade 4. Overall, the metadata favor grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Asymmetrical Ventricles"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

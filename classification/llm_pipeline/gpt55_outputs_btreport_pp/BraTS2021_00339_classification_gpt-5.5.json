@@ -1,0 +1,80 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.83,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors IDH-wildtype over IDH-mutant. The age_years value of 66 is much more typical for IDH-wildtype diffuse glioma than for IDH-mutant glioma. The presence of measurable enhancement, large edema burden, deep white matter invasion, and absence of a T2-FLAIR mismatch pattern further support an aggressive IDH-wildtype phenotype. Evidence against IDH-wildtype is that the lesion is solitary with cortical/frontoparietal involvement, only mild enhancement, very limited necrosis, absent ependymal invasion, and no enhancing midline crossing, which can be seen in IDH-mutant tumors. Overall, the age and enhancing edematous infiltrative pattern outweigh the lower-grade-appearing counterfeatures, so the conclusion is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata favors non-codeleted over codeleted status. The tumor is strongly parietal-predominant rather than a clearly frontal-predominant cortical-subcortical tumor, and it shows substantial edema, measurable enhancement, and deep white matter invasion, which are more typical of non-codeleted astrocytic or glioblastoma-like tumors than classic oligodendroglioma. Evidence keeping codeletion possible includes cortical involvement, some frontal-lobe component, mild rather than bulky enhancement, and minimal necrosis. Overall, the parietal-predominant enhancing edematous invasive pattern provides a better fit for non-codeleted status, but the imaging evidence is not definitive.",
+    "supporting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional structural MRI metadata. Molecular testing is required for definitive WHO CNS5 classification; the largest residual uncertainty is distinguishing an enhancing high-grade IDH-mutant astrocytoma from IDH-wildtype glioblastoma using imaging metadata alone.",
+  "subject_id": "BraTS2021_00339",
+  "who_grade": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "The metadata favors CNS WHO grade 4 over grade 2 or grade 3. Grade 4 is supported by an enhancing tumor component, thick enhancing margin, very large edema proportion, deep white matter invasion, large whole-tumor volume, and older patient age, all of which indicate a high-grade aggressive phenotype rather than a low-grade diffuse glioma. Evidence against grade 4 is that enhancement is described as mild, necrosis is extremely small, the enhancing and edema components do not cross midline, ependymal invasion is absent, and there are no satellites or multifocality, which makes the grade 4 call less certain. Overall, the enhancing, edematous, infiltrative pattern is most consistent with grade 4, though without histologic or molecular criteria the confidence remains moderate rather than maximal.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Whole Tumor Volume (mL)",
+      "Total tumor volume (mL)",
+      "age_years"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

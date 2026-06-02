@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_00240",
+  "idh": {
+    "reasoning": "The patient's age (50 years) is in a range where IDH-wildtype gliomas are increasingly common. The imaging features are highly characteristic of an IDH-wildtype tumor, specifically glioblastoma. There is significant necrosis (NCR Volume (mL) of 15.142) and marked, thick-walled contrast enhancement (Enhancement Quality: 'Marked', Thickness of enhancing margin: '>3mm'). The tumor also displays multiple features of aggressive biological behavior, including midline crossing ('CET Crosses midline': 'True'), ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), deep gray matter involvement ('Anatomical Overlap Regions' includes caudate and putamen), and the presence of satellite lesions ('Multiple satellites present': 'Present'). These findings are classic for IDH-wildtype gliomas and are atypical for IDH-mutant gliomas, which usually lack necrosis and extensive, thick enhancement. There are no contradicting features.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction is performed independently of the IDH status. The presence of 1p/19q co-deletion defines oligodendroglioma. The MRI phenotype in this case is strongly against an oligodendroglioma. Key features arguing against co-deletion are the presence of a large necrotic core ('NCR Volume (mL)': 15.142) and marked, thick-walled enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm'). Oligodendrogliomas typically show minimal to no necrosis and have less avid, often patchy or faint enhancement. Furthermore, the aggressive features such as midline crossing ('CET Crosses midline': 'True') and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present') are uncharacteristic of oligodendrogliomas. While the frontal lobe location is common for oligodendrogliomas, the combination of necrosis and aggressive enhancement patterns makes a non-codeleted status highly probable.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The WHO grade is determined based on histological features, which have strong radiological correlates. The presence of necrosis is a defining feature of a grade 4 glioma. This tumor has a substantial necrotic component, as evidenced by an 'NCR Volume (mL)' of 15.142. This finding alone is a very strong predictor of WHO grade 4. This is further supported by other features of high-grade malignancy, including marked and thick contrast enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm'), extensive peritumoral edema ('ED Volume (mL)': 106.755), and significant mass effect ('midline_shift_present': 'Yes'). The infiltrative nature, demonstrated by midline crossing and ependymal invasion, also points to a high-grade tumor. There are no imaging features to suggest a lower grade (2 or 3) diagnosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of imaging findings\u2014a large, solitary, frontally located mass with a significant necrotic core, thick and marked ring enhancement, extensive edema, and aggressive features like midline crossing and ependymal invasion\u2014is highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predictions for IDH status, 1p/19q status, and WHO grade are all internally consistent and strongly supported by the provided MRI metadata."
+}

@@ -1,0 +1,47 @@
+{
+  "subject_id": "BraTS2021_00163",
+  "idh": {
+    "reasoning": "The imaging features are conflicting for IDH status prediction. The minimal contrast enhancement ('Enhancement Quality' is 'Mild', 'ET Volume (mL)' is 0.032) is a feature commonly associated with IDH-mutant gliomas. However, the presence of a significant non-enhancing/necrotic core ('NCR Volume (mL)' of 5.185, 'Proportion Necrosis' of 21.4%) is a very strong radiological marker for IDH-wildtype glioma (glioblastoma). In adult diffuse gliomas, significant necrosis is a powerful indicator of high-grade biology, which is most often IDH-wildtype. Weighing these conflicting features, the presence of substantial necrosis is a more specific marker for the IDH-wildtype genotype than the non-specific finding of mild enhancement. Therefore, an IDH-wildtype status is predicted, albeit with reduced confidence due to the conflicting enhancement pattern.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q co-deletion status is performed independently of the IDH status. Tumors with 1p/19q co-deletion (oligodendrogliomas) are typically cortically-based and may involve the frontal lobe, features which are present here ('Cortical involvement': \"Present\", 'Region Proportions' includes 'frontal_lobe'). However, a key feature arguing against co-deletion is the presence of a significant necrotic core ('Proportion Necrosis': 21.4%). Central necrosis is rare in oligodendrogliomas but is common in high-grade astrocytomas (non-codeleted) and glioblastomas (non-codeleted by definition). The presence of necrosis strongly favors a non-codeleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "According to the WHO CNS5 classification for adult-type diffuse gliomas, the presence of necrosis is a sufficient criterion for a WHO Grade 4 diagnosis. This tumor demonstrates a significant necrotic component, with a 'Proportion Necrosis' of 21.4% and an 'NCR Volume (mL)' of 5.185. While other features, such as 'Mild' 'Enhancement Quality' and 'Minimal' 'midline_shift_present', might suggest a lower grade, they are superseded by the definitive presence of necrosis. Therefore, a WHO Grade 4 is predicted with high confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings present a classic diagnostic challenge due to conflicting features. The tumor shows minimal enhancement, typically seen in lower-grade or IDH-mutant gliomas. However, the presence of a significant necrotic core is a hallmark of WHO Grade 4 pathology. This finding strongly drives the prediction towards a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The individual predictions for IDH-wildtype, 1p/19q non-codeleted, and WHO Grade 4 are internally consistent with this diagnosis. The confidence in IDH status is moderate because of the atypical enhancement pattern."
+}

@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "age_years",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest metadata feature is a reported T2-FLAIR mismatch, which is a relatively specific imaging marker favoring an IDH-mutant diffuse astrocytic glioma rather than IDH-wildtype glioblastoma. A nonenhancing solitary temporal-cortical lesion with no necrotic component, no enhancing component, no deep white matter invasion, no ependymal invasion, and only minimal midline shift also fits the typical imaging phenotype of an IDH-mutant lower-grade diffuse glioma. Evidence arguing against IDH-mutant status is limited: age 47 is not very young, and the epicenter is reported as midline, which is less classic for a hemispheric IDH-mutant glioma, but these are weaker than the T2-FLAIR mismatch and absence of aggressive enhancing/necrotic features. Therefore the best prediction is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently from the IDH prediction, the reported T2-FLAIR mismatch is the key discriminator and favors a non-codeleted astrocytic genotype over oligodendroglioma. The temporal-cortex location is also not the classic frontal-predominant pattern often associated with 1p/19q-codeleted oligodendroglioma. Features that could argue toward a codeleted tumor include cortical involvement, nonenhancing appearance, and adult age, because oligodendrogliomas can be cortical/subcortical and may be nonenhancing. However, the T2-FLAIR mismatch is a stronger imaging argument against 1p/19q co-deletion. Therefore the best prediction is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Region Proportions",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "MRI metadata favors a small, solitary, nonenhancing temporal-cortical diffuse glioma with T2-FLAIR mismatch, supporting IDH-mutant astrocytoma and low grade. Confidence is limited by lack of diffusion/ADC, perfusion, spectroscopy, susceptibility/calcification assessment, and molecular testing; the segmentation labels show the lesion entirely as FLAIR abnormality with empty tumor core, so histopathology and molecular profiling remain required.",
+  "subject_id": "EGD-0187",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "age_years",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": 2,
+    "reasoning": "WHO grade assessed independently from molecular predictions is most consistent with grade 2 based on the absence of imaging markers of high-grade behavior. There is no contrast enhancement, no enhancing tumor volume, no necrotic/non-contrast-enhancing core volume, no necrosis proportion, no ependymal invasion, no deep white matter invasion, no multifocality, no satellites, and only minimal midline shift. The whole tumor volume is small. These features argue against grade 3 or 4, where enhancement, necrosis, larger infiltrative burden, or aggressive spread would be more expected. The main caveat is that age 47 and a reported midline epicenter do not exclude higher-grade biology, and molecular criteria can define grade 4 even without enhancement, but those data are not provided. Therefore the best MRI-based grade prediction is CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "midline_shift_present",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

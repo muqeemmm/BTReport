@@ -1,0 +1,87 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.63,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata has several features that favor IDH-mutant diffuse glioma: age_years is 40, and Tumor Location, Region Proportions, and Cortical involvement describe a temporal-cortical lesion, a pattern more typical of IDH-mutant glioma than primary IDH-wildtype glioblastoma. Enhancement Quality is mild and Proportion Enhancing is low, which also leans away from classic IDH-wildtype glioblastoma. Solitary disease by Multifocal or Multicentric and Number of lesions is compatible with either category but does not push strongly toward disseminated aggressive disease. Against IDH-mutant status, Proportion Necrosis and NCR Volume (mL) show necrotic/non-enhancing core, ED Volume (mL) and Proportion of Oedema show extensive edema, midline_shift_present, n_slices_with_shift, and max_shift_mm show mass effect, and Deep WM invasion plus Anatomical Overlap Regions and Side of Tumor Epicenter indicate deep/midline involvement; these are more concerning for aggressive IDH-wildtype biology. Balancing the young age and temporal-cortical, mildly enhancing pattern against the edema, necrosis, mass effect, and deep involvement, the best estimate is IDH-mutant with moderate uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, features supporting codeletion include age_years of 40, Cortical involvement, mild Enhancement Quality, and low Proportion Enhancing, which can be seen in oligodendroglioma. However, the stronger opposing pattern is that Tumor Location and Region Proportions are temporal-cortical rather than a classic frontal-predominant pattern, while Deep WM invasion, Anatomical Overlap Regions, and Side of Tumor Epicenter indicate deep or midline extension. ED Volume (mL), Proportion of Oedema, midline_shift_present, Proportion Necrosis, and NCR Volume (mL) indicate substantial edema, mass effect, and necrotic component, which are less typical for a straightforward oligodendroglioma imaging phenotype. Taken independently of the IDH assessment, the imaging metadata more strongly supports non-codeleted status.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The main uncertainty is that age and temporal-cortical mild enhancement favor IDH-mutant biology, while edema, necrosis, mass effect, and deep/midline involvement favor more aggressive behavior. Molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "BraTS2021_01487",
+  "who_grade": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the strongest imaging evidence favors high-grade disease: Proportion Necrosis and NCR Volume (mL) indicate a necrotic/non-enhancing core, Thickness of enhancing margin shows a thick enhancing component, ED Volume (mL) and Proportion of Oedema show extensive edema, and midline_shift_present, n_slices_with_shift, max_shift_mm, and level_max_shift indicate mass effect. Deep WM invasion, Anatomical Overlap Regions, and Total tumor volume (mL) further support infiltrative aggressive behavior. These findings favor grade 4 over grades 2 or 3. Features arguing against unequivocal grade 4 include Enhancement Quality being mild, Proportion Enhancing and ET Volume (mL) being relatively limited, Lesion Sizes APxTVxCC (cm) not showing a very large enhancing mass, and Multifocal or Multicentric, Multiple satellites present, and Ependymal (ventricular) Invasion not showing multifocal, satellite, or ventricular spread. Despite those mitigating features, the presence of necrosis with substantial edema and mass effect makes CNS WHO grade 4 the best estimate.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "level_max_shift",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

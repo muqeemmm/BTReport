@@ -1,0 +1,55 @@
+{
+  "subject_id": "EGD-0263",
+  "idh": {
+    "reasoning": "The patient's advanced age (77 years) is the single most powerful predictor of IDH-wildtype status. The imaging phenotype strongly supports this, demonstrating features classic for glioblastoma: a large, solitary lesion with marked, thick-rimmed contrast enhancement, extensive central necrosis, and significant vasogenic edema. Furthermore, the tumor displays aggressive features such as crossing the midline, deep white matter invasion, and ependymal invasion. The sharp transition zone on FLAIR is also more typical of IDH-wildtype tumors. The primary contradictory evidence is a high score for T2-FLAIR mismatch, a sign highly specific for IDH-mutant astrocytoma. However, given the overwhelming weight of clinical and radiological evidence favoring IDH-wildtype, this mismatch sign is considered an outlier or a rare presentation in this context.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This task is performed independently of the IDH status prediction. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically present with indistinct margins and minimal to no enhancement or necrosis. The subject tumor's features are the opposite of this classic presentation. It exhibits marked, thick-rim enhancement, a large necrotic core, and a relatively sharp tumor-edema boundary. These features are highly characteristic of an astrocytic lineage glioma (non-codeleted). The frontal lobe location is common for oligodendrogliomas, but this is a non-specific finding. The aggressive imaging phenotype strongly argues against a 1p/19q co-deleted genotype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive central necrosis and marked, thick-rimmed contrast enhancement are definitive radiological hallmarks of a WHO grade 4 glioma. The metadata quantifies this with a significant necrotic/non-enhancing core volume and a large enhancing tumor volume. Additional features supporting a high grade include the tumor's large size, significant mass effect with midline shift, invasion of the ependyma, and crossing of the corpus callosum. There are no imaging features that would suggest a lower grade (2 or 3), as the presence of necrosis automatically confers a grade 4 designation in the context of an IDH-wildtype diffuse astrocytic glioma.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an elderly male with a large, left frontal, midline-crossing tumor. The imaging findings of marked ring enhancement, central necrosis, and significant mass effect are all classic features of Glioblastoma, IDH-wildtype, WHO grade 4. The automated detection of a T2-FLAIR mismatch is a notable contradictory finding, as this is typically associated with IDH-mutant astrocytoma, but it is outweighed by the overwhelming clinical and radiological evidence for glioblastoma."
+}

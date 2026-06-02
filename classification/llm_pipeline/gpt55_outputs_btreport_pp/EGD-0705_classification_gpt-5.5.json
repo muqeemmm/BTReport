@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status considered independently, the metadata favors IDH-mutant diffuse glioma because age_years is young, Tumor Location and Region Proportions show a frontal/cortical/insular tumor, Enhancement Quality is only mild, ET Volume (mL) is very small, midline_shift_present is absent, Deep WM invasion is absent, Ependymal (ventricular) Invasion is absent, and the lesion is solitary by Multifocal or Multicentric and Number of lesions. These features are more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. Evidence against IDH-mutant status is that T2-FLAIR Mismatch Present is absent with only an intermediate T2-FLAIR Mismatch Score, so a classic IDH-mutant astrocytoma imaging signature is not demonstrated, and Enhancement Quality plus Proportion Necrosis introduce concern for more aggressive biology. Overall, the age and location pattern with limited enhancement and limited invasive/mass-effect features outweigh the contradictions, leading to IDH-mutant prediction.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest supportive imaging metadata are Tumor Location and Region Proportions, which place the tumor predominantly in the frontal lobe with substantial cortical involvement; this distribution is compatible with oligodendroglioma and therefore 1p/19q co-deletion. T2-FLAIR Mismatch Present is absent, which argues against the classic T2-FLAIR mismatch phenotype associated with non-codeleted IDH-mutant astrocytoma and indirectly supports a codeleted possibility. Enhancement Quality is mild and ET Volume (mL) is very small, which is compatible with a codeleted tumor but not specific. Evidence against codeletion is that age_years is younger than the typical peak age for oligodendroglioma, Tumor Location includes insular involvement which is not specific, and T2-FLAIR Mismatch Score is intermediate rather than a definitive negative-pattern discriminator. Because the available MRI metadata are suggestive but not definitive, the conclusion is 1p/19q-codeleted with modest confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or calcification assessment. The molecular calls are therefore probabilistic. The main uncertainty is 1p/19q status because frontal cortical location and absent T2-FLAIR mismatch are suggestive but not specific. Grade is also uncertain because mild/minimal enhancement and lack of mass effect argue against grade 4, while edema and the reported necrosis proportion raise concern above grade 2.",
+  "subject_id": "EGD-0705",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade considered independently, the metadata support an intermediate/high-grade rather than purely grade 2 process because Enhancement Quality is mild but present, Proportion Enhancing is reported, Proportion Necrosis is reported, ED Volume (mL) is present, and Proportion of Oedema is high. These features argue against a completely indolent nonenhancing grade 2 glioma. Against grade 4, ET Volume (mL) is extremely small, n_components_enhancing reports no discrete enhancing component, Enhancement Quality is only mild, midline_shift_present is absent, Asymmetrical Ventricles is absent, Deep WM invasion is absent, Ependymal (ventricular) Invasion is absent, and Lesion Sizes APxTVxCC (cm) indicates a relatively small lesion. Balancing these, the imaging is more suspicious than grade 2 but lacks robust structural evidence for grade 4, so the best independent estimate is CNS WHO grade 3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

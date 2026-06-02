@@ -1,0 +1,64 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status, the strongest support for IDH-wildtype is the advanced patient age in age_years, because IDH-wildtype glioblastoma is much more common in older adults. The presence of contrast-enhancing tumor in ET Volume (mL) and Proportion Enhancing also supports a more aggressive IDH-wildtype phenotype. Against IDH-wildtype, the Tumor Location and Region Proportions show prominent insular/cortical involvement, and Cortical involvement is present, which can be seen with IDH-mutant diffuse glioma. Enhancement Quality is only mild and Proportion Necrosis is 0.0, which also makes a classic necrotic IDH-wildtype glioblastoma appearance less secure. Overall, the age and presence of enhancement outweigh the location and lack of necrosis, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, 1p/19q-non-codeleted, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the evidence is limited because calcification-sensitive imaging is not available. Support for non-codeleted status comes from Tumor Location and Region Proportions showing dominant insular and temporal involvement rather than a clearly frontal-predominant oligodendroglial pattern. The older age in age_years also makes a typical oligodendroglioma presentation less favored. Against non-codeleted status, Cortical involvement is present, Enhancement Quality is mild, and Proportion Necrosis is 0.0, which can fit a lower-grade oligodendroglial-type tumor. Because the available metadata are not specific for 1p/19q and there are mixed features, the best estimate is non-codeleted with only slight confidence above chance.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "age_years"
+    ]
+  },
+  "overall_comment": "MRI metadata support an aggressive adult-type diffuse glioma, but molecular subtype prediction is limited without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, histology, and molecular testing. The 1p/19q call is especially uncertain from the provided metadata alone.",
+  "subject_id": "BraTS2021_00425",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade, high-grade disease is supported by the presence of enhancing tumor in ET Volume (mL), Proportion Enhancing, and Thickness of enhancing margin, together with substantial surrounding abnormality in ED Volume (mL) and Proportion of Oedema. The advanced age in age_years also favors a higher-grade adult diffuse glioma presentation. These findings argue against a purely grade 2 pattern, which is more often nonenhancing. Against grade 4 specifically, Enhancement Quality is only mild, ET Volume (mL) is small, Proportion Necrosis is 0.0, NCR Volume (mL) is essentially absent, midline_shift_present is no, Deep WM invasion is absent, and Ependymal (ventricular) Invasion is absent, which would otherwise strengthen a grade 4 call. Balancing the enhancing tumor and extensive edema against the absence of necrosis and limited mass effect, the best estimate is CNS WHO grade 4, but with modest confidence.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

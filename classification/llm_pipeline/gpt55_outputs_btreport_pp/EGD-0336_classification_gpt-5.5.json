@@ -1,0 +1,83 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "Independently for IDH status, the metadata favors IDH-wildtype because the patient is older, the tumor has substantial enhancing and necrotic components, very large edema/whole-tumor burden, mass effect, multifocality, ependymal invasion, and deep white-matter invasion. These features are more typical of aggressive IDH-wildtype glioblastoma than IDH-mutant diffuse glioma. The main opposing feature is a strong T2-FLAIR mismatch signal, which is classically associated with IDH-mutant astrocytoma, so this prevents very high confidence. Overall, the aggressive enhancing-necrotic phenotype in an older adult outweighs the mismatch feature, supporting IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.84,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "Independently for 1p/19q status, the imaging metadata favors non-codeleted tumor. The lesion is predominantly temporal with occipital and ventricular involvement rather than a typical frontal oligodendroglioma pattern, and it shows ependymal invasion, deep white-matter invasion, multifocality, large necrotic and enhancing components, and extensive edema. A strong T2-FLAIR mismatch signal also points away from oligodendroglioma and toward astrocytic lineage when considering 1p/19q status. There are no provided MRI metadata fields that specifically support a codeleted oligodendroglioma pattern, and calcification-sensitive sequences are not available. Therefore, non-codeleted is favored.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "overall_comment": "The prediction is based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/GRE. The strongest uncertainty is the very high T2-FLAIR mismatch metric, which can suggest IDH-mutant astrocytoma, but the patient age and aggressive enhancing-necrotic, edematous, multifocal, ependymal/deep-invasion phenotype favor glioblastoma, IDH-wildtype. Histomolecular testing remains required for final WHO-CNS5 diagnosis.",
+  "subject_id": "EGD-0336",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": 4,
+    "reasoning": "Independently for WHO grade, the metadata strongly supports grade 4. The tumor has a large necrotic component, measurable enhancing tumor, a thick enhancing margin, extensive edema, large whole-tumor volume, marked mass effect with midline shift, multifocality, ependymal invasion, and deep white-matter invasion. These features are much more consistent with grade 4 diffuse glioma than grade 2 or grade 3. Mild enhancement quality and the T2-FLAIR mismatch signal are relative counterpoints because they can be seen in lower-grade IDH-mutant astrocytoma, but the necrosis, enhancement burden, mass effect, and invasive pattern strongly favor grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

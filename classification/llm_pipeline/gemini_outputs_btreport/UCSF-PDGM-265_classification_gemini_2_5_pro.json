@@ -1,0 +1,47 @@
+{
+  "subject_id": "UCSF-PDGM-265",
+  "idh": {
+    "reasoning": "The tumor is completely non-enhancing and non-necrotic, as indicated by an Enhancement Quality of 'None', an ET Volume (mL) of 0.0, and an NCR Volume (mL) of 0.0. This lack of aggressive features is a very strong indicator of IDH-mutant status. Furthermore, the tumor's location with significant involvement of the insula is a classic location for IDH-mutant astrocytomas. There are no imaging features to suggest an IDH-wildtype glioma, which typically presents with enhancement and necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant status, the key task is to differentiate between an astrocytoma (non-codeleted) and an oligodendroglioma (codeleted). The tumor's prominent involvement of the insula is more characteristic of an astrocytoma. Additionally, the presence of deep white matter invasion suggests a highly infiltrative pattern, which, in the absence of well-defined borders (implied by the diffuse T2/FLAIR signal making up 100% of the lesion volume), is also more typical for an astrocytoma. While cortical involvement and lack of enhancement are seen in oligodendrogliomas, the combination of features, especially the insular location, favors a non-codeleted status.",
+    "supporting_features": [
+      "Region Proportions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of contrast enhancement (ET Volume (mL) is 0.0) and necrosis (NCR Volume (mL) is 0.0) are the strongest radiological indicators against a WHO grade 4 diagnosis. The distinction between grade 2 and grade 3 based on imaging is challenging. However, the lack of any high-grade features (enhancement, necrosis, significant mass effect) strongly favors a lower grade. While the tumor shows deep white matter invasion and is of moderate size (38.7 mL), these features can be seen in grade 2 gliomas. Given the classic low-grade appearance, a prediction of WHO grade 2 is most appropriate, though grade 3 cannot be entirely excluded without histology.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly characteristic of a low-grade diffuse glioma. The complete absence of enhancement or necrosis in a right insular-opercular tumor strongly suggests an IDH-mutant astrocytoma. The lack of aggressive features favors a CNS WHO grade 2, although grade 3 cannot be definitively ruled out by imaging alone."
+}

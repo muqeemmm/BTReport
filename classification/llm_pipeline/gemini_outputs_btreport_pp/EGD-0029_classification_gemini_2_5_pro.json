@@ -1,0 +1,51 @@
+{
+  "subject_id": "EGD-0029",
+  "idh": {
+    "reasoning": "The presence of a large non-enhancing/necrotic core (NCR Volume (mL) of 16.047) is a very strong predictor of IDH-wildtype status. Furthermore, the tumor crosses the midline, a classic feature of glioblastoma (IDH-wildtype). The absence of the T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 0.0) also argues against an IDH-mutant astrocytoma. The patient's age of 48 is within the range for IDH-wildtype tumors. Contradictory evidence is the minimal volume of enhancement (ET Volume (mL): 0.178) and mild quality, which are more typical of IDH-mutant gliomas. However, the strong evidence of necrosis and aggressive infiltrative pattern outweigh the features suggesting mutant status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "crosses_ideal_midline",
+      "T2-FLAIR Mismatch Present",
+      "age_years",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This analysis is performed independently of the IDH prediction. The evidence is conflicting. Features suggesting non-codeletion (astrocytic lineage) include the large necrotic core (NCR Volume (mL) > 0) and the tumor crossing the midline, both indicative of a highly aggressive and infiltrative nature less common in oligodendrogliomas. Conversely, features suggesting codeletion (oligodendroglial lineage) are the very sharp tumor margin, as quantified by a small median Transition Zone Thickness (FLAIR) of 0.75 mm, and significant cortical involvement (Region Proportions: cortex, 0.548). The aggressive biological features (necrosis, midline crossing) are generally stronger differentiators in high-grade tumors than margin characteristics. Therefore, despite the conflicting evidence from the tumor border, the overall aggressive phenotype favors a non-codeleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "crosses_ideal_midline",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The key determinant for WHO grade 4 is the presence of necrosis. The MRI metadata shows a substantial non-enhancing core volume (NCR Volume (mL): 16.047), which is a strong radiological correlate of histopathological necrosis. This feature alone is sufficient to suggest grade 4. Supporting this are other signs of high-grade biology, including significant mass effect (midline_shift_present: 'Yes', max_shift_mm: -7.0) and midline crossing of the tumor. While the volume of contrast enhancement is minimal (ET Volume (mL): 0.178), its presence rules out grade 2, and the overwhelming evidence of necrosis strongly points to grade 4 over grade 3.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "crosses_ideal_midline",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging features are highly indicative of a high-grade glioma. The combination of a large necrotic core, midline crossing, and significant mass effect strongly supports the diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The minimal contrast enhancement is an atypical feature but is superseded by the clear evidence of necrosis. The 1p/19q prediction has lower confidence due to conflicting margin characteristics, but the 'non-codeleted' prediction is consistent with the overall diagnosis."
+}

@@ -1,0 +1,59 @@
+{
+  "subject_id": "BraTS2021_01774",
+  "idh": {
+    "reasoning": "The patient's age of 49 is on the cusp, but several imaging features strongly suggest an IDH-wildtype tumor. The presence of a large non-enhancing core (NCR Volume (mL): 21.469) is a powerful radiological surrogate for necrosis, a hallmark of IDH-wildtype glioblastoma. This is further supported by the extensive vasogenic edema (ED Volume (mL): 114.122) and significant mass effect (max_shift_mm: 6.0). The tumor's infiltrative nature, involving deep white matter and ependyma, also aligns with IDH-wildtype behavior. Critically, the T2-FLAIR Mismatch Score is very low (0.4), effectively ruling out the T2-FLAIR mismatch sign, a specific marker for IDH-mutant astrocytoma. The only feature arguing against this is the minimal contrast enhancement (ET Volume (mL): 0.028), which is atypical for glioblastoma. However, the strong evidence for necrosis outweighs the lack of enhancement. Therefore, an IDH-wildtype prediction is made with high confidence.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Score",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. The imaging phenotype is highly uncharacteristic of a 1p/19q-codeleted tumor (oligodendroglioma). The presence of a large non-enhancing core (NCR Volume (mL): 21.469), suggesting necrosis, and the vast amount of associated edema (ED Volume (mL): 114.122) are features of high-grade malignancy not typically seen in oligodendrogliomas. The tumor's deep infiltration, with ependymal invasion and involvement of bilateral deep gray nuclei, is also more suggestive of an astrocytic lineage tumor. While the frontal lobe location is common for oligodendrogliomas, this is a non-specific finding. The minimal enhancement could be seen in oligodendrogliomas, but it does not overcome the compelling evidence of aggressive biology. The combination of features strongly points to a non-codeleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade is based on radiological features of malignancy, independent of molecular status. The most compelling evidence for a high-grade tumor is the large non-enhancing central core (NCR Volume (mL): 21.469), which represents 15.83% of the tumor core and is a strong radiological correlate for necrosis. The presence of necrosis on imaging is a key criterion for WHO Grade 4. This is strongly supported by other aggressive features, including the massive amount of vasogenic edema (ED Volume (mL): 114.122), the large total tumor volume (135.6 mL), and the resulting significant mass effect (max_shift_mm: 6.0). The only feature that contradicts a Grade 4 assessment is the very minimal contrast enhancement. However, necrosis can occur with or without significant peripheral enhancement, and its presence is a more definitive grading feature. Therefore, the tumor is confidently graded as WHO 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly indicative of a high-grade glioma. The combination of a large necrotic core, extensive edema, and significant mass effect strongly supports a WHO Grade 4 designation. The absence of the T2-FLAIR mismatch sign, along with the presence of necrosis, makes an IDH-wildtype status highly probable. The aggressive features are inconsistent with a 1p/19q-codeleted tumor. The minimal contrast enhancement is an atypical feature for a classic glioblastoma but does not preclude the diagnosis, given the overwhelming evidence of necrosis. The integrated diagnosis is Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

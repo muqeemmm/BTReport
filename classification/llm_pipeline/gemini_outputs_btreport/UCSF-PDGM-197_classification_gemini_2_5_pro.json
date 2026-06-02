@@ -1,0 +1,50 @@
+{
+  "subject_id": "UCSF-PDGM-197",
+  "idh": {
+    "reasoning": "The tumor displays classic features of an IDH-wildtype glioma, specifically a large necrotic core (`NCR Volume (mL)`: 29.632, `Proportion Necrosis`: 29.8%) and marked, thick-rimmed contrast enhancement (`Enhancement Quality`: 'Marked', `Thickness of enhancing margin`: '>3mm'). These are strong indicators of glioblastoma, which is the most common IDH-wildtype tumor. The deep involvement of the putamen and pallidum also favors an IDH-wildtype diagnosis. While the temporal lobe location is common for IDH-mutant tumors, the aggressive imaging phenotype with extensive necrosis and enhancement overwhelmingly points towards an IDH-wildtype status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). The presence of a large necrotic core (`NCR Volume (mL)`: 29.632) and marked, thick-rimmed enhancement (`Enhancement Quality`: 'Marked') are hallmarks of high-grade astrocytomas and are very rare in oligodendrogliomas. The tumor's aggressive features strongly suggest an astrocytic lineage, which is, by definition, 1p/19q non-codeleted. There are no specific features to suggest a co-deleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The diagnosis of CNS WHO Grade 4 is strongly supported by the presence of both marked contrast enhancement and, critically, a large necrotic component. The `NCR Volume (mL)` of 29.632 and `Proportion Necrosis` of 29.8% are imaging surrogates for the histopathological finding of necrosis, which is a defining criterion for Grade 4. The substantial enhancing volume (`ET Volume (mL)`: 23.99) and significant mass effect (`midline_shift_present`: 'Yes', `max_shift_mm`: 6.0) further corroborate a high-grade diagnosis. There is no imaging evidence to support a lower grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO Grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI metadata strongly indicates a high-grade glioma with features classic for Glioblastoma, IDH-wildtype. The key findings are the large tumor volume with a significant necrotic core and marked, thick-rimmed contrast enhancement. The location is in the left temporal lobe with extension into deep gray matter structures. The combination of these features makes the diagnosis of Glioblastoma, IDH-wildtype, CNS WHO Grade 4 highly probable."
+}

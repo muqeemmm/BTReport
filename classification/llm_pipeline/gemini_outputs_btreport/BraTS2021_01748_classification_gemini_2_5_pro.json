@@ -1,0 +1,56 @@
+{
+  "subject_id": "BraTS2021_01748",
+  "idh": {
+    "reasoning": "The patient's age of 51 is more typical for IDH-wildtype gliomas. The imaging features are highly characteristic of an IDH-wildtype tumor, specifically a glioblastoma. There is a very large necrotic component (Proportion Necrosis: 40.1%), significant contrast enhancement (ET Volume (mL): 10.17), and a thick enhancing margin (>3mm). Furthermore, the tumor has a midline epicenter, crosses the midline extensively (CET Crosses midline: True), and shows deep gray matter and ependymal invasion. This combination of extensive necrosis, enhancement, and aggressive, midline-crossing morphology is classic for IDH-wildtype glioblastoma. There is minimal evidence to support an IDH-mutant status; the 'Mild' enhancement quality is contradicted by the quantitative volumes and other aggressive features.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "Side of Tumor Epicenter",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically lack significant necrosis and enhancement. This tumor displays features strongly associated with an astrocytic lineage (non-codeleted), including a very high proportion of necrosis (40.1%), a large volume of contrast enhancement (10.17 mL), and a thick enhancing margin (>3mm). The aggressive infiltrative pattern, characterized by midline crossing (CET Crosses midline: True) and ependymal invasion, is also highly uncharacteristic of oligodendroglioma. The only feature weakly associated with oligodendroglioma is the frontal lobe involvement, but this is non-specific. The overwhelming evidence points to a non-codeleted status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The WHO CNS5 grading criteria for adult-type diffuse gliomas are heavily influenced by the presence of necrosis or microvascular proliferation. The MRI metadata provides unequivocal evidence for both. The proportion of necrosis is extremely high at 40.1%. The presence of a significant enhancing component (ET Volume (mL): 10.17) with a thick margin (>3mm) is the radiological correlate of microvascular proliferation. Either of these features\u2014necrosis or enhancement\u2014is sufficient to classify a diffuse astrocytic glioma as WHO grade 4. Additional features supporting a high grade include the large tumor size, significant mass effect (max_shift_mm: -14.0), and aggressive infiltration (midline crossing, ependymal invasion). There is no imaging evidence to support a grade 2 or 3 diagnosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are pathognomonic for a glioblastoma, IDH-wildtype (CNS WHO grade 4). The large, midline-crossing mass with extensive central necrosis and significant, thick contrast enhancement presents a classic 'butterfly glioma' appearance. The patient's age is also consistent with this diagnosis. Confidence in the overall radiological diagnosis is very high."
+}

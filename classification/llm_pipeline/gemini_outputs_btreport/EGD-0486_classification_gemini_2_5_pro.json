@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0486",
+  "idh": {
+    "reasoning": "The tumor displays features highly characteristic of an IDH-wildtype glioma. Specifically, the 'Enhancement Quality' is 'Marked' with a 'Thickness of enhancing margin' >3mm. This pattern of intense, thick, ring-like enhancement is a strong predictor of IDH-wildtype status, often seen in glioblastoma. Furthermore, the 'Proportion of Oedema' is very high (79.87%) relative to the small tumor volume, which is also more typical for IDH-wildtype tumors. While the frontal lobe location is common for IDH-mutant tumors, the aggressive enhancement characteristics strongly outweigh this non-specific feature.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically exhibit ill-defined borders and minimal or no contrast enhancement. This tumor, in contrast, shows 'Marked' 'Enhancement Quality' with a thick margin ('>3mm'). This aggressive enhancement pattern is a hallmark of astrocytic lineage tumors, particularly high-grade ones, making a 1p/19q co-deletion highly unlikely. The cortical and frontal location is common for oligodendroglioma, but this is a weak predictor compared to the definitive enhancement pattern.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of marked, thick-rim contrast enhancement is a primary imaging hallmark of a high-grade glioma, specifically WHO Grade 4. The 'Enhancement Quality' is described as 'Marked' and the 'Thickness of enhancing margin' is '>3mm'. These features are radiological surrogates for the histopathological findings of microvascular proliferation and/or necrosis that define a Grade 4 tumor. Although the measured 'NCR Volume (mL)' is very low and the 'Total tumor volume (mL)' is small, the quality and pattern of enhancement are the most critical factors for grading on imaging and strongly support a Grade 4 designation.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO Grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of marked, thick-rim enhancement and extensive surrounding edema, despite the small tumor size, is highly characteristic of a Glioblastoma, IDH-wildtype. The imaging features strongly suggest a CNS WHO Grade 4 tumor. The predictions for IDH status, 1p/19q status, and WHO grade are internally consistent."
+}

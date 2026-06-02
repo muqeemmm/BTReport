@@ -1,0 +1,45 @@
+{
+  "subject_id": "EGD-0742",
+  "idh": {
+    "reasoning": "The tumor displays multiple aggressive features highly characteristic of an IDH-wildtype glioma. The most compelling evidence is the presence of extensive central necrosis, indicated by a large `NCR Volume (mL)` of 85.3 and a `Proportion Necrosis` of 36.98%. This is coupled with marked, thick-rim enhancement (`Enhancement Quality`: \"Marked\", `ET Volume (mL)`: 67.996, `Thickness of enhancing margin`: \">3mm\"). This combination of extensive necrosis and avid enhancement is a classic radiological signature of glioblastoma, which is the most common IDH-wildtype tumor. The very large tumor size (`Total tumor volume (mL)`: 230.636) and significant mass effect (`max_shift_mm`: 11.0) further support a high-grade, aggressive biology typical of IDH-wildtype status. There are no features suggestive of an IDH-mutant tumor, such as the T2-FLAIR mismatch sign (which cannot be assessed from metadata) or a more indolent, non-enhancing appearance.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q status is strongly linked to the IDH status and the overall tumor appearance. Given the high confidence in an IDH-wildtype prediction, 1p/19q co-deletion is molecularly excluded, as this alteration is defining for oligodendroglioma, which is IDH-mutant. Independently, the imaging phenotype is antithetical to that of a typical oligodendroglioma. Oligodendrogliomas (which are 1p/19q-codeleted) rarely present with such extensive necrosis (`NCR Volume (mL)`: 85.3) and marked, thick-rim enhancement (`Enhancement Quality`: \"Marked\"). These features strongly suggest an astrocytic lineage, which is, by definition, 1p/19q non-codeleted. Therefore, both the likely molecular context (IDH-wildtype) and the imaging features point conclusively to a non-codeleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The WHO CNS5 criteria define grade 4 astrocytic gliomas by the presence of microvascular proliferation or necrosis. Radiologically, thick, irregular contrast enhancement is a surrogate for microvascular proliferation, and a non-enhancing core is a surrogate for necrosis. This tumor exhibits both features unequivocally and to a great extent. The presence of a very large necrotic core (`NCR Volume (mL)` of 85.3, `Proportion Necrosis` of 36.98%) is, by itself, sufficient for a radiological diagnosis of a high-grade, likely grade 4, glioma. This is further supported by the marked, thick-rim enhancement (`ET Volume (mL)`: 67.996, `Enhancement Quality`: \"Marked\"). There are no features to suggest a lower grade; grade 2 tumors are non-enhancing, and grade 3 tumors typically lack such extensive necrosis. The findings are definitive for a WHO grade 4 tumor.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI metadata describes a large, solitary left temporal lobe mass with classic features of a glioblastoma. The extensive central necrosis and marked, thick-rim enhancement are highly indicative of an IDH-wildtype, WHO grade 4 glioma. The significant mass effect is consistent with the tumor's large size and aggressive nature. The predictions for all three tasks are made with high confidence due to the presence of these pathognomonic imaging findings."
+}

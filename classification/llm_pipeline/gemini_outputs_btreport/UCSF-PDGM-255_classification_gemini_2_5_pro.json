@@ -1,0 +1,45 @@
+{
+  "subject_id": "UCSF-PDGM-255",
+  "idh": {
+    "reasoning": "The patient's age of 40 falls within the peak incidence for IDH-mutant gliomas. The tumor's location in the frontal lobe with significant cortical involvement is a classic presentation for this molecular subtype. The most compelling evidence is the complete absence of contrast enhancement and necrosis (`ET Volume (mL)` is 0.0, `NCR Volume (mL)` is 0.0, `Enhancement Quality` is 'None'). This non-enhancing phenotype is a very strong predictor of IDH-mutant status. The absence of deep white matter invasion further supports a less aggressive, IDH-mutant tumor. There are no features suggestive of an IDH-wildtype glioma, which typically presents with ring enhancement and necrosis in older patients.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. The tumor is located in the frontal lobe (`Tumor Location`) and shows significant cortical involvement (`Cortical involvement`), both of which are characteristic features of oligodendrogliomas (which are 1p/19q-codeleted). The lack of deep white matter invasion (`Deep WM invasion`) may suggest a relatively well-defined margin, which also favors an oligodendroglioma over a more diffusely infiltrating astrocytoma. However, these features are not specific, and astrocytomas can present similarly. Without features like calcification or T2-FLAIR mismatch, which are strong predictors but not available here, the distinction is difficult. The evidence slightly favors a codeleted status based on the classic location and growth pattern.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The imaging phenotype strongly suggests a low-grade tumor. The complete absence of contrast enhancement (`ET Volume (mL)` is 0.0, `Proportion Enhancing` is 0.0) and the absence of necrosis (`NCR Volume (mL)` is 0.0, `Proportion Necrosis` is 0.0) are the key imaging markers for a lower-grade glioma. Specifically, these features argue against WHO grade 4, which is defined by necrosis or microvascular proliferation (which typically manifests as enhancement). While some WHO grade 3 tumors can be non-enhancing, it is much less common. Given the uniformly non-aggressive appearance, a WHO grade 2 is the most likely diagnosis.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings of a small, solitary, non-enhancing, non-necrotic tumor in the left frontal lobe of a 40-year-old patient are highly characteristic of a low-grade IDH-mutant glioma. The prediction of WHO grade 2 is made with high confidence due to the lack of any aggressive features. The differentiation between astrocytoma and oligodendroglioma is less certain based on the available metadata, but the frontal location and cortical involvement slightly favor an oligodendroglioma. The combined predictions are internally consistent with the WHO CNS5 classification."
+}

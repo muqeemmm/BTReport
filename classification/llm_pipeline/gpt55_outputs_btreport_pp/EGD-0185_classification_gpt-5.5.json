@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The imaging metadata favors an IDH-wildtype diffuse glioma because there is absent T2-FLAIR mismatch, marked edema burden, deep white matter invasion, multiple satellites, large whole-tumor volume, and a reported necrotic component, all of which are more concerning for biologically aggressive IDH-wildtype behavior. Evidence arguing against IDH-wildtype includes relatively young age, only mild and very small enhancing tumor volume, and cortical temporal/insular involvement, which can be seen in IDH-mutant gliomas. On balance, the aggressive infiltrative/edematous pattern and absent mismatch make IDH-wildtype the best estimate, but confidence is only moderate because enhancement is minimal and age is younger than typical.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Whole Tumor Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessment for 1p/19q co-deletion from these MRI metadata is limited. The features supporting non-codeleted status are the large edema burden, deep white matter invasion, multiple satellites, substantial tumor volume, and reported necrotic component, which are not classic for oligodendroglioma. Features that could argue for codeletion include cortical involvement, temporal/frontal components, younger adult age, and mild enhancement, but calcification and susceptibility data are unavailable and the tumor is not described as a predominantly frontal cortical-subcortical calcified mass. Therefore, non-codeleted is the best estimate with limited confidence.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Whole Tumor Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, SWI/GRE, or molecular testing. The very small enhancing volume and mild enhancement reduce certainty, especially for grade and IDH status, but the edema, necrosis, satellites, and deep white matter invasion favor an aggressive non-codeleted IDH-wildtype glioma pattern.",
+  "subject_id": "EGD-0185",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the metadata independently favor grade 4 because there is a reported necrotic component, large edema volume, deep white matter invasion, multiple satellites, and large total tumor volume, all supportive of high-grade aggressive disease. Grade 2 is disfavored by necrosis, extensive edema, and satellites. Grade 3 remains possible because enhancement is mild and quantitatively very small, and the enhancing-component count is reported as zero, which weakens the radiologic case for grade 4. Nonetheless, the explicit necrosis and aggressive infiltrative features make CNS WHO grade 4 the best estimate.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

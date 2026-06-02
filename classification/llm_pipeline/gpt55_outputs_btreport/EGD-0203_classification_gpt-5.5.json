@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Edema crosses midline",
+      "crosses_ideal_midline",
+      "crosses_patient_midline"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors IDH-mutant diffuse glioma because the patient is a young adult, the lesion is predominantly frontal and cortical, enhancement is mild with an extremely small enhancing volume, and it is solitary without ependymal or deep white matter invasion. These features are more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. Features arguing against this include the large tumor size, substantial non-enhancing/necrotic component labeled by the metadata, and some midline/cross-midline involvement, which can be seen in more aggressive tumors. On balance, the age, frontal-cortical location, and minimal enhancement favor IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "The metadata modestly favors 1p/19q co-deletion because the tumor is frontal, has prominent cortical involvement, occurs in a young adult, and shows only mild enhancement with a very small enhancing component; this pattern is commonly associated with oligodendroglial tumors. Evidence against co-deletion includes the midline epicenter/crossing behavior and relatively large tumor/edema burden, which are less specific and can be seen in astrocytic diffuse glioma. Because calcification-sensitive imaging is unavailable and there is no diffusion, perfusion, or spectroscopy, the call remains uncertain. On balance, the frontal cortical, mildly enhancing pattern favors 1p/19q co-deletion.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. Absence of DWI/ADC, perfusion, spectroscopy, and SWI/GRE limits confidence, especially for 1p/19q status and grade. The very small enhancing volume argues against classic enhancing glioblastoma-like imaging, while the large non-enhancing/necrotic component and edema raise concern for at least intermediate biologic aggressiveness.",
+  "subject_id": "EGD-0203",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 3,
+    "reasoning": "For grade assessment, the metadata shows a large tumor volume, substantial edema, a large non-enhancing/necrotic component as labeled in the metadata, and mild enhancement with an enhancing margin, which support a higher-than-grade-2 lesion. However, the enhancing tumor volume and enhancing proportion are extremely low, enhancement is only mild, midline shift is minimal, and there is no ventricular asymmetry, which argues against a confident grade-4 radiographic phenotype. On balance, these mixed features best fit an intermediate high-grade diffuse glioma, favoring CNS WHO grade 3 rather than grade 2 or grade 4.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

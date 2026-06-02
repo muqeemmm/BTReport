@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the strongest MRI-derived pattern favors IDH-wildtype diffuse glioma: age_years is 60, Enhancement Quality is marked, ET Volume (mL) is substantial, Proportion Necrosis is present, Proportion of Oedema is high, and T2-FLAIR Mismatch Present is absent. These features are more typical of an aggressive IDH-wildtype astrocytic tumor than a lower-grade IDH-mutant glioma. Features that could argue the other way include Cortical involvement and Tumor Location involving cortex/parietal-frontal regions, which can be seen in IDH-mutant gliomas, and an intermediate T2-FLAIR Mismatch Score, but the mismatch is not called present. Overall the balance supports IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present",
+      "Text Report",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.77,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the imaging pattern favors non-codeleted tumor: age_years is 60, Enhancement Quality is marked, ET Volume (mL) is substantial, Proportion Necrosis is present, and Proportion of Oedema is high, which is less typical for a classic oligodendroglioma presentation and more compatible with a non-codeleted diffuse glioma. The Tumor Location and Region Proportions include cortical and frontal/parietal involvement, and Cortical involvement is present, which can be seen with oligodendroglioma and therefore argues somewhat toward codeletion. However, the available metadata lack calcification/SWI information and show no specific oligodendroglial signature, so the best estimate is non-codeleted.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Text Report",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The presence of marked enhancement, necrotic component, thick enhancing margin, and extensive edema drives the high-grade and IDH-wildtype estimate. Cortical/frontoparietal involvement adds some uncertainty for IDH and 1p/19q, but does not outweigh the aggressive imaging phenotype.",
+  "subject_id": "BraTS2021_00682",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently, the metadata strongly support grade 4 behavior: Enhancement Quality is marked, Thickness of enhancing margin is greater than 3 mm, ET Volume (mL) is measurable, Proportion Enhancing is present, Proportion Necrosis is present, NCR Volume (mL) is measurable, Proportion of Oedema is high, and Total tumor volume (mL) is large. These findings are most consistent with a high-grade glioma with necrosis/enhancement rather than grade 2 or grade 3. Features arguing against very advanced local aggressiveness include minimal midline_shift_present, absent Asymmetrical Ventricles, absent Ependymal (ventricular) Invasion, and absent Deep WM invasion, but these do not negate grade 4 imaging features. Overall the best estimate is CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Tumor Core Volume (mL)",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

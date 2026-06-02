@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma: age_years is young for IDH-wildtype glioblastoma, and the lesion is predominantly nonenhancing by Enhancement Quality, ET Volume (mL), Proportion Enhancing, and n_components_enhancing. Tumor Location and Cortical involvement show a frontal/cortical distribution, which is common for IDH-mutant lower-grade diffuse glioma. Findings arguing against this include Side of Tumor Epicenter being midline with crosses_patient_midline and Edema crosses midline, which can reflect infiltrative behavior, and a sizable NCR Volume (mL). Overall, the nonenhancing young-adult frontal/cortical pattern outweighs the infiltrative extent, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Tumor Location",
+      "Cortical involvement",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, Tumor Location and Region Proportions show a predominantly frontal cortical lesion, and Cortical involvement is present; this anatomic pattern is compatible with oligodendroglioma and therefore supports 1p/19q co-deletion. Enhancement Quality, ET Volume (mL), Proportion Enhancing, and n_components_enhancing show no enhancement, which can also be seen in lower-grade oligodendroglioma. Evidence against co-deletion is that Side of Tumor Epicenter is midline and Edema crosses midline with crosses_patient_midline, suggesting a more infiltrative pattern that can be seen with astrocytoma; Lesion Sizes APxTVxCC (cm) also indicates a large lesion. Because the frontal cortical nonenhancing pattern is supportive but not specific, the best estimate is 1p/19q-codeleted with moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The main uncertainty is 1p/19q status because calcification-sensitive imaging, diffusion, perfusion, and spectroscopy are unavailable and should not be inferred. The high nonenhancing/NCR label and reported Proportion Necrosis are internally difficult to interpret in the setting of no enhancing tumor, so histomolecular confirmation remains essential.",
+  "subject_id": "BraTS2021_01526",
+  "who_grade": {
+    "confidence": 0.67,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "crosses_patient_midline"
+    ],
+    "prediction": 2,
+    "reasoning": "For CNS WHO grade considered independently from molecular predictions, the imaging pattern most supports a lower-grade diffuse glioma: Enhancement Quality is none, ET Volume (mL) is 0.0, Proportion Enhancing is 0.0, and n_components_enhancing shows no enhancing components. midline_shift_present is No, Asymmetrical Ventricles is Absent, Multiple satellites present is Absent, Ependymal (ventricular) Invasion is Absent, and Deep WM invasion is Absent, all arguing against aggressive high-grade behavior on the provided MRI metadata. Contradicting features are substantial size by Total tumor volume (mL) and Lesion Sizes APxTVxCC (cm), sizable NCR Volume (mL), reported Proportion Necrosis, and Edema crosses midline with crosses_patient_midline, which raise concern for more aggressive biology. Because there is no enhancement or mass-effect pattern typical of grade 4, and the high-grade indicators are limited or potentially ambiguous, the best estimate is CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

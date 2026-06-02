@@ -1,0 +1,51 @@
+{
+  "subject_id": "EGD-0647",
+  "idh": {
+    "reasoning": "The patient's age of 42 is indeterminate, fitting both IDH-mutant and wildtype profiles. However, the imaging features strongly suggest an aggressive, high-grade tumor, which is characteristic of IDH-wildtype gliomas. Key indicators include the massive tumor volume with a very high proportion of necrosis (62.74%), the presence of satellite lesions, deep white matter invasion, and ependymal invasion. The tumor also involves deep gray matter structures like the thalamus, which is more common in IDH-wildtype tumors. While the contrast enhancement is described as mild, the extensive necrosis is a much stronger predictor of IDH-wildtype status, specifically glioblastoma. The evidence for IDH-wildtype far outweighs the non-specific age and mild enhancement.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multiple satellites present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. The features of this tumor are highly uncharacteristic of a 1p/19q co-deleted oligodendroglioma. The presence of extensive necrosis (Proportion Necrosis: 62.74%) is a strong argument against co-deletion, as this feature is rare in oligodendrogliomas but common in high-grade astrocytomas. Furthermore, the involvement of deep gray matter structures (thalamus, caudate, putamen) is typical for astrocytic lineage tumors, not oligodendrogliomas. The infiltrative nature, evidenced by deep white matter and ependymal invasion, also favors a non-codeleted astrocytoma. There are no specific features to suggest a co-deleted tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is based on the definitive radiological finding of extensive necrosis. The metadata reports a 'Proportion Necrosis' of 62.74%, which is a hallmark feature of grade 4 gliomas (glioblastoma). This finding alone is sufficient for a grade 4 designation. The diagnosis is further supported by numerous other features of high-grade malignancy, including a very large tumor volume (260.7 mL), significant mass effect (12 mm midline shift), deep white matter invasion, ependymal invasion, and the presence of satellite lesions. The 'Mild' enhancement quality is a contradictory feature, as grade 4 tumors typically show avid, ring-enhancement, but the presence of necrosis supersedes enhancement pattern in grading.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a large, right-sided multi-lobar tumor with imaging features highly suggestive of a Glioblastoma, IDH-wildtype. The diagnosis is strongly supported by the extensive necrosis, large tumor volume, significant mass effect, and infiltrative characteristics including deep white matter and ependymal invasion. While the patient's age (42) is relatively young for this diagnosis and the enhancement is mild, these factors are outweighed by the definitive evidence of high-grade malignancy."
+}

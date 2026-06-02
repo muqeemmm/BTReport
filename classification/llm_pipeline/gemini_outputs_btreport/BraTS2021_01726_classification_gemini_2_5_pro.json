@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_01726",
+  "idh": {
+    "reasoning": "The tumor displays multiple aggressive features strongly associated with IDH-wildtype status. Key among these are the presence of both significant necrosis (NCR Volume (mL) of 19.429) and contrast enhancement (ET Volume (mL) of 22.719). The enhancement margin is thick (>3mm), which is also a hallmark of IDH-wildtype gliomas, particularly glioblastoma. Furthermore, the tumor is very large, deeply infiltrative (Deep WM invasion: Present, Ependymal (ventricular) Invasion: Present), and involves deep gray matter structures. These features collectively argue against an IDH-mutant glioma, which typically presents as a non-enhancing, non-necrotic lesion with more circumscribed margins. The mild quality of enhancement is a minor point but does not outweigh the definitive presence of necrosis and enhancement.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically lack necrosis and significant enhancement. This tumor, however, has a substantial necrotic core (Proportion Necrosis: 12.81%) and a significant enhancing component (Proportion Enhancing: 14.98%) with a thick margin. Furthermore, the deep, aggressive infiltration pattern, including ependymal and deep white matter invasion, is characteristic of an astrocytic lineage (non-codeleted) rather than an oligodendroglial one. The primary temporal lobe location is also less common for oligodendrogliomas, which favor the frontal lobes. There are no features to suggest a co-deleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is based on specific histological and molecular features, which have strong imaging correlates. According to the WHO CNS5 classification, the presence of necrosis in an adult-type diffuse glioma is a defining feature of CNS WHO grade 4. The provided metadata unequivocally documents necrosis, with an NCR Volume (mL) of 19.429 and a Proportion Necrosis of 12.81%. The presence of contrast enhancement (ET Volume (mL) > 0) further supports a high grade (at least 3). The combination of both enhancement and necrosis is the classic imaging signature of a grade 4 glioma. All other features, such as the large tumor volume, extensive edema, and deep infiltration, are also consistent with a high-grade, aggressive tumor.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are highly characteristic of a Glioblastoma, IDH-wildtype. The large, deeply infiltrative mass with both extensive contrast enhancement and a significant necrotic core are classic hallmarks. The independent predictions for IDH-wildtype, 1p/19q non-codeletion, and WHO grade 4 are all strongly supported by the data and are mutually consistent, leading to a high-confidence integrated diagnosis."
+}

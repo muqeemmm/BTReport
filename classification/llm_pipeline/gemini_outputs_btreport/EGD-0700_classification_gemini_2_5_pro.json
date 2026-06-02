@@ -1,0 +1,53 @@
+{
+  "subject_id": "EGD-0700",
+  "idh": {
+    "reasoning": "The tumor displays multiple aggressive features strongly associated with IDH-wildtype status. Key among these is the presence of a large necrotic core (NCR Volume (mL): 28.683, Proportion Necrosis: 13.83%) and contrast enhancement (ET Volume (mL): 10.13). Furthermore, the tumor is very large (Total tumor volume (mL): 207.395), crosses the midline (CET Crosses midline: True), shows ependymal invasion (Ependymal (ventricular) Invasion: Present), and has satellite lesions (Multiple satellites present: Present). These features collectively point to a high-grade, aggressive glioma, with IDH-wildtype being the most probable molecular subtype. The frontal lobe location is common in IDH-mutant tumors but is a non-specific finding that is heavily outweighed by the strong evidence for aggressive biology.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of extensive necrosis (NCR Volume (mL): 28.683) is a very strong indicator against a 1p/19q co-deleted tumor (oligodendroglioma), as necrosis is rare in this entity. Additionally, features such as thick enhancing margins (Thickness of enhancing margin: >3mm), ependymal invasion (Ependymal (ventricular) Invasion: Present), and a very high proportion of surrounding edema (Proportion of Oedema: 81.29%) are characteristic of high-grade astrocytic tumors rather than oligodendrogliomas. While the frontal lobe location is common for oligodendrogliomas, this is a weak predictor. The overwhelming evidence points towards an astrocytic lineage, making a non-codeleted status highly likely.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The definitive presence of a large necrotic component (NCR Volume (mL): 28.683, Proportion Necrosis: 13.83%) is a key radiological hallmark of a CNS WHO grade 4 glioma. This is further supported by the presence of contrast enhancement (ET Volume (mL): 10.13). Additional features confirming high-grade, aggressive behavior include the tumor's very large size (Total tumor volume (mL): 207.395), significant mass effect (midline_shift_present: Yes, max_shift_mm: 7.0), midline crossing (CET Crosses midline: True), ependymal invasion (Ependymal (ventricular) Invasion: Present), and the presence of satellite lesions (Multiple satellites present: Present). While the enhancement quality is described as 'Mild', this does not negate the unequivocal evidence of necrosis, which is sufficient for a grade 4 designation.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a large, infiltrative left frontal lobe tumor with imaging features highly characteristic of a Glioblastoma, IDH-wildtype. The presence of a significant necrotic core, contrast enhancement, midline crossing, and ependymal invasion are all strong indicators of a CNS WHO grade 4 tumor. The predictions for IDH-wildtype, 1p/19q non-codeletion, and grade 4 are all mutually consistent and strongly supported by the provided MRI metadata."
+}

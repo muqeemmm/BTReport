@@ -1,0 +1,82 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "Assessing IDH status independently, the metadata favors an IDH-mutant diffuse glioma: the patient is relatively young for an IDH-wildtype glioblastoma, and the lesion is predominantly frontal/cortical, solitary, without deep white matter or ependymal invasion, without midline crossing, and with essentially absent measurable enhancing tumor despite only mild reported enhancement. These features fit better with an IDH-mutant lower-grade diffuse glioma than with a typical IDH-wildtype glioblastoma. Evidence against IDH mutation is the substantial edema proportion and non-enhancing core/necrosis descriptors, plus a reported thick enhancing margin, which can be seen in more aggressive IDH-wildtype tumors; however the near-zero enhancing volume and lack of mass effect/deep invasion reduce that concern. The balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_patient_midline",
+      "CET Crosses midline",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Enhancement Quality",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "Assessing 1p/19q status independently from IDH and grade, the lesion has several imaging features that lean toward oligodendroglioma/codeletion: it is frontal, has marked cortical involvement, lacks deep white matter invasion, and has no T2-FLAIR mismatch called present. These features are more typical of 1p/19q-codeleted tumors than non-codeleted astrocytoma. Against codeletion, the mild enhancement, substantial edema, and non-enhancing core/necrosis descriptors are not specific and can be seen in non-codeleted higher-grade astrocytic tumors; the recorded midline epicenter is also atypical for a classic lateral frontal oligodendroglioma, although the regional proportions still localize it to frontal cortex. Overall, the metadata modestly favors codeletion but with limited confidence because key discriminating imaging features are not available in the structured data.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured pre-operative MRI metadata. The strongest limitation is that several descriptors are partly discordant: measurable enhancing volume is near zero and no enhancing components are counted, while enhancement quality and margin thickness are still reported. Histopathology and molecular testing remain required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0004",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": 2,
+    "reasoning": "Assessing CNS WHO grade independently, the imaging pattern most favors grade 2: the tumor is relatively small, solitary, has essentially no measurable enhancing component, no midline shift, no ventricular asymmetry, no deep white matter or ependymal invasion, and does not cross midline. These findings argue against grade 4 and make grade 3 less likely than a lower-grade diffuse glioma. The main opposing evidence is the reported non-enhancing core/necrosis volume, high edema proportion, mild enhancement, and thick enhancing margin, which can indicate higher grade if truly representing necrosis or solid enhancement. Because the enhancement metrics are minimal and mass effect/invasive features are absent, the best estimate remains CNS WHO grade 2, but confidence is only moderate.",
+    "supporting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_patient_midline",
+      "CET Crosses midline"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

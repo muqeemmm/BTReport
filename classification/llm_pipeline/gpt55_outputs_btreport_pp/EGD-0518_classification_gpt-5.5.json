@@ -1,0 +1,85 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The lesion has a nonenhancing, solitary, predominantly parietal-cortical pattern with cortical involvement, absent deep white matter invasion, absent ependymal invasion, no midline crossing, and only minimal midline shift. Those MRI features favor a less aggressive diffuse glioma phenotype, which is more often associated with IDH-mutant disease than with the typical enhancing/infiltrative phenotype of IDH-wildtype glioma. Against IDH mutation, age_years is 58, which increases the likelihood of IDH-wildtype adult diffuse glioma, and T2-FLAIR Mismatch Present is 0.0, so a specific supportive sign for IDH-mutant astrocytoma is absent. Overall, the nonenhancing cortical low-grade-appearing morphology modestly outweighs the age-related concern for wildtype status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "midline_shift_present",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "age_years"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "Considered independently from IDH status, the cortical parietal-cortex location, solitary morphology, and nonenhancing appearance are compatible with an oligodendroglial phenotype. T2-FLAIR Mismatch Present is 0.0, which does not support the classic T2-FLAIR mismatch pattern associated with IDH-mutant non-codeleted astrocytoma, so it modestly favors codeletion over non-codeletion. Against codeletion, the provided location is parietal-cortex rather than a more classic frontal-predominant pattern, and age_years of 58 is not a strong specific discriminator. The evidence favors codeletion only weakly because the available conventional MRI metadata lacks highly specific 1p/19q markers.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "The imaging phenotype is predominantly nonenhancing, solitary, cortical, and low-grade appearing, but molecular subtype prediction from structured conventional MRI metadata remains uncertain. Tissue diagnosis with molecular testing is required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0518",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "Considered independently, the grade is favored to be low because Enhancement Quality is none, Proportion Enhancing is 0.0, ET Volume is essentially absent, n_components_enhancing is 0, NCR Volume is extremely small, and there is no deep white matter invasion, ependymal invasion, multifocality, or satellite disease. Minimal midline shift and absent ventricular asymmetry also argue against a high-grade mass-effect phenotype. Against grade 2, age_years is 58, the FLAIR/edema burden is substantial, and Proportion Necrosis is nonzero, which introduce concern for higher grade; however, the lack of meaningful enhancement and the very small nonenhancing core/necrotic component make grade 3 or 4 less likely on the provided MRI metadata. Overall the features support CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "NCR Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Number of lesions",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

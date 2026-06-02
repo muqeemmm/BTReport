@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The available MRI metadata favors an IDH-mutant diffuse glioma: the patient is very young by adult diffuse glioma standards (age_years), the lesion is nonenhancing with no enhancing tumor volume (Enhancement Quality, ET Volume (mL), Proportion Enhancing), has no necrosis (NCR Volume (mL), Proportion Necrosis), is solitary (Multifocal or Multicentric), and is cortically/frontal-insular in distribution (Cortical involvement, Tumor Location, Region Proportions), all of which are more typical of IDH-mutant lower-grade glioma than IDH-wildtype glioblastoma. Minimal mass effect and lack of deep/ependymal invasion (midline_shift_present, Deep WM invasion, Ependymal (ventricular) Invasion) also argue away from a typical aggressive IDH-wildtype phenotype. The main feature that weakens confidence is the reported midline epicenter (Side of Tumor Epicenter), which is not a classic discriminator for IDH-mutant hemispheric glioma and makes localization somewhat atypical. Overall, the balance of imaging metadata supports IDH mutation.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the MRI metadata is limited because calcification, susceptibility, perfusion, spectroscopy, and detailed T2-FLAIR mismatch information are not available. Features that could support 1p/19q co-deletion include frontal and cortical involvement (Tumor Location, Region Proportions, Cortical involvement) and absent enhancement (Enhancement Quality, Proportion Enhancing), which can be seen in oligodendroglioma. However, the substantial insular component (Tumor Location, Region Proportions) and very young adult age (age_years) are also compatible with IDH-mutant astrocytoma, and there is no provided imaging marker that strongly establishes oligodendroglial genotype. Because the available fields do not strongly support co-deletion and the location/age pattern is at least as compatible with astrocytoma, the best estimate is non-codeleted, but only with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The main uncertainty is 1p/19q status because key discriminators such as calcification/SWI, perfusion, spectroscopy, and detailed T2-FLAIR pattern are unavailable. Nonenhancement and lack of necrosis strongly favor a lower-grade phenotype, but MRI cannot exclude molecular high-grade features.",
+  "subject_id": "UCSF-PDGM-476",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": 2,
+    "reasoning": "The grade assessment favors CNS WHO grade 2 based on a nonenhancing lesion with no enhancing component (Enhancement Quality, ET Volume (mL), Proportion Enhancing), no necrosis (NCR Volume (mL), Proportion Necrosis), small total volume (Total tumor volume (mL)), minimal midline shift (midline_shift_present, mean_shift_mm, max_shift_mm), and absence of multifocality, satellites, ependymal invasion, and deep white matter invasion (Multifocal or Multicentric, Multiple satellites present, Ependymal (ventricular) Invasion, Deep WM invasion). These features argue against grade 4 and make grade 3 less likely, although grade 3 gliomas can be nonenhancing. Eloquent/midline-related anatomy (Eloquent Brain Involvement, Side of Tumor Epicenter) affects surgical risk more than histologic grade, but it adds some anatomic atypia rather than strong grade evidence. Overall, the imaging phenotype most supports grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

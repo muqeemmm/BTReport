@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, the lesion is frontal and cortically based, enhancement is described as mild with very small enhancing volume, and there is no deep white matter or ependymal invasion. These features are less typical of an IDH-wildtype glioblastoma pattern, which more often shows aggressive infiltrative behavior and substantial enhancement/necrosis. Evidence against IDH-mutant status is the reported necrotic component, high edema proportion, and thick enhancing margin, which can be seen in more aggressive IDH-wildtype tumors. Overall, the age and frontal cortical, only mildly enhancing morphology support IDH-mutant status despite some higher-grade features.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "The metadata modestly favors 1p/19q co-deletion because the lesion is predominantly frontal and cortically involved in a young adult, a distribution often associated with oligodendroglial tumors. Mild enhancement does not exclude co-deletion. However, the evidence is not strong because the dataset lacks several discriminating imaging markers, and the high edema proportion, reported necrotic component, thick enhancing margin, and midline epicenter are less specific and can fit non-codeleted diffuse glioma as well. On balance, the frontal cortical location provides the main support for a codeleted prediction, but confidence is only moderate-low.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The main uncertainty is 1p/19q status, because available fields provide location and enhancement pattern but not stronger discriminators. Grade is also uncertain because the enhancing component is very small despite reported necrotic/non-enhancing core and substantial edema.",
+  "subject_id": "EGD-0577",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "prediction": 3,
+    "reasoning": "The metadata favors an intermediate high-grade diffuse glioma rather than grade 2 because there is mild enhancement, a thick enhancing margin, substantial edema, and a reported necrotic/non-enhancing component. These features argue against a purely low-grade imaging phenotype. A grade 4 prediction is limited by the very small enhancing volume, very low enhancing proportion, small lesion size, minimal midline shift, absence of deep white matter and ependymal invasion, and absence of satellites. Therefore, the best MRI-based estimate is CNS WHO grade 3, acknowledging uncertainty because the reported necrotic component could raise concern for grade 4 if confirmed histologically or radiographically.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

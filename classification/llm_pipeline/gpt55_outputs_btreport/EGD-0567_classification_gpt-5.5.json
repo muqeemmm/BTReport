@@ -1,0 +1,86 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, the lesion is largely frontal/insular with cortical involvement, solitary, and shows only mild, extremely small-volume enhancement with a very low enhancing proportion. These are more typical of IDH-mutant glioma than of IDH-wildtype glioblastoma. Features arguing toward IDH-wildtype include the large edema volume, reported necrotic/non-enhancing core proportion, midline shift, deep white-matter invasion, and midline epicenter, which suggest aggressive infiltrative behavior. Overall, the age, frontal/insular cortical location, and minimal enhancement outweigh the aggressive mass-effect features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the infiltrative pattern with deep white-matter invasion, extension across frontal, insular, and parietal regions, large total tumor volume, large edema burden, and reported necrotic/non-enhancing core proportion is more suggestive of a non-codeleted diffuse astrocytic tumor than a classic oligodendroglioma. Evidence that argues for codeletion includes the young age, frontal/cortical involvement, insular component, and minimal enhancement, which can be seen with oligodendroglioma. Because key oligodendroglioma-supporting features such as calcification are not available and the lesion appears extensive and deeply infiltrative, the best estimate is non-codeleted, with only moderate confidence.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Tumor Location",
+      "Region Proportions",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without diffusion, perfusion, spectroscopy, SWI/GRE, or histology. The main uncertainty is that the large NCR/necrosis label conflicts with the nearly absent enhancement; if the NCR component represents non-enhancing tumor rather than true necrosis, the grade estimate could be lower.",
+  "subject_id": "EGD-0567",
+  "who_grade": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the strongest high-grade indicators are the very large tumor size and volume, substantial edema, midline shift, deep white-matter invasion, and a high reported necrotic/non-enhancing core proportion. These features support aggressive biology and make grade 2 unlikely. The main features arguing against grade 4 are the mild enhancement, essentially negligible enhancing tumor volume, very low enhancing proportion, thin enhancing margin, absence of enhancing midline crossing, and solitary lesion, which could fit grade 2 or 3 if the non-enhancing core is not true necrosis. Given the reported necrotic proportion together with edema and mass effect, the best MRI-based estimate is CNS WHO grade 4, but confidence is limited by the minimal enhancement.",
+    "supporting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

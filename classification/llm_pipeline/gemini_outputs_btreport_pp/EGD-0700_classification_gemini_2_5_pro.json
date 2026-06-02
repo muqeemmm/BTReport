@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0700",
+  "idh": {
+    "reasoning": "The patient's advanced age (66 years) is a strong demographic predictor for IDH-wildtype status. The imaging findings overwhelmingly support this prediction. The tumor exhibits multiple features of high-grade, aggressive biology typically associated with IDH-wildtype gliomas, including significant necrosis (Proportion Necrosis: 13.83%), extensive midline crossing (CET Crosses midline: \"True\"), and the presence of multiple satellite lesions (Multiple satellites present: \"Present\"). Furthermore, the absence of a T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) and the sharply defined tumor border (Transition Zone Thickness (FLAIR) median_mm: 0.75) argue strongly against an IDH-mutant astrocytoma. The combination of age and these aggressive radiological features makes an IDH-wildtype prediction highly probable.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "T2-FLAIR Mismatch Present",
+      "Multiple satellites present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of extensive central necrosis (Proportion Necrosis: 13.83%) and thick contrast enhancement (Thickness of enhancing margin: \">3mm\") are strong indicators against a 1p/19q co-deleted tumor (oligodendroglioma), which typically lacks these features. Additionally, oligodendrogliomas often have indistinct margins, whereas this tumor has a very sharp transition zone (Transition Zone Thickness (FLAIR) median_mm: 0.75). The aggressive features, such as extensive midline crossing (CET Crosses midline: \"True\") and deep gray matter invasion, are also highly uncharacteristic of a co-deleted glioma. While the frontal lobe location is common for oligodendroglioma, it is non-specific, and the overwhelming evidence points to a non-codeleted genotype.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The prediction of CNS WHO grade 4 is based on the unambiguous presence of imaging features corresponding to high-grade histology. The most definitive finding is extensive central necrosis (Proportion Necrosis: 13.83%), which is a radiologic hallmark of a grade 4 glioma (glioblastoma). The presence of contrast enhancement (ET Volume (mL): 10.13) further supports a high-grade designation (at least grade 3 or 4). Other corroborating features of high-grade malignancy include the very large tumor volume (Total tumor volume (mL): 207.395), significant mass effect with midline shift (max_shift_mm: 7.0), and ependymal invasion (Ependymal (ventricular) Invasion: \"Present\"). The combination of necrosis and enhancement is sufficient for a confident prediction of WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This 66-year-old patient presents with a large, midline-crossing frontal lobe tumor with extensive necrosis and enhancement. The combination of advanced age and these classic aggressive imaging features is highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predictions for IDH status, 1p/19q status, and WHO grade are all internally consistent and strongly supported by the provided metadata."
+}

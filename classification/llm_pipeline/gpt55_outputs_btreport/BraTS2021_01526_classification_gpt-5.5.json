@@ -1,0 +1,93 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "Assessed independently for IDH status, the MRI metadata favors an IDH-mutant diffuse glioma because the lesion is predominantly left frontal with cortical involvement, is solitary, and shows no contrast enhancement with ET Volume 0.0 and Proportion Enhancing 0.0. The absence of deep white matter invasion, ependymal invasion, midline shift, and tumor-associated ventricular asymmetry also argues against the more aggressive conventional imaging pattern often associated with IDH-wildtype glioblastoma. Features arguing against IDH-mutant status are the relatively large tumor size, edema crossing midline, tumor components crossing midline, and a reported Proportion Necrosis value, which can be associated with more aggressive biology. Overall, the nonenhancing frontal cortical pattern outweighs the aggressive-size/crossing features, so IDH-mutant is favored.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Side of Tumor Epicenter",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Anatomical Overlap Regions",
+      "Proportion Necrosis"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "Assessed independently for 1p/19q status, the strongest imaging support for co-deletion is the left frontal-predominant, cortically involved, nonenhancing, solitary tumor pattern, which is compatible with oligodendroglioma. The lack of enhancing tumor also fits a lower-grade oligodendroglial-appearing lesion. However, these findings are not specific: IDH-mutant astrocytoma can also be frontal, cortical, and nonenhancing. The large lesion size, edema and nonenhancing components crossing midline, anatomical overlap with the left caudate and left lateral ventricle, and reported Proportion Necrosis argue against a clean classic oligodendroglial imaging pattern. Because the available metadata lacks highly specific markers, co-deletion is only slightly favored.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Side of Tumor Epicenter",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured T1w, T2w, T2-FLAIR, and T1-Gd metadata. The major uncertainty is the reported Proportion Necrosis despite absent enhancement and ET Volume 0.0; if this represents true necrosis rather than nonenhancing tumor/core segmentation, it would raise concern for higher grade. Molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "BraTS2021_01526",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "Assessed independently for CNS WHO grade, the metadata favors grade 2 because the tumor is nonenhancing with ET Volume 0.0 and Proportion Enhancing 0.0, is solitary, has no multiple satellites, no deep white matter invasion, no ependymal invasion, no midline shift, and no tumor-associated ventricular asymmetry. These features support a lower-grade diffuse glioma pattern rather than grade 4 imaging behavior. Against grade 2, the lesion is large, has substantial FLAIR/edema volume, crosses midline by edema and nonenhancing components, and has a reported Proportion Necrosis value; these features could indicate grade 3 or grade 4 biology if they reflect true aggressive tumor components. Given the complete absence of enhancing tumor, grade 2 is favored but with only moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "CET Crosses midline",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Multiple satellites present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

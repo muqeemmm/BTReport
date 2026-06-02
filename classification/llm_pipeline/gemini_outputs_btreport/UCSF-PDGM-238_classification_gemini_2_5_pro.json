@@ -1,0 +1,42 @@
+{
+  "subject_id": "UCSF-PDGM-238",
+  "idh": {
+    "reasoning": "The patient is 24 years old, an age at which IDH-wildtype gliomas are exceptionally rare. The imaging phenotype strongly supports an IDH-mutant tumor, characterized by a complete absence of contrast enhancement (`Enhancement Quality`: \"None\", `ET Volume (mL)`: 0.0) and no evidence of necrosis (`NCR Volume (mL)`: 0.0). The insular location is also a common site for IDH-mutant gliomas. There are no features to suggest an IDH-wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant status, the key distinction is between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). The tumor's location, with a large proportion in the insula (`Region Proportions`, `Tumor Location`), is a strong predictor for an astrocytic lineage (1p/19q non-codeleted). Involvement of the putamen (`Anatomical Overlap Regions`) also slightly favors an astrocytoma. There are no specific imaging features provided that would suggest an oligodendroglioma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The tumor lacks any radiological features of high-grade malignancy. Specifically, there is no contrast enhancement (`ET Volume (mL)`: 0.0) and no necrosis (`NCR Volume (mL)`: 0.0). The absence of these features on MRI makes a CNS WHO grade 4 diagnosis highly unlikely. While the distinction between grade 2 and grade 3 can be difficult on imaging alone, the completely non-enhancing nature and lack of significant mass effect (`midline_shift_present`: \"No\") are most consistent with a CNS WHO grade 2 glioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of very young patient age (24) and a purely non-enhancing, non-necrotic tumor in the right insula provides a classic presentation for a low-grade, IDH-mutant glioma. The insular location is a strong indicator of an astrocytoma (1p/19q non-codeleted). The absence of any aggressive imaging features supports a CNS WHO grade 2 classification. The final integrated diagnosis is highly consistent with the provided MRI metadata."
+}

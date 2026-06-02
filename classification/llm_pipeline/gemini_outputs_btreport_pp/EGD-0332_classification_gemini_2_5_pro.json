@@ -1,0 +1,45 @@
+{
+  "subject_id": "EGD-0332",
+  "idh": {
+    "reasoning": "The patient's age of 61 years strongly favors an IDH-wildtype status. The MRI findings provide compelling corroborating evidence. The tumor is multifocal, with 4 distinct lesions, a feature highly characteristic of IDH-wildtype glioblastoma. The presence of a necrotic core is another strong indicator of an IDH-wildtype tumor. Furthermore, the tumor exhibits a very sharp transition zone on FLAIR images, which is more typical of IDH-wildtype gliomas compared to the ill-defined margins often seen in IDH-mutant astrocytomas. The absence of a T2-FLAIR mismatch sign also argues against an IDH-mutant astrocytoma. The combination of these features makes an IDH-wildtype prediction highly likely.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "NCR Volume (mL)",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction is performed independently of the IDH status. Tumors with 1p/19q co-deletion (oligodendrogliomas) are typically solitary, cortically-based, and non-necrotic. The subject's tumor is multifocal, with 4 lesions, and demonstrates deep white matter invasion. Most importantly, it has a significant necrotic component. These features\u2014multifocality and necrosis\u2014are highly atypical for a 1p/19q co-deleted tumor. Therefore, the evidence strongly supports a non-codeleted status.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "NCR Volume (mL)",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of central necrosis is a key histopathological and radiological feature for grading diffuse gliomas. The metadata explicitly quantifies a necrotic volume (`NCR Volume (mL)` of 1.666). In the WHO CNS5 classification for adult-type diffuse gliomas, the presence of necrosis automatically confers a WHO grade of 4. The presence of contrast enhancement, even if mild, and the multifocal nature of the disease further support a high-grade assignment. There are no features suggestive of a lower grade (2 or 3).",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 61-year-old male presenting with a multifocal, necrotic, and mildly enhancing frontal lobe tumor with extensive surrounding edema. The combination of advanced age, multifocality, and necrosis provides a classic imaging phenotype for Glioblastoma, IDH-wildtype, CNS WHO grade 4. Confidence in this integrated diagnosis is very high based on the provided MRI metadata."
+}

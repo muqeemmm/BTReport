@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0029",
+  "idh": {
+    "reasoning": "The patient's age (48) is in a range where both IDH-mutant and wildtype gliomas occur, but the imaging features strongly favor IDH-wildtype. The most compelling evidence is the high proportion of necrosis (37.64%) and the presence of thick enhancement (>3mm), which are hallmark features of glioblastoma, the vast majority of which are IDH-wildtype. The tumor's aggressive behavior, including crossing the midline, deep gray matter involvement (caudate), and significant mass effect (7mm midline shift), further supports an IDH-wildtype diagnosis. While the frontal lobe location is common in IDH-mutant tumors and the total volume of enhancement is small, these factors are strongly outweighed by the definitive presence of necrosis and other aggressive features.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "crosses_ideal_midline",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Anatomical Overlap Regions",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification must be performed independently of the IDH prediction. 1p/19q co-deleted tumors (oligodendrogliomas) are typically characterized by indistinct margins and a lack of aggressive features like necrosis or significant enhancement. This tumor displays multiple features that are highly uncharacteristic of a co-deleted glioma, most notably a high proportion of necrosis (37.64%) and thick enhancement (>3mm). Additionally, the presence of deep white matter and deep gray matter (caudate) invasion, along with significant mass effect, argues strongly against a 1p/19q co-deleted genotype. The frontal lobe and cortical involvement are common in oligodendrogliomas, but the presence of clear necrosis and thick enhancement makes a non-codeleted status far more likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The WHO CNS5 classification defines grade based on specific histological and molecular features. For adult-type diffuse gliomas, the presence of necrosis is a definitive criterion for WHO Grade 4. This tumor has a very high reported 'Proportion Necrosis' (37.64%). Furthermore, the presence of contrast enhancement, particularly thick enhancement (>3mm), is indicative of microvascular proliferation, another feature sufficient for a Grade 4 diagnosis. Given the unequivocal evidence of necrosis, a grade of 2 or 3 is not possible. The combination of necrosis and enhancement provides overwhelming evidence for a Grade 4 tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are highly characteristic of a high-grade glioma. The presence of a large, midline-crossing mass with a significant proportion of necrosis and thick contrast enhancement are classic features of a glioblastoma. The combination of IDH-wildtype status, non-codeleted 1p/19q, and WHO Grade 4 is the most probable integrated diagnosis."
+}

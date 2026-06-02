@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest discriminator is the reported T2-FLAIR mismatch, which is a well-recognized MRI pattern favoring an IDH-mutant diffuse astrocytic glioma, especially when paired with a temporal lesion location and only mild, very small-volume enhancement rather than a necrotic ring-enhancing mass. The absence of necrosis also argues away from the most typical imaging phenotype of IDH-wildtype glioblastoma. Against IDH-mutant status, the metadata show multifocality, ependymal invasion, deep white-matter invasion, midline epicenter, and substantial midline shift, which can be seen with more aggressive IDH-wildtype disease. Overall, the T2-FLAIR mismatch and lack of necrosis outweigh these aggressive features, so the best independent estimate is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the T2-FLAIR mismatch pattern strongly favors an IDH-mutant astrocytoma phenotype and argues against oligodendroglioma with 1p/19q co-deletion. The temporal location is also less characteristic than the classic frontal-predominant pattern often associated with oligodendroglioma. Cortical involvement and mild enhancement do not exclude oligodendroglioma and therefore mildly weaken certainty, but they are not strong enough to overcome the mismatch pattern. The best independent estimate is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histopathology. The strongest molecular imaging clue is the T2-FLAIR mismatch. Grade is less certain because there is mild enhancement and aggressive spread/mass-effect metadata, but no necrosis and only very small enhancing volume.",
+  "subject_id": "UCSF-PDGM-308",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Tumor Core Volume (mL)"
+    ],
+    "prediction": 3,
+    "reasoning": "For grade, the metadata show features concerning for more than grade 2: enhancement is present, there is deep white-matter and ependymal invasion, multifocal disease, large whole-tumor/FLAIR abnormality, and measurable midline shift. These support at least an intermediate or high-grade process. However, grade 4 is weakened by the absence of necrosis, the very small enhancing volume, and only mild enhancement rather than a large necrotic ring-enhancing tumor core. Balancing these findings independently, the best estimate is CNS WHO grade 3 rather than grade 2 or grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Whole Tumor Volume (mL)",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

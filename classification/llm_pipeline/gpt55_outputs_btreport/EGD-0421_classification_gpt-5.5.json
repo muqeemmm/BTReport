@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema",
+      "ED Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the metadata favor an IDH-mutant diffuse glioma because the lesion is centered in the temporal-cortex region with cortical involvement, is solitary, does not cross midline, and lacks deep white matter or ependymal invasion; these features are more typical of a more circumscribed lower-grade/IDH-mutant growth pattern than of classic IDH-wildtype glioblastoma. Against IDH-mutant status, there is reported necrotic/non-enhancing core burden, edema, mild enhancement, and a thick enhancing margin, which can be seen with aggressive IDH-wildtype tumors. Because the infiltrative/aggressive features are present but the overall location and invasion pattern lean toward IDH-mutant disease, the best estimate is IDH-mutant with moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, assessed independently from the IDH call, the strongest available anatomic clue is the temporal-cortex location. Oligodendrogliomas with 1p/19q co-deletion often have cortical/subcortical involvement, so cortical involvement and the cortical component argue somewhat for codeletion. However, the dominant temporal location is less classic for codeleted oligodendroglioma than a frontal cortical-subcortical presentation, and the provided metadata lack supportive oligodendroglioma markers such as calcification assessment or characteristic heterogeneity. With limited direct evidence, the balance slightly favors non-codeleted status, but confidence is only modest.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or molecular/histologic data. The main uncertainty is that necrosis is reported despite only mild, very small enhancing tumor volume, creating tension between an aggressive grade-4 imaging impression and otherwise relatively localized cortical-temporal disease.",
+  "subject_id": "EGD-0421",
+  "who_grade": {
+    "confidence": 0.69,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, assessed independently, the presence of a substantial reported necrotic component strongly supports grade 4 biology on imaging, and associated edema plus an enhancing margin further support a high-grade lesion rather than grade 2. Grade 3 remains possible because enhancement is only mild and the enhancing tumor volume is very small. Grade 2 is less favored because necrosis, edema, and enhancement are not typical for a purely low-grade tumor. Features arguing against grade 4 include absence of midline shift, absence of ventricular asymmetry, absent deep white matter and ependymal invasion, solitary disease, and no satellites. Overall, the explicit necrosis metric is the most grade-defining conventional MRI feature, so grade 4 is favored with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

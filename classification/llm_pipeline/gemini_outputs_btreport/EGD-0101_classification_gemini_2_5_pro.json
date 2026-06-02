@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0101",
+  "idh": {
+    "reasoning": "The patient's age of 51 is more typical for IDH-wildtype gliomas. The presence of extensive necrosis (`Proportion Necrosis`: 71.78%) and satellite lesions (`Multiple satellites present`: 'Present') are strong radiological markers of high-grade, aggressive biology, most commonly associated with IDH-wildtype status. These features outweigh the findings that could suggest an IDH-mutant tumor, such as the predominantly non-enhancing nature of the lesion (`NCR Volume (mL)` >> `ET Volume (mL)`) and insular involvement. Therefore, an IDH-wildtype prediction is favored.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction is non-codeleted. The presence of `Multiple satellites present` suggests poorly defined, highly infiltrative margins, which is uncharacteristic of 1p/19q-codeleted oligodendrogliomas. Furthermore, the high `Proportion Necrosis` (71.78%) is a feature of astrocytic tumors (non-codeleted) and is exceptionally rare in oligodendrogliomas. Insular involvement (`Region Proportions`) also strongly favors an astrocytic lineage. The frontal lobe location is common for both but does not outweigh the strong astrocytic features.",
+    "supporting_features": [
+      "Multiple satellites present",
+      "Proportion Necrosis",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is based on the definitive radiological evidence of necrosis. The metadata explicitly states a high `Proportion Necrosis` of 71.78%. In the context of a diffuse glioma, the presence of necrosis is a hallmark feature that defines WHO grade 4. This is further supported by the presence of contrast enhancement (`ET Volume (mL)` > 0) and `Multiple satellites present`, which indicate aggressive biological behavior consistent with the highest grade. The large non-enhancing component does not preclude a grade 4 diagnosis, as it represents the infiltrative part of the tumor from which the high-grade components arose.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Multiple satellites present",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "A 51-year-old male with a right frontal lobe tumor. Imaging features are most consistent with a high-grade glioma. The presence of extensive necrosis and satellite lesions strongly supports a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. While the tumor has a large non-enhancing component and involves the insula, features more typical of IDH-mutant astrocytoma, the aggressive markers of necrosis and satellites are considered more definitive for molecular subtyping and grading."
+}

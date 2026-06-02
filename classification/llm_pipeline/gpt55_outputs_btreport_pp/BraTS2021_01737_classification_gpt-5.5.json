@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The strongest MRI-derived predictors favoring IDH-wildtype are older age, multifocal disease, and a lesion dominated by extensive FLAIR abnormality/edema with some necrotic or nonenhancing core. The absence of a T2-FLAIR mismatch also does not provide the classic imaging support for IDH-mutant astrocytoma. Features that argue against IDH-wildtype include frontal cortical location, mild/tiny enhancement, absence of deep white matter invasion, and absence of ependymal invasion, which can be seen more often in lower-grade IDH-mutant glioma. Overall, the age and multifocal/edematous pattern outweigh the more indolent-appearing frontal cortical and minimally enhancing features, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, 1p/19q-non-codeleted, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the main features favoring non-codeletion are older age, multifocality, prominent edema, and a measurable necrotic/nonenhancing core, which are less typical for oligodendroglioma. The strongest features arguing toward codeletion are frontal cortical involvement and absent T2-FLAIR mismatch, since oligodendrogliomas often involve the frontal cortex and do not usually show the classic astrocytoma-type mismatch. Mild enhancement is not decisive because oligodendrogliomas may enhance. Because the metadata lack calcification-sensitive imaging and the available features are mixed, the best estimate is non-codeleted with only modest confidence.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/GRE. The main uncertainty is that frontal cortical location and minimal enhancement can fit an IDH-mutant diffuse glioma or oligodendroglioma, while age, multifocality, edema, and necrotic/nonenhancing component favor a more aggressive IDH-wildtype process. Molecular testing remains required for definitive WHO-CNS5 classification.",
+  "subject_id": "BraTS2021_01737",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the imaging features supporting grade 4 are multifocal disease, extensive edema, and a reported necrotic/nonenhancing component, together with a thick enhancing-margin descriptor. These findings favor biologically aggressive tumor over grade 2. Features arguing against grade 4 include only mild enhancement, extremely small enhancing volume, no enhancing components by component count, no midline shift, no deep white matter invasion, no ependymal invasion, and relatively limited tumor size, which could fit grade 3 or even a lower-grade lesion with edema. On balance, the multifocal edematous pattern with necrotic/nonenhancing component makes grade 4 the best estimate, but confidence is moderate because classic robust ring enhancement and mass effect are not present.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

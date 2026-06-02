@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_00721",
+  "idh": {
+    "reasoning": "The patient's age of 60 is a strong demographic predictor for IDH-wildtype status, as IDH-mutant gliomas typically occur in younger patients. The imaging features provide compelling evidence for IDH-wildtype status. The presence of necrosis (NCR Volume (mL) > 0) is a classic hallmark of IDH-wildtype glioblastoma. Furthermore, the significant contrast enhancement (ET Volume (mL) of 8.713, Thickness of enhancing margin >3mm) and extensive vasogenic edema (ED Volume (mL) of 82.999) are highly characteristic of IDH-wildtype tumors. Ependymal and deep white matter invasion further support an aggressive, infiltrative phenotype associated with IDH-wildtype gliomas. The only weakly contradicting feature is the qualitative description of 'Mild' enhancement, which is outweighed by the quantitative data and the presence of necrosis.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically present with indistinct margins and often lack significant enhancement or necrosis. The subject's tumor exhibits features strongly arguing against co-deletion, namely the presence of necrosis (NCR Volume (mL) > 0), a thick enhancing margin (Thickness of enhancing margin: '>3mm'), and extensive peritumoral edema (ED Volume (mL): 82.999). These features are characteristic of astrocytic lineage tumors (1p/19q non-codeleted). While cortical involvement is present, which can be seen in oligodendrogliomas, it is a non-specific finding. The overall imaging phenotype is highly suggestive of a non-codeleted glioma.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Thickness of enhancing margin",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis on imaging is a key determinant of high grade. The metadata explicitly reports a non-zero necrosis volume (NCR Volume (mL): 1.307), which is a strong radiological correlate of histopathological necrosis. In the context of an adult-type diffuse glioma, necrosis is a defining feature of CNS WHO grade 4. This is further supported by other features of high-grade malignancy, including significant contrast enhancement (ET Volume (mL): 8.713), a thick enhancing margin, extensive edema (ED Volume (mL): 82.999), and ependymal invasion. The patient's advanced age (60) also increases the likelihood of a high-grade tumor. There is no imaging evidence to support a lower grade diagnosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings in this 60-year-old patient are highly characteristic of a glioblastoma. The presence of necrosis, thick contrast enhancement, extensive edema, and deep invasion strongly support the diagnosis of an IDH-wildtype, 1p/19q non-codeleted, CNS WHO grade 4 glioma. The predictions for each molecular marker and the grade are internally consistent and point to a single, high-confidence diagnosis."
+}

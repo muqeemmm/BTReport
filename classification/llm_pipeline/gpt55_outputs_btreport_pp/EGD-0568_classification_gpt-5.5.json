@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest available MRI marker is a positive T2-FLAIR mismatch with a high score, which is classically associated with IDH-mutant astrocytic diffuse glioma. Predominantly nonenhancing tumor burden and only mild/minimal enhancement also fit an IDH-mutant pattern better than a typical IDH-wildtype glioblastoma phenotype. Evidence against IDH mutation includes older age, very large tumor and edema volumes, mass effect, ependymal and deep white matter invasion, and a reported high necrosis proportion, all of which can be seen with IDH-wildtype aggressive glioma. On balance, the T2-FLAIR mismatch finding is a relatively specific imaging clue, so the best estimate is IDH-mutant despite aggressive features.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Tumor Core Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "A positive T2-FLAIR mismatch is much more characteristic of IDH-mutant, 1p/19q-non-codeleted astrocytoma than oligodendroglioma. The lesion is predominantly temporal rather than the more classic frontal-predominant oligodendroglioma pattern, and the metadata does not provide supportive calcification or susceptibility information. Cortical involvement, age, temporal cortical location, and mild enhancement are not exclusive and can be seen in oligodendroglioma, so they mildly weaken certainty. Overall, the T2-FLAIR mismatch pattern favors non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "MRI metadata strongly suggests an IDH-mutant, 1p/19q-non-codeleted astrocytic tumor because of the high T2-FLAIR mismatch signal, but the grade estimate is less secure because enhancement is minimal while the metadata reports a large nonenhancing/necrotic component, extensive edema, mass effect, and ependymal/deep white matter invasion. DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification data were not available and were not used.",
+  "subject_id": "EGD-0568",
+  "who_grade": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "reasoning": "The grade assessment is driven by aggressive structural features: very large total and tumor-core volumes, large edema volume, midline shift, ventricular/ependymal invasion, deep white matter invasion, and a high reported necrosis proportion. These findings favor high-grade disease and, if the necrosis field represents true tumor necrosis, support CNS WHO grade 4. Features arguing against grade 4 include only mild enhancement, extremely small enhancing volume, low enhancing proportion, no enhancing components in the component count, and T2-FLAIR mismatch, which is often seen in lower-grade IDH-mutant astrocytoma. Given the strong mass effect/invasion/necrosis metadata but minimal enhancement, grade 4 is the best estimate with moderate confidence rather than high confidence.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Tumor Core Volume (mL)",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

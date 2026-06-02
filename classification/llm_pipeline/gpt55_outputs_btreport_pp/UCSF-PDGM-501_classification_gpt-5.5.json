@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest metadata support for IDH-mutant diffuse glioma is the combination of T2-FLAIR Mismatch Present and high T2-FLAIR Mismatch Score, which is a recognized MRI pattern for IDH-mutant astrocytoma. age_years of 26 and Tumor Location in the frontal_lobe also fit the typical younger-adult and frontal-predominant setting for IDH-mutant glioma. Mild enhancing burden on Enhancement Quality, very small ET Volume (mL), absent NCR Volume (mL), and absent Proportion Necrosis argue against the classic MRI phenotype of IDH-wildtype glioblastoma. Against IDH mutation, Anatomical Overlap Regions include deep midline structures, Side of Tumor Epicenter is Midline, and Ependymal (ventricular) Invasion, Deep WM invasion, large ED Volume (mL), midline_shift_present, and some enhancement could be seen with aggressive IDH-wildtype biology. Overall, the T2-FLAIR mismatch pattern and young age outweigh these aggressive anatomic features, so the conclusion is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, T2-FLAIR Mismatch Present with a high T2-FLAIR Mismatch Score strongly favors a non-codeleted astrocytic genotype rather than oligodendroglioma. Anatomical Overlap Regions show extensive deep gray and midline-region involvement, and Side of Tumor Epicenter is Midline, which is less typical for a classic 1p/19q-codeleted oligodendroglioma. Ependymal (ventricular) Invasion and Deep WM invasion further support an infiltrative astrocytic pattern. Evidence against non-codeletion is that Tumor Location is frontal_lobe with Cortical involvement and age_years is young, all of which can be compatible with oligodendroglioma. However, the T2-FLAIR mismatch pattern is the dominant discriminator, so the conclusion is 1p/19q non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "This is an MRI-metadata-only pre-operative estimate. DWI/ADC, perfusion, spectroscopy, SWI/GRE, histology, and molecular testing are not available here. The tiny enhancing component and absent necrosis argue against grade 4 imaging phenotype, while large FLAIR abnormality, mass effect, deep invasion, and ependymal invasion raise concern above grade 2; this is the main residual uncertainty.",
+  "subject_id": "UCSF-PDGM-501",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade assessed independently from the molecular calls, the metadata show features concerning for at least an intermediate-grade diffuse glioma: very large ED Volume (mL) and Total tumor volume (mL), midline_shift_present with high n_slices_with_shift and max_shift_mm, Effaced Ventricle, Ependymal (ventricular) Invasion, Deep WM invasion, and Eloquent Brain Involvement. These argue against a straightforward low-burden grade 2 lesion. Against grade 4, ET Volume (mL) is very small, Proportion Enhancing is low, Enhancement Quality is Mild, NCR Volume (mL) is 0, and Proportion Necrosis is 0. Lesion Sizes APxTVxCC (cm) describes a small enhancing focus rather than a bulky necrotic enhancing mass. The balance is therefore more consistent with CNS WHO grade 3 than grade 2 or grade 4, but confidence is limited because grading cannot be reliably determined from the available structural MRI metadata alone.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Effaced Ventricle",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

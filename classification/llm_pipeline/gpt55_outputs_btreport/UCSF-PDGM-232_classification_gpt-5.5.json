@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma: age_years is 22, which is young for IDH-wildtype glioblastoma; Tumor Location and Region Proportions place the lesion in a frontal_lobe-cortex distribution with Cortical involvement, a common IDH-mutant pattern; Enhancement Quality is None with ET Volume (mL) 0.0 and Proportion Enhancing 0.0, and NCR Volume (mL) 0.0 with Proportion Necrosis 0.0, arguing against an IDH-wildtype glioblastoma phenotype. Deep WM invasion and Ependymal (ventricular) Invasion are Absent, midline_shift_present is No, and the Text Report describes a nonenhancing solitary lesion without ventricular asymmetry, further supporting a lower-grade IDH-mutant appearance. The main counterpoints are Side of Tumor Epicenter reported as Midline and the entirely FLAIR/edema-labeled lesion burden in ED Volume (mL) and Proportion of Oedema, which are not specific and slightly reduce certainty. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Text Report",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the available MRI metadata is only weakly discriminating. Tumor Location and Region Proportions localize the lesion to a frontal_lobe-cortex region, and Cortical involvement is Present; this frontal cortical pattern supports an oligodendroglial, 1p/19q-codeleted possibility. Enhancement Quality is None, ET Volume (mL) is 0.0, and Proportion Enhancing is 0.0, which is compatible with a lower-grade codeleted tumor, and Multifocal or Multicentric is Solitary with Multiple satellites present Absent. The main argument against codeletion is age_years of 22, since this very young adult age can also fit non-codeleted astrocytic diffuse glioma and makes the co-deletion call uncertain. On balance, the frontal cortical nonenhancing solitary pattern slightly favors 1p/19q-codeleted status, but confidence is limited.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, or susceptibility information. The 1p/19q call is the least certain because the provided fields are not highly specific for co-deletion. Tissue diagnosis with molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "UCSF-PDGM-232",
+  "who_grade": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "reasoning": "The WHO grade assessment from MRI favors grade 2. Enhancement Quality is None, ET Volume (mL) is 0.0, and Proportion Enhancing is 0.0, arguing against imaging features typical of grade 4 disease. NCR Volume (mL) is 0.0 and Proportion Necrosis is 0.0, further arguing against grade 4. midline_shift_present is No, Asymmetrical Ventricles is Absent, Deep WM invasion is Absent, and Ependymal (ventricular) Invasion is Absent, supporting limited mass effect and less aggressive imaging behavior. Multifocal or Multicentric is Solitary and Multiple satellites present is Absent, also favoring a lower grade. The counterpoints are ED Volume (mL) 25.447 and Proportion of Oedema 100.0, indicating a moderate FLAIR-abnormal lesion burden, and Eloquent Brain Involvement is present; these do not prove high grade but prevent certainty and grade 3 cannot be excluded by metadata alone. Overall, the nonenhancing, non-necrotic, solitary lesion with minimal mass effect best supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

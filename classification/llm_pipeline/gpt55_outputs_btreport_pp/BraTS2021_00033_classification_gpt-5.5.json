@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI-grounded support for IDH mutation is the young age in age_years, together with a largely non-necrotic, only mildly enhancing tumor pattern: Enhancement Quality is mild, ET Volume (mL) and Proportion Enhancing are small relative to Whole Tumor Volume (mL), and NCR Volume (mL) plus Proportion Necrosis show no necrosis. These features are more typical of IDH-mutant diffuse glioma than of classic IDH-wildtype glioblastoma. Cortical involvement and temporal-predominant location are compatible with an adult diffuse glioma in the IDH-mutant spectrum. Against IDH mutation, Ependymal (ventricular) Invasion, Deep WM invasion, the very large ED Volume (mL), and midline_shift_present with max_shift_mm indicate aggressive infiltrative behavior and mass effect, which can be seen in IDH-wildtype disease. T2-FLAIR Mismatch Present is absent, which argues against the specific IDH-mutant astrocytoma mismatch phenotype but does not exclude IDH mutation. Overall, the age and lack of necrosis with mild enhancement favor IDH-mutant, with moderate uncertainty from the aggressive extent and ventricular involvement.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Whole Tumor Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the available MRI metadata provide only indirect evidence. A non-codeleted astrocytoma-spectrum tumor is favored because Tumor Location and Region Proportions show a temporal-predominant lesion with parietal, occipital, ventricular, and cortical involvement rather than a clearly frontal-predominant cortical-subcortical pattern that would more strongly suggest oligodendroglioma. Deep WM invasion, Ependymal (ventricular) Invasion, and the very large Whole Tumor Volume (mL) also fit a diffusely infiltrative astrocytic pattern, although they are not specific. Evidence against non-codeletion includes T2-FLAIR Mismatch Present being absent, since absence of mismatch can be seen in oligodendroglioma; mild Enhancement Quality and Cortical involvement are also compatible with oligodendroglioma, and age_years is young enough for either genotype. Because classic oligodendroglioma-supporting features are limited in the provided metadata and no calcification assessment is available, the best estimate is non-codeleted with low-to-moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Whole Tumor Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without diffusion, perfusion, spectroscopy, or susceptibility/calcification assessment. The 1p/19q call is the least secure because several key oligodendroglioma discriminators are unavailable. Small-volume mild enhancement without necrosis favors grade 3 over grade 4, but tissue and molecular testing remain required for definitive WHO CNS5 classification.",
+  "subject_id": "BraTS2021_00033",
+  "who_grade": {
+    "confidence": 0.67,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, the metadata favor an intermediate/high-grade diffuse glioma rather than grade 2 because there is enhancing tumor on ET Volume (mL), a Solid enhancing component by Thickness of enhancing margin, extensive abnormal signal by ED Volume (mL) and Whole Tumor Volume (mL), mass effect with midline_shift_present and max_shift_mm, plus Deep WM invasion and Ependymal (ventricular) Invasion. These features argue against a purely low-grade lesion. Grade 4 is less favored because NCR Volume (mL) is 0.0, Proportion Necrosis is 0.0, Enhancement Quality is only mild, and ET Volume (mL) plus Proportion Enhancing are small relative to Whole Tumor Volume (mL), so the classic necrotic, avidly enhancing grade 4 imaging pattern is not demonstrated. Balancing these points, the imaging best supports CNS WHO grade 3, with uncertainty because grading cannot be definitive from these sequences alone.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

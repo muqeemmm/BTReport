@@ -1,0 +1,85 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors IDH-wildtype disease because the patient is elderly, the tumor is very large, infiltrative, bilateral/cross-midline, associated with extensive edema, midline shift, ependymal invasion, deep white matter invasion, and necrotic/enhancing tumor components. These features fit an aggressive adult diffuse glioma phenotype. Features arguing against IDH-wildtype include frontal cortical location and only mild/small-volume enhancement, which can be seen in IDH-mutant gliomas, but they are outweighed by the age and aggressive infiltrative/necrotic pattern. The T2-FLAIR mismatch is not present, which does not support the classic IDH-mutant astrocytoma imaging pattern.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Side of Tumor Epicenter",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata favors non-codeleted status because the lesion shows an aggressive infiltrative phenotype with very large tumor volume, extensive edema, necrotic component, ependymal invasion, deep white matter invasion, bilateral epicenter/cross-midline nonenhancing disease, and mass effect. These findings are less typical for classic oligodendroglioma. Features arguing for possible 1p/19q-codeletion are frontal cortical involvement, which is a common location pattern for oligodendroglioma; however, calcification-sensitive imaging is unavailable and the aggressive edema/necrosis/invasion pattern weighs more strongly toward non-codeleted status.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "midline_shift_present"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility/calcification assessment. The strongest imaging impression is an aggressive adult diffuse glioma, most compatible with IDH-wildtype glioblastoma, but molecular confirmation is required. Frontal cortical involvement introduces some residual uncertainty for 1p/19q status, and limited enhancement volume slightly tempers grade confidence despite substantial necrotic/nonenhancing tumor burden and edema.",
+  "subject_id": "BraTS2021_01521",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "The metadata favors CNS WHO grade 4 because there is a substantial necrotic/nonenhancing core, thick enhancing margin, very large whole-tumor burden, extensive edema, midline shift, ependymal invasion, deep white matter invasion, and bilateral/cross-midline infiltrative disease. These are imaging markers of high-grade aggressive behavior. Features arguing against grade 4 include only mild enhancement and relatively small enhancing volume, which could reduce certainty from imaging alone; however, the necrotic burden, edema, invasion, and mass effect support grade 4 over grade 2 or 3.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter",
+      "crosses_ideal_midline",
+      "crosses_patient_midline"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0053",
+  "idh": {
+    "reasoning": "The patient's age of 56 years is more typical for IDH-wildtype gliomas. The MRI features are classic for glioblastoma, IDH-wildtype. Specifically, the tumor shows marked, thick-rim enhancement ('Enhancement Quality': \"Marked\", 'Thickness of enhancing margin': \">3mm\"), a very large necrotic core ('Proportion Necrosis': 31.51), and deep anatomical involvement including the thalamus and brainstem ('Anatomical Overlap Regions'). Furthermore, the very sharp transition zone ('Transition Zone Thickness (FLAIR)' median_mm: 0.75) is a strong indicator of an IDH-wildtype tumor, as opposed to the more infiltrative margins of IDH-mutant astrocytomas. The absence of a T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0) also argues against an IDH-mutant astrocytoma. There is no significant evidence to support an IDH-mutant diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. The imaging phenotype is strongly against a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically lack extensive necrosis and marked ring enhancement. This tumor, however, has a very large necrotic core ('Proportion Necrosis': 31.51) and marked, thick-rim enhancement ('Enhancement Quality': \"Marked\", 'Thickness of enhancing margin': \">3mm\"). Additionally, the tumor margins are unusually sharp ('Transition Zone Thickness (FLAIR)' median_mm: 0.75), which is atypical for oligodendrogliomas that usually have indistinct, infiltrative borders. The deep involvement of the thalamus and basal ganglia is also less common for oligodendrogliomas. While there is cortical involvement, which can be seen in oligodendrogliomas, the overwhelming evidence points to an astrocytic lineage tumor, which is by definition non-codeleted.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive central necrosis is a defining feature of WHO grade 4 gliomas. The MRI metadata clearly indicates a large necrotic component ('Proportion Necrosis': 31.51, 'NCR Volume (mL)': 43.063), which corresponds to the non-enhancing core of a ring-enhancing lesion. The presence of marked, thick-rim contrast enhancement ('Enhancement Quality': \"Marked\", 'Thickness of enhancing margin': \">3mm\") is also a hallmark of grade 4 disease. The significant mass effect ('midline_shift_present': \"Yes\", 'max_shift_mm': -10.0) further supports the diagnosis of a high-grade, aggressive tumor. There are no features to suggest a lower grade, such as non-enhancement (grade 2) or patchy, non-rim enhancement (often grade 3). The findings are unequivocally indicative of a WHO grade 4 tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI metadata for this 56-year-old patient strongly indicates a high-grade glioma. The combination of older age, a large tumor with a significant necrotic core, marked ring enhancement, and sharp margins is classic for Glioblastoma, IDH-wildtype. The predictions for IDH-wildtype status, non-codeletion, and WHO grade 4 are all made with high confidence and are internally consistent with the WHO CNS5 classification."
+}

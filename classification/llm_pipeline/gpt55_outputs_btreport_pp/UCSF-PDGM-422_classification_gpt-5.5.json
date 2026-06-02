@@ -1,0 +1,68 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The strongest MRI-derived support for IDH-wildtype biology is the very advanced age and an enhancing, edema-dominant lesion: age_years is 78, Enhancement Quality is mild but present, ET Volume (mL) is measurable, and Proportion of Oedema is very high. These features are more typical of aggressive IDH-wildtype diffuse glioma than lower-grade IDH-mutant glioma. Against this, T2-FLAIR Mismatch Present with a high T2-FLAIR Mismatch Score is a recognized imaging pattern favoring IDH-mutant astrocytoma, and the lesion is cortical with limited size and no midline shift, which are less typical of bulky IDH-wildtype glioblastoma. Balancing these conflicting features, the age and enhancement/edema pattern slightly outweigh the T2-FLAIR mismatch signal, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the available MRI metadata favors non-codeletion. The lesion is parietal/occipital rather than the more typical frontal-predominant pattern often seen in oligodendroglioma, and T2-FLAIR Mismatch Present with a high T2-FLAIR Mismatch Score supports an astrocytic rather than oligodendroglial imaging phenotype. Advanced age also argues against a typical oligodendroglioma presentation. Mild enhancement and cortical involvement can be seen in oligodendroglioma and therefore provide limited contrary evidence, but they are nonspecific. Overall, the imaging pattern best supports non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured pre-operative MRI metadata and remain uncertain because molecular status cannot be determined definitively from these fields. The main atypical feature for an IDH-wildtype glioblastoma prediction is the reported T2-FLAIR mismatch, which usually favors IDH-mutant, non-codeleted astrocytoma.",
+  "subject_id": "UCSF-PDGM-422",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently from the molecular predictions, high-grade disease is supported by the presence of enhancing tumor, a thick enhancing margin, and extensive edema relative to tumor volume. The patient age is also more typical of an aggressive adult-type diffuse glioma. These factors favor grade 4 over grade 2, and somewhat over grade 3. However, the enhancement is described as mild, necrosis is minimal by Proportion Necrosis and NCR Volume (mL), lesion dimensions are modest, and there is no midline shift, all of which reduce certainty for grade 4 and could fit grade 3. On balance, the edema-dominant enhancing phenotype in an elderly patient best supports CNS WHO grade 4, but with only moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

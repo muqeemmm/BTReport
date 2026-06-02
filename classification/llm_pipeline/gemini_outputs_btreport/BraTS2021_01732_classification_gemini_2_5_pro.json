@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_01732",
+  "idh": {
+    "reasoning": "The patient's young age (23 years) is the strongest predictor for an IDH-mutant glioma. The tumor's imaging phenotype, characterized by a very large size with a minimal enhancing component (0.392 mL) and a large non-enhancing/necrotic core, is also highly characteristic of an IDH-mutant astrocytoma. Features that could suggest an IDH-wildtype tumor, such as a high proportion of necrosis (38.18%) and extensive edema, are less specific and can be seen in high-grade IDH-mutant tumors. The combination of young age and lack of significant enhancement overwhelmingly favors an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor exhibits features more consistent with an astrocytic lineage (non-codeleted) than an oligodendroglial one. Specifically, the presence of a very large necrotic component (38.18%), extensive surrounding edema (123.43 mL), and invasion into deep gray matter structures (thalamus, caudate, putamen) are all hallmarks of a high-grade, infiltrative astrocytoma. While the frontal lobe location is common in oligodendrogliomas, it is not specific, and the other aggressive features strongly argue against a 1p/19q-codeleted tumor, which typically has more defined margins and less necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic component (Proportion Necrosis: 38.18%) is the most compelling radiographic feature for a CNS WHO grade 4 diagnosis. Additional features supporting a high-grade tumor include the very large total tumor volume (200.282 mL), significant mass effect (max_shift_mm: -11.0), extensive edema, and ependymal invasion. Although contrast enhancement is minimal, necrosis is a sufficient criterion for a grade 4 designation in the context of an IDH-mutant astrocytoma. The combination of these aggressive features makes a lower grade (2 or 3) highly unlikely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of very young patient age and a large, minimally enhancing tumor strongly suggests an IDH-mutant glioma. The presence of extensive necrosis, significant mass effect, and deep infiltration are characteristic of an astrocytic lineage and point towards a high-grade lesion. The final integrated diagnosis based on imaging is Astrocytoma, IDH-mutant, CNS WHO grade 4."
+}

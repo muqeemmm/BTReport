@@ -1,0 +1,48 @@
+{
+  "subject_id": "UCSF-PDGM-286",
+  "idh": {
+    "reasoning": "The patient's age of 39 years is more typical for IDH-mutant gliomas. The most compelling imaging feature is the complete absence of contrast enhancement and necrosis (Enhancement Quality: 'None', ET Volume (mL): 0.0, NCR Volume (mL): 0.0). This non-enhancing presentation is a classic hallmark of IDH-mutant tumors. IDH-wildtype gliomas in this age group are typically glioblastomas, which almost invariably demonstrate significant enhancement. The primary contradicting feature is the absence of a T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 0.0), which is specific for IDH-mutant astrocytomas. However, the lack of enhancement is a much stronger predictor of IDH-mutant status overall than the absence of T2-FLAIR mismatch is a predictor of wildtype status. Therefore, the evidence strongly favors an IDH-mutant glioma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The distinction between codeleted (oligodendroglioma) and non-codeleted (astrocytoma) is challenging with the available data. The absence of the T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 0.0) argues against an IDH-mutant astrocytoma, as this sign is highly specific for that entity. However, the tumor's infiltrative nature, characterized by deep white matter invasion (Deep WM invasion: 'Present') and involvement of the putamen (Anatomical Overlap Regions: ['right putamen']), is more characteristic of an astrocytoma's tendency to spread along white matter tracts. Oligodendrogliomas are more often cortically based with better-defined margins. The evidence is conflicting, but the infiltrative pattern into deep structures provides slightly more weight towards a non-codeleted status.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The key determinants of glioma grade on conventional MRI are contrast enhancement and necrosis. This tumor shows a complete absence of both (Enhancement Quality: 'None', ET Volume (mL): 0.0, NCR Volume (mL): 0.0). This imaging phenotype is the classic presentation of a low-grade diffuse glioma, corresponding to WHO grade 2. While a non-enhancing tumor can occasionally be grade 3 (anaplastic), there are no features here, such as aggressive mass effect (midline_shift_present: 'No'), to suggest a higher grade. A grade 4 diagnosis is highly unlikely given the lack of enhancement and necrosis. Therefore, the evidence overwhelmingly supports a WHO grade 2 classification.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 39-year-old with a large, solitary, purely non-enhancing tumor in the right hemisphere involving frontal and parietal lobes, cortex, deep white matter, and putamen. The lack of enhancement strongly indicates an IDH-mutant glioma, and the absence of high-grade features makes WHO grade 2 the most likely diagnosis. The distinction between astrocytoma and oligodendroglioma is difficult; the deep infiltrative pattern slightly favors astrocytoma (non-codeleted), though confidence is low."
+}

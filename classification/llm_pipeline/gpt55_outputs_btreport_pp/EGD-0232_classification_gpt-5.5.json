@@ -1,0 +1,86 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "Assessing IDH status independently, the MRI metadata overall favors an IDH-wildtype phenotype: the patient is very elderly, and the tumor shows marked enhancement with a thick enhancing margin, substantial enhancing volume, necrotic/nonenhancing component, prominent edema, and measurable midline shift, which together are more typical of IDH-wildtype glioblastoma than IDH-mutant diffuse astrocytoma. The main evidence against IDH-wildtype is the reported T2-FLAIR mismatch and frontal cortical location, which can favor IDH-mutant astrocytoma, but in this case that sign is less persuasive because the lesion is markedly enhancing and necrotic rather than a predominantly nonenhancing lower-grade-appearing mass. Therefore, the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessing 1p/19q status independently, the strongest imaging evidence favors a non-codeleted tumor. The reported T2-FLAIR mismatch is more characteristic of astrocytic, non-codeleted glioma than oligodendroglioma, and the marked enhancement, thick enhancing margin, necrotic component, substantial edema, and mass effect are less typical of a classic 1p/19q-codeleted oligodendroglioma. Evidence arguing toward codeletion is the frontal cortical location, which is a common location for oligodendroglioma. Because key oligodendroglioma discriminators such as calcification are not available, the prediction remains probabilistic, but the balance favors non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or calcification assessment. The reported T2-FLAIR mismatch is an important atypical feature for an IDH-wildtype glioblastoma call, but its specificity is reduced in a markedly enhancing necrotic lesion.",
+  "subject_id": "EGD-0232",
+  "who_grade": {
+    "confidence": 0.92,
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "Assessing CNS WHO grade independently, the imaging phenotype strongly favors grade 4. Marked enhancement with a thick enhancing margin, a large enhancing component, a sizable necrotic/nonenhancing component, substantial edema, and midline shift are classic high-grade features and are much more supportive of grade 4 than grade 2. Grade 3 can enhance, but the necrotic component plus mass effect and thick marked enhancement make grade 4 the better estimate. Features arguing against a more disseminated aggressive pattern include absence of ependymal invasion, deep white matter invasion, midline crossing, multifocality, and satellites; however, these are not required for grade 4. Therefore, the best estimate is CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

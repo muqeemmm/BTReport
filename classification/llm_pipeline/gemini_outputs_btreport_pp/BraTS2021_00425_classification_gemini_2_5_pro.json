@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00425",
+  "idh": {
+    "reasoning": "The patient's advanced age (69 years) is the strongest predictor for IDH-wildtype status, as the vast majority of de novo gliomas in this age group are IDH-wildtype. This is further supported by the very sharp tumor border, indicated by a small median 'Transition Zone Thickness (FLAIR)' of 0.75 mm, which is more characteristic of IDH-wildtype gliomas than the ill-defined margins of IDH-mutant astrocytomas. The absence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0) also argues against the most common type of IDH-mutant glioma (astrocytoma). While the lack of necrosis and only mild enhancement are somewhat atypical for a classic glioblastoma, these features are not sufficient to outweigh the compelling evidence from the patient's age and tumor margin characteristics.",
+    "supporting_features": [
+      "age_years",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is challenging due to conflicting features. The tumor's primary location in the insula ('Region Proportions' showing 99.7% insular involvement) is atypical for oligodendroglioma (the entity with 1p/19q co-deletion), which more classically involves the frontal lobes. This argues for a non-codeleted status. Conversely, the very sharp tumor margin ('Transition Zone Thickness (FLAIR)' median 0.75 mm) is a classic feature of oligodendroglioma, arguing for co-deletion. Given that insular location is a strong feature for astrocytic lineage tumors and that these are more common overall than oligodendrogliomas, the evidence slightly favors a non-codeleted status, but the confidence is low due to this direct conflict of imaging signs.",
+    "supporting_features": [
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The presence of contrast enhancement ('Enhancement Quality': 'Mild', 'ET Volume (mL)': 1.988) in a diffuse glioma in an adult is a hallmark of a high-grade tumor (WHO grade 3 or 4). The patient's advanced age (69 years) makes a high-grade glioma, particularly grade 4, the most probable diagnosis. The significant surrounding edema ('ED Volume (mL)': 23.787) further supports a high-grade designation due to breakdown of the blood-brain barrier. The primary feature arguing against grade 4 is the complete absence of imaging evidence of necrosis ('Proportion Necrosis': 0.0%). However, a subset of WHO grade 4 gliomas (especially IDH-wildtype) can present without significant necrosis on imaging. The combination of age and enhancement strongly points to a high-grade tumor, with grade 4 being the most likely.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a 69-year-old male with a solitary, enhancing right insular glioma. The advanced age is the most significant factor, strongly favoring an IDH-wildtype diagnosis. Imaging features, including sharp margins and the absence of a T2-FLAIR mismatch, support this. The presence of enhancement and edema indicates a high-grade tumor. The combination of IDH-wildtype status and high-grade features leads to a diagnosis of Glioblastoma, WHO grade 4, which is consistent with the WHO CNS5 classification, even in the absence of imaging evidence of necrosis. The 1p/19q status prediction is the least certain due to conflicting imaging signs (location vs. border definition)."
+}

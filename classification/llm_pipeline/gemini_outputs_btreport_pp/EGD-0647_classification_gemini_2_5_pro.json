@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0647",
+  "idh": {
+    "reasoning": "The evidence for IDH status is conflicting. The strongest feature supporting an IDH-mutant status is the definitive presence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 1.0), which is a highly specific imaging biomarker for IDH-mutant astrocytomas. This is further supported by the patient's relatively young age (42), the very sharp tumor-edema boundary ('Transition Zone Thickness (FLAIR)' median of 0.75 mm), and the mild quality of enhancement. However, there is a powerful contradicting feature: the massive amount of necrosis ('Proportion Necrosis': 62.74, 'NCR Volume (mL)': 163.575). Extensive necrosis is a classic hallmark of IDH-wildtype glioblastoma. Weighing these, the T2-FLAIR mismatch is a more direct surrogate for the molecular genotype than necrosis, which is a feature of high grade. Therefore, I predict IDH-mutant, but with reduced confidence due to the strong contradictory evidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Transition Zone Thickness (FLAIR)",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q co-deletion status is primarily driven by a single, highly specific imaging feature. The presence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 1.0) is strongly associated with IDH-mutant, 1p/19q non-codeleted astrocytomas and is rarely seen in oligodendrogliomas (IDH-mutant, 1p/19q codeleted). The tumor's location, spanning multiple lobes including parietal and temporal, is also less typical for classic frontal-predominant oligodendroglioma. The extensive necrosis is also more characteristic of a high-grade astrocytoma than an oligodendroglioma. Therefore, the evidence strongly points towards a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is unambiguous based on the provided data. The tumor exhibits a massive necrotic core, with the 'Proportion Necrosis' being 62.74% of the tumor core and the 'NCR Volume (mL)' at 163.575. The presence of central necrosis is a defining radiological feature of a WHO Grade 4 glioma, irrespective of IDH status. This high-grade assignment is strongly corroborated by other aggressive features, including the very large 'Total tumor volume (mL)' of 260.728, significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': -12.0), and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'). The mild enhancement is noted but does not outweigh the definitive evidence of necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents conflicting imaging features. The definitive T2-FLAIR mismatch strongly suggests an IDH-mutant, non-codeleted astrocytoma. However, the massive central necrosis is a hallmark of a high-grade tumor and is more commonly associated with IDH-wildtype glioblastoma, leading to reduced confidence in the IDH prediction. Nevertheless, the combination of features is most consistent with a high-grade transformation of an IDH-mutant astrocytoma. The presence of extensive necrosis unequivocally indicates a WHO Grade 4 tumor. The integrated diagnosis is therefore Astrocytoma, IDH-mutant, CNS WHO grade 4."
+}

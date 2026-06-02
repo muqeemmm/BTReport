@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0081",
+  "idh": {
+    "reasoning": "The patient's advanced age (66 years) is a very strong predictor for IDH-wildtype status. The imaging features are classic for glioblastoma (the most common IDH-wildtype glioma), including marked and thick-walled enhancement, a large necrotic core, and aggressive features such as midline crossing, deep white matter invasion, and ependymal invasion. There are no features to suggest an IDH-mutant tumor, which typically presents in younger patients and lacks such prominent necrosis and enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly indicative of a non-codeleted tumor. Features such as marked, thick-walled enhancement, a large necrotic core, and ependymal invasion are characteristic of high-grade astrocytic tumors (which are non-codeleted), not oligodendrogliomas (which are codeleted). Oligodendrogliomas typically lack this degree of aggressive enhancement and necrosis. While the frontal lobe location can be seen in oligodendrogliomas, it is a non-specific finding, and the overwhelming evidence points towards a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of both marked contrast enhancement and a significant volume of necrosis are definitive imaging hallmarks of a CNS WHO grade 4 glioma. The metadata confirms 'Marked' enhancement quality, a large enhancing volume, and a necrotic volume of over 22 mL. Additional features supporting a high grade include the very large total tumor volume, significant mass effect with midline shift, deep white matter invasion, and ependymal invasion. There is no imaging evidence to support a lower grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age (66) and MRI findings of a large, midline-crossing mass with marked, thick-walled enhancement, extensive necrosis, and ependymal invasion provides a classic radiographic presentation of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The confidence in all predictions is very high due to the presence of multiple concordant, high-specificity imaging features."
+}

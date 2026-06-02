@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0111",
+  "idh": {
+    "reasoning": "The patient's advanced age (68 years) is a very strong predictor for IDH-wildtype status. The imaging phenotype is classic for an IDH-wildtype glioblastoma, characterized by a large, infiltrative mass with marked, thick-rim enhancement, central necrosis, extensive vasogenic edema, and significant mass effect. The tumor involves deep gray matter structures and the brainstem, which is also more typical for IDH-wildtype gliomas. There are no features to suggest an IDH-mutant tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "max_shift_mm",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.99
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging features are strongly indicative of an astrocytic lineage tumor, which is 1p/19q non-codeleted. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically present as well-circumscribed, cortically-based tumors with minimal or no enhancement and are not associated with necrosis. This tumor is the antithesis of that description, showing marked rim enhancement, a large necrotic core, and deep, infiltrative growth across multiple lobes. Therefore, a non-codeleted status is predicted with high confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Deep WM invasion",
+      "Region Proportions",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of both contrast enhancement and necrosis are the radiological hallmarks of a CNS WHO grade 4 glioma. The metadata confirms both features unequivocally: 'Enhancement Quality' is 'Marked', the 'Thickness of enhancing margin' is '>3mm', and there is a quantifiable 'NCR Volume (mL)' of 12.752. These findings are definitive for the highest grade, leaving no ambiguity.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 1.0
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age and classic radiological features\u2014a large, multi-lobar, infiltrative mass with thick rim-enhancement, central necrosis, and significant mass effect\u2014provides a very high-confidence prediction of Glioblastoma, IDH-wildtype, CNS WHO grade 4. All individual predictions are highly concordant."
+}

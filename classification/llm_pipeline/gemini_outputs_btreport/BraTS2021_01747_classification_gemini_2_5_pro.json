@@ -1,0 +1,41 @@
+{
+  "subject_id": "BraTS2021_01747",
+  "idh": {
+    "reasoning": "The tumor is entirely non-enhancing and non-necrotic. The metadata shows `Enhancement Quality` is \"None\", `ET Volume (mL)` is 0.0, and `NCR Volume (mL)` is effectively zero (0.001). The entire lesion volume is characterized by T2/FLAIR hyperintensity (`Proportion of Oedema`: 100.0%). This imaging phenotype, a purely infiltrative, non-enhancing mass, is highly characteristic of an IDH-mutant glioma. Conversely, IDH-wildtype gliomas in adults are typically glioblastomas, which almost always demonstrate significant contrast enhancement and necrosis. The frontal lobe location is also a common site for IDH-mutant tumors. There are no contradicting features.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The task is to differentiate an IDH-mutant astrocytoma (non-codeleted) from an oligodendroglioma (codeleted). The tumor's location in the frontal lobe with cortical involvement (`Tumor Location`, `Cortical involvement`) is common to both subtypes and is therefore non-discriminatory. Classic distinguishing features, such as calcification or the T2-FLAIR mismatch sign, are not available in this metadata. The absence of deep white matter invasion (`Deep WM invasion`: \"Absent\") could slightly favor an oligodendroglioma, but this is a weak indicator. Without more specific features to differentiate these two entities, the prediction is made with low confidence. I will predict non-codeleted based on the higher prevalence of astrocytomas, but this is not based on strong imaging evidence.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The key imaging markers for WHO grade 4 (glioblastoma) are contrast enhancement and necrosis. This tumor has neither (`Enhancement Quality`: \"None\", `ET Volume (mL)`: 0.0, `NCR Volume (mL)`: 0.001). This strongly argues against a grade 4 diagnosis. The distinction between WHO grade 2 and 3 is more subtle on imaging. However, the complete absence of any enhancement is more typical for a grade 2 glioma, as grade 3 tumors (anaplastic) often show some degree of non-ring-like enhancement. The lack of significant mass effect (`midline_shift_present`: \"No\") further supports a lower-grade, slower-growing process. Therefore, WHO grade 2 is the most likely diagnosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly suggestive of a low-grade, IDH-mutant glioma, characterized by a complete lack of enhancement and necrosis. This supports the IDH-mutant and WHO grade 2 predictions with high confidence. However, the provided metadata lacks specific features to reliably distinguish between an astrocytoma (1p/19q non-codeleted) and an oligodendroglioma (1p/19q codeleted), making the 1p/19q status prediction uncertain."
+}

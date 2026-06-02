@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0758",
+  "idh": {
+    "reasoning": "The patient's young age (28 years) is a very strong demographic predictor for an IDH-mutant glioma, as IDH-wildtype tumors are much more common in older adults. The tumor also involves the insula, a common location for IDH-mutant astrocytomas. However, there is significant contradictory evidence pointing towards an IDH-wildtype tumor, including a large proportion of necrosis (42.75%), the absence of a T2-FLAIR mismatch sign, and a relatively sharp transition zone. Necrosis, in particular, is a hallmark of glioblastoma (IDH-wildtype). Given the profound conflict between the strong demographic data and the aggressive imaging features, the prediction leans towards IDH-mutant based primarily on age, but confidence is low.",
+    "supporting_features": [
+      "age_years",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the features strongly suggest a 1p/19q non-codeleted (astrocytic) lineage. The presence of a very large necrotic core is highly atypical for an oligodendroglioma (IDH-mutant, 1p/19q-codeleted) but is characteristic of a high-grade astrocytoma. Furthermore, the tumor's involvement of the temporal lobe and insula is more classic for astrocytoma than oligodendroglioma. While the relatively sharp tumor boundary could be seen in oligodendroglioma, this single feature is heavily outweighed by the presence of extensive necrosis and the tumor's location.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "boundary_sharpness"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO Grade 4 is made with high confidence based on the definitive presence of extensive necrosis. The metadata indicates a 'Proportion Necrosis' of 42.75%, which corresponds to a large necrotic core on imaging. The presence of necrosis is a defining histologic feature of WHO Grade 4 in both IDH-mutant and IDH-wildtype astrocytomas. This is further supported by other high-grade features such as a thick enhancing margin (>3mm) and the presence of multiple enhancing components. The patient's young age is the only factor arguing against a high-grade tumor, but it is insufficient to overcome the strong radiological evidence of necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "n_components_enhancing",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a 28-year-old patient with a large, multilobar tumor showing highly aggressive imaging features. The young age is the strongest predictor of IDH-mutant status, but this is contradicted by features typical of glioblastoma, such as extensive necrosis and sharp margins. The presence of necrosis is definitive for a WHO Grade 4 designation. The insular/temporal location and lack of T2-FLAIR mismatch favor an astrocytic lineage. The integrated diagnosis is Astrocytoma, IDH-mutant, CNS WHO grade 4, though confidence in the IDH status is low due to the conflicting findings."
+}

@@ -1,0 +1,57 @@
+{
+  "subject_id": "BraTS2021_00768",
+  "idh": {
+    "reasoning": "The tumor displays multiple aggressive features highly suggestive of IDH-wildtype status. The presence of necrosis (NCR Volume (mL) > 0), even if minimal, is a strong indicator. This is supported by significant mass effect (midline_shift_present: \"Yes\", max_shift_mm: 12.0), deep white matter and ependymal invasion, and a deep midline location involving the corpus callosum and thalamus. The presence of contrast enhancement with a thick margin further points towards an IDH-wildtype glioma. While the enhancement is described as 'Mild' and constitutes a small proportion of the tumor, this is insufficient to outweigh the strong combination of features classic for glioblastoma.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted oligodendroglioma. Features such as central necrosis (NCR Volume (mL) > 0), a thick enhancing margin, significant mass effect, and deep infiltrative behavior (Deep WM invasion, Ependymal (ventricular) Invasion) are characteristic of high-grade astrocytomas, not oligodendrogliomas. The deep midline location involving the thalamus and corpus callosum is also atypical for oligodendroglioma. While there is cortical involvement, which can be seen in oligodendrogliomas, this is a non-specific finding and is heavily outweighed by the features arguing against co-deletion.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis (NCR Volume (mL) of 0.329) is a defining radiological feature corresponding to WHO grade 4 in adult-type diffuse gliomas. This single feature is sufficient for a high-confidence prediction. The diagnosis is further corroborated by other features of high-grade malignancy, including contrast enhancement (ET Volume (mL) of 4.017), a thick enhancing margin, extensive vasogenic edema (ED Volume (mL) of 104.855), and significant mass effect (max_shift_mm of 12.0). There is no imaging evidence to support a grade 2 or 3 diagnosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "max_shift_mm",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly characteristic of a glioblastoma. The key feature is the presence of central necrosis, which, in combination with contrast enhancement, extensive edema, and significant mass effect, strongly indicates a WHO grade 4 tumor. The deep midline location and infiltrative features are classic for an IDH-wildtype glioma. All individual predictions are consistent with the integrated diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

@@ -1,0 +1,80 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The MRI metadata favors IDH-wildtype status: advanced age, measurable enhancing and necrotic tumor components, very large edema burden, deep white-matter and ependymal invasion, and mass effect are more typical of IDH-wildtype glioblastoma than IDH-mutant diffuse glioma. Absence of a T2-FLAIR mismatch also removes a specific imaging clue for IDH-mutant astrocytoma. Features arguing the other way include frontal/cortical involvement and only mild enhancement, which can be seen in IDH-mutant gliomas. Overall, the high-grade infiltrative phenotype in an older patient supports IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessed independently, the metadata favors non-codeleted status because the lesion occurs in an older patient and shows substantial edema, enhancing and necrotic components, deep white-matter invasion, ependymal invasion, and mass effect, which are less typical for classic oligodendroglioma imaging. The main counterarguments are frontal/cortical involvement and mild enhancement, which can fit oligodendroglioma, but the available MRI phenotype overall is more aggressive and less characteristic of 1p/19q-codeleted tumor.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "max_shift_mm"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The imaging phenotype is most compatible with an IDH-wildtype glioblastoma, but frontal/cortical location and mild enhancement modestly reduce certainty for molecular calls, especially 1p/19q status.",
+  "subject_id": "BraTS2021_00369",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "Assessed independently for grade, the metadata strongly supports CNS WHO grade 4 behavior: there is definite enhancing tumor, measurable necrotic/non-enhancing core, a thick enhancing margin, very extensive edema, ventricular effacement/asymmetry, midline shift, deep white-matter invasion, and ependymal invasion. These findings favor a high-grade diffuse glioma over grade 2 or grade 3. The main mitigating features are that enhancement is described as mild and the enhancing/necrotic proportions are not dominant, so imaging alone cannot prove histologic or molecular grade; nevertheless the overall mass-effect and necrotic-enhancing phenotype best supports grade 4.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

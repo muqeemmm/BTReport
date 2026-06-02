@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "age_years",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest imaging evidence favors an IDH-mutant diffuse glioma: the lesion is nonenhancing with no necrotic component, and the metadata reports a strong T2-FLAIR mismatch pattern, which is classically associated with IDH-mutant astrocytoma. The temporal-cortical location and cortical involvement are also compatible with lower-grade IDH-mutant glioma. Features arguing against this include the age of 42 years, which is not as young as the most typical low-grade IDH-mutant presentation, and the reported midline epicenter, which is atypical for a classic hemispheric IDH-mutant diffuse glioma. Overall, the imaging pattern substantially favors IDH mutation over IDH-wildtype disease.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The imaging evidence favors a non-codeleted tumor because a strong T2-FLAIR mismatch pattern is much more typical of IDH-mutant astrocytoma than oligodendroglioma with 1p/19q co-deletion. The absence of enhancement and necrosis is compatible with either lower-grade astrocytoma or oligodendroglioma, so it does not specifically support co-deletion. Features that could argue toward co-deletion include cortical involvement and a temporal-cortical location, since oligodendrogliomas can be cortically based; however, the available metadata lacks co-deletion-supportive features such as calcification assessment, and the T2-FLAIR mismatch pattern weighs more strongly against co-deletion. Overall, the best estimate is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured MRI metadata without diffusion, perfusion, spectroscopy, SWI/GRE, or histomolecular markers. The strong T2-FLAIR mismatch pattern drives the IDH-mutant, non-codeleted astrocytoma impression. WHO grade is an imaging estimate only; histology, mitotic activity, microvascular proliferation, necrosis, and molecular markers such as CDKN2A/B status are required for definitive grading.",
+  "subject_id": "UCSF-PDGM-237",
+  "who_grade": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The imaging evidence favors CNS WHO grade 2 because the lesion is entirely nonenhancing, has no measurable enhancing tumor, no necrotic component, no midline shift, and no deep white-matter or ependymal invasion. These features argue against imaging-grade high-grade behavior. The main features arguing against grade 2 are the relatively large whole-tumor/FLAIR abnormality volume, which can be seen in higher-grade infiltrative glioma, but there are no reported enhancement, necrosis, or substantial mass-effect features to support grade 3 or 4 on the available sequences. Overall, the imaging best estimate is grade 2, with residual uncertainty because MRI alone cannot definitively distinguish grade 2 from nonenhancing grade 3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "mean_shift_mm",
+      "median_shift_mm",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

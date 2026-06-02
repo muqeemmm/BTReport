@@ -1,0 +1,78 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "Assessing IDH status independently from the other tasks, the imaging pattern has mixed signals. Features favoring IDH-wildtype include a multifocal lesion pattern with Number of lesions = 4, Deep WM invasion = Present, large ED Volume (mL), very high Proportion of Oedema, and measurable enhancing/non-enhancing core components on ET Volume (mL) and NCR Volume (mL), which together suggest a more infiltrative/aggressive phenotype. Features arguing against IDH-wildtype and toward IDH-mutant include Tumor Location in the frontal_lobe-cortex region, Region Proportions dominated by frontal_lobe/cortex, Cortical involvement = Present, Enhancement Quality = Mild, very small ET Volume (mL), small NCR Volume (mL), midline_shift_present = No, and Ependymal (ventricular) Invasion = Absent. Overall, the multifocality, deep white matter invasion, and disproportionate edema outweigh the frontal cortical location and mild enhancement, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessing 1p/19q status independently, frontal cortical involvement can be seen with oligodendroglioma and therefore supports a possible codeleted tumor: Tumor Location is frontal_lobe-cortex region, Region Proportions include frontal_lobe and cortex, and Cortical involvement is Present. However, several features argue more strongly against 1p/19q co-deletion: Multifocal or Multicentric = Multifocal, Number of lesions = 4, Deep WM invasion = Present, ED Volume (mL) is large, Proportion of Oedema is very high, and there are measurable ET Volume (mL) and NCR Volume (mL). These findings are less typical for a classic codeleted oligodendroglioma on pre-operative MRI metadata. Because the codeletion-supporting evidence is mainly location-based while the non-codeleted evidence includes multifocality, invasion, edema, and enhancing/core components, the best estimate is non-codeleted.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The frontal cortical location and mild enhancement introduce uncertainty, but multifocality, deep white matter invasion, large edema burden, and measurable enhancing/non-enhancing core components make an aggressive non-codeleted, IDH-wildtype grade 4 glioma the favored integrated interpretation.",
+  "subject_id": "EGD-0332",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ],
+    "prediction": 4,
+    "reasoning": "Assessing CNS WHO grade independently, the MRI metadata favors a high-grade lesion. Multifocal or Multicentric = Multifocal, Number of lesions = 4, Deep WM invasion = Present, large ED Volume (mL), very high Proportion of Oedema, measurable ET Volume (mL), measurable NCR Volume (mL), Proportion Necrosis, and Thickness of enhancing margin >3mm support grade 4 behavior rather than grade 2 or grade 3. Features arguing against grade 4 include Enhancement Quality = Mild, small ET Volume (mL), small NCR Volume (mL), midline_shift_present = No, Asymmetrical Ventricles = Absent, Ependymal (ventricular) Invasion = Absent, CET Crosses midline = False, and Edema crosses midline = False. Despite the mild and low-volume enhancement, the combination of multifocality, deep invasion, extensive edema, and necrotic/core metadata makes CNS WHO grade 4 the best estimate.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

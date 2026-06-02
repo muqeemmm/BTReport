@@ -1,0 +1,64 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Total tumor volume (mL)",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors IDH-wildtype because the patient is older and the lesion is predominantly and markedly enhancing, a pattern more typical of IDH-wildtype glioblastoma than lower-grade IDH-mutant diffuse glioma. The absent T2-FLAIR mismatch also does not support the classic IDH-mutant astrocytoma imaging phenotype. Features arguing against IDH-wildtype include frontal cortical location, cortical involvement, small total tumor volume, and absent deep white-matter invasion, which can be seen in IDH-mutant gliomas. On balance, the age and strong enhancement pattern outweigh the location-based counterevidence, so the prediction is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Text Report",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest available metadata against codeletion is the older age and the markedly, mostly enhancing appearance, which are less typical of classic oligodendroglioma on MRI. The absence of a T2-FLAIR mismatch is not specific for codeletion and therefore does not positively identify oligodendroglioma. However, there is meaningful counterevidence: frontal cortical location and cortical involvement are common for oligodendroglioma, and no calcification-sensitive sequence is available to assess a key supportive feature. Because the evidence is limited and partly conflicting, the best estimate is non-codeleted with only moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Text Report",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or molecular testing. The strong enhancement and advanced age favor IDH-wildtype high-grade glioma, but the small frontal cortical lesion and minimal necrosis create residual uncertainty, particularly for 1p/19q status and exact WHO grade.",
+  "subject_id": "BraTS2021_00213",
+  "who_grade": {
+    "confidence": 0.69,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently from molecular status, the imaging leans high grade because there is marked enhancement, a high enhancing proportion, a thick enhancing margin, and the report describes the lesion as mostly enhancing. These features support aggressive biology and make grade 2 unlikely. Grade 3 remains possible because the necrotic proportion is very low, edema volume is modest, total tumor volume is small, midline shift is minimal, and there is no deep white-matter or ependymal invasion. Nevertheless, in an older adult, the marked predominantly enhancing phenotype is most concerning for CNS WHO grade 4 rather than grade 3, so grade 4 is favored with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

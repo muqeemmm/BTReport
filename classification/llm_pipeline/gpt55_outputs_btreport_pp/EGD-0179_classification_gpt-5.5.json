@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the strongest MRI metadata support IDH-mutant diffuse glioma: the patient is young for adult diffuse glioma, the tumor is frontal and predominantly cortical, and enhancement is mild/minimal with a very small enhancing volume. These features are more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. Evidence that could argue toward IDH-wildtype includes a midline epicenter/crossing behavior and substantial edema burden, which can be seen with more aggressive infiltrative tumors. However, the absence of a large enhancing component and the frontal cortical location make IDH-mutant the better-supported conclusion.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "Proportion of Oedema"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the metadata favor a codeleted oligodendroglial pattern because the lesion is frontal, strongly cortical, occurs in a relatively young adult, and shows only mild/minimal enhancement. Absence of a T2-FLAIR mismatch also does not support the classic IDH-mutant astrocytoma imaging pattern, which makes codeletion somewhat more plausible. Features arguing against confident codeletion include the midline epicenter/crossing behavior and substantial edema burden, which are not specific and can also be seen in non-codeleted infiltrative gliomas. Overall, the frontal cortical location and lack of a T2-FLAIR mismatch make codeleted the best estimate, but confidence is only moderate because key discriminators are not available in the provided metadata.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional MRI-derived metadata. Confidence is limited most for 1p/19q and WHO grade because no diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, or histologic molecular data are available. The imaging pattern is largely frontal cortical and minimally enhancing, but edema and midline-crossing FLAIR abnormality raise concern for at least intermediate-grade behavior.",
+  "subject_id": "EGD-0179",
+  "who_grade": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 3,
+    "reasoning": "For CNS WHO grade, the MRI metadata are mixed. Features supporting a higher-than-grade-2 tumor include mild enhancement, a reported enhancing margin, substantial edema proportion, edema crossing midline, and a moderate total tumor volume. These findings are more concerning than a purely nonenhancing, sharply localized low-grade lesion. Features arguing against grade 4 include the very small enhancing volume, no discrete enhancing components, no midline shift, no ependymal invasion, no deep white matter invasion, no satellites, and solitary disease. Because the enhancement is minimal but not absent and edema is substantial, grade 3 is the best imaging-based estimate, with limited confidence due to conflicting low-grade and high-grade features.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

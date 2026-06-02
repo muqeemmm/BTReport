@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_01247",
+  "idh": {
+    "reasoning": "The patient's age of 52 years is a strong predictor for IDH-wildtype status. The tumor's location, involving deep structures such as the putamen, pallidum, and brain-stem, is also highly characteristic of IDH-wildtype gliomas. Most importantly, the presence of necrosis (Proportion Necrosis: 3.48%) is a hallmark feature of glioblastoma, the most common IDH-wildtype tumor. While the enhancement is described as 'Mild', which can be seen in IDH-mutant tumors, this is outweighed by the combination of age, deep location, and necrosis.",
+    "supporting_features": [
+      "age_years",
+      "Anatomical Overlap Regions",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The tumor's deep location involving the basal ganglia and brain-stem is highly atypical for an oligodendroglioma (which would be codeleted) and much more characteristic of an astrocytoma (non-codeleted). The presence of necrosis and a thick enhancing margin are also more commonly associated with high-grade astrocytic tumors. There are no specific imaging features, such as a classic frontal lobe cortical location or well-defined borders, to suggest an oligodendroglioma phenotype.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 3.48%) is a definitive radiological feature for CNS WHO grade 4 in an adult-type diffuse glioma. This finding alone is sufficient to assign the highest grade. The presence of contrast enhancement ('Enhancement Quality': 'Mild', 'Thickness of enhancing margin': '>3mm') further supports a high-grade diagnosis (grade 3 or 4). The lack of midline shift is not a strong counterargument given the tumor's moderate size and deep location.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (>50), deep location involving the brain-stem, and the presence of necrosis provides strong, consistent evidence for a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The enhancement pattern is somewhat mild for a classic glioblastoma, but this does not detract from the key high-grade features."
+}

@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Tumor Location",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "ED Volume (mL)",
+      "midline_shift_present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the strongest supportive evidence is the reported T2-FLAIR mismatch pattern: 'T2-FLAIR Mismatch Present' is positive with a high 'T2-FLAIR Mismatch Score', a pattern classically associated with IDH-mutant diffuse astrocytoma. Additional supportive features include only mild enhancement on 'Enhancement Quality', small 'ET Volume (mL)', and absent necrosis on 'Proportion Necrosis', which are less typical of aggressive IDH-wildtype glioblastoma. The main opposing evidence is the midline/deep ventricular-parietal distribution in 'Tumor Location' and 'Anatomical Overlap Regions', 'Ependymal (ventricular) Invasion', 'Multifocal or Multicentric', large 'ED Volume (mL)', and 'midline_shift_present', which can be seen with biologically aggressive IDH-wildtype tumors. Overall, the T2-FLAIR mismatch and lack of necrosis outweigh the aggressive location/extent features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "age_years"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.79,
+    "contradicting_features": [
+      "Cortical involvement",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the imaging pattern is more supportive of a non-codeleted astrocytic tumor than an oligodendroglioma. 'T2-FLAIR Mismatch Present' and high 'T2-FLAIR Mismatch Score' argue against 1p/19q-codeleted oligodendroglioma and support a non-codeleted astrocytic phenotype. The 'Tumor Location' in the ventricles-parietal region, involvement of deep structures in 'Anatomical Overlap Regions', and 'Ependymal (ventricular) Invasion' are not the classic superficial frontal cortical-subcortical pattern expected for many codeleted oligodendrogliomas. 'Multifocal or Multicentric' also makes a typical oligodendroglioma pattern less likely. Opposing evidence includes 'Cortical involvement', 'age_years', and mild 'Enhancement Quality', which can be compatible with oligodendroglioma, but these are nonspecific. Overall, the T2-FLAIR mismatch and non-classic location favor non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The T2-FLAIR mismatch strongly supports an IDH-mutant non-codeleted astrocytic tumor, but the multifocal deep/ependymal involvement, large FLAIR abnormality, and mass effect raise concern for higher biological aggressiveness than a purely low-grade lesion.",
+  "subject_id": "UCSF-PDGM-331",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, the metadata supports an intermediate/high-grade lesion more than a purely grade 2 tumor because 'Enhancement Quality' is present, 'ET Volume (mL)' is measurable, 'Multifocal or Multicentric' is present, 'Ependymal (ventricular) Invasion' is present, 'Deep WM invasion' is present, 'ED Volume (mL)' is large, and 'midline_shift_present' indicates mass effect. These features argue against a confidently low-grade grade 2 lesion. However, grade 4 is not strongly supported because 'Proportion Necrosis' is 0.0, 'NCR Volume (mL)' is 0.0, enhancement is only mild on 'Enhancement Quality', enhancing burden is small on 'ET Volume (mL)' and 'Proportion Enhancing', and 'T2-FLAIR Mismatch Present' can be seen in lower-grade IDH-mutant astrocytoma. Balancing enhancement/invasion/multifocality against absent necrosis and limited enhancement, the best MRI-based estimate is CNS WHO grade 3 rather than grade 2 or grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

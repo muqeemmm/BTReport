@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "age_years",
+      "gender",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The MRI phenotype is dominated by a solitary, nonenhancing T2/FLAIR-type lesion in the temporal-cortical region with cortical involvement, no enhancing tumor, no necrosis, no deep white-matter invasion, no ependymal invasion, no midline crossing, and no meaningful midline shift. This pattern is more typical of an IDH-mutant diffuse glioma than an IDH-wildtype glioblastoma phenotype, which more often shows aggressive enhancement, necrosis, infiltrative deep extension, or substantial mass effect. Evidence against IDH-mutant status is the older age of 65 years and male sex, which increase the prior likelihood of IDH-wildtype glioma, and the reported midline epicenter is atypical for a straightforward hemispheric lower-grade IDH-mutant glioma. Overall, the imaging morphology favors IDH-mutant, but the age-related counterweight keeps confidence moderate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the available MRI metadata provide limited discrimination. A temporal-cortical, nonenhancing lesion with cortical involvement can be seen in oligodendroglioma, so those features mildly support codeletion. However, the location is described as temporal-cortex rather than the more classic frontal cortical-subcortical pattern often associated with 1p/19q-codeleted tumors, and no metadata are available for calcification or characteristic oligodendroglial internal heterogeneity. Because the provided imaging lacks stronger oligodendroglioma-specific support, the best estimate is non-codeleted, with only modest confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The main uncertainty is the patient age, which raises concern for IDH-wildtype biology despite the nonenhancing lower-grade imaging phenotype. 1p/19q status is particularly uncertain because key supportive features such as calcification and detailed internal tumor texture are not assessed.",
+  "subject_id": "UCSF-PDGM-485",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The grading-relevant MRI features strongly favor a lower-grade tumor: there is no enhancement, no enhancing tumor volume, no necrosis, no midline shift, no deep white-matter invasion, no ependymal invasion, no multifocality, and no satellites. These findings argue against CNS WHO grade 4 and also against a more aggressive grade 3 phenotype on imaging. The moderate lesion volume and older age are cautionary features, but the absence of enhancement, necrosis, and invasive aggressive features makes CNS WHO grade 2 the most likely imaging-based grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

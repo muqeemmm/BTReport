@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_01204",
+  "idh": {
+    "reasoning": "The patient's age of 55 years is a strong predictor for IDH-wildtype status, as the incidence of IDH-wildtype gliomas increases significantly after age 50. The presence of both contrast enhancement (Proportion Enhancing: 10.04%) and central necrosis (Proportion Necrosis: 2.46%) are classic imaging hallmarks of glioblastoma, the most common IDH-wildtype tumor. The thick enhancing margin (>3mm) further supports this, as it is characteristic of aggressive, IDH-wildtype gliomas. While the enhancement is qualitatively described as 'Mild', the quantitative presence of enhancement and, more importantly, necrosis, strongly outweighs this single descriptor. The evidence overwhelmingly points towards an IDH-wildtype glioma.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of central necrosis (Proportion Necrosis: 2.46%) and a thick enhancing margin (Thickness of enhancing margin: >3mm) are highly atypical for 1p/19q co-deleted oligodendrogliomas, which characteristically lack necrosis and exhibit minimal, if any, enhancement. The imaging phenotype is much more consistent with an astrocytic lineage (non-codeleted). While cortical involvement is common in oligodendrogliomas, it is non-specific and also frequently seen in astrocytomas. The combination of necrosis and significant enhancement provides strong evidence against co-deletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The definitive imaging feature pointing to a high grade is the presence of necrosis (Proportion Necrosis: 2.46%). On imaging, necrosis is the strongest predictor of CNS WHO grade 4. This is further supported by the presence of contrast enhancement (Proportion Enhancing: 10.04%) with a thick margin (>3mm) and the patient's age (55 years), all of which are associated with higher-grade tumors. The minimal mass effect and the qualitative description of 'Mild' enhancement are insufficient to argue against the powerful evidence of necrosis. Therefore, a prediction of WHO grade 4 is made with high confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 55-year-old female with a solitary, left-sided temporal-occipital lesion. The key imaging findings of contrast enhancement and, most critically, central necrosis, in a patient of this age, are highly characteristic of a high-grade glioma. The combination of features strongly supports a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The individual predictions for IDH status (wildtype), 1p/19q status (non-codeleted), and WHO grade (4) are internally consistent and converge on this single diagnosis."
+}

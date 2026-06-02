@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the strongest support for an IDH-mutant diffuse glioma is the young adult age in `age_years` and the cortical/insular/frontal involvement described by `Cortical involvement`, `Tumor Location`, and `Region Proportions`, with only `Mild` enhancement in `Enhancement Quality` and a small enhancing burden in `ET Volume (mL)` and `Proportion Enhancing`. These features are more typical of lower-to-intermediate biologic aggressiveness than classic older-patient IDH-wildtype glioblastoma. Evidence against IDH mutation is the very large edema burden in `ED Volume (mL)` and `Proportion of Oedema`, edema crossing midline in `Edema crosses midline`, mass effect in `midline_shift_present`, infiltrative extent in `Deep WM invasion`, and absence of the more specific astrocytoma marker in `T2-FLAIR Mismatch Present`. Overall, the age and cortical/insular pattern slightly outweigh the aggressive edema/mass-effect features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the metadata do not provide calcification-sensitive imaging or molecular data, so this call is uncertain. Features supporting a non-codeleted tumor include the parietal-predominant location in `Region Proportions` and `Tumor Location`, very extensive edema in `ED Volume (mL)` and `Proportion of Oedema`, edema crossing midline in `Edema crosses midline`, mass effect in `midline_shift_present`, and `Deep WM invasion`, which are not the most typical imaging pattern for an oligodendroglioma. Features arguing for codeletion include young age in `age_years`, `Cortical involvement`, frontal/insular components in `Region Proportions`, only mild enhancement in `Enhancement Quality`, and absent T2-FLAIR mismatch in `T2-FLAIR Mismatch Present`. Because the location and edema/mass-effect pattern are less characteristic for classic 1p/19q-codeleted oligodendroglioma, the best estimate is non-codeleted, but with limited confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on T1w, T2w, T2-FLAIR, and T1-Gd metadata. Absence of DWI/ADC, perfusion, spectroscopy, SWI/GRE, and histologic/molecular data limits confidence, especially for 1p/19q status and final WHO grade. The imaging suggests a high-grade diffuse glioma but lacks strong macroscopic necrosis or bulky enhancement, making grade 3 more likely than grade 4 on imaging alone.",
+  "subject_id": "UCSF-PDGM-396",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": 3,
+    "reasoning": "For CNS WHO grade, imaging evidence favors a high-grade lesion over grade 2 because `Enhancement Quality` shows enhancement, `ET Volume (mL)` and `Proportion Enhancing` document an enhancing component, `ED Volume (mL)` and `Proportion of Oedema` show marked edema, `Edema crosses midline` is true, `midline_shift_present` is present, and `Deep WM invasion` is present. These features argue against a purely low-grade tumor. Grade 4 is less secure because necrotic burden is very small in `NCR Volume (mL)` and `Proportion Necrosis`, enhancement is described as mild in `Enhancement Quality`, and the enhancing component is small in `ET Volume (mL)` and `Proportion Enhancing`. Features that could still raise concern for grade 4 include `Thickness of enhancing margin`, `midline_shift_present`, `ED Volume (mL)`, and `Proportion of Oedema`. Balancing enhancement and mass-effect against minimal necrosis and mild enhancement, the best imaging estimate is CNS WHO grade 3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

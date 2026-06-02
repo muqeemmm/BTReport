@@ -1,0 +1,56 @@
+{
+  "subject_id": "BraTS2021_01533",
+  "idh": {
+    "reasoning": "The tumor's aggressive features, including its very large size (`Total tumor volume (mL)`: 360.903), extensive bilateral infiltration involving deep gray matter and the brainstem (`Anatomical Overlap Regions`, `crosses_ideal_midline`), significant mass effect (`midline_shift_present`, `max_shift_mm`), and particularly the very high proportion of necrosis (`Proportion Necrosis`: 52.24), are all classic hallmarks of an IDH-wildtype glioma (glioblastoma). While the minimal contrast enhancement (`ET Volume (mL)`: 1.036, `Enhancement Quality`: \"Mild\") is more typical of IDH-mutant tumors, it is outweighed by the overwhelming evidence of aggressive biology, which strongly favors an IDH-wildtype status.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "crosses_ideal_midline",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly indicative of a non-codeleted tumor. The presence of extensive necrosis (`Proportion Necrosis`: 52.24) is a strong feature against 1p/19q co-deletion, as oligodendrogliomas are typically non-necrotic. Furthermore, the tumor's massive size, deep white matter and gray matter infiltration (`Deep WM invasion`, `Anatomical Overlap Regions`), and bilateral nature are characteristic of a high-grade astrocytoma (which is non-codeleted), not an oligodendroglioma. The frontal lobe involvement is a non-specific feature and does not argue strongly for co-deletion in the face of these other findings.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "crosses_ideal_midline"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is based primarily on the very high proportion of necrosis (`Proportion Necrosis`: 52.24). Radiologically evident necrosis is a strong surrogate for histopathological necrosis, which is a defining criterion for WHO grade 4 in adult-type diffuse gliomas. This is strongly supported by other features of high-grade malignancy, including the massive tumor volume (`Total tumor volume (mL)`: 360.903), significant mass effect (`midline_shift_present`, `max_shift_mm`), and ependymal invasion (`Ependymal (ventricular) Invasion`). The minimal contrast enhancement is not a strong counter-argument, as glioblastomas can present with little to no enhancement.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features are classic for a massive, infiltrative, and necrotic high-grade glioma. The bilateral frontal involvement with deep extension and significant mass effect, combined with a very high proportion of necrosis, strongly suggests a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The minimal contrast enhancement is a slightly atypical feature but does not detract from the overall diagnosis, which is made with high confidence based on the other aggressive imaging characteristics."
+}

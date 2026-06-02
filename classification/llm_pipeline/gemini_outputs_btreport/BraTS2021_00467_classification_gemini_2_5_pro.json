@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_00467",
+  "idh": {
+    "reasoning": "The patient's advanced age (68 years) is a very strong predictor for IDH-wildtype status. The imaging features of marked, thick-rimmed enhancement and central necrosis are classic hallmarks of glioblastoma, which is the most common IDH-wildtype glioma. The large proportion of the tumor that is enhancing further supports this. There are no significant features to suggest an IDH-mutant tumor, which typically presents in younger patients and often has less aggressive features like prominent necrosis and enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of marked enhancement, a thick enhancing margin, and central necrosis are features strongly associated with astrocytic lineage tumors (non-codeleted), particularly glioblastoma. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically lack such aggressive features, presenting with ill-defined margins and minimal to no enhancement or necrosis. The deep gray matter involvement (caudate, putamen) is also more characteristic of astrocytomas. There are no imaging features to suggest a co-deleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The definitive presence of necrosis, evidenced by a non-zero 'NCR Volume (mL)' and 'Proportion Necrosis', is a key imaging correlate of the histopathological features defining CNS WHO grade 4. This is strongly corroborated by the presence of 'Marked' and thick ('>3mm') enhancement, which are characteristic radiographic signs of glioblastoma (grade 4). The patient's advanced age also increases the likelihood of a primary high-grade glioma. There is no evidence supporting a lower grade diagnosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult (68 years) with a solitary left insular tumor. The imaging findings of marked, thick-rimmed contrast enhancement and central necrosis are highly characteristic of Glioblastoma, IDH-wildtype. The predictions for IDH status (wildtype), 1p/19q status (non-codeleted), and WHO grade (4) are all internally consistent and strongly supported by the provided MRI metadata."
+}

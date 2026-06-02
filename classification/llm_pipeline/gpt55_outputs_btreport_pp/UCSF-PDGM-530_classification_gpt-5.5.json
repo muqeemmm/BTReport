@@ -1,0 +1,85 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Tumor Location",
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "midline_shift_present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest metadata favoring IDH-mutant diffuse glioma are the young adult age and a positive T2-FLAIR mismatch pattern with a high mismatch score; this imaging pattern is classically associated with IDH-mutant astrocytoma. Cortical involvement is also compatible with an infiltrating lower-grade/IDH-mutant phenotype. Against IDH mutation, the lesion has a midline/deep distribution involving ventricles and thalamus, multifocality, ependymal invasion, deep white-matter invasion, enhancing tumor crossing midline, edema crossing midline, and midline shift, all of which can be seen with more aggressive IDH-wildtype glioma. Overall, the T2-FLAIR mismatch and age outweigh the aggressive/deep features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the positive T2-FLAIR mismatch pattern strongly supports a non-codeleted astrocytic genotype rather than oligodendroglioma. The tumor location is not a classic frontal cortical-subcortical oligodendroglioma pattern, with substantial ventricular, thalamic, and parietal involvement, and the epicenter is described as midline. Deep white-matter invasion and ependymal invasion also fit an infiltrative astrocytic pattern better than a typical codeleted oligodendroglioma pattern. Cortical involvement and mild enhancement can occur in oligodendroglioma, so they modestly argue against a fully confident non-codeleted call. Overall, the T2-FLAIR mismatch and non-classic oligodendroglial location make non-codeleted the best estimate.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Region Proportions",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without diffusion, perfusion, spectroscopy, susceptibility imaging, or molecular testing. The IDH-mutant/non-codeleted call is driven mainly by the strong T2-FLAIR mismatch pattern in a young adult, while the grade estimate is limited by discordance between aggressive extent/mass effect and absence of necrosis with only mild enhancement.",
+  "subject_id": "UCSF-PDGM-530",
+  "who_grade": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 3,
+    "reasoning": "For grade considered independently, enhancement supports at least an intermediate/high-grade diffuse glioma rather than a purely nonenhancing grade 2 tumor. The extensive FLAIR abnormality, midline shift, deep white-matter invasion, ependymal invasion, multifocality, and midline crossing of edema/enhancement indicate biologically aggressive behavior. However, there is no necrotic component, the enhancing volume and enhancing proportion are small, and enhancement is described as mild, which argues against a confident grade 4 imaging call. Young age and the T2-FLAIR mismatch pattern also reduce confidence for grade 4. Balancing these features, grade 3 is the best MRI-based estimate.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

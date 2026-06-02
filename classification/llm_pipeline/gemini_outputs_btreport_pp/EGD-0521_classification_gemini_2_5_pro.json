@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0521",
+  "idh": {
+    "reasoning": "The most compelling evidence for an IDH-wildtype status is the multifocal nature of the tumor, as indicated by 'Multifocal or Multicentric': \"Multifocal\" and 'Number of lesions': 3. Multifocality is a strong predictor of IDH-wildtype glioma, particularly glioblastoma. The presence of contrast enhancement ('ET Volume (mL)': 2.429) and a small amount of necrosis ('NCR Volume (mL)': 0.406) further supports a wildtype status, as these are features of higher-grade, more aggressive tumors which are predominantly IDH-wildtype. While the patient's age of 39 is more typical for IDH-mutant tumors and the transition zone is sharp ('Transition Zone Thickness (FLAIR)'), these factors are significantly outweighed by the powerful evidence of multifocality.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This analysis is performed independently of the IDH status prediction. The primary feature arguing against 1p/19q co-deletion is the tumor's multifocal presentation ('Multifocal or Multicentric': \"Multifocal\"). Oligodendrogliomas (which are by definition 1p/19q-codeleted) are typically solitary, well-circumscribed lesions. Multifocality is highly characteristic of astrocytic tumors, which are non-codeleted. Additionally, the large amount of peritumoral edema ('ED Volume (mL)': 45.665) is more typical of astrocytomas than oligodendrogliomas. While the very sharp tumor margin ('Transition Zone Thickness (FLAIR)': median_mm: 0.75) and cortical involvement are classic features of oligodendroglioma, the multifocal growth pattern is a much stronger differentiating feature in this case, pointing strongly to a non-codeleted status.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The prediction of CNS WHO grade 4 is based on several key features indicative of high-grade malignancy. The most significant is the multifocal presentation ('Multifocal or Multicentric': \"Multifocal\"), which is a hallmark of aggressive tumors like glioblastoma. Furthermore, the presence of both contrast enhancement ('ET Volume (mL)': 2.429) and central necrosis ('NCR Volume (mL)': 0.406) are definitive imaging markers for grade 4 in adult-type diffuse astrocytic gliomas. The enhancing margin is also noted to be thick ('>3mm'). While the enhancement is described as 'Mild' and the volumes of enhancement and necrosis are small, their mere presence is sufficient for a grade 4 designation in this context. The absence of deep white matter invasion is a counterargument, but it does not override the definitive high-grade features.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a multifocal frontal lobe glioma with mild enhancement and a small necrotic component. The multifocal nature is the dominant imaging finding and a very strong predictor of an IDH-wildtype glioma. In an adult with an IDH-wildtype diffuse astrocytic tumor, the presence of contrast enhancement and/or necrosis automatically confers a CNS WHO grade 4, leading to the diagnosis of Glioblastoma. The predictions are internally consistent with this diagnosis."
+}

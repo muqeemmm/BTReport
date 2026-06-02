@@ -1,0 +1,65 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "Independently assessing IDH status from imaging metadata: age_years of 28 favors IDH-mutant diffuse glioma over IDH-wildtype glioblastoma. Enhancement Quality is None, ET Volume (mL) is 0.0, Proportion Enhancing is 0.0, and Proportion Necrosis is 0.0, which support a lower-grade IDH-mutant phenotype rather than the more typical enhancing/necrotic IDH-wildtype pattern. Total tumor volume (mL) is very small and midline_shift_present is Minimal, also arguing against an aggressive IDH-wildtype phenotype. The main counterpoint is Side of Tumor Epicenter listed as Midline, which is less classic for an adult hemispheric IDH-mutant astrocytic glioma, although Tumor Location is temporal-cortex region. Overall the available MRI metadata favors IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Independently assessing 1p/19q status from MRI metadata alone: Tumor Location is temporal-cortex region and Region Proportions show a dominant temporal component, which is less typical for 1p/19q-codeleted oligodendroglioma than a frontal cortical-subcortical presentation. age_years of 28 is also relatively young for classic oligodendroglioma. However, Enhancement Quality is None and Proportion Enhancing is 0.0, which do not exclude oligodendroglioma, and the temporal-cortex location includes cortical territory that can be seen in oligodendroglial tumors. Because key discriminators such as calcification, diffusion, perfusion, and spectroscopy are unavailable, the evidence only modestly favors non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "age_years"
+    ]
+  },
+  "overall_comment": "Predictions are based only on limited structured conventional MRI metadata. The lesion is very small, entirely nonenhancing by the provided segmentation, and lacks necrosis or substantial mass effect; this supports a low-grade phenotype but limits molecular specificity. The 1p/19q estimate is the least certain because MRI metadata lacks calcification, diffusion, perfusion, and spectroscopy information.",
+  "subject_id": "EGD-0378",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "Number of lesions",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "prediction": 2,
+    "reasoning": "Independently assessing CNS WHO grade from imaging metadata: Enhancement Quality is None, ET Volume (mL) is 0.0, Proportion Enhancing is 0.0, Proportion Necrosis is 0.0, and NCR Volume (mL) is 0.0, which strongly argue against imaging features usually associated with grade 4 disease and also against a higher-grade enhancing phenotype. Total tumor volume (mL) is only 0.898 and midline_shift_present is Minimal, with Ependymal (ventricular) Invasion Absent, Deep WM invasion Absent, Multiple satellites present Absent, and Multifocal or Multicentric Solitary, all favoring a lower-grade lesion. The main uncertainty is that Proportion of Oedema is 99.99 while Number of lesions is 0 and Lesion Sizes APxTVxCC (cm) is empty, suggesting limited or atypical segmentation metadata rather than a well-characterized solid tumor. Overall the MRI metadata most supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

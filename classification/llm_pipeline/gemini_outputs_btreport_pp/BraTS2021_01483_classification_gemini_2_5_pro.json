@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_01483",
+  "idh": {
+    "reasoning": "The primary evidence for an IDH-mutant status is the complete absence of contrast enhancement (`Enhancement Quality`: \"None\", `ET Volume (mL)`: 0.0). Non-enhancing gliomas are strongly associated with IDH mutation. Additionally, the tumor exhibits well-defined margins, as suggested by a very low `Transition Zone Thickness (FLAIR)` median of 1.0 mm, which is also more typical for IDH-mutant tumors. Conversely, features arguing for an IDH-wildtype status include the patient's age (51 years), which is on the higher end for IDH-mutant gliomas, and the tumor's deep location involving the thalamus and caudate (`Anatomical Overlap Regions`), a common site for glioblastoma. The presence of `Deep WM invasion` and `Ependymal (ventricular) Invasion` also suggests aggressive behavior often seen in IDH-wildtype tumors. However, the lack of enhancement is a very strong radiological marker, and on balance, it outweighs the less specific features of age and location. Therefore, an IDH-mutant status is predicted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q co-deletion is based on two key features. First, the tumor has very sharp, well-defined borders, evidenced by a `Transition Zone Thickness (FLAIR)` median of only 1.0 mm. This is a classic imaging characteristic of oligodendroglioma (which are, by definition, 1p/19q-codeleted). Second, the `T2-FLAIR Mismatch Present` value is 0.0, indicating the absence of this sign. The T2-FLAIR mismatch sign is highly specific for IDH-mutant astrocytomas (1p/19q non-codeleted), so its absence strongly argues against that entity and, by extension, favors a co-deleted status in an IDH-mutant tumor. The significant cortical involvement (`Cortical involvement`: \"Present\") also supports an oligodendroglioma. The main contradicting feature is the deep involvement of the thalamus and caudate (`Anatomical Overlap Regions`), which is less typical for oligodendrogliomas that are classically cortically-based. However, the combination of sharp margins and absent T2-FLAIR mismatch provides strong evidence for co-deletion.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The grading of this tumor presents conflicting evidence. The complete absence of contrast enhancement (`Enhancement Quality`: \"None\") is a strong feature against a WHO grade 4 diagnosis (glioblastoma) and is more typical of a lower-grade glioma (grade 2 or 3). However, several features point towards a higher grade than 2. The tumor is very large (`Total tumor volume (mL)`: 107.573), and demonstrates aggressive infiltrative features such as `Deep WM invasion` and `Ependymal (ventricular) Invasion`. The patient's age of 51 is also more typical for a grade 3 than a grade 2 glioma. Balancing these findings, the lack of enhancement makes grade 4 unlikely, but the large size and invasive characteristics make grade 2 less probable. Therefore, WHO grade 3 is the most likely prediction, representing a high-grade tumor without the typical radiological hallmarks of necrosis and enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a large, non-enhancing tumor in the right parietal lobe with deep extension into the thalamus and caudate. The combination of sharply defined margins and a lack of T2-FLAIR mismatch in a non-enhancing tumor strongly suggests an oligodendroglioma (IDH-mutant, 1p/19q-codeleted). The large size and invasive features (deep white matter and ependymal invasion) are indicative of higher-grade behavior, favoring WHO grade 3 over 2. The deep location is somewhat atypical but does not preclude this diagnosis."
+}

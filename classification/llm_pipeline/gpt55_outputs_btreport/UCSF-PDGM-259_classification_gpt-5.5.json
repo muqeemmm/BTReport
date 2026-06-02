@@ -1,0 +1,67 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Edema crosses midline"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, the lesion is nonenhancing with no enhancing or necrotic component, and it involves frontal/cortical/insular regions, a pattern commonly seen in lower-grade IDH-mutant glioma. Features arguing against this include the relatively large tumor volume, deep white-matter invasion, midline shift, and edema crossing midline, which can be seen with more aggressive IDH-wildtype tumors. Overall, the nonenhancing appearance in a 28-year-old with frontal/cortical/insular involvement weighs more strongly toward IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Region Proportions",
+      "Tumor Location",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The 1p/19q prediction is less certain from the available metadata. Frontal and cortical involvement with a nonenhancing solitary lesion can support oligodendroglioma and therefore codeletion. However, the insular component and young age are also compatible with IDH-mutant astrocytoma, and there are no available calcification-sensitive or advanced imaging features to strengthen a codeleted call. On balance, the insular involvement and young age make non-codeleted status slightly more likely, but the evidence is limited and mixed.",
+    "supporting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "age_years",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/GRE. The strongest imaging signal is a large but nonenhancing frontal/cortical/insular diffuse lesion in a young adult, favoring IDH-mutant lower-grade glioma. The 1p/19q estimate is the most uncertain because calcification and other oligodendroglioma-associated imaging markers were not assessed.",
+  "subject_id": "UCSF-PDGM-259",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Edema crosses midline"
+    ],
+    "prediction": 2,
+    "reasoning": "For grade, the metadata favors CNS WHO grade 2 because there is no enhancement, no enhancing tumor volume, no necrosis, and the lesion is solitary without satellites or ependymal invasion. These features argue against grade 4 and do not strongly support an anaplastic enhancing phenotype. Against grade 2, the tumor is large, has deep white-matter invasion, causes midline shift, and edema crosses midline, which can suggest greater biologic aggressiveness. Despite these concerning mass-effect and extent features, the absence of enhancement and necrosis makes grade 2 the best MRI-based estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

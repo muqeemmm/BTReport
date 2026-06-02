@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0450",
+  "idh": {
+    "reasoning": "The patient's age of 53 years is more typical for IDH-wildtype gliomas. The presence of a significant necrotic core (Proportion Necrosis: 15.97%) is a strong indicator of IDH-wildtype glioblastoma. Furthermore, the tumor exhibits a very sharp transition zone (Transition Zone Thickness (FLAIR) median_mm: 0.75) and an absence of the T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 0.0), both of which argue against an IDH-mutant astrocytoma, which typically has infiltrative borders. While the frontal lobe location is common in IDH-mutant tumors, the combination of age, necrosis, and sharp margins strongly favors an IDH-wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. The presence of significant necrosis (Proportion Necrosis: 15.97%) is highly atypical for 1p/19q co-deleted oligodendrogliomas, which are by definition IDH-mutant. Necrosis is a feature of high-grade astrocytic tumors. While the sharp tumor border (Transition Zone Thickness (FLAIR) median_mm: 0.75) and frontal lobe location are classic features of oligodendroglioma, the presence of necrosis is a much stronger contradicting feature. Therefore, a non-codeleted status is more likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The most definitive feature for grading in this case is the presence of a large necrotic core, evidenced by a 'Proportion Necrosis' of 15.97% and an 'NCR Volume (mL)' of 4.094. Radiographically evident necrosis is a hallmark feature that defines a WHO grade 4 glioma in the context of adult-type diffuse astrocytomas. Although the proportion of enhancement is low (2.31%), the presence of any enhancement, particularly with a thick margin ('>3mm'), combined with necrosis, overwhelmingly supports the highest grade. The lack of significant midline shift is not sufficient to downgrade the tumor in the face of clear necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "A 53-year-old male with a solitary frontal lobe tumor. The imaging phenotype is dominated by a large necrotic core and surrounding edema, with minimal but thick-rimmed enhancement. The sharp tumor borders and absence of a T2-FLAIR mismatch sign, coupled with the patient's age and presence of necrosis, are highly suggestive of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The individual predictions for IDH status, 1p/19q status, and WHO grade are internally consistent with this diagnosis."
+}

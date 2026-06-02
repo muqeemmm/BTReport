@@ -1,0 +1,78 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The provided MRI metadata favors an IDH-mutant diffuse glioma: the patient is young for adult diffuse glioma, and the lesion is frontal/cortical, solitary, nonenhancing, without enhancing tumor volume, necrosis, deep white-matter invasion, ependymal invasion, or midline crossing. These features are more typical of an IDH-mutant lower-grade diffuse glioma than an IDH-wildtype glioblastoma-like tumor. Evidence for IDH-wildtype is limited; the midline epicenter is atypical for a classic lateral hemispheric low-grade glioma but is not accompanied by aggressive imaging features. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "Independently considering 1p/19q status, the frontal cortical location and superficial cortical involvement favor oligodendroglioma biology, which is commonly 1p/19q-codeleted. The lesion is solitary and lacks deep white-matter or ependymal invasion, which also fits a circumscribed frontal cortical diffuse glioma phenotype. Against a confident codeleted call, the metadata lacks direct supportive markers such as calcification or characteristic heterogeneity, and the absence of enhancement is not specific because both astrocytoma and oligodendroglioma may be nonenhancing. Because imaging-only prediction of 1p/19q is limited, the balance only mildly favors codeletion.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, or histology. The strongest imaging inference is a nonenhancing, low-grade-appearing frontal cortical diffuse glioma. 1p/19q status is the least certain because key discriminators are not assessed.",
+  "subject_id": "UCSF-PDGM-305",
+  "who_grade": {
+    "confidence": 0.78,
+    "contradicting_features": [],
+    "prediction": 2,
+    "reasoning": "For WHO grade, the metadata favors a lower-grade lesion: there is no enhancement, enhancing tumor volume is zero, necrosis is absent, the lesion is small, solitary, non-multifocal, without midline shift, ventricular asymmetry, deep white-matter invasion, ependymal invasion, or midline crossing. These findings argue against grade 4 and make grade 3 less likely on imaging, although grade 3 gliomas can be nonenhancing and cannot be excluded without histology or advanced imaging. Overall, the conventional MRI features most strongly support CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

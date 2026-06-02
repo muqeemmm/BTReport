@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "Using only the provided MRI metadata, the strongest support for IDH-mutant diffuse glioma is the young age in age_years, frontal cortical predominance in Tumor Location and Region Proportions, Cortical involvement, and limited enhancement reflected by Enhancement Quality and ET Volume (mL). These features are more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. Evidence arguing toward IDH-wildtype includes Deep WM invasion, Multiple satellites present, large ED Volume (mL) and Proportion of Oedema, and elevated Proportion Necrosis, which suggest more aggressive infiltrative biology. Overall, the young age and frontal/cortical mildly enhancing pattern outweigh the aggressive features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Proportion Necrosis"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently from IDH status, the metadata favor co-deletion mainly because age_years is young and Tumor Location, Region Proportions, and Cortical involvement indicate a frontal cortical tumor, a pattern often seen with oligodendroglioma. Enhancement Quality is mild and ET Volume (mL) is very small, which is also compatible with a codeleted tumor. Features arguing against co-deletion are Side of Tumor Epicenter reported as midline rather than a clearly hemispheric cortical-subcortical frontal epicenter, Deep WM invasion, Multiple satellites present, high ED Volume (mL) and Proportion of Oedema, and elevated Proportion Necrosis, which are less classic for oligodendroglioma and raise concern for astrocytic or higher-grade biology. Because the supportive frontal cortical and young-age pattern is present but not specific, the best estimate is 1p/19q-codeleted with only moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, or histology. The 1p/19q call is the least secure because frontal cortical location is supportive but nonspecific, and the midline/deep white matter invasion, edema, satellites, and reported necrosis introduce uncertainty. Molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0553",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 3,
+    "reasoning": "For grade considered independently, the metadata argue against a purely grade 2 tumor because Deep WM invasion and Multiple satellites present suggest infiltrative aggressive behavior, while Proportion Necrosis, NCR Volume (mL), ED Volume (mL), Proportion of Oedema, Total tumor volume (mL), and Thickness of enhancing margin indicate substantial tumor burden with aggressive imaging components. However, the evidence is not definitive for grade 4 because ET Volume (mL) is very small, Enhancement Quality is only mild, midline_shift_present is No, CET Crosses midline is False, and Ependymal (ventricular) Invasion is Absent. age_years is also young, which is less typical for the most aggressive adult diffuse glioma presentation. Balancing aggressive features against the limited enhancement and absent major mass-effect/ependymal features, the best imaging estimate is CNS WHO grade 3 rather than grade 2 or grade 4.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

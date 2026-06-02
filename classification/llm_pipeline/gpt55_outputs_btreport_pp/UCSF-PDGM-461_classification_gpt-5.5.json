@@ -1,0 +1,78 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the strongest support for IDH-wildtype is age_years showing an elderly patient, together with an infiltrative enhancing mass with substantial ED Volume (mL), high Proportion of Oedema, midline_shift_present, max_shift_mm, Deep WM invasion, Ependymal (ventricular) Invasion, and measurable ET Volume (mL)/NCR Volume (mL), a pattern more typical of IDH-wildtype glioblastoma biology. Evidence against IDH-wildtype is the reported T2-FLAIR Mismatch Present with high T2-FLAIR Mismatch Score, plus insular/frontotemporal cortical involvement in Tumor Location and Region Proportions, which can favor IDH-mutant astrocytoma; Enhancement Quality is only mild and Proportion Necrosis is small, also weakening a classic IDH-wildtype impression. Overall, the elderly age and aggressive edema/mass-effect/invasion pattern outweigh the T2-FLAIR mismatch signal, so the best estimate is IDH-wildtype, with only moderate confidence because of the strong contradictory mismatch feature.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, T2-FLAIR Mismatch Present with a high T2-FLAIR Mismatch Score strongly supports an astrocytic, non-codeleted diffuse glioma phenotype rather than oligodendroglioma. Deep WM invasion and Ependymal (ventricular) Invasion also fit better with an infiltrative astrocytic pattern than a classic oligodendroglial cortical-subcortical frontal mass. Evidence that could argue toward codeletion is Tumor Location/Region Proportions including cortex and frontal_lobe components with Cortical involvement, and Enhancement Quality being mild, which can be seen in oligodendroglioma, but no calcification information is available and the mismatch feature is a strong counterweight. Therefore, the best estimate is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, MRS, SWI/GRE, or histology. The main uncertainty is the strong reported T2-FLAIR mismatch, which argues for IDH-mutant astrocytoma and against the otherwise elderly, aggressive IDH-wildtype imaging phenotype.",
+  "subject_id": "UCSF-PDGM-461",
+  "who_grade": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently, the imaging metadata strongly favors grade 4 behavior: ET Volume (mL) confirms an enhancing component, NCR Volume (mL) and Proportion Necrosis document necrosis, ED Volume (mL) and Proportion of Oedema show extensive peritumoral edema, and midline_shift_present/max_shift_mm indicate substantial mass effect. Ependymal (ventricular) Invasion, Deep WM invasion, large Total tumor volume (mL), and Effaced Ventricle further support an aggressive high-grade tumor. Evidence against grade 4 is that Enhancement Quality is only mild, Proportion Enhancing and Proportion Necrosis are not dominant, and the lesion is solitary without Multiple satellites present, which could fit grade 3 in some cases. However, the combination of enhancement, necrosis, extensive edema, invasion, and mass effect is most consistent with CNS WHO grade 4.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Effaced Ventricle",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

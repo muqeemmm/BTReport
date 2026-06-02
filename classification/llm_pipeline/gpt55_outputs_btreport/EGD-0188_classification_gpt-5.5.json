@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young by adult glioma standards on age_years, and the lesion is predominantly temporal-cortical with cortical involvement on Tumor Location, Region Proportions, and Cortical involvement, a pattern more often seen with lower-grade/IDH-mutant diffuse glioma than primary IDH-wildtype glioblastoma. Mild and very small-volume enhancement on Enhancement Quality, ET Volume (mL), and Proportion Enhancing also supports IDH-mutant disease over a typical intensely enhancing IDH-wildtype glioblastoma. Features arguing against IDH-mutant status include substantial edema and mass effect on ED Volume (mL), Proportion of Oedema, midline_shift_present, and max_shift_mm, plus a reported necrotic/nonenhancing component and thick enhancing margin on Proportion Necrosis and Thickness of enhancing margin, which can be seen with aggressive IDH-wildtype glioblastoma. Overall, the young age and cortical temporal phenotype with only minimal enhancement outweigh the aggressive mass-effect features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.67,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the available metadata does not provide classic oligodendroglioma markers such as calcification or frontal predominance. The tumor is temporal-cortical on Tumor Location and Region Proportions, with Cortical involvement present; cortical involvement can be compatible with oligodendroglioma, but the temporal rather than frontal epicenter is less typical for a codeleted tumor. Young age on age_years is compatible with IDH-mutant glioma generally but does not specifically support codeletion. The absence of deep white matter invasion on Deep WM invasion may fit a more circumscribed cortical/subcortical glioma, but this is nonspecific. Because the location is not classically frontal and there are no codeletion-specific imaging features in the provided metadata, the best independent estimate is non-codeleted, with only moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or calcification assessment. The very small enhancing volume but reported high necrotic/nonenhancing proportion creates uncertainty for WHO grade. Molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0188",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "age_years",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "WHO grade prediction from MRI alone is driven by signs of biologically aggressive behavior. The strongest grade-4-supporting metadata are a large reported necrotic/nonenhancing component on Proportion Necrosis and NCR Volume (mL), thick enhancing margin on Thickness of enhancing margin, extensive edema on ED Volume (mL) and Proportion of Oedema, and substantial mass effect on midline_shift_present, mean_shift_mm, max_shift_mm, p95_shift_mm, Asymmetrical Ventricles, and Effaced Ventricle. Large Total tumor volume (mL) also supports high-grade behavior. Features arguing against grade 4 include only mild and tiny enhancing tumor burden on Enhancement Quality, ET Volume (mL), and Proportion Enhancing, younger age on age_years, and no ependymal or deep white matter invasion on Ependymal (ventricular) Invasion and Deep WM invasion. On balance, the necrotic/nonenhancing burden plus edema and mass effect outweigh the minimal enhancement, so grade 4 is the best estimate, but confidence is limited by the small enhancing volume and lack of advanced sequences.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

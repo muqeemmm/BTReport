@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_00274",
+  "idh": {
+    "reasoning": "The patient's advanced age of 82 years is the strongest predictor for IDH-wildtype status. The imaging features provide compelling corroborating evidence: the tumor exhibits marked enhancement, a significant necrotic core, and satellite lesions. Furthermore, the tumor has a very sharp transition zone on FLAIR and a high boundary sharpness score, both of which are characteristic of IDH-wildtype gliomas. The explicit absence of the T2-FLAIR mismatch sign is also strong evidence against an IDH-mutant astrocytoma. There is no significant evidence to suggest an IDH-mutant tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Multiple satellites present",
+      "Transition Zone Thickness (FLAIR)",
+      "boundary_sharpness",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification must be performed independently of the IDH prediction. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically present with indistinct margins and minimal to no enhancement or necrosis. This tumor displays the opposite features: marked enhancement, a necrotic core, and a very sharp transition zone. These characteristics are strongly indicative of a non-codeleted glioma, such as an astrocytoma or glioblastoma. There are no imaging features in the provided metadata that would suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Transition Zone Thickness (FLAIR)",
+      "boundary_sharpness"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of a significant necrotic core is a key histopathological and radiological feature used for grading diffuse gliomas. The metadata clearly indicates a substantial necrotic volume (`NCR Volume (mL)` of 5.984). According to WHO CNS5 criteria for adult-type diffuse gliomas, the presence of necrosis automatically confers a WHO grade of 4. This is further supported by other features of high-grade malignancy, including marked, thick-rim enhancement and the presence of satellite lesions. The absence of deep white matter invasion or significant midline shift does not outweigh the definitive evidence of necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age (82 years) with MRI features of a solitary parietal lesion showing marked ring enhancement, central necrosis, and sharp borders is highly characteristic of Glioblastoma, IDH-wildtype. The predictions for IDH-wildtype status, non-codeletion, and WHO grade 4 are all made with high confidence and are internally consistent."
+}

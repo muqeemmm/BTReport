@@ -1,0 +1,55 @@
+{
+  "subject_id": "BraTS2021_00578",
+  "idh": {
+    "reasoning": "The patient's advanced age (67 years) is a very strong predictor for IDH-wildtype status. The imaging phenotype is that of a classic high-grade glioma, characterized by a large tumor volume with extensive central necrosis (NCR Volume (mL) of 48.27) and marked, thick rim-enhancement. The tumor demonstrates aggressive behavior, crossing the midline and invading deep gray matter structures. Furthermore, the sharp tumor-edema boundary, indicated by a very thin FLAIR transition zone median thickness of 0.5 mm, is also characteristic of IDH-wildtype gliomas. The main contradictory feature is the presence of a T2-FLAIR mismatch, which is highly specific for IDH-mutant astrocytomas. However, given the overwhelming clinical and radiological evidence for a high-grade, aggressive tumor, this single sign is outweighed.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "crosses_ideal_midline",
+      "Anatomical Overlap Regions",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging features are highly uncharacteristic of a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically lack extensive necrosis and marked, thick rim-enhancement. This tumor, however, has a large necrotic core (NCR Volume (mL) of 48.27) and prominent, thick enhancement (Thickness of enhancing margin >3mm). Additionally, the very sharp transition zone on FLAIR (median thickness 0.5 mm) is more typical of astrocytic tumors than oligodendrogliomas, which often have indistinct borders. The presence of a T2-FLAIR mismatch sign, while an IDH-mutant marker, is specifically associated with astrocytomas, further arguing against a co-deleted status. The frontal lobe location is non-specific and does not outweigh the strong evidence against co-deletion.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive central necrosis is a definitive radiological feature of a CNS WHO grade 4 glioma. This is strongly supported by the large necrotic component volume (NCR Volume (mL) of 48.27) and the high proportion of necrosis (28.28%). Additionally, the presence of marked, thick-rim contrast enhancement (ET Volume (mL) of 56.95) is another hallmark of grade 4 designation. The significant mass effect, including a 10mm midline shift and ventricular effacement, further corroborates the high-grade nature of this tumor. There is no radiological evidence to support a lower grade (2 or 3), as these typically lack extensive necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 1.0
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age and classic imaging features\u2014a large, midline-crossing mass with extensive necrosis and thick rim enhancement\u2014is highly indicative of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The reported T2-FLAIR mismatch is a significant contradictory finding, as it is typically associated with IDH-mutant astrocytoma. However, this single feature is outweighed by the overwhelming evidence for a high-grade, IDH-wildtype tumor."
+}

@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The MRI metadata favor IDH-wildtype status because the lesion is very large with a high necrotic component, measurable enhancing tumor, extensive edema, thick enhancing margin, deep white-matter invasion, and satellite lesions, all of which are more typical of biologically aggressive diffuse glioma. Evidence arguing against IDH-wildtype includes cortical/fronto-insular involvement and only mild enhancement, which can be seen in IDH-mutant gliomas. Overall, the aggressive necrotic and infiltrative phenotype outweighs the location-based features, so the best MRI-based estimate is IDH-wildtype.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Multiple satellites present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The MRI metadata favor non-codeleted status because the tumor shows a high necrotic proportion, extensive edema, deep white-matter invasion, measurable enhancement with a thick enhancing margin, and satellite lesions; this pattern is less typical for classic oligodendroglioma. Evidence arguing for possible codeletion includes cortical and frontal involvement with mild enhancement, which can occur in oligodendroglioma, but the provided metadata lack calcification or other oligodendroglial markers and the aggressive necrotic phenotype weighs toward non-codeletion. Therefore, the best MRI-based estimate is 1p/19q non-codeleted.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The metadata contain a lateralization inconsistency: several summary fields describe a left-sided tumor, while some segmentation-volume fields assign tumor components to the right side; this does not materially change the molecular/grade estimate but should be checked against the source images.",
+  "subject_id": "EGD-0066",
+  "who_grade": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ],
+    "prediction": 4,
+    "reasoning": "The MRI metadata favor CNS WHO grade 4 because there is a large tumor with a very high necrotic component, measurable enhancing tumor, thick enhancing margin, extensive edema, deep white-matter invasion, and satellite lesions, all indicating high-grade aggressive biology. Features arguing against the most advanced imaging phenotype include only mild enhancement, minimal midline shift, no ependymal invasion, and no enhancing or edema component crossing midline. Despite these mitigating features, the degree of necrosis and infiltrative burden most strongly support grade 4 rather than grade 2 or 3.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

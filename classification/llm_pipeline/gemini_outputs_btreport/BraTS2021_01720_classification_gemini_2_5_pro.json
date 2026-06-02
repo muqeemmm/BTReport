@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_01720",
+  "idh": {
+    "reasoning": "The patient's young age (31 years) is a very strong predictor of IDH-mutant status, as IDH-wildtype gliomas are typically found in older patients. The tumor's location in the temporal lobe with cortical involvement and absence of deep white matter invasion are also features commonly associated with IDH-mutant gliomas. However, there are conflicting features more typical of IDH-wildtype tumors, namely the presence of significant necrosis (21.98% of the non-enhancing core) and thick enhancement. In a young patient, these high-grade features are often seen in the context of an IDH-mutant astrocytoma progressing to WHO grade 4. Balancing the very strong demographic evidence against the conflicting imaging features, an IDH-mutant status is the most likely prediction.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant status, the distinction is between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). This tumor is located in the temporal lobe, a common site for astrocytomas. Furthermore, the high proportion of edema (77.94%) suggests infiltrative, indistinct margins, which is a classic feature of astrocytomas. In contrast, oligodendrogliomas often have more well-defined margins and a frontal lobe predilection. The presence of necrosis and enhancement, while indicating high grade, are also more commonly associated with high-grade astrocytomas than oligodendrogliomas. There are no features specifically suggesting an oligodendroglioma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Proportion of Oedema",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of radiographic necrosis is a key feature for grading diffuse gliomas and is a hallmark of WHO grade 4 disease. The metadata indicates a significant `Proportion Necrosis` of 21.98%. In addition to necrosis, the tumor demonstrates contrast enhancement (`Enhancement Quality`: \"Mild\") with a thick margin (`Thickness of enhancing margin`: \">3mm\"). The combination of both necrosis and enhancement provides very strong evidence for a WHO grade 4 tumor, irrespective of the underlying IDH status. The patient's young age does not contradict a grade 4 diagnosis, as IDH-mutant astrocytomas can be designated grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's young age is a strong indicator for an IDH-mutant glioma. However, the tumor exhibits aggressive imaging features, including a significant necrotic component and mild, thick-walled enhancement. This constellation of findings in a young adult is highly suggestive of an Astrocytoma, IDH-mutant, CNS WHO grade 4. The temporal location and highly infiltrative appearance (high edema proportion) further support an astrocytic lineage."
+}

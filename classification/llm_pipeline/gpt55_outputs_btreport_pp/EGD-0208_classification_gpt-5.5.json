@@ -1,0 +1,71 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Multiple satellites present",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "IDH-mutant diffuse glioma is favored because age_years is relatively young for IDH-wildtype glioblastoma, and T2-FLAIR Mismatch Present with a high T2-FLAIR Mismatch Score is a strong imaging marker for IDH-mutant astrocytic glioma. Enhancement Quality, ET Volume (mL), and Proportion Enhancing show only mild/minimal enhancement, which also fits many IDH-mutant tumors. Tumor Location and Region Proportions show cortical, insular, frontal, and temporal involvement, a distribution compatible with IDH-mutant diffuse glioma. Features arguing toward IDH-wildtype biology include Deep WM invasion, large ED Volume (mL), Multiple satellites present, large Total tumor volume (mL), and high Proportion Necrosis, which are more aggressive-appearing. On balance, the T2-FLAIR mismatch and limited enhancement outweigh the aggressive features, so the best prediction is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, T2-FLAIR Mismatch Present with a high T2-FLAIR Mismatch Score strongly favors an astrocytic, non-codeleted tumor rather than oligodendroglioma. Tumor Location and Region Proportions include substantial insular and temporal involvement, which is compatible with a non-codeleted astrocytoma pattern. The main counterpoint is that Tumor Location and Region Proportions also include cortical and frontal-lobe involvement, and age_years is within the typical adult range where oligodendroglioma remains plausible. However, the T2-FLAIR mismatch is a stronger discriminator toward non-codeleted status, so the best prediction is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "Predictions are imaging-based only from the provided structured MRI metadata. The main uncertainty is grade: the metadata contains aggressive fields such as Proportion Necrosis and Multiple satellites present, but this conflicts with very low ET Volume (mL), low Proportion Enhancing, n_components_enhancing showing no enhancing components, and only mild Enhancement Quality. Histopathology and molecular testing remain required for definitive WHO-CNS5 classification.",
+  "subject_id": "EGD-0208",
+  "who_grade": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 3,
+    "reasoning": "The grade assessment is mixed. Large Lesion Sizes APxTVxCC (cm), large Total tumor volume (mL), large ED Volume (mL), Deep WM invasion, Multiple satellites present, and mild Enhancement Quality support a tumor more aggressive than a straightforward grade 2 lesion, making grade 3 plausible. Proportion Necrosis and NCR Volume (mL) could argue for grade 4 if they represent true necrosis, but ET Volume (mL) and Proportion Enhancing are very low, n_components_enhancing shows no enhancing components, midline_shift_present is No, and Asymmetrical Ventricles is Absent, which argue against classic grade 4 imaging behavior. T2-FLAIR Mismatch Present and limited enhancement also pull toward lower grade. Given these competing findings, grade 3 is the best intermediate estimate with limited confidence.",
+    "supporting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Enhancement Quality"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

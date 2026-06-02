@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_00266",
+  "idh": {
+    "reasoning": "The patient's age of 64 is a strong predictor for IDH-wildtype status, as IDH-mutant gliomas typically occur in younger adults. The imaging features are classic for an IDH-wildtype glioblastoma: marked, thick-rimmed enhancement, a large necrotic core, and extensive vasogenic edema. The tumor's deep location involving the thalamus and basal ganglia, along with significant mass effect (midline shift) and ependymal invasion, further supports an aggressive, IDH-wildtype phenotype. There are no significant contradicting features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly against 1p/19q co-deletion. Tumors with co-deletion (oligodendrogliomas) typically have indistinct margins, minimal enhancement, and are less likely to have necrosis. This tumor displays the opposite features: marked, thick-rimmed enhancement, a large proportion of necrosis, and deep white matter invasion, all of which are characteristic of a high-grade astrocytoma (non-codeleted). The extensive vasogenic edema is also more typical for an astrocytoma than an oligodendroglioma. While cortical involvement is present, which can be seen in oligodendrogliomas, the overwhelming evidence points towards a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large, enhancing tumor component with a significant necrotic core is the radiological hallmark of a WHO grade 4 glioma. The metadata confirms marked enhancement ('Enhancement Quality': 'Marked', 'ET Volume (mL)': 42.542) and a substantial necrotic component ('Proportion Necrosis': 21.47, 'NCR Volume (mL)': 37.533). These features, particularly necrosis, are definitive for grade 4 in the context of an adult-type diffuse glioma. Additional features supporting a high grade include significant mass effect ('midline_shift_present': 'Yes'), deep white matter invasion, and ependymal invasion. There are no features to suggest a lower grade (2 or 3).",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 64-year-old female with a large, solitary mass centered in the right temporal lobe with extensive deep extension into the thalamus, basal ganglia, and brainstem, causing significant mass effect. The imaging features of marked, thick-rimmed enhancement and a large central necrotic core are highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predictions for IDH-wildtype, 1p/19q non-codeletion, and WHO grade 4 are all strongly supported by the MRI findings and are internally consistent."
+}

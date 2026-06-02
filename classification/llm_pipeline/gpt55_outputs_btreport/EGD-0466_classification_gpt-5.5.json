@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The lesion has several imaging-demographic features that favor IDH-mutant diffuse glioma: the patient is relatively young for IDH-wildtype glioblastoma by age_years, and the tumor is predominantly frontal and cortically based by Tumor Location, Region Proportions, and Cortical involvement. Mild rather than avid enhancement by Enhancement Quality and a relatively small enhancing fraction by Proportion Enhancing also fit better with an IDH-mutant tumor than with a classic IDH-wildtype glioblastoma. Lack of Deep WM invasion and lack of Ependymal (ventricular) Invasion argue against a more infiltrative IDH-wildtype pattern. Against IDH-mutant status, the large edema burden by ED Volume (mL) and Proportion of Oedema, measurable enhancement by ET Volume (mL), thick enhancing margin by Thickness of enhancing margin, and small necrotic component by Proportion Necrosis are more concerning for aggressive biology. Overall, the frontal cortical location and age outweigh the aggressive features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest available support for co-deletion is the frontal lobe predominance by Tumor Location and Region Proportions with cortical involvement by Cortical involvement, a pattern commonly seen in oligodendroglioma. Mild enhancement by Enhancement Quality and limited enhancing proportion by Proportion Enhancing are also compatible with a codeleted tumor. However, the metadata lacks several more specific discriminators, and the large edema burden by ED Volume (mL) and Proportion of Oedema, definite enhancing tumor by ET Volume (mL), and thick enhancing margin by Thickness of enhancing margin are not specific and can also be seen in non-codeleted astrocytoma or higher-grade glioma. Because the supportive features are suggestive but not definitive, the best estimate is 1p/19q-codeleted with limited confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility-sensitive information. The frontal cortical location favors IDH-mutant and possibly 1p/19q-codeleted biology, but the marked edema and measurable enhancement raise concern for higher grade and reduce molecular confidence. Tissue diagnosis with molecular testing remains essential.",
+  "subject_id": "EGD-0466",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 3,
+    "reasoning": "For grade considered independently, definite enhancing tumor by ET Volume (mL) and Proportion Enhancing, a thick enhancing margin by Thickness of enhancing margin, and substantial edema by ED Volume (mL) and Proportion of Oedema argue against a purely low-grade grade 2 tumor and support at least grade 3 behavior. Features arguing against grade 4 include only mild enhancement by Enhancement Quality, very small necrotic/non-enhancing core by Proportion Necrosis and NCR Volume (mL), small lesion dimensions by Lesion Sizes APxTVxCC (cm), minimal midline shift by midline_shift_present, and absence of Deep WM invasion, Ependymal (ventricular) Invasion, Multifocal or Multicentric disease, and Multiple satellites present. Balancing these, the imaging is more aggressive than grade 2 but lacks strong grade 4 morphology, so CNS WHO grade 3 is the best estimate.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

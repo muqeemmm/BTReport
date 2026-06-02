@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the strongest MRI pattern favoring IDH-mutant diffuse glioma is a small, solitary, cortically based frontal lesion: \"Tumor Location\" is frontal_lobe-cortex region, \"Cortical involvement\" is present, \"Multifocal or Multicentric\" is solitary, \"Number of lesions\" is 1, and \"Total tumor volume (mL)\" is limited. The limited aggressive spread also supports this: \"Deep WM invasion\" and \"Ependymal (ventricular) Invasion\" are absent, and \"midline_shift_present\" is minimal. Against IDH-mutant status, \"Proportion Necrosis\", \"NCR Volume (mL)\", and \"Proportion of Oedema\" suggest biologic aggressiveness that can be seen with IDH-wildtype glioblastoma. However, the enhancement burden is extremely small by \"ET Volume (mL)\" and described as mild by \"Enhancement Quality\", so the overall anatomic pattern still favors IDH-mutant over IDH-wildtype.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the metadata pattern favoring co-deletion is a frontal, cortically based tumor: \"Tumor Location\" is frontal_lobe-cortex region, \"Region Proportions\" is overwhelmingly frontal_lobe with substantial cortex, and \"Cortical involvement\" is present. A solitary lesion with absent deep white-matter and ependymal invasion, shown by \"Multifocal or Multicentric\", \"Number of lesions\", \"Deep WM invasion\", and \"Ependymal (ventricular) Invasion\", is also compatible with oligodendroglioma-type morphology. Mild enhancement with a very small enhancing component, reflected by \"Enhancement Quality\", \"ET Volume (mL)\", and \"Thickness of enhancing margin\", does not argue strongly against co-deletion. Against co-deletion, \"Proportion Necrosis\", \"NCR Volume (mL)\", and \"Proportion of Oedema\" indicate more aggressive behavior and are not specific for oligodendroglioma. Overall, the frontal cortical distribution is the dominant available discriminator, so codeletion is favored with moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "overall_comment": "The prediction is limited by structured MRI metadata only. The main uncertainty is the discordance between a frontal cortical, mildly enhancing, small solitary lesion and the reported non-enhancing/necrotic and edema proportions, which raise concern for higher grade despite limited enhancing tumor volume. There is also a side-label inconsistency between volumetric laterality fields and \"Side of Tumor Epicenter\" that should be verified against the images.",
+  "subject_id": "EGD-0636",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, the metadata contains competing signals. Features favoring a higher-grade tumor include measurable non-enhancing/necrotic component by \"NCR Volume (mL)\" and \"Proportion Necrosis\", substantial surrounding abnormality by \"ED Volume (mL)\" and \"Proportion of Oedema\", and the presence of enhancement by \"Enhancement Quality\" and \"Proportion Enhancing\". These argue against a straightforward grade 2 lesion. Features arguing against grade 4 include the extremely small enhancing volume in \"ET Volume (mL)\", mild and thin enhancement by \"Enhancement Quality\" and \"Thickness of enhancing margin\", small lesion dimensions in \"Lesion Sizes APxTVxCC (cm)\", limited \"Total tumor volume (mL)\", minimal mass effect by \"midline_shift_present\", absent ventricular asymmetry by \"Asymmetrical Ventricles\", and absent \"Deep WM invasion\" and \"Ependymal (ventricular) Invasion\". Balancing these, the imaging metadata is most consistent with an intermediate high-grade diffuse glioma, favoring CNS WHO grade 3 rather than grade 2 or grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

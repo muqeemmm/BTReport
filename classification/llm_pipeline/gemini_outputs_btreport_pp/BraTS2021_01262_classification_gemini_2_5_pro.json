@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_01262",
+  "idh": {
+    "reasoning": "The patient's age of 53 is more typical for IDH-wildtype gliomas. The imaging features are highly characteristic of an IDH-wildtype tumor, specifically glioblastoma. The tumor is large, deeply located, crosses the midline via the corpus callosum, and extensively involves bilateral deep gray matter structures. The presence of significant central necrosis (NCR Volume (mL) > 0) and contrast enhancement (ET Volume (mL) > 0) are strong indicators of IDH-wildtype status. Furthermore, the absence of a T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) and the relatively sharp tumor border (Transition Zone Thickness (FLAIR) median_mm: 0.75) argue strongly against an IDH-mutant astrocytoma. The combination of these features provides compelling evidence for an IDH-wildtype glioma.",
+    "supporting_features": [
+      "age_years",
+      "Anatomical Overlap Regions",
+      "crosses_ideal_midline",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted oligodendroglioma. Oligodendrogliomas are typically cortically-based and less infiltrative. This tumor is large, deeply located, crosses the midline, and extensively infiltrates bilateral deep gray matter. Most critically, the presence of a large necrotic core (NCR Volume (mL) of 19.3) and significant contrast enhancement (ET Volume (mL) of 15.6) are highly atypical for oligodendrogliomas, which usually lack necrosis. These aggressive features are characteristic of astrocytic lineage tumors. While the sharp transition zone can sometimes be seen in oligodendrogliomas, it is a non-specific finding that is overwhelmingly contradicted by the presence of necrosis and the deeply infiltrative, midline-crossing pattern.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "crosses_ideal_midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of both contrast enhancement and central necrosis are hallmark radiological features of a WHO grade 4 glioma. The metadata confirms a significant volume of both enhancing tumor (ET Volume (mL): 15.631) and necrosis (NCR Volume (mL): 19.298). According to WHO CNS5 criteria, the presence of necrosis in a diffuse astrocytic glioma is sufficient for a grade 4 designation. Additional features supporting a high grade include the very large tumor size (Total tumor volume (mL): 160.01), extensive peritumoral edema (ED Volume (mL): 125.081), deep white matter invasion, ependymal invasion, and the presence of satellite lesions. There are no features to suggest a lower grade; the evidence for grade 4 is definitive.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a large, deeply infiltrative, midline-crossing tumor with prominent enhancement and necrosis. The imaging features, including the bilateral deep gray matter and corpus callosum involvement and the absence of a T2-FLAIR mismatch, are highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

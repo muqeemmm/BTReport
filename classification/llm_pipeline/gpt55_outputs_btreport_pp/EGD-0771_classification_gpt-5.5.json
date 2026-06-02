@@ -1,0 +1,84 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest metadata pattern favors IDH-mutant diffuse glioma: the patient is young for diffuse glioma, and a marked T2-FLAIR mismatch is present, which is a highly specific imaging pattern for IDH-mutant astrocytic glioma. The lesion is predominantly nonenhancing with only trace/mild enhancement, also more typical of IDH-mutant disease than classic IDH-wildtype glioblastoma. Frontal-cortical location is compatible with an IDH-mutant diffuse glioma. Features arguing against IDH-mutant status include very large tumor/edema burden, midline shift, ependymal invasion, deep white matter invasion, and a reported necrotic/nonenhancing component, which can be seen in more aggressive IDH-wildtype tumors. Overall, the T2-FLAIR mismatch and minimal enhancement outweigh the aggressive mass-effect features, so the conclusion is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The key imaging feature for this task is the T2-FLAIR mismatch pattern, which strongly supports a non-codeleted astrocytic genotype rather than oligodendroglioma. The predominantly nonenhancing tumor core and minimal enhancing fraction are compatible with a non-codeleted astrocytoma pattern. Features that could argue toward 1p/19q codeletion include frontal-cortical location, younger adult age, and mild enhancement, because oligodendrogliomas commonly occur in frontal cortical/subcortical regions and may enhance mildly. However, the T2-FLAIR mismatch is a stronger discriminator against codeletion, so the conclusion is 1p/19q non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "n_components_enhancing"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, or histology. The IDH-mutant, non-codeleted call is mainly driven by the strong T2-FLAIR mismatch pattern. Grade is less certain: minimal enhancement argues against radiologic grade 4, while very large size, extensive edema, midline shift, and ependymal/deep white matter invasion argue against a purely low-grade lesion.",
+  "subject_id": "EGD-0771",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "reasoning": "For grade, the metadata are mixed. Aggressive features supporting an intermediate-to-high grade lesion include very large whole tumor and core volumes, extensive edema, edema crossing midline, substantial midline shift, deep white matter invasion, and ependymal invasion. These features argue against a straightforward grade 2 diffuse glioma. Against grade 4, enhancement is only mild/trace, the enhancing volume is extremely small, no discrete enhancing component is detected, and the enhancing margin is thin; the lesion is also solitary without satellites. The reported necrotic/nonenhancing proportion could argue toward grade 4 if it represents true necrosis, but it conflicts with the near-absent enhancement pattern. Balancing aggressive infiltrative/mass-effect features against the lack of convincing grade-4 enhancement, the best MRI-based estimate is CNS WHO grade 3, with limited confidence.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Tumor Core Volume (mL)",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "max_shift_mm",
+      "n_slices_with_shift",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,47 @@
+{
+  "subject_id": "BraTS2021_00580",
+  "idh": {
+    "reasoning": "The imaging features are highly characteristic of an IDH-wildtype glioma. The tumor demonstrates marked, thick-rim enhancement with a large necrotic core, which are classic radiological hallmarks of glioblastoma, IDH-wildtype. The patient's age of 43 is within a range where both subtypes can occur, but the aggressive imaging phenotype strongly favors IDH-wildtype. Furthermore, the tumor has very sharp boundaries, as indicated by the thin FLAIR transition zone, which is more typical of IDH-wildtype tumors than the diffusely infiltrative margins of IDH-mutant astrocytomas. The absence of a T2-FLAIR mismatch sign also argues against an IDH-mutant astrocytoma. There are no significant features to suggest an IDH-mutant status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This task is performed independently of the IDH status prediction. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically present with indistinct margins and minimal, if any, enhancement or necrosis. The subject's tumor displays the opposite characteristics: marked, thick-rim enhancement, a substantial necrotic core, and sharp tumor-edema boundaries. This aggressive appearance is highly atypical for an oligodendroglioma. The deep involvement of the thalamus and basal ganglia is also less common for oligodendrogliomas, which favor the cortex. Therefore, the evidence strongly points towards a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large, enhancing tumor component with central necrosis is a definitive radiological sign of a high-grade glioma, specifically WHO grade 4. The metadata confirms a significant volume of both enhancing tissue and necrosis. The marked quality of enhancement, thick enhancing margin, and substantial mass effect (midline shift, ventricular effacement) are all consistent with the most aggressive grade. There are no imaging features to suggest a lower grade, such as non-enhancement (grade 2) or enhancement without necrosis (typically grade 3).",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a large, solitary right temporal tumor with deep extension into the basal ganglia and thalamus. The imaging findings are classic for a glioblastoma, including marked thick-rim enhancement, a large necrotic core, significant mass effect, and sharp tumor-edema boundaries. The combination of these features provides high confidence for the diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

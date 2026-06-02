@@ -1,0 +1,51 @@
+{
+  "subject_id": "UCSF-PDGM-272",
+  "idh": {
+    "reasoning": "The patient's young age (35 years) is a strong demographic predictor for an IDH-mutant glioma. The imaging features are classic for this molecular subtype, specifically the complete absence of contrast enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0) and the lack of any necrosis ('NCR Volume (mL)': 0.0). These findings are highly uncharacteristic of IDH-wildtype gliomas in adults, which are typically glioblastomas that present with avid enhancement and central necrosis. The frontal lobe location is also a common site for IDH-mutant tumors. The evidence overwhelmingly supports an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification distinguishes between IDH-mutant astrocytoma (non-codeleted) and oligodendroglioma (codeleted). While the frontal lobe location can be seen in both, the complete and total lack of contrast enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) is a key feature. This non-enhancing pattern is highly characteristic of the T2-FLAIR mismatch sign, which is a strong radiological marker for IDH-mutant astrocytoma (non-codeleted). Although oligodendrogliomas can be non-enhancing, some degree of enhancement is more common than in astrocytomas. The absence of data on calcification, a feature more common in oligodendroglioma, is a limitation. However, the strong non-enhancement feature points more towards a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The tumor lacks the hallmark features of a WHO grade 4 lesion, namely contrast enhancement ('ET Volume (mL)': 0.0) and necrosis ('NCR Volume (mL)': 0.0). The distinction is therefore between grade 2 and grade 3. The complete absence of enhancement is a strong argument for a lower-grade (grade 2) process. However, the tumor is large ('Total tumor volume (mL)': 52.76) and exerts significant mass effect, evidenced by a midline shift ('midline_shift_present': 'Yes', 'max_shift_mm': -6.0). This significant mass effect and deep white matter invasion could suggest a higher grade (grade 3). On balance, the lack of any aggressive radiological features like enhancement or necrosis makes grade 2 the most likely diagnosis based on imaging alone, though grade 3 cannot be entirely excluded.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion"
+    ],
+    "prediction": 2,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "Young patient with a large, non-enhancing, non-necrotic frontal tumor causing significant mass effect. The imaging findings are highly characteristic of an IDH-mutant glioma. The complete lack of enhancement favors an astrocytoma (1p/19q non-codeleted) and a lower grade (CNS WHO grade 2). The significant mass effect is a slightly confounding factor for grade but does not outweigh the lack of aggressive features."
+}

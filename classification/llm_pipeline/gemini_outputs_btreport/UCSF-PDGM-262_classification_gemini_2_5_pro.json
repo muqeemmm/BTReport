@@ -1,0 +1,50 @@
+{
+  "subject_id": "UCSF-PDGM-262",
+  "idh": {
+    "reasoning": "The patient's age of 44 is typical for IDH-mutant gliomas. The imaging features are highly characteristic of an IDH-mutant phenotype: the tumor is entirely non-enhancing ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0) and lacks any evidence of necrosis ('NCR Volume (mL)': 0.0). This presentation, a large T2/FLAIR hyperintense lesion without aggressive features, strongly argues against an IDH-wildtype glioma (glioblastoma), which typically demonstrates ring enhancement and central necrosis. The insular location is also a common site for IDH-mutant astrocytomas.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor's location and infiltrative pattern are the strongest predictors for 1p/19q status. The involvement of the insula ('Region Proportions') and deep gray matter structures including the caudate, putamen, and pallidum ('Anatomical Overlap Regions') is a classic feature of IDH-mutant astrocytomas (1p/19q non-codeleted). Oligodendrogliomas (1p/19q codeleted) are less commonly found in these deep, limbic, and paralimbic locations, favoring more cortically-based frontal or temporal locations. The deep white matter invasion further supports an astrocytic lineage.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Region Proportions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The grading of this tumor based on MRI is ambiguous due to conflicting features. The complete absence of contrast enhancement ('Enhancement Quality': 'None') and necrosis ('NCR Volume (mL)': 0.0) are strong indicators against a WHO grade 4 diagnosis and are typical for a grade 2 tumor. However, the very large tumor volume ('Total tumor volume (mL)': 105.018) and the significant mass effect, evidenced by a 9.0 mm midline shift ('max_shift_mm') and effacement of the left ventricle ('Effaced Ventricle'), suggest a higher biological activity or long-standing growth that is more consistent with a grade 3 lesion. Balancing these findings, the significant mass effect slightly favors a grade 3 classification over grade 2, but the confidence is low due to the lack of enhancement.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Effaced Ventricle"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "A 44-year-old male with a large, non-enhancing, non-necrotic tumor involving the left insula, temporal lobe, and deep gray matter. Imaging features are highly suggestive of an IDH-mutant astrocytoma. The distinction between WHO grade 2 and 3 is difficult on imaging; grade 3 is slightly favored due to the significant mass effect, but confidence is low as enhancement is absent."
+}

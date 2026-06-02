@@ -1,0 +1,44 @@
+{
+  "subject_id": "BraTS2021_01776",
+  "idh": {
+    "reasoning": "The presence of a definitive T2-FLAIR mismatch sign, indicated by both a binary flag (`T2-FLAIR Mismatch Present`: 1.0) and a high quantitative score (`T2-FLAIR Mismatch Score`: 0.80), is a highly specific imaging biomarker for IDH-mutant status. This is the primary evidence supporting the prediction. However, there are several significant contradicting features typically associated with IDH-wildtype gliomas (glioblastoma), including multifocal presentation (`Multifocal or Multicentric`: \"Multifocal\"), a large necrotic core (`Proportion Necrosis`: 23.09), and ependymal invasion (`Ependymal (ventricular) Invasion`: \"Present\"). The patient's age of 47 is in an ambiguous range. Despite the conflicting aggressive features, the high specificity of the T2-FLAIR mismatch sign makes an IDH-mutant prediction the most likely, though confidence is reduced.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed under the assumption of an IDH-mutant tumor. The key feature is the definitive T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0), which is strongly associated with the astrocytic lineage (1p/19q non-codeleted). Furthermore, the involvement of the insula (`Region Proportions`) is also more characteristic of astrocytomas than oligodendrogliomas. There are no specific imaging features in the provided metadata to suggest a 1p/19q codeleted (oligodendroglioma) status. Therefore, the evidence strongly points towards a non-codeleted tumor.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits multiple, unequivocal features of high-grade malignancy, consistent with CNS WHO grade 4. The most compelling evidence is the large necrotic component, comprising nearly a quarter of the tumor core volume (`Proportion Necrosis`: 23.09). The presence of contrast enhancement (`ET Volume (mL)`: 3.541) is also a high-grade feature. Additional markers of aggressive behavior include multifocal disease (`Multifocal or Multicentric`: \"Multifocal\") and invasion of the ependyma (`Ependymal (ventricular) Invasion`: \"Present\"). These findings are incompatible with a grade 2 or 3 glioma and strongly support a grade 4 designation.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging phenotype presents a notable conflict: a strong T2-FLAIR mismatch sign, highly specific for an IDH-mutant astrocytoma, coexists with aggressive features like multifocality, a large necrotic core, and ependymal invasion. This combination leads to a final prediction of an Astrocytoma, IDH-mutant, CNS WHO grade 4. The confidence in the IDH-mutant status is moderated due to these conflicting findings, but the evidence for non-codeletion and grade 4 is strong."
+}

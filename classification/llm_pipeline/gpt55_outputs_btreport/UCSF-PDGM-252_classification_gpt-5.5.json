@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Tumor Location",
+      "Region Proportions",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma: the patient is young for adult diffuse glioma, and the lesion is nonenhancing with no enhancing tumor volume, no necrosis, solitary presentation, cortical involvement, absent deep white-matter invasion, absent ependymal invasion, and no midline shift, a pattern more typical of lower-grade IDH-mutant glioma than IDH-wildtype glioblastoma. Evidence against IDH-mutant status is limited but includes a midline epicenter description and posterior occipital/parietal distribution, which are not the most classic imaging pattern for IDH-mutant astrocytoma, and the lesion is encoded entirely as oedema/FLAIR abnormality rather than a segmented solid nonenhancing tumor component. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.63,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the available MRI metadata is limited because key oligodendroglioma-associated features such as calcification are not assessed. The strongest argument for non-codeleted status is that the tumor is occipital/parietal rather than a classic frontal oligodendroglioma distribution, with no deep white-matter invasion and no multifocality. Features that could support codeletion include cortical involvement, young adult age, and a nonenhancing lower-grade-appearing lesion, which can be seen in oligodendroglioma. Because the supportive non-codeleted evidence is modest and several features overlap with oligodendroglioma, the best estimate is non-codeleted with only moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without diffusion, perfusion, spectroscopy, SWI/GRE, histology, or molecular testing. The nonenhancing, non-necrotic, solitary cortical lesion in a young adult most strongly supports a lower-grade IDH-mutant diffuse glioma. 1p/19q status is the least certain because several discriminating imaging features are unavailable.",
+  "subject_id": "UCSF-PDGM-252",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "Eloquent Brain Involvement",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "p95_shift_mm"
+    ],
+    "prediction": 2,
+    "reasoning": "The grading features most strongly support CNS WHO grade 2: there is no enhancement, no enhancing tumor volume, no necrosis, solitary disease, absent ependymal invasion, absent deep white-matter invasion, no midline shift, and only a modest total tumor volume. These findings argue against grade 4 and also against a high-grade enhancing phenotype. Potentially concerning features include the lesion being represented as entirely oedema/FLAIR abnormality, involvement of eloquent visual regions, and small measured shift values despite the categorical absence of midline shift; however, there is no metadata evidence of necrosis or enhancement to support grade 4, and no provided imaging marker strongly supports grade 3 over grade 2. The best estimate is CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_01521",
+  "idh": {
+    "reasoning": "The patient's advanced age (74 years) is the single strongest predictor for IDH-wildtype status. The imaging features strongly corroborate this prediction. The tumor is a large, deeply infiltrative mass with extensive necrosis (39.38% of the core), which are hallmark features of glioblastoma, IDH-wildtype. Furthermore, the tumor exhibits a very sharp transition zone on FLAIR (median thickness 0.75 mm), which is characteristic of IDH-wildtype gliomas, in contrast to the ill-defined borders often seen in IDH-mutant tumors. Critically, the T2-FLAIR mismatch sign, a specific marker for IDH-mutant astrocytoma, is absent. The only mildly contradictory feature is the 'Mild' enhancement quality, but the presence of any enhancement and, more importantly, extensive necrosis, overwhelmingly supports an IDH-wildtype prediction.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "crosses_ideal_midline",
+      "Ependymal (ventricular) Invasion",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status must be made independently of the IDH prediction. The imaging phenotype is highly uncharacteristic of a 1p/19q-codeleted oligodendroglioma. The presence of extensive necrosis (Proportion Necrosis: 39.38%) and contrast enhancement are features strongly associated with astrocytic lineage tumors (non-codeleted) or glioblastoma, and are rare in oligodendrogliomas. The tumor's highly infiltrative nature, with deep white matter invasion, ependymal spread, and crossing of the midline, also points towards a more aggressive, non-codeleted phenotype. While the frontal lobe location is common for oligodendrogliomas, this is a non-specific feature and is outweighed by the strong evidence against co-deletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "crosses_ideal_midline",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive central necrosis is a key imaging correlate of the histopathological features defining CNS WHO grade 4. The metadata indicates a very high 'Proportion Necrosis' of 39.38%. This finding alone is the strongest indicator for a grade 4 tumor. This is further supported by the presence of contrast enhancement, a large tumor volume (231.95 mL), significant mass effect ('midline_shift_present': 'Yes'), and an aggressive infiltrative pattern ('Deep WM invasion', 'Ependymal (ventricular) Invasion'). The patient's advanced age (74) also significantly increases the pre-test probability of a grade 4 glioma. There are no imaging features to suggest a lower grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age and classic imaging features\u2014a large, necrotic, midline-crossing, and deeply infiltrative mass with sharp FLAIR borders and absent T2-FLAIR mismatch\u2014provides a textbook example of a glioblastoma. All three predictions (IDH-wildtype, 1p/19q non-codeleted, and WHO grade 4) are made with very high confidence and are internally consistent, leading to the integrated diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

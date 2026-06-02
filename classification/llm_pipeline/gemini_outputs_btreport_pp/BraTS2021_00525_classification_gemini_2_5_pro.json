@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_00525",
+  "idh": {
+    "reasoning": "The patient's young age (29 years) is a very strong predictor for an IDH-mutant glioma. The tumor is also predominantly non-enhancing (1.29% enhancing volume), which is common in IDH-mutant tumors. However, there are significant contradicting features. The absence of a T2-FLAIR mismatch sign is a strong negative predictor for IDH-mutant astrocytoma. Additionally, the very sharp tumor margin, indicated by a thin FLAIR transition zone (median 0.5 mm), is less typical for IDH-mutant astrocytomas and more suggestive of either an IDH-wildtype tumor or an oligodendroglioma. Since oligodendrogliomas are IDH-mutant, this feature is ambiguous for IDH status overall. Balancing the extremely strong demographic prior (age) against the conflicting imaging phenotype, the prediction remains mutant, but with reduced confidence.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype strongly suggests an oligodendroglioma, which is defined by 1p/19q co-deletion. The key supporting features are the very well-defined tumor margins, evidenced by the thin `Transition Zone Thickness (FLAIR)` (median 0.5 mm), and the absence of the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present` is 0.0). The T2-FLAIR mismatch sign is highly specific for IDH-mutant astrocytomas (non-codeleted), so its absence argues against that diagnosis and, by extension, for a codeleted tumor. The tumor also has significant cortical involvement, which is common in oligodendrogliomas. The deep white matter and gray matter involvement is a minor contradicting feature, as it can be seen more commonly in astrocytomas, but it does not exclude an oligodendroglioma.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Anatomical Overlap Regions",
+      "Deep WM invasion"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The presence of both contrast enhancement (`ET Volume (mL)` > 0) and central necrosis (`NCR Volume (mL)` > 0) are definitive radiological markers of a high-grade glioma. According to WHO CNS5 criteria for adult-type diffuse gliomas, the presence of necrosis is sufficient for a diagnosis of WHO grade 4 in both IDH-wildtype (Glioblastoma) and IDH-mutant astrocytoma contexts. Although the volume of necrosis and enhancement is very small relative to the total tumor volume, and the patient is young, the mere presence of necrosis is a very strong, histologically correlated feature pointing towards the highest grade. Therefore, an independent assessment based on this key finding favors a prediction of grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 4",
+  "consistency_check_passed": false,
+  "overall_comment": "The independent predictions result in a biologically inconsistent diagnosis. The combination of IDH-mutant and 1p/19q-codeleted status defines an oligodendroglioma, which can only be CNS WHO grade 2 or 3. A grade 4 designation is not possible for this entity. The inconsistency arises because the imaging phenotype (sharp borders, no T2-FLAIR mismatch) strongly suggests an oligodendroglioma, while the presence of necrosis, assessed independently, dictates a grade 4 prediction. The most probable integrated diagnosis is Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3, where the necrosis qualifies it as high-grade. This implies the independent grade 4 prediction is the source of the inconsistency."
+}

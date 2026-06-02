@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.67,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors IDH-mutant diffuse glioma because age_years is 42, and the lesion is described as a temporal-cortex tumor with Cortical involvement present and Deep WM invasion absent, a pattern more typical of lower-age hemispheric diffuse glioma than de novo IDH-wildtype glioblastoma. Enhancement Quality is mild and Proportion Enhancing is limited, which does not strongly support an IDH-wildtype phenotype. Against IDH-mutant status, Multifocal or Multicentric disease with Number of lesions 3, large Proportion of Oedema/ED Volume, small but present NCR Volume/Proportion Necrosis, and absence of a T2-FLAIR mismatch all reduce specificity and raise concern for a more aggressive IDH-wildtype process. Overall, the younger age and cortical temporal location outweigh the aggressive features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest location evidence is against co-deletion: Tumor Location and Region Proportions place the tumor in the temporal-cortex region, whereas oligodendroglioma with 1p/19q co-deletion more often has a frontal cortical-subcortical predominance. Multifocal or Multicentric disease and substantial Proportion of Oedema are not classic supportive features for a codeleted oligodendroglioma pattern. Evidence against the non-codeleted call is that T2-FLAIR Mismatch Present is absent, which removes a classic imaging clue for IDH-mutant astrocytoma, and mild enhancement with cortical involvement can occur in oligodendroglioma. Because the available MRI metadata lacks calcification-sensitive imaging and has nonspecific features, the conclusion is non-codeleted with only modest confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Proportion of Oedema",
+      "ED Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The case has mixed features: age and cortical temporal location favor IDH-mutant glioma, while multifocality, edema, enhancement, and small necrotic/non-enhancing core favor higher grade and reduce molecular certainty. Tissue diagnosis with IDH testing, ATRX/TP53, and 1p/19q assessment is required.",
+  "subject_id": "EGD-0461",
+  "who_grade": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "For grade considered independently, the imaging metadata supports high-grade disease because there is enhancing tumor with ET Volume, Proportion Enhancing, and Thickness of enhancing margin greater than 3 mm, plus a necrotic/non-enhancing component reflected by NCR Volume and Proportion Necrosis. Marked surrounding abnormality is present through high Proportion of Oedema and ED Volume, and the disease is Multifocal or Multicentric with Number of lesions 3, all favoring grade 4 over grade 2 and more than a typical grade 3 pattern. Features arguing against a confident grade 4 call include Enhancement Quality being only mild, limited Proportion Enhancing and Proportion Necrosis, absence of midline_shift_present, absence of Asymmetrical Ventricles, Deep WM invasion absent, Ependymal invasion absent, CET and edema not crossing midline, and Multiple satellites absent. Despite these mitigating findings, the combination of enhancement, necrotic component, extensive edema, and multifocality makes CNS WHO grade 4 the best imaging-based estimate.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

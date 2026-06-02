@@ -1,0 +1,50 @@
+{
+  "subject_id": "UCSF-PDGM-422",
+  "idh": {
+    "reasoning": "The tumor is predominantly non-enhancing, with a very high proportion of edema/T2 hyperintensity (93.02%) compared to a small enhancing component (6.61%). This T2/FLAIR-dominant appearance is a classic feature of IDH-mutant gliomas. Furthermore, there is a near-complete absence of necrosis (0.36%) and no deep white matter invasion, which also favors a slower-growing, IDH-mutant phenotype over the more aggressive, necrotic, and deeply infiltrative pattern typical of IDH-wildtype glioblastoma. The presence of some enhancement and a thick enhancing margin are contradictory but are outweighed by the overall tumor composition.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging features are ambiguous for differentiating between oligodendroglioma (codeleted) and astrocytoma (non-codeleted). The significant cortical involvement could be seen in oligodendroglioma. However, the presence of contrast enhancement, even if mild, and a large infiltrative component (high ED Volume) are more commonly associated with astrocytomas. There are no specific features like well-defined margins to strongly suggest an oligodendroglioma. Given the balance of non-specific features, the presence of enhancement slightly favors a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis, even in a very small volume (NCR Volume (mL) of 0.095), is a key histopathological criterion for WHO grade 4 in adult-type diffuse gliomas. This is further supported by the presence of a thick enhancing margin (>3mm), another feature associated with high-grade tumors. While other features, such as the low proportion of enhancement, lack of significant mass effect (no midline shift), and absence of deep white matter invasion, might suggest a lower grade, the presence of necrosis is a defining feature of grade 4 according to WHO CNS5 criteria and typically overrides these other considerations.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are most consistent with an IDH-mutant astrocytoma. The tumor is predominantly non-enhancing and infiltrative, classic for this lineage. However, the presence of a small but definite necrotic component and a thick enhancing margin are strong indicators of high-grade biology, leading to a WHO grade 4 prediction. The 1p/19q status is uncertain based on imaging alone."
+}

@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata supporting IDH-wildtype includes older age in age_years, a large aggressive-appearing lesion in Total tumor volume (mL), enhancing tumor in ET Volume (mL) and Proportion Enhancing, substantial necrotic/non-enhancing core in Proportion Necrosis, extensive edema in ED Volume (mL) and Proportion of Oedema, Multiple satellites present, and Deep WM invasion. These features are more typical of an IDH-wildtype glioblastoma imaging phenotype. The main opposing evidence is a strong T2-FLAIR mismatch pattern from T2-FLAIR Mismatch Present, T2-FLAIR Mismatch Score, Central Core T2 Mean, Central Core FLAIR Mean, and Peripheral Rim FLAIR Mean, which can support IDH-mutant astrocytoma, although in this case it occurs alongside marked necrosis and enhancement. On balance, the aggressive age-and-morphology profile favors IDH-wildtype, with only moderate confidence because the T2-FLAIR mismatch is a meaningful contradiction.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Multiple satellites present",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.77,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata supporting a non-codeleted tumor includes T2-FLAIR Mismatch Present and T2-FLAIR Mismatch Score, because a strong mismatch pattern is more characteristic of astrocytic rather than oligodendroglial diffuse glioma. Additional support for non-codeletion comes from age_years, substantial necrosis in Proportion Necrosis, extensive edema in ED Volume (mL) and Proportion of Oedema, Multiple satellites present, and Deep WM invasion, which are less typical for classic oligodendroglioma. Opposing evidence includes frontal and cortical involvement in Tumor Location, Region Proportions, and Cortical involvement, plus mild enhancement in Enhancement Quality, which can be seen with oligodendroglioma. Overall, the mismatch pattern and aggressive non-oligodendroglial morphology favor non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Multiple satellites present",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The strongest uncertainty is the high T2-FLAIR mismatch signal, which supports an IDH-mutant astrocytoma pattern but may be confounded here by the large necrotic/non-enhancing core and enhancing high-grade morphology.",
+  "subject_id": "EGD-0121",
+  "who_grade": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "reasoning": "The metadata strongly supports CNS WHO grade 4 behavior: Proportion Necrosis is high, ET Volume (mL) confirms enhancing tumor, Thickness of enhancing margin is thick, ED Volume (mL) and Proportion of Oedema show extensive edema, Total tumor volume (mL) is large, and Multiple satellites present plus Deep WM invasion indicate infiltrative aggressive disease. Features arguing against grade 4 include only mild enhancement in Enhancement Quality, relatively limited Proportion Enhancing, no midline shift in midline_shift_present, no enhancing or edema midline crossing in CET Crosses midline and Edema crosses midline, absent ventricular invasion in Ependymal (ventricular) Invasion, and T2-FLAIR Mismatch Present, which can be associated with lower-grade IDH-mutant astrocytoma. Despite these contradictions, the necrosis, enhancement, edema, and satellite pattern favor grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Multiple satellites present",
+      "Deep WM invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,80 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because age_years shows a very young adult, and Tumor Location/Region Proportions/Cortical involvement describe a frontal cortical tumor, a common pattern for IDH-mutant glioma. Enhancement Quality, ET Volume (mL), Proportion Enhancing, and n_components_enhancing indicate only minimal to essentially absent measurable enhancement, which is less typical for IDH-wildtype glioblastoma. midline_shift_present, Asymmetrical Ventricles, Ependymal (ventricular) Invasion, Multiple satellites present, and Multifocal or Multicentric do not show marked mass effect or disseminated aggressive behavior. Against IDH mutation, Deep WM invasion, ED Volume (mL), Total tumor volume (mL), and Proportion Necrosis indicate a large infiltrative lesion with edema and a large nonenhancing/necrosis-labeled component, which can be seen in more aggressive tumors. Overall the age, frontal cortical location, and minimal enhancement outweigh these aggressive-size features, so the best prediction is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, Tumor Location, Region Proportions, and Cortical involvement show a frontal cortical lesion, which is a pattern that can support oligodendroglioma with 1p/19q co-deletion. Enhancement Quality, ET Volume (mL), and Proportion Enhancing show only mild/minimal enhancement, also compatible with a lower-grade or oligodendroglial-appearing diffuse glioma. T2-FLAIR Mismatch Present and T2-FLAIR Mismatch Score do not show a strong T2-FLAIR mismatch pattern, which weakly argues away from the classic IDH-mutant non-codeleted astrocytoma imaging phenotype. Against co-deletion, age_years is younger than the most typical oligodendroglioma presentation, while Deep WM invasion, ED Volume (mL), Total tumor volume (mL), and Side of Tumor Epicenter are not specific and introduce uncertainty. Because the frontal cortical location and absent strong T2-FLAIR mismatch slightly outweigh the nonspecific contradicting features, the best prediction is 1p/19q-codeleted, but confidence is limited.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured T1w, T2w, T2-FLAIR, and T1-Gd metadata. The 1p/19q call is the least secure because the available fields are suggestive but nonspecific. Histopathology and molecular testing remain required for definitive WHO-CNS5 classification.",
+  "subject_id": "EGD-0688",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 3,
+    "reasoning": "For grade considered independently, several fields argue for a tumor above grade 2: Deep WM invasion indicates infiltrative extension, ED Volume (mL) and Total tumor volume (mL) show a large tumor with substantial surrounding abnormality, Proportion Necrosis and NCR Volume (mL) describe a large nonenhancing/necrosis-labeled component, and Enhancement Quality plus Thickness of enhancing margin indicate some enhancement. These features support at least an anaplastic/high-grade tendency. However, ET Volume (mL), Proportion Enhancing, and n_components_enhancing show almost no measurable enhancing tumor, and midline_shift_present, Asymmetrical Ventricles, Ependymal (ventricular) Invasion, Multiple satellites present, and Multifocal or Multicentric do not show major mass effect, ventricular invasion, multifocality, or satellites; these argue against a confident grade 4 call and keep grade 2 in the differential. Balancing the large infiltrative/edematous lesion and necrosis-labeled core against minimal enhancement and limited mass effect, the best MRI-based estimate is CNS WHO grade 3.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

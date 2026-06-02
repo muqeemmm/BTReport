@@ -1,0 +1,47 @@
+{
+  "subject_id": "BraTS2021_01743",
+  "idh": {
+    "reasoning": "The patient's advanced age (74 years) is a very strong predictor for IDH-wildtype status, as the vast majority of gliomas in this age group are IDH-wildtype. Furthermore, the absence of a T2-FLAIR mismatch sign argues against an IDH-mutant astrocytoma. These factors outweigh the imaging features more typical of an IDH-mutant tumor, such as the complete lack of enhancement and small tumor volume. In elderly patients, IDH-wildtype gliomas (glioblastomas) can present without enhancement.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is performed independently of the IDH status. The tumor's location in the frontal lobe with cortical involvement is common for oligodendrogliomas (1p/19q-codeleted). However, the tumor appears purely infiltrative (100% edema, no solid core), which argues against the typically well-defined borders of an oligodendroglioma. The absence of the T2-FLAIR mismatch sign argues against an IDH-mutant astrocytoma (non-codeleted), but this is not definitive. The evidence is weak and conflicting, but the ill-defined, infiltrative nature is a slightly stronger feature arguing against co-deletion.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "Tumor Core Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "There is a significant conflict between imaging features and clinical context. The imaging phenotype, characterized by a complete lack of enhancement and necrosis and a very small tumor volume, is highly suggestive of a low-grade (WHO grade 2) glioma. However, the patient's advanced age (74 years) is a powerful predictor of a high-grade glioma. According to the WHO CNS5 classification, a diffuse astrocytic glioma that is IDH-wildtype in an adult is, by definition, a Glioblastoma, CNS WHO grade 4, irrespective of histological or radiological features like enhancement. Given the high likelihood of IDH-wildtype status based on age, a grade 4 classification is the most probable.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents a classic diagnostic challenge where clinical and molecular predictors conflict with imaging features. The patient's advanced age (74) strongly points towards an IDH-wildtype glioma, which under WHO CNS5 is defined as a Glioblastoma, grade 4. However, the MRI shows a small, non-enhancing, purely infiltrative lesion, which is atypical for glioblastoma and more characteristic of a lower-grade glioma. The final classification prioritizes the high probability of IDH-wildtype status in this age group."
+}

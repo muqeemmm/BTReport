@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_00159",
+  "idh": {
+    "reasoning": "The patient's age of 57 years is more typical for IDH-wildtype gliomas. The MRI features are overwhelmingly characteristic of an IDH-wildtype tumor, specifically glioblastoma. These include a very large tumor volume with a substantial necrotic core (`NCR Volume (mL)` of 27.812, `Proportion Necrosis` of 26.92%) and marked, thick-walled contrast enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"). Furthermore, the tumor's location is a strong predictor; it is a large, midline-crossing lesion (`crosses_patient_midline`: true) with its epicenter at the midline (`Side of Tumor Epicenter`: \"Midline\") and extensive involvement of the corpus callosum, bilateral thalami, and brainstem. This constellation of features is classic for glioblastoma and provides very strong evidence against an IDH-mutant status, which typically presents in younger patients with less aggressive features like minimal to no necrosis or enhancement.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Side of Tumor Epicenter",
+      "crosses_patient_midline",
+      "Anatomical Overlap Regions",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.99
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly indicative of a non-codeleted glioma. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically lack the aggressive features seen here. This lesion demonstrates extensive necrosis (`NCR Volume (mL)`: 27.812) and marked, thick-walled enhancement (`Enhancement Quality`: \"Marked\"), both of which are strong negative predictors for co-deletion. The deep, midline location involving the corpus callosum and bilateral deep gray nuclei (`Anatomical Overlap Regions`, `Side of Tumor Epicenter`) is characteristic of an astrocytoma (non-codeleted) and highly atypical for an oligodendroglioma. There are no imaging features to suggest a 1p/19q co-deleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Side of Tumor Epicenter",
+      "crosses_patient_midline",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive central necrosis is a defining feature of a CNS WHO grade 4 glioma. The metadata clearly quantifies a large necrotic component (`NCR Volume (mL)`: 27.812, `Proportion Necrosis`: 26.92%). This is strongly corroborated by the presence of marked, thick-walled, irregular contrast enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"), which is the radiological hallmark of tumor necrosis and microvascular proliferation. The very large tumor size (`Total tumor volume (mL)`: 103.304) and significant mass effect (`max_shift_mm`: 11.0) further support a high-grade designation. There is no evidence to suggest a lower grade (2 or 3), as these typically lack extensive necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are classic for a glioblastoma. The patient's age (57), the large tumor size, its midline-crossing location with deep structural involvement, and particularly the presence of extensive necrosis and marked, thick-walled enhancement, all converge on a high-confidence diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

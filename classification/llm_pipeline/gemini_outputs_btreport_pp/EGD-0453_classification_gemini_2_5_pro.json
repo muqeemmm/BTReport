@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0453",
+  "idh": {
+    "reasoning": "The patient's age of 52 years is more typical for IDH-wildtype gliomas. The most compelling evidence is the large proportion of necrosis (38.21%), a hallmark feature of high-grade, IDH-wildtype tumors (glioblastoma). Furthermore, the absence of a T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 0.0) argues strongly against an IDH-mutant astrocytoma. While some features like the very sharp transition zone (`Transition Zone Thickness (FLAIR)` median 0.75mm) and low proportion of enhancement (2.84%) could be seen in IDH-mutant tumors, they are significantly outweighed by the strong indicators of IDH-wildtype status, especially the presence of necrosis.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of a significant proportion of necrosis (38.21%) is extremely rare in 1p/19q-codeleted oligodendrogliomas and is a strong indicator of an astrocytic lineage, which is by definition non-codeleted. Although the very sharp tumor margin (`Transition Zone Thickness (FLAIR)` median 0.75mm) and cortical involvement are classic features of oligodendroglioma, the presence of necrosis is a much stronger differentiating feature that points decisively away from a codeleted status. The thick enhancing margin (`Thickness of enhancing margin`: \">3mm\") also favors an astrocytic tumor over an oligodendroglioma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The key determinant for grading in this case is the presence of extensive necrosis, with the `Proportion Necrosis` being 38.21%. Radiographic evidence of necrosis in a diffusely infiltrating glioma is a primary criterion for assigning WHO grade 4. The presence of contrast enhancement (`Enhancement Quality`: \"Mild\", `Thickness of enhancing margin`: \">3mm\"), even if limited in volume, further supports a high-grade designation. Features that might suggest a lower grade, such as the low total proportion of enhancement and sharp borders, are insufficient to overcome the definitive evidence of necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (52), significant necrosis, and contrast enhancement strongly supports a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The sharp tumor margin is an atypical feature for this diagnosis but is outweighed by the powerful indicators of high-grade biology. The predictions for IDH status, 1p/19q status, and WHO grade are internally consistent."
+}

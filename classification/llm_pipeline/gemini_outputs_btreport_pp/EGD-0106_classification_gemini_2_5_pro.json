@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0106",
+  "idh": {
+    "reasoning": "The tumor is completely non-enhancing, which is a very strong predictor for IDH-mutant status. The frontal lobe location is also classic for this molecular subtype. While the patient's age of 52 is on the higher end for IDH-mutant gliomas and the absence of a T2-FLAIR mismatch sign argues against an IDH-mutant astrocytoma, these factors are outweighed by the compelling lack of enhancement. The absence of the T2-FLAIR mismatch sign does not rule out an IDH-mutant oligodendroglioma. Therefore, the evidence strongly points towards an IDH-mutant glioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Region Proportions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming the tumor is IDH-mutant, the key differentiator between 1p/19q co-deleted (oligodendroglioma) and non-codeleted (astrocytoma) status is often the T2-FLAIR mismatch sign, which is highly specific for astrocytomas. In this case, the T2-FLAIR mismatch sign is absent. This, combined with other features typical for oligodendroglioma such as a frontal lobe location, cortical involvement, and relatively well-defined borders (boundary_sharpness near 1.0), strongly suggests a 1p/19q co-deleted status. There are no strong features pointing towards a non-codeleted astrocytoma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Region Proportions",
+      "boundary_sharpness",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The grading is challenging due to conflicting features. The complete lack of contrast enhancement is a strong feature of a lower-grade glioma (WHO grade 2). However, the patient's age of 52 is more typical for a higher-grade tumor (grade 3 or 4). Most importantly, there is a small volume of non-enhancing central core reported as necrosis (NCR Volume (mL) > 0). In the context of an IDH-mutant, 1p/19q-codeleted glioma (oligodendroglioma), the presence of necrosis is a feature of anaplasia, consistent with WHO grade 3. The lack of enhancement makes grade 4 highly unlikely. Balancing the lack of enhancement against the patient's age and the presence of necrosis, grade 3 is the most probable diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging features are highly characteristic of an oligodendroglioma, given the frontal location, lack of enhancement, and absence of a T2-FLAIR mismatch sign. The patient's age and a minimal non-enhancing necrotic core suggest anaplastic features, making WHO grade 3 the most likely grade, despite the absence of contrast enhancement."
+}

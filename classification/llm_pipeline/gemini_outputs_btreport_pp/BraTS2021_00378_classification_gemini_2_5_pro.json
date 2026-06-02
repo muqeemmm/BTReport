@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_00378",
+  "idh": {
+    "reasoning": "The patient's age of 48 years is more typical for IDH-wildtype gliomas. Key imaging features strongly support an IDH-wildtype status, including the presence of necrosis (`Proportion Necrosis`: 2.48%), a thick enhancing margin (`Thickness of enhancing margin`: '>3mm'), and a multifocal presentation (`Multifocal or Multicentric`: 'Multifocal'). Furthermore, the T2-FLAIR mismatch sign, a hallmark of IDH-mutant astrocytoma, is explicitly absent (`T2-FLAIR Mismatch Present`: 0.0). The primary contradicting evidence is a very sharp FLAIR transition zone (`Transition Zone Thickness (FLAIR)` median 0.75mm), which is usually associated with IDH-mutant tumors. However, given the multiple strong features pointing to IDH-wildtype, this is the most likely diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of non-codeletion is made with very high confidence. Tumors with 1p/19q co-deletion (oligodendrogliomas) are typically non-enhancing and do not exhibit necrosis. This tumor shows both contrast enhancement (`Proportion Enhancing`: 9.46%) and necrosis (`Proportion Necrosis`: 2.48%). Additionally, the multifocal nature (`Multifocal or Multicentric`: 'Multifocal') is atypical for oligodendroglioma. The imaging phenotype is strongly indicative of an astrocytic lineage tumor.",
+    "supporting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of central necrosis (`Proportion Necrosis`: 2.48%) is a radiological hallmark of a high-grade glioma and is the strongest indicator for WHO grade 4. This is further supported by the presence of contrast enhancement with a thick margin (`Thickness of enhancing margin`: '>3mm') and the multifocal nature of the disease (`Multifocal or Multicentric`: 'Multifocal'). These features are incompatible with a grade 2 tumor and are most consistent with a grade 4 diagnosis. While the proportion of necrosis is small, its presence is the key determinant.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (48), multifocal presentation, contrast enhancement with a thick margin, and central necrosis are all classic imaging features of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The only slightly ambiguous feature is a very sharp FLAIR transition zone, which is more typical of IDH-mutant tumors; however, the dedicated T2-FLAIR mismatch metrics report the sign as absent, and the weight of other evidence strongly supports the IDH-wildtype prediction. The diagnosis is made with high confidence."
+}

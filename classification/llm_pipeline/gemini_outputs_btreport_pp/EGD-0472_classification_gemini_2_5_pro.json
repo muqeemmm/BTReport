@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0472",
+  "idh": {
+    "reasoning": "The patient's age of 45 is within the typical range for IDH-mutant gliomas. The most compelling evidence for an IDH-mutant status is the complete absence of contrast enhancement and necrosis. The tumor is entirely non-enhancing ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0) and non-necrotic ('NCR Volume (mL)': 0.0). This imaging phenotype is classic for IDH-mutant gliomas and makes an IDH-wildtype glioma (i.e., glioblastoma) highly unlikely. A key feature arguing against this prediction is the absence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0), which is highly specific for IDH-mutant astrocytomas. However, its absence does not rule out an IDH-mutant oligodendroglioma. On balance, the lack of enhancement and necrosis are stronger predictors of IDH status than the T2-FLAIR mismatch sign.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant status, the key differentiator between 1p/19q-codeleted (oligodendroglioma) and non-codeleted (astrocytoma) is often the T2-FLAIR mismatch sign. In this case, the sign is absent ('T2-FLAIR Mismatch Present': 0.0). The absence of this sign is a strong argument against an IDH-mutant astrocytoma, thereby increasing the likelihood of an oligodendroglioma. The tumor's non-enhancing nature and cortical involvement are consistent with either subtype. However, the involvement of deep gray matter structures like the thalamus and basal ganglia ('Anatomical Overlap Regions') is somewhat more typical for astrocytomas. Despite this atypical location, the absence of a highly specific astrocytoma imaging marker (T2-FLAIR mismatch) is the most decisive feature, favoring a codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The tumor lacks any high-grade imaging features such as contrast enhancement ('ET Volume (mL)': 0.0) or necrosis ('NCR Volume (mL)': 0.0). This effectively rules out a WHO grade 4 diagnosis based on imaging and makes a lower grade (2 or 3) most likely. The distinction between grade 2 and 3 in non-enhancing gliomas is challenging. However, the tumor exerts significant mass effect, with a maximum midline shift of 6.0 mm ('max_shift_mm': -6.0). This degree of mass effect for a moderately sized tumor (45.5 mL) suggests a higher proliferative activity, which is more consistent with a WHO grade 3 lesion than a grade 2. The patient's age of 45 also slightly favors a higher grade. Therefore, despite the absence of enhancement, the significant mass effect points towards a grade 3 diagnosis.",
+    "supporting_features": [
+      "midline_shift_present",
+      "max_shift_mm",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "This 45-year-old male presents with a solitary, non-enhancing, non-necrotic glioma with significant mass effect. The lack of enhancement strongly favors an IDH-mutant genotype. The absence of the T2-FLAIR mismatch sign argues against an astrocytoma, making an oligodendroglioma (1p/19q-codeleted) more likely, despite some atypical deep gray matter involvement. The significant mass effect in the absence of enhancement suggests a WHO grade 3 lesion. The integrated prediction is therefore an Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3."
+}

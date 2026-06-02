@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the metadata favors IDH-wildtype because the patient is older, the lesion has measurable contrast-enhancing tumor, mild enhancement with a thick enhancing margin, substantial FLAIR/edema component, and a small necrotic/non-enhancing core. These features are more typical of an aggressive IDH-wildtype diffuse glioma than an indolent IDH-mutant tumor. Features arguing against IDH-wildtype include cortical frontal/parietal involvement and absence of deep white matter invasion, which can be seen with IDH-mutant gliomas; absence of a T2-FLAIR mismatch does not support the classic IDH-mutant astrocytoma imaging pattern. Overall, the age and enhancing/edematous phenotype outweigh the more superficial cortical location, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, 1p/19q non-codeleted, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.63,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the imaging metadata leans non-codeleted because the lesion shows measurable enhancement, a thick enhancing margin, a large edema/FLAIR component relative to tumor volume, and a small necrotic component, which are less typical of a classic oligodendroglioma phenotype and more consistent with a non-codeleted diffuse glioma. Evidence that argues against non-codeleted status is the frontal cortical component, since oligodendrogliomas commonly involve the frontal lobe and cortex. Because the available metadata lacks calcification-sensitive imaging and the location is somewhat oligodendroglioma-like, the confidence is only moderate, but the enhancing/edematous phenotype favors non-codeleted.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility/calcification assessment. The main uncertainty is that the lesion is small, cortically based, and frontal/parietal, which can overlap with IDH-mutant and oligodendroglial tumors, but the older age and enhancing, edematous phenotype favor an IDH-wildtype glioblastoma pattern.",
+  "subject_id": "UCSF-PDGM-083",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently, the metadata supports grade 4 because there is enhancing tumor, a thick enhancing margin, extensive edema/FLAIR abnormality, and a small necrotic/non-enhancing component. These features favor a high-grade diffuse glioma, and necrosis with enhancement is most concerning for grade 4 rather than grade 2 or grade 3. Features arguing against grade 4 include only mild enhancement, small enhancing and necrotic volumes, small total tumor volume, no midline shift, no deep white matter invasion, and no ependymal invasion. Despite these mitigating features, the presence of enhancement with necrotic component and prominent edema makes grade 4 the best estimate.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

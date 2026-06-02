@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_01136",
+  "idh": {
+    "reasoning": "The patient's advanced age (77 years) is a very strong predictor for IDH-wildtype status. The imaging features overwhelmingly support this prediction, including marked, thick ring-enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm'), a large volume of central necrosis ('NCR Volume (mL)': 23.48), and aggressive features like midline crossing ('CET Crosses midline': 'True') and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'). Furthermore, the tumor exhibits a very sharp transition zone ('Transition Zone Thickness (FLAIR)' median 0.75 mm), which is characteristic of IDH-wildtype glioblastoma, as opposed to the more diffuse, ill-defined margins of IDH-mutant astrocytomas. The absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0) also argues against an IDH-mutant astrocytoma. There is no significant evidence to suggest an IDH-mutant tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.99
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly indicative of a high-grade astrocytic tumor, making a 1p/19q co-deletion (which defines oligodendroglioma) extremely unlikely. Key features arguing against co-deletion include the presence of marked, thick ring-enhancement ('Enhancement Quality': 'Marked') and extensive central necrosis ('NCR Volume (mL)': 23.48). These features are hallmarks of glioblastoma (which is non-codeleted) and are highly atypical for oligodendrogliomas, which usually exhibit less enhancement and rarely show such extensive necrosis. The deep gray matter involvement ('Anatomical Overlap Regions') is also more characteristic of high-grade astrocytomas than oligodendrogliomas. The only feature weakly compatible with a co-deleted tumor is the frontal lobe location, which is non-specific.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The prediction of CNS WHO grade 4 is made with very high confidence based on definitive radiological markers of high-grade malignancy. The presence of a large necrotic core ('NCR Volume (mL)': 23.48) is, by itself, a sufficient criterion for assigning grade 4 based on imaging. This is strongly corroborated by the presence of marked, thick, ring-like contrast enhancement ('Enhancement Quality': 'Marked', 'ET Volume (mL)': 75.07, 'Thickness of enhancing margin': '>3mm'), which is a radiological correlate of microvascular proliferation, another histological hallmark of grade 4. The significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': 10.0) and aggressive growth across the midline ('CET Crosses midline': 'True') further support a grade 4 designation. There are no features suggestive of a lower grade (2 or 3).",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an elderly male presenting with a large, solitary, midline-crossing frontal mass. The imaging findings, particularly the combination of advanced age, marked ring enhancement, and extensive central necrosis, are classic for Glioblastoma, IDH-wildtype, CNS WHO grade 4. All individual predictions are made with high confidence and are molecularly consistent with this final integrated diagnosis."
+}

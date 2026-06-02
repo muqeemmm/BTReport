@@ -1,0 +1,46 @@
+{
+  "subject_id": "EGD-0199",
+  "idh": {
+    "reasoning": "The tumor is completely non-enhancing and shows no signs of necrosis. The enhancement quality is 'None', the enhancing tumor volume is 0.0 mL, and the necrotic/cystic volume is 0.0 mL. This imaging phenotype is highly characteristic of IDH-mutant gliomas. The location in the frontal lobe is also a common site for these tumors. There are no features, such as ring enhancement or central necrosis, to suggest an IDH-wildtype glioma (glioblastoma).",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The distinction between IDH-mutant astrocytoma (non-codeleted) and oligodendroglioma (co-deleted) is challenging based on these features. The frontal lobe and cortical involvement are common in oligodendrogliomas. However, the presence of edema that crosses the midline suggests a more infiltrative nature, which is often more characteristic of astrocytomas. The absence of classic oligodendroglioma features like sharp borders (implied by the large 'edema' component) or calcifications (not assessed) slightly favors a non-codeleted status. The evidence is weak and conflicting.",
+    "supporting_features": [
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of contrast enhancement and necrosis are strong indicators against a high-grade glioma, particularly WHO grade 4. This makes a lower grade (2 or 3) most likely. While the tumor exerts some mass effect (5mm max shift, ventricular asymmetry), which could be seen in a grade 3 tumor, the lack of any aggressive imaging features (enhancement) makes WHO grade 2 the most probable diagnosis. The distinction between grade 2 and 3 in non-enhancing gliomas is notoriously difficult on conventional MRI alone as it relies on mitotic counts.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "max_shift_mm",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 2,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly suggestive of a lower-grade, IDH-mutant glioma, characterized by a complete lack of enhancement and necrosis. The right frontal lobe location is typical. The prediction is an Astrocytoma, IDH-mutant, WHO grade 2. The distinction from an oligodendroglioma is uncertain, and while grade 2 is favored, grade 3 cannot be definitively excluded based on imaging alone."
+}

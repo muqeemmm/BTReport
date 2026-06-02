@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Multiple satellites present",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is a younger adult, and the lesion is predominantly frontal/cortical with only mild, extremely small-volume enhancement and no deep white matter or ependymal invasion. These features are more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. Features arguing toward IDH-wildtype/high-grade biology include the reported necrosis proportion, substantial edema, and satellite lesions, but the very limited enhancement and absence of deep/ependymal invasion make IDH-wildtype less likely overall. Therefore the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Multiple satellites present",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "The imaging pattern modestly favors 1p/19q co-deletion because the tumor is frontal and cortically involved in a 42-year-old patient, and the absence of a T2-FLAIR mismatch pattern argues against the classic IDH-mutant astrocytoma imaging phenotype. Mild, minimal-volume enhancement can still be seen in oligodendroglioma. Against co-deletion, the sizable edema, reported necrosis proportion, and satellite lesions suggest more aggressive or less typical biology and reduce specificity. Overall, the balance slightly favors a codeleted oligodendroglioma, but confidence is only moderate because calcification, diffusion, perfusion, and spectroscopy are unavailable.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional MRI metadata. The main uncertainty is the tension between an oligodendroglial/frontal cortical, minimally enhancing pattern and aggressive descriptors such as reported necrosis, edema, and satellite lesions. DWI/ADC, perfusion, spectroscopy, SWI/GRE, and histomolecular testing would materially refine the assessment.",
+  "subject_id": "EGD-0668",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": 3,
+    "reasoning": "For grade estimation alone, the lesion has several features favoring at least intermediate/high-grade behavior: large total tumor volume, substantial edema, reported necrosis proportion, and satellite lesions. These argue against a purely grade 2 appearance. However, grade 4 is not strongly supported because enhancement is mild and extremely small in volume, no enhancing component is detected by component analysis, the enhancing margin is thin, there is no midline shift, and there is no ependymal or deep white matter invasion. Balancing these findings, the best estimate is CNS WHO grade 3 rather than grade 2 or grade 4.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "Multiple satellites present",
+      "Enhancement Quality"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

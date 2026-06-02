@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0602",
+  "idh": {
+    "reasoning": "The patient's advanced age (71 years) is a very strong predictor for IDH-wildtype status. The presence of imaging features indicating high-grade malignancy, such as necrosis (`Proportion Necrosis`: 11.23%), multifocal disease (`Multifocal or Multicentric`: \"Multifocal\"), and enhancing tumor components (`ET Volume (mL)`: 6.119), further support an IDH-wildtype prediction, which is most commonly glioblastoma in this age group. However, there is a powerful contradictory feature: the presence of a T2-FLAIR mismatch (`T2-FLAIR Mismatch Present`: 1.0), which is highly specific for IDH-mutant astrocytoma. Given that the T2-FLAIR mismatch sign is less reliable in the presence of significant enhancement and necrosis, and the combination of advanced age, necrosis, and multifocality is classic for glioblastoma, the prediction leans towards IDH-wildtype, but with low confidence due to this major conflicting sign.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification must be performed independently of the IDH prediction. The strongest evidence for non-codeletion is the positive T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0), which is a specific marker for IDH-mutant, *non-codeleted* astrocytomas. Additionally, aggressive features like necrosis (`Proportion Necrosis`: 11.23%) and multifocality (`Multifocal or Multicentric`: \"Multifocal\") are highly uncharacteristic of 1p/19q-codeleted oligodendrogliomas and are much more common in astrocytic lineage tumors (non-codeleted). The main feature arguing for co-deletion is the very sharp tumor border (`Transition Zone Thickness (FLAIR)` median of 0.75 mm), which is a classic finding in oligodendroglioma. However, the combination of the T2-FLAIR mismatch sign and features of high-grade malignancy provides stronger evidence for non-codeletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis (`Proportion Necrosis`: 11.23%) is a defining radiological feature corresponding to WHO grade 4. This is the single most important factor in grading this tumor. The patient's advanced age (`age_years`: 71) and the multifocal nature of the tumor (`Multifocal or Multicentric`: \"Multifocal\") are also highly suggestive of a grade 4 glioma (glioblastoma). The presence of contrast enhancement (`ET Volume (mL)` > 0) also supports a high-grade diagnosis (at least grade 3). The primary contradictory evidence is the `T2-FLAIR Mismatch Present` sign, which is more commonly associated with lower-grade (2 or 3) gliomas. However, the definitive evidence of necrosis on imaging strongly outweighs this, making a grade 4 prediction the most likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "age_years",
+      "Multifocal or Multicentric",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a challenging case with conflicting imaging features. The patient's age (71), presence of necrosis, and multifocality are all classic indicators of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. However, the MRI also shows a strong T2-FLAIR mismatch sign, which is highly specific for IDH-mutant, non-codeleted astrocytoma (typically lower grade). In this context, the aggressive features are weighted more heavily, and the T2-FLAIR mismatch is considered a rare or atypical finding for a glioblastoma, or potentially an imaging mimic. The final integrated diagnosis reflects the most probable pathology given the full clinical and radiological picture."
+}

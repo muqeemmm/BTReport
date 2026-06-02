@@ -1,0 +1,50 @@
+{
+  "subject_id": "UCSF-PDGM-331",
+  "idh": {
+    "reasoning": "The strongest indicator for IDH mutation is the presence of a T2-FLAIR mismatch, which is explicitly stated as 'T2-FLAIR Mismatch Present': 1.0 with a high 'T2-FLAIR Mismatch Score' of 0.92. This sign is highly specific for IDH-mutant astrocytomas. The patient's age of 46 is also within the typical range for this tumor type. The tumor is predominantly non-enhancing ('Proportion of Oedema': 97.64%) with ill-defined margins ('Transition Zone Thickness (FLAIR)' median of 4.76 mm), further supporting an IDH-mutant astrocytoma phenotype. Contradictory evidence includes the 'Multifocal' nature of the tumor and deep involvement ('right thalamus', 'right caudate'), which can be more common in IDH-wildtype gliomas. However, the high specificity of the T2-FLAIR mismatch sign outweighs these less specific features.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Proportion of Oedema",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the high likelihood of an IDH-mutant status, the 1p/19q co-deletion status distinguishes between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). The presence of a strong T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0) is a key feature of IDH-mutant astrocytomas and is rarely seen in oligodendrogliomas. Furthermore, the tumor exhibits infiltrative margins, as suggested by the low 'boundary_sharpness' (1.76) and a relatively thick 'Transition Zone Thickness (FLAIR)' (median 4.76 mm). These features are characteristic of astrocytomas. Oligodendrogliomas typically present with much sharper, well-defined borders. The deep periventricular location is also more typical for astrocytomas. There are no features in the provided metadata that would suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "boundary_sharpness",
+      "Transition Zone Thickness (FLAIR)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "Based on the prediction of an IDH-mutant astrocytoma, the grade can be 2, 3, or 4. The presence of contrast enhancement ('ET Volume (mL)': 3.117, 'Enhancement Quality': 'Mild') is a feature of high-grade transformation and argues against a grade 2 diagnosis. Additional features supporting a higher grade include significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': -9.0), 'Ependymal (ventricular) Invasion', 'Deep WM invasion', and the 'Multifocal' nature of the lesion. While these features indicate a high-grade tumor, the absence of necrosis ('Proportion Necrosis': 0.0) and the mild, non-rim-enhancing character of the enhancement make a CNS WHO grade 4 diagnosis less likely. Therefore, the combination of enhancement and other aggressive features in the absence of overt necrosis is most consistent with a CNS WHO grade 3 astrocytoma.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging metadata strongly points towards an IDH-mutant astrocytoma, primarily due to the definitive T2-FLAIR mismatch sign. The presence of mild contrast enhancement, multifocality, significant mass effect, and ependymal invasion are all indicators of a higher grade, making CNS WHO grade 3 the most likely diagnosis. The multifocal presentation is somewhat atypical but does not override the other compelling features."
+}

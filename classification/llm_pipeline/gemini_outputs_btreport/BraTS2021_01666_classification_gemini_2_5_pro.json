@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_01666",
+  "idh": {
+    "reasoning": "The patient is 20 years old, an age at which adult-type diffuse gliomas are overwhelmingly IDH-mutant. This is strongly corroborated by the complete absence of contrast enhancement (ET Volume is 0.0 mL, Enhancement Quality is 'None'). These two features are powerful predictors of IDH-mutant status. While the tumor's deep midline involvement (thalamus, caudate, putamen) and large size can sometimes be seen in IDH-wildtype tumors, this evidence is significantly outweighed by the patient's age and the non-enhancing nature of the lesion.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Total tumor volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the key distinction is between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). The imaging phenotype strongly favors an astrocytoma. The tumor shows extensive infiltration of deep white matter and deep gray matter structures, including the thalamus, caudate, and putamen. This pattern of spread along white matter tracts is highly characteristic of astrocytomas. Oligodendrogliomas typically have more well-defined margins and are less likely to show such extensive deep infiltration. The large volume of associated edema also points towards the indistinct, infiltrative border of an astrocytoma.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The grading of this non-enhancing tumor is challenging due to conflicting features. The complete lack of contrast enhancement is a strong argument against a WHO grade 4 diagnosis based on imaging features like necrosis. However, the tumor is very large (135.7 mL), causes significant mass effect (9.0 mm midline shift), and has a high reported 'Proportion Necrosis' (44.29%), all of which are features of a high-grade glioma and argue against a grade 2 diagnosis. Balancing these factors, a CNS WHO grade 3 is the most likely estimate, representing a tumor with aggressive features (size, mass effect) but without the hallmark of definite enhancing necrosis. A molecularly-defined grade 4 (e.g., due to CDKN2A/B homozygous deletion) cannot be excluded by imaging alone.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "max_shift_mm",
+      "midline_shift_present",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Large, non-enhancing, infiltrative glioma in a young adult. The combination of young age and lack of enhancement strongly suggests an IDH-mutant glioma. The deep, extensive infiltration pattern is characteristic of an astrocytoma (1p/19q non-codeleted). Grading is ambiguous due to the large size and mass effect in the absence of enhancement; grade 3 is the most probable based on imaging, but molecular grade 4 cannot be ruled out."
+}

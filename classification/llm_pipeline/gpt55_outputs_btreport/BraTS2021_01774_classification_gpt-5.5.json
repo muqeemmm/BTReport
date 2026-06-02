@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The imaging metadata provides moderately more support for an IDH-mutant diffuse glioma than for IDH-wildtype disease. IDH-mutant tumors are favored by a frontal cortical location from \"Tumor Location\" and \"Region Proportions\", cortical involvement from \"Cortical involvement\", solitary presentation from \"Multifocal or Multicentric\" and \"Number of lesions\", and very limited enhancement from \"ET Volume (mL)\", \"Proportion Enhancing\", and \"Enhancement Quality\". Features arguing toward IDH-wildtype biology include the patient being 49 years old in \"age_years\", extensive edema in \"ED Volume (mL)\" and \"Proportion of Oedema\", edema crossing midline in \"Edema crosses midline\", mass effect in \"midline_shift_present\", and infiltrative aggressive behavior in \"Ependymal (ventricular) Invasion\" and \"Deep WM invasion\". On balance, the frontal cortical, minimally enhancing solitary phenotype is somewhat more typical of IDH-mutant glioma, but the aggressive edema/invasion pattern limits certainty.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the strongest available imaging support for co-deletion is the frontal cortical-subcortical phenotype: \"Tumor Location\" is frontal_lobe-cortex, \"Region Proportions\" is predominantly frontal with substantial cortex, and \"Cortical involvement\" is present. The lesion is also solitary by \"Multifocal or Multicentric\" and \"Number of lesions\", and has minimal enhancement by \"ET Volume (mL)\", \"Proportion Enhancing\", and \"Enhancement Quality\", which can fit oligodendroglial tumors. Evidence against co-deletion and toward a non-codeleted astrocytic/glioblastoma phenotype includes marked edema in \"ED Volume (mL)\" and \"Proportion of Oedema\", edema crossing midline in \"Edema crosses midline\", ependymal invasion in \"Ependymal (ventricular) Invasion\", deep white matter invasion in \"Deep WM invasion\", and a midline epicenter in \"Side of Tumor Epicenter\" rather than a more classic unilateral cortical-subcortical mass. Because key discriminators such as calcification are not available, the co-deleted call is only slightly favored.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/GRE. The main uncertainty is the discordance between a frontal cortical minimally enhancing lesion, which favors IDH-mutant and possibly 1p/19q-codeleted tumor, and the extensive edema, midline shift, deep white matter invasion, and ependymal involvement, which raise concern for more aggressive non-codeleted biology. Tissue diagnosis and molecular testing remain required.",
+  "subject_id": "BraTS2021_01774",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 3,
+    "reasoning": "For CNS WHO grade, the metadata argues against a straightforward grade 2 tumor because \"Total tumor volume (mL)\" and \"Lesion Sizes APxTVxCC (cm)\" indicate a large lesion, \"ED Volume (mL)\" and \"Proportion of Oedema\" show extensive edema, \"midline_shift_present\" shows mass effect, and \"Ependymal (ventricular) Invasion\" plus \"Deep WM invasion\" suggest aggressive spread. Grade 4 is not strongly supported because \"ET Volume (mL)\" and \"Proportion Enhancing\" show almost no enhancing component, \"Enhancement Quality\" is only mild, \"Multifocal or Multicentric\" is solitary, and \"Multiple satellites present\" is absent. Although \"Proportion Necrosis\" raises concern for high grade, the lack of substantial enhancement makes definitive grade 4 less secure from MRI metadata alone. The balance therefore favors an intermediate high-grade diffuse glioma, CNS WHO grade 3.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

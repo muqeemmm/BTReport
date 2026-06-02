@@ -1,0 +1,64 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI marker is a positive T2-FLAIR mismatch pattern, reflected by T2-FLAIR Mismatch Present, T2-FLAIR Mismatch Score, and T2-FLAIR Mismatch Degree, which supports an IDH-mutant diffuse astrocytic tumor rather than IDH-wildtype glioblastoma. Age_years of 46 and Cortical involvement also fit the typical adult IDH-mutant diffuse glioma demographic/anatomic pattern. Against IDH-mutant status, Enhancement Quality is marked with measurable ET Volume (mL), Proportion Enhancing, Thickness of enhancing margin, and high Proportion of Oedema, which can be seen in IDH-wildtype high-grade glioma. Overall, the T2-FLAIR mismatch signal is a more specific supportive feature than the nonspecific enhancement/edema features, so the conclusion is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "age_years",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the positive T2-FLAIR mismatch pattern in T2-FLAIR Mismatch Present, T2-FLAIR Mismatch Score, and T2-FLAIR Mismatch Degree supports a non-codeleted astrocytic genotype, because this pattern is classically associated with IDH-mutant astrocytoma rather than oligodendroglioma. There are no provided MRI features specific for oligodendroglioma such as calcification because those sequences/features are not assessed. Cortical involvement and Tumor Location could be compatible with oligodendroglioma, and Enhancement Quality can be seen in oligodendroglioma as well, so they weakly argue against a confident non-codeleted call. Overall, the T2-FLAIR mismatch metadata favors non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histomolecular markers. The T2-FLAIR mismatch pattern strongly favors an IDH-mutant, non-codeleted astrocytic tumor, while marked enhancement and thick enhancing margin raise concern for at least intermediate/high grade. Imaging cannot determine CDKN2A/B homozygous deletion or histologic mitotic activity, so WHO grade confidence is lower than molecular-subtype confidence.",
+  "subject_id": "BraTS2021_00140",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, Enhancement Quality marked, measurable ET Volume (mL), Proportion Enhancing, Thickness of enhancing margin greater than 3 mm, and boundary_sharpness support a higher-grade lesion rather than a purely nonenhancing grade 2 diffuse glioma. However, Proportion Necrosis and NCR Volume (mL) are very low, which argues against a classic grade 4 imaging phenotype. Total tumor volume (mL) is modest, midline_shift_present is absent, Deep WM invasion and Ependymal (ventricular) Invasion are absent, and Multifocal or Multicentric plus Multiple satellites present indicate a solitary lesion without satellites, all of which reduce confidence for grade 4. Balancing marked enhancement against minimal necrosis and limited invasive/mass-effect features, the best imaging estimate is CNS WHO grade 3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "boundary_sharpness"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Edema crosses midline",
+      "CET Crosses midline"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favor an IDH-wildtype adult diffuse glioma: age_years is 61, which is more typical for IDH-wildtype glioblastoma than IDH-mutant astrocytoma; Enhancement Quality is marked, Proportion Enhancing is substantial, Thickness of enhancing margin is >3mm, Multifocal or Multicentric is multifocal, Deep WM invasion is present, and Proportion Necrosis is present, all of which support an aggressive IDH-wildtype phenotype. Features arguing against this include Tumor Location in a frontal_lobe-cortex region, Cortical involvement, and Region Proportions dominated by frontal_lobe and cortex, which can be seen with IDH-mutant gliomas, and absence of midline crossing by Edema crosses midline and CET Crosses midline is not strongly glioblastoma-like. Overall, the aggressive enhancement pattern, multifocality, deep white matter invasion, necrosis, edema burden, and older age outweigh the frontal cortical location, so the conclusion is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "ED Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.69,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the metadata lean toward non-codeleted rather than codeleted. Enhancement Quality is marked, Proportion Enhancing is high, Thickness of enhancing margin is >3mm, Multifocal or Multicentric is multifocal, Deep WM invasion is present, Proportion Necrosis is present, and Proportion of Oedema is large; this pattern is less typical of oligodendroglioma, IDH-mutant and 1p/19q-codeleted, which often presents as a more circumscribed frontal cortical-subcortical tumor and cannot be evaluated here for calcification because SWI/GRE/CT features are unavailable. Features arguing for possible codeletion are Tumor Location in the frontal_lobe-cortex region, Cortical involvement, and Region Proportions dominated by frontal_lobe and cortex. Because the frontal cortical location is a meaningful counterfeature and MRI alone is limited for 1p/19q prediction, the conclusion is non-codeleted with only moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "ED Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or calcification assessment. The strongest imaging signal is for an aggressive enhancing multifocal tumor in an older adult, supporting IDH-wildtype glioblastoma. The 1p/19q call is less secure because frontal cortical involvement is a recognized oligodendroglioma-associated pattern, but the marked enhancement, edema, deep white matter invasion, and multifocality argue against a codeleted tumor.",
+  "subject_id": "BraTS2021_00500",
+  "who_grade": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "CET Crosses midline"
+    ],
+    "prediction": 4,
+    "reasoning": "The imaging metadata support CNS WHO grade 4 rather than grade 2 or 3. Enhancement Quality is marked, ET Volume (mL) is sizeable, Proportion Enhancing is substantial, Thickness of enhancing margin is >3mm, Multifocal or Multicentric is multifocal, Deep WM invasion is present, Proportion of Oedema is large, and Proportion Necrosis is present; these features collectively indicate a high-grade aggressive glioma and are most compatible with grade 4. Features arguing against grade 4 are that Proportion Necrosis is relatively small, midline_shift_present is No, Ependymal (ventricular) Invasion is absent, and Edema crosses midline and CET Crosses midline are false, so the mass effect and infiltrative spread are not maximal. Nevertheless, marked thick enhancement, multifocal disease, edema, and necrotic component outweigh these mitigating features, so the conclusion is CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

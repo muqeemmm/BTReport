@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_01038",
+  "idh": {
+    "reasoning": "The patient's age of 50 years is more typical for IDH-wildtype gliomas. The imaging findings are highly characteristic of an IDH-wildtype tumor, specifically a glioblastoma. There is a large volume of marked, thick-rimmed enhancement (`ET Volume (mL)`: 31.523, `Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\") surrounding a significant necrotic core (`NCR Volume (mL)`: 9.265). This classic ring-enhancing pattern is a strong indicator of IDH-wildtype status. Furthermore, the absence of a T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 0.0) argues against an IDH-mutant astrocytoma. The sharp tumor-edema boundary (`Transition Zone Thickness (FLAIR)` median_mm: 0.75) is also more consistent with a well-demarcated high-grade tumor like glioblastoma than a diffusely infiltrating IDH-mutant astrocytoma. There are no contradicting features.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly against a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically show minimal to no enhancement and lack necrosis. This tumor presents with marked, thick-rim enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\") and a large necrotic core (`NCR Volume (mL)`: 9.265). These features are hallmarks of a high-grade astrocytoma, not an oligodendroglioma. The tumor's location, with major involvement of the occipital and parietal lobes, is also less common for oligodendrogliomas, which favor the frontal lobes. The presence of ependymal invasion (`Ependymal (ventricular) Invasion`: \"Present\") further supports a high-grade astrocytic lineage. The evidence is uniformly against co-deletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Region Proportions",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is based on definitive radiological evidence of high-grade malignancy. The presence of a large necrotic core (`NCR Volume (mL)`: 9.265) is, by itself, a sufficient radiological criterion for grade 4. This is strongly corroborated by the presence of marked, thick, ring-like contrast enhancement (`ET Volume (mL)`: 31.523, `Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"). Additional features supporting a grade 4 designation include deep white matter invasion (`Deep WM invasion`: \"Present\") and ependymal invasion (`Ependymal (ventricular) Invasion`: \"Present\"). There are no imaging features suggestive of a lower grade (2 or 3).",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features are classic for a Glioblastoma, IDH-wildtype. The large, solitary mass in a 50-year-old patient demonstrates marked, thick-rimmed contrast enhancement surrounding a significant necrotic core. The absence of a T2-FLAIR mismatch sign further supports an IDH-wildtype status. These features are radiologically definitive for a WHO grade 4 tumor and are highly inconsistent with an IDH-mutant astrocytoma or an oligodendroglioma."
+}

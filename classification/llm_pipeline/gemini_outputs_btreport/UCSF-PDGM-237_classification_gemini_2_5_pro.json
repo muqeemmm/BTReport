@@ -1,0 +1,47 @@
+{
+  "subject_id": "UCSF-PDGM-237",
+  "idh": {
+    "reasoning": "The patient's age of 42 falls within the typical range for IDH-mutant gliomas. The imaging phenotype is highly characteristic of an IDH-mutant tumor. Specifically, the complete absence of contrast enhancement (`Enhancement Quality`: \"None\", `ET Volume (mL)`: 0.0) and necrosis (`NCR Volume (mL)`: 0.0) in a large tumor (`Total tumor volume (mL)`: 77.239) is a strong indicator. The lack of significant mass effect (`midline_shift_present`: \"No\") despite the large size suggests a slow, infiltrative growth pattern, also typical for IDH-mutant gliomas. There is minimal contradictory evidence; while deep gray matter involvement can be seen in IDH-wildtype tumors, it is not a specific feature and does not outweigh the powerful evidence from the lack of enhancement.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "age_years",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The distinction between codeleted and non-codeleted tumors on imaging relies on subtle features, primarily location and morphology. While the tumor is non-enhancing and cortically-based, which can be seen in both, the location and infiltration pattern are more suggestive of a non-codeleted (astrocytic) lineage. The tumor is located in the temporal lobe (`Tumor Location`: \"temporal-cortex region\"), which is a more common site for astrocytomas than for oligodendrogliomas (which favor the frontal lobes). Furthermore, the involvement of deep gray matter structures like the putamen and pallidum (`Anatomical Overlap Regions`) suggests a highly infiltrative nature more characteristic of astrocytomas. Oligodendrogliomas tend to be more sharply demarcated and cortically centered. Therefore, despite some overlapping features, the location and deep extension favor a non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The imaging findings are classic for a low-grade glioma. The most critical features for grading are contrast enhancement and necrosis, both of which are definitively absent (`Enhancement Quality`: \"None\", `ET Volume (mL)`: 0.0, `NCR Volume (mL)`: 0.0). WHO grade 4 tumors are defined by necrosis and/or florid enhancement. WHO grade 3 tumors typically show at least some, often patchy, enhancement. The complete lack of these high-grade features makes a grade 2 diagnosis highly likely. The large tumor volume (`Total tumor volume (mL)`: 77.239) is the only feature that could be associated with a higher grade, but in the absence of enhancement or necrosis, it is not sufficient to suggest a higher grade and is common in slow-growing grade 2 gliomas.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging features of a large, purely non-enhancing and non-necrotic tumor in a 42-year-old patient are highly suggestive of an IDH-mutant, CNS WHO grade 2 glioma. The temporal lobe location with deep gray matter infiltration favors an astrocytic (1p/19q non-codeleted) lineage. The predicted integrated diagnosis is Astrocytoma, IDH-mutant, CNS WHO grade 2."
+}

@@ -1,0 +1,47 @@
+{
+  "subject_id": "UCSF-PDGM-233",
+  "idh": {
+    "reasoning": "The patient is young (31 years), which is a strong predictor for IDH-mutant status. The tumor's imaging phenotype is classic for an IDH-mutant glioma: it is large, infiltrative, and completely non-enhancing with no evidence of necrosis. The frontal and insular location is also highly typical. There are no features to suggest an IDH-wildtype tumor, which typically presents in older patients with ring enhancement and central necrosis.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. The tumor demonstrates features more consistent with an astrocytoma (non-codeleted) than an oligodendroglioma (codeleted). Specifically, the involvement of deep gray matter structures (caudate, putamen) and the insula is more characteristic of astrocytomas. The large, purely T2/FLAIR hyperintense volume without well-defined margins suggests an infiltrative pattern, which is also a hallmark of astrocytomas. Features often associated with oligodendroglioma, such as well-defined borders or calcification (not assessable here), are absent.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of contrast enhancement and necrosis are the most critical imaging features for grading. This tumor has zero enhancing volume and zero necrotic volume. This imaging presentation is the primary characteristic of a low-grade (CNS WHO grade 2) diffuse glioma. While the tumor is moderately large and exerts some mass effect, these factors are less weighted than the lack of aggressive features like enhancement or necrosis. A grade 4 lesion is ruled out by the lack of these features, and a grade 3 is less likely than a grade 2 given the complete lack of enhancement.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "max_shift_mm"
+    ],
+    "prediction": 2,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a young adult with a large, solitary, non-enhancing, non-necrotic lesion in the left frontal and insular lobes with deep gray matter involvement. The combination of young age and a non-aggressive imaging phenotype is highly suggestive of an IDH-mutant glioma. The infiltrative pattern and location favor a non-codeleted (astrocytoma) status. The lack of enhancement or necrosis strongly indicates a CNS WHO grade 2. The integrated diagnosis is therefore Astrocytoma, IDH-mutant, CNS WHO grade 2."
+}

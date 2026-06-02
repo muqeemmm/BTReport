@@ -1,0 +1,45 @@
+{
+  "subject_id": "EGD-0022",
+  "idh": {
+    "reasoning": "The complete absence of contrast enhancement is the strongest indicator for IDH-mutant status. Both the qualitative 'Enhancement Quality' being 'None' and the quantitative 'ET Volume (mL)' being 0.0 strongly argue against an IDH-wildtype glioma (glioblastoma), which is typically characterized by avid enhancement. The tumor's composition, being almost entirely T2/FLAIR hyperintense signal ('Proportion of Oedema': 99.63), is also characteristic of IDH-mutant gliomas. The patient's age of 51 is in an overlapping zone but does not preclude an IDH-mutant tumor. The main contradicting feature is the absence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0), which is specific for the IDH-mutant astrocytoma subtype. However, its absence does not rule out an IDH-mutant oligodendroglioma. Weighing the evidence, the lack of enhancement is a more powerful predictor than the T2-FLAIR mismatch sign's absence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant status, the features point towards a 1p/19q-codeleted tumor (oligodendroglioma). The tumor exhibits very sharp margins, as indicated by the low median 'Transition Zone Thickness (FLAIR)' of 0.5 mm. This is a classic feature of oligodendrogliomas, which tend to be more well-defined than astrocytomas. Furthermore, the absence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0) argues against an IDH-mutant astrocytoma, for which this sign is highly specific, thereby increasing the likelihood of an oligodendroglioma. The predominantly cortical location ('Region Proportions') is also very typical for oligodendroglioma. There are no strong contradicting features.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The tumor is entirely non-enhancing ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0), which rules out WHO grade 4 with high confidence. The distinction between WHO grade 2 and 3 in non-enhancing gliomas on imaging is challenging. The absence of enhancement, significant mass effect ('midline_shift_present': 'No'), or deep white matter invasion are all features compatible with a grade 2 tumor. However, the patient's age of 51 years makes a grade 3 tumor statistically more likely than a grade 2. The small non-enhancing core ('NCR Volume (mL)': 0.064) is ambiguous and could represent cystic change rather than necrosis. Given the conflicting evidence, the prediction leans towards grade 3 based on patient demographics, but the confidence is low as imaging features alone are insufficient to make this distinction reliably.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly characteristic of an oligodendroglioma, given the non-enhancing nature, sharp margins, and cortical location. The absence of the T2-FLAIR mismatch sign further supports this over an IDH-mutant astrocytoma. The grade is difficult to determine from imaging; grade 3 is predicted based on patient age, but with low confidence. The overall profile is very consistent with an Oligodendroglioma, IDH-mutant and 1p/19q-codeleted."
+}

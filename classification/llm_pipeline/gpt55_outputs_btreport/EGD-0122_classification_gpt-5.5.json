@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors IDH-mutant diffuse glioma because age_years is 40 and the lesion is predominantly frontal/cortical by Tumor Location, Region Proportions, and Cortical involvement, with Deep WM invasion and Ependymal (ventricular) Invasion absent. Enhancement is limited by Enhancement Quality, ET Volume (mL), Proportion Enhancing, and Thickness of enhancing margin, which is more typical of IDH-mutant glioma than an IDH-wildtype glioblastoma pattern. Solitary disease and absence of midline crossing by Multifocal or Multicentric, Number of lesions, crosses_patient_midline, crosses_ideal_midline, CET Crosses midline, and Edema crosses midline also support a more localized diffuse glioma phenotype. Against IDH-mutant status, Proportion Necrosis, NCR Volume (mL), Proportion of Oedema, and ED Volume (mL) indicate a substantial necrotic/nonenhancing and edema burden, which can be seen with IDH-wildtype aggressive tumors. Overall, the younger age, frontal cortical location, limited enhancement, and lack of deep/ependymal invasion outweigh the aggressive components, so the conclusion is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the evidence is mixed. Features that could support codeletion include age_years of 40 and a frontal cortical tumor distribution by Tumor Location, Region Proportions, and Cortical involvement, which are common in oligodendroglioma. However, those features are not specific, and the stronger differentiating metadata here are Proportion Necrosis, NCR Volume (mL), Proportion of Oedema, ED Volume (mL), and Total tumor volume (mL), which suggest a more aggressive, bulky lesion and are less characteristic of a straightforward 1p/19q-codeleted oligodendroglioma pattern. Because the codeletion-supporting features are nonspecific and the aggressive components favor a non-codeleted astrocytic phenotype, the conclusion is non-codeleted, but with limited confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured pre-operative structural MRI metadata and remain uncertain without tissue-based molecular testing. The main tension is between a frontal cortical, minimally enhancing lesion favoring IDH-mutant biology and the substantial necrotic/nonenhancing and edema burden favoring higher grade and non-codeleted astrocytic biology.",
+  "subject_id": "EGD-0122",
+  "who_grade": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently, Proportion Necrosis is high, with a sizeable NCR Volume (mL), and the lesion has substantial edema by Proportion of Oedema and ED Volume (mL), plus a relatively large Total tumor volume (mL) and Lesion Sizes APxTVxCC (cm). These findings support grade 4 over grade 2 or 3 because necrosis and marked edema are high-grade imaging features. Against grade 4, Enhancement Quality is only mild, ET Volume (mL) and Proportion Enhancing are extremely small, Thickness of enhancing margin is thin, and midline_shift_present and Asymmetrical Ventricles do not show major mass effect, which would otherwise strengthen a high-grade call. On balance, the explicitly recorded necrotic burden and edema outweigh the minimal enhancement and lack of shift, so the conclusion is CNS WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

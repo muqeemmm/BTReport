@@ -1,0 +1,42 @@
+{
+  "subject_id": "UCSF-PDGM-439",
+  "idh": {
+    "reasoning": "The patient's young age (38 years) is a strong predictor for IDH-mutant status, as IDH-wildtype gliomas (glioblastomas) typically occur in older patients. Furthermore, the complete absence of contrast enhancement (ET Volume (mL): 0.0, Enhancement Quality: 'None') and necrosis (NCR Volume (mL): 0.0) are classic imaging hallmarks of IDH-mutant gliomas, particularly of lower grades. The absence of deep white matter invasion also points towards a less aggressive, IDH-mutant phenotype. There are no imaging features to suggest an IDH-wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is challenging due to subtle features. The primary imaging marker for IDH-mutant astrocytoma (non-codeleted), the T2-FLAIR mismatch sign, is absent ('T2-FLAIR Mismatch Present': 0.0). While not definitive, its absence makes a non-codeleted status less likely. The tumor has a quantitative 'boundary_sharpness' value of 2.007, which may suggest relatively well-defined margins, a feature more commonly associated with oligodendrogliomas (codeleted). However, this is a weak indicator without established thresholds. Given the absence of the key astrocytoma feature, the balance of evidence weakly favors a codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "boundary_sharpness"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The imaging phenotype is strongly indicative of a low-grade glioma. The complete lack of contrast enhancement ('ET Volume (mL)': 0.0) and necrosis ('NCR Volume (mL)': 0.0) are the defining radiological features that argue against a high-grade tumor, particularly WHO grade 4. While a non-enhancing tumor can be histologically grade 3, there are no imaging features provided (such as elevated perfusion or restricted diffusion, which were not available) to suggest this. Based on the available conventional MRI data, the features are most consistent with a CNS WHO grade 2 tumor.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 38-year-old with a solitary, non-enhancing, non-necrotic frontoparietal glioma. The combination of young age and lack of aggressive imaging features provides high confidence for an IDH-mutant, CNS WHO grade 2 glioma. The determination of 1p/19q status is less certain but leans towards codeleted due to the absence of the T2-FLAIR mismatch sign. The integrated radiological diagnosis is most consistent with an Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2."
+}

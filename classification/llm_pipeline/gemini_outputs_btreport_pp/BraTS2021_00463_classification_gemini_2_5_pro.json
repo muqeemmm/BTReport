@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_00463",
+  "idh": {
+    "reasoning": "The patient's age of 57 years is a strong demographic predictor for IDH-wildtype status. The imaging features are classic for glioblastoma, which is the most common IDH-wildtype glioma. Specifically, the presence of a large necrotic core (NCR Volume (mL) of 14.615) and marked, thick-rim enhancement (Enhancement Quality: 'Marked', Thickness of enhancing margin: '>3mm') are hallmark features. Furthermore, the absence of a T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) argues strongly against an IDH-mutant astrocytoma. Aggressive features like ependymal invasion and multiple satellite lesions also favor an IDH-wildtype diagnosis. The only mildly contradictory feature is a relatively sharp median FLAIR transition zone, which is less typical for IDH-wildtype tumors, but this is outweighed by the overwhelming evidence to the contrary.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of extensive central necrosis (NCR Volume (mL): 14.615) and marked, thick contrast enhancement are highly atypical for 1p/19q-codeleted gliomas (oligodendrogliomas), which rarely exhibit necrosis and usually have less avid or no enhancement. Aggressive features such as ependymal invasion and multiple satellite lesions are also more characteristic of high-grade astrocytomas (non-codeleted) than oligodendrogliomas. The primary feature suggesting co-deletion is the sharp median FLAIR transition zone (0.75 mm), a finding often associated with oligodendroglioma. However, the presence of necrosis is a very strong negative predictor for co-deletion, making a non-codeleted status much more likely.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The radiological evidence for WHO grade 4 is definitive. The presence of a significant non-enhancing, necrotic core (NCR Volume (mL) of 14.615) within a contrast-enhancing lesion is the primary imaging criterion for a grade 4 diffuse glioma. This is strongly corroborated by other features of high-grade malignancy, including marked and thick enhancement, significant mass effect (max_shift_mm: 7.0), deep white matter invasion, and ependymal invasion. There are no imaging features to suggest a lower grade; grade 2 tumors are non-enhancing, and grade 3 tumors typically lack central necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (57 years) and MRI findings of a large, solitary, left-sided multi-lobar tumor with extensive necrosis, thick rim-enhancement, and significant mass effect are highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The absence of a T2-FLAIR mismatch further supports this diagnosis. The predictions for IDH-wildtype, 1p/19q non-codeletion, and WHO grade 4 are all consistent with this single entity."
+}

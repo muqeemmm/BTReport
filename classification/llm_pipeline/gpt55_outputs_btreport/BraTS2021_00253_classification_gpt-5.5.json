@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the metadata pattern favors IDH-mutant over IDH-wildtype: age_years is 48, Tumor Location is temporal-cortex region, Cortical involvement is present, Enhancement Quality is mild, Proportion Enhancing is low at 4.98, Proportion Necrosis is low at 1.15, Deep WM invasion is absent, Ependymal (ventricular) Invasion is absent, CET Crosses midline is False, and midline_shift_present is No. These features collectively fit a less overtly aggressive diffuse glioma pattern. Evidence arguing toward IDH-wildtype includes ED Volume (mL) of 52.458, Proportion of Oedema of 93.87, nonzero ET Volume (mL), nonzero NCR Volume (mL), and Thickness of enhancing margin >3mm, which indicate aggressive components. Overall, the balance favors IDH-mutant, but not with high certainty because edema and enhancement are substantial enough to be concerning.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Cortical involvement",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the available MRI metadata weakly favors non-codeleted over codeleted. Tumor Location is temporal-cortex region and Region Proportions are overwhelmingly temporal and cortical, which is less typical of the classic frontal-predominant codeleted pattern. ED Volume (mL) is 52.458, Proportion of Oedema is 93.87, ET Volume (mL) is nonzero, and Proportion Enhancing is 4.98, which together make a non-codeleted astrocytic pattern somewhat more likely. Evidence arguing against non-codeleted and toward codeleted includes Cortical involvement being present, age_years of 48, and Enhancement Quality being mild, all of which can be compatible with oligodendroglioma. Because the metadata lacks strong sequence-derived discriminators for 1p/19q status, this is a low-confidence best estimate.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "MRI metadata supports an IDH-mutant, non-codeleted diffuse glioma with imaging features most consistent with CNS WHO grade 3, but there is residual uncertainty because enhancement, necrosis, and edema create some overlap with grade 4 imaging behavior. Molecular testing remains required for definitive integrated diagnosis.",
+  "subject_id": "BraTS2021_00253",
+  "who_grade": {
+    "confidence": 0.63,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": 3,
+    "reasoning": "For CNS WHO grade, the metadata best supports grade 3 as an intermediate high-grade pattern. Enhancement Quality is mild but ET Volume (mL) is nonzero, Proportion Enhancing is 4.98, and Thickness of enhancing margin is >3mm, which argues against a purely grade 2 imaging phenotype. At the same time, features arguing against grade 4 include Enhancement Quality being mild, relatively limited ET Volume (mL), low Proportion Enhancing, low Proportion Necrosis, midline_shift_present being No, Asymmetrical Ventricles being Absent, Ependymal (ventricular) Invasion being Absent, Multifocal or Multicentric being Solitary, and Multiple satellites present being Absent. Evidence that could argue above grade 3 includes nonzero NCR Volume (mL), Proportion Necrosis of 1.15, ED Volume (mL) of 52.458, and Proportion of Oedema of 93.87. Overall, the enhancement and small necrotic component make grade 2 unlikely, while the mild enhancement, small necrotic proportion, absent midline shift, and lack of multifocal/satellite/ependymal features make grade 4 less compelling, so grade 3 is favored.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

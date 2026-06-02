@@ -1,0 +1,83 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata most strongly suggests a lower-grade diffuse glioma phenotype: the patient is young, the lesion is nonenhancing with no enhancing tumor volume, and it is a solitary cortical/parietal lesion without ependymal invasion or midline crossing. Those features support IDH-mutant status. Features arguing against this include substantial FLAIR/edema volume, large total tumor volume, midline shift, deep white-matter invasion, and a reported nonenhancing/necrotic component, which can be seen with more aggressive IDH-wildtype tumors. Overall, the age and nonenhancing cortical presentation outweigh the aggressive mass-effect features, favoring IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Ependymal (ventricular) Invasion",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "Edema crosses midline"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The evidence for 1p/19q status is limited because key discriminators such as calcification, susceptibility, perfusion, and spectroscopy are not available. A solitary parietal-cortical, nonenhancing lesion could fit a codeleted oligodendroglioma pattern, especially with cortical involvement and absent enhancement. However, the lesion is not described as frontal, and the available location metadata emphasizes parietal/cortical involvement rather than a classic frontal cortical-subcortical oligodendroglial pattern. Deep white-matter invasion and substantial edema/mass effect are somewhat less typical for a straightforward low-grade codeleted tumor. Given the weak and conflicting imaging evidence, non-codeleted status is only slightly favored.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm"
+    ]
+  },
+  "overall_comment": "MRI-only molecular subtyping is uncertain, especially for 1p/19q status and grade. Lack of DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification assessment limits confidence. The nonenhancing appearance supports a lower-grade/IDH-mutant phenotype, while the large volume, edema, deep white-matter invasion, midline shift, and reported nonenhancing/necrotic component raise concern for at least intermediate-grade biology.",
+  "subject_id": "BraTS2021_01502",
+  "who_grade": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "crosses_ideal_midline",
+      "crosses_patient_midline"
+    ],
+    "prediction": 3,
+    "reasoning": "For grade assessment, the absence of enhancement, zero enhancing-tumor volume, zero enhancing proportion, solitary disease, no satellites, no ependymal invasion, and no midline crossing support a lower-grade lesion rather than grade 4. Against a grade 2 call, there is substantial total tumor volume, high edema/FLAIR abnormality volume, midline shift up to 6 mm, deep white-matter invasion, and a reported nonenhancing/necrotic component, all suggesting biologically more aggressive behavior. The lack of enhancement makes grade 4 less likely on MRI alone, but the mass effect and infiltrative burden argue above grade 2. Overall this favors CNS WHO grade 3 with modest confidence.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "n_slices_with_shift",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

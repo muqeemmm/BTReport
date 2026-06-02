@@ -1,0 +1,66 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "age_years",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI pattern is a nonenhancing cortical/temporal-insular solitary infiltrative lesion without necrotic or enhancing components, which is more typical of an IDH-mutant diffuse glioma than an IDH-wildtype glioblastoma phenotype. The absence of enhancement and necrosis argues against the usual MRI appearance of IDH-wildtype glioblastoma, although IDH-wildtype tumors can occasionally be nonenhancing. Cortical involvement and temporal/insula location support an infiltrating lower-grade-type diffuse glioma pattern. The main counterweight is the age of 48 years, which is not as young as the classic IDH-mutant demographic and is within the age range where IDH-wildtype glioma remains plausible; the recorded midline epicenter is also atypical given the otherwise left-sided regional metadata. Overall, the imaging metadata favors IDH-mutant status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Considering 1p/19q status independently, the temporal and insular distribution is more often associated with astrocytoma than classic oligodendroglioma, which more commonly presents in a frontal cortical-subcortical distribution. The available metadata do not provide calcification, susceptibility, or characteristic oligodendroglial imaging markers, so there is limited direct support for codeletion. Cortical involvement and nonenhancement can be seen in oligodendroglioma and therefore do not exclude codeletion, but they are nonspecific. With the lesion centered in temporal/insula regions and no specific codeleted-supportive metadata, the best estimate is non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility information. The lesion is recorded as entirely nonenhancing FLAIR/edema-like abnormality with no necrosis, which strongly lowers imaging suspicion for grade 4 behavior but does not replace histologic and molecular testing. The 'Side of Tumor Epicenter' is listed as midline despite left-sided overlap/volume fields and no midline crossing, so laterality metadata are somewhat internally inconsistent.",
+  "subject_id": "UCSF-PDGM-264",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade estimation independently, the absence of enhancement, absence of necrosis, zero enhancing volume, zero necrotic/nonenhancing-core volume, lack of midline shift, lack of ventricular asymmetry, and solitary noninvasive appearance favor a lower-grade diffuse glioma, most consistent with CNS WHO grade 2. Grade 3 remains possible because enhancement is not mandatory for anaplastic biology, and the total FLAIR/edema-like tumor volume is not tiny. Grade 4 is less favored on MRI because there is no enhancement, necrosis, ependymal invasion, multifocality, or substantial mass-effect metadata. Overall the structural imaging pattern supports grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

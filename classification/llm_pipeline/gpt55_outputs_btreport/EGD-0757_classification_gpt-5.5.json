@@ -1,0 +1,63 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest IDH-mutant-associated metadata are young age in \"age_years\" and a frontal cortical tumor in \"Tumor Location\" with \"Cortical involvement\", with only mild/very limited enhancement reflected by \"Enhancement Quality\" and \"ET Volume (mL)\". Features arguing toward IDH-wildtype biology include substantial necrotic/nonenhancing core by \"Proportion Necrosis\", large edema by \"ED Volume (mL)\", infiltrative depth by \"Deep WM invasion\", large overall size by \"Total tumor volume (mL)\", and a thick enhancing margin by \"Thickness of enhancing margin\". Weighing these, the age and frontal-cortical pattern favor IDH-mutant despite aggressive features, but the conflicting high-grade morphology limits certainty.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q co-deletion, the main codeleted-supporting imaging metadata are young age in \"age_years\" and frontal cortical involvement in \"Tumor Location\" and \"Cortical involvement\", which are common for oligodendroglioma. However, the marked necrotic component in \"Proportion Necrosis\", large edema in \"ED Volume (mL)\", deep infiltrative extension in \"Deep WM invasion\", large size in \"Total tumor volume (mL)\", and midline epicenter in \"Side of Tumor Epicenter\" are less typical for a classic 1p/19q-codeleted oligodendroglioma and favor an astrocytic/non-codeleted diffuse glioma. Because key oligodendroglioma discriminators such as calcification are not available, this remains only a slight preference for non-codeleted.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "MRI metadata favor a young-patient frontal diffuse glioma with aggressive features. Molecular prediction is uncertain because DWI/ADC, perfusion, spectroscopy, SWI/GRE, and calcification assessment are unavailable; histopathology and molecular testing are required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0757",
+  "who_grade": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 4,
+    "reasoning": "Grade assessment from MRI metadata is driven by aggressive morphology: \"Proportion Necrosis\" is high, \"Thickness of enhancing margin\" is greater than 3 mm, \"ED Volume (mL)\" and \"Total tumor volume (mL)\" are large, and \"Deep WM invasion\" is present. These features support CNS WHO grade 4 over grade 2 or 3. Counterbalancing features are that \"Enhancement Quality\" is only mild, \"ET Volume (mL)\" and \"Proportion Enhancing\" indicate very limited enhancing tumor, and mass effect is limited by \"midline_shift_present\" and \"Asymmetrical Ventricles\". Overall, the necrotic component and infiltrative large-volume tumor favor grade 4, with moderate-high but not definitive confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

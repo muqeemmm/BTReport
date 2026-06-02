@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0299",
+  "idh": {
+    "reasoning": "The patient's advanced age of 73 is the single most compelling feature pointing towards an IDH-wildtype status, as the vast majority of diffuse gliomas in this age group are IDH-wildtype. This is strongly corroborated by the absence of the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 0.0), a feature highly specific for IDH-mutant astrocytomas. Furthermore, the presence of invasive features like `Ependymal (ventricular) Invasion` and `Deep WM invasion` are more characteristic of aggressive, IDH-wildtype tumors. The only feature that could weakly suggest an IDH-mutant tumor is the overwhelmingly non-enhancing nature of the lesion (`Proportion of Oedema`: 99.46), but this is non-specific. The balance of evidence, particularly the age and lack of T2-FLAIR mismatch, overwhelmingly supports an IDH-wildtype prediction.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The tumor's location and invasive characteristics are highly atypical for an oligodendroglioma, the archetypal 1p/19q co-deleted tumor. Specifically, the involvement of deep gray matter structures (`Anatomical Overlap Regions` including thalamus, caudate, putamen) and the presence of `Ependymal (ventricular) Invasion` are strong arguments against oligodendroglioma. While the tumor exhibits a relatively sharp transition zone on FLAIR (`Transition Zone Thickness (FLAIR)` median 1.88 mm), which can be seen in oligodendrogliomas, this feature is not specific and is outweighed by the atypical location and invasion pattern. Therefore, a non-codeleted status is much more likely.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The patient's advanced age (73) is a strong predictor of a high-grade glioma. According to the WHO CNS5 classification, any IDH-wildtype diffuse astrocytic glioma in an adult is, by definition, a Glioblastoma, CNS WHO grade 4. The imaging findings of `Ependymal (ventricular) Invasion` and `Deep WM invasion` are consistent with a high-grade, infiltrative neoplasm. The primary evidence against a grade 4 diagnosis is the minimal contrast enhancement (`ET Volume (mL)` of 0.644) and lack of necrosis (`NCR Volume (mL)` of 0.005). However, these histopathological features are superseded by the molecular definition in IDH-wildtype tumors. Given the high likelihood of IDH-wildtype status based on age, a grade 4 diagnosis is the most appropriate conclusion.",
+    "supporting_features": [
+      "age_years",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced age (73) and the absence of a T2-FLAIR mismatch sign provides very strong evidence for an IDH-wildtype glioma. Per WHO CNS5 guidelines, this molecular profile defines the tumor as a Glioblastoma, grade 4, irrespective of the minimal enhancement and necrosis seen on imaging. The deep anatomical involvement and ependymal invasion are consistent with this high-grade diagnosis and make a 1p/19q co-deleted oligodendroglioma highly unlikely."
+}

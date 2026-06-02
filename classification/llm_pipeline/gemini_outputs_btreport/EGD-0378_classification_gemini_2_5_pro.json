@@ -1,0 +1,45 @@
+{
+  "subject_id": "EGD-0378",
+  "idh": {
+    "reasoning": "The patient is young (28 years old), which is a strong predictor for IDH-mutant status. The imaging phenotype is classic for a low-grade, IDH-mutant glioma, characterized by a complete absence of contrast enhancement and necrosis. The lack of deep white matter invasion further supports a less aggressive, IDH-mutant tumor. There is no imaging evidence to suggest an IDH-wildtype glioma, which would be exceptionally rare in this age group and would typically present with enhancement and/or necrosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging with the available data. The tumor's location in the temporal lobe is more characteristic of an astrocytoma (non-codeleted) than an oligodendroglioma (codeleted), which more commonly occurs in the frontal lobes. However, the significant cortical involvement (39% based on `Region Proportions`) can be a feature of oligodendroglioma. There is a contradiction in the data, as the categorical `Cortical involvement` field is listed as 'Absent'. Weighing the evidence, the temporal location is a slightly stronger predictor in this context, favoring a non-codeleted status. Confidence is low due to the limited and conflicting information.",
+    "supporting_features": [
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The imaging features are strongly indicative of a low-grade tumor. There is a complete absence of contrast enhancement (`Enhancement Quality`: 'None', `ET Volume (mL)`: 0.0) and no evidence of necrosis (`NCR Volume (mL)`: 0.0). These are the key radiological features that distinguish lower-grade (WHO grade 2) from higher-grade gliomas. While a non-enhancing grade 3 glioma is possible (diagnosed by mitotic activity), the imaging phenotype overwhelmingly supports a WHO grade 2 classification. A grade 4 tumor is ruled out radiologically due to the lack of enhancement and necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a young adult with a small, solitary, non-enhancing lesion in the left temporal lobe. The combination of young age and the absence of any aggressive imaging features (enhancement, necrosis) provides strong evidence for an IDH-mutant, CNS WHO grade 2 glioma. The temporal location slightly favors an astrocytoma (1p/19q non-codeleted) diagnosis. The overall presentation is highly consistent with a low-grade diffuse glioma."
+}

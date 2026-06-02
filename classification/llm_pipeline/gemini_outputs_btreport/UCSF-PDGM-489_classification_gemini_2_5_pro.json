@@ -1,0 +1,55 @@
+{
+  "subject_id": "UCSF-PDGM-489",
+  "idh": {
+    "reasoning": "The patient's age of 42 is more typical for IDH-mutant gliomas. The strongest imaging feature supporting this prediction is the complete absence of contrast enhancement and necrosis ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0, 'NCR Volume (mL)': 0.0), which is a classic presentation for IDH-mutant astrocytomas. Contradicting this are features suggesting high-grade biology, such as the very large tumor volume ('Total tumor volume (mL)': 196.818), significant mass effect ('max_shift_mm': 7.0), and midline crossing ('Edema crosses midline': 'True'), which can be seen in IDH-wildtype tumors. However, the non-enhancing phenotype is a more specific biomarker for IDH-mutant status in this age group.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "max_shift_mm",
+      "Edema crosses midline",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor involves deep gray matter structures ('Anatomical Overlap Regions' includes 'left caudate', 'left putamen'), which is more characteristic of astrocytomas (non-codeleted) than oligodendrogliomas (codeleted). The highly infiltrative nature, suggested by the massive T2/FLAIR hyperintense volume ('ED Volume (mL)': 196.818) and 'Deep WM invasion': 'Present', also favors an astrocytic lineage. While the frontal lobe location ('Tumor Location': 'frontal_lobe-cortex region') is common for oligodendrogliomas, the combination of deep gray involvement and infiltrative features provides stronger evidence for a non-codeleted status.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "This case presents conflicting features for grading. The complete lack of enhancement ('Enhancement Quality': 'None') and necrosis ('NCR Volume (mL)': 0.0) argues against a WHO grade 4 diagnosis. However, the tumor exhibits multiple features of high-grade biological activity: extremely large size ('Total tumor volume (mL)': 196.818), significant mass effect ('max_shift_mm': 7.0), midline crossing ('Edema crosses midline': 'True'), and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'). These aggressive features make a grade 2 diagnosis highly unlikely. Therefore, a WHO grade 3 represents the most probable diagnosis, balancing the absence of radiological grade 4 criteria (enhancement/necrosis) with the clear evidence of aggressive growth.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "max_shift_mm",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "A 42-year-old male with a very large, non-enhancing, infiltrative frontal glioma with significant mass effect and deep gray matter involvement. The imaging phenotype is most consistent with an Astrocytoma, IDH-mutant. Despite the lack of enhancement, the aggressive features such as massive size, mass effect, and ependymal invasion strongly suggest a high-grade tumor, making CNS WHO grade 3 the most likely diagnosis."
+}

@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Number of lesions",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI-derived features favoring IDH-mutant diffuse glioma are the young adult age and the nonenhancing, non-necrotic, non-edematous appearance, which is more typical of lower-grade IDH-mutant glioma than IDH-wildtype glioblastoma. However, the brainstem midline location is atypical for common adult supratentorial IDH-mutant astrocytoma and there is substantial uncertainty because the segmentation-derived tumor volume fields are zero despite the text report describing a brainstem lesion. Overall, the available metadata modestly favors IDH-mutant over IDH-wildtype, but confidence is limited by atypical location and sparse/discordant volumetric data.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Text Report"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the brainstem midline location and absent cortical involvement argue against oligodendroglioma, which more often presents as a supratentorial cortical or subcortical hemispheric tumor. The absence of deep white matter invasion is nonspecific but does not provide positive support for a classic oligodendroglial pattern. Nonenhancement can be seen in oligodendroglioma and therefore mildly argues against confidently excluding codeletion, but the anatomic pattern is the stronger discriminator here. Overall, the metadata favors non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are limited by absent diffusion, perfusion, spectroscopy, susceptibility/calcification-sensitive imaging, and by internally discordant metadata: the text report describes a brainstem midline nonenhancing lesion, whereas segmentation-derived tumor volumes and number of lesions are zero. Brainstem midline location is atypical for standard adult-type supratentorial diffuse glioma and could raise alternative molecular entities not classifiable from the requested IDH/1p19q/grade framework.",
+  "subject_id": "EGD-0739",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Number of lesions",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade considered independently from molecular status, the MRI metadata supports a lower-grade lesion: there is no contrast enhancement, no necrosis, no edema, no midline shift, no ependymal invasion, and no multifocality or satellite disease. These findings argue against grade 4 and also do not strongly support grade 3, although MRI cannot exclude anaplastic histology. The brainstem midline location is clinically concerning and the zero-volume segmentation fields reduce reliability, but the described nonenhancing solitary appearance with no edema or necrosis most strongly supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

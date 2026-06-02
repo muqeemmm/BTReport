@@ -1,0 +1,43 @@
+{
+  "subject_id": "EGD-0185",
+  "idh": {
+    "reasoning": "The patient is 40 years old, an age where both IDH-mutant and wildtype gliomas can occur. Features favoring IDH-mutant status include the predominantly non-enhancing nature of the tumor (Proportion Enhancing: 0.44%) and insular involvement. However, the presence of a very large proportion of necrosis (Proportion Necrosis: 19.41%) is a powerful radiological marker for IDH-wildtype glioblastoma. Necrosis is a defining feature of glioblastoma, which is the most common IDH-wildtype glioma. The thick enhancing margin (>3mm), even if the enhancing volume is small, also supports a higher-grade, IDH-wildtype phenotype. The strong evidence of necrosis outweighs the softer signs like age and low enhancement volume, leading to a prediction of IDH-wildtype.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q co-deletion status hinges on differentiating between an astrocytoma and an oligodendroglioma. The tumor is primarily located in the temporal and insular lobes, which is more typical for astrocytomas. Most importantly, the presence of significant necrosis (Proportion Necrosis: 19.41%) and thick enhancement (Thickness of enhancing margin: \">3mm\") are hallmark features of high-grade astrocytomas (glioblastoma) and are exceptionally rare in oligodendrogliomas. Therefore, the evidence strongly points towards an astrocytic lineage, making 1p/19q co-deletion highly improbable.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Region Proportions",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The WHO grade is determined by histological features, which have strong radiological correlates. The single most definitive feature for high grade in this case is the presence of extensive necrosis, with the necrotic component comprising 19.41% of the tumor volume (Proportion Necrosis). Radiologically evident necrosis is a key criterion for diagnosing glioblastoma, which is by definition CNS WHO grade 4. The presence of contrast enhancement (Enhancement Quality: \"Mild\", Thickness of enhancing margin: \">3mm\") further supports a high-grade designation. While the enhancement is not avid, the combination with clear necrosis is compelling evidence for Grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "A 40-year-old male with a large, left-sided temporal-insular glioma. The imaging phenotype is dominated by a large non-enhancing component with significant central necrosis (19.4%) and a small amount of mild, thick enhancement. The presence of necrosis is a very strong indicator of high-grade malignancy (WHO Grade 4) and strongly favors an IDH-wildtype status, despite the patient's relatively young age. The features are most consistent with a Glioblastoma, IDH-wildtype, CNS WHO grade 4. Note: Input metadata contains conflicting information on tumor laterality, but quantitative volume data was prioritized."
+}

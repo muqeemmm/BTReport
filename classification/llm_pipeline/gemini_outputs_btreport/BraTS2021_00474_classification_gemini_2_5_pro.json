@@ -1,0 +1,56 @@
+{
+  "subject_id": "BraTS2021_00474",
+  "idh": {
+    "reasoning": "The presence of a significant necrotic core (NCR Volume (mL) of 5.623) and contrast enhancement (ET Volume (mL) of 9.874) are strong indicators of an IDH-wildtype glioma, as these features are hallmarks of glioblastoma. Furthermore, the extensive vasogenic edema (ED Volume (mL) of 117.894), significant mass effect (midline_shift_present: 'Yes', max_shift_mm: 6.0), and invasion of deep gray matter structures (left caudate, left putamen) are all characteristic of aggressive, rapidly growing IDH-wildtype tumors. The frontal lobe location is common in IDH-mutant tumors but is a non-specific finding that is heavily outweighed by the strong evidence for high-grade, aggressive biology.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly inconsistent with an oligodendroglioma (the only glioma type with 1p/19q co-deletion). The presence of necrosis (NCR Volume (mL) > 0), extensive and poorly demarcated edema (Proportion of Oedema: 88.38%), and invasion into deep gray matter (left caudate, left putamen) and the ependyma are all features characteristic of astrocytic lineage tumors, which are 1p/19q non-codeleted. Oligodendrogliomas typically present as more well-circumscribed, cortically-based tumors with less edema and rarely show necrosis. The frontal lobe location is common for oligodendrogliomas but is not specific enough to overcome the overwhelming evidence against this diagnosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The definitive radiological evidence for WHO grade 4 is the presence of a necrotic core, which is confirmed by the metadata (NCR Volume (mL): 5.623). In adult-type diffuse gliomas, the presence of necrosis on imaging is a key criterion for a grade 4 designation. This is strongly supported by other features of high-grade malignancy, including contrast enhancement (ET Volume (mL): 9.874), a thick enhancing margin (>3mm), extensive edema, and significant mass effect (max_shift_mm: 6.0). The subjective description of 'Mild' Enhancement Quality is inconsistent with the objective volumetric data and does not detract from the diagnosis of a grade 4 tumor, which is primarily driven by the presence of necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features are classic for a high-grade glioma. The presence of a necrotic core, contrast enhancement, extensive vasogenic edema, and significant mass effect are all highly suggestive of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The tumor is large, located in the left frontal lobe with deep gray matter and ependymal invasion. The prediction confidence is high across all categories due to the presence of these definitive radiological markers of high-grade disease."
+}

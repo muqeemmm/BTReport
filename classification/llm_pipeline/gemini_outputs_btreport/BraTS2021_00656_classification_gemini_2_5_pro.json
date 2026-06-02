@@ -1,0 +1,55 @@
+{
+  "subject_id": "BraTS2021_00656",
+  "idh": {
+    "reasoning": "The presence of multifocal disease is a very strong predictor of IDH-wildtype status. Additionally, the presence of a thick enhancing margin (>3mm), significant mass effect (9mm midline shift), and extensive vasogenic edema are all classic features of IDH-wildtype gliomas, particularly glioblastoma. While the overall proportion of enhancement and necrosis is low, which can sometimes be seen in IDH-mutant tumors, the combination of multifocality and aggressive features like a thick enhancing margin and major mass effect overwhelmingly favors an IDH-wildtype prediction.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "max_shift_mm",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly suggestive of a non-codeleted (astrocytic) tumor. The tumor is multifocal, which is rare in 1p/19q-codeleted oligodendrogliomas. Furthermore, the presence of a thick enhancing margin and extensive, poorly demarcated edema points towards an infiltrative astrocytoma rather than the more circumscribed appearance often seen in oligodendrogliomas. The deep white matter and basal ganglia involvement also favor an astrocytic lineage. The cortical involvement is non-specific and does not outweigh the strong evidence against co-deletion.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of both contrast enhancement and necrosis are key imaging markers for high-grade glioma. Specifically, the presence of necrosis in an IDH-wildtype astrocytoma automatically confers a WHO Grade 4 diagnosis. The imaging data confirms both enhancement (ET Volume > 0) and necrosis (NCR Volume > 0). This is strongly corroborated by other aggressive features: multifocality, a thick enhancing margin (>3mm), and significant mass effect with a 9mm midline shift. Although the proportions of enhancement and necrosis are small relative to the large edematous component, their mere presence, combined with the other features, is sufficient to predict WHO Grade 4 with high confidence.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of multifocality, a thick enhancing margin, central necrosis, and profound mass effect are hallmark features of Glioblastoma, IDH-wildtype. The predictions for IDH-wildtype, 1p/19q non-codeletion, and WHO grade 4 are all strongly supported by the imaging metadata and are internally consistent."
+}

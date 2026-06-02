@@ -1,0 +1,46 @@
+{
+  "subject_id": "EGD-0241",
+  "idh": {
+    "reasoning": "The patient's relatively young age (38) and the tumor's location involving the frontal and insular lobes are suggestive of an IDH-mutant glioma. The most compelling evidence is the definitive presence of the T2-FLAIR mismatch sign, with a very high score of 0.96. This sign is highly specific for IDH-mutant astrocytomas. While the presence of extensive necrosis is more typical of IDH-wildtype tumors (glioblastoma), the T2-FLAIR mismatch sign is a more specific molecular marker. The minimal contrast enhancement also favors an IDH-mutant status. On balance, the strong and specific evidence of the T2-FLAIR mismatch outweighs the non-specific finding of necrosis.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Region Proportions",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is heavily influenced by features that differentiate between astrocytic and oligodendroglial lineages. The presence of a strong T2-FLAIR mismatch sign is a key imaging feature highly specific to IDH-mutant astrocytomas, which are, by definition, 1p/19q non-codeleted. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically do not exhibit this sign. While the relatively sharp transition zone could be seen in oligodendrogliomas, the T2-FLAIR mismatch is a much stronger and more specific piece of evidence pointing towards a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The WHO CNS5 grading criteria for adult-type diffuse gliomas are based on both histological and molecular features. For an astrocytoma, the presence of necrosis is a sufficient criterion for a WHO grade 4 designation. In this case, the metadata reports a very high 'Proportion Necrosis' of 75.61%. Although other features such as minimal contrast enhancement and the patient's age might suggest a lower grade, the presence of necrosis is a definitive high-grade feature that overrides these considerations. Therefore, a grade 4 classification is required.",
+    "supporting_features": [
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging profile presents conflicting features. The strong T2-FLAIR mismatch sign and young patient age are highly indicative of an IDH-mutant, non-codeleted astrocytoma. However, the presence of extensive necrosis is a definitive feature of high-grade transformation. The integrated diagnosis is therefore an Astrocytoma, IDH-mutant, CNS WHO grade 4, which represents a secondary glioblastoma."
+}

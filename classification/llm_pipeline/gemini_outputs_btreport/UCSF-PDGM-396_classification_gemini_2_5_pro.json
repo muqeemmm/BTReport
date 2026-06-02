@@ -1,0 +1,55 @@
+{
+  "subject_id": "UCSF-PDGM-396",
+  "idh": {
+    "reasoning": "The tumor displays features highly suggestive of an IDH-wildtype status. It is a large, deeply infiltrative mass involving critical midline and bilateral structures, including the thalami, basal ganglia, and brainstem, as indicated by the extensive list in 'Anatomical Overlap Regions' and 'Deep WM invasion'. This aggressive, diffuse infiltrative pattern is a hallmark of IDH-wildtype gliomas. The presence of significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': -6.0) and both contrast enhancement ('ET Volume (mL)': 2.037) and necrosis ('NCR Volume (mL)': 0.27) further support this conclusion. While the proportions of enhancement and necrosis are low ('Proportion Enhancing': 2.24%, 'Proportion Necrosis': 0.3%) and enhancement quality is 'Mild', which could be seen in some IDH-mutant tumors, the presence of these features combined with the aggressive infiltrative pattern strongly favors an IDH-wildtype diagnosis.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype strongly argues against a 1p/19q co-deletion. The tumor's highly infiltrative nature, with deep white matter and extensive deep gray matter invasion ('Anatomical Overlap Regions', 'Deep WM invasion'), is characteristic of astrocytomas (non-codeleted) rather than oligodendrogliomas (codeleted), which typically have more defined margins. The presence of necrosis ('NCR Volume (mL)' > 0) and contrast enhancement ('ET Volume (mL)' > 0) are also much more common in non-codeleted tumors. Furthermore, the tumor's primary location in the parietal lobe ('Region Proportions') with deep extension is atypical for oligodendrogliomas, which show a strong predilection for the frontal cortex. There are no features specifically suggesting a co-deleted status.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis is a key histopathological and radiological feature for grading diffuse gliomas. The metadata explicitly shows a non-zero volume of necrosis ('NCR Volume (mL)': 0.27). In an adult-type diffuse astrocytic glioma, the presence of necrosis automatically confers a CNS WHO Grade 4 diagnosis. This is further supported by other high-grade features, including contrast enhancement ('ET Volume (mL)': 2.037), significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': -6.0), and a very large tumor volume ('Total tumor volume (mL)': 90.777) with extensive infiltration. Although the proportion of necrosis and enhancement is small, their mere presence is sufficient for the highest grade assignment.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO Grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are characteristic of a high-grade glioma. The large, deeply infiltrative mass with enhancement, necrosis, and significant mass effect is most consistent with a Glioblastoma, IDH-wildtype. The aggressive pattern of infiltration into bilateral deep gray structures and the brainstem is a strong indicator of IDH-wildtype status, and the presence of necrosis confirms a WHO Grade 4 diagnosis."
+}

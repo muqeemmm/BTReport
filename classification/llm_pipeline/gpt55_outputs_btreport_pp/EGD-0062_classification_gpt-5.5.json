@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, older age favors IDH-wildtype biology, and the metadata show an infiltrative, aggressive-appearing lesion with deep white matter and ependymal involvement, substantial edema, enhancement, necrotic/non-enhancing core, and mass effect. These features support an IDH-wildtype diffuse glioma. Against this, a strong T2-FLAIR mismatch pattern and frontal cortical location are classically associated with IDH-mutant astrocytoma. Weighing the marked age and aggressive enhancement/edema/invasion pattern against the T2-FLAIR mismatch, the conclusion is IDH-wildtype, but with only moderate confidence because of the mismatch signal.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "max_shift_mm"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.67,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest imaging clue is the reported T2-FLAIR mismatch, which supports a non-codeleted astrocytic genotype rather than oligodendroglioma. The lesion also has deep white matter invasion, ependymal invasion, marked edema, and necrotic/enhancing components, which are less characteristic of a classic 1p/19q-codeleted oligodendroglioma appearance. Against non-codeletion, the frontal cortical location is a common location pattern for oligodendroglioma. Because calcification/SWI information is unavailable and frontal cortical involvement is a meaningful counterfeature, the conclusion is non-codeleted with moderate confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The main atypical feature for an IDH-wildtype glioblastoma call is the strong T2-FLAIR mismatch, which would usually raise suspicion for IDH-mutant astrocytoma; however, the patient age and aggressive enhancing/edematous invasive phenotype favor IDH-wildtype grade 4 disease.",
+  "subject_id": "EGD-0062",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently, the lesion shows multiple high-grade imaging markers: substantial enhancing tumor volume, necrotic/non-enhancing core, a thick enhancing margin, very large edema burden, midline shift, deep white matter invasion, and ependymal invasion. These findings support grade 4 over grade 2 or 3. Against grade 4, enhancement is described as mild, the T2-FLAIR mismatch pattern can be seen in lower-grade IDH-mutant astrocytoma, and the tumor is solitary without satellites. Overall, the necrosis/enhancement, mass effect, edema, and invasive pattern make grade 4 the best estimate.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

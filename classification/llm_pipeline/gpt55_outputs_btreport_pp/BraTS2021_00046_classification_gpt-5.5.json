@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status, the strongest MRI-derived evidence favors IDH-wildtype biology: age_years is 62, Enhancement Quality is Marked, Thickness of enhancing margin is >3mm, ET Volume (mL) is present at 6.841, Proportion Enhancing is 20.24, Proportion Necrosis is present at 2.28, Proportion of Oedema is high at 77.47, and T2-FLAIR Mismatch Present is 0.0. These features fit an enhancing, edematous high-grade adult diffuse glioma pattern more typical of IDH-wildtype tumors. Evidence arguing against IDH-wildtype is that Cortical involvement is Present and Tumor Location/Region Proportions include frontal_lobe and cortex, which can be seen in IDH-mutant diffuse gliomas. Overall, the enhancement/edema/necrosis pattern and older age outweigh the cortical-frontal features, so the conclusion is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, assessed independently from IDH status, the metadata leans toward non-codeleted rather than codeleted. Supporting non-codeletion are age_years of 62, Enhancement Quality marked, Thickness of enhancing margin >3mm, substantial Proportion of Oedema, parietal-predominant Region Proportions, and T2-FLAIR Mismatch Present of 0.0 without a classic oligodendroglioma-specific MRI signature in the provided fields. Evidence arguing against non-codeletion is that Cortical involvement is Present and Tumor Location/Region Proportions include frontal_lobe and cortex, which are common locations for oligodendroglioma. Because calcification-sensitive imaging is unavailable and the frontal-cortical component is a real competing feature, the conclusion is non-codeleted with only moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the provided structural MRI metadata. Lack of DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification-sensitive imaging limits molecular confidence, especially for 1p/19q status. Molecular testing remains required for definitive WHO CNS5 integrated diagnosis.",
+  "subject_id": "BraTS2021_00046",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, assessed independently of molecular predictions, the imaging phenotype most strongly supports grade 4: Enhancement Quality is Marked, Thickness of enhancing margin is >3mm, ET Volume (mL) is 6.841, Proportion Enhancing is 20.24, Proportion Necrosis is present, NCR Volume (mL) is present, Proportion of Oedema is high, and boundary_sharpness/Transition Zone Thickness (FLAIR) indicate a relatively sharp enhancing/FLAIR abnormality rather than a purely low-grade infiltrative appearance. Evidence against grade 4 is that Proportion Necrosis and NCR Volume (mL) are small, midline_shift_present is No, Ependymal (ventricular) Invasion is Absent, Deep WM invasion is Absent, and Multiple satellites present is Absent. Despite these mitigating features, marked thick enhancement with necrotic component and extensive edema is most compatible with CNS WHO grade 4 rather than grade 2 or 3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "boundary_sharpness",
+      "Transition Zone Thickness (FLAIR)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest IDH-relevant imaging feature is a reported T2-FLAIR mismatch, with high mismatch score and degree, which is classically associated with IDH-mutant astrocytoma when present in an adult diffuse glioma. Temporal/insular cortical involvement is also compatible with an IDH-mutant diffuse glioma phenotype. Features arguing toward IDH-wildtype include age 55, marked and bulky enhancement, thick enhancing margin, and measurable necrosis, which are common in glioblastoma, IDH-wildtype. Balancing these, the explicit T2-FLAIR mismatch metadata is a strong molecular-imaging clue, but the aggressive enhancement/necrosis and age reduce certainty; the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The explicit T2-FLAIR mismatch pattern strongly favors an astrocytic, non-codeleted diffuse glioma rather than oligodendroglioma. Marked enhancement, a large enhancing component, necrosis, and a thick enhancing margin are also less typical for classic lower-grade oligodendroglioma and support a non-codeleted astrocytic/high-grade phenotype. Features that could fit oligodendroglioma include cortical involvement and temporal/insular involvement, but the provided metadata lacks calcification or classic frontal predominance assessment, and the T2-FLAIR mismatch weighs against 1p/19q co-deletion. Therefore the best estimate is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The strongest molecular-imaging clue is the reported T2-FLAIR mismatch, but the lesion is also highly enhancing with necrotic component in a 55-year-old, which creates overlap with glioblastoma, IDH-wildtype. DWI/ADC, perfusion, spectroscopy, SWI/GRE, and histomolecular markers are not available, so tissue diagnosis remains required.",
+  "subject_id": "EGD-0535",
+  "who_grade": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "The grade-relevant MRI phenotype is aggressive: marked enhancement, a large enhancing tumor volume, nearly half of the lesion enhancing, measurable necrotic/non-enhancing core, thick enhancing margin, substantial edema, and large total tumor size all support high-grade disease, most consistent with CNS WHO grade 4 rather than grade 2 or grade 3. The main features arguing against the highest grade are minimal midline shift, absent ventricular asymmetry, absent ependymal invasion, absent deep white matter invasion, no satellites, and solitary presentation. However, the combination of marked enhancement with necrosis and mass-like size strongly favors grade 4 on imaging over grade 3 or grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

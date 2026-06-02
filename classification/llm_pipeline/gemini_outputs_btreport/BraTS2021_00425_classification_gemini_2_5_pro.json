@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_00425",
+  "idh": {
+    "reasoning": "The patient's age of 69 is a very strong predictor for IDH-wildtype status, as gliomas in this age group are predominantly IDH-wildtype. The presence of contrast enhancement, even if described as 'Mild', and a 'Thickness of enhancing margin' >3mm also favor a wildtype status over a mutant one, particularly in an older patient. These factors outweigh features that are more suggestive of an IDH-mutant tumor, such as the insular location, lack of necrosis ('Proportion Necrosis': 0.0), and absence of deep white matter invasion. While these latter features are classic for IDH-mutant astrocytoma, the demographic data is a more powerful predictor in this case.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Proportion Necrosis",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status prediction. The primary feature guiding this classification is the tumor's location. The tumor shows overwhelming involvement of the insula ('Region Proportions': insula 99.7%). Insular predilection is a classic imaging hallmark of IDH-mutant astrocytomas (1p/19q non-codeleted). There are no specific features in the provided metadata, such as well-defined margins or calcifications, to suggest an oligodendroglioma (1p/19q codeleted). Therefore, based on the strong and specific location data, a non-codeleted status is the most likely.",
+    "supporting_features": [
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is based on the high likelihood of this being an IDH-wildtype diffuse astrocytic glioma in a 69-year-old adult. According to the WHO CNS5 classification, any such tumor is, by definition, a Glioblastoma, WHO Grade 4, regardless of its histological appearance. The presence of contrast enhancement ('ET Volume (mL)': 1.988) and a thick enhancing margin ('>3mm') support a high-grade designation. However, there are significant contradicting features from a purely radiological perspective, most notably the complete absence of necrosis ('Proportion Necrosis': 0.0) and only 'Mild' enhancement, which are typically associated with lower-grade tumors. The final prediction defers to the molecular classification rules which are strongly suggested by the patient's age.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's advanced age (69) is the most significant factor, strongly predicting an IDH-wildtype glioma. Per WHO CNS5 guidelines, a diffuse astrocytic glioma that is IDH-wildtype is classified as Glioblastoma, WHO Grade 4. While key imaging features like the absence of necrosis and only mild enhancement are atypical for a classic glioblastoma and more suggestive of a lower-grade tumor, the molecular definition driven by the likely IDH status takes precedence. The tumor's insular location is characteristic of an astrocytoma (non-codeleted). All predictions are consistent with a final diagnosis of Glioblastoma, IDH-wildtype."
+}

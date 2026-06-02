@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0392",
+  "idh": {
+    "reasoning": "The patient's advanced age (68 years) is a very strong predictor for IDH-wildtype status. The MRI findings strongly corroborate this, showing features classic for glioblastoma: marked, thick-rimmed enhancement, a large enhancing volume, and a significant necrotic core. These features are highly indicative of an IDH-wildtype tumor. The primary feature arguing against this, the absence of deep white matter invasion, is insufficient to outweigh the combined evidence from patient age and the presence of enhancement and necrosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification must be performed independently of the IDH prediction. The tumor's imaging phenotype is strongly against a 1p/19q co-deletion. Oligodendrogliomas (which are co-deleted) typically show minimal to no enhancement and rarely exhibit necrosis. This tumor, in contrast, has marked, thick enhancement and a substantial necrotic core. These features are characteristic of high-grade astrocytic tumors (which are non-codeleted). While the frontal lobe location is common in oligodendrogliomas, the aggressive enhancement and necrotic features are compelling evidence for non-codeletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is based on the unambiguous presence of radiological features corresponding to high-grade histology. Specifically, the tumor demonstrates both marked contrast enhancement (a surrogate for microvascular proliferation) and a significant necrotic core. According to WHO CNS5 criteria for adult-type diffuse gliomas, the presence of either necrosis or microvascular proliferation is sufficient to assign grade 4. This tumor shows strong evidence for both. Features suggesting lower grade, such as absent deep white matter invasion and minimal midline shift, are far outweighed by the definitive high-grade characteristics of enhancement and necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age (68 years) with MRI findings of a large, solitary tumor with marked, thick-rimmed enhancement and central necrosis provides a classic presentation for Glioblastoma, IDH-wildtype. The individual predictions for IDH-wildtype status, 1p/19q non-codeletion, and WHO grade 4 are all highly confident and mutually consistent under the WHO CNS5 classification."
+}

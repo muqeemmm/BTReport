@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, the tumor is centered in a cortical temporal region, is solitary, has cortical involvement without deep white matter invasion or ependymal invasion, shows only minimal mass effect, and has essentially negligible enhancing tumor volume. These features are more typical of lower-grade or IDH-mutant diffuse glioma than IDH-wildtype glioblastoma. Evidence against IDH mutation includes the large edema fraction, reported necrotic/non-enhancing component, mild enhancement with a thick enhancing margin, and absence of a T2-FLAIR mismatch pattern, which reduce specificity for IDH-mutant astrocytoma and raise some concern for more aggressive biology. On balance, the age and predominantly nonenhancing cortical temporal presentation support IDH mutation.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the available MRI metadata is limited because calcification-sensitive imaging is unavailable and the lesion is temporal rather than in the more typical frontal cortical-subcortical distribution often seen with oligodendroglioma. A solitary cortical tumor in a young adult with absent T2-FLAIR mismatch could fit either oligodendroglioma or astrocytoma, and mild enhancement is not decisive. The main feature arguing against co-deletion is the temporal location; features that could argue for co-deletion are nonspecific cortical involvement and lack of T2-FLAIR mismatch. Overall, the evidence is weak but slightly favors non-codeletion.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Side of Tumor Epicenter",
+      "Number of lesions",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional MRI-derived metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The 1p/19q call is the least certain because key oligodendroglioma markers such as calcification cannot be assessed. The grade estimate is also uncertain because enhancement is minimal, while edema and the reported necrotic/non-enhancing component suggest more aggressive behavior.",
+  "subject_id": "BraTS2021_01720",
+  "who_grade": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, the very small enhancing tumor volume, absence of enhancing components, minimal midline shift, absent ventricular asymmetry, absent deep white matter invasion, absent ependymal invasion, and no enhancing midline crossing argue against a classic grade 4 imaging phenotype. However, the large edema volume and proportion, mild enhancement, thick enhancing margin, and substantial reported necrotic/non-enhancing component argue against a purely low-grade grade 2 appearance. Because the metadata is mixed, with aggressive edema/necrotic features but little true enhancement or mass effect, the best imaging estimate is an intermediate high-grade diffuse glioma, CNS WHO grade 3, with limited confidence.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

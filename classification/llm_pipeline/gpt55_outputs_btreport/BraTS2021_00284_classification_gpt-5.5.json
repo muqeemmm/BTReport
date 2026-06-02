@@ -1,0 +1,78 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "Considering IDH status independently from the other molecular tasks, the metadata favors IDH-wildtype because the patient is older, the lesion is multifocal with multiple satellites, has deep white-matter and ependymal invasion, and both enhancing tumor and edema cross midline. These are more typical of aggressive IDH-wildtype diffuse glioma than of an IDH-mutant astrocytoma. Evidence against IDH-wildtype is the frontal cortical location and only mild/small-volume enhancement, which can be seen in IDH-mutant tumors. Overall, the infiltrative multifocal midline-crossing pattern outweighs the frontal-cortical and mild-enhancement counterpoints, so the conclusion is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Considering 1p/19q status independently from the IDH call, the metadata favors non-codeletion because the tumor is multifocal, has multiple satellites, invades deep white matter and ependymal surfaces, and crosses midline through enhancing tumor and edema. This pattern is less typical for oligodendroglioma, which more often presents as a more circumscribed frontal cortical/subcortical mass. Evidence supporting possible codeletion is the frontal cortical location and cortical involvement, which are classic for oligodendroglioma, but calcification and susceptibility information are unavailable. On balance, the extensive infiltrative, multifocal, midline-crossing behavior supports non-codeleted status.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility/calcification assessment. The frontal cortical component introduces some uncertainty for IDH and 1p/19q, but the multifocal, satellite, ependymal/deep white-matter invasive, midline-crossing enhancing/edematous pattern is most compatible with glioblastoma biology.",
+  "subject_id": "BraTS2021_00284",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "Considering WHO grade independently from the molecular predictions, the metadata favors grade 4 because there is enhancing tumor, necrotic/non-enhancing tumor component, multifocal disease with satellites, deep white-matter and ependymal invasion, and both enhancement and edema cross midline. These features argue for high-grade aggressive diffuse glioma rather than grade 2 or grade 3. Evidence against grade 4 is that enhancement is described as mild, enhancing and necrotic proportions are small, the total tumor volume is modest, and there is no midline shift. Despite those mitigating features, the multifocal invasive pattern with enhancement, necrotic component, and midline/ependymal involvement most strongly supports CNS WHO grade 4.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

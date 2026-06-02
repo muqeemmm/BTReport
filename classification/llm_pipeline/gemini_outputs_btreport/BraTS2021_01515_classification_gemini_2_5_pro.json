@@ -1,0 +1,57 @@
+{
+  "subject_id": "BraTS2021_01515",
+  "idh": {
+    "reasoning": "The prediction of IDH-wildtype status is based on features suggesting high-grade, aggressive biology, which are more common in this subtype. The tumor is very large (Total tumor volume (mL): 175.3), crosses the midline, and shows extensive infiltration into deep white matter and ependyma. Most critically, there is a very high proportion of necrosis (Proportion Necrosis: 53.62), a strong indicator of aggressive behavior typical of IDH-wildtype gliomas (glioblastoma). These features outweigh the evidence for IDH-mutant status, which includes the patient's age (42 years) and the complete lack of contrast enhancement (Enhancement Quality: 'None'). While non-enhancement is a classic feature of IDH-mutant tumors, the presence of extensive necrosis is a more powerful predictor of IDH-wildtype status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "crosses_ideal_midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor exhibits features highly characteristic of an astrocytoma (non-codeleted) rather than an oligodendroglioma (codeleted). The extensive infiltration into deep gray matter structures (thalamus, caudate, putamen), significant mass effect, midline crossing, and ependymal invasion are all more typical of astrocytic lineage. Furthermore, the very high proportion of necrosis (53.62%) is a strong feature of high-grade astrocytomas and is uncommon in oligodendrogliomas. While the lack of enhancement can be seen in oligodendrogliomas, the constellation of aggressive infiltrative features and necrosis strongly favors a non-codeleted status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_ideal_midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO Grade 4 is driven by the definitive presence of necrosis. The metadata reports a 'Proportion Necrosis' of 53.62, which is a hallmark feature of WHO Grade 4 gliomas (glioblastoma) according to the WHO CNS5 classification. This finding overrides other features. Additional supporting evidence for high grade includes the very large tumor volume (175.3 mL), significant mass effect with midline shift, and extensive infiltration (deep white matter and ependymal invasion). The primary contradictory feature is the complete absence of contrast enhancement ('Enhancement Quality': 'None'), which is atypical for Grade 4 tumors but does not preclude the diagnosis, especially when necrosis is present.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents with conflicting imaging features: a complete lack of enhancement, typical of lower-grade gliomas, alongside a very high proportion of necrosis, which is a defining characteristic of a WHO Grade 4 tumor. The extensive tumor size, midline crossing, and deep infiltration further support a high-grade diagnosis. Given that necrosis is a key criterion for grading, the tumor is classified as Grade 4. The combination of features is most consistent with a Glioblastoma, IDH-wildtype."
+}

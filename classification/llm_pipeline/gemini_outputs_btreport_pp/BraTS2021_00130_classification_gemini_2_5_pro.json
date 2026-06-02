@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_00130",
+  "idh": {
+    "reasoning": "The patient's age of 56 years is more typical for IDH-wildtype gliomas. The imaging features are classic for glioblastoma (which are IDH-wildtype), including a large necrotic core (`NCR Volume (mL)` of 35.23), marked and thick ring enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"), and the presence of satellite lesions (`Multiple satellites present`). Furthermore, deep gray matter involvement (`Anatomical Overlap Regions` including thalamus and basal ganglia) and ependymal invasion are more common in IDH-wildtype tumors. Critically, the T2-FLAIR mismatch sign, a strong predictor of IDH-mutant astrocytoma, is absent (`T2-FLAIR Mismatch Present`: 0.0). There are no contradicting features to suggest an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). The presence of a very large necrotic core (`NCR Volume (mL)`: 35.23) and thick, marked ring enhancement (`Enhancement Quality`: \"Marked\") are hallmarks of glioblastoma, not oligodendroglioma. Oligodendrogliomas typically lack significant necrosis and show less avid, if any, enhancement. The presence of satellite lesions (`Multiple satellites present`) and ependymal invasion (`Ependymal (ventricular) Invasion`) also point to a more aggressive biology inconsistent with co-deletion. While the relatively sharp tumor margin (`Transition Zone Thickness (FLAIR)` median 0.75mm) can be seen in oligodendrogliomas, in the context of overwhelming features of a high-grade, necrotic tumor, it does not support co-deletion. The evidence strongly favors a non-codeleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive central necrosis is a defining feature of WHO grade 4 gliomas. This is clearly indicated by the large `NCR Volume (mL)` of 35.23 and `Proportion Necrosis` of 23.85%. Additionally, the marked, thick ring enhancement (`Enhancement Quality`: \"Marked\", `ET Volume (mL)`: 25.553) is the radiological correlate of microvascular proliferation, another histologic criterion for grade 4. Other features supporting a high grade include significant mass effect (`midline_shift_present`: \"Yes\"), extensive edema (`ED Volume (mL)`: 86.917), the presence of satellite lesions (`Multiple satellites present`), and ependymal invasion (`Ependymal (ventricular) Invasion`). There is no imaging evidence to support a lower grade; the findings are unequivocally grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 56-year-old male with a large, right-sided intra-axial mass exhibiting classic imaging features of glioblastoma. The presence of extensive necrosis, thick ring enhancement, satellite lesions, and significant mass effect are all highly indicative of a high-grade glioma. The absence of the T2-FLAIR mismatch sign further supports an IDH-wildtype status. The combination of findings leads to a high-confidence diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

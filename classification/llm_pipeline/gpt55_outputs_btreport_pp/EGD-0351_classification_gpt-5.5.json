@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status considered independently, the strongest MRI support for an IDH-mutant diffuse glioma is a frontal cortical tumor pattern with limited enhancement and little necrotic component: \"Tumor Location\" is frontal_lobe-cortex region, \"Cortical involvement\" is present, \"Enhancement Quality\" is mild, \"ET Volume (mL)\" is very small, and \"Proportion Necrosis\" is low. These features argue more toward an IDH-mutant glioma than an IDH-wildtype glioblastoma pattern. Evidence against IDH mutation includes \"age_years\" of 48, which is not very young, plus \"Deep WM invasion\", large \"ED Volume (mL)\", very high \"Proportion of Oedema\", and absent \"T2-FLAIR Mismatch Present\", which reduce specificity. Overall the frontal cortical, mildly enhancing, minimally necrotic pattern is more supportive of IDH-mutant than IDH-wildtype, but with moderate uncertainty.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.59,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Side of Tumor Epicenter",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, the available MRI metadata provide only indirect evidence. A frontal cortical location favors a 1p/19q-codeleted oligodendroglioma pattern: \"Tumor Location\" is frontal_lobe-cortex region, \"Cortical involvement\" is present, and \"Region Proportions\" show predominant frontal_lobe and cortex involvement. \"T2-FLAIR Mismatch Present\" is absent, which is less supportive of the classic IDH-mutant astrocytoma imaging pattern and indirectly favors a codeleted tumor. Mild enhancement can be seen in codeleted tumors, so \"Enhancement Quality\" also does not argue strongly against codeletion. Against codeletion, \"Deep WM invasion\", \"Side of Tumor Epicenter\" reported as midline, large \"ED Volume (mL)\", and very high \"Proportion of Oedema\" are less specific and can be seen with more infiltrative non-codeleted tumors. Because key discriminators are not available in the supplied metadata, the best estimate is codeleted with low-to-moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, or susceptibility information. The dominant uncertainty is the 1p/19q call, because the provided fields lack several imaging features commonly used to support oligodendroglioma versus astrocytoma. The very large FLAIR/edema component with only tiny enhancing and necrotic volumes makes grade 3 more likely than grade 2 or grade 4, but histology and molecular testing remain necessary.",
+  "subject_id": "EGD-0351",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 3,
+    "reasoning": "For CNS WHO grade considered independently, the imaging pattern is more concerning than grade 2 because \"Enhancement Quality\" is mild rather than absent, \"Thickness of enhancing margin\" is greater than 3 mm, \"Deep WM invasion\" is present, \"ED Volume (mL)\" is large, and \"Proportion of Oedema\" is very high. These features suggest biologically active tumor beyond a purely low-grade appearance. However, grade 4 is not strongly supported because \"ET Volume (mL)\" is very small, \"NCR Volume (mL)\" is minimal, \"Proportion Necrosis\" is low, \"midline_shift_present\" is minimal, \"Multiple satellites present\" is absent, and \"Ependymal (ventricular) Invasion\" is absent. Balancing enhancement and extensive FLAIR abnormality against minimal necrosis and limited mass effect, grade 3 is the most plausible MRI-based estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

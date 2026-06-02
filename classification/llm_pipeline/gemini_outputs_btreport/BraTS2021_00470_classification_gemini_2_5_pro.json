@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_00470",
+  "idh": {
+    "reasoning": "The patient's age of 60 is a strong predictor for IDH-wildtype status. The imaging phenotype is classic for an IDH-wildtype glioblastoma, characterized by a very large tumor volume (104.3 mL), marked and thick-walled contrast enhancement, and a significant proportion of necrosis (15.58%). The involvement of deep gray matter structures like the thalamus and basal ganglia also favors an IDH-wildtype tumor. There are no features, such as younger age or lack of aggressive features, to suggest an IDH-mutant glioma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The 1p/19q co-deletion is the defining feature of oligodendroglioma, which is an IDH-mutant entity. Given the extremely high likelihood of this tumor being IDH-wildtype, it is consequently expected to be 1p/19q non-codeleted. Furthermore, analyzing the imaging features independently, the presence of marked enhancement and extensive necrosis is highly atypical for an oligodendroglioma, which tends to be less aggressive radiologically. The aggressive features seen here strongly argue against a 1p/19q co-deleted genotype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis is a key criterion for diagnosing a CNS WHO grade 4 glioma. The metadata explicitly indicates a significant necrotic component ('Proportion Necrosis': 15.58%). This finding, combined with the presence of marked, thick-walled contrast enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm'), provides definitive radiological evidence for a grade 4 tumor. The large tumor volume and deep infiltration are also consistent with this high grade. There is no evidence to support a lower grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age and classic aggressive imaging features\u2014a large, deeply infiltrating mass with marked, thick-walled enhancement and central necrosis\u2014provides a coherent and high-confidence picture of a Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

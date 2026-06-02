@@ -1,0 +1,71 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, the lesion is frontal/cortical, solitary, and nonenhancing, with no necrosis and no deep white matter or ependymal invasion; this is a typical lower-grade diffuse glioma imaging phenotype more often associated with IDH mutation than IDH-wildtype glioblastoma. Features arguing against a confident IDH-mutant call are the reported midline epicenter and absence of a definite T2-FLAIR mismatch, which removes a specific imaging sign for IDH-mutant astrocytoma. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the strongest imaging support for co-deletion is the frontal cortical location and nonenhancing, solitary lower-grade appearance, which is a common presentation for oligodendroglioma. Against co-deletion, there is no available calcification-sensitive sequence, no direct calcification metadata, and the patient is relatively young for a classic oligodendroglioma demographic; absence of a definite T2-FLAIR mismatch only weakly favors co-deletion because it is not specific. The evidence is therefore limited and only mildly favors 1p/19q co-deletion over non-codeletion.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structural MRI metadata without diffusion, perfusion, spectroscopy, SWI/GRE, or histology. The 1p/19q call is the least certain because calcification and oligodendroglioma-specific texture features are not directly assessed, and the lesion is represented entirely as FLAIR/T2 abnormality without a segmented tumor core.",
+  "subject_id": "UCSF-PDGM-240",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade, the imaging pattern favors grade 2: the lesion is entirely nonenhancing, has no necrosis, small total volume, no midline shift, no ventricular asymmetry, no ependymal invasion, no deep white matter invasion, and is solitary. These findings argue against grade 4 and make grade 3 less likely on imaging, although grade cannot be determined definitively without histology and molecular markers. Cortical and motor-region involvement are clinically important but do not by themselves indicate high grade. Overall, the metadata supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

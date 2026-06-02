@@ -1,0 +1,52 @@
+{
+  "subject_id": "UCSF-PDGM-243",
+  "idh": {
+    "reasoning": "The patient's age of 59 years is a strong demographic predictor for IDH-wildtype status. The most compelling imaging feature is the multifocal nature of the tumor ('Multifocal or Multicentric': 'Multifocal', 'Number of lesions': 2), which is highly characteristic of glioblastoma, IDH-wildtype. Additionally, the tumor exhibits a very sharp transition zone ('Transition Zone Thickness (FLAIR)' median_mm: 0.75), which is more typical of IDH-wildtype gliomas than the diffusely infiltrative borders of IDH-mutant astrocytomas. The absence of a T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0) further argues against an IDH-mutant astrocytoma. While features like mild enhancement and lack of deep white matter invasion could be seen in IDH-mutant tumors, the combination of age, multifocality, and sharp borders strongly favors an IDH-wildtype prediction.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. The strongest evidence against 1p/19q co-deletion is the multifocal presentation ('Multifocal or Multicentric': 'Multifocal'). Oligodendrogliomas, which are defined by 1p/19q co-deletion, are almost exclusively unifocal. While the sharp tumor margin ('Transition Zone Thickness (FLAIR)') and frontal lobe location are consistent with oligodendroglioma, these features are not specific and can be seen in other glioma types, including glioblastoma. The presence of necrosis ('NCR Volume (mL)' > 0), even a small amount, is also less common in oligodendrogliomas compared to high-grade astrocytomas. Therefore, the multifocality is a decisive feature pointing towards a non-codeleted status.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "According to the WHO CNS5 classification for adult-type diffuse gliomas, the presence of necrosis is a sufficient criterion for a WHO grade 4 designation in an astrocytoma. This tumor demonstrates a non-zero volume of necrosis ('NCR Volume (mL)': 0.039). Furthermore, the multifocal nature of the tumor ('Multifocal or Multicentric': 'Multifocal') is a hallmark of high-grade, aggressive gliomas, consistent with grade 4. Although the enhancement is mild ('Enhancement Quality': 'Mild') and the volumes of enhancement and necrosis are small, the mere presence of radiographically evident necrosis is the key determinant for grade 4. The lack of deep white matter or ependymal invasion does not override the significance of necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (59), multifocal presentation, and the presence of necrosis provides strong, convergent evidence for a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The sharp tumor borders and lack of T2-FLAIR mismatch further support this diagnosis over an IDH-mutant astrocytoma. The individual predictions for IDH status, 1p/19q status, and WHO grade are internally consistent."
+}

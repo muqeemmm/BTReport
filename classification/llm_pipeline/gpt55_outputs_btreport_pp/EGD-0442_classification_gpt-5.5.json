@@ -1,0 +1,83 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favor IDH-wildtype biology: age_years is 56, and the lesion has substantial necrotic/non-enhancing core and enhancement, extensive oedema, large overall volume, midline shift, ependymal invasion, deep white-matter invasion, and satellites. These are aggressive imaging features more typical of IDH-wildtype diffuse glioma. T2-FLAIR Mismatch Present is absent, which removes a relatively specific supportive sign for IDH-mutant astrocytoma. Features arguing against IDH-wildtype include frontal/cortical/insular location and only mild/limited enhancement, which can be seen in IDH-mutant glioma. Overall, the aggressive phenotype outweighs the location-based counterevidence.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.71,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the strongest raw MRI evidence weighs against codeletion: there is prominent necrosis, enhancing tumor, extensive oedema, ependymal invasion, deep white-matter invasion, satellites, large tumor volume, and midline shift, which together are less typical for classic 1p/19q-codeleted oligodendroglioma. Counterevidence is present because the frontal, cortical, and insular location is compatible with oligodendroglioma, T2-FLAIR Mismatch Present is absent, and enhancement is described as mild. Because the available metadata lack a highly specific codeletion marker, the call is moderately confident rather than high-confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm"
+    ]
+  },
+  "overall_comment": "The predictions are mutually compatible under WHO CNS5. Confidence is highest for grade 4 because necrosis, enhancement, oedema, mass effect, ependymal invasion, deep white-matter invasion, and satellites are all present. Molecular predictions remain inferential from conventional MRI metadata only; no diffusion, perfusion, spectroscopy, or susceptibility-based information was used.",
+  "subject_id": "EGD-0442",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "The grade assessment is driven by multiple high-grade imaging features: a substantial necrotic/non-enhancing component, measurable enhancing tumor, thick enhancing margin, extensive oedema, large total tumor volume, midline shift, ependymal invasion, deep white-matter invasion, and satellites. These strongly favor CNS WHO grade 4 over grade 2 or 3. Features that temper confidence are that enhancement is described as mild, the enhancing proportion is limited, and the lesion is solitary rather than multifocal/multicentric. Despite these caveats, the necrosis plus aggressive mass-effect and invasive features support grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

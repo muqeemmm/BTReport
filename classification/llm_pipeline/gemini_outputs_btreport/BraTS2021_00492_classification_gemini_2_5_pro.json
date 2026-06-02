@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_00492",
+  "idh": {
+    "reasoning": "The patient's age of 57 is more typical for IDH-wildtype gliomas. The imaging features are overwhelmingly suggestive of an IDH-wildtype tumor, specifically a glioblastoma. These include marked, thick-walled contrast enhancement, a large volume of central necrosis, and extensive vasogenic edema. The tumor's large size, significant mass effect with midline shift, deep gray matter involvement (thalamus, basal ganglia), and ependymal invasion are all strong indicators of IDH-wildtype status. There are no features to suggest an IDH-mutant tumor, which typically presents in younger patients and has less aggressive features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. The imaging phenotype is strongly indicative of an astrocytic lineage (non-codeleted) rather than an oligodendroglial one (codeleted). Features supporting an astrocytic tumor include marked and irregular enhancement, a large necrotic core, and extensive infiltrative growth with deep white matter and deep gray matter invasion. Oligodendrogliomas, the archetypal 1p/19q-codeleted tumors, typically exhibit more circumscribed margins, less edema, and rarely show the degree of necrosis and aggressive enhancement seen in this case. The presence of cortical involvement is non-specific. The overall aggressive appearance is highly inconsistent with an oligodendroglioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The radiological findings are definitive for a high-grade glioma, specifically WHO grade 4. The presence of both extensive contrast enhancement (`ET Volume (mL)` > 0) and a significant necrotic core (`NCR Volume (mL)` > 0) are the classic imaging correlates of a grade 4 diffuse glioma (glioblastoma). This is further supported by the tumor's very large size, profound mass effect with an 11mm midline shift, extensive surrounding edema, and evidence of ventricular wall invasion. There are no features to suggest a lower grade; grade 2 tumors are non-enhancing, and grade 3 tumors typically lack the extensive, organized necrosis seen here.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 57-year-old with a large right temporal mass. The imaging findings, including marked ring enhancement, extensive central necrosis, significant mass effect, and deep gray matter invasion, are classic for a Glioblastoma, IDH-wildtype, CNS WHO grade 4. All individual predictions (IDH-wildtype, 1p/19q non-codeleted, and WHO grade 4) are made with high confidence and are internally consistent."
+}

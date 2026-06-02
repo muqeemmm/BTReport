@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the metadata shows a large infiltrative tumor with substantial oedema, deep white matter invasion, measurable necrotic/non-enhancing component, and midline shift, which are imaging features that more often support IDH-wildtype diffuse glioma. Evidence against IDH-wildtype includes cortical involvement, frontal/temporal/insular location, and only mild/minimal enhancement, which can be seen with IDH-mutant glioma. Overall, the mass-effect/oedema/infiltrative and necrotic features outweigh the lower-enhancement and cortical-location features, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.63,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the extensive oedema, deep white matter invasion, necrotic/non-enhancing component, and mass effect are less typical for a classic 1p/19q-codeleted oligodendroglioma and support a non-codeleted diffuse glioma. Evidence that could support codeletion includes cortical involvement and a frontal component of the tumor location, with only mild enhancement. However, because calcification-sensitive imaging is not available and the provided features are mixed, the prediction is only moderately supported; the balance favors non-codeleted status.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without DWI/ADC, perfusion, MR spectroscopy, or susceptibility/calcification assessment. The very small enhancing volume tempers confidence for grade 4, and molecular confirmation remains required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0730",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently, the metadata shows a large lesion with marked oedema, deep white matter invasion, a necrotic/non-enhancing component, and midline shift, all of which favor a high-grade diffuse glioma and make grade 2 unlikely. Between grade 3 and grade 4, the necrotic component and marked mass effect favor grade 4. Features arguing against grade 4 include only mild enhancement, extremely small enhancing volume/proportion, absence of satellites, solitary presentation, and absent ependymal invasion. Despite these contradictions, the necrotic component with large oedema and mass effect makes grade 4 the best estimate.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

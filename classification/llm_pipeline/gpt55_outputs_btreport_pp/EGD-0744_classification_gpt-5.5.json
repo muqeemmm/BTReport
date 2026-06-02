@@ -1,0 +1,65 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH-mutant status, the strongest evidence is a clearly reported T2-FLAIR mismatch with a high mismatch score, which is a classic imaging marker for IDH-mutant diffuse astrocytoma. The young adult age, frontal/insular cortical location, mild enhancement, and extremely small enhancing volume also fit an IDH-mutant glioma more than an IDH-wildtype glioblastoma-like presentation. Evidence that argues toward IDH-wildtype is the reported necrotic proportion and thick enhancing margin, which are more aggressive imaging features. Overall, the T2-FLAIR mismatch and clinical-anatomic pattern outweigh the aggressive but partly discordant enhancement/necrosis metadata, so the conclusion is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the presence of a strong T2-FLAIR mismatch favors a non-codeleted astrocytoma phenotype rather than an oligodendroglioma phenotype. The high mismatch score and degree provide the most specific metadata for this task. Features that argue against non-codeletion are the frontal cortical location, since oligodendrogliomas commonly occur in frontal cortical-subcortical regions. Weighing these, the T2-FLAIR mismatch is the more discriminating feature, so the conclusion is 1p/19q non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "overall_comment": "The molecular predictions are imaging-based estimates and require tissue confirmation. The main uncertainty is grading: the metadata report substantial necrotic/non-enhancing core, but enhancement is mild and very small in absolute volume, making the grade call less secure than the IDH and 1p/19q calls.",
+  "subject_id": "EGD-0744",
+  "who_grade": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the reported high necrotic proportion and measurable non-enhancing/necrotic core are the strongest features supporting grade 4, and a thick enhancing margin also supports a high-grade phenotype. Against grade 4, the enhancement is described as mild, the enhancing volume is extremely small, no enhancing components are counted, the lesion is relatively small, midline shift is minimal, and there is no deep white matter invasion, ependymal invasion, multifocality, or satellites. The aggressive necrosis-related metadata outweigh the lower-grade-appearing limited enhancement and mass effect, but the discordance lowers certainty; therefore the conclusion is CNS WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "rim_core_adjacency"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

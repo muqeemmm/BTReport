@@ -1,0 +1,67 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest metadata for IDH status is the T2-FLAIR mismatch pattern: a present mismatch with a high score is a well-established imaging marker favoring IDH-mutant diffuse astrocytoma over IDH-wildtype glioblastoma. The patient's age is also more typical of IDH-mutant adult-type diffuse glioma than IDH-wildtype glioblastoma. Mild, limited enhancement does not exclude IDH mutation. Against IDH-mutant status, the large edema burden and definite enhancing component with a thick enhancing margin can be seen with more aggressive, often IDH-wildtype tumors. Overall, the T2-FLAIR mismatch and age outweigh the aggressive-appearing edema/enhancement features, so IDH-mutant is favored.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.83,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the T2-FLAIR mismatch pattern is the key discriminator in the provided metadata and strongly favors a non-codeleted astrocytic genotype rather than oligodendroglioma. The high mismatch score supports non-codeletion. Features that could argue toward a codeleted oligodendroglioma include cortical involvement and a temporal cortical location in a middle-aged adult, because oligodendrogliomas can be cortically based. However, the T2-FLAIR mismatch pattern is much more characteristic of non-codeleted astrocytoma than of 1p/19q-codeleted oligodendroglioma, so non-codeleted is favored.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility/calcification assessment. The T2-FLAIR mismatch strongly supports an IDH-mutant, non-codeleted astrocytic tumor, but the substantial edema and mild enhancement make grade assignment uncertain; histology and molecular testing remain required.",
+  "subject_id": "UCSF-PDGM-407",
+  "who_grade": {
+    "confidence": 0.59,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, the imaging shows definite enhancement and extensive edema, which argue against a purely low-grade appearance and support at least an intermediate-grade tumor. The enhancing volume is present but limited and the enhancement is described as mild, while the necrotic proportion is very small and there is no midline shift, ependymal invasion, deep white matter invasion, or satellites; these features argue against a classic grade 4 imaging phenotype. Conversely, the T2-FLAIR mismatch pattern and low enhancing and necrotic proportions could support grade 2. Balancing definite enhancement and marked edema against minimal necrosis and limited invasive/aggressive features, grade 3 is the best MRI-based estimate, but confidence is modest.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

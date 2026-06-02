@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The imaging metadata favors IDH-mutant diffuse glioma because the patient is relatively young for adult diffuse glioma, the tumor involves frontal/insular cortical regions, and enhancement is only mild with a very small enhancing component. These features are commonly associated with IDH-mutant glioma. Evidence against IDH-mutant status includes ependymal invasion, deep white-matter invasion, substantial edema/mass effect, and reported necrotic component, which can be seen with more aggressive IDH-wildtype biology. Overall, the younger age and frontal-insular, largely nonenhancing pattern slightly outweigh the aggressive features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the insular component, deep white-matter invasion, ependymal invasion, and relatively substantial edema/mass effect favor a non-codeleted astrocytic glioma pattern rather than classic oligodendroglioma. Features that argue toward codeletion include frontal cortical involvement, younger age, and minimal enhancement, which are compatible with oligodendroglioma. Because the available metadata lacks calcification/SWI or advanced imaging and the features are mixed, the call is uncertain, but the infiltrative insular/deep and ependymal pattern slightly favors non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)",
+      "midline_shift_present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The largest uncertainty is 1p/19q status because frontal cortical location and minimal enhancement can suggest oligodendroglioma, while insular/deep white-matter and ependymal involvement favor astrocytoma. Molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0439",
+  "who_grade": {
+    "confidence": 0.73,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "CET Crosses midline"
+    ],
+    "prediction": 4,
+    "reasoning": "The grade assessment is driven by aggressive structural features: a large tumor burden, high reported necrotic proportion, substantial edema, midline shift, deep white-matter invasion, and ependymal invasion all favor CNS WHO grade 4 behavior. Against grade 4, enhancement is described as mild, the enhancing volume and enhancing proportion are very small, and the lesion is solitary without satellites or enhancing midline crossing. Despite the limited enhancement, the reported necrotic burden plus mass effect and ventricular/deep invasion make grade 4 the best estimate.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

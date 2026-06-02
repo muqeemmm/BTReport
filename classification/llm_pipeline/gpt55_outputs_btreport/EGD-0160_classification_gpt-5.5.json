@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, the tumor is predominantly frontal/cortical, solitary, and nonenhancing with no enhancing component. These features are more typical of lower-grade IDH-mutant glioma than IDH-wildtype glioblastoma. Against IDH-mutant status, the lesion is relatively large and has reported edema and a high reported necrosis proportion, which can be seen with more aggressive IDH-wildtype tumors; however, the absence of enhancement and young age weigh more strongly toward IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "The metadata modestly favors 1p/19q co-deletion because the tumor is frontal and cortical, nonenhancing, and solitary, a pattern often encountered with oligodendroglioma. Evidence against co-deletion is limited but includes the reported midline epicenter and the presence of edema and high reported necrosis proportion, which are not specific for oligodendroglioma and can be seen in astrocytic or higher-grade tumors. Because key discriminators such as calcification, diffusion, perfusion, and spectroscopy are not available, the evidence is only weakly supportive of co-deletion.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata. The main uncertainty is that nonenhancing frontal cortical tumors in a young adult can represent either oligodendroglioma or astrocytoma, and imaging alone is limited for 1p/19q status and grade. The reported high Proportion Necrosis conflicts with the absence of enhancement and ET Volume of 0.0, so histopathology and molecular testing remain essential.",
+  "subject_id": "EGD-0160",
+  "who_grade": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "prediction": 2,
+    "reasoning": "The metadata favors CNS WHO grade 2 because the lesion is nonenhancing, has no enhancing tumor volume, is solitary, and lacks ependymal invasion, deep white matter invasion, and midline crossing. These findings fit a lower-grade diffuse glioma. Against grade 2, the lesion is moderately large, has edema, and has a high reported necrosis proportion, which could suggest higher grade if it reflects true necrosis. Because enhancement is absent and the available sequences do not include diffusion or perfusion, grade 2 is the best imaging-based estimate but with limited confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

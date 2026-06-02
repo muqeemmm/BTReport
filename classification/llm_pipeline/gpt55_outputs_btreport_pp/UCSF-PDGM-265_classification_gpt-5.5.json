@@ -1,0 +1,87 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the lesion is in a younger adult age range and is a solitary, nonenhancing cortical/insular/frontotemporal lesion without necrosis or enhancing tumor volume, a pattern more typical of lower-grade IDH-mutant glioma than IDH-wildtype glioblastoma. Against IDH-mutant astrocytoma specifically, the T2-FLAIR mismatch marker is not present, and deep white-matter invasion with a midline epicenter is less specific and can be seen in more aggressive or infiltrative tumors. However, the absence of enhancement, necrosis, ependymal invasion, multifocality, and midline crossing weighs against classic IDH-wildtype glioblastoma imaging behavior. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.59,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the nonenhancing cortical-subcortical lesion involving frontal and temporal regions in a middle-aged adult provides some support for a codeleted oligodendroglioma phenotype. The absence of T2-FLAIR mismatch also does not support the classic IDH-mutant astrocytoma imaging signature, indirectly making codeletion plausible. Arguing against codeletion, the prominent insular involvement, deep white-matter invasion, and midline epicenter are not classic for a purely frontal oligodendroglioma pattern, and key discriminators such as calcification are not available. Because the available MRI metadata is suggestive but not definitive, the best estimate is 1p/19q-codeleted with limited confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location",
+      "Multifocal or Multicentric",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional MRI metadata. The main uncertainty is 1p/19q status because calcification-sensitive imaging, diffusion, perfusion, spectroscopy, and histomolecular data are unavailable. The lesion is entirely nonenhancing by the provided segmentation, so molecular testing remains essential before definitive WHO-CNS5 classification.",
+  "subject_id": "UCSF-PDGM-265",
+  "who_grade": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "p95_shift_mm"
+    ],
+    "prediction": 2,
+    "reasoning": "The grade assessment favors CNS WHO grade 2 because the lesion is nonenhancing, has no enhancing tumor volume, no necrotic component, and is solitary without ependymal invasion, midline crossing, or substantial mass-effect markers. These features argue against grade 4, which on MRI is commonly suggested by enhancement and/or necrosis, and they also make grade 3 less likely than grade 2. Arguing against a purely indolent grade 2 lesion are moderate whole-tumor volume, deep white-matter invasion, and measurable but limited shift, which could be seen with more infiltrative disease. Still, the absence of enhancement and necrosis is the dominant imaging evidence, so grade 2 is the best estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

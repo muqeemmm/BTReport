@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_00612",
+  "idh": {
+    "reasoning": "The tumor displays multiple aggressive features highly characteristic of an IDH-wildtype glioma. Key indicators include its multifocal nature ('Multifocal or Multicentric': \"Multifocal\", 'Number of lesions': 3), the presence of significant necrosis ('NCR Volume (mL)': 6.003), and extensive contrast enhancement ('ET Volume (mL)': 22.2). Furthermore, the deeply infiltrative pattern, involving critical structures like the thalamus, basal ganglia, and brainstem ('Anatomical Overlap Regions'), along with midline crossing ('CET Crosses midline': \"True\") and ependymal invasion ('Ependymal (ventricular) Invasion': \"Present\"), strongly argues against an IDH-mutant phenotype, which typically presents as a more localized, non-necrotic lesion. The only weakly contradicting feature is the qualitative description of 'Enhancement Quality' as \"Mild\", but this is overshadowed by the quantitative evidence of necrosis and large enhancing volume.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas are typically single, cortically-based tumors and rarely exhibit the aggressive features seen here. This tumor is 'Multifocal', contains significant necrosis ('NCR Volume (mL)': 6.003), and shows extensive deep infiltration into the thalamus, basal ganglia, and brainstem ('Anatomical Overlap Regions'). These features\u2014multifocality, necrosis, and deep invasion\u2014are hallmarks of astrocytic lineage tumors, which are 1p/19q non-codeleted. There are no features in the provided metadata to suggest a co-deleted status.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Anatomical Overlap Regions",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of both contrast enhancement and necrosis are the defining radiological features of a CNS WHO grade 4 glioma. The metadata provides clear evidence for both. There is a substantial volume of enhancing tissue ('ET Volume (mL)': 22.2) and a definitive necrotic component ('NCR Volume (mL)': 6.003, 'Proportion Necrosis': 4.01). Additional features supporting a grade 4 assessment include the tumor's multifocality, extensive vasogenic edema ('ED Volume (mL)': 121.534), significant mass effect ('max_shift_mm': -13.0), and invasion of deep white matter and ependyma. There is no imaging evidence to support a lower grade; grade 2 tumors are non-enhancing, and grade 3 tumors typically lack the extensive necrosis seen here.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a large, multifocal, and deeply infiltrative tumor with extensive involvement of bilateral deep gray matter structures and the brainstem. The presence of significant contrast enhancement, central necrosis, and profound mass effect are classic radiological hallmarks of a high-grade glioma. The combination of these features is highly specific for a Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0377",
+  "idh": {
+    "reasoning": "The patient's young age (39 years) is a strong demographic predictor for IDH-mutant status. The imaging phenotype provides compelling corroborating evidence. The tumor is predominantly non-enhancing and edematous/infiltrative, with a very high proportion of edema (95.88%) and a very low proportion of enhancement (3.06%) and necrosis (1.06%). This T2-FLAIR mismatch appearance is a classic radiological sign of IDH-mutant gliomas, particularly astrocytomas. The lack of aggressive features such as significant mass effect ('midline_shift_present': 'No') and deep white matter invasion further supports a less aggressive biology typical of IDH-mutant tumors over IDH-wildtype glioblastoma.",
+    "supporting_features": [
+      "age_years",
+      "Proportion of Oedema",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the key distinction is between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). The imaging features favor an astrocytoma. The very high proportion of edema/T2-FLAIR signal (95.88%) creating a 'T2-FLAIR mismatch' with the small enhancing component is highly characteristic of IDH-mutant astrocytomas. Oligodendrogliomas typically have less surrounding edema and more well-defined margins. While cortical involvement is common in oligodendrogliomas, the overwhelming evidence from the tumor's composition points towards an astrocytic lineage.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade in IDH-mutant astrocytomas under CNS5 criteria is driven by specific features. The presence of any contrast enhancement typically suggests at least grade 3. Critically, the presence of necrosis is a defining feature of grade 4. The metadata indicates a non-zero volume of necrosis ('NCR Volume (mL)': 0.117). Despite the fact that the volume of necrosis is minimal and other features like the absence of deep white matter invasion or significant mass effect suggest a less aggressive tumor, the WHO classification is strict on this point. Therefore, the presence of necrosis, however small, mandates a grade 4 classification.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 39-year-old with a right parietal glioma. The combination of young age and a predominantly non-enhancing, T2/FLAIR-hyperintense lesion is highly characteristic of an IDH-mutant astrocytoma. Although the tumor lacks significant mass effect and other aggressive features, the reported presence of a small necrotic component, per WHO CNS5 criteria, elevates the predicted grade to 4. The final integrated diagnosis based on imaging is Astrocytoma, IDH-mutant, CNS WHO grade 4."
+}

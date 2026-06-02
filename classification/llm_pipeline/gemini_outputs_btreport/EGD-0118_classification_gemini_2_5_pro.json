@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0118",
+  "idh": {
+    "reasoning": "The patient's age of 50 years is more typical for IDH-wildtype gliomas. The presence of a significant non-enhancing/necrotic component (17.5% of the tumor volume) and extensive surrounding edema are strong radiological indicators of an IDH-wildtype tumor, which is often more aggressive. While the minimal enhancement (1% of volume) could be seen in IDH-mutant tumors, the combination of age and necrosis heavily favors an IDH-wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of a large necrotic core is a very strong feature against 1p/19q co-deletion. Oligodendrogliomas, which are defined by IDH mutation and 1p/19q co-deletion, rarely exhibit necrosis. The imaging phenotype, including deep white matter invasion and extensive edema, is much more characteristic of an astrocytic lineage tumor (which are non-codeleted). Cortical involvement is common in oligodendrogliomas but is non-specific and does not outweigh the strong evidence against co-deletion.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The most compelling evidence for a high-grade tumor is the presence of a significant necrotic component, which constitutes 17.5% of the total tumor volume. On imaging, a non-enhancing core with surrounding enhancement (even if mild) is the radiological correlate of necrosis, a hallmark feature of WHO Grade 4 gliomas. The patient's age (50), the large total tumor volume (82.9 mL), and extensive edema further support a high-grade designation. The minimal amount of enhancement is atypical but does not preclude a Grade 4 diagnosis when definitive evidence of necrosis is present.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "age_years",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings for this 50-year-old patient are highly suggestive of a Glioblastoma, IDH-wildtype. The key features are the large tumor size, extensive edema, and most importantly, a significant non-enhancing/necrotic core. These features strongly point to a WHO Grade 4 tumor. The minimal enhancement is a slightly unusual feature but does not contradict the diagnosis in the presence of clear necrosis. The predictions for IDH-wildtype, 1p/19q non-codeletion, and WHO Grade 4 are all consistent with this integrated diagnosis."
+}

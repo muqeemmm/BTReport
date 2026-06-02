@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0183",
+  "idh": {
+    "reasoning": "The patient's age of 44 is in an overlapping range but slightly favors IDH-mutant status. The imaging features of 'Mild' `Enhancement Quality` and a low `Proportion Enhancing` (6.01%) are strong indicators for an IDH-mutant tumor. However, there are contradicting features, namely the presence of necrosis (`Proportion Necrosis` of 4.93%) and `Deep WM invasion`, which are more typically associated with IDH-wildtype gliomas. Weighing these, the subtle enhancement pattern is often a more specific marker for IDH-mutant status than the presence of a small necrotic component, leading to a prediction of mutant, albeit with moderate confidence due to the conflicting evidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made assuming an IDH-mutant context. The tumor shows significant cortical involvement (`Region Proportions`), a feature often seen in oligodendrogliomas (codeleted). However, two features strongly argue against a codeletion. First, the presence of `Deep WM invasion` suggests an infiltrative growth pattern characteristic of astrocytomas (non-codeleted). Second, and more definitively, the presence of necrosis (`Proportion Necrosis` > 0) is a very strong indicator against an oligodendroglioma diagnosis, as necrosis is rare in this subtype. The evidence for a non-codeleted astrocytoma is therefore compelling.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The tumor displays clear high-grade features. The presence of contrast enhancement (`Enhancement Quality` is 'Mild', `ET Volume (mL)` is 2.613) rules out a typical grade 2 glioma. The most critical finding is the presence of necrosis, evidenced by a non-zero `NCR Volume (mL)` and `Proportion Necrosis` of 4.93%. The presence of necrosis on imaging is a strong correlate for the histopathological features that define a CNS WHO grade 4 tumor, regardless of whether the tumor is IDH-mutant (Astrocytoma, grade 4) or IDH-wildtype (Glioblastoma, grade 4). While the mass effect is 'Minimal', the objective evidence of necrosis strongly supports a grade 4 prediction.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are most consistent with a high-grade astrocytoma. The presence of necrosis is the strongest feature, driving the WHO grade 4 prediction. The combination of deep white matter invasion and necrosis strongly argues against a 1p/19q codeletion. The IDH status is the most uncertain prediction due to conflicting features (mild enhancement vs. necrosis), but the balance of evidence slightly favors an IDH-mutant status. The integrated diagnosis is Astrocytoma, IDH-mutant, CNS WHO grade 4."
+}

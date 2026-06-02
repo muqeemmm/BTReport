@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata contains several imaging features that favor an IDH-wildtype-type aggressive diffuse glioma phenotype: a large non-enhancing/necrotic component, extensive oedema, ventricular/ependymal involvement, deep white matter invasion, satellite lesions, and substantial mass effect/midline shift. These are supported by the large total tumor burden and reported necrosis/oedema proportions. Evidence arguing against IDH-wildtype is the young age, cortical involvement, temporal-cortical location, and only mild/small-volume enhancement, which can be seen with IDH-mutant diffuse glioma. On balance, the aggressive infiltrative and necrotic pattern slightly outweighs the age/location counterevidence, so the best estimate is IDH-wildtype, but confidence is limited by conflicting features.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest support is for a non-codeleted tumor because the lesion is predominantly temporal/parietal rather than a classic frontal cortical-subcortical oligodendroglioma pattern, and it shows deep white matter invasion, ependymal involvement, satellite lesions, extensive oedema, and a large necrotic/non-enhancing component. These features are more typical of astrocytic or glioblastoma biology than oligodendroglioma. Features that could support codeletion are the young age, cortical involvement, and mild enhancement, but these are nonspecific and do not overcome the aggressive non-frontal infiltrative pattern. Therefore the best estimate is non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histopathology. The main uncertainty is that the patient is young and the tumor has cortical temporal involvement with mild enhancement, which can be seen in IDH-mutant glioma; however, the necrotic, oedematous, deeply invasive, ependymal, and satellite-lesion pattern favors an aggressive IDH-wildtype, non-codeleted grade 4 diagnosis.",
+  "subject_id": "BraTS2021_01528",
+  "who_grade": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "Grade assessment considered independently strongly favors CNS WHO grade 4 based on the large necrotic/non-enhancing component, extensive oedema, satellite lesions, ependymal invasion, deep white matter invasion, and marked mass effect with midline shift and ventricular effacement. The total tumor volume and lesion size also support a high-grade process. The main counterevidence is that enhancement is described as mild and the enhancing proportion is small, which could be seen in lower-grade or grade 3 tumors, but the necrosis and aggressive spread pattern are much more supportive of grade 4. Therefore the imaging-based grade estimate is CNS WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Effaced Ventricle",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

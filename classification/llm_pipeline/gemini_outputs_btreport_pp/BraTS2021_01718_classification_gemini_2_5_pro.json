@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_01718",
+  "idh": {
+    "reasoning": "The patient's young age (37 years) and the tumor's location predominantly in the frontal lobe are classic features of an IDH-mutant glioma. Furthermore, the tumor is overwhelmingly non-enhancing, with a minuscule enhancing volume (0.021 mL) and a very low proportion of enhancement (0.02), which strongly favors an IDH-mutant status. The primary contradicting feature is the very high proportion of necrosis (52.6%), which is a hallmark of IDH-wildtype glioblastoma. However, extensive necrosis can also be seen in high-grade IDH-mutant astrocytomas (WHO grade 4). Given that IDH-wildtype tumors with this much necrosis typically show avid, thick ring enhancement, the near-complete lack of enhancement in this case makes an IDH-mutant prediction more likely, despite the necrosis.",
+    "supporting_features": [
+      "age_years",
+      "Region Proportions",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed assuming an IDH-mutant tumor. The most compelling evidence is the very sharp tumor border, indicated by the extremely thin median FLAIR transition zone of 0.81 mm. Sharply demarcated margins are characteristic of astrocytomas (non-codeleted), whereas oligodendrogliomas (codeleted) typically have more ill-defined, infiltrative borders. The absence of a T2-FLAIR mismatch is a weak counterargument, as this feature is specific but not perfectly sensitive for astrocytomas. The frontal lobe location is common in both subtypes and is therefore non-discriminatory. The weight of the evidence, particularly the sharp border, strongly favors a non-codeleted status.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "boundary_sharpness"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The single most decisive feature for grading is the presence of extensive necrosis. The metadata reports a 'Proportion Necrosis' of 52.6%, indicating a large necrotic core. In the WHO CNS5 classification for adult-type diffuse gliomas, the presence of necrosis is a sufficient criterion for a WHO grade 4 designation, irrespective of other features like enhancement. Although the enhancement is minimal ('Mild', 0.021 mL), this does not preclude a grade 4 diagnosis when extensive necrosis is present. The large tumor volume also supports a high-grade classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents with conflicting features: classic signs of an IDH-mutant astrocytoma (young age, frontal location, minimal enhancement, sharp borders) are combined with extensive necrosis, a feature of high-grade malignancy. The final diagnosis integrates these findings, pointing to a high-grade (WHO grade 4) transformation within an IDH-mutant astrocytoma. The sharp border strongly argues against an oligodendroglioma."
+}

@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0109",
+  "idh": {
+    "reasoning": "The patient's advanced age (68 years) is a very strong predictor for IDH-wildtype status. The imaging features of a multifocal, markedly enhancing tumor with a significant necrotic core are all classic hallmarks of glioblastoma, IDH-wildtype. However, there is a powerful contradictory feature: a very strong T2-FLAIR mismatch sign, which is highly specific for IDH-mutant astrocytomas. Weighing these, the combination of multiple aggressive features (age, multifocality, necrosis) is considered more likely than the single, albeit specific, mismatch sign, which could represent an atypical presentation or a false positive. Therefore, IDH-wildtype is the more probable diagnosis, but confidence is reduced by the conflicting evidence.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor exhibits features strongly suggestive of an astrocytic lineage rather than an oligodendroglial one. The presence of marked enhancement and a necrotic core are highly uncharacteristic of 1p/19q-codeleted oligodendrogliomas. Furthermore, the prominent T2-FLAIR mismatch sign, while creating ambiguity for IDH status, is specifically associated with IDH-mutant *astrocytomas*, which are by definition 1p/19q non-codeleted. The only feature weakly suggesting codeletion is the relatively sharp tumor margin (thin transition zone), but this is insufficient to overcome the substantial evidence for a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of a significant necrotic component (`NCR Volume (mL)` of 6.971) is a key imaging correlate of WHO Grade 4. This finding, in combination with other features of high-grade malignancy such as marked, thick enhancement (`Enhancement Quality`, `Thickness of enhancing margin`), multifocality (`Multifocal or Multicentric`), and large tumor volume, provides overwhelming evidence for a Grade 4 tumor. The T2-FLAIR mismatch sign is more typical of lower-grade gliomas but does not preclude a Grade 4 diagnosis, especially in the presence of definitive necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "ET Volume (mL)",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 68-year-old male with a large, multifocal, necrotic, and markedly enhancing tumor, features highly characteristic of Glioblastoma, IDH-wildtype (WHO Grade 4). The prediction of IDH-wildtype status is made with moderate confidence due to a strong, conflicting T2-FLAIR mismatch sign, a feature typically seen in IDH-mutant astrocytomas. However, the combination of advanced age and multiple aggressive imaging findings makes an IDH-wildtype diagnosis more probable. The presence of necrosis provides very high confidence for a WHO Grade 4 assignment."
+}

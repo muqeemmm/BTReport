@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_01749",
+  "idh": {
+    "reasoning": "This case presents strongly conflicting features. The presence of a T2-FLAIR mismatch is a powerful indicator for IDH-mutant status. However, this is contradicted by multiple, very strong features suggesting an IDH-wildtype tumor: extensive central necrosis (35.68% of the tumor core), a relatively sharp tumor-edema boundary (median transition zone of 0.75mm), and deep anatomical involvement including the thalamus and brainstem. Extensive necrosis is a hallmark of glioblastoma, IDH-wildtype. While the T2-FLAIR mismatch is a significant counter-argument, the combination of extensive necrosis, sharp borders, and deep location weighs more heavily in favor of an IDH-wildtype glioma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Transition Zone Thickness (FLAIR)",
+      "Anatomical Overlap Regions",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q status is performed independently. The presence of a T2-FLAIR mismatch is highly specific for IDH-mutant astrocytomas (non-codeleted) and is considered absent in oligodendrogliomas (codeleted). Furthermore, the tumor's deep infiltration into the thalamus, basal ganglia, and brainstem is characteristic of astrocytic lineage tumors, not oligodendrogliomas, which are typically cortically based. While the tumor has a relatively sharp border, which can be seen in oligodendrogliomas, the T2-FLAIR mismatch and deep location are much stronger discriminators. Therefore, the imaging phenotype is highly inconsistent with a 1p/19q co-deleted tumor.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The evidence for a high-grade tumor is overwhelming. The most definitive feature is the large proportion of the tumor core that is necrotic ('Proportion Necrosis' is 35.68%; 'NCR Volume (mL)' is 89.03). The presence of extensive necrosis on imaging is a key criterion for CNS WHO Grade 4. This is strongly corroborated by other features of aggressive biology, including the presence of contrast enhancement ('ET Volume (mL)' > 0), significant mass effect ('max_shift_mm' of 12.0), the presence of satellite lesions ('Multiple satellites present'), and ependymal invasion. There is minimal evidence to suggest a lower grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "max_shift_mm",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a large, aggressive-appearing left-sided tumor with extensive necrosis, significant mass effect, and deep infiltration, highly suggestive of a glioblastoma, IDH-wildtype, CNS WHO grade 4. A key conflicting feature is the presence of a T2-FLAIR mismatch, typically associated with IDH-mutant astrocytoma. However, the overwhelming evidence of high-grade malignancy, particularly the extensive necrosis, makes an IDH-wildtype diagnosis more likely. The features are inconsistent with an oligodendroglioma."
+}

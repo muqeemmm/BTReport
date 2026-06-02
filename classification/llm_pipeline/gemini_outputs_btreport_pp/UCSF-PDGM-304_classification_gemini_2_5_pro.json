@@ -1,0 +1,49 @@
+{
+  "subject_id": "UCSF-PDGM-304",
+  "idh": {
+    "reasoning": "The patient's age of 52 is more typical for IDH-wildtype gliomas. The imaging features strongly support this prediction. The tumor exhibits a sharp boundary (boundary_sharpness: 1.702) and a thin FLAIR transition zone (median_mm: 0.75), which are characteristic of less infiltrative margins often seen in IDH-wildtype tumors like glioblastoma. Furthermore, the definitive absence of the T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 0.0) is a powerful negative predictor for IDH-mutant astrocytoma. While the tumor is small with only mild enhancement, these features are outweighed by the strong evidence from the tumor margin characteristics and the T2-FLAIR mismatch status.",
+    "supporting_features": [
+      "age_years",
+      "boundary_sharpness",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This determination is performed independently of the IDH status prediction. The imaging features are not classic for an oligodendroglioma (which are IDH-mutant and 1p/19q-codeleted). Oligodendrogliomas typically have better-defined but infiltrative borders, whereas this tumor has a quantitatively sharp boundary (boundary_sharpness: 1.702), which is more suggestive of an astrocytic lineage tumor or glioblastoma. While cortical involvement is present, which can be a feature of oligodendroglioma, it is not specific. In the absence of classic features for codeletion, and with the presence of a sharp boundary, a non-codeleted status is more likely.",
+    "supporting_features": [
+      "boundary_sharpness",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The presence of contrast enhancement (Enhancement Quality: 'Mild', ET Volume (mL): 0.613) and a small focus of necrosis (NCR Volume (mL): 0.025) are key indicators of high-grade glioma. According to WHO CNS5 criteria for adult-type diffuse gliomas, the presence of contrast enhancement and/or necrosis in an IDH-wildtype tumor is sufficient to classify it as Glioblastoma, CNS WHO grade 4. The patient's age of 52 also increases the a priori probability of a high-grade glioma. The small total tumor volume and lack of significant mass effect are noted but do not override the histopathological features of high-grade malignancy suggested by enhancement and necrosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 52-year-old with a small, solitary tumor in the parietal and temporal lobes. The imaging findings, including mild contrast enhancement, a small necrotic component, sharp tumor borders, and the absence of a T2-FLAIR mismatch sign, are highly suggestive of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The small size and minimal mass effect are somewhat atypical but do not preclude this diagnosis. The 1p/19q status is predicted as non-codeleted with lower confidence, which is consistent with the overall predicted diagnosis."
+}

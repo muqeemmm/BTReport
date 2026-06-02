@@ -1,0 +1,55 @@
+{
+  "subject_id": "UCSF-PDGM-460",
+  "idh": {
+    "reasoning": "The tumor displays features highly characteristic of an IDH-wildtype glioma, specifically glioblastoma. The most compelling evidence is its location and infiltrative pattern: a large, midline-epicentered mass with extensive, bilateral involvement of deep gray matter structures (thalamus, caudate) and ventricles, creating a 'butterfly' appearance. This is strongly associated with IDH-wildtype status. Furthermore, the significant mass effect, including an 11mm midline shift and ventricular effacement, indicates aggressive biological behavior typical of IDH-wildtype tumors. Contradicting this is the enhancement pattern; the tumor is overwhelmingly non-enhancing (1.5% of volume) and lacks significant necrosis, features more commonly seen in IDH-mutant gliomas. However, the aggressive location and infiltrative nature are considered stronger predictors, outweighing the less aggressive enhancement characteristics.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Side of Tumor Epicenter",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly indicative of a non-codeleted status. The tumor's location is a key differentiator; it is centered in the deep midline structures and shows extensive bilateral infiltration of the deep gray matter and white matter tracts. This is a classic pattern for astrocytomas (which are non-codeleted) and highly atypical for oligodendrogliomas (which are codeleted), as the latter are typically cortically-based with better-defined margins. The massive vasogenic edema and deep white matter invasion further support an astrocytic lineage. There are no imaging features in the provided metadata that would suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of multiple aggressive imaging features strongly supports a WHO grade 4 classification. Although enhancement is described as 'Mild' and comprises a very small portion of the tumor volume, its mere presence in a diffuse astrocytic glioma is a high-grade feature. More importantly, the tumor exhibits profound biological aggression, evidenced by extensive infiltration crossing the midline, significant mass effect with an 11mm shift, and clear ependymal invasion. These features are hallmarks of a high-grade glioma. The near-absence of necrosis on imaging is a counterargument, as necrosis is a defining feature of grade 4 histologically. However, the combination of enhancement with a highly infiltrative and destructive growth pattern is sufficient to predict the highest grade. In an IDH-wildtype astrocytic glioma, the presence of contrast enhancement automatically confers a WHO grade 4 diagnosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are classic for a high-grade, midline-crossing glioma ('butterfly glioma'), most consistent with a Glioblastoma, IDH-wildtype. Key features are the extensive bilateral deep gray matter infiltration, significant mass effect, and ependymal invasion. While enhancement is mild and necrosis is not apparent, the aggressive infiltrative pattern is the dominant feature, strongly suggesting a WHO grade 4 tumor. The location and morphology are incompatible with an oligodendroglioma."
+}

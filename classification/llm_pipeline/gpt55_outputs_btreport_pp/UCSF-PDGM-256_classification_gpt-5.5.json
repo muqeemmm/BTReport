@@ -1,0 +1,78 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The MRI pattern favors IDH-mutant diffuse glioma: the patient is young, the lesion is cortical/temporal, solitary, nonenhancing, without necrosis, without ependymal invasion, without deep white-matter invasion, and with only minimal midline shift despite a moderate whole-tumor volume. These features are more typical of a lower-grade adult diffuse glioma with IDH mutation than of an IDH-wildtype glioblastoma-like tumor. Evidence against IDH mutation is limited but includes absence of a definite T2-FLAIR mismatch sign and the metadata labeling the epicenter as midline, which is less classic for an IDH-mutant hemispheric diffuse glioma. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the metadata provide only limited discriminatory information. The temporal-cortical location and nonenhancing appearance can be seen in astrocytic diffuse glioma and do not provide the classic strong imaging support for oligodendroglioma. The absence of deep white-matter invasion also fits a more localized lower-grade diffuse glioma but is not specific. Features that could argue toward codeletion include cortical involvement and lack of a definite T2-FLAIR mismatch sign, because a present mismatch would more strongly support non-codeleted astrocytoma. However, without calcification-sensitive imaging or other oligodendroglioma-specific markers, the balance slightly favors non-codeleted status with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without diffusion, perfusion, spectroscopy, SWI/GRE, or histomolecular data. The strongest imaging signal is for a nonenhancing lower-grade diffuse glioma in a young adult. 1p/19q status is the least certain because key oligodendroglioma clues such as calcification and detailed internal heterogeneity are not assessable from the provided sequences/metadata.",
+  "subject_id": "UCSF-PDGM-256",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The grade assessment independently favors CNS WHO grade 2 by MRI phenotype: there is no enhancement, no measurable enhancing tumor volume, no necrosis, no nonenhancing core volume, no ependymal invasion, no deep white-matter invasion, no satellites, solitary disease, and only minimal midline shift. These features argue against grade 3 or 4 imaging behavior. The main caution is the moderate lesion volume, which can be seen in higher-grade tumors but is not sufficient without enhancement, necrosis, or more aggressive spread features. Overall, the imaging metadata most strongly support grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Tumor Core Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

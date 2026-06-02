@@ -1,0 +1,47 @@
+{
+  "subject_id": "BraTS2021_00390",
+  "idh": {
+    "reasoning": "The patient's advanced age of 73 is the strongest predictor for IDH-wildtype status. Supporting radiological features include the presence of contrast enhancement, a thick enhancing margin (>3mm), and a sharp tumor-to-edema transition zone (median FLAIR transition zone thickness of 0.75 mm). The absence of the T2-FLAIR mismatch sign also argues against an IDH-mutant astrocytoma. The very small volume of enhancement and necrosis are weak counter-arguments but do not outweigh the combination of age and other imaging features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. The tumor exhibits a very sharp boundary (median FLAIR transition zone thickness of 0.75 mm), which is atypical for oligodendrogliomas (the only entity with 1p/19q co-deletion), which more commonly have indistinct margins. The temporal lobe location is also less classic for oligodendroglioma, which has a frontal lobe predilection. The presence of cortical involvement is a feature that can be seen in oligodendroglioma, but it is not specific. Overall, the features are more consistent with a non-codeleted glioma.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is based on histological features mirrored in imaging. The metadata explicitly reports the presence of both contrast enhancement ('Enhancement Quality': 'Mild', 'ET Volume (mL)': 0.442) and necrosis ('NCR Volume (mL)': 0.084). The presence of necrosis is a defining criterion for WHO grade 4. The patient's advanced age (73) also strongly correlates with high-grade gliomas. While the volumes of enhancement and necrosis are small, their presence is sufficient for a grade 4 designation.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "age_years",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 73-year-old male with a solitary temporal lobe tumor. The combination of advanced age, presence of both enhancement and necrosis (even if minimal), and sharp tumor margins are all classic features of a glioblastoma. The independent predictions of IDH-wildtype, 1p/19q non-codeleted, and WHO grade 4 are highly consistent and converge on the integrated diagnosis of Glioblastoma, IDH-wildtype, WHO grade 4 with high confidence."
+}

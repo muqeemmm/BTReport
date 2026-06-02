@@ -1,0 +1,78 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "IDH-wildtype is favored by older age in age_years, extensive infiltrative tumor burden in Total tumor volume (mL) and Whole Tumor Volume (mL), large edema in ED Volume (mL) and Proportion of Oedema, necrotic/nonenhancing component in NCR Volume (mL) and Proportion Necrosis, and aggressive spread markers in Deep WM invasion and Ependymal (ventricular) Invasion. T2-FLAIR Mismatch Present is absent, which does not support the classic IDH-mutant astrocytoma pattern. Evidence arguing for IDH-mutant includes frontal cortical location in Tumor Location, Region Proportions, and Cortical involvement, plus only mild/small enhancement in Enhancement Quality and ET Volume (mL). Overall, the age and aggressive infiltrative/necrotic phenotype outweigh the frontal cortical and mild-enhancement features, favoring IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Non-codeleted status is favored by age_years of 67, extensive edema in ED Volume (mL) and Proportion of Oedema, substantial necrotic/nonenhancing component in NCR Volume (mL) and Proportion Necrosis, and aggressive invasion in Deep WM invasion and Ependymal (ventricular) Invasion. These features are less typical for a classic lower-grade oligodendroglioma phenotype. Evidence supporting possible codeletion includes frontal cortical location in Tumor Location, Region Proportions, and Cortical involvement, and mild/small enhancement in Enhancement Quality and ET Volume (mL). Because frontal cortical tumors can be oligodendroglial but the available metadata lacks calcification assessment and shows aggressive edema/invasion/necrotic burden, non-codeleted is favored with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/GRE. Calcification status and molecular testing are not available. The tiny enhancing volume and mild enhancement are atypical for some glioblastomas, but the older age, large necrotic/nonenhancing burden, extensive edema, deep white-matter invasion, and ependymal invasion support an aggressive IDH-wildtype, non-codeleted, grade 4 integrated impression.",
+  "subject_id": "BraTS2021_01744",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "CNS WHO grade 4 is favored by a substantial necrotic/nonenhancing component in NCR Volume (mL), Proportion Necrosis, Tumor Core Volume (mL), and volumes_ideal_midline, together with extensive edema in ED Volume (mL) and Proportion of Oedema. Large tumor size in Lesion Sizes APxTVxCC (cm) and Total tumor volume (mL), plus Deep WM invasion and Ependymal (ventricular) Invasion, further support high-grade biology. Features arguing against grade 4 include only mild enhancement in Enhancement Quality, very small ET Volume (mL), no midline shift in midline_shift_present, absence of satellites in Multiple satellites present, and a solitary lesion in Multifocal or Multicentric. Despite limited enhancement and lack of shift, the necrotic burden, edema, large size, and invasive pattern favor grade 4 over grades 2 or 3.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "volumes_ideal_midline",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

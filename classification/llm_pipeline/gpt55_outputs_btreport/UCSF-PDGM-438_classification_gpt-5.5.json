@@ -1,0 +1,85 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The imaging pattern favors an IDH-mutant diffuse glioma: the patient is relatively young, the lesion is nonenhancing with no enhancing or necrotic component, and it involves frontal/cortical/insular regions, which is a common distribution for lower-grade IDH-mutant glioma. Features that would more strongly support IDH-wildtype glioblastoma, such as measurable enhancement, necrosis, deep white-matter invasion, ependymal invasion, or marked mass effect, are not present in the provided metadata. Against IDH-mutant status, the tumor epicenter is labeled midline and the abnormality is entirely categorized as oedema/FLAIR abnormality, which makes the structural tumor characterization less specific. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Side of Tumor Epicenter",
+      "Proportion of Oedema"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "The metadata provides modest support for 1p/19q co-deletion: frontal-lobe and cortical involvement in a relatively young adult, with a nonenhancing solitary lesion, is a pattern often seen with oligodendroglioma. However, this is not specific, because non-codeleted astrocytoma can also be frontal, cortical/insular, and nonenhancing in this age group. The insular component, midline epicenter label, and the fact that the lesion is represented entirely as oedema/FLAIR abnormality reduce specificity. Without calcification-sensitive imaging, perfusion, spectroscopy, or histology, the evidence is limited. On balance, codeletion is slightly favored but with only modest confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histopathology. The nonenhancing frontal-cortical pattern in a young adult supports an IDH-mutant lower-grade glioma, but 1p/19q status is inherently uncertain from these metadata alone.",
+  "subject_id": "UCSF-PDGM-438",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Cortical involvement",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "reasoning": "The grade assessment from MRI favors CNS WHO grade 2. The lesion is nonenhancing, with no enhancing tumor volume and no necrotic component, and lacks several aggressive imaging features such as deep white-matter invasion, ependymal invasion, multifocality, satellites, midline crossing, ventricular asymmetry, or clear midline shift. These findings argue against grade 4 and make grade 3 less likely on imaging. Features that modestly temper confidence are the measurable FLAIR/oedema burden, cortical involvement, and eloquent-region involvement, but these do not by themselves establish high grade in the absence of enhancement, necrosis, or invasive aggressive features. Overall, the MRI metadata most strongly supports grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "Asymmetrical Ventricles",
+      "midline_shift_present",
+      "Total tumor volume (mL)",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,60 @@
+{
+  "subject_id": "UCSF-PDGM-469",
+  "idh": {
+    "reasoning": "The patient's age of 43 falls within the typical range for IDH-mutant gliomas. The most compelling evidence is the complete absence of contrast enhancement and necrosis (`Enhancement Quality`: \"None\", `ET Volume (mL)`: 0.0, `NCR Volume (mL)`: 0.0), which are classic radiological features of IDH-mutant tumors. While the tumor's large size, midline crossing (`Edema crosses midline`: \"True\"), and deep gray matter involvement (`Anatomical Overlap Regions`) can be seen in IDH-wildtype gliomas, these features are not exclusive and can also occur in large, infiltrative IDH-mutant astrocytomas. The combination of age and non-enhancement strongly favors an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly suggestive of an astrocytoma (1p/19q non-codeleted). The tumor demonstrates extensive infiltration, indicated by deep white matter invasion (`Deep WM invasion`: \"Present\"), ependymal invasion (`Ependymal (ventricular) Invasion`: \"Present\"), and involvement of bilateral deep gray nuclei (`Anatomical Overlap Regions`). The tumor margins are indistinct, with the entire large lesion volume (184.86 mL) composed of T2/FLAIR hyperintense signal (`Proportion of Oedema`: 100.0), a feature more typical of astrocytomas than the more well-defined borders of oligodendrogliomas. While the frontal lobe location is common for oligodendrogliomas, the overwhelmingly infiltrative characteristics strongly favor a non-codeleted status.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "Edema crosses midline",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "This case presents conflicting evidence for grading. The complete absence of contrast enhancement (`Enhancement Quality`: \"None\") and necrosis (`NCR Volume (mL)`: 0.0) are strong arguments against a radiologically high-grade tumor (i.e., glioblastoma). However, the tumor's biological aggressiveness is evident from its massive size (`Total tumor volume (mL)`: 184.86), significant mass effect (`midline_shift_present`: \"Yes\", `max_shift_mm`: -8.0), and extensive infiltration of deep white matter, deep gray nuclei, and ependymal surfaces. In the WHO CNS5 classification, an IDH-mutant astrocytoma can be designated grade 4 based on molecular features (CDKN2A/B homozygous deletion) even without enhancement or necrosis. Given the profoundly aggressive imaging features of size and infiltration, a high grade is very likely. Balancing the lack of enhancement against the aggressive morphology, a grade 4 prediction is made, acknowledging that grade 3 is also a possibility.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a very large, non-enhancing, infiltrative glioma with significant mass effect. The age and lack of enhancement strongly suggest an IDH-mutant glioma. The highly infiltrative pattern involving deep gray matter and ependymal surfaces is characteristic of an astrocytoma (1p/19q non-codeleted). Despite the absence of enhancement or necrosis, the massive tumor burden and extensive invasion are hallmarks of high-grade biological behavior, making a CNS WHO grade 4 diagnosis most probable, though grade 3 cannot be entirely excluded based on imaging alone."
+}

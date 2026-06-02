@@ -1,0 +1,55 @@
+{
+  "subject_id": "BraTS2021_01078",
+  "idh": {
+    "reasoning": "The presence of extensive central necrosis (Proportion Necrosis: 31.24%) and a significant, thick-walled enhancing component (ET Volume (mL): 14.23, Thickness of enhancing margin: \">3mm\") are hallmark features of glioblastoma, which is prototypically IDH-wildtype. The tumor's aggressive behavior, including its large size, deep infiltration into the basal ganglia and thalamus, ependymal invasion, and midline crossing, further supports an IDH-wildtype diagnosis. Additionally, the very sharp tumor-edema boundary (Transition Zone Thickness (FLAIR) median_mm: 0.72) and the definitive absence of a T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 0.0) argue strongly against an IDH-mutant astrocytoma. The patient's age of 49 is also more typical for IDH-wildtype than IDH-mutant gliomas. The only weakly contradicting feature is the qualitative description of 'Mild' enhancement, which is inconsistent with the quantitative metrics.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This task is performed independently of the IDH prediction. The imaging phenotype is highly uncharacteristic of a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically lack the extensive necrosis (Proportion Necrosis: 31.24%) and thick, irregular enhancement seen in this case. Furthermore, the very sharp transition zone between the tumor and surrounding edema is atypical for oligodendroglioma and more suggestive of a high-grade astrocytic tumor or metastasis. The aggressive, deeply infiltrative nature involving bilateral deep gray matter structures is also much more common in non-codeleted gliomas, particularly glioblastoma. There are no specific imaging features to suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)",
+      "Anatomical Overlap Regions",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive necrosis is a key radiological surrogate for the histopathological finding of necrosis, which automatically confers a WHO grade 4 designation in adult-type diffuse astrocytic gliomas. This is strongly supported by a high 'Proportion Necrosis' (31.24%) and a large 'NCR Volume (mL)' (38.193). The presence of a thick, irregular enhancing rim ('Thickness of enhancing margin': \">3mm\") is also a classic feature of grade 4 disease. The significant mass effect ('max_shift_mm': -10.0) and aggressive infiltration ('CET Crosses midline', 'Ependymal (ventricular) Invasion') are consistent with a high-grade, rapidly growing tumor. The qualitative descriptor 'Enhancement Quality': 'Mild' is inconsistent with the other quantitative data and does not significantly detract from the overwhelming evidence for grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "max_shift_mm",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are classic for a glioblastoma, IDH-wildtype. The large, midline-crossing tumor exhibits extensive central necrosis and thick marginal enhancement, which are strong radiological indicators of WHO grade 4. The sharp tumor-edema boundary and absence of a T2-FLAIR mismatch sign further support an IDH-wildtype status. The combination of features is inconsistent with both IDH-mutant astrocytoma and 1p/19q co-deleted oligodendroglioma."
+}

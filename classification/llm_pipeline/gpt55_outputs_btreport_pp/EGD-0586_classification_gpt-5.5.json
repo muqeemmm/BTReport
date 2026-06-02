@@ -1,0 +1,71 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, the tumor has substantial cortical involvement in temporal/insular/frontal regions, is solitary, and shows only mild/minimal enhancing tumor volume. These features are more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. Evidence against IDH-mutant status is the large tumor burden, deep white-matter invasion, edema volume, and a high reported necrosis proportion, which are more concerning for aggressive IDH-wildtype biology. Overall, the age and largely nonenhancing cortico-subcortical pattern outweigh the aggressive features, so the best prediction is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_nonenhancing",
+      "n_components_enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.63,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The 1p/19q assessment is less certain from the available metadata. A non-codeleted astrocytic tumor is favored because the lesion prominently involves temporal and insular regions with deep white-matter invasion and a large infiltrative nonenhancing component, a pattern often seen in astrocytoma. Features that could support codeletion include cortical involvement, some frontal-lobe involvement, absent T2-FLAIR mismatch, and mild enhancement, since oligodendroglioma can be cortical/subcortical and may lack T2-FLAIR mismatch. Because classic oligodendroglioma-supporting information such as calcification is not available, and the dominant temporal/insular infiltrative pattern is not strongly codeleted-specific, the best prediction is non-codeleted with only moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "NCR Volume (mL)",
+      "n_components_nonenhancing",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, or susceptibility/calcification assessment. The grade call is driven mainly by the reported necrosis proportion and edema/infiltration despite very small enhancing volume, so histopathology and molecular testing remain essential.",
+  "subject_id": "EGD-0586",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 4,
+    "reasoning": "The grade assessment favors CNS WHO grade 4 because the metadata reports a high necrosis proportion, thick enhancing margin, large total tumor volume, substantial edema volume, and deep white-matter invasion, all of which suggest high-grade aggressive behavior. Evidence against grade 4 includes very small enhancing tumor volume, low enhancing proportion, only mild enhancement, no midline shift, and absent ventricular asymmetry, which could fit a lower-grade or grade 3 tumor. Given the reported necrosis and infiltrative burden, grade 4 is the best estimate, but confidence is moderated by the limited enhancement and lack of advanced imaging.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "NCR Volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

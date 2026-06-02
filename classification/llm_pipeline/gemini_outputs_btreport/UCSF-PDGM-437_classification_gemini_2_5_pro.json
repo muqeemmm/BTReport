@@ -1,0 +1,42 @@
+{
+  "subject_id": "UCSF-PDGM-437",
+  "idh": {
+    "reasoning": "The patient is 38 years old, an age group where IDH-mutant gliomas are more prevalent than IDH-wildtype gliomas, which typically affect older patients. The complete absence of contrast enhancement and necrosis are very strong radiological markers for IDH-mutant status. IDH-wildtype gliomas (glioblastomas) are almost invariably enhancing and/or necrotic. The insular and temporal lobe location is also a common site for IDH-mutant astrocytomas. There are no features in the provided metadata that would suggest an IDH-wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction assumes an IDH-mutant tumor, differentiating between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). The tumor's involvement of the insula is a classic feature highly associated with IDH-mutant astrocytomas. Furthermore, the involvement of deep gray matter structures (thalamus, putamen, pallidum) suggests a diffusely infiltrative pattern, which is more characteristic of astrocytomas than the typically more well-defined, cortically-based oligodendrogliomas. There are no specific features present to suggest an oligodendroglioma.",
+    "supporting_features": [
+      "Region Proportions",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The key determinants of grade on conventional MRI are contrast enhancement and necrosis. This tumor shows a complete absence of both, with an `ET Volume (mL)` of 0.0 and an `NCR Volume (mL)` of 0.0. This radiological profile is the hallmark of a low-grade (CNS WHO grade 2) glioma. While some grade 3 gliomas can be non-enhancing, the complete lack of any aggressive features makes grade 2 the most probable diagnosis. There is no radiological evidence to support a grade 4 diagnosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 38-year-old female with a solitary, non-enhancing, non-necrotic glioma in the left temporal lobe, insula, and deep gray nuclei. The combination of young age, lack of enhancement, and insular location is highly characteristic of an IDH-mutant astrocytoma. The absence of any high-grade radiological features strongly supports a CNS WHO grade 2 designation. The integrated radiological diagnosis is therefore Astrocytoma, IDH-mutant, CNS WHO grade 2."
+}

@@ -1,0 +1,71 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status, the MRI metadata shows several features that favor IDH-wildtype diffuse glioma: substantial mass effect with midline_shift_present and max_shift_mm, extensive infiltrative burden by Total tumor volume (mL), large ED Volume (mL), high Proportion Necrosis, Deep WM invasion, and Ependymal (ventricular) Invasion. These are more typical of biologically aggressive glioma. Features arguing against IDH-wildtype include age_years of 39, Cortical involvement, and a Tumor Location involving temporal/cortical regions, which can be seen with IDH-mutant glioma; additionally Enhancement Quality is mild and ET Volume (mL) is small. On balance, the aggressive mass-effect, edema, necrosis, deep white-matter, and ventricular invasion pattern outweigh the younger age and cortical location, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest imaging pattern does not favor a classic oligodendroglioma phenotype: Tumor Location is temporal/cortical/occipital rather than a predominantly frontal cortical-subcortical mass, and the lesion has marked ED Volume (mL), Proportion Necrosis, Deep WM invasion, Ependymal (ventricular) Invasion, and substantial Total tumor volume (mL). T2-FLAIR Mismatch Present is absent, which does not specifically support oligodendroglioma. Features that could still argue for codeletion include age_years of 39 and Cortical involvement with temporal/cortical Tumor Location. Because the available metadata lacks calcification-sensitive sequences and shows a large aggressive non-frontal infiltrative mass, the best estimate is non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. Calcification-sensitive imaging, diffusion, perfusion, spectroscopy, and molecular testing are not available here. The very large nonenhancing/necrotic and edematous burden with ventricular/deep white matter involvement drives an aggressive classification, but the patient age and cortical temporal component introduce residual uncertainty for IDH status.",
+  "subject_id": "BraTS2021_01478",
+  "who_grade": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently from molecular status, the MRI metadata strongly favors grade 4 behavior: high Proportion Necrosis, very large NCR Volume (mL), large ED Volume (mL), extensive Total tumor volume (mL), midline_shift_present with max_shift_mm of 9 mm, Effaced Ventricle, Asymmetrical Ventricles, Deep WM invasion, and Ependymal (ventricular) Invasion. These findings argue against grade 2, which would usually lack necrosis, major edema, and severe mass effect, and also favor grade 4 over grade 3 because necrosis and marked mass effect are present. Features arguing against grade 4 are Enhancement Quality being mild, small ET Volume (mL), Solitary Multifocal or Multicentric status, and Multiple satellites present being absent. Overall, the necrosis, edema, size, mass effect, and ventricular/deep invasion support CNS WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

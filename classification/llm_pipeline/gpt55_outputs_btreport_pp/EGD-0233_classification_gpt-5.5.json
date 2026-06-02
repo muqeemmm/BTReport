@@ -1,0 +1,78 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status assessed independently, age_years of 28 and a frontal-lobe/cortical tumor pattern from Tumor Location, Region Proportions, and Cortical involvement favor an IDH-mutant diffuse glioma phenotype. Enhancement Quality is mild, ET Volume is very small, midline_shift_present is no, Asymmetrical Ventricles is absent, Deep WM invasion is absent, Ependymal (ventricular) Invasion is absent, and the lesion is solitary, which argues against the more typical aggressive imaging pattern expected for IDH-wildtype glioblastoma. Against an IDH-mutant call, ED Volume and Proportion of Oedema are substantial, Edema crosses midline is true, and Proportion Necrosis is recorded, which can be associated with more aggressive IDH-wildtype biology; T2-FLAIR Mismatch Present is 0.0, removing a specific supportive sign for IDH-mutant astrocytoma. Overall, the demographic and frontal cortical, mildly enhancing, non-deep-invasive pattern outweighs the aggressive edema/necrosis descriptors, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Proportion Necrosis"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status assessed independently from the MRI metadata, the combination of age_years 28, Tumor Location in the frontal_lobe-cortex region, Region Proportions dominated by frontal_lobe and cortex, and Cortical involvement present is compatible with a codeleted oligodendroglioma-type distribution. Enhancement Quality is mild, and T2-FLAIR Mismatch Present is 0.0, which weakly supports codeletion over a classic T2-FLAIR-mismatch non-codeleted astrocytoma pattern. Arguing against codeletion, Side of Tumor Epicenter is listed as midline rather than a clearly lateral frontal cortical epicenter, and ED Volume, Proportion of Oedema, and Proportion Necrosis are substantial, which can fit a more aggressive non-codeleted astrocytic tumor. The evidence is not definitive, but the frontal cortical location in a young adult with absent mismatch and only mild enhancement slightly favors 1p/19q-codeletion.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "Metadata-only prediction remains uncertain, especially for 1p/19q status and grade. The enhancement descriptors are partly discordant: ET Volume is very small and n_components_enhancing reports no enhancing components, while Thickness of enhancing margin and Proportion Necrosis suggest more aggressive tumor biology. Tissue diagnosis is required for definitive WHO-CNS5 classification.",
+  "subject_id": "EGD-0233",
+  "who_grade": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade assessed independently, Total tumor volume and Lesion Sizes APxTVxCC show a moderately large lesion, while ED Volume and Proportion of Oedema are substantial. NCR Volume and Proportion Necrosis, together with recorded Enhancement Quality and Thickness of enhancing margin, argue against a purely low-grade, grade 2 appearance and support at least an intermediate/high-grade diffuse glioma. However, grade 4 is not strongly supported because age_years is young, ET Volume is very small, n_components_enhancing reports no enhancing components, midline_shift_present is no, Asymmetrical Ventricles is absent, Deep WM invasion is absent, Ependymal (ventricular) Invasion is absent, and Multiple satellites present is absent. The imaging metadata therefore sits between grade 2 and grade 4, with edema/necrosis/size pushing above grade 2 but limited enhancement and limited invasive mass-effect features arguing against confident grade 4; the best estimate is CNS WHO grade 3.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

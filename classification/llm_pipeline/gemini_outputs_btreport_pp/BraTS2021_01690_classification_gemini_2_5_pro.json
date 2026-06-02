@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_01690",
+  "idh": {
+    "reasoning": "The patient's advanced age (60 years) is a strong demographic predictor for IDH-wildtype status. The imaging features are classic for glioblastoma, which is the most common IDH-wildtype glioma. These features include marked, thick-rim enhancement (`Enhancement Quality`, `Thickness of enhancing margin`), extensive central necrosis (`NCR Volume (mL)`), and aggressive growth crossing the midline (`CET Crosses midline`). The sharp transition zone on FLAIR (`Transition Zone Thickness (FLAIR)`) is also more typical for IDH-wildtype tumors than the ill-defined margins of IDH-mutant astrocytomas. A significant contradictory feature is the presence of a T2-FLAIR mismatch (`T2-FLAIR Mismatch Present`), a strong marker for IDH-mutant astrocytoma. However, given the overwhelming weight of multiple classic glioblastoma features, this is considered less likely to be the correct diagnosis, and the mismatch finding may be an artifact of the complex tumor composition.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Transition Zone Thickness (FLAIR)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This task is performed independently of the IDH status prediction. The imaging phenotype is strongly against a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically lack extensive necrosis and marked, thick-rim enhancement. This tumor exhibits both (`NCR Volume (mL)`, `Enhancement Quality`). Furthermore, the aggressive midline-crossing 'butterfly' pattern (`CET Crosses midline`) is characteristic of high-grade astrocytic tumors, not oligodendrogliomas. The `T2-FLAIR Mismatch Present` finding, while a marker for IDH-mutancy, is specifically associated with the non-codeleted (astrocytoma) lineage. Therefore, all major imaging features point towards a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "CET Crosses midline",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.99
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic core (`NCR Volume (mL)` of 25.824) is a radiological hallmark of a high-grade glioma and is a key criterion for CNS WHO grade 4. This is strongly corroborated by other features of high-grade malignancy, including marked, thick-rim contrast enhancement (`Enhancement Quality`, `Thickness of enhancing margin`), significant mass effect (`midline_shift_present`, `max_shift_mm` of -11.0), and aggressive infiltration across the corpus callosum (`CET Crosses midline`). There are no imaging features to suggest a lower grade (2 or 3).",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "A 60-year-old patient with a large, midline-crossing frontal lobe tumor. The combination of advanced age, marked ring enhancement, extensive central necrosis, and significant mass effect are all classic imaging features of Glioblastoma, IDH-wildtype, CNS WHO grade 4. A high T2-FLAIR mismatch score was noted, which is a strong but isolated contradictory feature typically associated with IDH-mutant astrocytoma; however, the preponderance of evidence strongly favors the glioblastoma diagnosis."
+}

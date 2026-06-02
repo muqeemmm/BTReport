@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The MRI metadata favors an IDH-mutant adult-type diffuse glioma over IDH-wildtype because age_years is 43, Cortical involvement is present, Tumor Location is superficial parietal-cortex region, Enhancement Quality is only mild, ET Volume (mL) and Proportion Enhancing are extremely low, and Proportion Necrosis and NCR Volume (mL) show no necrotic component. Additional less aggressive features include Deep WM invasion absent, Ependymal (ventricular) Invasion absent, Multifocal or Multicentric solitary, Multiple satellites present absent, and midline_shift_present no. Evidence against an IDH-mutant call is that T2-FLAIR Mismatch Present is 0.0, removing a specific imaging clue for IDH-mutant astrocytoma, and Side of Tumor Epicenter is reported as midline, which is atypical for common hemispheric IDH-mutant glioma. Overall, the low-enhancement, non-necrotic, superficial cortical phenotype in a 43-year-old supports IDH mutation.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Tumor Location",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "Considering 1p/19q status independently from the IDH assessment, the MRI phenotype slightly favors codeletion: age_years is 43, Cortical involvement is present, Region Proportions show prominent cortex involvement, Tumor Location is parietal-cortex region, and T2-FLAIR Mismatch Present is 0.0, which does not support the classic mismatch pattern associated with non-codeleted astrocytoma. The lesion also has mild Enhancement Quality, very low Proportion Enhancing, and no necrotic component by Proportion Necrosis and NCR Volume (mL), which is compatible with a lower-grade oligodendroglial-type imaging phenotype. Evidence against codeletion is that Tumor Location is parietal-cortex rather than a more typical frontal cortical-subcortical location, and T2-FLAIR Mismatch Score and T2-FLAIR Mismatch Degree are not entirely negligible, so the absence of mismatch is not a strong discriminator. Overall, the evidence is modest and the best estimate is codeleted.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility/calcification assessment. The strongest imaging signal is low-grade behavior with minimal enhancement and no necrosis; 1p/19q status is the least certain from the available fields.",
+  "subject_id": "EGD-0631",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The grading assessment, considered independently from molecular predictions, favors CNS WHO grade 2 because Enhancement Quality is mild, ET Volume (mL) is 0.009, Proportion Enhancing is 0.03, Proportion Necrosis is 0.0, NCR Volume (mL) is 0.0, midline_shift_present is no, Asymmetrical Ventricles is absent, Deep WM invasion is absent, Ependymal (ventricular) Invasion is absent, Multifocal or Multicentric is solitary, and Multiple satellites present is absent. These features argue against grade 4 and against a strongly anaplastic grade 3 phenotype. Evidence against grade 2 is the presence of any mild enhancement, the Thickness of enhancing margin described as solid, and a moderate FLAIR abnormality by ED Volume (mL) and Total tumor volume (mL). However, the absence of necrosis, negligible enhancing volume, and lack of mass effect make grade 2 the best imaging-based estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

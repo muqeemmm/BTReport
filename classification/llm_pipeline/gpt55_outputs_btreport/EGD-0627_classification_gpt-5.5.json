@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status, the MRI pattern has competing signals. Features favoring IDH-wildtype biology include substantial enhancing tumor burden and aggressive-appearing enhancement, reflected by \"Enhancement Quality\" being marked, \"Thickness of enhancing margin\" being >3mm, measurable \"ET Volume (mL)\", very high \"Proportion of Oedema\", and small but present \"Proportion Necrosis\". Against IDH-wildtype, the lesion involves the insula/cortex/frontal region by \"Tumor Location\" and \"Region Proportions\", has \"Cortical involvement\" present, lacks \"Deep WM invasion\", is relatively small by \"Lesion Sizes APxTVxCC (cm)\", and has no major mass-effect markers by \"midline_shift_present\" and \"Asymmetrical Ventricles\". On balance, the enhancement/edema/necrosis pattern is more concerning for IDH-wildtype than IDH-mutant, but the location and limited mass effect keep confidence only moderate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "ED Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the imaging evidence is limited and mixed. Features favoring non-codeleted status include marked enhancement, a thick enhancing margin, measurable enhancing tumor, extensive edema, and small necrotic component, as described by \"Enhancement Quality\", \"Thickness of enhancing margin\", \"ET Volume (mL)\", \"Proportion Enhancing\", \"Proportion of Oedema\", and \"Proportion Necrosis\". Features that argue for possible codeletion include cortical and insular/frontal involvement, captured by \"Tumor Location\", \"Region Proportions\", \"Cortical involvement\", and absence of \"Deep WM invasion\". Because the classic codeletion-associated location is present but the enhancement/edema pattern is less typical, the best estimate is non-codeleted with low-to-moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "ED Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The case has mixed features: insular/cortical/frontal location favors an IDH-mutant and possibly 1p/19q-codeleted tumor, while marked thick enhancement, high edema proportion, and small necrotic component favor more aggressive IDH-wildtype/non-codeleted biology and higher grade. Molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0627",
+  "who_grade": {
+    "confidence": 0.69,
+    "contradicting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the metadata show several high-grade imaging features: marked enhancement, thick enhancing margin, measurable enhancing tumor volume, very high edema proportion, and small but present necrotic/non-enhancing component, supported by \"Enhancement Quality\", \"Thickness of enhancing margin\", \"ET Volume (mL)\", \"Proportion Enhancing\", \"Proportion of Oedema\", \"ED Volume (mL)\", \"NCR Volume (mL)\", and \"Proportion Necrosis\". These features favor grade 4 over grades 2 or 3. Features arguing against grade 4 include relatively limited lesion size, no midline shift, absent ventricular asymmetry, absent ependymal invasion, absent deep white matter invasion, solitary lesion, and no satellites, reflected by \"Lesion Sizes APxTVxCC (cm)\", \"midline_shift_present\", \"Asymmetrical Ventricles\", \"Ependymal (ventricular) Invasion\", \"Deep WM invasion\", \"Multifocal or Multicentric\", and \"Multiple satellites present\". Overall, the enhancement/edema/necrosis pattern supports grade 4, but limited mass effect and invasion prevent high confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

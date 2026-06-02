@@ -1,0 +1,63 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI marker for IDH mutation is the reported T2-FLAIR mismatch, with both \"T2-FLAIR Mismatch Present\" and a high \"T2-FLAIR Mismatch Score\" supporting an IDH-mutant diffuse glioma pattern. A small, nonenhancing FLAIR-only lesion is also supported by \"Enhancement Quality\", \"ET Volume (mL)\", \"Proportion Enhancing\", \"Proportion Necrosis\", \"Total tumor volume (mL)\", and \"Tumor Location\", which is more typical of lower-grade IDH-mutant glioma than IDH-wildtype glioblastoma. The main counterweight is \"age_years\" of 48, because older adult age increases the possibility of IDH-wildtype disease, but this is outweighed by the imaging phenotype. Therefore the best MRI-based prediction is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Tumor Location",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.83,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently from the IDH prediction, the reported T2-FLAIR mismatch in \"T2-FLAIR Mismatch Present\" and high \"T2-FLAIR Mismatch Score\" strongly favors a non-codeleted astrocytic imaging phenotype rather than oligodendroglioma. \"Tumor Location\" and \"Region Proportions\" indicate a temporal-cortical predominance rather than a classic frontal oligodendroglioma pattern. Features that can be seen in codeleted tumors include \"Cortical involvement\" and a nonenhancing lower-grade appearance shown by \"Enhancement Quality\" and \"ET Volume (mL)\", but these are less specific than the mismatch pattern. Therefore the best MRI-based prediction is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The predictions are based only on conventional MRI metadata. Absence of DWI/ADC, perfusion, MR spectroscopy, SWI/GRE, and molecular testing limits confidence, especially for excluding anaplastic transformation or molecular glioblastoma features that may not enhance. Imaging most strongly suggests a small, nonenhancing, T2-FLAIR-mismatch diffuse glioma with an astrocytic IDH-mutant phenotype.",
+  "subject_id": "UCSF-PDGM-269",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 2,
+    "reasoning": "Grade assessment from MRI alone favors a lower-grade tumor because \"Enhancement Quality\" is none, \"ET Volume (mL)\" is 0, \"Proportion Enhancing\" is 0, and \"Proportion Necrosis\" is 0, with no imaging necrosis or enhancing tumor. Additional low-grade supportive features include small \"Total tumor volume (mL)\", \"midline_shift_present\" reported as no, \"Ependymal (ventricular) Invasion\" absent, \"Deep WM invasion\" absent, \"Multifocal or Multicentric\" solitary, and \"Multiple satellites present\" absent. The main opposing factor is \"age_years\" of 48, which does not exclude grade 3 or 4 biology, and conventional MRI cannot assess mitotic activity or molecular grade-defining alterations. Overall, the lack of enhancement, necrosis, mass effect, invasion, and multifocality supports CNS WHO grade 2 as the best estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

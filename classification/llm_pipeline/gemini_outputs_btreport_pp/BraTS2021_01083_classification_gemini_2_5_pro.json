@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_01083",
+  "idh": {
+    "reasoning": "The patient's advanced age (76 years) is the single strongest predictor for IDH-wildtype status, as IDH-mutant gliomas typically occur in younger adults. This is strongly corroborated by imaging features characteristic of glioblastoma, which is prototypically IDH-wildtype: the presence of significant central necrosis and contrast enhancement. Furthermore, the tumor involves deep gray matter structures (thalamus, caudate, putamen), a location more common for IDH-wildtype tumors. The absence of a T2-FLAIR mismatch also argues against the most common IDH-mutant subtype (astrocytoma). There are no significant features suggesting an IDH-mutant tumor.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Anatomical Overlap Regions",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. The presence of extensive necrosis (NCR Volume > 0) and robust contrast enhancement (ET Volume > 0) are highly atypical for 1p/19q co-deleted oligodendrogliomas, which tend to be non-enhancing or have minimal enhancement and rarely show necrosis at initial diagnosis. These aggressive features are much more characteristic of astrocytic lineage tumors (non-codeleted). While the very thin FLAIR transition zone could suggest well-defined borders, a feature sometimes seen in oligodendrogliomas, it is strongly outweighed by the clear evidence of high-grade biological activity (necrosis and enhancement).",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The radiological evidence for WHO grade 4 is definitive. The key diagnostic criteria are the concurrent presence of contrast enhancement and central necrosis. This tumor exhibits both, with a substantial enhancing volume (ET Volume (mL) of 16.48) and a large necrotic core (NCR Volume (mL) of 15.606). Additional features supporting a high-grade diagnosis include the patient's advanced age (76), the large total tumor volume, extensive surrounding edema, and mass effect (effaced right ventricle). The description of 'Mild' enhancement quality is a minor contradictory point but does not negate the presence of a large, thick-walled enhancing rim around a necrotic core, which is the hallmark of a grade 4 glioma.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "age_years",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's advanced age (76 years) combined with the imaging findings of a large, deeply situated tumor with significant contrast enhancement and central necrosis are highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The absence of a T2-FLAIR mismatch further argues against an IDH-mutant astrocytoma. The high-grade features make a 1p/19q co-deleted oligodendroglioma highly unlikely."
+}

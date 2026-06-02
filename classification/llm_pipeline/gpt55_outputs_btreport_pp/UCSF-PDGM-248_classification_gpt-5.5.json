@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "midline_shift_present",
+      "max_shift_mm",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because age_years is relatively young for typical IDH-wildtype glioblastoma, Tumor Location is frontal/cortical, Cortical involvement is present, and the lesion is nonenhancing with Enhancement Quality none, ET Volume (mL) 0.0, Proportion Enhancing 0.0, and Proportion Necrosis 0.0. These features are more typical of IDH-mutant lower-grade diffuse glioma than IDH-wildtype glioblastoma. Arguing against this are midline_shift_present, max_shift_mm 7.0, Edema crosses midline, and Deep WM invasion, which indicate a sizeable infiltrative lesion with mass effect and could be seen in more aggressive IDH-wildtype disease. T2-FLAIR Mismatch Present is 0.0, so a specific imaging clue for IDH-mutant astrocytoma is absent, but this does not exclude IDH mutation. Overall, the nonenhancing frontal cortical pattern in a 46-year-old supports IDH mutation more than wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "Considering only the MRI metadata, 1p/19q co-deletion is modestly favored because Tumor Location is frontal/cortical, Cortical involvement is present, age_years is in the typical adult range, Enhancement Quality is none, ET Volume (mL) is 0.0, and T2-FLAIR Mismatch Present is 0.0; this combination can fit oligodendroglioma better than astrocytoma when classic astrocytic T2-FLAIR mismatch is not present. However, the evidence is weak because Side of Tumor Epicenter is midline, Deep WM invasion is present, Edema crosses midline, and there is midline_shift_present with max_shift_mm 7.0, which are not specific for oligodendroglioma and can be seen with non-codeleted infiltrative tumors. Overall, the frontal cortical nonenhancing pattern slightly favors co-deletion, but confidence is limited.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "The prediction is limited by absence of diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, and histomolecular data. The lesion is entirely nonenhancing in the provided metadata, but its large FLAIR volume, deep white matter invasion, crossing of midline, and mass effect reduce confidence, especially for grade and 1p/19q status.",
+  "subject_id": "UCSF-PDGM-248",
+  "who_grade": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Edema crosses midline",
+      "Deep WM invasion"
+    ],
+    "prediction": 2,
+    "reasoning": "The imaging grade estimate favors CNS WHO grade 2 because Enhancement Quality is none, ET Volume (mL) is 0.0, Proportion Enhancing is 0.0, Proportion Necrosis is 0.0, NCR Volume (mL) is 0.0, Multiple satellites present is absent, Multifocal or Multicentric is solitary, and Ependymal (ventricular) Invasion is absent. These features argue against grade 4 and against a strongly high-grade enhancing phenotype. Arguing against grade 2 are Total tumor volume (mL) and Whole Tumor Volume (mL) of 64.876, midline_shift_present with max_shift_mm 7.0, Edema crosses midline, and Deep WM invasion, which suggest substantial infiltrative burden and mass effect and could reflect grade 3 biology. Because there is no enhancement or necrosis in the provided metadata, grade 2 is the best estimate, with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

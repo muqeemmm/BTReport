@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_01476",
+  "idh": {
+    "reasoning": "The imaging features are conflicting. The patient's age of 44 and the tumor's dominant insular location are classic features of an IDH-mutant glioma. The minimal enhancement volume and mild enhancement quality also support this. However, the reported high proportion of necrosis (45.31%) is a very strong and specific feature of glioblastoma, which is the archetypal IDH-wildtype tumor. Necrosis is a hallmark of high-grade, aggressive biology most commonly associated with IDH-wildtype status. Weighing these factors, the presence of extensive necrosis is a more powerful predictor of molecular status than location, especially when enhancement is present. Therefore, despite the conflicting location and age, the high necrosis favors a prediction of IDH-wildtype.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Region Proportions",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is performed independently of the IDH status prediction. The most significant localizing feature is the tumor's primary involvement of the insula (79.8% of the lesion). Insular gliomas are overwhelmingly of astrocytic lineage (1p/19q non-codeleted). Oligodendrogliomas (1p/19q codeleted) are rare in this location. The presence of deep white matter invasion is also more characteristic of astrocytomas. There are no specific features in the provided metadata to suggest an oligodendroglioma. Therefore, based on the strong location-based evidence, the tumor is predicted to be 1p/19q non-codeleted.",
+    "supporting_features": [
+      "Region Proportions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The strongest indicator of high grade is the reported `Proportion Necrosis` of 45.31%. The presence of necrosis is a defining histopathological feature of WHO grade 4 gliomas. Additionally, the presence of contrast enhancement (`ET Volume (mL)` > 0) and a thick enhancing margin (`Thickness of enhancing margin`: \">3mm\") are features of high-grade tumors, arguing against a grade 2 diagnosis. While the total volume of enhancement is small and there is no midline shift, these are less specific findings. The presence of extensive necrosis is the most compelling piece of evidence and strongly points to a WHO grade 4 designation.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "midline_shift_present",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents conflicting radiological features. The insular location and patient age are highly suggestive of an IDH-mutant astrocytoma. However, the reported extensive necrosis is a powerful radiological marker for WHO grade 4, making an IDH-wildtype glioblastoma the most probable diagnosis. The confidence in the IDH status prediction is low due to this conflict, while the predictions for grade 4 and non-codeletion status are high, based on the necrosis and insular location, respectively. The final integrated diagnosis is consistent with the individual predictions."
+}

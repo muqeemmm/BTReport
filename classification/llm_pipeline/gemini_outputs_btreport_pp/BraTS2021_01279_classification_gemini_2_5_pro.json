@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_01279",
+  "idh": {
+    "reasoning": "The patient's age of 57 is more typical for IDH-wildtype gliomas. The imaging features strongly support this prediction: the tumor exhibits 'Marked' enhancement with a thick margin ('>3mm'), which are classic hallmarks of glioblastoma (IDH-wildtype). Furthermore, the tumor has a very sharp border, indicated by a narrow 'Transition Zone Thickness (FLAIR)' (median 1.48 mm), which is uncharacteristic of the diffusely infiltrative nature of IDH-mutant astrocytomas. The absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0) provides strong negative evidence against an IDH-mutant astrocytoma. The only minor contradicting feature is the very small volume of necrosis, but its presence is still a high-grade feature often seen in IDH-wildtype tumors. The balance of evidence overwhelmingly points towards an IDH-wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. Features arguing against co-deletion include 'Marked' enhancement, a thick enhancing margin ('>3mm'), and the presence of necrosis ('Proportion Necrosis': 0.55%). These are features of high-grade, aggressive tumors and are atypical for oligodendrogliomas (IDH-mutant, 1p/19q-codeleted), where necrosis is rare and enhancement is typically less pronounced. Features that could support co-deletion include the very sharp tumor border ('Transition Zone Thickness (FLAIR)') and cortical involvement, as oligodendrogliomas are often well-circumscribed and cortically based. However, the aggressive features of marked enhancement and necrosis are stronger indicators, making a non-codeleted status more likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is based on definitive radiological markers of high-grade malignancy. The tumor shows 'Marked' contrast enhancement and, critically, evidence of necrosis ('Proportion Necrosis': 0.55%, 'NCR Volume (mL)': 0.085). According to WHO CNS5 criteria for adult-type diffuse gliomas, the presence of contrast enhancement and/or necrosis on imaging is sufficient to classify a tumor as high-grade. The presence of necrosis specifically is a hallmark of grade 4 disease. The patient's age (57) also increases the likelihood of a high-grade tumor. While the tumor volume is not exceptionally large and there is no midline shift, these factors do not outweigh the definitive presence of enhancement and necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of older patient age (57), a solitary frontal tumor with marked, thick-rimmed enhancement, and evidence of necrosis strongly indicates a Glioblastoma, IDH-wildtype. This diagnosis is consistent with a CNS WHO grade 4 tumor. The sharp tumor border and absence of T2-FLAIR mismatch further support this conclusion over an IDH-mutant astrocytoma. The predictions for IDH-wildtype, non-codeleted status, and grade 4 are all internally consistent with the WHO CNS5 classification."
+}

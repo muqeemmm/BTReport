@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0078",
+  "idh": {
+    "reasoning": "The evidence strongly points towards an IDH-wildtype status. The most compelling feature is the multifocal nature of the tumor ('Multifocal or Multicentric': \"Multifocal\", 'Number of lesions': 2), which is a classic imaging characteristic of glioblastoma, IDH-wildtype. Furthermore, there is a significant proportion of necrosis ('Proportion Necrosis': 19.71), another hallmark of glioblastoma. The tumor border is sharp, as indicated by a very thin median FLAIR transition zone ('Transition Zone Thickness (FLAIR)': median_mm: 0.75), which is more common in IDH-wildtype gliomas than in IDH-mutant astrocytomas. The absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0) also argues against an IDH-mutant astrocytoma. Features that might argue for an IDH-mutant status, such as the very low volume of enhancement and absence of deep white matter invasion, are less specific and are outweighed by the strong indicators of wildtype status.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Proportion Necrosis",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. The tumor exhibits a very sharp border ('Transition Zone Thickness (FLAIR)' median_mm: 0.75), a feature often associated with 1p/19q-codeleted oligodendrogliomas. However, several other features strongly argue against co-deletion. The tumor is multifocal ('Multifocal or Multicentric': \"Multifocal\") and has a significant necrotic component ('Proportion Necrosis': 19.71). Both multifocality and necrosis are rare in oligodendrogliomas and are more characteristic of high-grade, non-codeleted tumors (i.e., astrocytomas or glioblastomas). The evidence against co-deletion (multifocality, necrosis) is considered stronger and more specific for tumor biology than the single supporting feature of a sharp border. Therefore, a non-codeleted status is predicted.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis is a key determinant of WHO grade. The metadata shows a significant necrotic component ('NCR Volume (mL)': 6.311, 'Proportion Necrosis': 19.71). In adult-type diffuse gliomas, the presence of necrosis is a sufficient criterion for a WHO grade 4 designation. The multifocal nature of the tumor ('Multifocal or Multicentric': \"Multifocal\") further supports a high-grade, aggressive tumor. While the volume of contrast enhancement is minimal ('ET Volume (mL)': 0.018), this does not preclude a grade 4 diagnosis, as the presence of necrosis is a more definitive feature. The combination of multifocality and necrosis provides very strong evidence for the highest grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging features, particularly the multifocal nature and presence of central necrosis, are highly suggestive of a Glioblastoma, IDH-wildtype (CNS WHO grade 4). The sharp tumor margins and minimal enhancement are somewhat atypical but do not outweigh the strong evidence for a high-grade, IDH-wildtype tumor. The absence of a T2-FLAIR mismatch further argues against an IDH-mutant astrocytoma."
+}

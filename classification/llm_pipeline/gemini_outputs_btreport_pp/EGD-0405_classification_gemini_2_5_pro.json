@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0405",
+  "idh": {
+    "reasoning": "The patient's advanced age (67 years) is a strong demographic predictor for IDH-wildtype status. The imaging phenotype overwhelmingly supports this, demonstrating features classic for glioblastoma: marked, thick-rim enhancement, a large volume of central necrosis, and significant mass effect with midline shift. These features are highly indicative of a rapidly growing, aggressive tumor typical of IDH-wildtype gliomas. However, a significant contradictory feature is the presence of a strong T2-FLAIR mismatch sign, which is highly specific for IDH-mutant astrocytomas. Given the context of extensive necrosis and enhancement, this sign may be an artifact of the necrotic core's fluid content (high T2, suppressed FLAIR) rather than a true biological mismatch characteristic of lower-grade tumors. Weighing the strong demographic and aggressive imaging features against this single, albeit specific, contradictory sign, an IDH-wildtype status is more probable.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging features are strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically have indistinct margins and minimal, if any, enhancement or necrosis. This tumor, in contrast, displays marked, thick-rim enhancement and a very large necrotic core. These are hallmark features of high-grade astrocytic tumors, not oligodendrogliomas. Furthermore, the presence of a T2-FLAIR mismatch sign, while conflicting with the IDH-wildtype prediction, is specifically associated with IDH-mutant astrocytomas, which are by definition 1p/19q non-codeleted. Therefore, all available evidence, whether pointing towards glioblastoma or an IDH-mutant astrocytoma, argues against a 1p/19q co-deleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade 4 is straightforward based on the imaging findings. According to WHO CNS5 criteria for adult-type diffuse gliomas, the presence of either contrast enhancement or necrosis is sufficient to classify a tumor as high-grade. This lesion demonstrates both features extensively. There is marked contrast enhancement with a thick enhancing margin and a large volume of central necrosis. Additionally, the significant mass effect, including a 7mm midline shift and effacement of the contralateral ventricle, corroborates the high-grade nature of this tumor. There is no imaging evidence to suggest a lower grade (2 or 3).",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 1.0
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This 67-year-old patient presents with a large, deeply located tumor with imaging features highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4, including marked rim enhancement, extensive necrosis, and significant mass effect. A notable and unusual finding is a strong T2-FLAIR mismatch signal, a feature typically specific to IDH-mutant astrocytomas. However, given the patient's age and the otherwise classic glioblastoma phenotype, this mismatch is likely a quantitative artifact from the large necrotic core. The final diagnosis favors glioblastoma, but the confidence in IDH status is moderated by this conflicting feature."
+}

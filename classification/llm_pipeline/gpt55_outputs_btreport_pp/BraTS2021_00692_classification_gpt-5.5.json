@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The strongest metadata pattern for IDH-wildtype is an older adult patient with a markedly enhancing tumor, a substantial enhancing component, measurable necrosis, thick enhancing margin, extensive edema, and deep white-matter invasion. These fields favor an aggressive glioblastoma-like phenotype. Evidence against IDH-wildtype is the reported T2-FLAIR mismatch, which is classically associated with IDH-mutant astrocytoma, and the cortical frontoparietal involvement, which can be seen in IDH-mutant diffuse glioma. Because the age and enhancing-necrotic phenotype are strong but the T2-FLAIR mismatch is a meaningful opposing feature, the conclusion is IDH-wildtype with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.77,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the reported T2-FLAIR mismatch strongly favors a non-codeleted astrocytic molecular pattern rather than oligodendroglioma. Marked enhancement, necrosis, extensive edema, and deep white-matter invasion are also less typical of a classic lower-grade oligodendroglial imaging phenotype. Evidence that could support codeletion includes cortical involvement and a frontal-lobe component, which are common in oligodendroglioma, but the lesion is also substantially parietal and ventricular-adjacent. With calcification-sensitive imaging unavailable, the conclusion is non-codeleted with moderately high confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/GRE. The main uncertainty is the conflict between a reported T2-FLAIR mismatch, which supports an IDH-mutant/non-codeleted astrocytic pattern, and the older age with marked enhancing-necrotic phenotype, which supports IDH-wildtype glioblastoma.",
+  "subject_id": "BraTS2021_00692",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "midline_shift_present",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade, the metadata show marked contrast enhancement, a sizable enhancing volume, thick enhancing margin, measurable necrosis, extensive edema, and deep white-matter invasion, which together favor high-grade tumor and specifically support grade 4 over grade 2 or grade 3. Features that temper certainty are absence of reported midline shift, a relatively limited necrotic proportion, and the T2-FLAIR mismatch, which can be associated with lower-grade IDH-mutant astrocytoma. However, the enhancing-necrotic phenotype is the dominant grade-related evidence, so the conclusion is CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Tumor Core Volume (mL)",
+      "Whole Tumor Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

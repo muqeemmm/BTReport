@@ -1,0 +1,67 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The imaging phenotype has several features more often associated with IDH-wildtype diffuse glioma: very large infiltrative tumor burden, substantial edema, mass effect with midline shift, deep white matter invasion, ependymal invasion, and a high reported necrotic component. These argue against a more indolent IDH-mutant phenotype. Features arguing the other way are the frontal cortical location and only mild/small-volume enhancement, which can be seen in IDH-mutant astrocytoma or oligodendroglioma. On balance, the aggressive infiltrative pattern and necrosis outweigh the frontal cortical location, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the frontal cortical location and mild enhancement are compatible with an oligodendroglial, codeleted tumor. However, the very large tumor volume, extensive edema, deep white matter invasion, ependymal invasion, bilateral/midline-crossing nonenhancing and edema components, and high necrotic proportion are less typical for classic 1p/19q-codeleted oligodendroglioma and favor a non-codeleted diffuse glioma. Because key oligodendroglioma markers such as calcification cannot be assessed from the provided sequences and metadata, confidence is moderate rather than high.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured T1w, T2w, T2-FLAIR, and T1-Gd metadata. The strongest imaging signal is an aggressive, very large infiltrative tumor with necrosis, edema, mass effect, deep white matter and ependymal involvement. Molecular confirmation remains required; unavailable diffusion, perfusion, spectroscopy, and susceptibility/calcification information could materially refine the estimates.",
+  "subject_id": "BraTS2021_01533",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "Grade assessment considered independently from molecular status favors CNS WHO grade 4 because the metadata report a large necrotic component, extensive edema, marked total tumor volume, midline shift/mass effect, deep white matter invasion, and ependymal invasion. These are imaging features of biologically aggressive high-grade glioma. The main counterpoints are that enhancement is described as mild, the enhancing tumor volume is small, and the enhancing proportion is low, which can be seen in lower-grade or less angiogenic tumors. Nevertheless, the reported necrosis and aggressive infiltrative mass-effect pattern most strongly support grade 4 rather than grade 2 or 3.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,45 @@
+{
+  "subject_id": "UCSF-PDGM-250",
+  "idh": {
+    "reasoning": "The patient's age of 44 years is typical for IDH-mutant gliomas. The tumor is entirely non-enhancing and non-necrotic, which are classic imaging features of lower-grade, IDH-mutant tumors. The location involving the insula and frontal lobe is also characteristic of IDH-mutant astrocytomas. The primary contradictory evidence is the absence of a T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 0.0), a feature highly specific for IDH-mutant astrocytomas. However, the combination of age and the complete lack of aggressive imaging features provides stronger evidence for an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the key differentiator between astrocytoma (non-codeleted) and oligodendroglioma (codeleted) is often location. This tumor shows substantial involvement of the insula (34% of tumor volume), which is a classic location for IDH-mutant astrocytomas. While oligodendrogliomas are often cortical and non-enhancing, as seen here, prominent insular involvement strongly favors an astrocytic lineage. Therefore, a non-codeleted status is predicted.",
+    "supporting_features": [
+      "Region Proportions",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "For adult-type diffuse gliomas, imaging-based grading relies on identifying features of high-grade transformation, primarily contrast enhancement and necrosis. This tumor is entirely non-enhancing (`ET Volume (mL)`: 0.0, `Enhancement Quality`: \"None\") and shows no evidence of necrosis (`NCR Volume (mL)`: 0.0). The complete absence of these aggressive features is the hallmark of a CNS WHO grade 2 glioma. There is no imaging evidence to support a higher grade.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly characteristic of a low-grade astrocytoma. The patient's age, insular location, and complete lack of enhancement or necrosis strongly support a diagnosis of Astrocytoma, IDH-mutant, CNS WHO grade 2. The only notable atypical feature is the absence of a T2-FLAIR mismatch, which slightly lowers the confidence for IDH status but does not change the overall most likely diagnosis."
+}

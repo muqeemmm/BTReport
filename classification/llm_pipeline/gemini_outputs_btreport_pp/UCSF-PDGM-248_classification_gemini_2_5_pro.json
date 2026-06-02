@@ -1,0 +1,52 @@
+{
+  "subject_id": "UCSF-PDGM-248",
+  "idh": {
+    "reasoning": "The patient is 46 years old, an age where both IDH-mutant and wildtype gliomas occur. The complete lack of enhancement (`Enhancement Quality`: \"None\", `ET Volume (mL)`: 0.0) is a strong feature suggesting an IDH-mutant tumor. However, several key features argue for an IDH-wildtype status. The tumor is large (`Total tumor volume (mL)`: 64.876), deeply infiltrative (`Deep WM invasion`: \"Present\"), and involves bilateral deep gray matter structures (`Anatomical Overlap Regions`). This aggressive, infiltrative pattern is more characteristic of IDH-wildtype gliomas. Furthermore, the T2-FLAIR mismatch sign, a strong predictor for IDH-mutant astrocytoma, is absent (`T2-FLAIR Mismatch Present`: 0.0). Weighing these factors, the aggressive infiltrative pattern and lack of T2-FLAIR mismatch are more compelling than the non-enhancement, favoring a prediction of IDH-wildtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q status must be made independently of the IDH prediction. The tumor shows cortical involvement (`Cortical involvement`: \"Present\") and is non-enhancing (`Enhancement Quality`: \"None\"), features which can be seen in 1p/19q co-deleted oligodendrogliomas. However, the tumor's growth pattern is highly infiltrative, with deep white matter invasion (`Deep WM invasion`: \"Present\") and extensive involvement of bilateral deep gray matter structures like the caudate and putamen (`Anatomical Overlap Regions`). This ill-defined, deeply infiltrative nature is much more characteristic of an astrocytoma (non-codeleted) than an oligodendroglioma, which often has better-defined margins. The infiltrative pattern is the stronger predictor in this case.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "There is conflicting evidence for the WHO grade. The complete absence of contrast enhancement (`ET Volume (mL)`: 0.0) and necrosis (`NCR Volume (mL)`: 0.0) are hallmark features of a low-grade (WHO grade 2) glioma. Conversely, several features suggest a high-grade tumor. The lesion is large (`Total tumor volume (mL)`: 64.876), causes significant mass effect (`max_shift_mm`: 7.0), and is highly infiltrative, invading deep white matter and bilateral deep gray nuclei (`Deep WM invasion`, `Anatomical Overlap Regions`). In a 46-year-old, a large, non-enhancing but deeply infiltrative tumor is often a high-grade glioma, specifically a molecularly defined glioblastoma (IDH-wildtype astrocytoma), which is by definition WHO grade 4. The aggressive growth pattern and significant mass effect outweigh the lack of enhancement in determining the biological grade.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a large, non-enhancing, deeply infiltrative glioma with significant mass effect in a 46-year-old male. The lack of enhancement strongly suggests a lower-grade process, but the aggressive infiltrative pattern involving bilateral deep gray matter, large size, and significant mass effect are more indicative of a high-grade glioma. The absence of a T2-FLAIR mismatch sign further argues against an IDH-mutant astrocytoma. The combination of features is most consistent with a non-enhancing Glioblastoma, IDH-wildtype, which is a CNS WHO grade 4 entity by molecular definition, regardless of the absence of classic radiological high-grade features like enhancement or necrosis."
+}

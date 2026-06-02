@@ -1,0 +1,56 @@
+{
+  "subject_id": "BraTS2021_01521",
+  "idh": {
+    "reasoning": "The presence of extensive central necrosis, indicated by a 'Proportion Necrosis' of 39.38%, is a very strong predictor of IDH-wildtype status. This is further supported by the tumor's aggressive morphology: it is a large, bilateral mass ('Side of Tumor Epicenter': 'Bilateral') that crosses the midline ('crosses_ideal_midline': {'ncr_et': true}), deeply infiltrates white matter ('Deep WM invasion': 'Present') and numerous deep gray structures ('Anatomical Overlap Regions'), and has caused significant vasogenic edema ('ED Volume (mL)': 139.017). Ependymal invasion is also present. These features are all hallmarks of glioblastoma, the most common IDH-wildtype glioma. The only weakly contradicting feature is the 'Enhancement Quality' being described as 'Mild', but this is outweighed by the presence of a thick enhancing margin and the overwhelming evidence of necrosis and aggressive infiltration.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Side of Tumor Epicenter",
+      "crosses_ideal_midline",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q-codeleted oligodendroglioma. The most compelling feature is the extensive necrosis ('Proportion Necrosis': 39.38%), which is exceptionally rare in oligodendrogliomas. Furthermore, the highly infiltrative nature, with deep white matter invasion ('Deep WM invasion': 'Present'), bilateral spread ('Side of Tumor Epicenter': 'Bilateral'), and involvement of numerous deep gray nuclei ('Anatomical Overlap Regions'), points towards an astrocytic lineage (non-codeleted). The enhancement pattern, with a thick margin surrounding necrosis, is also characteristic of a high-grade astrocytoma. The frontal lobe location is common for oligodendrogliomas but is non-specific and does not outweigh the numerous features arguing against co-deletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is made with very high confidence based on the clear radiological evidence of necrosis. The 'Proportion Necrosis' is high at 39.38%, and the 'NCR Volume (mL)' is substantial (91.349 mL). In the WHO CNS5 classification, the presence of necrosis is a defining histological feature of grade 4 in adult-type diffuse gliomas. This is strongly corroborated by other features of high-grade malignancy, including thick contrast enhancement ('Thickness of enhancing margin': '>3mm'), significant mass effect ('midline_shift_present': 'Yes'), and extensive infiltration including ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'). The description of 'Enhancement Quality' as 'Mild' is the only minor contradictory point, but it is insufficient to challenge the diagnosis in the face of definitive evidence of necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are classic for a glioblastoma, IDH-wildtype. The large, bilateral, infiltrative mass with extensive central necrosis, thick rim enhancement, and significant surrounding edema strongly supports this diagnosis. The confidence in all individual predictions is high due to the presence of these hallmark aggressive features."
+}

@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0355",
+  "idh": {
+    "reasoning": "The patient is 43 years old, an age common for IDH-mutant gliomas. The imaging phenotype is highly characteristic of an IDH-mutant tumor, specifically the near-complete absence of enhancement (ET Volume (mL) of 0.004, Proportion Enhancing of 0.03) and the complete absence of necrosis (NCR Volume (mL) of 0.0). These features strongly argue against an IDH-wildtype glioma, which in an adult would be a glioblastoma and typically presents with significant enhancement and necrosis. The main contradicting feature is the absence of a T2-FLAIR mismatch sign, which is specific for IDH-mutant astrocytomas. However, its absence does not rule out an IDH-mutant status, especially for oligodendrogliomas, and the lack of enhancement is a more powerful predictor of IDH status overall. Therefore, the balance of evidence strongly supports an IDH-mutant prediction.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This assessment assumes an IDH-mutant tumor, as predicted above. The key differentiating feature between IDH-mutant astrocytoma (non-codeleted) and oligodendroglioma (codeleted) is the T2-FLAIR mismatch sign. This sign is highly specific for astrocytomas. In this case, the T2-FLAIR mismatch sign is absent ('T2-FLAIR Mismatch Present': 0.0). This finding argues against a non-codeleted astrocytoma and, by exclusion, supports a codeleted oligodendroglioma. Additionally, the tumor's significant cortical involvement ('Region Proportions' includes 'cortex' at 0.75) is a feature often seen in oligodendrogliomas. There are no strong features pointing specifically to a non-codeleted status. Therefore, the evidence favors a codeleted prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The WHO grade is determined by histological features, but on imaging, enhancement and necrosis are key surrogates for grade. This tumor shows a minuscule amount of enhancement ('ET Volume (mL)': 0.004, 'Proportion Enhancing': 0.03) and a complete absence of necrosis ('NCR Volume (mL)': 0.0). This non-enhancing, non-necrotic presentation is the classic imaging appearance of a low-grade glioma, most consistent with WHO grade 2. There is no evidence to support a WHO grade 4 diagnosis (e.g., rim enhancement, necrosis). While any enhancement can sometimes suggest a higher grade, the amount here is negligible and insufficient to confidently predict a grade 3 tumor in the absence of other aggressive features like deep white matter invasion, which is also absent. The evidence overwhelmingly supports a grade 2 classification.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 43-year-old male with a small, cortically-based temporal lobe tumor. The lesion is almost entirely non-enhancing and non-necrotic, strongly suggesting a low-grade, IDH-mutant glioma. The absence of a T2-FLAIR mismatch sign favors an oligodendroglioma (1p/19q-codeleted) over an astrocytoma. The lack of aggressive features supports a WHO grade 2 classification. The integrated radiological prediction is Oligodendroglioma, IDH-mutant, 1p/19q-codeleted, CNS WHO grade 2."
+}

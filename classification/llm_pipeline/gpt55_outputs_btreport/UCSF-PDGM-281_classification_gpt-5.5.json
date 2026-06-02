@@ -1,0 +1,82 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Tumor Location",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status considered independently, the strongest MRI pattern is a solitary, cortically based, nonenhancing infiltrative lesion: \"Enhancement Quality\" is none, \"ET Volume (mL)\" is 0.0, \"Proportion Enhancing\" is 0.0, \"Proportion Necrosis\" is 0.0, \"Cortical involvement\" is present, \"Multifocal or Multicentric\" is solitary, and \"Tumor Location\" includes cortex/insula/temporal/frontal regions. This pattern is more typical of IDH-mutant diffuse glioma than IDH-wildtype glioblastoma, which more often has enhancement, necrosis, multifocality, or more aggressive infiltrative features. Evidence against a confident IDH-mutant call is that \"ED Volume (mL)\" and \"Total tumor volume (mL)\" show a moderately large lesion, and the \"Tumor Location\"/\"Anatomical Overlap Regions\" include temporal-insular and deep gray/mesial temporal structures, which are not specific and can be seen in either molecular group. Overall, the nonenhancing, non-necrotic, solitary cortical-insular phenotype supports IDH-mutant status, but without age, diffusion, perfusion, spectroscopy, or histology the call remains probabilistic.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Tumor Location",
+      "Region Proportions",
+      "Text Report",
+      "NCR Volume (mL)",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the lesion has substantial insular and temporal involvement on \"Region Proportions\" and \"Tumor Location\", with overlap of limbic/deep gray structures in \"Anatomical Overlap Regions\"; this distribution is somewhat more suggestive of astrocytic/non-codeleted diffuse glioma than classic oligodendroglioma, which more often has a strong frontal cortical-subcortical predilection. The absence of enhancement on \"Enhancement Quality\", \"ET Volume (mL)\", and \"Proportion Enhancing\" does not reliably separate codeleted from non-codeleted tumors, but it is compatible with a lower-grade astrocytic phenotype. Evidence arguing toward codeletion is also present: \"Cortical involvement\" is present, and \"Region Proportions\"/\"Tumor Location\" include frontal_lobe and cortex, which can fit oligodendroglioma. Because key discriminators are not assessed and the anatomic pattern is mixed, the best estimate is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "Anatomical Overlap Regions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The lesion is nonenhancing and non-necrotic, so imaging most strongly supports an IDH-mutant lower-grade diffuse glioma phenotype. The 1p/19q estimate is the least secure because calcification, diffusion, perfusion, spectroscopy, and detailed texture/FLAIR-mismatch features are unavailable or not assessed. Histopathology and molecular testing remain required for definitive WHO CNS5 classification.",
+  "subject_id": "UCSF-PDGM-281",
+  "who_grade": {
+    "confidence": 0.69,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": 2,
+    "reasoning": "For CNS WHO grade considered independently, the metadata favors a lower-grade lesion: \"Enhancement Quality\" is none, \"ET Volume (mL)\" is 0.0, \"Proportion Enhancing\" is 0.0, \"NCR Volume (mL)\" is 0.0, and \"Proportion Necrosis\" is 0.0, with no midline crossing, no ependymal invasion, no deep white matter invasion, no satellites, and solitary disease on the corresponding fields. These features argue against grade 4 and also reduce the likelihood of grade 3, since high-grade tumors more often show enhancement, necrosis, more aggressive spread, or marked mass effect. Evidence against a confident grade 2 call is that \"ED Volume (mL)\" and \"Total tumor volume (mL)\" show a sizable lesion, and \"Anatomical Overlap Regions\" indicates involvement of multiple adjacent structures; grade 3 diffuse glioma can also be nonenhancing. On balance, the absence of enhancement and necrosis with solitary localized disease supports CNS WHO grade 2, with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

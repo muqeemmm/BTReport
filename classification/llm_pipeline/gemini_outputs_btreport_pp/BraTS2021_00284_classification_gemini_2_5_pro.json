@@ -1,0 +1,56 @@
+{
+  "subject_id": "BraTS2021_00284",
+  "idh": {
+    "reasoning": "The patient's age of 55 years is more typical for IDH-wildtype gliomas. The imaging phenotype is highly aggressive and strongly suggests an IDH-wildtype tumor. Key features include multifocality (3 lesions), extensive midline crossing of the enhancing tumor, and invasion of deep gray matter structures bilaterally. The presence of necrosis, even a small amount, is a strong indicator of IDH-wildtype status. Furthermore, the very sharp tumor-edema boundary, evidenced by a thin FLAIR transition zone (median 0.75 mm), is characteristic of IDH-wildtype glioblastoma, contrasting with the more infiltrative margins of IDH-mutant astrocytomas. The absence of a T2-FLAIR mismatch also argues against an IDH-mutant astrocytoma. The only mildly contradicting feature is the 'Mild' enhancement quality, but this is insufficient to overcome the overwhelming evidence for wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "CET Crosses midline",
+      "Anatomical Overlap Regions",
+      "Proportion Necrosis",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This task is performed independently of the IDH prediction. The tumor exhibits several features that are atypical for a 1p/19q-codeleted oligodendroglioma. The aggressive nature, including multifocality, extensive midline crossing, deep gray matter invasion, and the presence of necrosis, points towards a non-codeleted, astrocytic lineage tumor (or IDH-wildtype glioblastoma). The absence of the T2-FLAIR mismatch sign is a strong argument against an IDH-mutant, non-codeleted astrocytoma, but in the context of all features, the overall picture is much more consistent with a non-codeleted glioma. The primary feature that could be seen in oligodendroglioma is the sharp tumor border (thin FLAIR transition zone). However, this feature is also characteristic of glioblastoma and is not specific enough to outweigh the numerous signs of high-grade, aggressive, non-oligodendroglial biology.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "CET Crosses midline",
+      "Anatomical Overlap Regions",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis (`Proportion Necrosis`: 2.1) in a diffusely infiltrating glioma with contrast enhancement is a defining radiological feature corresponding to CNS WHO grade 4. This is the single most important factor. This is strongly corroborated by other features of high-grade malignancy, including multifocality, a thick enhancing margin (>3mm), and an aggressive infiltrative pattern with midline crossing, deep white matter invasion, and ependymal invasion. Features that might argue for a lower grade, such as 'Mild' enhancement quality and the absence of midline shift, are minor in comparison and do not contradict the definitive evidence of necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "CET Crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 55-year-old male with a multifocal, midline-crossing, and deeply infiltrating glioma. The combination of older age, multifocality, presence of necrosis, and sharp tumor borders are all classic radiological hallmarks of a Glioblastoma, IDH-wildtype. The diagnosis of CNS WHO grade 4 is strongly supported by the presence of necrosis. The predictions for IDH-wildtype, 1p/19q non-codeleted, and grade 4 are internally consistent and point definitively to this diagnosis."
+}

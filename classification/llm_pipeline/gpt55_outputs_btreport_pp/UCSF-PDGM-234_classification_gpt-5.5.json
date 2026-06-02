@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata pattern favors IDH-mutant diffuse glioma: the patient is young, the lesion is frontal/cortical, nonenhancing, and has a strong T2-FLAIR mismatch signal, all of which are typical for IDH-mutant astrocytic glioma. The absence of enhancement, enhancing tumor volume, and necrosis also argues against the more typical imaging phenotype of IDH-wildtype glioblastoma. Features that reduce certainty are deep white-matter invasion, midline/crossing FLAIR abnormality, and a midline epicenter, which can be seen in more infiltrative aggressive tumors, but these are outweighed by the age, location, nonenhancing phenotype, and T2-FLAIR mismatch.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessed independently for 1p/19q status, the strongest available discriminator is the marked T2-FLAIR mismatch, which is classically associated with IDH-mutant astrocytoma and argues against oligodendroglioma with 1p/19q co-deletion. The lack of enhancement and lack of necrosis are also compatible with a lower-grade astrocytic diffuse glioma. Frontal cortical involvement and young age can be seen in oligodendroglioma, so they argue against a fully confident non-codeleted call, but without calcification/SWI information and with a strong mismatch pattern, the balance favors non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structural MRI metadata. The strongest imaging biomarker is the high T2-FLAIR mismatch score in a young patient with a nonenhancing frontal cortical lesion, favoring IDH-mutant astrocytoma. Confidence is limited by absence of DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification assessment, and by the infiltrative FLAIR abnormality crossing midline/deep white matter involvement.",
+  "subject_id": "UCSF-PDGM-234",
+  "who_grade": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "reasoning": "Assessed independently for grade, the lesion is entirely nonenhancing by the provided metadata, with no enhancing component and no necrosis, which supports a lower-grade diffuse glioma rather than CNS WHO grade 4. The T2-FLAIR mismatch pattern and absence of a measurable tumor core also fit a lower-grade appearance. Features that reduce certainty are the relatively large FLAIR abnormality, deep white-matter invasion, crossing midline, and motor eloquent involvement, which indicate infiltrative extent and could be seen with higher-grade disease, but there is no provided enhancement or necrosis to support grade 3 or 4. Therefore grade 2 is the best imaging estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

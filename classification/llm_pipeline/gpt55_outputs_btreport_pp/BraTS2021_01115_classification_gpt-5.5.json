@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors IDH-wildtype diffuse glioma: advanced age, marked enhancement, a high enhancing fraction, measurable necrosis, large tumor/core volumes, and a short transition zone are more typical of IDH-wildtype glioblastoma than IDH-mutant astrocytoma. Features arguing against this include cortical/temporal involvement, which can be seen in IDH-mutant gliomas, and absence of T2-FLAIR mismatch does not support the classic IDH-mutant astrocytoma imaging pattern; however, the dominant high-grade enhancing/necrotic phenotype in an elderly patient supports IDH-wildtype as the best estimate.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "Tumor Core Volume (mL)",
+      "Transition Zone Thickness (FLAIR)",
+      "Transition Zone Thickness (T1CE)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata favors a non-codeleted tumor: older age, non-frontal temporal/occipital distribution, marked enhancement, high enhancing proportion, and necrosis are less typical for classic 1p/19q-codeleted oligodendroglioma, which more often presents as a frontal cortical-subcortical tumor and may show calcification, a feature not assessable here. Cortical involvement and temporal cortical location can be compatible with oligodendroglioma, so they argue against a confident non-codeleted call. Because key oligodendroglioma markers such as calcification are unavailable, the estimate is only moderately confident.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The imaging phenotype is dominated by a large, solitary, markedly enhancing necrotic mass in an elderly patient, strongly favoring glioblastoma; molecular confirmation remains required.",
+  "subject_id": "BraTS2021_01115",
+  "who_grade": {
+    "confidence": 0.94,
+    "contradicting_features": [
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "The metadata strongly favors CNS WHO grade 4 behavior: marked enhancement, thick enhancing margin, high enhancing volume/proportion, necrotic component, sizable edema, and large overall tumor burden are classic high-grade features. A lower grade 2 or 3 tumor would be less expected to show this degree of enhancement and necrosis. Features arguing against the highest grade include absent midline shift, absent deep white matter invasion, absent ependymal invasion, no satellites, and solitary disease; however, these do not outweigh the marked enhancement and necrosis. Therefore grade 4 is the best estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Tumor Core Volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

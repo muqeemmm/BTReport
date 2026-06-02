@@ -1,0 +1,68 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the MRI metadata favors IDH-wildtype because the patient is older, with a large infiltrative tumor burden, substantial necrotic/nonenhancing component, extensive oedema, deep white matter invasion, and measurable midline shift; these features are more typical of an aggressive IDH-wildtype diffuse glioma. Evidence against IDH-wildtype is that frontal/cortical/insular involvement and only mild/small enhancing volume can be seen with IDH-mutant gliomas. Overall, the aggressive size, necrotic component, edema, deep invasion, and age outweigh the lower-grade-appearing location/enhancement features, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "n_slices_with_shift"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the metadata leans non-codeleted because the tumor shows deep white matter invasion, large edema burden, substantial necrotic/nonenhancing component, midline shift, and a thick enhancing margin, which are less typical for classic oligodendroglioma imaging patterns. Evidence supporting codeletion is the frontal, cortical, and insular distribution with mild enhancement, which can fit oligodendroglioma. Because location supports codeletion but the aggressive infiltrative/necrotic and mass-effect features argue against it, the best estimate is non-codeleted with only moderate confidence.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, susceptibility, or histopathology. The strongest imaging signal is for a high-grade aggressive diffuse glioma; frontal/cortical/insular location creates residual uncertainty for IDH and 1p/19q predictions.",
+  "subject_id": "EGD-0410",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently, the imaging metadata strongly supports grade 4 because there is a large necrotic/nonenhancing component, high necrosis proportion, substantial oedema, deep white matter invasion, thick enhancing margin, large total tumor volume, and midline shift. These are conventional MRI markers of a high-grade diffuse glioma. Features arguing against grade 4 are that enhancement is described as mild and the enhancing tumor volume is small, which can be seen in lower-grade or less avidly enhancing tumors. However, the necrotic burden, edema, invasion, tumor size, and mass effect substantially outweigh the mild enhancement descriptor, so grade 4 is the best estimate.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "n_slices_with_shift"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

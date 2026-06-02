@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0055",
+  "idh": {
+    "reasoning": "The patient's age of 55 years is more typical for IDH-wildtype gliomas. The imaging phenotype is classic for glioblastoma (IDH-wildtype), characterized by marked, thick-walled, ring-like enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm') with a significant necrotic core ('NCR Volume (mL)': 4.855). The tumor also demonstrates relatively sharp margins ('boundary_sharpness': 2.24, 'Transition Zone Thickness (FLAIR)': 0.75 mm median), which is more common in IDH-wildtype tumors than the diffusely infiltrative margins of IDH-mutant astrocytomas. The absence of a T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0) further argues against an IDH-mutant astrocytoma. There is minimal evidence to support an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "boundary_sharpness",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of marked, thick ring enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm') and central necrosis ('NCR Volume (mL)': 4.855) are highly atypical for 1p/19q-codeleted oligodendrogliomas, which usually exhibit minimal to no enhancement and rarely show necrosis. The aggressive features, including the enhancing component crossing the midline ('CET Crosses midline': 'True'), are characteristic of a high-grade, non-codeleted glioma (either IDH-mutant astrocytoma or, more likely in this case, IDH-wildtype glioblastoma). While the frontal lobe location ('Tumor Location') and cortical involvement ('Cortical involvement') are common in oligodendrogliomas, these features are non-specific and are overwhelmingly contradicted by the strong evidence of high-grade morphology.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO Grade 4 is based on the definitive presence of imaging correlates for high-grade histology. The key finding is central necrosis ('NCR Volume (mL)': 4.855), which is a hallmark of Grade 4 gliomas. This is strongly supported by the presence of marked, thick contrast enhancement ('Enhancement Quality': 'Marked', 'ET Volume (mL)': 12.794, 'Thickness of enhancing margin': '>3mm'). Together, contrast enhancement and necrosis are the primary radiological criteria for diagnosing a Grade 4 diffuse glioma. There are no imaging features suggestive of a lower grade (2 or 3).",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO Grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 55-year-old male with a solitary frontal lobe tumor. The imaging features, including marked ring enhancement, central necrosis, and relatively sharp borders, are highly characteristic of a Glioblastoma, IDH-wildtype. The predictions of IDH-wildtype, non-codeleted status, and WHO Grade 4 are all made with high confidence and are consistent with the WHO CNS5 classification for this diagnosis."
+}

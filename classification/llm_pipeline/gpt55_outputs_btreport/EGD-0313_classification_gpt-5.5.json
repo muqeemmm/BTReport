@@ -1,0 +1,78 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "midline_shift_present",
+      "Total tumor volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors an IDH-wildtype diffuse glioma because the patient is older, the lesion is centered in a deep internal_capsule-thalamus region rather than showing cortical involvement, and it is mostly/markedly enhancing with multifocal disease and deep white-matter invasion. These features are more typical of aggressive IDH-wildtype glioma than lower-grade IDH-mutant astrocytoma. Evidence against a confident IDH-wildtype call is that mass effect is limited, overall tumor volume is modest, and necrosis is only a small component, which can be less typical of classic bulky glioblastoma. Overall, the balance supports IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "age_years",
+      "gender"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The imaging metadata favors non-codeleted status because the tumor is centered in the internal_capsule-thalamus region with absent cortical involvement, marked enhancement, thick enhancing margin, deep white-matter invasion, and multifocality. This pattern is less typical for 1p/19q-codeleted oligodendroglioma, which more often has a cortical/subcortical hemispheric predilection. Limited opposing evidence is that the patient's age and male sex can be compatible with oligodendroglioma, but these are nonspecific and outweighed by the deep, enhancing, multifocal phenotype. Overall, the balance supports non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The deep thalamic/internal-capsule location, marked enhancement, multifocality, edema, and small necrotic component favor an aggressive IDH-wildtype, non-codeleted tumor, but molecular confirmation is required.",
+  "subject_id": "EGD-0313",
+  "who_grade": {
+    "confidence": 0.79,
+    "contradicting_features": [
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "The metadata favors CNS WHO grade 4 because there is marked enhancement, a thick enhancing margin, a substantial enhancing component, measurable necrosis, edema, multifocal disease, and deep white-matter invasion, all of which support a high-grade aggressive glioma phenotype. Features arguing against maximal certainty include absent midline shift, relatively small necrotic proportion, absent ependymal invasion, no enhancing or edema crossing of midline, and a modest total tumor volume. Despite these limitations, the presence of marked enhancement with necrosis and multifocal infiltrative disease most strongly supports grade 4 rather than grade 2 or 3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

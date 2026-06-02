@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_00547",
+  "idh": {
+    "reasoning": "The patient's advanced age (76 years) is the single most significant predictor for IDH-wildtype status, as IDH-mutant gliomas are rare in this demographic. The imaging features strongly corroborate this prediction. The presence of marked, thick-walled enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm') and central necrosis ('NCR Volume (mL)': 1.628) are classic radiological hallmarks of glioblastoma, the archetypal IDH-wildtype glioma. Involvement of deep gray matter ('Anatomical Overlap Regions': 'left caudate') further supports an IDH-wildtype diagnosis. There are no significant features to suggest an IDH-mutant tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. The imaging phenotype is highly indicative of a non-codeleted tumor. Tumors with marked, thick-walled enhancement and central necrosis are characteristic of astrocytic lineage gliomas (either IDH-mutant astrocytoma or IDH-wildtype glioblastoma), which are non-codeleted. In contrast, 1p/19q co-deleted oligodendrogliomas typically exhibit less aggressive features, such as minimal or absent enhancement and are less likely to show necrosis. The presence of 'Marked' 'Enhancement Quality' and a non-zero 'NCR Volume (mL)' strongly argues against a 1p/19q co-deleted tumor. The frontal lobe location is non-specific and does not outweigh these aggressive features.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of central necrosis is a key radiological feature for differentiating WHO grade 4 gliomas from lower grades. The metadata explicitly quantifies a necrotic component ('NCR Volume (mL)': 1.628). This finding, in combination with the significant volume of enhancing tumor ('ET Volume (mL)': 5.833) and the 'Marked' 'Enhancement Quality', are definitive radiological indicators of a WHO grade 4 lesion. While grade 3 tumors enhance, they typically lack the extensive necrosis seen here. Grade 2 tumors are typically non-enhancing. The patient's advanced age also increases the a priori likelihood of a high-grade glioma.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an elderly male presenting with a solitary frontal lobe tumor. The imaging features of marked, thick-walled enhancement and central necrosis are classic for a high-grade glioma. The combination of advanced age and these aggressive radiological findings leads to a high-confidence prediction of Glioblastoma, IDH-wildtype, CNS WHO grade 4. All individual predictions are internally consistent."
+}

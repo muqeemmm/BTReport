@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0688",
+  "idh": {
+    "reasoning": "The patient is very young (22 years old), which is the strongest predictor for IDH-mutant status in adult-type diffuse gliomas. The tumor's location in the frontal lobe and its almost entirely non-enhancing nature (`ET Volume (mL)` of 0.027) further support an IDH-mutant glioma. A contradictory feature is the very high reported `Proportion Necrosis` (58.83%), which is more typical of IDH-wildtype glioblastoma. However, given the patient's age, an IDH-wildtype diagnosis would be exceptionally rare, and the 'necrosis' may represent cystic change in the absence of significant enhancement. Therefore, the overwhelming evidence from the patient's age points to an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The primary evidence for 1p/19q co-deletion is the tumor's very sharp margin, as indicated by the thin `Transition Zone Thickness (FLAIR)` (median 0.73 mm) and a high `boundary_sharpness` score. Sharply demarcated borders are a classic radiological feature of oligodendrogliomas (which are, by definition, IDH-mutant and 1p/19q-codeleted). The frontal lobe location is also typical. The main feature arguing against co-deletion is the high `Proportion Necrosis` (58.83%), which is more commonly seen in astrocytic tumors. However, the sharpness of the border is a more specific morphological sign for oligodendroglioma lineage than necrosis is for astrocytoma lineage, especially since high-grade oligodendrogliomas can exhibit necrosis. Therefore, the sharp border is the deciding factor.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "boundary_sharpness",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The grading is challenging due to conflicting features. The extremely high `Proportion Necrosis` (58.83%) strongly suggests a high-grade tumor. In the context of an IDH-mutant astrocytoma, this would mandate a Grade 4 diagnosis. However, the tumor is almost completely non-enhancing (`ET Volume (mL)` of 0.027, `Proportion Enhancing` of 0.03), which is atypical for a tumor with such extensive necrosis and more in line with a lower-grade glioma. Given the prediction of an oligodendroglioma (IDH-mutant, 1p/19q-codeleted), WHO Grade 4 is not a diagnostic option. The presence of necrosis is a feature of anaplasia, which would elevate the grade from 2 to 3. The high necrosis value, even if partially representing cystic change, combined with the large tumor size (`Total tumor volume (mL)` of 81.187), makes Grade 3 more likely than Grade 2. Therefore, Grade 3 is the most logical conclusion, balancing the evidence for high-grade features (necrosis) with the constraints of the predicted tumor type.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a complex case in a very young patient, presenting with conflicting radiological features. The patient's age strongly suggests an IDH-mutant glioma. The tumor's sharply defined borders are characteristic of an oligodendroglioma. The most confounding feature is the high reported proportion of necrosis in a nearly non-enhancing lesion, which is unusual. This raises suspicion for a high-grade tumor. The final integrated diagnosis of Oligodendroglioma, IDH-mutant, Grade 3 represents the best synthesis of this evidence, assuming the sharp borders are a more reliable indicator of lineage than the automated necrosis quantification is for grade in this specific context. The 'necrosis' may represent cystic change, which is compatible with a Grade 3 oligodendroglioma."
+}

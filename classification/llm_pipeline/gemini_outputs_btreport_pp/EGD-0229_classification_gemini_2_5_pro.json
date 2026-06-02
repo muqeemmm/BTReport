@@ -1,0 +1,45 @@
+{
+  "subject_id": "EGD-0229",
+  "idh": {
+    "reasoning": "The patient is young (30 years), which is more typical for IDH-mutant gliomas. The tumor is located in the frontal lobe, a common site for these tumors. Most importantly, the metadata reports a definitive T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.99). This sign is highly specific for IDH-mutant astrocytomas. The tumor has very little enhancement ('ET Volume (mL)': 0.101) and minimal surrounding edema ('ED Volume (mL)': 6.449), which are also characteristic features. The high 'Proportion Necrosis' is likely a quantitative descriptor for the large non-enhancing core, not true coagulative necrosis, given the near-absence of enhancement. The combination of young age and a strong T2-FLAIR mismatch sign provides very strong evidence for an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Region Proportions",
+      "ET Volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The single most compelling feature for determining 1p/19q status in this case is the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0). This finding is strongly associated with IDH-mutant astrocytomas, which are by definition 1p/19q non-codeleted. While some features like frontal lobe location ('Region Proportions') and relatively sharp borders ('Transition Zone Thickness (FLAIR)': 0.75 mm) can be seen in oligodendrogliomas (codeleted), the T2-FLAIR mismatch sign is a powerful differentiator that overwhelmingly favors a non-codeleted status. The tumor's morphology, with a large non-enhancing core that is hyperintense on T2 but suppressed on FLAIR, is the classic substrate for this sign and points away from an oligodendroglioma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits features of both lower and higher grades, making grading based on imaging challenging. The lack of significant mass effect ('midline_shift_present': 'No') and the presence of the T2-FLAIR mismatch sign are often seen in lower-grade (2 or 3) gliomas. However, the presence of contrast enhancement, even if mild ('Enhancement Quality': 'Mild', 'ET Volume (mL)': 0.101), typically precludes a WHO grade 2 diagnosis. The tumor does not show features of a classic grade 4 lesion, such as robust, thick, or ring-like enhancement. In the context of an IDH-mutant astrocytoma, grade 4 is defined by homozygous deletion of CDKN2A/B, which cannot be determined from MRI. Based on the available imaging features, the presence of enhancement in an otherwise lower-grade appearing tumor is most consistent with a CNS WHO grade 3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "midline_shift_present"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "A 30-year-old patient with a large, solitary frontoparietal glioma. The imaging phenotype is dominated by a definitive T2-FLAIR mismatch sign, which is a highly specific marker for an IDH-mutant, 1p/19q non-codeleted astrocytoma. The presence of mild contrast enhancement suggests a grade higher than 2. Therefore, the most probable integrated diagnosis is Astrocytoma, IDH-mutant, CNS WHO grade 3."
+}

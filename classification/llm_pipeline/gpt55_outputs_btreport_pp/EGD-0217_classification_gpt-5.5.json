@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors IDH-mutant diffuse glioma because age_years is young for an adult diffuse glioma, Tumor Location and Region Proportions place the lesion in a frontal cortical distribution, Cortical involvement is present, Deep WM invasion is absent, Total tumor volume (mL) is small, midline_shift_present is absent, and Ependymal (ventricular) Invasion is absent. These features are more typical of a lower-grade, IDH-mutant glioma than an IDH-wildtype glioblastoma pattern. Evidence arguing against IDH-mutant status is that Enhancement Quality is mild but present, ET Volume (mL) is nonzero, NCR Volume (mL) is nonzero, Proportion Necrosis is reported, and T2-FLAIR Mismatch Present is absent with a low T2-FLAIR Mismatch Score, so the imaging is not a classic IDH-mutant astrocytoma mismatch pattern. Overall, the age and frontal cortical, limited-invasion pattern outweigh the small enhancing/necrotic components, leading to an IDH-mutant prediction.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, Tumor Location and Region Proportions show a frontal cortical lesion, Cortical involvement is present, T2-FLAIR Mismatch Present is absent, and Enhancement Quality is mild rather than avid; this combination is compatible with oligodendroglioma-like imaging. Evidence against co-deletion is limited but important: T2-FLAIR Mismatch Score is not strongly diagnostic, ET Volume (mL) and NCR Volume (mL) are nonzero, and Enhancement Quality is present, so the metadata cannot reliably separate oligodendroglioma from non-codeleted diffuse glioma. Because the frontal cortical location and absent mismatch pattern modestly favor co-deletion, but the evidence is not specific, the prediction is 1p/19q-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured pre-operative MRI metadata. Molecular testing remains required. The very small enhancing and necrotic volumes create uncertainty, especially for WHO grade.",
+  "subject_id": "EGD-0217",
+  "who_grade": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade considered independently, the strongest evidence favors a lower-grade lesion: Total tumor volume (mL) is small, Lesion Sizes APxTVxCC (cm) is small, Enhancement Quality is only mild, ET Volume (mL) is extremely small, NCR Volume (mL) is extremely small, midline_shift_present is absent, Asymmetrical Ventricles is absent, Deep WM invasion is absent, Ependymal (ventricular) Invasion is absent, Multifocal or Multicentric is solitary, and Multiple satellites present is absent. These findings argue more for CNS WHO grade 2 than grade 3 or 4. The counterevidence is that Enhancement Quality is present, ET Volume (mL) and NCR Volume (mL) are nonzero, Proportion Necrosis is reported, and Thickness of enhancing margin is greater than 3 mm, which are higher-grade warning features. Because the enhancing and necrotic components are very small and there is no mass-effect or invasive-complication pattern, the best imaging estimate is grade 2, but confidence is only modest.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

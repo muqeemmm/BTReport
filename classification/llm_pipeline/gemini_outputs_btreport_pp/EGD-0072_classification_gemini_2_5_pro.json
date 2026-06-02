@@ -1,0 +1,51 @@
+{
+  "subject_id": "EGD-0072",
+  "idh": {
+    "reasoning": "The patient's young age (27 years) is a very strong predictor for IDH-mutant status. This is further corroborated by the definitive presence of a T2-FLAIR mismatch, which is a highly specific imaging biomarker for IDH-mutant astrocytomas. While the midline tumor epicenter and large necrotic core are features more commonly associated with IDH-wildtype glioblastoma, the combination of young age and the T2-FLAIR mismatch sign provides compelling evidence that outweighs these contradictory features. IDH-mutant tumors can present with necrosis, particularly at higher grades.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "NCR Volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of a T2-FLAIR mismatch is the single most decisive feature for this classification. This sign is considered pathognomonic for IDH-mutant astrocytomas (1p/19q non-codeleted) and is characteristically absent in oligodendrogliomas (1p/19q codeleted). Although the tumor exhibits a very sharp transition zone, a feature often associated with oligodendroglioma, the T2-FLAIR mismatch is a more powerful and specific molecular correlate. The involvement of deep gray matter structures also favors an astrocytic lineage over an oligodendroglial one.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic core, indicated by a significant 'NCR Volume (mL)' of 43.754, is a definitive feature of a high-grade glioma. According to the WHO CNS5 classification, the presence of necrosis in an IDH-mutant astrocytoma automatically confers a grade of 4. This is strongly supported by other aggressive features, including contrast enhancement ('ET Volume (mL)' > 0), significant mass effect ('midline_shift_present'), large overall tumor volume, and both ependymal and deep white matter invasion. While the patient is young, which is more typical for lower-grade presentation, the imaging features of necrosis are unequivocal indicators of high-grade biology.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a 27-year-old patient with a large frontal-insular tumor exhibiting features highly suggestive of an IDH-mutant astrocytoma, most notably a strong T2-FLAIR mismatch sign. Despite the patient's young age, the tumor displays clear signs of high-grade transformation, including a large necrotic core and contrast enhancement. These features are sufficient for a diagnosis of CNS WHO grade 4. The midline location is somewhat atypical but does not override the strong evidence for an IDH-mutant astrocytoma."
+}

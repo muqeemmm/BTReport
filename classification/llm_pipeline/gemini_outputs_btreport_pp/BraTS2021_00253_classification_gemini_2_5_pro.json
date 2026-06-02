@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_00253",
+  "idh": {
+    "reasoning": "The patient's age of 48 is more typical for IDH-wildtype gliomas. The presence of both contrast enhancement (ET Volume > 0) and a necrotic core (NCR Volume > 0) are strong indicators of IDH-wildtype status, as these are hallmark features of glioblastoma. The involvement of deep gray matter structures like the putamen and pallidum also favors an IDH-wildtype diagnosis. Furthermore, the absence of the T2-FLAIR mismatch sign is a significant negative predictor for IDH-mutant astrocytoma. While the median FLAIR transition zone is thin, suggesting sharp borders (a feature sometimes seen in IDH-mutant tumors), this is outweighed by the multiple features pointing towards a more aggressive, IDH-wildtype phenotype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Anatomical Overlap Regions",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The presence of a necrotic core (NCR Volume > 0) is atypical for 1p/19q-codeleted oligodendrogliomas and more characteristic of astrocytic lineage tumors (non-codeleted). The tumor's involvement of deep gray matter structures (putamen, pallidum) is also less common in oligodendrogliomas. While oligodendrogliomas are known for sharp margins and cortical involvement, and this tumor does show a low median FLAIR transition zone thickness and cortical involvement, the high percentile (p95) of the transition zone thickness suggests significant areas of indistinct margins, arguing against the uniformly well-defined borders typical of codeleted tumors. The balance of evidence, particularly the presence of necrosis, favors a non-codeleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The most critical finding for grading is the presence of a necrotic core (NCR Volume > 0), which is a key radiographic feature corresponding to WHO Grade 4. Additionally, the presence of contrast enhancement (ET Volume > 0) indicates at least a Grade 3 tumor. The combination of both enhancement and necrosis strongly supports a Grade 4 classification. Although the enhancement is described as 'Mild' and the necrotic volume is small, the presence of any radiographically apparent necrosis is a powerful indicator of the highest grade. The patient's age (48) is also consistent with a high-grade glioma.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings for this 48-year-old male with a right temporal lobe tumor are most consistent with a Glioblastoma, IDH-wildtype. The key determinants are the presence of both contrast enhancement and a necrotic core, which strongly suggest a WHO Grade 4 tumor. The patient's age, deep gray matter involvement, and absence of a T2-FLAIR mismatch sign further support an IDH-wildtype status. The tumor is therefore classified as Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

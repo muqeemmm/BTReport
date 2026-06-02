@@ -1,0 +1,47 @@
+{
+  "subject_id": "UCSF-PDGM-259",
+  "idh": {
+    "reasoning": "The patient's young age (28 years) is the strongest predictor for an IDH-mutant glioma. This is strongly corroborated by the classic imaging phenotype of a large, purely T2/FLAIR hyperintense, non-enhancing lesion ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0). The frontal and insular location is also highly characteristic of IDH-mutant tumors. There are no significant features to suggest an IDH-wildtype status, which typically presents in older patients and often with enhancement and necrosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the key features for differentiating astrocytoma (non-codeleted) from oligodendroglioma (codeleted) are location and infiltration pattern. The involvement of the insula ('Region Proportions') and deep gray matter structures ('Anatomical Overlap Regions' including caudate and putamen) are strong indicators of an astrocytic lineage. Furthermore, the presence of 'Deep WM invasion' suggests an infiltrative pattern more typical of astrocytoma. While frontal and cortical involvement can be seen in oligodendroglioma, the combination of insular and deep structural involvement makes non-codeletion much more likely.",
+    "supporting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of contrast enhancement ('Enhancement Quality': 'None') and necrosis ('Proportion Necrosis': 0.0) makes a WHO grade 4 tumor highly unlikely based on imaging. The differential is between grade 2 and grade 3. While the lack of enhancement is typical for grade 2, the very large tumor volume ('Total tumor volume (mL)': 78.18) and the significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': -9.0) suggest a more aggressive or rapidly growing lesion. These features increase the likelihood of a higher grade, making grade 3 a more probable diagnosis than grade 2, although the final determination is histological.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging features are highly characteristic of an IDH-mutant astrocytoma. The patient's young age and the large, non-enhancing, infiltrative nature of the tumor in the frontal and insular lobes strongly support this molecular subtype. While the distinction between WHO grade 2 and 3 is challenging on imaging alone, the substantial tumor volume and mass effect favor a grade 3 designation. The integrated diagnosis is Astrocytoma, IDH-mutant, CNS WHO grade 3."
+}

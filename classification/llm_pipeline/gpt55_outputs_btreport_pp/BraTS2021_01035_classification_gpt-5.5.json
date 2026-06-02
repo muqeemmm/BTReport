@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the strongest MRI pattern favors IDH-wildtype: \"Tumor Location\" is brainstem, \"Side of Tumor Epicenter\" is midline, and \"Region Proportions\" is almost entirely brainstem, which is atypical for the common hemispheric cortical/subcortical distribution of IDH-mutant adult diffuse glioma. \"Enhancement Quality\" is marked, \"Proportion Enhancing\" is substantial, and \"Thickness of enhancing margin\" is >3mm, which also leans away from a classic lower-grade IDH-mutant appearance. \"T2-FLAIR Mismatch Present\" is 0.0, so there is no positive mismatch sign to support IDH-mutant astrocytoma. \"Cortical involvement\" is absent and \"Deep WM invasion\" is present, further favoring a non-classic IDH-mutant pattern. Against IDH-wildtype, \"age_years\" is 38, which is younger than typical glioblastoma, and the lesion is small by \"Total tumor volume (mL)\" and \"Lesion Sizes APxTVxCC (cm)\", which reduces certainty. Overall, the location and enhancement pattern outweigh the younger age and small size, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "age_years",
+      "Number of lesions",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the MRI pattern strongly favors non-codeleted. \"Tumor Location\" is brainstem, \"Side of Tumor Epicenter\" is midline, and \"Region Proportions\" is nearly entirely brainstem, whereas 1p/19q-codeleted oligodendroglioma is typically a supratentorial cortical/subcortical hemispheric tumor. \"Cortical involvement\" is absent, which argues against an oligodendroglial pattern. \"Enhancement Quality\" is marked, \"Proportion Enhancing\" is 21.56, and \"Thickness of enhancing margin\" is >3mm, which are less typical for classic lower-grade oligodendroglioma. \"Deep WM invasion\" is present, adding support for a non-codeleted infiltrative pattern. Against non-codeletion, \"age_years\" of 38 is within the possible range for oligodendroglioma, and \"Number of lesions\" with \"Multifocal or Multicentric\" indicates a solitary lesion, which is nonspecific and does not exclude oligodendroglioma. Overall, the brainstem midline location and absent cortical involvement make co-deletion unlikely.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the provided structural MRI metadata. The lesion is small but has marked enhancement and a small necrotic/nonenhancing component in a midline brainstem location, which is atypical for classic hemispheric adult-type diffuse glioma and leaves molecular uncertainty. Missing diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, and histopathology would materially affect confidence.",
+  "subject_id": "BraTS2021_01035",
+  "who_grade": {
+    "confidence": 0.69,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently, the imaging leans toward grade 4 because \"Enhancement Quality\" is marked, \"Thickness of enhancing margin\" is >3mm, \"Proportion Enhancing\" is 21.56, and \"ET Volume (mL)\" confirms a measurable enhancing component. \"Proportion Necrosis\" and \"NCR Volume (mL)\" indicate a small necrotic/nonenhancing component, which supports grade 4 over grade 2 or many grade 3 tumors. \"Proportion of Oedema\" is high and \"Deep WM invasion\" is present, adding aggressive features. Against grade 4, \"Total tumor volume (mL)\" and \"Lesion Sizes APxTVxCC (cm)\" show a small tumor, \"midline_shift_present\" is No, \"Ependymal (ventricular) Invasion\" is absent, \"Multiple satellites present\" is absent, and \"Multifocal or Multicentric\" is solitary; also the necrotic fraction is limited by \"Proportion Necrosis\" and \"NCR Volume (mL)\". Overall, marked thick enhancement plus even limited necrosis and edema favor CNS WHO grade 4, but confidence is moderate rather than high because tumor size and necrosis are limited.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

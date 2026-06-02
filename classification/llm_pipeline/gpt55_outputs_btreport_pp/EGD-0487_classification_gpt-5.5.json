@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because age_years is young for adult diffuse glioma, and the lesion is a nonenhancing cortical parietal tumor by Cortical involvement, Tumor Location, Enhancement Quality, ET Volume (mL), Proportion Enhancing, and n_components_enhancing. Solitary, relatively small-volume disease without deep white matter or ependymal invasion also supports a lower-grade IDH-mutant phenotype, reflected by Multifocal or Multicentric, Number of lesions, Total tumor volume (mL), Lesion Sizes APxTVxCC (cm), Deep WM invasion, and Ependymal (ventricular) Invasion. Evidence against IDH-mutant status is limited but includes a high Proportion of Oedema and measurable ED Volume (mL), and Side of Tumor Epicenter being recorded as midline rather than a clearly lateral hemispheric epicenter. Overall, the supportive imaging pattern is stronger than the contradicting features, so the conclusion is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "Tumor Location",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the strongest available support for codeletion is cortical involvement in a parietal-cortex region, captured by Cortical involvement, Region Proportions, and Tumor Location; cortical or cortico-subcortical presentation is compatible with oligodendroglial tumors. T2-FLAIR Mismatch Present is negative, which argues against the classic mismatch pattern associated with non-codeleted astrocytoma rather than directly proving codeletion. Nonenhancement by Enhancement Quality, ET Volume (mL), Proportion Enhancing, and n_components_enhancing is compatible with a lower-grade oligodendroglioma but is not specific. Against codeletion, Tumor Location is parietal rather than the more typical frontal predominance, and T2-FLAIR Mismatch Score and T2-FLAIR Mismatch Degree show some partial mismatch-like signal despite the binary mismatch field being negative. Because the evidence is indirect and calcification-sensitive sequences are unavailable, the conclusion is only a weak best estimate of 1p/19q-codeleted.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/GRE. The IDH and grade calls are more supported by the young age and nonenhancing small cortical lesion. The 1p/19q call is the least certain because key discriminators such as calcification and metabolic/perfusion features are not available.",
+  "subject_id": "EGD-0487",
+  "who_grade": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The grade assessment favors CNS WHO grade 2 because the tumor is nonenhancing by Enhancement Quality, ET Volume (mL), Proportion Enhancing, and n_components_enhancing, is solitary and small by Multifocal or Multicentric, Number of lesions, Total tumor volume (mL), and Lesion Sizes APxTVxCC (cm), and has only minimal mass effect by midline_shift_present. Absence of deep white matter and ependymal invasion by Deep WM invasion and Ependymal (ventricular) Invasion also supports a lower-grade appearance. Findings arguing against grade 2 are Proportion Necrosis and NCR Volume (mL), which could indicate a nonenhancing core or necrotic component if the segmentation truly represents necrosis. However, the lack of enhancement and limited mass effect weigh more strongly against grade 4 and make grade 3 less likely than grade 2 on these metadata alone. The conclusion is CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

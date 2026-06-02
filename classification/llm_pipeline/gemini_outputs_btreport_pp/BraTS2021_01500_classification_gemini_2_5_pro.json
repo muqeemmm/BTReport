@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_01500",
+  "idh": {
+    "reasoning": "The evidence for IDH status is conflicting. The strongest feature supporting an IDH-mutant status is the definitive presence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.76), which is a highly specific sign for IDH-mutant astrocytoma. The tumor's location in the frontal lobe cortex without deep white matter invasion also favors this diagnosis. Conversely, the patient's age of 53 is more typical for IDH-wildtype tumors. More importantly, the very high proportion of necrosis ('Proportion Necrosis': 40.52%) is a strong indicator of glioblastoma, IDH-wildtype. The presence of satellite lesions also suggests a more aggressive, often wildtype, phenotype. On balance, the high specificity of the T2-FLAIR mismatch sign slightly outweighs the conflicting features, suggesting an IDH-mutant tumor that has undergone high-grade transformation. Therefore, the prediction is mutant, but with reduced confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Multiple satellites present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q status is primarily driven by the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0). This feature is strongly associated with IDH-mutant astrocytomas, which are by definition 1p/19q non-codeleted. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically do not exhibit this sign and tend to have sharper margins. The presence of a measurable transition zone ('Transition Zone Thickness') further suggests infiltrative, ill-defined borders, which is characteristic of astrocytomas (non-codeleted) rather than oligodendrogliomas. There are no strong features to suggest a co-deleted status. Therefore, the evidence points strongly towards a non-codeleted tumor.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is strongly influenced by features of high-grade malignancy. The most significant finding is the very high proportion of the tumor core that is necrotic ('Proportion Necrosis': 40.52%). The presence of necrosis is a defining histological feature of a WHO grade 4 tumor. Additionally, the presence of contrast enhancement ('Enhancement Quality': 'Mild', 'ET Volume (mL)': 0.518) and satellite lesions ('Multiple satellites present': 'Present') are also indicative of high-grade disease (at least grade 3, but more likely grade 4 in the presence of necrosis). While the T2-FLAIR mismatch sign is more commonly seen in lower-grade gliomas (2 or 3), it does not preclude a grade 4 diagnosis. The overwhelming evidence of necrosis makes a grade 4 prediction the most likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents with conflicting radiological features. The prominent T2-FLAIR mismatch sign strongly suggests an IDH-mutant astrocytoma. However, the extensive necrosis is a hallmark of a WHO grade 4 lesion. The most probable diagnosis is an Astrocytoma, IDH-mutant, with high-grade transformation. The confidence in IDH status is moderate due to the conflicting signals, but the predictions for non-codeletion and WHO grade 4 are made with high confidence based on the available features."
+}

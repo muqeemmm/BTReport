@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma: age_years is 34, T2-FLAIR Mismatch Present is positive with a high T2-FLAIR Mismatch Score, and the tumor is overwhelmingly nonenhancing by ET Volume (mL), Proportion Enhancing, and n_components_enhancing. Tumor Location, Region Proportions, and Cortical involvement also describe a cortical/fronto-insular pattern often seen with IDH-mutant diffuse glioma. Evidence arguing against IDH-mutant status includes very large Total tumor volume (mL), Deep WM invasion, midline_shift_present, and high Proportion Necrosis/NCR Volume (mL), which can be seen with more aggressive IDH-wildtype tumors. Overall, the strong mismatch sign and near-absent enhancement outweigh the aggressive mass-effect features, so IDH-mutant is favored.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata favors a non-codeleted glioma because T2-FLAIR Mismatch Present is positive with a high T2-FLAIR Mismatch Score, a pattern that is much more typical of astrocytic non-codeleted diffuse glioma than oligodendroglioma. The very low ET Volume (mL), very low Proportion Enhancing, and n_components_enhancing showing no enhancing components also fit this pattern. Evidence arguing for possible codeletion is that age_years is young adult and Tumor Location/Region Proportions/Cortical involvement include frontal and cortical involvement, which can be compatible with oligodendroglioma. However, the T2-FLAIR mismatch pattern is the strongest discriminator here, so non-codeleted is favored.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing"
+    ]
+  },
+  "overall_comment": "The molecular predictions are driven mainly by the strong T2-FLAIR mismatch pattern and near-absent enhancement. WHO grade is less certain from MRI metadata alone: minimal enhancement supports lower grade, while large tumor burden, mass effect, and the high nonenhancing core/necrosis-related fields raise concern for higher grade. Histopathology and molecular testing remain required for definitive grading and integrated diagnosis.",
+  "subject_id": "EGD-0567",
+  "who_grade": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade, the MRI metadata most strongly supports a lower-grade nonenhancing diffuse glioma: ET Volume (mL) is essentially zero, Proportion Enhancing is extremely low, n_components_enhancing shows no enhancing components, Thickness of enhancing margin is thin, and T2-FLAIR Mismatch Present with a high T2-FLAIR Mismatch Score is a lower-grade-leaning pattern. Evidence against grade 2 includes large Total tumor volume (mL), large Lesion Sizes APxTVxCC (cm), substantial ED Volume (mL)/Proportion of Oedema, midline_shift_present, Deep WM invasion, and high Proportion Necrosis/NCR Volume (mL), all of which raise concern for grade 3 or grade 4 biology; Enhancement Quality also indicates at least mild enhancement. Because classic high-grade enhancing morphology is largely absent, but the large infiltrative burden creates uncertainty, grade 2 is the best estimate with only modest confidence.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

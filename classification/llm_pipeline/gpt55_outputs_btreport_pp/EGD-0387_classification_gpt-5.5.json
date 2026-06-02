@@ -1,0 +1,63 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, the lesion is solitary with cortical involvement, deep white matter invasion is absent, midline shift is absent, and enhancement is mild with a very small enhancing volume. These features are more typical of lower-age adult diffuse glioma biology than de novo IDH-wildtype glioblastoma. The main opposing features are ependymal invasion, a reported necrotic/nonenhancing component, and a thick enhancing margin, which can accompany more aggressive IDH-wildtype tumors. Overall, the age and limited enhancement/mass-effect pattern outweigh the aggressive features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the strongest imaging clue against co-deletion is the non-frontal predominance, with occipital and parietal involvement rather than the more typical frontal cortical-subcortical oligodendroglioma pattern. Ependymal/ventricular involvement is also not a specific oligodendroglial feature. Features that could support co-deletion include cortical involvement, mild enhancement, and absent T2-FLAIR mismatch, but these are nonspecific without calcification-sensitive imaging or molecular data. Overall, the anatomic distribution makes non-codeleted slightly more likely, but confidence is low because the available MRI metadata is limited for this task.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the provided structural MRI metadata. The most uncertain call is 1p/19q status because calcification-sensitive imaging, diffusion, perfusion, spectroscopy, and histopathology/molecular testing are not available. The grade estimate is driven by the reported necrotic component and enhancing-margin features despite only mild, very small-volume enhancement.",
+  "subject_id": "EGD-0387",
+  "who_grade": {
+    "confidence": 0.69,
+    "contradicting_features": [
+      "age_years",
+      "midline_shift_present",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "The grade assessment is driven by features concerning for high-grade tumor: a large reported necrotic/nonenhancing component, thick enhancing margin, rim-core adjacency, substantial edema proportion, and ependymal invasion. These favor CNS WHO grade 4 over grade 2 or 3 on imaging grounds. Features arguing against grade 4 include young age, absent midline shift, very small enhancing volume, only mild enhancement, absent deep white matter invasion, and solitary disease. Because the necrosis-related and rim-enhancement metadata are strong high-grade indicators but partly counterbalanced by the small/mild enhancement and limited mass effect, the best estimate is grade 4 with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "rim_core_adjacency",
+      "Proportion of Oedema",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

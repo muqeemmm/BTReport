@@ -1,0 +1,55 @@
+{
+  "subject_id": "EGD-0172",
+  "idh": {
+    "reasoning": "The patient's age of 60 years is a strong demographic predictor for IDH-wildtype status. The MRI findings are classic for glioblastoma, which is the most common IDH-wildtype glioma. Key features include the presence of both significant contrast enhancement (ET Volume (mL): 17.621) and central necrosis (NCR Volume (mL): 13.33). The extensive vasogenic edema (ED Volume (mL): 183.919), significant mass effect (midline_shift_present: \"Yes\", max_shift_mm: 10.0), and invasion of deep structures like the thalamus and basal ganglia are all highly characteristic of IDH-wildtype tumors. Ependymal invasion further points to aggressive biology typical of IDH-wildtype gliomas. The only mildly contradictory feature is the qualitative description of 'Mild' enhancement, but the quantitative volumes of enhancement and necrosis are substantial and more compelling.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically lack necrosis and significant enhancement. This tumor demonstrates substantial necrosis (NCR Volume (mL): 13.33) and a thick enhancing margin (Thickness of enhancing margin: \">3mm\"). Furthermore, the massive amount of vasogenic edema (ED Volume (mL): 183.919) is highly characteristic of a high-grade astrocytic lineage tumor (non-codeleted) rather than an oligodendroglioma. The deep white matter and basal ganglia invasion is also more typical for an astrocytoma or glioblastoma. There are no features to suggest a co-deleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of radiologically evident necrosis (NCR Volume (mL): 13.33, Proportion Necrosis: 6.2%) is a defining feature of CNS WHO grade 4. This is the single most important feature for grading in this context. This is strongly corroborated by other features of high-grade malignancy, including significant contrast enhancement (ET Volume (mL): 17.621), extensive vasogenic edema (ED Volume (mL): 183.919), and major mass effect (midline_shift_present: \"Yes\", max_shift_mm: 10.0). Ependymal invasion is also associated with higher grades. There is no evidence to support a grade 2 or 3 diagnosis in the face of clear necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 60-year-old with a large left temporal tumor. The combination of older age, presence of both contrast enhancement and necrosis, extensive edema, and significant mass effect provides a classic imaging presentation for Glioblastoma, IDH-wildtype. The confidence in this diagnosis is high based on the provided MRI metadata."
+}

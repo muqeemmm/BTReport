@@ -1,0 +1,46 @@
+{
+  "subject_id": "UCSF-PDGM-240",
+  "idh": {
+    "reasoning": "The patient's young age (26 years) is a very strong predictor for IDH-mutant status. This is further supported by the classic imaging phenotype of a low-grade glioma: the tumor is entirely non-enhancing and non-necrotic, as indicated by an 'Enhancement Quality' of 'None', zero enhancing volume ('ET Volume (mL)'), and zero necrotic volume ('NCR Volume (mL)'). The frontal lobe location is also typical for IDH-mutant tumors. There are no features suggesting an IDH-wildtype glioma, which would be rare at this age and typically present with more aggressive features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the high likelihood of an IDH-mutant tumor, the key task is to differentiate between astrocytoma and oligodendroglioma. Several features point towards oligodendroglioma (1p/19q-codeleted). The tumor has a frontal lobe location with cortical involvement, a classic presentation for oligodendroglioma. The absence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0) argues against an IDH-mutant astrocytoma and is characteristic of an oligodendroglioma. The relatively well-defined nature of the lesion, suggested by the 'boundary_sharpness' value, also favors this diagnosis. There are no features specifically suggesting a non-codeleted (astrocytic) lineage.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "boundary_sharpness"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The radiological features are unequivocally those of a low-grade glioma. The complete absence of contrast enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0) and necrosis ('NCR Volume (mL)': 0.0) are the primary determinants. According to WHO CNS5 criteria, grade 4 requires necrosis or microvascular proliferation (which manifests as enhancement), both of which are absent. Grade 3 tumors typically show some enhancement. The lack of these aggressive features, combined with the absence of deep white matter or ependymal invasion, strongly supports a WHO grade 2 classification.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a young adult with a small, non-enhancing frontal cortical tumor. The combination of young age, lack of enhancement or necrosis, frontal location, and absence of a T2-FLAIR mismatch sign is highly characteristic of an Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2. The imaging findings are classic and consistent across all predicted molecular markers."
+}

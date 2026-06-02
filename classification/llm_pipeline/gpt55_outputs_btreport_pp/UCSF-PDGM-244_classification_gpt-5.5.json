@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the metadata favors IDH-mutant diffuse glioma: age_years of 43 is younger than the typical demographic for IDH-wildtype glioblastoma, and Tumor Location with Cortical involvement in the frontal lobe is a common distribution for IDH-mutant adult diffuse glioma. The absence of necrosis by Proportion Necrosis, minimal enhancing burden by ET Volume (mL), mild Enhancement Quality, and lack of mass effect by midline_shift_present argue against a classic aggressive IDH-wildtype glioblastoma phenotype. Evidence against IDH mutation includes absent/low T2-FLAIR mismatch by T2-FLAIR Mismatch Present and T2-FLAIR Mismatch Score, which weakens support for IDH-mutant astrocytoma specifically, and the presence of mild enhancement is not purely low-grade. Overall, the balance favors IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the strongest imaging support for co-deletion is Tumor Location in the frontal lobe with Cortical involvement, a pattern often seen in oligodendroglioma. T2-FLAIR Mismatch Present being absent also does not support the classic IDH-mutant astrocytoma mismatch phenotype, indirectly favoring a codeleted tumor over a non-codeleted astrocytoma when considered from imaging alone. Mild Enhancement Quality with very small ET Volume (mL) is compatible with oligodendroglioma but is not specific. Evidence against a confident codeleted call is that T2-FLAIR Mismatch Score is not a direct marker of 1p/19q status, and enhancement can occur in both codeleted and non-codeleted gliomas. Overall, the available metadata modestly favors 1p/19q co-deletion, but confidence is limited by lack of highly specific MRI markers in the provided fields.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or direct calcification assessment. The 1p/19q call is the least certain because the provided metadata lacks highly specific oligodendroglioma markers. Tissue molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "UCSF-PDGM-244",
+  "who_grade": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": 2,
+    "reasoning": "For CNS WHO grade, the metadata favors grade 2 over grade 3 or 4 because Proportion Necrosis is 0.0, NCR Volume (mL) is 0.0, ET Volume (mL) is extremely small, Enhancement Quality is mild, midline_shift_present is absent, and there is no Ependymal (ventricular) Invasion or multifocality by Multifocal or Multicentric. These features argue against grade 4 morphology and against a highly aggressive enhancing tumor. Evidence against grade 2 is the presence of some enhancement by Enhancement Quality, ET Volume (mL), and Proportion Enhancing, plus a substantial ED Volume (mL) and high Proportion of Oedema, which can be seen with higher-grade lesions. However, without necrosis, substantial enhancing tumor, or marked mass effect, the overall MRI phenotype most strongly supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Proportion Enhancing"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

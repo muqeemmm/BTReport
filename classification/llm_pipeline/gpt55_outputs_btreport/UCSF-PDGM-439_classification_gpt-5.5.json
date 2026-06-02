@@ -1,0 +1,65 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors IDH-mutant over IDH-wildtype: age_years is 38, and the lesion is nonenhancing by Enhancement Quality with Proportion Enhancing 0.0 and ET Volume (mL) 0.0; there is also no necrotic component by Proportion Necrosis 0.0 and NCR Volume (mL) 0.0. Cortical involvement is present, Tumor Location is parietal/cortex/frontal_lobe, Deep WM invasion is absent, and midline_shift_present is No, a pattern more typical of a lower-grade diffuse glioma than an adult IDH-wildtype glioblastoma phenotype. The main weak counterpoint is Side of Tumor Epicenter reported as Midline, which is less specific and somewhat atypical for common hemispheric IDH-mutant patterns. Overall, the balance supports IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Cortical involvement",
+      "Tumor Location",
+      "Deep WM invasion",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the evidence is limited and mixed. Supporting a non-codeleted prediction, Region Proportions show the largest component is parietal rather than a strongly frontal-dominant mass, Tumor Location includes parietal and cortex/frontal_lobe rather than an exclusively frontal cortical-subcortical distribution, and Side of Tumor Epicenter is Midline, which is not a classic pattern for 1p/19q-codeleted oligodendroglioma. Arguing against non-codeletion, age_years is 38, Cortical involvement is present, Enhancement Quality is None with Proportion Enhancing 0.0, and Tumor Location/Region Proportions include frontal_lobe involvement, all of which can be seen with oligodendroglioma. Because the provided MRI metadata lacks more discriminating features, the best estimate is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "Imaging strongly suggests a nonenhancing lower-grade diffuse glioma phenotype, but molecular subtype prediction from the provided metadata is inherently uncertain, especially for 1p/19q status. No advanced metabolic, diffusion, susceptibility, or perfusion-derived markers were provided, and histomolecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "UCSF-PDGM-439",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [],
+    "prediction": 2,
+    "reasoning": "The grade prediction from MRI alone favors CNS WHO grade 2. Enhancement Quality is None, Proportion Enhancing is 0.0, ET Volume (mL) is 0.0, Proportion Necrosis is 0.0, and NCR Volume (mL) is 0.0, which argues against grade 4 imaging features and against a more aggressive enhancing phenotype. Total tumor volume (mL) is modest at 16.555, midline_shift_present is No, Deep WM invasion is Absent, Ependymal (ventricular) Invasion is Absent, Multifocal or Multicentric is Solitary, and Multiple satellites present is Absent, all supporting a lower-grade appearance. There are no strong metadata features arguing for grade 3 or grade 4, though a nonenhancing grade 3 tumor cannot be excluded from these fields alone. The conclusion is grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

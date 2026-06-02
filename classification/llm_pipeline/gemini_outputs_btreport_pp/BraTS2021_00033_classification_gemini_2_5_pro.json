@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_00033",
+  "idh": {
+    "reasoning": "The patient's young age (29 years) is a very strong predictor for IDH-mutant status. The tumor's imaging characteristics further support this: it is a large lesion with a very small proportion of mild, solid enhancement (2.34%) and no evidence of necrosis (0.0%). The transition zone on FLAIR is extremely sharp (median 0.5 mm), which is also characteristic of IDH-mutant gliomas. The primary contradicting feature is the absence of a T2-FLAIR mismatch sign. However, given the combined strength of the patient's age and the overwhelmingly non-enhancing, non-necrotic nature of the tumor, an IDH-mutant prediction is made with high confidence.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor's location, with a large component in the temporal lobe and involvement of deep grey matter structures (thalamus, putamen), is more typical for an astrocytoma (non-codeleted) than an oligodendroglioma. The most compelling feature is the extremely sharp tumor-edema boundary, with a median FLAIR transition zone thickness of only 0.5 mm. This is a classic radiological sign for an IDH-mutant astrocytoma. The main feature arguing against this is the absence of the T2-FLAIR mismatch sign, which is highly specific for this entity. Nevertheless, the combination of the sharp border and typical location provides strong evidence for a non-codeleted status.",
+    "supporting_features": [
+      "Region Proportions",
+      "Anatomical Overlap Regions",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits features that argue against both grade 2 and grade 4. The absence of necrosis (`Proportion Necrosis`: 0.0%) makes a grade 4 designation unlikely based on imaging alone. However, the presence of mild, solid contrast enhancement (`Enhancement Quality`: 'Mild', `ET Volume (mL)`: 3.82) makes a grade 2 diagnosis improbable. Furthermore, there are several signs of aggressive behavior, including significant mass effect (`midline_shift_present`: 'Yes', `max_shift_mm`: 8.0), `Ependymal (ventricular) Invasion`, and `Deep WM invasion`. This combination of mild enhancement and aggressive features is most consistent with a CNS WHO grade 3 tumor.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings in this young patient are highly suggestive of an IDH-mutant astrocytoma. The tumor is large and predominantly non-enhancing with very sharp margins, but lacks the classic T2-FLAIR mismatch sign. The presence of mild enhancement, significant mass effect, and ependymal invasion points towards a higher grade, most consistent with CNS WHO grade 3."
+}

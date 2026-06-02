@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_00389",
+  "idh": {
+    "reasoning": "The patient's advanced age of 68 years is a very strong predictor for IDH-wildtype status. This is strongly corroborated by the classic imaging features of glioblastoma: the presence of central necrosis (`NCR Volume (mL)` > 0) and marked, thick-walled contrast enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"). Features that might suggest an IDH-mutant tumor, such as frontal lobe involvement, are non-specific and weak in comparison to the overwhelming evidence for a wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of marked contrast enhancement and central necrosis are highly atypical for a 1p/19q co-deleted glioma (oligodendroglioma), which usually presents as a non-enhancing or minimally enhancing mass without necrosis. The imaging phenotype is strongly suggestive of an astrocytic lineage. The frontal lobe location is common for oligodendroglioma but is a very weak predictor and is outweighed by the aggressive imaging features.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of a significant necrotic component (`NCR Volume (mL)` of 2.063) is a radiological hallmark of a WHO grade 4 glioma. This is further supported by the presence of marked, thick-walled contrast enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"). While the tumor does not cause significant mass effect or show deep white matter invasion, the presence of necrosis is the most critical determinant for assigning the highest grade in an adult-type diffuse glioma.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult (68 years) with a solitary frontoparietal lesion. The imaging features of marked, thick-walled enhancement and central necrosis are classic for glioblastoma. The combination of these findings with the patient's age provides high confidence in the diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

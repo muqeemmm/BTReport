@@ -1,0 +1,87 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "IDH status is assessed independently from the other tasks. The metadata pattern favoring IDH-wildtype includes older age, multifocal disease with multiple satellites and 5 lesions, large total tumor burden with very extensive edema, measurable enhancing tumor, ependymal and deep white-matter invasion, enhancement crossing midline, and midline shift. Features arguing against IDH-wildtype include a reported T2-FLAIR mismatch pattern, which is more typical of IDH-mutant astrocytoma, plus frontal/cortical/insular involvement and only mild enhancement. On balance, the age, multifocal enhancing infiltrative pattern, ependymal/deep invasion, edema burden, and mass effect favor IDH-wildtype despite the T2-FLAIR mismatch.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Number of lesions",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.77,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "1p/19q status is assessed independently from the IDH and grade calls. Non-codeletion is supported by the reported T2-FLAIR mismatch pattern, which is more characteristic of astrocytoma than oligodendroglioma, and by aggressive infiltrative features including deep white-matter invasion, ependymal invasion, multifocality with satellites, enhancing tumor crossing midline, and very large edema volume. Features arguing for possible codeletion are the frontal lobe and cortical involvement, which are common locations for oligodendroglioma, and mild enhancement, which does not exclude oligodendroglioma. Overall, the T2-FLAIR mismatch and invasive multifocal pattern favor non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "CET Crosses midline",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "overall_comment": "These are metadata-only pre-operative MRI estimates. The strongest atypical feature is the reported T2-FLAIR mismatch, which pulls toward IDH-mutant astrocytoma and non-codeletion, but the overall imaging phenotype is more aggressive and favors glioblastoma, IDH-wildtype. Definitive classification requires molecular pathology.",
+  "subject_id": "UCSF-PDGM-285",
+  "who_grade": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "reasoning": "WHO grade is assessed independently from molecular predictions. Grade 4 is favored by measurable enhancing tumor, a thick enhancing margin, very large edema and total tumor volume, midline shift, ventricular effacement/asymmetry, ependymal and deep white-matter invasion, multifocal disease with satellites, and enhancement/edema crossing midline, all indicating aggressive high-grade behavior. Features arguing against grade 4 are essentially minimal necrosis, mild enhancement quality, a relatively small enhancing proportion, and the reported T2-FLAIR mismatch pattern, which can be associated with lower-grade IDH-mutant astrocytoma. Despite these counterfeatures, the mass effect, enhancement, multifocality, invasion, and very large edema burden favor CNS WHO grade 4 over grade 2 or 3.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Number of lesions",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

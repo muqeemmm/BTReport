@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors IDH-mutant status because the patient is young for adult diffuse glioma, and the tumor is predominantly frontal/cortical with insular involvement, a pattern commonly associated with IDH-mutant glioma. Additional support comes from solitary disease, small total tumor volume, minimal midline shift, mild enhancement with very small enhancing volume, and absent deep white matter and ependymal invasion, all of which are less typical for de novo IDH-wildtype glioblastoma. Evidence against IDH-mutant status is the reported necrosis proportion, thick enhancing margin, and substantial edema proportion, which can be seen in biologically aggressive IDH-wildtype tumors. On balance, the age, location, cortical involvement, limited enhancement, and limited invasive/mass-effect features support IDH-mutant status more strongly.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the strongest MRI-derived support for codeletion is the frontal, cortical-predominant tumor location in a relatively young adult, since oligodendrogliomas often present as cortical/subcortical frontal tumors. Mild enhancement and solitary presentation are compatible with a codeleted oligodendroglioma. Evidence against codeletion is that the tumor also involves the insula, which is not specific and can be seen in astrocytoma, and the reported necrosis and edema proportions suggest a more aggressive phenotype that is not specific for codeletion. No calcification-sensitive sequence or other highly discriminating marker is available. Overall, the frontal cortical epicenter supports 1p/19q codeletion, but confidence is only moderate because the available metadata are nonspecific.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured T1w, T2w, T2-FLAIR, and T1-Gd metadata. No DWI/ADC, perfusion, spectroscopy, SWI/GRE, or calcification assessment is available. The main uncertainty is the apparent discrepancy between very small enhancing volume and mild enhancement versus a high reported necrosis proportion; this limits confidence for WHO grade and somewhat lowers confidence for molecular predictions.",
+  "subject_id": "EGD-0744",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, the reported necrosis proportion, edema proportion, and thick enhancing margin support a higher-grade diffuse glioma rather than a purely low-grade lesion. However, the enhancement is described as mild, the enhancing tumor volume is very small, the total tumor volume is modest, midline shift is minimal, and there is no deep white matter invasion, ependymal invasion, multifocality, or satellite disease; these factors argue against a confident grade 4 call. The combination of some aggressive features with limited enhancement and limited mass effect is most consistent with an intermediate high-grade assignment, favoring CNS WHO grade 3 over grade 2 or grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI marker is the marked T2-FLAIR mismatch, with \"T2-FLAIR Mismatch Present\" positive and a high \"T2-FLAIR Mismatch Score\", which favors an IDH-mutant diffuse glioma phenotype. The tumor is overwhelmingly nonenhancing by \"ET Volume (mL)\", \"Proportion Enhancing\", and \"n_components_enhancing\", and has limited mass effect by \"midline_shift_present\", which also supports IDH-mutant rather than IDH-wildtype biology. Against this, \"Proportion Necrosis\" and \"NCR Volume (mL)\" are large, and \"Enhancement Quality\" reports mild enhancement, which can be seen in more aggressive tumors. Overall, the T2-FLAIR mismatch and near-absent enhancement outweigh the conflicting aggressive-appearing segmentation labels.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The key discriminator is the positive and high-scoring T2-FLAIR mismatch, captured by \"T2-FLAIR Mismatch Present\" and \"T2-FLAIR Mismatch Score\", which is much more characteristic of an astrocytic, non-codeleted diffuse glioma pattern than an oligodendroglial codeleted pattern. The mostly nonenhancing appearance by \"ET Volume (mL)\", \"Proportion Enhancing\", and \"n_components_enhancing\" does not specifically favor codeletion. Against non-codeletion, \"Cortical involvement\" and the frontal/cortical components in \"Tumor Location\" and \"Region Proportions\" can be compatible with oligodendroglioma. Overall, the strong T2-FLAIR mismatch pattern favors non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing"
+    ]
+  },
+  "overall_comment": "Prediction is limited by conventional MRI metadata only and by null age_years. The main uncertainty is the discordance between near-absent enhancement and the high reported Proportion Necrosis/NCR burden; tissue molecular testing remains required for definitive WHO-CNS5 classification.",
+  "subject_id": "EGD-0230",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Tumor Core Volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Thickness of enhancing margin",
+      "Enhancement Quality"
+    ],
+    "prediction": 2,
+    "reasoning": "For grading, the imaging pattern most strongly supports a lower-grade diffuse glioma: \"ET Volume (mL)\" is essentially absent, \"Proportion Enhancing\" is very low, \"n_components_enhancing\" shows no measurable enhancing component, \"Enhancement Quality\" is only mild, and mass effect is limited by \"midline_shift_present\". Additional lower-grade support comes from absent \"Deep WM invasion\", absent \"Ependymal (ventricular) Invasion\", absent \"Multiple satellites present\", and solitary disease by \"Multifocal or Multicentric\". Against grade 2, the lesion is moderately large by \"Lesion Sizes APxTVxCC (cm)\", with high \"Proportion Necrosis\", large \"NCR Volume (mL)\", large \"Tumor Core Volume (mL)\", and a reported thick enhancing margin by \"Thickness of enhancing margin\"; these raise concern for grade 3 or 4. However, because the conventional high-grade features of substantial enhancing tumor and marked mass effect are not supported, grade 2 is the best imaging estimate, with only moderate confidence.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

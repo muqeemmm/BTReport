@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the lesion is nonenhancing with no enhancing component or necrosis, shows cortical involvement, is solitary, and lacks deep white matter, ependymal, and midline-crossing behavior; this pattern is more typical of a lower-grade infiltrating glioma than an IDH-wildtype glioblastoma phenotype. Evidence that could argue toward IDH-wildtype is limited: the tumor is parietal/temporal rather than a classic frontal-predominant IDH-mutant location, and the approximately 48 mL T2/FLAIR abnormality is a substantial lesion burden. Overall, the absence of enhancement, necrosis, and invasive deep/midline features weighs more strongly toward IDH-mutant status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the available metadata is relatively nonspecific. A codeleted oligodendroglioma can be cortical and nonenhancing, so cortical involvement and lack of enhancement do provide some support for codeletion. However, the tumor location is parietal/temporal rather than clearly frontal, which weakens the imaging argument for oligodendroglioma, and there are no provided calcification-sensitive data or other strong oligodendroglial markers. Given the limited discriminating metadata and the absence of a classic frontal oligodendroglioma pattern, the balance slightly favors non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or calcification assessment. The lesion is entirely nonenhancing by the provided segmentation, making molecular status and grade uncertain from imaging alone, especially 1p/19q status.",
+  "subject_id": "UCSF-PDGM-535",
+  "who_grade": {
+    "confidence": 0.81,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The grade assessment most strongly favors CNS WHO grade 2 because the lesion is nonenhancing, has no enhancing tumor volume, no necrosis, no enhancing margin of significance, and lacks imaging features of aggressive spread such as deep white matter invasion, ependymal invasion, midline crossing, multifocality, or ventricular asymmetry. Grade 3 or 4 would be more concerning if enhancement, necrosis, infiltrative deep extension, or multifocal/midline behavior were present, but these are not reported. The main caution is that the total T2/FLAIR abnormality is moderately large, so grade 3 cannot be excluded by metadata alone; nevertheless, the structural MRI phenotype best supports grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Asymmetrical Ventricles",
+      "midline_shift_present",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

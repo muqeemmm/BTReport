@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_01532",
+  "idh": {
+    "reasoning": "The patient's young age of 29 is a very strong predictor of IDH-mutant status. The frontal lobe location is also common for IDH-mutant tumors. However, the imaging features are overwhelmingly aggressive and more typical of an IDH-wildtype glioma (Glioblastoma). These features include a very large tumor volume (183.6 mL), a massive proportion of necrosis (73.2%), significant contrast enhancement (16.8 mL), a thick enhancing margin (>3mm), and extensive invasion across the midline and into deep gray matter structures. While a high-grade IDH-mutant astrocytoma can show enhancement and necrosis, the sheer extent of necrosis seen here is a powerful indicator of IDH-wildtype biology. The aggressive imaging phenotype outweighs the demographic data, leading to a prediction of IDH-wildtype, albeit with low confidence due to the conflicting age.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin",
+      "crosses_ideal_midline",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status hinges on differentiating an oligodendroglioma from an astrocytoma. While the frontal lobe location is common for oligodendrogliomas, the imaging features are highly atypical for this entity. Oligodendrogliomas rarely present with such extensive necrosis (73.2%) and thick, avid enhancement. These features, along with the deep gray matter invasion (thalamus, caudate, putamen), are characteristic of an astrocytic lineage tumor. The aggressive phenotype strongly argues against a 1p/19q codeleted tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive central necrosis is a defining feature of a CNS WHO grade 4 diffuse glioma in adults. The `Proportion Necrosis` is extremely high at 73.2%. This finding alone is sufficient for a grade 4 designation. This is strongly corroborated by other high-grade features, including the presence of a significant enhancing component (`ET Volume (mL)` of 16.8), a thick enhancing margin (`>3mm`), very large tumor size, and significant mass effect (`max_shift_mm` of -11.0). There is no imaging evidence to support a grade 2 or 3 diagnosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents a significant conflict between the patient's young age (29), which strongly suggests an IDH-mutant glioma, and the MRI features, which are classic for an IDH-wildtype glioblastoma. The tumor is very large, with extensive necrosis and enhancement, features that define a grade 4 lesion and are most commonly associated with IDH-wildtype status. The prediction for IDH status is therefore made with low confidence. The predictions for non-codeletion and WHO grade 4 are high-confidence based on the aggressive imaging phenotype, which is incompatible with an oligodendroglioma or a lower-grade glioma."
+}

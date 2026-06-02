@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0773",
+  "idh": {
+    "reasoning": "The patient's young age (36) and mild enhancement are suggestive of an IDH-mutant glioma. The sharp tumor border also favors an IDH-mutant status. However, the presence of significant necrosis (20.54%) and the multifocal nature of the tumor are very strong features associated with IDH-wildtype glioblastoma. The absence of a T2-FLAIR mismatch sign also argues against an IDH-mutant astrocytoma. Weighing these conflicting features, the presence of necrosis and multifocality are stronger indicators of aggressive biology typical for IDH-wildtype tumors, despite the patient's age.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The most compelling feature for determining 1p/19q status is the tumor margin character. The median FLAIR transition zone thickness is extremely narrow (0.75 mm), indicating a very sharply demarcated lesion. This is a classic radiological hallmark of oligodendroglioma, which is defined by 1p/19q co-deletion. The frontal lobe location is also typical for this tumor type. Conversely, the presence of significant necrosis and multifocality are atypical for oligodendrogliomas. Despite these contradicting features, the sharpness of the border is a highly specific sign for co-deletion, making it the most likely prediction based on this isolated feature.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is strongly driven by the presence of high-grade features. The metadata indicates a significant proportion of necrosis (20.54%). According to the WHO CNS5 classification, the presence of necrosis in an adult-type diffuse glioma is a sufficient criterion for a WHO grade 4 diagnosis, regardless of other features. The multifocal nature of the tumor and the large volume of associated edema further support a high-grade assessment. While the enhancement is only mild, this does not override the definitive grading implication of necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": false,
+  "overall_comment": "The radiological features are highly conflicting. Significant necrosis and multifocality strongly suggest a WHO grade 4 IDH-wildtype glioma (Glioblastoma). However, the patient's young age and exceptionally sharp tumor borders are classic features of an IDH-mutant, 1p/19q-codeleted oligodendroglioma. The independent predictions for IDH and 1p/19q status are therefore contradictory, as 1p/19q co-deletion does not occur in IDH-wildtype tumors. The integrated diagnosis favors the features of high-grade malignancy (necrosis) over the morphological features, but with low certainty due to the conflicting data."
+}

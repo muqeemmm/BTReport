@@ -1,0 +1,46 @@
+{
+  "subject_id": "EGD-0241",
+  "idh": {
+    "reasoning": "The patient's age of 38 and the predominantly non-enhancing nature of the tumor (Proportion Enhancing is 0.06) are features commonly associated with IDH-mutant gliomas. The fronto-insular location also favors an IDH-mutant astrocytoma. However, there is an extremely high proportion of necrosis (75.61%), which is a cardinal feature of IDH-wildtype glioblastoma. While high-grade IDH-mutant astrocytomas can show necrosis, this extensive degree is more typical for the IDH-wildtype entity. The evidence is highly conflicting, but the profound necrosis is a very strong indicator that outweighs the other features, leading to a low-confidence prediction of IDH-wildtype.",
+    "supporting_features": [
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of non-codeletion is based on features characteristic of an astrocytic lineage rather than an oligodendroglial one. The tumor demonstrates a very high proportion of necrosis (75.61%) and some mild contrast enhancement, both of which are highly atypical for 1p/19q-codeleted oligodendrogliomas, which are typically non-necrotic. Furthermore, the involvement of the insula is a classic location for astrocytomas. While the frontal lobe location is common in oligodendrogliomas, the combination of insular involvement and extensive necrosis strongly argues against co-deletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Region Proportions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade 4 is made with high confidence due to the presence of definitive high-grade imaging features. The most compelling evidence is the extensive central necrosis, with a measured 'Proportion Necrosis' of 75.61%. The presence of necrosis is a histopathological hallmark of WHO grade 4 diffuse gliomas. Additionally, there is evidence of contrast enhancement ('ET Volume (mL)' > 0), which is another feature consistent with a high-grade tumor. The combination of these features, particularly the profound necrosis, strongly supports a grade 4 classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a 38-year-old patient with a large, left fronto-insular tumor. The imaging findings are conflicting for IDH status determination; the young age and minimal enhancement suggest IDH-mutant, but the extensive necrosis is a powerful feature favoring IDH-wildtype. The prediction for IDH status is therefore wildtype, but with low confidence. The presence of necrosis and insular involvement strongly suggest a non-codeleted, astrocytic lineage. The extensive necrosis provides high confidence for a WHO grade 4 designation. The integrated diagnosis is therefore Glioblastoma, IDH-wildtype."
+}

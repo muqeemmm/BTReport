@@ -1,0 +1,47 @@
+{
+  "subject_id": "UCSF-PDGM-499",
+  "idh": {
+    "reasoning": "The patient's young age (34 years) is a very strong predictor for an IDH-mutant glioma, as IDH-wildtype gliomas (glioblastomas) typically occur in older patients. The tumor's unilateral nature (not crossing the midline) and cortical involvement also favor an IDH-mutant status. However, there is strong contradictory evidence: the presence of a significant necrotic core (NCR Volume (mL) > 0) and a thick enhancing margin are classic radiological features of glioblastoma, which is typically IDH-wildtype. Weighing these factors, the powerful demographic predictor of young age often points to the correct molecular subtype even with aggressive imaging features, which can be seen in high-grade IDH-mutant astrocytomas. Therefore, I favor an IDH-mutant prediction, but with moderate confidence due to the conflicting imaging findings.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "crosses_ideal_midline",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status hinges on differentiating between astrocytic and oligodendroglial features. The presence of a significant necrotic core (NCR Volume (mL) of 5.755) and a thick enhancing margin ('>3mm') are highly characteristic of high-grade astrocytomas. Oligodendrogliomas, even when high-grade, are less likely to present with this degree of aggressive necrosis and thick, well-formed enhancement. The large amount of surrounding edema (ED Volume (mL) of 77.383) also points towards an infiltrative astrocytoma rather than a more circumscribed oligodendroglioma. While cortical involvement is present, which can be seen in oligodendrogliomas, the overwhelming evidence of aggressive features strongly supports a non-codeleted (astrocytic) lineage.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is based on specific histological and radiological criteria. The presence of contrast enhancement is indicative of at least a grade 3 tumor. Critically, the presence of central necrosis is a defining feature of a WHO grade 4 glioma. The provided metadata confirms both, with a substantial enhancing volume (ET Volume (mL) of 12.829) and, most importantly, a necrotic volume (NCR Volume (mL) of 5.755). These findings are the radiological hallmarks of a grade 4 tumor. The 'Mild' Enhancement Quality is noted but is superseded by the definitive quantitative evidence of both enhancement and necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's young age strongly suggests an IDH-mutant glioma, despite imaging features of high-grade malignancy. The definitive presence of both contrast enhancement and necrosis on MRI establishes this as a WHO grade 4 tumor. The combination of these findings is most consistent with an Astrocytoma, IDH-mutant, CNS WHO grade 4. The prediction of non-codeletion is based on the aggressive imaging features (necrosis, thick enhancement) which are more typical of the astrocytic lineage."
+}

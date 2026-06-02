@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_01534",
+  "idh": {
+    "reasoning": "The patient is young (31 years), which strongly favors an IDH-mutant glioma. The imaging phenotype provides compelling corroborating evidence: the tumor is large but completely non-enhancing, and the volume of associated edema is low relative to the tumor volume. This combination points towards an infiltrative, lower-grade biology characteristic of IDH-mutant tumors, rather than the destructive, edema-producing pattern typical of IDH-wildtype glioblastoma. The deep gray matter involvement is non-specific but compatible with this diagnosis. The very high reported 'Proportion Necrosis' is considered an algorithmic artifact representing the non-enhancing tumor core, as true necrosis is a feature of high-grade, typically enhancing, lesions.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant status, the key distinction is between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). The tumor's extensive infiltration into deep gray matter structures, including the thalamus and putamen, is a pattern more commonly associated with IDH-mutant astrocytomas. Oligodendrogliomas are more classically cortically-based, often in the frontal lobes, and tend to have less distinct margins. The provided features, particularly the deep and multi-lobar involvement centered in the temporal lobe, favor a diagnosis of astrocytoma, and therefore a non-codeleted status.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of contrast enhancement is a strong argument against WHO grade 4. The distinction is between grade 2 and 3. While lack of enhancement is more typical for grade 2, several features suggest a higher grade. The tumor is very large (over 60 mL), causes mass effect with ventricular effacement, and demonstrates aggressive infiltrative features, including deep white matter and ependymal invasion. These findings, particularly the large size and ependymal involvement, make a grade 3 glioma more likely than a grade 2, despite the absence of enhancement.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Effaced Ventricle"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a young adult with a large, non-enhancing tumor. These features are highly suggestive of an IDH-mutant glioma. The deep, infiltrative growth pattern involving the thalamus and putamen favors an astrocytoma (1p/19q non-codeleted). Despite the lack of enhancement, the tumor's large size and invasive features (deep white matter and ependymal invasion) are most consistent with a CNS WHO grade 3 lesion. The reported high proportion of necrosis is likely an artifact given the absence of enhancement."
+}

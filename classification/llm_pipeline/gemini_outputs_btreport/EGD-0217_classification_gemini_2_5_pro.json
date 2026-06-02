@@ -1,0 +1,55 @@
+{
+  "subject_id": "EGD-0217",
+  "idh": {
+    "reasoning": "The tumor is located in the left frontal lobe, a classic location for IDH-mutant gliomas. Key features supporting this prediction include the lack of significant mass effect ('midline_shift_present': 'No'), absence of deep white matter or ependymal invasion, and the predominantly non-enhancing character of the lesion, with a very high proportion of edema (99.16%) and a minuscule volume of enhancing tissue (0.022 mL). These findings are typical for a slower-growing, less aggressive tumor, which is characteristic of the IDH-mutant phenotype. While there is a tiny volume of necrosis and the enhancing margin is described as thick, these features are not substantial enough to outweigh the strong evidence for an IDH-mutant tumor.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion of Oedema",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The distinction between codeleted (oligodendroglioma) and non-codeleted (astrocytoma) tumors based on this metadata is challenging. The frontal cortical location is common to both. However, the presence of enhancement, even if mild ('Enhancement Quality': 'Mild'), and a thick enhancing margin ('>3mm') are more frequently associated with astrocytomas than with oligodendrogliomas, particularly at lower grades. Furthermore, the very high proportion of edema relative to the solid tumor component can be a feature of the infiltrative nature of astrocytomas. In the absence of specific features for oligodendroglioma (e.g., calcification, which cannot be assessed here), the available evidence slightly favors a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The imaging features are most consistent with a low-grade glioma. The tumor exerts minimal mass effect ('midline_shift_present': 'No'), is small in total volume (5.851 mL), and is overwhelmingly non-enhancing ('Proportion of Oedema': 99.16%). The volumes of both enhancing tumor (0.022 mL) and necrosis (0.027 mL) are negligible. While the presence of any necrosis is a criterion for WHO grade 4 (glioblastoma), relying on such a minuscule volume, which could represent micro-necrosis or even artifact, is not radiologically sound, especially when all other features (lack of mass effect, no deep WM invasion) point away from a high-grade tumor. Therefore, a WHO grade 2 is the most likely diagnosis.",
+    "supporting_features": [
+      "midline_shift_present",
+      "Total tumor volume (mL)",
+      "ET Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Enhancement Quality"
+    ],
+    "prediction": 2,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI metadata strongly suggests a low-grade, IDH-mutant astrocytoma (WHO grade 2) in the left frontal lobe. The lesion is characterized by its small size, minimal mass effect, and predominantly non-enhancing nature. Although trace amounts of enhancement and necrosis are reported, they are insufficient to warrant a higher-grade diagnosis in the context of otherwise indolent features."
+}

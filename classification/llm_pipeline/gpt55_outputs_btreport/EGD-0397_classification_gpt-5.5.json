@@ -1,0 +1,82 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The strongest metadata for IDH status favors an IDH-wildtype adult diffuse glioma: very advanced age, multifocal disease, bilateral epicenter, deep white-matter invasion, ependymal involvement, and very large edema/tumor burden are all more typical of IDH-wildtype glioblastoma biology than of IDH-mutant astrocytoma or oligodendroglioma. Evidence arguing the other way is the frontal/cortical location and only mild, low-volume enhancement, which can be seen in IDH-mutant diffuse gliomas. On balance, the age and infiltrative multifocal/ependymal pattern outweigh the frontal cortical and mild-enhancement features, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Edema crosses midline",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the metadata overall favors a non-codeleted diffuse glioma. Multifocality, bilateral epicenter, deep white-matter invasion, ependymal invasion, and very extensive edema are atypical for classic oligodendroglioma and favor a non-codeleted infiltrative glioma. The main features arguing for possible 1p/19q co-deletion are frontal-lobe cortical involvement and mild enhancement, which are common in oligodendroglioma. Because those location features are meaningful but are outweighed by the multifocal, ependymal, deeply invasive, high-edema pattern, the best estimate is non-codeleted with moderate confidence.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Edema crosses midline",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "This prediction is limited to structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The frontal cortical location and mild enhancement reduce certainty, particularly for 1p/19q and grade, but the advanced age, multifocal bilateral infiltrative pattern, ependymal invasion, deep white-matter invasion, and extensive edema strongly favor glioblastoma, IDH-wildtype, CNS WHO grade 4.",
+  "subject_id": "EGD-0397",
+  "who_grade": {
+    "confidence": 0.83,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently from molecular calls, the imaging metadata favors grade 4 over grade 2 or 3. Multifocal disease, bilateral epicenter, deep white-matter invasion, ependymal invasion, very large edema and total tumor burden, edema crossing the midline, and presence of enhancing tumor with a thick enhancing margin are all concerning for high-grade aggressive glioma. Features arguing against grade 4 are mild enhancement, small enhancing volume/proportion, very small necrotic/non-enhancing core volume and necrosis proportion, and only minimal midline shift, which could fit a lower-grade or grade 3 tumor with limited enhancement. However, the multifocal infiltrative and ependymal/deep white-matter pattern with extensive edema is most consistent with CNS WHO grade 4.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Edema crosses midline",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

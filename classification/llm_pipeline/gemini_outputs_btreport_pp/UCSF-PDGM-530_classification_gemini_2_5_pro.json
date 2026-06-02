@@ -1,0 +1,49 @@
+{
+  "subject_id": "UCSF-PDGM-530",
+  "idh": {
+    "reasoning": "The evidence for IDH status is highly conflicting. The patient's young age (34 years) and the presence of a strong T2-FLAIR mismatch sign are both powerful predictors for an IDH-mutant glioma, specifically an astrocytoma. The T2-FLAIR mismatch sign is a highly specific biomarker. However, numerous aggressive imaging features strongly suggest an IDH-wildtype tumor (glioblastoma). These include the tumor's multifocal nature, its deep location involving the thalamus and basal ganglia, ependymal invasion, and enhancing tumor crossing the midline. Additionally, the relatively sharp tumor-edema boundary (low transition zone thickness) is more typical of IDH-wildtype gliomas. Weighing these factors, the high specificity of the T2-FLAIR mismatch sign and the patient's age favor an IDH-mutant prediction, but the significant number of contradicting, aggressive features reduces confidence substantially.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q status is made independently of the IDH prediction. The strongest piece of evidence is the T2-FLAIR mismatch sign, which is highly specific for IDH-mutant astrocytomas, which are by definition 1p/19q non-codeleted. Furthermore, oligodendrogliomas (1p/19q co-deleted) typically present with indistinct, infiltrative margins. This tumor, however, has a relatively sharp boundary, as indicated by the low median `Transition Zone Thickness (FLAIR)` of 0.75 mm. The deep thalamic involvement is also less characteristic of oligodendroglioma. Collectively, these features strongly argue against co-deletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The WHO grade is determined by features of aggressiveness. The presence of contrast enhancement (`ET Volume (mL)` > 0) rules out a grade 2 astrocytoma. The primary distinction is between grade 3 and grade 4. The absence of imaging-defined necrosis (`NCR Volume (mL)` is 0.0) is the main feature arguing against a grade 4 diagnosis. However, the tumor displays multiple features of high-grade behavior, including multifocality, significant mass effect (`max_shift_mm`: 10.0), ependymal invasion, and midline-crossing enhancement. In the absence of necrosis, but with clear enhancement and other aggressive features, a grade 3 is the most appropriate classification based on imaging alone. The possibility of a grade 4 tumor based on molecular features (like CDKN2A/B homozygous deletion) or microscopic findings not visible on MRI cannot be excluded.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a challenging case with conflicting imaging features. The strong T2-FLAIR mismatch sign and young patient age strongly suggest an IDH-mutant astrocytoma. However, the multifocal, midline-crossing, and deeply invasive characteristics are highly atypical for this entity and are more classic for an IDH-wildtype glioblastoma. The prediction of IDH-mutant status is therefore made with low confidence. The grade is estimated at 3 due to enhancement without necrosis, though aggressive features are noted. The primary differential diagnosis is Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

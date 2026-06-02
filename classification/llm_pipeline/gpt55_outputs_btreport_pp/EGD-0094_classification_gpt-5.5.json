@@ -1,0 +1,69 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors IDH-wildtype because the patient is older, and the tumor is large with marked, predominantly enhancing disease and a thick enhancing margin, a pattern more typical of IDH-wildtype glioblastoma than of lower-grade IDH-mutant diffuse glioma. Against this, the reported T2-FLAIR mismatch is a meaningful counter-feature because it is classically associated with IDH-mutant astrocytoma, and the temporal/insular cortical location can also be seen in IDH-mutant tumors. Because the enhancement burden and age are strong but the T2-FLAIR mismatch is a substantial contradiction, the best estimate is IDH-wildtype with only moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The strongest imaging feature for this task is the reported T2-FLAIR mismatch, which argues against 1p/19q-codeleted oligodendroglioma and instead favors a non-codeleted diffuse glioma phenotype. The dominant temporal and insular involvement is less classic for oligodendroglioma than a predominantly frontal cortical-subcortical tumor, and the marked, mostly enhancing phenotype is not a specific oligodendroglioma pattern. The main counterpoint is that cortical involvement and some frontal-lobe component can be compatible with oligodendroglioma. Overall, the balance favors non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "Prediction is based only on conventional MRI-derived metadata without DWI/ADC, perfusion, MR spectroscopy, or susceptibility/calcification assessment. The main uncertainty is the reported T2-FLAIR mismatch, which strongly counters the otherwise older-age, markedly enhancing glioblastoma-like phenotype. Tissue molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0094",
+  "who_grade": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "midline_shift_present",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ],
+    "prediction": 4,
+    "reasoning": "The grade assessment favors CNS WHO grade 4 because the lesion is large, markedly enhancing, predominantly enhancing, has a thick enhancing margin, and includes a necrotic/nonenhancing component; this combination is much more typical of a grade 4 diffuse glioma than grade 2 or grade 3. Features arguing against the most aggressive radiographic behavior include only minimal midline shift, relatively limited edema proportion, no deep white matter invasion, no ependymal invasion, and no enhancing or edema crossing of midline. Despite these mitigating features, the enhancement burden and necrotic component make grade 4 the best estimate.",
+    "supporting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

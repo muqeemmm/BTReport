@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00470",
+  "idh": {
+    "reasoning": "The patient's age of 60 years is a strong demographic predictor for IDH-wildtype status. The imaging findings are classic for an IDH-wildtype high-grade glioma (glioblastoma), including marked, thick-walled contrast enhancement, a substantial necrotic core, and deep anatomical involvement (thalamus, caudate, putamen). Furthermore, the very sharp tumor-edema interface, indicated by a small median FLAIR transition zone thickness (0.75 mm), is highly characteristic of IDH-wildtype tumors. The primary contradictory feature is the 'T2-FLAIR Mismatch Present' flag being positive, which is a strong marker for IDH-mutant astrocytoma. However, this is highly incongruous with all other features, and the associated 'T2-FLAIR Mismatch Degree' is extremely low (0.005), suggesting this may be a spurious finding from an automated algorithm. The overwhelming weight of evidence strongly supports an IDH-wildtype prediction.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of extensive central necrosis and marked, thick ring enhancement are hallmark features of a high-grade astrocytic glioma and are highly atypical for a 1p/19q co-deleted oligodendroglioma. Oligodendrogliomas typically exhibit more ill-defined margins, whereas this tumor has a very sharp boundary as indicated by the thin FLAIR transition zone. While frontal lobe involvement is common in oligodendroglioma, it is non-specific. The combination of features strongly points away from an oligodendroglial lineage.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic core (NCR Volume (mL) of 16.25) is a definitive radiological marker for WHO Grade 4 in an adult-type diffuse glioma. This is further supported by the presence of marked, thick-walled contrast enhancement. There are no imaging features to suggest a lower grade (2 or 3). The combination of these findings is pathognomonic for a Grade 4 tumor.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 60-year-old male with a large, deeply located frontoparietal mass. The imaging features, including marked ring enhancement, a large necrotic core, and sharp tumor margins, are classic for a Glioblastoma, IDH-wildtype, CNS WHO Grade 4. A single contradictory feature, a positive 'T2-FLAIR Mismatch Present' flag, is noted but considered highly likely to be a false positive given the overwhelming and classic imaging phenotype of glioblastoma and the very low associated mismatch degree."
+}

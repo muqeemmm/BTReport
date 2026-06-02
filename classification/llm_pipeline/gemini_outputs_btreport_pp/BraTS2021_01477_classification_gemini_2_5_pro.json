@@ -1,0 +1,58 @@
+{
+  "subject_id": "BraTS2021_01477",
+  "idh": {
+    "reasoning": "The patient's age of 50 years is more typical for IDH-wildtype gliomas. The tumor exhibits multiple features of high-grade, aggressive biology often associated with IDH-wildtype status: a deep location involving the thalamus and basal ganglia, extensive vasogenic edema, significant mass effect, and deep white matter and ependymal invasion. The most compelling feature is the very high proportion of necrosis (39.91%), a hallmark of glioblastoma, IDH-wildtype. The absence of a T2-FLAIR mismatch also argues against an IDH-mutant astrocytoma. The primary contradicting feature is the complete lack of contrast enhancement, which is more typical of IDH-mutant gliomas. However, the combination of multiple aggressive features, especially the extensive necrosis, outweighs the lack of enhancement, leading to a prediction of IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Anatomical Overlap Regions",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor's features are highly inconsistent with a 1p/19q co-deleted oligodendroglioma. Specifically, the deep involvement of the thalamus and brain-stem, the very large tumor volume, and the presence of extensive necrosis are all atypical for oligodendrogliomas. These aggressive characteristics strongly suggest a non-codeleted tumor, such as an astrocytoma or glioblastoma. The only weakly supporting feature for co-deletion is a relatively sharp transition zone on FLAIR, but this is insufficient to overcome the strong evidence against it.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The key determinant for grade is the presence of extensive necrosis. The metadata indicates a `Proportion Necrosis` of 39.91%, which is a strong imaging correlate of histopathological necrosis. According to WHO CNS5 criteria, necrosis is sufficient to classify an adult-type diffuse astrocytic glioma as WHO grade 4. This is further supported by other features of high-grade malignancy, including the very large tumor volume, extensive edema, and significant mass effect. The primary contradictory evidence is the complete absence of contrast enhancement, which is unusual for a grade 4 tumor. However, non-enhancing glioblastomas are a known entity, and the presence of necrosis is a defining criterion for grade 4 that supersedes the lack of enhancement.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents a diagnostic challenge due to the conflicting findings of extensive necrosis (suggesting a high-grade, IDH-wildtype tumor) and a complete lack of contrast enhancement (suggesting a lower-grade, IDH-mutant tumor). However, the weight of evidence, including the patient's age, deep tumor location, massive edema, and particularly the high proportion of necrosis, strongly favors a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The imaging phenotype is consistent with a non-enhancing glioblastoma."
+}

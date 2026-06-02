@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0226",
+  "idh": {
+    "reasoning": "The patient is young (33 years), which statistically favors an IDH-mutant glioma. However, the imaging phenotype is overwhelmingly characteristic of an IDH-wildtype tumor. Key features include the multifocal nature of the lesion, marked and thick-rim enhancement, and substantial central necrosis. The tumor is located in deep midline structures (thalamus, brainstem), which is a common location for IDH-wildtype glioblastoma. Furthermore, the tumor exhibits sharp margins (low FLAIR transition zone thickness) and a definitive absence of the T2-FLAIR mismatch sign, both of which argue against an IDH-mutant astrocytoma. The combination of these aggressive features strongly outweighs the patient's age as a predictor.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Tumor Location",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The tumor displays features that are highly uncharacteristic of a 1p/19q co-deleted oligodendroglioma. Specifically, the presence of marked enhancement and a large proportion of necrosis are hallmarks of astrocytic tumors, particularly high-grade ones, and are rare in oligodendrogliomas. The deep midline location involving the thalamus and brainstem is also more typical for astrocytomas than for oligodendrogliomas, which are more commonly cortically based. While the sharp tumor border can be seen in oligodendrogliomas, this single feature is insufficient to overcome the strong evidence against co-deletion provided by the enhancement, necrosis, and location.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of both marked contrast enhancement and central necrosis are the defining radiological criteria for a CNS WHO grade 4 glioma. The metadata confirms both: 'Enhancement Quality' is 'Marked' and 'Proportion Necrosis' is significant at 18.67%. This is further supported by numerous other features of high-grade malignancy, including the tumor's multifocal nature, extensive deep white matter invasion, crossing of the midline, and significant mass effect with a 9mm midline shift. There is no imaging evidence to support a lower grade diagnosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "A 33-year-old patient with a multifocal, enhancing, and necrotic tumor centered in the deep midline structures (thalamus, brainstem). Despite the patient's relatively young age, the aggressive imaging features are classic for a Glioblastoma, IDH-wildtype, CNS WHO Grade 4. The predictions for IDH-wildtype status, non-codeletion, and Grade 4 are internally consistent and strongly supported by the MRI metadata."
+}

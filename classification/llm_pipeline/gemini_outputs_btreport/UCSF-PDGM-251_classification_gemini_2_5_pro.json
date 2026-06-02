@@ -1,0 +1,44 @@
+{
+  "subject_id": "UCSF-PDGM-251",
+  "idh": {
+    "reasoning": "The patient's young age (36 years) is a strong predictor for IDH-mutant status. The imaging phenotype, characterized by a complete absence of contrast enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0) and no evidence of necrosis ('NCR Volume (mL)': 0.0), is classic for an IDH-mutant glioma. IDH-wildtype gliomas (glioblastomas) typically occur in older patients and almost invariably demonstrate significant enhancement and/or necrosis. There are no contradicting features in the provided metadata.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made assuming an IDH-mutant tumor, differentiating between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). The evidence is conflicting. The involvement of deep gray matter structures ('Anatomical Overlap Regions' including right putamen, pallidum) and limbic structures (hippocampus, amygdala) is more suggestive of the infiltrative nature of an astrocytoma. However, the prominent 'Cortical involvement' is a feature often seen in oligodendrogliomas. The temporal location is not specific to either subtype. Given the deep infiltration, the evidence slightly favors a non-codeleted status, but confidence is low due to the overlapping features.",
+    "supporting_features": [
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The key imaging features for grading are enhancement and necrosis. This tumor shows a complete absence of both ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0, 'NCR Volume (mL)': 0.0). This imaging pattern is the hallmark of a low-grade glioma, specifically CNS WHO grade 2. While there is mass effect ('Asymmetrical Ventricles', 'Effaced Ventricle'), this is expected given the tumor's volume ('Total tumor volume (mL)': 44.707) and is not a specific marker for higher grade in the absence of enhancement or necrosis. Therefore, the evidence strongly supports a grade 2 prediction.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 36-year-old with a solitary, non-enhancing, non-necrotic tumor in the right temporal lobe extending into deep gray matter. The combination of young age and lack of aggressive imaging features strongly supports a diagnosis of an IDH-mutant, CNS WHO grade 2 glioma. The differentiation between astrocytoma and oligodendroglioma is uncertain on imaging, but deep involvement slightly favors astrocytoma (non-codeleted). The final integrated prediction is Astrocytoma, IDH-mutant, CNS WHO grade 2."
+}

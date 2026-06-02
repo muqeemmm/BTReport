@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_01487",
+  "idh": {
+    "reasoning": "The presence of both central necrosis (NCR Volume (mL) > 0) and contrast enhancement (ET Volume (mL) > 0) are classic radiological hallmarks of glioblastoma, which is the most common IDH-wildtype glioma. Furthermore, the tumor's location with extensive infiltration into deep gray matter structures including the thalamus, basal ganglia, and brain-stem is highly characteristic of an IDH-wildtype tumor. The absence of a T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 0.0) argues strongly against an IDH-mutant astrocytoma. The patient's age of 40 is somewhat young for a primary glioblastoma but is not a strong counter-indicator given the aggressive imaging phenotype. The evidence overwhelmingly points towards an IDH-wildtype status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Anatomical Overlap Regions",
+      "T2-FLAIR Mismatch Present",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The features are weighed to differentiate between an astrocytic (non-codeleted) and oligodendroglial (codeleted) phenotype. The presence of necrosis (NCR Volume (mL) > 0) and extensive deep white matter and gray matter infiltration (Deep WM invasion, Anatomical Overlap Regions including thalamus and brain-stem) are much more characteristic of an astrocytic lineage tumor than an oligodendroglioma. While some features like cortical involvement and a relatively sharp transition zone on FLAIR (Transition Zone Thickness (FLAIR)) can be seen in oligodendrogliomas, the aggressive features of necrosis and deep infiltration are stronger indicators for a non-codeleted status. Therefore, a non-codeleted prediction is favored.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is strongly guided by specific imaging features. The presence of central necrosis (NCR Volume (mL) of 5.967) is a key radiological feature that corresponds to microvascular proliferation and/or necrosis pathologically, which automatically classifies an adult-type diffuse glioma as WHO grade 4. This is further supported by the presence of contrast enhancement (ET Volume (mL) of 6.642), significant mass effect (midline_shift_present: 'Yes'), and extensive infiltration of eloquent and deep brain structures. Although the enhancement quality is described as 'Mild', the definitive presence of necrosis is the overriding factor for assigning the highest grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Anatomical Overlap Regions",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of imaging findings, including a large, deeply infiltrating mass with both central necrosis and contrast enhancement, is highly indicative of a glioblastoma. The tumor's involvement of the thalamus, basal ganglia, and brainstem strongly favors an IDH-wildtype status. The presence of necrosis is the definitive feature for assigning WHO grade 4. The final integrated diagnosis is consistent with all major radiological findings."
+}

@@ -1,0 +1,103 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "CET Crosses midline",
+      "crosses_patient_midline"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "Considered independently from 1p/19q status and grade, the MRI metadata favors IDH-wildtype diffuse glioma because the lesion is very large, markedly and substantially enhancing, has a thick enhancing margin, measurable necrosis, extensive edema, deep white-matter invasion, ependymal/ventricular invasion, and mass effect with midline shift; this pattern is more typical of IDH-wildtype glioblastoma biology than of an IDH-mutant diffuse glioma. Features arguing the other way are cortical involvement and a temporal/cortical component, which can be seen in IDH-mutant gliomas, plus lack of enhancing/midline crossing. On balance, the aggressive enhancement, edema, necrosis, ventricular involvement, and mass effect outweigh the more nonspecific cortical-temporal features, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Considered independently from IDH status and WHO grade, the imaging pattern is more compatible with a non-codeleted diffuse glioma than with a 1p/19q-codeleted oligodendroglioma. The strongest support for non-codeleted status is the very large infiltrative mass with marked enhancement, thick enhancing margin, necrosis, extensive edema, deep white-matter invasion, ependymal/ventricular invasion, and mass effect. These features are less characteristic of classic oligodendroglioma imaging, especially in the absence of a frontal-predominant location. Features that could support codeletion are cortical involvement and a temporal/cortical component, since oligodendrogliomas often have cortical-subcortical involvement, but the location is not predominantly frontal and the aggressive enhancing/edematous pattern argues more strongly against codeletion. Therefore the best estimate is non-codeleted.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Tumor Location",
+      "Region Proportions",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histopathology. The metadata strongly supports an aggressive enhancing glioma, but molecular subtype cannot be determined definitively from MRI alone. Note an internal inconsistency: ET Volume and enhancement descriptors indicate enhancing tumor, while the nested volumes_ideal_midline/volumes_patient_midline fields list et volume as zero; the explicit ET Volume, enhancement quality, margin thickness, and text report were weighted more heavily.",
+  "subject_id": "EGD-0621",
+  "who_grade": {
+    "confidence": 0.93,
+    "contradicting_features": [
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "Proportion Necrosis",
+      "volumes_ideal_midline",
+      "volumes_patient_midline"
+    ],
+    "prediction": 4,
+    "reasoning": "Considered independently from molecular predictions, the MRI metadata strongly favors CNS WHO grade 4 rather than grade 2 or 3. There is marked and substantial contrast enhancement with a thick enhancing margin, measurable necrosis, extensive edema, very large tumor volume, deep white-matter invasion, ependymal/ventricular invasion, and mass effect with midline shift; these are classic high-grade imaging features and are much more consistent with grade 4 than with lower-grade diffuse glioma. Features arguing against grade 4 are absence of contrast-enhancing or edema crossing the midline, absence of multifocality or satellite lesions, a relatively modest necrotic proportion, and nested volume fields that list enhancing tumor as zero despite other enhancement fields indicating enhancement. These contradictions reduce certainty slightly, but the overall structural MRI pattern remains strongly grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

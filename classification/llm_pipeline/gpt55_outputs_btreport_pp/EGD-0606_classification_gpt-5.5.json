@@ -1,0 +1,83 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status, the metadata favor an IDH-wildtype diffuse glioma because age_years shows an older adult patient, while Multifocal or Multicentric, Number of lesions, Side of Tumor Epicenter, Edema crosses midline, Ependymal (ventricular) Invasion, and Deep WM invasion describe a bilateral/multifocal, deeply infiltrative pattern that is more typical of IDH-wildtype glioblastoma biology than IDH-mutant diffuse glioma. T2-FLAIR Mismatch Present is absent, which argues against the classic IDH-mutant astrocytoma imaging signature. Evidence against IDH-wildtype includes Tumor Location and Region Proportions showing frontal/cortical/insular involvement and Cortical involvement being present, which can be seen with IDH-mutant gliomas, plus Enhancement Quality, ET Volume (mL), Proportion Enhancing, and NCR Volume (mL) showing only mild/minimal enhancing and necrotic tumor burden. Overall, the age and infiltrative multifocal/ependymal pattern outweigh the low-enhancement features, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Side of Tumor Epicenter",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the metadata favor non-codeleted status because Multifocal or Multicentric, Number of lesions, Side of Tumor Epicenter, Edema crosses midline, Deep WM invasion, Ependymal (ventricular) Invasion, and Total tumor volume (mL) describe a very extensive, bilateral/multifocal, deeply invasive lesion pattern that is less typical for oligodendroglioma. T2-FLAIR Mismatch Present being absent does not specifically prove codeletion and removes support for an IDH-mutant astrocytoma-type signature, but by itself is not enough to favor codeletion. Evidence that could support codeletion includes Tumor Location and Region Proportions showing frontal/cortical involvement and Enhancement Quality showing mild enhancement, both of which can occur in oligodendroglioma. However, without calcification-sensitive imaging or other oligodendroglioma-specific metadata, the invasive multifocal pattern weighs more strongly toward non-codeleted.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Side of Tumor Epicenter",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. Confidence is limited by absence of diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, and molecular testing. The very large FLAIR/edema-dominant infiltrative abnormality with tiny enhancing/necrotic volumes is somewhat atypical for classic enhancing glioblastoma, but the age, multifocal/bilateral distribution, deep white matter invasion, and ependymal involvement support an aggressive IDH-wildtype diagnosis.",
+  "subject_id": "EGD-0606",
+  "who_grade": {
+    "confidence": 0.71,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade, the metadata favor grade 4 over grades 2 or 3 because Multifocal or Multicentric, Number of lesions, Side of Tumor Epicenter, Edema crosses midline, Deep WM invasion, Ependymal (ventricular) Invasion, ED Volume (mL), Total tumor volume (mL), and whole_tumor_sphericity indicate a very extensive, infiltrative, bilateral/multifocal tumor with ventricular and deep white matter involvement, an aggressive pattern most compatible with highest-grade diffuse glioma. Additional support comes from Enhancement Quality, Thickness of enhancing margin, ET Volume (mL), NCR Volume (mL), Proportion Enhancing, and Proportion Necrosis showing at least some enhancing/necrotic component, although small. Evidence against grade 4 is that Enhancement Quality is only mild, ET Volume (mL) and Proportion Enhancing are extremely low, NCR Volume (mL) is very small, and midline_shift_present with Asymmetrical Ventricles does not show marked mass effect. Weighing the aggressive distribution and invasion against the limited enhancement/necrosis, the best estimate is CNS WHO grade 4 rather than grade 3 or 2.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Side of Tumor Epicenter",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "whole_tumor_sphericity",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,81 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors IDH-mutant diffuse glioma because the patient is relatively young for IDH-wildtype glioblastoma, the tumor is frontal/cortical, solitary, and nonenhancing with no enhancing or necrotic component. These are typical imaging-clinical features of IDH-mutant glioma. Evidence against IDH-mutant status is the very large FLAIR/edema-defined tumor burden, midline crossing, deep white matter invasion, ependymal involvement, and mass effect, which can be seen in more aggressive IDH-wildtype tumors. However, the absence of enhancement and necrosis and the age/location profile weigh more strongly toward IDH mutation.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "ED Volume (mL)"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest support for co-deletion is the frontal cortical location in a middle-aged adult and the lack of enhancement or necrosis, which are compatible with oligodendroglioma. The evidence is not specific: astrocytoma can also be frontal and nonenhancing, and the midline epicenter, deep white matter invasion, ependymal invasion, midline-crossing FLAIR abnormality, and very large volume are less classic for a localized frontal oligodendroglioma. Because the available MRI metadata lacks more discriminating features, the estimate only modestly favors co-deletion.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Predictions are limited by absence of diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, and detailed T2-FLAIR mismatch characterization. The nonenhancing frontal-cortical phenotype supports an IDH-mutant lower-grade diffuse glioma, but the very large FLAIR abnormality with midline crossing, deep white matter and ependymal involvement, and mass effect introduces uncertainty and warrants histomolecular confirmation.",
+  "subject_id": "UCSF-PDGM-469",
+  "who_grade": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "n_slices_with_shift"
+    ],
+    "prediction": 2,
+    "reasoning": "WHO grade assessment from MRI metadata alone favors grade 2 because the lesion is entirely nonenhancing with no enhancing tumor and no necrotic component; these features argue against grade 4 and make grade 3 less likely. The solitary frontal cortical pattern is also compatible with a lower-grade diffuse glioma. Features arguing for a higher grade include very large volume, midline-crossing FLAIR abnormality, deep white matter invasion, ependymal invasion, and substantial mass effect, which can accompany higher-grade disease. Because there is no enhancement or necrosis, the overall imaging phenotype best supports grade 2, with moderate uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

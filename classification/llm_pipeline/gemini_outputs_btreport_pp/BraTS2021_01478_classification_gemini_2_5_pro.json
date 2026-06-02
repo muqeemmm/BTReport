@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_01478",
+  "idh": {
+    "reasoning": "The patient's age of 39 is equivocal, but imaging features strongly suggest an IDH-wildtype tumor. The tumor has a midline epicenter, extensively involves deep gray matter structures bilaterally (thalamus, basal ganglia) and the brainstem, and demonstrates a large necrotic component. The presence of necrosis is a hallmark of IDH-wildtype gliomas. Furthermore, the absence of a T2-FLAIR mismatch sign is strong evidence against an IDH-mutant astrocytoma. The only significant contradicting feature is a quantitatively sharp tumor margin, which is less common in IDH-wildtype tumors but is outweighed by the other aggressive features.",
+    "supporting_features": [
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically lack necrosis and are cortically based, most often in the frontal lobe. This tumor exhibits a large necrotic core and has a deeply infiltrative pattern involving the thalamus, basal ganglia, and brainstem, with a midline epicenter. These features are antithetical to the characteristic imaging phenotype of an oligodendroglioma. Therefore, a non-codeleted status is strongly favored.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis is a defining feature of WHO grade 4 gliomas. The metadata explicitly reports a large necrotic component ('Proportion Necrosis': 47.99). This finding alone is sufficient for a Grade 4 designation in an adult-type diffuse astrocytic glioma. Supporting features include the very large tumor volume, significant mass effect with midline shift, and extensive infiltration including ependymal invasion. The mild and limited contrast enhancement is a weaker, contradicting feature but does not preclude a Grade 4 diagnosis in the presence of necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly characteristic of a Glioblastoma, IDH-wildtype. This is evidenced by the tumor's large size, midline epicenter with deep bilateral infiltration, and most importantly, the presence of a large necrotic core. The absence of a T2-FLAIR mismatch further argues against an IDH-mutant astrocytoma. The combination of IDH-wildtype status and features of grade 4 (necrosis) defines this as a Glioblastoma, CNS WHO grade 4."
+}

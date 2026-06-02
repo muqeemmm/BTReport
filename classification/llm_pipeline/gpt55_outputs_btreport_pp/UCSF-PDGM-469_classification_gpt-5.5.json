@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest metadata signal is a positive T2-FLAIR mismatch with a high score, which is classically associated with IDH-mutant astrocytoma rather than IDH-wildtype glioblastoma. The patient is a relatively young adult, and the lesion is frontal/cortical and nonenhancing with no enhancing or necrotic component, all favoring IDH-mutant diffuse glioma. Against this, the very large FLAIR abnormality, midline crossing, deep white-matter invasion, ependymal invasion, and midline shift indicate aggressive/infiltrative behavior that can be seen in IDH-wildtype glioma. Overall, the specific T2-FLAIR mismatch and nonenhancing phenotype outweigh the aggressive extent features, so the best prediction is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status assessed independently from the IDH call, the positive T2-FLAIR mismatch with high score strongly favors an astrocytic, non-codeleted genotype rather than oligodendroglioma. The absence of enhancement and necrosis is not specific but is compatible with a non-codeleted lower-grade astrocytic tumor. Features arguing the other way are the frontal/cortical location and middle-adult age, which are common in oligodendroglioma and therefore can support codeletion. No calcification-sensitive sequence is available, limiting assessment of oligodendroglioma-associated calcification. Overall, the T2-FLAIR mismatch is the most discriminating provided feature, so the best prediction is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Prediction is driven mainly by the strong T2-FLAIR mismatch and lack of enhancement/necrosis. Confidence is limited by absence of DWI/ADC, perfusion, spectroscopy, SWI/GRE, and any molecular markers; WHO grade 4 molecular criteria such as CDKN2A/B homozygous deletion cannot be assessed from these MRI metadata.",
+  "subject_id": "UCSF-PDGM-469",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "Effaced Ventricle"
+    ],
+    "prediction": 2,
+    "reasoning": "Grade assessment is based only on MRI metadata. The lesion is entirely nonenhancing with zero enhancing volume, no necrotic/non-enhancing core component, and zero necrosis proportion, which favors a lower-grade diffuse glioma rather than CNS WHO grade 4 and also argues against many grade 3 tumors with more aggressive imaging features. A positive T2-FLAIR mismatch is also more typical of lower-grade IDH-mutant astrocytic tumors. Against grade 2, the lesion is very large, crosses midline as FLAIR abnormality, invades deep white matter and ependymal/ventricular regions, and produces ventricular effacement and midline shift, all suggesting substantial biologic aggressiveness or advanced local extent. Despite these concerning extent/mass-effect features, the complete absence of enhancement and necrosis makes grade 2 the best MRI-based estimate, with only moderate confidence because grade 3 cannot be excluded radiographically and molecular grade-defining features are unavailable.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

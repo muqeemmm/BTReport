@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_00419",
+  "idh": {
+    "reasoning": "The patient's age of 45 is borderline, but the presence of significant necrosis (Proportion Necrosis: 10.19%) and thick contrast enhancement (Thickness of enhancing margin: \">3mm\") are classic radiological hallmarks of glioblastoma, the most common IDH-wildtype glioma. The substantial vasogenic edema (ED Volume (mL): 24.445) further supports a high-grade, aggressive tumor, which is more typical of the IDH-wildtype phenotype. Additionally, the absence of the T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 0.0) argues against the primary alternative of an IDH-mutant astrocytoma. While the enhancement is qualitatively described as 'Mild', the objective evidence of necrosis is a much stronger predictor of IDH-wildtype status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. The tumor involves deep gray matter structures, specifically the left thalamus ('Anatomical Overlap Regions'), which is a feature more commonly associated with astrocytic (non-codeleted) lineage than oligodendroglial (codeleted) lineage. Furthermore, the presence of necrosis ('Proportion Necrosis': 10.19%) and thick enhancement are atypical for 1p/19q-codeleted tumors, even anaplastic ones. While the relatively sharp tumor margin on FLAIR ('Transition Zone Thickness (FLAIR)' median_mm: 0.75) could be seen in an oligodendroglioma, the deep involvement and high-grade features are stronger evidence against co-deletion.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The most definitive imaging feature for CNS WHO grade 4 is the presence of necrosis. This tumor demonstrates a significant necrotic component, as evidenced by a 'Proportion Necrosis' of 10.19% and an 'NCR Volume (mL)' of 3.279. The presence of contrast enhancement ('ET Volume (mL)': 4.466) with a thick margin ('Thickness of enhancing margin': \">3mm\") further solidifies a high-grade diagnosis. While the 'Enhancement Quality' is described as 'Mild', this subjective descriptor is strongly outweighed by the objective, quantitative evidence of necrosis, which is a defining characteristic of grade 4 disease in adult-type diffuse gliomas.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of imaging features, most notably the presence of a necrotic core and thick contrast enhancement in a middle-aged adult, is highly characteristic of a glioblastoma. The predicted IDH-wildtype status, non-codeleted status, and WHO grade 4 are all internally consistent and point strongly to this diagnosis."
+}

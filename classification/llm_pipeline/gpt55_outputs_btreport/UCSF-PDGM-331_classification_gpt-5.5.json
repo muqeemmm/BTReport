@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors IDH-wildtype because the lesion pattern is aggressive and infiltrative: multifocal disease, ependymal/ventricular invasion, deep white matter invasion, extensive edema, and midline shift are more typical of IDH-wildtype diffuse glioma than a lower-grade IDH-mutant astrocytoma. The ventricular/deep gray anatomic overlap also supports a more infiltrative high-grade phenotype. Evidence against IDH-wildtype is that the patient is 46 years old, and the enhancing component is mild/small with no necrosis, which can be seen in IDH-mutant glioma. Balancing these, the imaging phenotype more strongly supports IDH-wildtype.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Anatomical Overlap Regions",
+      "Tumor Location",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Cortical involvement",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata favors non-codeleted status because the tumor is centered in the ventricles-parietal/deep region with ependymal invasion, deep white matter invasion, multifocality, extensive edema, and mass effect, which is not the usual imaging pattern of oligodendroglioma with 1p/19q co-deletion. Features that could argue toward codeletion are cortical involvement and the patient's middle adult age, but there is no provided frontal-predominant cortical-subcortical pattern or other supportive oligodendroglial imaging metadata. Overall, the pattern supports non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional structural MRI metadata without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, or histology. The main uncertainty is that mild enhancement, absent necrosis, and relatively small enhancing volume reduce certainty for grade 4 and IDH-wildtype status; molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "UCSF-PDGM-331",
+  "who_grade": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": 4,
+    "reasoning": "The metadata favors CNS WHO grade 4 because there are multiple aggressive structural features: multifocal disease, ependymal/ventricular invasion, deep white matter invasion, extensive edema, large total tumor volume, and midline shift. These findings argue against grade 2 and support a high-grade diffuse glioma. However, the enhancing component is mild and small, there is no necrotic component, and the enhancing margin is described as solid rather than necrotic/ring-like; these features leave grade 3 as a meaningful alternative. On balance, the mass effect, multifocality, ependymal invasion, and edema make grade 4 the best estimate, but confidence is only moderate.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

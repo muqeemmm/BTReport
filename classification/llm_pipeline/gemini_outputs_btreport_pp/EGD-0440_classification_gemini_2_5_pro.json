@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0440",
+  "idh": {
+    "reasoning": "The patient's age of 60 is more typical for IDH-wildtype gliomas, which have a peak incidence in older adults. The presence of significant central necrosis (NCR Volume (mL) of 27.773) and a thick enhancing margin (>3mm) are hallmark features of glioblastoma, which is the most common IDH-wildtype tumor. The presence of multiple satellite lesions and significant mass effect (midline_shift_present: \"Yes\") also indicate aggressive biological behavior characteristic of IDH-wildtype tumors. Furthermore, the absence of a T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) argues strongly against an IDH-mutant astrocytoma. While the frontal lobe location is common in IDH-mutant tumors, the overwhelming evidence from age and aggressive imaging features points to an IDH-wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Multiple satellites present",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is performed independently of the IDH status. The presence of extensive necrosis (Proportion Necrosis: 12.65) and a thick enhancing margin (Thickness of enhancing margin: \">3mm\") are highly uncharacteristic of 1p/19q co-deleted oligodendrogliomas, which typically present as lower-grade, less aggressive tumors. The massive vasogenic edema (ED Volume (mL): 169.123) and invasion of deep gray matter structures (Anatomical Overlap Regions including caudate and putamen) are also more consistent with an astrocytic lineage (non-codeleted) tumor. While some features like the relatively sharp tumor boundary (boundary_sharpness: 1.6478) and frontal lobe location could be seen in oligodendrogliomas, the strong indicators of high-grade, aggressive biology make a non-codeleted status much more likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "boundary_sharpness",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade 4 is strongly supported by the presence of key radiological hallmarks of high-grade malignancy. The most definitive feature is the presence of a large necrotic core (NCR Volume (mL): 27.773). In the context of a diffusely infiltrating glioma in an adult, radiologically evident necrosis is a surrogate for microvascular proliferation and/or necrosis on histology, which are criteria for WHO grade 4. This is further supported by the presence of contrast enhancement (ET Volume (mL): 22.626) with a thick margin (>3mm), extensive peritumoral edema, and significant mass effect causing midline shift. There are no features to suggest a lower grade (2 or 3), as grade 2 tumors are typically non-enhancing and grade 3 tumors usually lack extensive central necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 60-year-old female with a large, solitary left frontal lobe mass showing features highly characteristic of a high-grade glioma. The presence of extensive central necrosis, thick rim enhancement, multiple satellite lesions, and significant mass effect are classic radiological findings for a glioblastoma. The patient's age and the absence of a T2-FLAIR mismatch strongly favor an IDH-wildtype status. The combination of findings is most consistent with a Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

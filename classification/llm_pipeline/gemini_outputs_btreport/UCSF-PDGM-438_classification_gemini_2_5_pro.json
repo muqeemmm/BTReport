@@ -1,0 +1,42 @@
+{
+  "subject_id": "UCSF-PDGM-438",
+  "idh": {
+    "reasoning": "The patient is 38 years old, an age group where IDH-mutant gliomas are more prevalent than IDH-wildtype. The imaging phenotype strongly supports this prediction. The tumor is entirely non-enhancing ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0) and shows no evidence of necrosis ('NCR Volume (mL)': 0.0). This lack of aggressive features is highly characteristic of IDH-mutant gliomas, as IDH-wildtype tumors in adults are typically glioblastomas (WHO grade 4) and present with avid enhancement and central necrosis. The frontal and insular location is also a common site for IDH-mutant astrocytomas. There are no contradicting features in the provided metadata.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of an IDH-mutant tumor, the differential is between an astrocytoma (non-codeleted) and an oligodendroglioma (codeleted). The tumor's location provides the primary clue. While frontal lobe involvement is common in both subtypes, the significant involvement of the insula ('Region Proportions') is a strong predictor for an astrocytoma (non-codeleted) lineage. Other classic differentiating features, such as tumor margin definition or the T2-FLAIR mismatch sign, cannot be assessed from the provided metadata. In the absence of features pointing towards oligodendroglioma (like calcification, which is not assessed), the insular location is the most compelling piece of evidence, favoring a non-codeleted status.",
+    "supporting_features": [
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The WHO grade is inferred from radiological features of aggressiveness. This tumor displays a very indolent imaging profile. There is a complete absence of contrast enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0) and necrosis ('NCR Volume (mL)': 0.0). These two features are the primary imaging markers for high-grade glioma, and their absence strongly argues against a WHO grade 4 diagnosis. While some WHO grade 3 gliomas can be non-enhancing, it is less common. The combination of no enhancement, no necrosis, and a relatively small tumor volume ('Total tumor volume (mL)': 17.351) with minimal mass effect ('midline_shift_present': 'No') is most consistent with a low-grade glioma, specifically WHO grade 2. The distinction between grade 2 and 3 can be difficult on conventional MRI alone, but the evidence overwhelmingly points to a lower grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 38-year-old female with a solitary, non-enhancing, non-necrotic tumor involving the frontal lobe, cortex, and insula. The combination of young patient age and the absence of any aggressive imaging features makes an IDH-mutant, low-grade glioma the most probable diagnosis. The insular involvement specifically suggests an astrocytic lineage. The findings are highly consistent with an Astrocytoma, IDH-mutant, CNS WHO grade 2."
+}

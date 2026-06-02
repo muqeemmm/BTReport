@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_01203",
+  "idh": {
+    "reasoning": "The evidence for IDH status is highly conflicting. The strongest feature supporting an IDH-mutant status is the definitive presence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.80), which is a highly specific marker for IDH-mutant astrocytomas. The relatively low proportion of enhancement ('Proportion Enhancing': 9.77%) also favors this prediction. Conversely, several features strongly suggest an IDH-wildtype tumor (glioblastoma): the patient's age (52 years), the presence of a significant necrotic core ('Proportion Necrosis': 13.67%), a thick enhancing margin ('>3mm'), and a quantitatively sharp tumor-edema boundary ('Transition Zone Thickness (FLAIR)' median of 0.75 mm). Given the very high specificity of the T2-FLAIR mismatch sign, I will predict IDH-mutant, but the numerous and strong contradicting features significantly reduce confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status hinges primarily on the presence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0). This sign is a well-established imaging biomarker for astrocytic lineage (1p/19q non-codeleted) and is typically absent in oligodendrogliomas (1p/19q codeleted). The presence of necrosis ('Proportion Necrosis': 13.67%) is also more characteristic of high-grade astrocytomas than oligodendrogliomas. While oligodendrogliomas can have sharp borders, and this tumor has quantitatively sharp boundaries ('Transition Zone Thickness (FLAIR)'), this feature is less specific than the T2-FLAIR mismatch sign. Therefore, the evidence strongly favors a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "boundary_sharpness"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is driven by the presence of high-grade imaging features. The most definitive feature present is necrosis, indicated by a 'Proportion Necrosis' of 13.67%. According to the WHO CNS5 classification, the presence of necrosis in an adult-type diffuse astrocytoma, regardless of IDH status, is sufficient for a WHO grade 4 diagnosis. Other supporting features for a high grade include a significant volume of enhancing tissue ('ET Volume (mL)': 6.549) and a thick enhancing margin ('>3mm'). While the T2-FLAIR mismatch sign is more classically associated with lower-grade gliomas, its presence does not preclude a high grade, and the evidence for necrosis is a defining criterion for grade 4. Therefore, a prediction of WHO grade 4 is made with high confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents conflicting imaging features. The strong T2-FLAIR mismatch sign is a compelling marker for an IDH-mutant astrocytoma. However, the presence of significant necrosis, thick enhancement, and sharp borders are more typical for an IDH-wildtype glioblastoma. The final integrated diagnosis of 'Astrocytoma, IDH-mutant, CNS WHO grade 4' reconciles these findings, as this entity is defined by the presence of IDH mutation alongside high-grade features like necrosis. Confidence in the IDH status is necessarily low due to the contradictory evidence."
+}

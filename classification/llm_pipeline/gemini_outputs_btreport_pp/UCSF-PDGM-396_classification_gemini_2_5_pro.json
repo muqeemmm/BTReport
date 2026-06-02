@@ -1,0 +1,50 @@
+{
+  "subject_id": "UCSF-PDGM-396",
+  "idh": {
+    "reasoning": "The patient's young age (36 years) is the primary feature suggesting an IDH-mutant status. However, multiple strong imaging features argue for an IDH-wildtype tumor. The tumor is located in deep gray matter structures (thalamus, caudate, putamen) and the brainstem, a pattern highly characteristic of IDH-wildtype gliomas. Furthermore, the T2-FLAIR mismatch sign, a specific marker for IDH-mutant astrocytomas, is absent ('T2-FLAIR Mismatch Present': 0.0). The tumor also has a relatively sharp border ('Transition Zone Thickness (FLAIR)' median_mm: 0.75), which is less typical for the diffusely infiltrative pattern of IDH-mutant astrocytomas. The combination of deep location and absence of T2-FLAIR mismatch strongly outweighs the patient's age, leading to a prediction of IDH-wildtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Anatomical Overlap Regions",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. Evidence for non-codeletion (astrocytic lineage) includes the tumor's extensive invasion of deep white matter and deep gray matter structures ('Deep WM invasion': 'Present', 'Anatomical Overlap Regions' including thalamus, caudate, putamen, pallidum, brain-stem), which is a classic feature of astrocytomas. The presence of mild enhancement and a small amount of necrosis also favors an astrocytic phenotype over an oligodendroglioma. Arguing for co-deletion (oligodendroglioma phenotype) are the relatively sharp tumor borders ('Transition Zone Thickness (FLAIR)' median_mm: 0.75) and significant cortical involvement. However, the profoundly infiltrative nature into deep structures is a stronger differentiator and weighs heavily against an oligodendroglioma diagnosis. Therefore, the prediction is non-codeleted.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The presence of both contrast enhancement ('ET Volume (mL)': 2.037) and necrosis ('NCR Volume (mL)': 0.27) are definitive features of a high-grade glioma. According to the WHO CNS5 classification, a diffuse astrocytic glioma in an adult that is IDH-wildtype and demonstrates contrast enhancement or necrosis is classified as Glioblastoma, WHO grade 4. The significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': -6.0) and extensive deep infiltration further support a high-grade, aggressive tumor. While the amounts of enhancement and necrosis are small, their mere presence is sufficient for a grade 4 diagnosis in this context. A grade 2 or 3 diagnosis is therefore excluded.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "A 36-year-old male with a large, deeply infiltrative tumor with features strongly suggestive of an IDH-wildtype glioma, despite the patient's young age. Key indicators include the deep anatomical location involving the thalamus and brainstem, and the absence of a T2-FLAIR mismatch. The presence of both contrast enhancement and necrosis, even if minimal, are definitive for a WHO grade 4 classification. The integrated diagnosis is Glioblastoma, IDH-wildtype."
+}

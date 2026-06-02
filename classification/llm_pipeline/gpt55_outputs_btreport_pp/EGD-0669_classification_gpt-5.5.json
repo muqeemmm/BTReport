@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors an IDH-wildtype diffuse glioma: very advanced age, marked and mostly enhancing tumor, high enhancing proportion, necrotic component, deep white-matter involvement, corpus-callosum/midline location, and a relatively sharp transition zone are all more typical of IDH-wildtype glioblastoma than IDH-mutant astrocytoma. Evidence against IDH-wildtype is limited but includes small total tumor volume, absent midline shift, low edema volume, and absent T2-FLAIR mismatch, which removes a specific imaging clue for IDH-mutant astrocytoma but does not itself strongly prove wildtype status. Overall, the balance supports IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Text Report",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Tumor Location",
+      "Region Proportions",
+      "Side of Tumor Epicenter",
+      "Transition Zone Thickness (FLAIR)",
+      "Transition Zone Thickness (T1CE)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata favors a non-codeleted tumor: marked enhancement, very high enhancing proportion, necrosis, advanced age, deep white-matter invasion, and involvement of ventricular/corpus-callosum/midline regions are less typical for oligodendroglioma with 1p/19q co-deletion. The main opposing evidence is frontal-lobe and cortical-region involvement, which can be seen with oligodendroglioma, but the metadata also states cortical involvement is absent and the dominant features are enhancing high-grade characteristics. Overall, non-codeleted is more likely than codeleted.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter",
+      "Text Report",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histomolecular results. The imaging phenotype is most consistent with glioblastoma, IDH-wildtype, but molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0669",
+  "who_grade": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "The metadata favors CNS WHO grade 4: marked enhancement, mostly enhancing composition, thick enhancing margin, substantial enhancing volume, necrotic proportion, deep white-matter invasion, and corpus-callosum/midline involvement are imaging features associated with the highest-grade diffuse glioma. Grade 2 is unlikely given the marked enhancement and necrosis; grade 3 remains possible on imaging, but necrosis and the strongly enhancing phenotype push the estimate toward grade 4. Features arguing against an aggressive grade 4 phenotype include small total tumor volume, no midline shift, low edema volume, solitary lesion, absent satellites, and absent ependymal invasion. Overall, grade 4 is the best estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Text Report",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Tumor Location",
+      "Region Proportions",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

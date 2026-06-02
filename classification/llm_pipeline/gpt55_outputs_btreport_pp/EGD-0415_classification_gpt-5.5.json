@@ -1,0 +1,69 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favor an IDH-mutant diffuse glioma because the patient is a young adult, the tumor is frontal/cortical, enhancement is minimal, enhancing tumor volume is extremely small with no discrete enhancing components, and there is no midline shift, deep white matter invasion, or ependymal invasion. These features are more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. Against this, the high reported Proportion Necrosis is concerning for more aggressive biology if it represents true necrosis, and absence of T2-FLAIR mismatch removes a specific imaging clue for IDH-mutant astrocytoma. Overall, the balance still supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Proportion Necrosis"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, the frontal_lobe-cortex location, cortical involvement, young adult age, mild enhancement, and absent T2-FLAIR mismatch favor an oligodendroglioma-type imaging phenotype over a non-codeleted astrocytoma-type phenotype. The main counterpoint is that the epicenter is reported as midline rather than clearly lobar, and the high Proportion Necrosis is not a typical low-grade oligodendroglioma feature if it represents true necrosis. Because the supportive frontal-cortical and mismatch-negative pattern is suggestive but not definitive, the prediction is 1p/19q-codeleted with moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata. The main uncertainty is the internally mixed grade signal: Proportion Necrosis is high, but ET Volume is nearly absent, n_components_enhancing shows no discrete enhancing components, and mass-effect/invasive features are minimal.",
+  "subject_id": "EGD-0415",
+  "who_grade": {
+    "confidence": 0.59,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Proportion of Oedema"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade considered independently, most metadata favor a lower-grade lesion: the tumor volume and measured dimensions are modest, enhancement is mild with extremely small ET Volume and no discrete enhancing components, the enhancing margin is thin, and there is no midline shift, ventricular asymmetry, deep white matter invasion, ependymal invasion, multifocality, or satellites. These findings support grade 2 over grade 3 or 4. The strongest opposing features are the high reported Proportion Necrosis, some reported Proportion Enhancing, and substantial Proportion of Oedema, which would raise concern for higher grade if they reflect true necrosis/enhancing tumor biology. Given the predominance of low-grade morphology but meaningful contradictory metadata, grade 2 is favored with limited-to-moderate confidence.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

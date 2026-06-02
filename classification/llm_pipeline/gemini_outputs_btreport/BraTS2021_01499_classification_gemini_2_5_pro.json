@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_01499",
+  "idh": {
+    "reasoning": "The patient's age of 39 years is more typical for IDH-mutant gliomas. The most compelling radiological evidence is the complete absence of contrast enhancement, as indicated by an 'Enhancement Quality' of 'None' and an 'ET Volume (mL)' of 0.0. Non-enhancing tumors are strongly associated with IDH-mutant status. While the tumor exhibits significant mass effect and a large non-enhancing core, these features are non-specific. In the absence of enhancement, the evidence strongly points towards an IDH-mutant genotype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is performed independently of the IDH status. The tumor is primarily located in the temporal lobe ('Tumor Location': 'temporal-cortex region'), which is a more common site for astrocytomas (1p/19q non-codeleted) than for oligodendrogliomas (1p/19q codeleted). Furthermore, the tumor involves deep gray matter structures including the putamen and pallidum ('Anatomical Overlap Regions'), a pattern of infiltration more characteristic of astrocytomas. The lack of enhancement is not a differentiating feature as it can be seen in both tumor types. The location is the strongest available evidence pointing towards a non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The grading is based on conflicting features. The complete lack of contrast enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0) argues strongly against a WHO grade 4 diagnosis. However, features suggesting a higher grade than 2 are present. These include the large tumor size ('Total tumor volume (mL)': 82.814), significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': -7.0), and a large non-enhancing core reported as necrosis ('NCR Volume (mL)': 36.124, 'Proportion Necrosis': 43.62). This combination of no enhancement with significant mass effect and a large non-enhancing/cystic/necrotic component is most consistent with a CNS WHO grade 3 glioma.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are most consistent with an IDH-mutant astrocytoma. The complete absence of enhancement is a strong predictor of IDH mutation. The temporal location and deep gray matter involvement favor an astrocytoma over an oligodendroglioma. While non-enhancing, the tumor's large size, significant mass effect, and large non-enhancing core suggest a higher grade, making CNS WHO grade 3 the most probable diagnosis."
+}

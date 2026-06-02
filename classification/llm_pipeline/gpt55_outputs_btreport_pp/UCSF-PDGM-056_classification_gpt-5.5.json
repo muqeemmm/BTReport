@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "Using the MRI metadata alone, the features favor IDH-wildtype over IDH-mutant: age_years shows an elderly patient, and Enhancement Quality, Proportion Enhancing, ET Volume (mL), Thickness of enhancing margin, Proportion Necrosis, and Tumor Core Volume (mL) describe a predominantly enhancing lesion with a necrotic component, which is more typical of IDH-wildtype glioblastoma biology than lower-grade IDH-mutant diffuse glioma. Transition Zone Thickness (FLAIR), Transition Zone Thickness (T1CE), and boundary_sharpness indicate a relatively abrupt interface, also favoring a more aggressive phenotype. T2-FLAIR Mismatch Present does not show the classic mismatch pattern that would support IDH-mutant astrocytoma. The main counterpoints are Cortical involvement, Deep WM invasion, and Tumor Location, because superficial cortical parietal/occipital involvement without deep white-matter invasion can be seen in IDH-mutant tumors. Overall, the age and strong enhancing-necrotic phenotype outweigh the counterpoints, so the best prediction is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "Transition Zone Thickness (FLAIR)",
+      "Transition Zone Thickness (T1CE)",
+      "boundary_sharpness",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessing 1p/19q status independently from the other tasks, the MRI metadata favors non-codeleted over codeleted. age_years, Enhancement Quality, Proportion Enhancing, ET Volume (mL), Thickness of enhancing margin, and Proportion Necrosis describe an elderly patient with a markedly and mostly enhancing tumor containing necrosis, which is less typical for oligodendroglioma with 1p/19q co-deletion and more typical for non-codeleted diffuse glioma. T2-FLAIR Mismatch Present also does not provide a supportive oligodendroglioma-specific pattern. The counterpoints are Cortical involvement and Tumor Location, because cortical/subcortical parietal-occipital tumors can include oligodendroglioma, although the provided metadata lacks calcification-sensitive imaging and frontal-predominant information. On balance, the enhancing-necrotic phenotype and age favor non-codeleted status, but confidence is limited because key oligodendroglioma discriminators are not assessed.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or molecular testing. Imaging strongly suggests an aggressive enhancing-necrotic adult diffuse glioma, but definitive IDH and 1p/19q status require pathology and molecular assays.",
+  "subject_id": "UCSF-PDGM-056",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade assessed independently from the molecular tasks, the MRI metadata strongly favors grade 4 over grades 2 or 3. Enhancement Quality, Proportion Enhancing, ET Volume (mL), Thickness of enhancing margin, Proportion Necrosis, Tumor Core Volume (mL), and Total tumor volume (mL) describe a large, predominantly enhancing mass with a thick enhancing margin and necrotic component, which is characteristic of grade 4 behavior rather than a nonenhancing grade 2 tumor or a less necrotic grade 3 tumor. Transition Zone Thickness (FLAIR), Transition Zone Thickness (T1CE), and boundary_sharpness support an abrupt lesion interface. Counterpoints are ED Volume (mL), Proportion of Oedema, midline_shift_present, Asymmetrical Ventricles, and Ependymal (ventricular) Invasion, because edema and mass effect are limited and there is no ventricular/ependymal invasion. These counterpoints do not outweigh the marked enhancement and necrosis, so the best imaging-based grade prediction is CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "Total tumor volume (mL)",
+      "Transition Zone Thickness (FLAIR)",
+      "Transition Zone Thickness (T1CE)",
+      "boundary_sharpness"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

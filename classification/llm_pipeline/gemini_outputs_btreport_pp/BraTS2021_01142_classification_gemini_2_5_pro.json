@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_01142",
+  "idh": {
+    "reasoning": "The patient's advanced age (74 years) is a very strong predictor for IDH-wildtype status. The MRI features are classic for a high-grade glioma, specifically glioblastoma: a very large tumor with extensive central necrosis (`NCR Volume (mL)` of 26.654), marked and thick-rim contrast enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"), and significant mass effect. The presence of satellite lesions (`Multiple satellites present`: \"Present\") and ependymal invasion (`Ependymal (ventricular) Invasion`: \"Present\") further indicate an aggressive, infiltrative tumor, characteristic of IDH-wildtype gliomas. The primary contradictory feature is the `T2-FLAIR Mismatch Present` flag. While this sign is highly specific for IDH-mutant astrocytomas, its reliability can be lower in the presence of extensive necrosis and enhancement, and it is outweighed by the combination of advanced age and classic glioblastoma imaging phenotype.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The imaging phenotype is highly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically show minimal to no enhancement and rarely exhibit the extensive necrosis seen here (`NCR Volume (mL)`: 26.654). This tumor displays marked, thick-rim enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"), which is a strong feature against co-deletion. Furthermore, the `T2-FLAIR Mismatch Present` sign, while primarily an IDH-mutant feature, is specifically associated with the non-codeleted (astrocytoma) lineage. There are no features, such as frontal lobe preference or calcification (not assessed), to suggest a co-deleted status. Therefore, the evidence strongly points towards a non-codeleted genotype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is unequivocal based on the MRI findings. The presence of a large necrotic core (`NCR Volume (mL)`: 26.654, `Proportion Necrosis`: 16.29) is a radiological hallmark of a grade 4 glioma. Additionally, the presence of marked, thick-rim contrast enhancement (`Enhancement Quality`: \"Marked\", `ET Volume (mL)`: 79.555) is indicative of microvascular proliferation, another criterion for grade 4. Supporting features of high-grade malignancy include the very large tumor volume, significant mass effect (`midline_shift_present`: \"Yes\"), deep white matter and ependymal invasion, and the presence of satellite lesions. There is no evidence to support a lower grade (2 or 3), which would typically lack necrosis and show less aggressive enhancement patterns.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 1.0
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 74-year-old male with a large, left temporo-parietal mass with deep extension. The imaging findings of extensive necrosis, marked rim-enhancement, significant mass effect, and satellite lesions are all classic radiological features of a glioblastoma. The patient's advanced age strongly favors an IDH-wildtype status. The combination of these findings leads to a high-confidence diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. A quantitative T2-FLAIR mismatch was noted, but this is considered less likely to be a true indicator of IDH mutation given the overwhelming contrary evidence."
+}

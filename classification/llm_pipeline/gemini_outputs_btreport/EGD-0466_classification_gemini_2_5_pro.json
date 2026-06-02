@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0466",
+  "idh": {
+    "reasoning": "The patient's age of 48 is compatible with either IDH status. The tumor's frontal lobe location and large non-enhancing component (Proportion of Oedema: 92.13%) are features often seen in IDH-mutant gliomas. However, the presence of a necrotic core (NCR Volume (mL): 0.397) and a thick enhancing margin (Thickness of enhancing margin: '>3mm') are strong radiological indicators of an IDH-wildtype glioma (glioblastoma). In adult diffuse gliomas, necrosis is a powerful predictor of IDH-wildtype status. Therefore, despite some ambiguity, the evidence for IDH-wildtype is stronger.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "age_years",
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The tumor's frontal lobe location and cortical involvement are common in oligodendrogliomas (co-deleted). However, the presence of necrosis (NCR Volume (mL): 0.397) and enhancement (ET Volume (mL): 2.476) are more characteristic of astrocytic lineage tumors (non-codeleted) or glioblastoma. Oligodendrogliomas can enhance but necrosis is rare. The overall imaging phenotype with necrosis points away from a 1p/19q co-deleted tumor. Therefore, a non-codeleted status is more likely.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The most decisive feature for grading is the presence of necrosis, indicated by a non-zero NCR Volume (mL) of 0.397. Radiologically-apparent necrosis is a hallmark of WHO Grade 4 gliomas (glioblastoma). The presence of contrast enhancement (ET Volume (mL): 2.476), particularly with a thick margin (Thickness of enhancing margin: '>3mm'), further supports a high-grade designation. While the volume of necrosis is small, its presence is sufficient to strongly suggest the highest grade. Features like the absence of deep white matter or ependymal invasion are less weighty in the face of necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "A 48-year-old female with a right frontal lobe lesion. The presence of both enhancement and a small necrotic component are the key imaging findings. These features strongly suggest a high-grade glioma, most consistent with a WHO grade 4 designation. This radiological profile also makes an IDH-wildtype status more probable than IDH-mutant. The final integrated radiological diagnosis is most likely Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

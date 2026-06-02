@@ -1,0 +1,49 @@
+{
+  "subject_id": "UCSF-PDGM-281",
+  "idh": {
+    "reasoning": "The patient's age of 46 is within the typical range for IDH-mutant gliomas. The most compelling evidence is the complete absence of aggressive radiological features: there is no contrast enhancement (`ET Volume (mL)` is 0.0, `Enhancement Quality` is 'None') and no necrosis (`NCR Volume (mL)` is 0.0). These findings are highly characteristic of IDH-mutant gliomas. The insular involvement is also a common location for IDH-mutant astrocytomas. The main feature arguing against this prediction is the absence of a T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present` is 0.0), which is specific for IDH-mutant astrocytomas. However, the lack of enhancement and necrosis are stronger predictors of IDH status than the T2-FLAIR mismatch sign's presence or absence. Therefore, an IDH-mutant status is strongly favored.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the distinction is between an astrocytoma (non-codeleted) and an oligodendroglioma (codeleted). The tumor's significant involvement of the insula (`Region Proportions`) is a classic imaging feature highly associated with IDH-mutant astrocytomas. However, there is conflicting evidence. The absence of the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present` is 0.0) argues against an astrocytoma, as this sign is specific for this subtype, though not universally present. Furthermore, the `boundary_sharpness` value is relatively high, which can be suggestive of the better-defined margins sometimes seen in oligodendrogliomas. Weighing these factors, the strong and classic association of insular gliomas with the astrocytoma lineage is the most compelling piece of evidence, despite the conflicting T2-FLAIR mismatch finding. Therefore, a non-codeleted status is predicted, but with low confidence.",
+    "supporting_features": [
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "boundary_sharpness"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The radiological features strongly suggest a low-grade tumor. There is a complete absence of contrast enhancement (`ET Volume (mL)` is 0.0, `Proportion Enhancing` is 0.0) and necrosis (`NCR Volume (mL)` is 0.0). These are the primary imaging markers used to assess glioma grade, and their absence is the hallmark of a WHO grade 2 glioma. While the patient's age (46) and tumor volume (51.2 mL) are not insignificant, they do not override the lack of aggressive features. Without enhancement or necrosis, there is no imaging evidence to support a grade 3 or 4 diagnosis. Therefore, the prediction is WHO grade 2.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly characteristic of a low-grade, non-enhancing glioma. The lack of enhancement or necrosis strongly supports an IDH-mutant status and a WHO grade 2 designation. The prominent insular involvement is a classic sign of an astrocytoma, leading to the prediction of a 1p/19q non-codeleted status. The primary conflicting feature is the absence of a T2-FLAIR mismatch sign, which reduces confidence in the astrocytoma subtyping. Overall, the most likely diagnosis is Astrocytoma, IDH-mutant, WHO grade 2."
+}
