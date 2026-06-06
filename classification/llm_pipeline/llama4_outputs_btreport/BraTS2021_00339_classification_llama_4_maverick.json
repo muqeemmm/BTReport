@@ -1,0 +1,45 @@
+{
+  "id": "patient_0845",
+  "predictions": [
+    {
+      "type": "IDH Mutation Status",
+      "reasoning": "The patient's age (66 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 0.28) and a significant edema volume (ED Volume: 78.019 mL) are more typical of IDH wildtype glioblastoma, which is common in older adults. The tumor's characteristics, such as being solitary, having a significant proportion of edema, and showing mild enhancement, align more with IDH wildtype tumors. IDH mutant gliomas are less likely given the age and aggressive features of the tumor.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q Co-deletion Status",
+      "reasoning": "IDH mutant gliomas are more likely to have 1p/19q co-deletion, but given the prediction of IDH wildtype status with high confidence, the likelihood of 1p/19q co-deletion is low. The tumor's characteristics (e.g., age, enhancement pattern, necrosis) do not strongly suggest an oligodendroglioma, which is typically associated with 1p/19q co-deletion.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO Grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 0.28), significant edema (ED Volume: 78.019 mL), and mild enhancement with a thickness of the enhancing margin >3mm are characteristic features of a high-grade glioma. The patient's age and the tumor's aggressive features (e.g., deep white matter invasion, significant edema) are typical of glioblastoma, which is WHO Grade 4. The tumor's characteristics strongly support a high-grade classification.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Thickness of enhancing margin",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00339"
+}

@@ -1,0 +1,44 @@
+{
+  "subject_id": "BraTS2021_00514",
+  "idh": {
+    "reasoning": "The presence of a T2-FLAIR mismatch (field \"T2-FLAIR Mismatch Present\") is a strong imaging surrogate for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. Supporting features such as cortical involvement and absence of deep white\u2011matter invasion also favour a lower\u2011grade IDH\u2011mutant lesion. Contradicting evidence includes the patient\u2019s advanced age (field \"age_years\":86) and marked contrast enhancement (fields \"Enhancement Quality\" and \"Proportion Enhancing\"), which are more typical of IDH\u2011wildtype glioblastoma. Balancing these, the mismatch evidence outweighs the age\u2011related bias, leading to a prediction of IDH\u2011mutant with moderate confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2-FLAIR mismatch is specifically associated with IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytomas, making non\u2011codeletion the most likely status. No imaging features strongly suggest 1p/19q codeletion (which often presents with calcifications or less enhancement, not available here). Thus the best estimate is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.68
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement quality, a thickness of enhancing margin >3\u202fmm, and a proportion of enhancing tumor of ~22\u202f% point toward a higher\u2011grade lesion (grade\u202f3). The lack of necrosis (low \"Proportion Necrosis\"), absence of microvascular proliferation signs, and the presence of T2\u2011FLAIR mismatch argue against grade\u202f4. Therefore grade\u202f3 is the most consistent grade given the available data.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging strongly suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, most consistent with WHO grade\u202f3. Age and marked enhancement introduce some uncertainty, and lack of molecular testing limits definitive classification. Further histopathologic and molecular confirmation is recommended."
+}

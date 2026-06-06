@@ -1,0 +1,55 @@
+{
+  "id": "patient_0089",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (30 years) and the presence of a large, necrotic tumor with significant mass effect (midline shift, ventricular asymmetry) could suggest a high-grade glioma. However, the presence of necrosis and the large size of the tumor are not specific to IDH status. The tumor's location in the frontal lobe, cortex, and insula, and its mild enhancement are noted. The key factor here is the patient's relatively young age, which might lean towards an IDH mutant status, as IDH mutant gliomas tend to occur in younger patients. However, the presence of significant necrosis and mass effect is more typical of IDH wildtype glioblastomas. Given the available information, the prediction leans towards IDH wildtype due to the aggressive features of the tumor.",
+      "supporting_features": [
+        "age_years",
+        "n_slices_with_shift",
+        "mean_shift_mm",
+        "max_shift_mm",
+        "volumes_ideal_midline",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "age_years"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's location in the frontal lobe and insula, and its involvement of the cortex, could be consistent with an oligodendroglioma, which is often associated with 1p/19q co-deletion. However, the presence of significant necrosis and a high proportion of necrosis suggest a higher grade tumor, which is less typical for co-deleted tumors. The mild enhancement and absence of calcification (not assessed) or specific mention of other features like cortical involvement are noted. The prediction is challenging without direct evidence, but the tumor's characteristics (e.g., frontal lobe involvement) might lean towards a codeleted status if it were an oligodendroglioma component. However, the aggressive features (necrosis, mass effect) are not typical. Thus, a non-codeleted status is predicted due to the presence of necrosis and the overall aggressive appearance.",
+      "supporting_features": [
+        "Region Proportions",
+        "Tumor Location",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis",
+        "n_slices_with_shift",
+        "mean_shift_mm"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.65
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 74.34%), a large size (Total tumor volume: 204.115 mL), and considerable mass effect (midline shift, ventricular asymmetry), all of which are characteristic of high-grade gliomas. The presence of necrosis is particularly indicative of a WHO Grade 4 tumor. While the patient's relatively young age might suggest a lower grade, the tumor's aggressive features outweigh this consideration.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "n_slices_with_shift",
+        "mean_shift_mm",
+        "max_shift_mm"
+      ],
+      "contradicting_features": [
+        "age_years"
+      ],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_01523"
+}

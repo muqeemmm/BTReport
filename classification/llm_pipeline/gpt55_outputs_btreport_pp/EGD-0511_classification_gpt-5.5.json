@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.79,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status considered independently, the provided metadata favors IDH-mutant disease: age_years shows a young adult; Tumor Location and Region Proportions place the lesion in a frontal cortical region; Cortical involvement is present; Enhancement Quality is none with ET Volume, Proportion Enhancing, and Proportion Necrosis all indicating no enhancing or necrotic component; Total tumor volume is small; and Multifocal or Multicentric is solitary. These features weigh against the typical MRI pattern of IDH-wildtype glioblastoma. Counterpoints are that T2-FLAIR Mismatch Present is absent, so a highly specific IDH-mutant astrocytoma sign is not demonstrated, and Side of Tumor Epicenter is listed as midline, which is less stereotypical for a hemispheric IDH-mutant diffuse glioma. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "age_years",
+      "Side of Tumor Epicenter",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, the MRI metadata provides limited but modest support for co-deletion: Tumor Location and Region Proportions indicate a frontal cortical lesion, Cortical involvement is present, Enhancement Quality is none with ET Volume and Proportion Enhancing indicating no enhancement, and T2-FLAIR Mismatch Present is absent, which does not favor the classic non-codeleted IDH-mutant astrocytoma mismatch phenotype. Against co-deletion, age_years is somewhat younger than the typical oligodendroglioma presentation, Side of Tumor Epicenter is reported as midline rather than a clearly lobar hemispheric epicenter, and T2-FLAIR Mismatch Score is not zero despite the binary mismatch field being absent. Because the imaging overlap between oligodendroglioma and astrocytoma is substantial without molecular testing, the prediction is only weakly toward co-deleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "MRI-only molecular prediction is uncertain, especially for 1p/19q status. The lesion is small, frontal-cortical, solitary, and nonenhancing without necrosis, which strongly favors a lower-grade adult-type diffuse glioma pattern, but molecular confirmation is required.",
+  "subject_id": "EGD-0511",
+  "who_grade": {
+    "confidence": 0.83,
+    "contradicting_features": [
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle",
+      "Proportion of Oedema"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade considered independently, the metadata favors CNS WHO grade 2: Enhancement Quality is none, ET Volume and Proportion Enhancing show no enhancing tumor, Proportion Necrosis is 0, NCR Volume is 0, Total tumor volume and Whole Tumor Volume are small, Multifocal or Multicentric is solitary, Multiple satellites present is absent, Ependymal (ventricular) Invasion is absent, Deep WM invasion is absent, and midline_shift_present is no. These findings weigh against grade 4 and also do not strongly support grade 3. Counterpoints are Asymmetrical Ventricles and Effaced Ventricle, suggesting local mass effect, and Proportion of Oedema is high by segmentation; however the absolute ED Volume is small and there is no enhancement or necrosis. Overall, the imaging pattern supports grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "ED Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

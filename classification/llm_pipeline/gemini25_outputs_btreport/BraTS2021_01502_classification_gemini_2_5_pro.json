@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_01502",
+  "idh": {
+    "reasoning": "The patient's young age (33 years) is a strong predictor for an IDH-mutant glioma. The most compelling imaging feature is the complete absence of contrast enhancement (Enhancement Quality: None, ET Volume (mL): 0.0), which is highly characteristic of IDH-mutant tumors. IDH-wildtype gliomas, in contrast, typically present in older patients and almost always demonstrate enhancement. While the tumor is large and exerts significant mass effect, these features are less specific and can be seen in slow-growing IDH-mutant gliomas that have reached a large size. The evidence overwhelmingly supports an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "max_shift_mm"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification distinguishes between an astrocytoma (non-codeleted) and an oligodendroglioma (codeleted). The tumor exhibits a very large amount of surrounding edema (ED Volume (mL): 50.352) relative to its solid, non-enhancing component (NCR Volume (mL): 24.511). This prominent peritumoral FLAIR signal is more characteristic of the infiltrative nature of astrocytomas (IDH-mutant, 1p/19q non-codeleted). Oligodendrogliomas (1p/19q codeleted) typically have more well-defined margins and less associated edema. The parietal location is also less classic for an oligodendroglioma, which has a predilection for the frontal lobes. Therefore, the features are more consistent with a non-codeleted status.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of contrast enhancement (ET Volume (mL): 0.0) is a strong argument against WHO grade 4, which is defined by microvascular proliferation or necrosis, features that typically manifest as enhancement. The choice is between grade 2 and 3. The lack of enhancement is a hallmark of grade 2 gliomas. However, the tumor is very large (Total tumor volume (mL): 74.863) and exerts significant mass effect (max_shift_mm: 6.0). These features suggest more aggressive biological behavior, which is more in line with a grade 3 tumor. In the context of non-enhancing IDH-mutant astrocytomas, the distinction between grade 2 and 3 is molecular (CDKN2A/B deletion) and cannot be made definitively on imaging. However, the aggressive imaging phenotype (size, mass effect) makes grade 3 more probable than grade 2.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of young age and a large, non-enhancing parietal mass is highly suggestive of an IDH-mutant astrocytoma. The significant edema points towards a 1p/19q non-codeleted status. While non-enhancing, the tumor's large size and substantial mass effect are concerning for a higher grade, making CNS WHO grade 3 more likely than grade 2. The definitive distinction between grade 2 and 3 would require molecular analysis for CDKN2A/B homozygous deletion."
+}

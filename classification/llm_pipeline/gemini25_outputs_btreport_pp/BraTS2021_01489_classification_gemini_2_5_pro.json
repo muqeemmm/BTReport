@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_01489",
+  "idh": {
+    "reasoning": "This case presents highly conflicting features. The majority of morphological signs, such as extensive necrosis (Proportion Necrosis: 70.02%), contrast enhancement (ET Volume (mL): 3.562), sharp tumor borders (Transition Zone Thickness (FLAIR) median_mm: 1.18), and presence of satellite lesions, are strongly suggestive of an IDH-wildtype glioma (glioblastoma). However, the presence of a T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.9287) is a highly specific imaging biomarker for IDH-mutant astrocytomas. Given the high specificity of the T2-FLAIR mismatch sign, it is weighted more heavily than the non-specific aggressive features, leading to a prediction of IDH-mutant status, despite the contradictory evidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Transition Zone Thickness (FLAIR)",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is strongly influenced by the features determining the glioma lineage. The presence of a T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 1.0) is a hallmark of IDH-mutant astrocytomas, which are, by definition, 1p/19q non-codeleted. Furthermore, the imaging phenotype of a very large, necrotic, and infiltrative tumor (Proportion Necrosis: 70.02%) is more characteristic of a high-grade astrocytoma than an oligodendroglioma. There are no specific features, such as well-defined cortical involvement without significant necrosis, to suggest an oligodendroglial lineage (1p/19q co-deleted). Therefore, the evidence strongly supports a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is based on the presence of high-grade features. This tumor demonstrates both contrast enhancement (ET Volume (mL): 3.562) and, most critically, extensive necrosis, which is radiologically represented by a very large non-enhancing core (NCR Volume (mL): 135.483) and a high proportion of necrosis (Proportion Necrosis: 70.02%). The presence of radiologic necrosis is a key criterion for assigning WHO grade 4. Additional features supporting a high grade include significant mass effect (midline_shift_present: 'Yes'), deep white matter invasion, and ependymal invasion. The evidence for grade 4 is overwhelming, with no features suggesting a lower grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case exhibits a rare but recognized pattern where a highly specific molecular imaging marker (T2-FLAIR mismatch) contradicts numerous non-specific signs of aggression (necrosis, enhancement, sharp margins). The T2-FLAIR mismatch strongly indicates an IDH-mutant astrocytoma, while the extensive necrosis is a definitive feature of WHO grade 4. The combination leads to a diagnosis of Astrocytoma, IDH-mutant, CNS WHO grade 4. Confidence in the IDH status is moderate due to the conflicting signals, but the grade and 1p/19q status predictions are high based on the available evidence."
+}

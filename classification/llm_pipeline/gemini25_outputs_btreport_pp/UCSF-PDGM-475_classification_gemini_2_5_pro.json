@@ -1,0 +1,50 @@
+{
+  "subject_id": "UCSF-PDGM-475",
+  "idh": {
+    "reasoning": "The patient's young age (31 years) is a strong demographic predictor for IDH-mutant status. The imaging phenotype, characterized by a complete absence of contrast enhancement, further supports this prediction. IDH-mutant gliomas, particularly of lower grades, are typically non-enhancing. The large tumor volume without a corresponding midline shift also suggests a slow, infiltrative growth pattern common in IDH-mutant tumors. Contradictory evidence includes the tumor's multifocal nature, which is more commonly associated with IDH-wildtype gliomas (glioblastoma), and the absence of a T2-FLAIR mismatch sign, which argues against an IDH-mutant astrocytoma. However, the combination of young age and lack of enhancement are very strong predictors, outweighing the contradictory features.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is challenging due to conflicting features. Evidence favoring a non-codeleted (astrocytic) lineage includes the tumor's multifocal presentation and the presence of significant peritumoral edema, both of which are more characteristic of astrocytomas. The involvement of deep gray matter structures like the putamen and pallidum is also frequently seen in astrocytomas. Conversely, features suggesting a codeleted (oligodendroglial) lineage include the relatively sharp tumor borders and a very thin FLAIR transition zone, which imply a less infiltrative margin. The strong cortical involvement is also a classic feature of oligodendroglioma. Given the conflicting evidence, the multifocality and edema are weighted more heavily, leading to a prediction of non-codeleted, but with low confidence.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "ED Volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "boundary_sharpness",
+      "Transition Zone Thickness (FLAIR)",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of contrast enhancement is a strong argument against WHO grade 4, as enhancement is a key criterion for glioblastoma. This points towards a lower-grade glioma (2 or 3). However, several features suggest a grade higher than 2. The tumor is very large, multifocal, and, most importantly, has a very high proportion of what is described as necrosis (56.08%). Even in the absence of enhancement, a large necrotic core is a sign of high-grade biological activity. Therefore, the combination of no enhancement with these aggressive features (large size, multifocality, necrosis) is most consistent with a WHO grade 3 glioma.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 31-year-old with a large, multifocal, non-enhancing glioma. The young age and lack of enhancement are highly suggestive of an IDH-mutant tumor. While some features like sharp borders could suggest an oligodendroglioma, the multifocality and significant edema are more consistent with an astrocytoma. Despite the absence of enhancement, the large tumor volume and high proportion of non-enhancing necrosis are strong indicators of high-grade biology, making CNS WHO grade 3 the most probable grade. The integrated diagnosis is therefore Astrocytoma, IDH-mutant, CNS WHO grade 3."
+}

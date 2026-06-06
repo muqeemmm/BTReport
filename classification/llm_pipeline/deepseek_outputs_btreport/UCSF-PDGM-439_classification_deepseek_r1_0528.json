@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.95,
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "reasoning": "The patient is 38 years old, which is younger than the typical age for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor is nonenhancing ('Enhancement Quality': 'None'), which is more characteristic of lower-grade gliomas, often IDH-mutant. There is no necrosis ('Proportion Necrosis': 0.0), which is atypical for IDH-wildtype glioblastoma. The eloquent brain involvement is 'No involvement', which is more common in IDH-mutant tumors. The tumor location includes cortex and frontal lobe, which are common sites for IDH-mutant gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex and frontal lobe, which is more typical for astrocytomas (non-codeleted) rather than oligodendrogliomas (codeleted). Oligodendrogliomas often involve the frontal lobe but are less likely to involve the cortex extensively. The absence of enhancement and necrosis also aligns more with astrocytoma than oligodendroglioma, as oligodendrogliomas may show some enhancement. However, the frontal lobe involvement is a feature that could support oligodendroglioma, but overall the evidence leans towards astrocytoma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma without 1p/19q co-deletion. The absence of enhancement and necrosis suggests a lower-grade tumor, but the WHO grade cannot be definitively determined without histology or molecular testing. However, the large volume of edema and cortical involvement may indicate a higher grade. Given the absence of necrosis and enhancement, grade 2 or 3 is possible, but grade 4 is less likely.",
+  "subject_id": "UCSF-PDGM-439",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement ('Enhancement Quality': 'None') and no necrosis ('Proportion Necrosis': 0.0), which are features of lower-grade gliomas (grade 2). However, the edema volume is large (16.555 mL), and the total tumor volume is 16.555 mL, which is substantial. Cortical involvement is present, which can be seen in both grade 2 and grade 3 tumors. The absence of deep white matter invasion and ependymal invasion also supports a lower grade. But the large edema volume raises concern for a higher grade. Given the conflicting features, grade 2 is predicted with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

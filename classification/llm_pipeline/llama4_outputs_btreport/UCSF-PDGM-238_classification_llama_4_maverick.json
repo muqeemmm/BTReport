@@ -1,0 +1,44 @@
+{
+  "id": "patient_0006",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is relatively young (24 years) with a non-enhancing tumor (Enhancement Quality: None, Proportion Enhancing: 0.0) located in the insula, cortex, and frontal lobe. The tumor is characterized by a significant proportion of edema (Proportion of Oedema: 100.0) and absence of necrosis or enhancement. These features are more commonly associated with IDH-mutant gliomas, which tend to occur in younger patients and often present with non-enhancing characteristics. The absence of necrosis and enhancement further supports the likelihood of an IDH-mutant tumor, as IDH-wildtype glioblastomas typically show necrosis and/or enhancement.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "Proportion of Oedema"
+      ],
+      "contradicting_features": [],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q codeletion status",
+      "reasoning": "The tumor involves the insula and cortex, and is non-enhancing. IDH-mutant gliomas can be either 1p/19q codeleted (oligodendrogliomas) or non-codeleted (astrocytomas). The presence of cortical involvement and the tumor's location in the frontal lobe and insula are features that can be seen in both types. However, the lack of specific features like calcifications (not assessable from the given data) makes it challenging to definitively predict codeletion status. Given the tumor's characteristics and the fact that it's more likely to be IDH-mutant, we lean towards a possible codeletion due to the tumor's location and non-enhancing nature, which is somewhat more typical of oligodendrogliomas.",
+      "supporting_features": [
+        "Cortical involvement",
+        "Tumor Location",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.6
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor is non-enhancing and lacks necrosis, features that are often associated with lower-grade gliomas. The presence of significant edema (ED Volume: 16.885 mL) could suggest a more aggressive tumor, but the absence of enhancement and necrosis is more typical of lower-grade gliomas. Given the patient's age and the tumor's characteristics, a lower grade is more likely. However, the presence of edema and the tumor's size suggest it could be grade 3 rather than grade 2.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "ED Volume (mL)",
+        "age_years"
+      ],
+      "contradicting_features": [],
+      "prediction": 3,
+      "confidence": 0.7
+    }
+  ],
+  "subject_id": "UCSF-PDGM-238"
+}

@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (28 years old), which is more common in IDH-mutant gliomas. However, IDH-mutant gliomas typically show enhancement, but here Enhancement Quality is None and Proportion Enhancing is 0.0, which is atypical.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves cortex and eloquent brain regions (Vision), which is more typical of astrocytomas (non-codeleted) than oligodendrogliomas. However, oligodendrogliomas can also involve cortex, and the absence of deep white matter invasion (Deep WM invasion: Absent) is not typical for oligodendrogliomas.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma. The young age supports IDH mutation, but the absence of enhancement is atypical. Cortical involvement and vision eloquent area involvement favor non-codeleted status. The grade is estimated as 2 due to absence of necrosis and enhancement, but confidence is low due to limited features.",
+  "subject_id": "EGD-0385",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) and no necrosis (ET Volume: 0.0, Proportion Necrosis: 7.84% which is low and likely represents non-enhancing tumor rather than true necrosis). However, Proportion Necrosis is reported as 7.84, which might indicate some necrosis, but it is low. Without enhancement or significant necrosis, grade 4 is unlikely. Grade 3 tumors may lack necrosis but often have enhancement. The absence of both suggests grade 2, but the Proportion Necrosis value introduces uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume",
+      "Proportion Necrosis"
+    ]
+  }
+}

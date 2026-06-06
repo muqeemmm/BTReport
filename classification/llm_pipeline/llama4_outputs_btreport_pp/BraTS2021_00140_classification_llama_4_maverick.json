@@ -1,0 +1,35 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8172671383008765, indicating a strong presence of this feature. T2-FLAIR mismatch is a known imaging biomarker associated with IDH-mutant gliomas. Therefore, the evidence strongly supports the presence of an IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, the presence of IDH mutation (predicted with high confidence) is a prerequisite for 1p/19q co-deletion in the context of adult-type diffuse gliomas. The imaging features do not strongly suggest or rule out 1p/19q co-deletion directly. Given the lack of specific features that are strongly associated with 1p/19q co-deletion status in the provided metadata, a cautious approach is taken.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor shows marked enhancement and has a significant proportion of enhancing tissue (15.77%). The presence of necrosis (Proportion Necrosis: 0.36%) and the enhancement quality (Marked) are features often associated with higher-grade gliomas. The tumor's volume and the presence of cortical involvement also suggest an aggressive tumor. Given these features, a higher grade is more likely. However, the absence of significant midline shift and the relatively low proportion of necrosis argue against the highest grade. Therefore, a grade of 3 is a reasonable conclusion, balancing between the aggressive features and the lack of extreme mass effect or necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "midline_shift_present",
+      "n_slices_with_shift"
+    ],
+    "prediction": 3,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_00140"
+}

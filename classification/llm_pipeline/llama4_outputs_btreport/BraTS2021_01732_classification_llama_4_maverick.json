@@ -1,0 +1,51 @@
+{
+  "id": "patient_0111",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (23 years) and the presence of certain MRI features such as ependymal invasion and deep white matter invasion are considered. IDH mutant gliomas are more common in younger adults. However, the presence of necrosis (Proportion Necrosis: 38.18%) and the large tumor size (Total tumor volume: 200.282 mL) could be indicative of a more aggressive tumor, which is often associated with IDH wildtype status in adult-type diffuse gliomas. The enhancement quality is mild, and there's a significant edema (Proportion of Oedema: 61.63%) with midline shift, suggesting a potentially aggressive tumor. Despite the patient's young age, the overall tumor characteristics lean towards a more aggressive type, which is often IDH wildtype.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "age_years"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor involves the frontal lobe and cortex, and there's a significant edema crossing the midline. IDH mutant gliomas with 1p/19q co-deletion often present with frontal lobe involvement. However, the presence of necrosis and the large size of the tumor are less typical for 1p/19q co-deleted tumors, which are usually associated with oligodendrogliomas that tend to have a more favorable prognosis. The enhancement quality is mild, and there's no mention of calcifications, which are sometimes seen in oligodendrogliomas. Given the significant necrosis and large tumor volume, it's less likely to be codeleted.",
+      "supporting_features": [
+        "Region Proportions",
+        "Proportion Necrosis",
+        "Total tumor volume (mL)"
+      ],
+      "contradicting_features": [
+        "Region Proportions"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor shows significant necrosis (Proportion Necrosis: 38.18%), a large size (Total tumor volume: 200.282 mL), and causes a midline shift, indicating a high level of aggressiveness. The presence of necrosis is a hallmark of glioblastoma, which is WHO grade 4. The patient's young age might suggest a lower grade glioma, but the overall imaging characteristics point towards a high-grade tumor. The edema crosses the midline, and there's ependymal invasion, further supporting the aggressive nature of the tumor.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "age_years"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_01732"
+}

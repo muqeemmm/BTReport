@@ -1,0 +1,41 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "reasoning": "The metadata indicates no enhancement (Enhancement Quality: None) and no necrosis (NCR Volume: 0.0), which are features more commonly associated with IDH-mutant gliomas. However, the tumor is located in the frontal lobe and cortex, which are common sites for IDH-mutant tumors. But without enhancement or necrosis, and with predominant edema (Proportion of Oedema: 100.0), the evidence is insufficient to confidently predict IDH status. Following rule 4, I assign low confidence and default to wildtype as per rule 5.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume",
+      "Proportion of Oedema",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex (Cortical involvement: Present) and frontal lobe, which are typical for oligodendrogliomas that are 1p/19q codeleted. However, there is no enhancement, necrosis, or calcifications (not assessed), and deep white matter invasion is absent. Without molecular data or specific imaging features like calcifications (which are not available), predicting 1p/19q status is challenging. Following rule 4, I assign low confidence and default to non-codeleted.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor is a solitary, nonenhancing lesion in the left frontal lobe and cortex with predominant edema. No necrosis or enhancement is present. Without enhancement, necrosis, or molecular markers, predicting IDH and 1p/19q status is difficult. The absence of deep white matter invasion and ependymal involvement suggests a lower grade, but the edema volume is significant. Given the uncertainty, CNS WHO grade is estimated as 2 with low confidence.",
+  "subject_id": "UCSF-PDGM-239",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "ED Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None), no necrosis (NCR Volume: 0.0), and no deep white matter invasion (Deep WM invasion: Absent), which are features of lower-grade gliomas (WHO grade 2). However, there is significant edema volume (ED Volume: 9.305 mL), which can be associated with higher grades. The absence of enhancement and necrosis strongly suggests grade 2, but the edema introduces some uncertainty. Confidence is slightly above 0.5 due to the predominance of low-grade features.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume",
+      "Deep WM invasion"
+    ]
+  }
+}

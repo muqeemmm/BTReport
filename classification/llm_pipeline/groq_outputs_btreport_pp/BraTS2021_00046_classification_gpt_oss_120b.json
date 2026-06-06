@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00046",
+  "idh": {
+    "reasoning": "The tumor shows absent T2-FLAIR mismatch (T2-FLAIR Mismatch Present=0.0, T2-FLAIR Mismatch Score=0.4), which is a strong imaging surrogate for IDH\u2011mutant astrocytoma. Its absence therefore supports IDH\u2011wildtype. The patient is older (age_years=62) and the lesion has marked contrast enhancement (Enhancement Quality=Marked) and a moderate proportion of enhancing tissue (Proportion Enhancing=20.24), both features more typical of IDH\u2011wildtype glioblastoma. While low necrosis (Proportion Necrosis=2.28) and lack of midline crossing could argue against high\u2011grade IDH\u2011wildtype, the preponderance of evidence points to a wildtype status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "In the WHO CNS5 framework, IDH\u2011wildtype diffuse gliomas are by definition non\u2011codeleted for 1p/19q. The imaging does not show features typical of oligodendroglioma (e.g., calcifications, homogeneous T2 hyperintensity), and the molecular inference from the IDH\u2011wildtype prediction therefore supports a non\u2011codeleted status.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.78
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement (Enhancement Quality=Marked) and a measurable enhancing component (Proportion Enhancing=20.24) are more consistent with a high\u2011grade lesion. Although necrosis is limited (Proportion Necrosis=2.28) and the tumor does not cross the midline (CET Crosses midline=False), the presence of solid enhancement without necrosis still aligns with WHO grade 4 criteria in the absence of molecular data, as IDH\u2011wildtype tumors are classified as grade 4 when they show any aggressive imaging features. The balance of supporting versus contradictory imaging leads to a grade 4 assignment.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "CET Crosses midline",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Necrosis low",
+      "No midline crossing"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging lacks diffusion, perfusion, and spectroscopy data; necrosis is minimal and the lesion does not cross the midline, which introduces some uncertainty in assigning grade 4. Molecular confirmation (e.g., EGFR amplification, TERT promoter mutation) would be needed for definitive grading."
+}

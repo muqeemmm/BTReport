@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 39 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor is nonenhancing ('Enhancement Quality': 'None'), which is more common in IDH-mutant gliomas. There is no necrosis ('Proportion Necrosis': 11.65% refers to non-enhancing core, not true necrosis), and the tumor is solitary with cortical involvement. However, the absence of enhancement could also be seen in some low-grade IDH-wildtype tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex ('Cortical involvement': 'Present') and lacks deep white matter invasion ('Deep WM invasion': 'Absent'), which is atypical for oligodendrogliomas that often involve white matter. Oligodendrogliomas typically show enhancement, but here there is none, which argues against codeletion. However, the frontal location is not specified, and age is compatible.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma. The absence of enhancement and young age support IDH mutation. The cortical location without deep white matter invasion suggests non-codeleted status. Grade is challenging without enhancement or necrosis; grade 2 is assigned due to nonenhancing nature and low proliferation features.",
+  "subject_id": "EGD-0487",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor is nonenhancing with no enhancing components ('Enhancement Quality': 'None', 'n_components_enhancing': {'n_components': 0}). The proportion necrosis (11.65%) likely refers to the non-enhancing core volume, not true necrosis. Without microvascular proliferation or necrosis, grade 2 is most appropriate. However, the edema volume is large relative to tumor core, which can be seen in higher grades.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "n_components_enhancing",
+      "Proportion Necrosis"
+    ]
+  }
+}

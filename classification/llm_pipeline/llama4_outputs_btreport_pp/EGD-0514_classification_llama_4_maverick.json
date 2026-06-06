@@ -1,0 +1,38 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (72 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 23.55%) are more typical of glioblastoma, which is commonly IDH wildtype. The T2-FLAIR mismatch score is 1.0, indicating a possible IDH mutation, but this feature is not strongly supported by other evidence such as younger age or absence of necrosis. The presence of necrosis and the patient's age argue against IDH mutation.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH wildtype status (predicted with high confidence) typically correlates with a lower likelihood of 1p/19q codeletion. The tumor's imaging characteristics (e.g., necrosis, mild enhancement) are not typical for 1p/19q codeleted tumors, which are more commonly associated with IDH mutations and often have a more homogeneous appearance. Therefore, it is likely that the tumor is non-codeleted.",
+    "supporting_features": [
+      "idh_status.prediction",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 23.55%), mild enhancement, and significant tumor volume (Total tumor volume: 24.478 mL) are characteristic of high-grade gliomas. The patient's age (72 years) also supports a higher grade. These features are most consistent with CNS WHO grade 4.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0514"
+}

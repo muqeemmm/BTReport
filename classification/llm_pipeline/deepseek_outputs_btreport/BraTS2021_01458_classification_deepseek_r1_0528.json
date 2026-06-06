@@ -1,0 +1,52 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 59 years old, which is older than typical for IDH-mutant gliomas that often present in younger adults. However, the tumor involves eloquent brain regions (Vision) and shows marked enhancement, which are more common in IDH-wildtype gliomas. But the presence of ependymal invasion and deep white matter invasion are features that can be seen in both types. The midline location and involvement of ventricles might suggest a glioblastoma, but without diffusion/perfusion data, IDH mutation cannot be ruled out. Given the mixed evidence, IDH mutant is slightly favored due to the absence of definitive wildtype features like ring enhancement or necrosis proportion >30% (though necrosis is 36.44%, it's not specified as ring-like).",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in midline structures including thalamus, ventricles, and involves eloquent cortex (Vision). Oligodendrogliomas (IDH-mutant and 1p/19q codeleted) typically present in frontal lobes and are less likely to involve midline structures or deep regions like thalamus. The presence of ependymal invasion and deep white matter invasion also argue against oligodendroglioma. The tumor crosses midline via edema but not enhancing tumor, which is atypical for oligodendroglioma. Therefore, non-codeleted is predicted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma with CNS WHO grade 4. Confidence is moderate due to conflicting features and lack of molecular data.",
+  "subject_id": "BraTS2021_01458",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows marked enhancement, necrosis proportion of 36.44% (above 10% threshold for grade 4), and ependymal invasion. Microvascular proliferation is not directly assessed, but thick enhancing margin (>3mm) and necrosis suggest high grade. The edema crosses midline, which is more common in high-grade tumors. However, without perfusion data for rCBV, grade 4 is supported by necrosis and enhancement.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline"
+    ]
+  }
+}

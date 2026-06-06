@@ -1,0 +1,42 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The patient's age (38 years) and the tumor's characteristics (frontal lobe-cortex region, mildly enhancing, solitary, no ependymal invasion, no deep white matter invasion) are considered. The T2-FLAIR mismatch score is 0.4, which is below the typical threshold for a positive T2-FLAIR mismatch sign (usually considered when the score is >0.5 or degree >0.5). The presence of mild enhancement and the absence of deep white matter invasion or ependymal invasion are noted. Given the relatively young age and the presence of some features that could be associated with IDH mutant gliomas (such as frontal lobe location), but lacking strong evidence like a clear T2-FLAIR mismatch, the prediction leans towards IDH mutant due to the age and location. However, the absence of a clear T2-FLAIR mismatch and the mild enhancement quality introduce some uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The tumor is located in the frontal lobe, which is a common location for 1p/19q co-deleted gliomas. The presence of cortical involvement and the absence of deep white matter invasion are noted. However, the enhancement quality is mild, and there's no clear indication of 1p/19q co-deletion status from the provided metadata directly. Given the frontal lobe location and cortical involvement, which are more commonly associated with 1p/19q co-deleted tumors among IDH mutant gliomas, a prediction of codeleted is considered. However, without direct evidence or a clear IDH mutation status confirmation, this remains uncertain.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor has a significant proportion of necrosis (30.0%) and a relatively low proportion of enhancement (0.03%), with mild enhancement quality. The presence of necrosis typically indicates a higher grade. The total tumor volume is 6.907 mL, with a significant portion being edema. The presence of necrosis and the overall tumor characteristics suggest a higher grade tumor. Given the necrosis proportion and the overall clinical and radiological features, a grade of 4 is considered likely due to the presence of significant necrosis, which is a hallmark of glioblastoma, typically classified as grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0074"
+}

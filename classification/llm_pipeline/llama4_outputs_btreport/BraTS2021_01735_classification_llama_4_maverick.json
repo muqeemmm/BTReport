@@ -1,0 +1,45 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (33 years) and the presence of certain MRI features such as ependymal invasion and deep white matter invasion could be indicative of a more aggressive tumor. However, the presence of ependymal invasion and the tumor's location are not specific markers for IDH mutation status. The tumor's mild enhancement and relatively large size could be seen in both IDH mutant and wildtype gliomas. Given the age and the absence of specific indicators for IDH mutation, we lean towards IDH wildtype due to the higher prevalence of wildtype gliomas in younger adults being less common than IDH mutant gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of ependymal invasion and the tumor's location might suggest a more aggressive tumor type. IDH mutant gliomas with 1p/19q codeletion typically present with certain characteristics, but the provided metadata does not directly indicate codeletion status. However, given that the tumor is in a younger adult and has certain aggressive features, if it were IDH mutant (contrary to our prediction), it could potentially be codeleted. Yet, without direct evidence or strong surrogate markers for codeletion (like specific locations or imaging characteristics that are more typical of oligodendrogliomas), we default to non-codeleted due to the lack of clear indicators for codeletion.",
+    "supporting_features": [
+      "age_years",
+      "Ependymal (ventricular) Invasion",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "cns_grade": {
+    "reasoning": "The tumor exhibits significant mass effect (large volume, edema crosses midline), ependymal invasion, and necrosis (Proportion Necrosis: 25.0%), which are features concerning for a higher grade glioma. The presence of necrosis and the large size of the tumor are particularly indicative of a high-grade tumor. While the enhancement is mild, the overall tumor burden and aggressive features (deep white matter invasion, ependymal invasion) suggest a high-grade lesion. Therefore, the tumor is likely to be CNS WHO grade 4.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01735"
+}

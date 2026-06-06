@@ -1,0 +1,53 @@
+{
+  "id": "patient_0988",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (55 years) and the presence of a large, enhancing tumor with significant edema and mass effect (midline shift, ventricular asymmetry) are more typical of IDH wildtype glioblastoma. The tumor's location in the right hemisphere involving multiple lobes (temporal, occipital, cortex) and deep structures, along with ependymal invasion, also supports a more aggressive tumor type, which is more likely to be IDH wildtype. The presence of enhancement and necrosis further supports this, as IDH mutant tumors tend to have less necrosis and enhancement.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion",
+        "midline_shift_present",
+        "volumes_ideal_midline"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's characteristics, such as its location and enhancement pattern, do not strongly suggest a 1p/19q co-deleted tumor, which is more commonly associated with oligodendrogliomas that tend to be more frontal and have a more homogeneous appearance. The presence of significant necrosis and the tumor's aggressive features (large size, ependymal invasion, mass effect) are less typical for 1p/19q co-deleted tumors. Thus, it is more likely to be non-codeleted.",
+      "supporting_features": [
+        "Tumor Location",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Cortical involvement"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.75
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 2.3%), enhancement (Enhancement Quality: Mild, Proportion Enhancing: 10.55%), significant edema (Proportion of Oedema: 87.16%), and mass effect (midline shift, ventricular asymmetry) are characteristic of a high-grade glioma. The tumor's large size and involvement of multiple structures also support a higher grade. Given these features, a grade 4 tumor is more likely than grade 2 or 3.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "midline_shift_present",
+        "volumes_ideal_midline"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_01063"
+}

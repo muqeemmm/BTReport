@@ -1,0 +1,49 @@
+{
+  "id": "patient_1183",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (65 years) and the presence of a multifocal, mildly enhancing tumor with significant mass effect (midline shift, ventricular asymmetry) and ependymal invasion are more typical of IDH wildtype glioblastoma. The tumor's large size, necrosis (Proportion Necrosis: 0.79%), and the presence of enhancement (>3mm thick margin) also support this. IDH mutant gliomas are less likely given the aggressive features and older age.",
+      "supporting_features": [
+        "age_years",
+        "Multifocal or Multicentric",
+        "Enhancement Quality",
+        "Thickness of enhancing margin",
+        "Proportion Necrosis",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.95
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "IDH mutant gliomas are more likely to have 1p/19q codeletion, but the patient is predicted to have an IDH wildtype tumor, making codeletion less likely. The presence of a multifocal, aggressive tumor with necrosis and significant mass effect further argues against codeletion, as 1p/19q codeleted tumors are typically oligodendrogliomas, which are less common in this age group and often have a more favorable prognosis.",
+      "supporting_features": [
+        "age_years",
+        "Multifocal or Multicentric",
+        "Proportion Necrosis",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.9
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor's aggressive features (large size, necrosis, significant enhancement, ependymal invasion, and mass effect) are characteristic of a high-grade glioma. The presence of necrosis and significant enhancement (>3mm thick margin) are particularly indicative of glioblastoma, WHO grade 4. The patient's age and the tumor's multifocality also support this diagnosis.",
+      "supporting_features": [
+        "age_years",
+        "Multifocal or Multicentric",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Thickness of enhancing margin",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.98
+    }
+  ],
+  "subject_id": "EGD-0058"
+}

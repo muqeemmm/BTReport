@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "midline_shift_present",
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors IDH-wildtype diffuse glioma: the patient is elderly, and the lesion shows aggressive conventional MRI features including marked enhancement, substantial enhancing tumor volume, extensive edema, deep white matter invasion, multifocal disease, and absent T2-FLAIR mismatch. These features are more typical of IDH-wildtype glioblastoma than IDH-mutant astrocytoma. Evidence against IDH-wildtype includes frontal cortical involvement, which can be seen in IDH-mutant gliomas, and the lack of midline shift with only a small necrotic proportion, which makes the imaging somewhat less florid than classic bulky glioblastoma. Overall, the balance supports IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status assessed independently from IDH status, the imaging balance favors non-codeletion. Marked enhancement, extensive edema, deep white matter invasion, multifocality, and advanced age are not the typical imaging pattern of oligodendroglioma, which more often presents as a frontal cortical/subcortical tumor but is usually less dominated by aggressive enhancing and edematous features. Evidence supporting possible codeletion is the frontal cortical location, which is a classic location for oligodendroglioma. However, the aggressive enhancement/edema/invasion pattern and multifocality outweigh the location-based support for codeletion, so non-codeleted is favored.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "overall_comment": "Prediction is based only on conventional structural MRI metadata without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, or histology. The advanced age, marked enhancement, edema, deep white matter invasion, and multifocality strongly favor glioblastoma, IDH-wildtype, but frontal cortical involvement is a residual feature that can overlap with lower-grade IDH-mutant and oligodendroglial tumors.",
+  "subject_id": "BraTS2021_01133",
+  "who_grade": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "WHO grade assessment from MRI metadata independently favors grade 4. The lesion has marked contrast enhancement with a thick enhancing margin, measurable necrotic/non-enhancing component, extensive edema, deep white matter invasion, multifocal disease, and a large whole-tumor volume, all supporting high-grade aggressive biology. Features arguing against the most florid grade 4 appearance include a relatively small necrotic proportion, no midline shift, no tumor-associated ventricular asymmetry, and absent ependymal invasion. Despite these mitigating findings, the combination of marked enhancement, necrosis, extensive edema, and multifocal invasive disease most strongly supports CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Whole Tumor Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

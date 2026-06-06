@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.95,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The tumor is non-enhancing (Enhancement Quality: None) with no enhancing tumor volume (ET Volume: 0.0 mL), which is typical for IDH-mutant gliomas. Additionally, the tumor involves cortical regions (Cortical involvement: Present) and deep white matter (Deep WM invasion: Present), common in IDH-mutant astrocytomas. The absence of necrosis (Proportion Necrosis: 73.64% contradicts this, but necrosis is more common in glioblastoma; however, IDH-mutant gliomas can have necrosis in higher grades. The young age (21 years) strongly supports IDH mutation, as IDH-wildtype gliomas are rare in young adults.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "age_years"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves cortical regions including frontal, insular, and temporal lobes (Tumor Location), which is common in both astrocytomas and oligodendrogliomas. However, the absence of enhancement and lack of calcifications (not assessed) are non-specific. Oligodendrogliomas often have a frontal predominance and may show calcifications, but calcifications are not reported here. The deep white matter invasion is more suggestive of astrocytic lineage. Given the IDH-mutant prediction and cortical involvement without strong oligodendroglial features, non-codeleted is more likely.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor is a large non-enhancing lesion involving cortex and deep white matter, with significant necrosis. The young age favors IDH mutation. Grade 4 is assigned due to necrosis and microvascular proliferation (not directly assessed, but necrosis suggests high grade).",
+  "subject_id": "BraTS2021_01529",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 73.64%) is a hallmark of glioblastoma (grade 4) in IDH-wildtype tumors. However, in IDH-mutant gliomas, necrosis can occur in grade 4 astrocytomas. Microvascular proliferation is not assessed, but necrosis alone suggests high grade. The tumor volume is large (68.293 mL), which may correlate with higher grade. Grade 3 would be considered without necrosis, but here necrosis is prominent.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

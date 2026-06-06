@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Edema crosses midline"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status considered independently, the strongest MRI-metadata support for IDH-mutant disease is the young age in \"age_years\", limited enhancement burden in \"Enhancement Quality\", \"ET Volume (mL)\", and \"Proportion Enhancing\", and absence of necrosis in \"NCR Volume (mL)\" and \"Proportion Necrosis\". These features weigh against the classic imaging phenotype of IDH-wildtype glioblastoma, which more often has bulky enhancement and necrosis. Evidence arguing against IDH-mutant status includes a midline cortex-brainstem distribution in \"Tumor Location\", \"Side of Tumor Epicenter\", and \"Anatomical Overlap Regions\", multifocal disease in \"Multifocal or Multicentric\" and \"Number of lesions\", deep white-matter invasion in \"Deep WM invasion\", and extensive edema/cross-midline edema in \"ED Volume (mL)\" and \"Edema crosses midline\", which are more aggressive and less typical for a circumscribed lower-grade IDH-mutant presentation. On balance, the age, mild enhancement, and absent necrosis slightly outweigh the aggressive distributional features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.67,
+    "contradicting_features": [
+      "Cortical involvement",
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the tumor distribution is not typical for oligodendroglioma: \"Tumor Location\" and \"Anatomical Overlap Regions\" indicate cortex-brainstem/midline and brain-stem involvement, \"Side of Tumor Epicenter\" is midline, \"Deep WM invasion\" is present, and \"Multifocal or Multicentric\" with \"Number of lesions\" indicates multifocal disease. These features support a non-codeleted diffuse glioma over a classic 1p/19q-codeleted oligodendroglioma pattern. Features that could support codeletion are \"Cortical involvement\", young \"age_years\", mild enhancement in \"Enhancement Quality\", and absent necrosis in \"NCR Volume (mL)\" and \"Proportion Necrosis\", but these are nonspecific without calcification or characteristic frontal cortical-subcortical metadata. Therefore the best estimate is non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the provided structural MRI metadata. The case is atypical because the patient is young and the lesion has mild enhancement with no necrosis, but also shows multifocal midline cortex-brainstem involvement and extensive edema. Molecular testing is required for definitive WHO-CNS5 classification.",
+  "subject_id": "BraTS2021_00243",
+  "who_grade": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 3,
+    "reasoning": "For CNS WHO grade considered independently, the imaging metadata suggests more than grade 2 because \"Multifocal or Multicentric\" and \"Number of lesions\" show multifocal disease, \"ED Volume (mL)\" and \"Proportion of Oedema\" show extensive edema, \"Deep WM invasion\" is present, and there is measurable enhancement in \"ET Volume (mL)\" and \"Proportion Enhancing\". These features support a higher-grade diffuse glioma. However, the findings are not strongly grade 4 on imaging metadata alone: \"Enhancement Quality\" is only mild, \"ET Volume (mL)\" and \"Proportion Enhancing\" show a small enhancing component, \"NCR Volume (mL)\" and \"Proportion Necrosis\" show no necrosis, and \"midline_shift_present\" plus \"Asymmetrical Ventricles\" indicate limited mass-effect evidence. The aggressive edema and multifocality argue above grade 2, while absent necrosis and only mild enhancement argue against a confident grade 4 assignment. The best estimate is CNS WHO grade 3.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

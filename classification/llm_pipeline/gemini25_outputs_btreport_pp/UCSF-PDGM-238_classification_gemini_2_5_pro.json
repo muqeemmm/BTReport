@@ -1,0 +1,44 @@
+{
+  "subject_id": "UCSF-PDGM-238",
+  "idh": {
+    "reasoning": "The patient's young age (24 years) is a very strong predictor for an IDH-mutant glioma. This is further supported by the classic imaging features of a lower-grade glioma: a complete absence of contrast enhancement (ET Volume (mL) is 0.0) and necrosis (NCR Volume (mL) is 0.0). The tumor is also small and shows no significant mass effect. There are no imaging or demographic features to suggest an IDH-wildtype tumor, which would be exceptionally rare in this age group without high-grade features.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the key differentiators are tumor margins and the T2-FLAIR mismatch sign. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present is 0.0), which argues against an astrocytoma (non-codeleted). Furthermore, the boundary sharpness metrics suggest a relatively well-defined border (boundary_grad_median is substantially higher than peritumoral_shell_grad_median), a feature more commonly associated with oligodendrogliomas (codeleted). While the insular location is common for astrocytomas, the absence of the key imaging marker for astrocytoma (T2-FLAIR mismatch) and the suggestion of sharper borders favor a codeleted status. Confidence is moderate due to the conflicting location evidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "boundary_sharpness"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The imaging phenotype is unequivocally that of a low-grade glioma. There is a complete absence of contrast enhancement (ET Volume (mL) is 0.0) and necrosis (NCR Volume (mL) is 0.0). These are the primary imaging hallmarks used to distinguish lower-grade from high-grade gliomas. Without any features of anaplasia such as enhancement, a WHO grade 2 is the most probable diagnosis. There is no imaging evidence to suggest a grade 3 or 4 tumor.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a young adult with a small, solitary, non-enhancing lesion in the right insula and frontal cortex. The young age and lack of any high-grade imaging features (enhancement, necrosis) make an IDH-mutant, WHO grade 2 glioma highly likely. The 1p/19q status is less certain; however, the absence of a T2-FLAIR mismatch sign and relatively sharp tumor borders favor a 1p/19q-codeleted status (oligodendroglioma) over a non-codeleted status (astrocytoma)."
+}

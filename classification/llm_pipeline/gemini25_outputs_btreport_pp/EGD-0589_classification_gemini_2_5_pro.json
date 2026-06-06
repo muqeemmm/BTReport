@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0589",
+  "idh": {
+    "reasoning": "This case presents highly conflicting features. The presence of a strong T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.801) is a very specific marker for IDH-mutant astrocytoma. However, numerous other features strongly suggest an IDH-wildtype glioblastoma: the tumor is 'Multifocal or Multicentric', shows 'Marked' 'Enhancement Quality' with a thick margin ('>3mm'), has a large necrotic core ('NCR Volume (mL)': 39.783), and involves deep brain structures including the brainstem. The tumor-edema boundary is also very sharp ('Transition Zone Thickness (FLAIR)' median 0.69 mm), which is more typical of IDH-wildtype tumors. Despite the overwhelming evidence for IDH-wildtype, the high specificity of the T2-FLAIR mismatch sign cannot be dismissed. I will therefore predict IDH-mutant, acknowledging the significant contradictory evidence which lowers confidence substantially.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q status is performed independently but interpreted in the context of glioma subtypes. The T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0) is a strong and specific indicator for IDH-mutant astrocytomas, which are by definition 1p/19q non-codeleted. Conversely, features typically associated with 1p/19q co-deleted oligodendrogliomas, such as well-defined cortical location without significant necrosis or edema, are absent. This tumor shows marked enhancement, a large necrotic core ('NCR Volume (mL)': 39.783), and is multifocal, all of which are highly atypical for an oligodendroglioma. Therefore, the evidence strongly points towards a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The WHO grade is determined by features of anaplasia. This tumor exhibits multiple unequivocal high-grade features. The presence of a large necrotic core ('NCR Volume (mL)': 39.783) and marked, thick-rimmed contrast enhancement ('Enhancement Quality': 'Marked', 'ET Volume (mL)': 47.405, 'Thickness of enhancing margin': '>3mm') are radiological hallmarks of a WHO Grade 4 glioma. Furthermore, the tumor is 'Multifocal or Multicentric' and shows 'Ependymal (ventricular) Invasion', both of which are associated with highly aggressive, high-grade behavior. There is no imaging evidence to support a lower grade diagnosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a challenging case with highly conflicting imaging features. The strong T2-FLAIR mismatch sign points specifically to an IDH-mutant astrocytoma. However, the tumor's multifocality, extensive necrosis, and marked ring-enhancement are classic radiological features of an IDH-wildtype glioblastoma. The integrated prediction of 'Astrocytoma, IDH-mutant, CNS WHO grade 4' represents a rare but possible entity that reconciles these findings. The confidence in the IDH status is low due to this significant radiological conflict."
+}

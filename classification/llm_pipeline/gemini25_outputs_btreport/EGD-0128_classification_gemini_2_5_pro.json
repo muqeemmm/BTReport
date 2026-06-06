@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0128",
+  "idh": {
+    "reasoning": "The patient's young age of 26 is a very strong predictor for an IDH-mutant glioma. The frontal and insular location also aligns with this possibility. However, there are powerful contradicting features more typical of an IDH-wildtype tumor. The presence of multifocal disease ('Multifocal or Multicentric': \"Multifocal\", 'Number of lesions': 2) and, most significantly, the very high proportion of necrosis ('Proportion Necrosis': 57.23) are classic radiological hallmarks of glioblastoma, IDH-wildtype. While high-grade transformation can occur in IDH-mutant tumors, the combination of multifocality and extensive necrosis at initial presentation in such a young patient is unusual but points more strongly towards the aggressive biology of an IDH-wildtype glioma. The imaging phenotype of high-grade malignancy often outweighs demographic factors. Therefore, despite the patient's age, the prediction is IDH-wildtype, albeit with low confidence due to this major conflict.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is performed independently of the IDH status. The key features arguing against 1p/19q co-deletion are the extensive necrosis ('Proportion Necrosis': 57.23) and the multifocal presentation ('Multifocal or Multicentric': \"Multifocal\"). Oligodendrogliomas (which are by definition 1p/19q co-deleted) typically do not exhibit such a high degree of necrosis or present as multiple distinct lesions. These features are far more characteristic of an astrocytic lineage tumor (either IDH-mutant or IDH-wildtype). While the predominantly frontal lobe location is common for oligodendrogliomas, the aggressive imaging characteristics strongly suggest a non-codeleted status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The WHO CNS5 classification for adult-type diffuse gliomas designates any tumor with histologically-confirmed necrosis as grade 4 (e.g., Glioblastoma, IDH-wildtype). The MRI metadata provides unequivocal evidence of a large necrotic component, with 'Proportion Necrosis' at 57.23% and a substantial 'NCR Volume (mL)' of 33.263. The presence of contrast enhancement ('Enhancement Quality': \"Mild\", 'ET Volume (mL)': 0.286) further supports a high-grade designation, as it is a radiological correlate of microvascular proliferation. The multifocal nature of the disease also indicates aggressive behavior. The combination of extensive necrosis and enhancement are definitive imaging markers for a CNS WHO grade 4 tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents a significant conflict between the patient's very young age (26), a strong predictor of IDH-mutant status, and the aggressive imaging features (multifocality, extensive necrosis). These imaging findings are hallmarks of a CNS WHO grade 4 tumor and are more typical for an IDH-wildtype glioblastoma. The prediction for IDH-wildtype is therefore made with low confidence. The presence of extensive necrosis provides high confidence for a grade 4 prediction and argues strongly against a 1p/19q co-deletion. The integrated diagnosis reflects the most probable diagnosis based on the combination of these independent assessments, despite the demographic-radiological discordance."
+}

@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (34 years), which is more common in IDH-mutant gliomas. The tumor is located in the frontal lobe, a typical location for IDH-mutant tumors. Enhancement is marked, which can occur in both mutant and wildtype, but the proportion enhancing (23.01%) is moderate. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present=0.0), which is highly specific for IDH-mutant astrocytoma. However, the T2-FLAIR Mismatch Score (0.57) and Degree (0.45) are not zero, indicating some heterogeneity, but still below thresholds for mismatch positivity. Deep white matter invasion and ependymal invasion are present, which are non-specific. Overall, the young age, frontal location, and absence of T2-FLAIR mismatch strongly support IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (Speech motor and Motor) and shows marked enhancement, which are more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often have less enhancement and may avoid eloquent cortex. The frontal location is common for both, but the deep white matter invasion and ependymal invasion are not specific. The absence of calcifications (not assessed) doesn't help. Overall, the eloquent involvement and marked enhancement favor astrocytoma over oligodendroglioma.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma with CNS WHO grade 4. The high grade is suggested by necrosis proportion (18.42%), marked enhancement, and ependymal invasion. Confidence is moderate due to limited molecular surrogate markers.",
+  "subject_id": "BraTS2021_01441",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis=18.42%), which is a hallmark of grade 4 glioblastoma. Additionally, there is marked enhancement and ependymal invasion, both features of high-grade tumors. The edema volume is large (ED Volume=75.91 mL), and midline shift is present, indicating mass effect. However, the necrosis proportion is below the typical threshold for glioblastoma (usually >10% is suggestive, but higher values are more definitive), and the tumor is solitary without multifocality. Given the necrosis and other features, CNS WHO grade 4 is most likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ]
+  }
+}

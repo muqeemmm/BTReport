@@ -1,0 +1,61 @@
+{
+  "subject_id": "BraTS2021_00163",
+  "idh": {
+    "reasoning": "The patient is young (25 years old) and has a solitary tumor with relatively well-defined borders (whole tumor sphericity 0.66, core sphericity 0.56). The tumor shows significant edema (78.47% of total volume) and crosses the midline via edema ('Edema crosses midline': 'True'). The enhancement is mild (Proportion Enhancing: 0.13) and the enhancing margin is thin (<3mm). These features are more commonly associated with IDH-mutant gliomas, particularly lower-grade ones, although IDH-mutant high-grade gliomas can also present this way. The absence of deep white matter invasion ('Deep WM invasion': 'Absent') and ependymal invasion ('Ependymal (ventricular) Invasion': 'Absent') also leans towards IDH-mutant status. While the proportion of necrosis (21.4%) is somewhat high, it's not definitively indicative of IDH-wildtype status in the absence of other features like significant hemorrhage or rapid growth (not assessed). Given the young age and relatively circumscribed appearance with prominent edema, IDH-mutant is the more likely status.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "whole_tumor_sphericity",
+      "tumor_core_sphericity"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is young (25 years old), which makes IDH-mutant glioma more likely. IDH-mutant gliomas are further classified based on 1p/19q co-deletion status. Co-deletion is typically found in lower-grade gliomas (WHO grade 2 or 3). The tumor appears relatively well-circumscribed ('whole_tumor_sphericity': 0.66, 'tumor_core_sphericity': 0.56), has mild enhancement ('Enhancement Quality': 'Mild'), a thin enhancing margin ('Thickness of enhancing margin': '<3mm'), and lacks deep white matter invasion ('Deep WM invasion': 'Absent'). These features are more consistent with a lower grade glioma, where co-deletion is more common. However, the presence of significant edema crossing the midline ('Edema crosses midline': 'True') and a relatively high proportion of necrosis (21.4%) could suggest a higher grade, where co-deletion is less frequent but still possible in grade 3 tumors. Without definitive molecular data or imaging features strongly suggestive of anaplastic astrocytoma (e.g., marked hyperenhancement, significant hemorrhage), predicting co-deletion based solely on these MRI features is challenging. Given the overall picture leaning towards a potentially lower grade IDH-mutant glioma in a young patient, co-deletion is plausible but not certain.",
+    "supporting_features": [
+      "age_years",
+      "whole_tumor_sphericity",
+      "tumor_core_sphericity",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Edema crosses midline"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The patient is young (25 years old). The tumor is solitary and shows mild enhancement ('Enhancement Quality': 'Mild') with a thin enhancing margin ('Thickness of enhancing margin': '<3mm'). There is no deep white matter invasion ('Deep WM invasion': 'Absent') or ependymal invasion ('Ependymal (ventricular) Invasion': 'Absent'). These features suggest a lower grade glioma (WHO grade 2 or 3). However, the tumor volume is substantial (Total tumor volume: 24.2 mL), there is significant edema crossing the midline ('Edema crosses midline': 'True'), and a notable proportion of necrosis (21.4%). The presence of necrosis typically points towards WHO grade 3 or 4. The mild enhancement and lack of deep invasion argue against WHO grade 4 (glioblastoma). The combination of features - young age, lack of deep invasion, mild enhancement - leans towards WHO grade 2 or 3. The significant edema and necrosis push towards WHO grade 3 rather than grade 2.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "Edema crosses midline"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

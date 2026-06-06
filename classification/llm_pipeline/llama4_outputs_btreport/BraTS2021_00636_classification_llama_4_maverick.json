@@ -1,0 +1,48 @@
+{
+  "id": "patient_0453",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (42 years) and the presence of a large, enhancing tumor with necrosis (Proportion Necrosis: 5.42%) and significant edema (Proportion of Oedema: 64.09%) are more typical of glioblastoma, which is often IDH wildtype. The tumor's location in the frontal lobe, cortex, and insula, with cortical involvement, is consistent with either IDH mutant or wildtype gliomas. However, the presence of marked enhancement and necrosis leans more towards an IDH wildtype tumor, as IDH mutant tumors tend to have less necrosis and enhancement.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "Enhancement Quality",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [
+        "Tumor Location"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The tumor's location and characteristics (e.g., frontal lobe, cortical involvement, marked enhancement) could be consistent with either 1p/19q codeleted or non-codeleted tumors. However, IDH mutant tumors that are 1p/19q codeleted tend to have a more favorable prognosis and are often associated with oligodendrogliomas. Given the presence of necrosis and marked enhancement, which is less typical for codeleted tumors, and the prediction of IDH wildtype status, it is more likely that this tumor is non-codeleted.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Cortical involvement",
+        "Tumor Location"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 5.42%), marked enhancement, and significant edema, along with the prediction of IDH wildtype status, strongly suggests a high-grade glioma. The total tumor volume and the presence of necrosis are particularly indicative of a more aggressive tumor. Given these features, a grade 4 tumor is more likely than grade 2 or 3.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Total tumor volume (mL)",
+        "Proportion of Oedema"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00636"
+}

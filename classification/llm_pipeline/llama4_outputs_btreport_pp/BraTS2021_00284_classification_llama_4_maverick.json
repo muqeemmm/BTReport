@@ -1,0 +1,50 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (55 years) and the presence of a multifocal tumor with ependymal invasion and deep white matter invasion suggest a more aggressive tumor type. The tumor's location in the frontal lobe-cortex region and its mild enhancement quality are also noted. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score = 0.4, Degree = -0.1983832997984296) argues against an IDH mutant, 1p/19q non-codeleted glioma, which often shows this feature. Given these characteristics, the likelihood of an IDH wildtype status is higher.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The absence of T2-FLAIR mismatch strongly suggests that this tumor is not an IDH mutant, 1p/19q non-codeleted glioma. For IDH wildtype gliomas, the 1p/19q co-deletion status is less commonly associated with the typical features seen here (multifocal, ependymal invasion). However, without direct evidence of 1p/19q status from the MRI metadata, we lean towards the more common scenario for IDH wildtype gliomas, which are typically non-codeleted. The presence of cortical involvement and the tumor's location could be seen in various molecular subtypes.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "idh_status"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor's multifocal nature, ependymal invasion, deep white matter invasion, and the presence of multiple satellites suggest a high-grade tumor. The mild enhancement and the absence of significant midline shift despite the tumor's size and multifocality might seem contradictory, but the overall aggressive features point towards a high-grade glioma. IDH wildtype gliomas are more likely to be grade 4. The presence of necrosis (Proportion Necrosis = 2.1) and the tumor's overall appearance support a high-grade classification.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Proportion Necrosis",
+      "idh_status"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_00284"
+}

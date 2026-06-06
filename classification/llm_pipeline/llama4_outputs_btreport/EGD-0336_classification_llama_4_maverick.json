@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (68 years) and the presence of a multifocal tumor with significant mass effect (midline shift present, asymmetrical ventricles, effaced ventricle on the right side) are more commonly associated with IDH wildtype glioblastoma, which is typical in older adults. The tumor's aggressive features, such as large size (Total tumor volume = 255.332 mL), presence of necrosis (Proportion Necrosis = 19.19%), and mild enhancement with a thickness of enhancing margin >3mm, also support this interpretation. IDH mutant gliomas are less likely given the age and aggressive imaging features.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle",
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a multifocal tumor with significant necrosis and mass effect, along with the patient's age, is more typical of glioblastoma, IDH wildtype, which is not commonly associated with 1p/19q co-deletion. 1p/19q co-deletion is more commonly seen in oligodendrogliomas, which are typically IDH mutant. Given the likely IDH wildtype status from the previous prediction, the likelihood of 1p/19q co-deletion is low.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Proportion Necrosis",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "cns_grade": {
+    "reasoning": "The tumor's aggressive features such as large size, presence of necrosis (Proportion Necrosis = 19.19%), significant mass effect (midline shift, asymmetrical ventricles), and multifocality are characteristic of a high-grade glioma. The likely IDH wildtype status further supports the diagnosis of glioblastoma, WHO grade 4, as IDH wildtype glioblastomas are grade 4 by definition in the WHO CNS5 classification.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Multifocal or Multicentric",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "subject_id": "EGD-0336"
+}

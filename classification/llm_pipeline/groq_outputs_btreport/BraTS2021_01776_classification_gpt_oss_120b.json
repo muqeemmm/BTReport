@@ -1,0 +1,60 @@
+{
+  "subject_id": "BraTS2021_01776",
+  "idh": {
+    "reasoning": "The patient is 47 years old (age_years), younger than the typical age for IDH\u2011wildtype glioblastoma, supporting IDH\u2011mutant status. The tumor shows only mild contrast enhancement (Enhancement Quality) and a low proportion of enhancing tumor (Proportion Enhancing=3.85%), both favoring IDH\u2011mutant glioma. Multifocal disease (Multifocal or Multicentric) and cortical involvement (Cortical involvement) are more common in IDH\u2011mutant astrocytomas. However, there is a notable necrotic component (Proportion Necrosis=23.09%) and extensive edema (Proportion of Oedema=73.06%) which can be seen in IDH\u2011wildtype GBM. Balancing these, the evidence leans toward IDH\u2011mutant, so the prediction is mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Cortical involvement",
+      "Region Proportions",
+      "Side of Tumor Epicenter",
+      "ED Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Edema crosses midline"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Multifocal disease (Multifocal or Multicentric), deep white matter invasion (Deep WM invasion) and ependymal invasion (Ependymal (ventricular) Invasion) are typical of IDH\u2011mutant astrocytoma, which is non\u2011codeleted, whereas oligodendroglioma (codeleted) usually presents as a solitary, well\u2011circumscribed lesion with calcifications (not observed). The frontal cortical location (Region Proportions) is compatible with both, but the lack of calcification and presence of multifocality argue against 1p/19q codeletion. Therefore the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows mild enhancement (Enhancement Quality), a low enhancing proportion (Proportion Enhancing=3.85%) and a small enhancing volume (ET Volume 3.5\u202fmL), which are more typical of WHO grade\u202f3 than grade\u202f4. Necrosis is present (Proportion Necrosis=23\u202f%) and edema is extensive, features that can be seen in grade\u202f4, but the lack of strong, thick, crossing enhancement (CET Crosses midline=False, Thickness of enhancing margin >3\u202fmm) argues against grade\u202f4. Thus WHO grade\u202f3 is most likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Edema crosses midline"
+    ],
+    "prediction": 3,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant and 1p/19q-non-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of advanced imaging (perfusion, spectroscopy) and absence of calcification assessment limit certainty. While the data favor an IDH\u2011mutant, non\u2011codeleted astrocytoma, grade\u202f3, some aggressive features (necrosis, extensive edema) introduce moderate uncertainty."
+}

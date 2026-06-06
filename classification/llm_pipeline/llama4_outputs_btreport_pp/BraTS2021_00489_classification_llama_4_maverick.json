@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.7769110263490854) is highly suggestive of an IDH mutant glioma. This feature is strongly associated with IDH mutation status in adult-type diffuse gliomas. The patient's age (51 years) and the tumor's location (involving insula, cortex, and frontal lobe) are also consistent with the possibility of an IDH mutant tumor, although these are not definitive. The absence of features contradicting IDH mutation (such as specific perfusion or spectroscopy characteristics not available in this dataset) means we rely on the available metadata, which supports IDH mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q codeletion status is challenging without direct molecular or histopathological information. However, the presence of T2-FLAIR mismatch is more commonly associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are typically 1p/19q codeleted. The tumor's location and involvement of multiple structures (insula, cortex, frontal lobe) and deep structures could be seen in various glioma subtypes. Without specific features like calcifications or certain perfusion characteristics (not available), we lean towards non-codeleted based on the T2-FLAIR mismatch indicating likely astrocytoma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor shows significant mass effect (midline shift present, asymmetrical ventricles, effaced ventricle) and has a large volume (Total tumor volume: 156.302 mL, ED Volume: 129.186 mL). The presence of necrosis (Proportion Necrosis: 5.15%) and enhancement (Proportion Enhancing: 12.19%, Enhancement Quality: Mild, Thickness of enhancing margin: >3mm) are indicative of a higher grade. The involvement of eloquent areas and deep structures also suggests an aggressive tumor. While the T2-FLAIR mismatch suggests IDH mutation, the overall imaging features point towards a higher grade, likely grade 4 given the significant mass effect and necrosis.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_00489"
+}

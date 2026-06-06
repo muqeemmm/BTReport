@@ -1,0 +1,37 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, indicating a positive mismatch, which is a characteristic feature of IDH-mutant gliomas, particularly those that are non-codeleted. This feature strongly supports the prediction of IDH mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch typically indicates a non-codeleted status in IDH-mutant gliomas. Given that the tumor is IDH-mutant (as predicted), the T2-FLAIR mismatch feature supports a non-codeleted status. Additionally, the absence of features like calcifications (not directly available but often associated with codeletion) and the presence of a multifocal tumor with significant enhancement and necrosis could be more typical of non-codeleted IDH-mutant gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Multifocal or Multicentric",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "CNS_WHO_grade": {
+    "reasoning": "The tumor shows marked enhancement, significant necrosis (Proportion Necrosis: 4.87%), and is multifocal, indicating a high-grade tumor. The presence of necrosis and marked enhancement are features more commonly associated with higher-grade gliomas. Given the IDH-mutant and non-codeleted status, the presence of these aggressive features suggests a grade 4 classification according to the WHO CNS5 classification.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "rim_core_adjacency"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0593"
+}

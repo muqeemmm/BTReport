@@ -1,0 +1,81 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.92,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "reasoning": "IDH-mutant diffuse glioma is strongly supported by the very high T2-FLAIR mismatch signal, young age, frontal cortical location, mild and very small enhancing component, solitary presentation, absent ependymal invasion, and minimal mass-effect pattern. IDH-wildtype disease would be more supported by aggressive MRI features such as substantial necrosis/edema or deep invasion; the metadata does include high Proportion Necrosis, high Proportion of Oedema/ED Volume, and Deep WM invasion, which argue against a purely lower-grade IDH-mutant pattern. Overall, the T2-FLAIR mismatch and demographic/location pattern outweigh the aggressive counterfeatures, so the prediction is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Non-codeleted astrocytoma is strongly supported by the marked T2-FLAIR mismatch pattern, with high mismatch score and central T2 hyperintensity relative to FLAIR with a peripheral FLAIR rim pattern. A 1p/19q-codeleted oligodendroglioma remains possible because frontal cortical tumors can be codeleted, and the provided metadata do not include unavailable features that might further separate oligodendroglioma from astrocytoma. However, the T2-FLAIR mismatch pattern is much more characteristic of IDH-mutant, non-codeleted astrocytoma than of oligodendroglioma, so the prediction is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ]
+  },
+  "overall_comment": "The classification is driven mainly by the very strong T2-FLAIR mismatch pattern in a young patient with a frontal cortical, minimally enhancing solitary tumor. The largest uncertainty is WHO grade: the tiny enhancing volume and mismatch pattern favor grade 2, but the fields labeled Proportion Necrosis, Proportion of Oedema, and Deep WM invasion raise concern for higher grade sampling or segmentation-label ambiguity. DWI/ADC, perfusion, spectroscopy, SWI/GRE, and molecular markers were not available.",
+  "subject_id": "EGD-0757",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": 2,
+    "reasoning": "CNS WHO grade 2 is supported by the marked T2-FLAIR mismatch pattern, mild enhancement, extremely small enhancing volume, solitary lesion, absent satellites, absent ependymal invasion, no enhancing midline crossing, and minimal midline shift. Higher grade is suggested by the metadata field labeled Proportion Necrosis, substantial edema burden, deep white matter invasion, large total tumor size, and enhancing margin thickness, which prevent high confidence. Weighing these together, the imaging pattern most favors a lower-grade diffuse astrocytic tumor, but with meaningful uncertainty from the aggressive-appearing metadata fields; therefore the best estimate is CNS WHO grade 2.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

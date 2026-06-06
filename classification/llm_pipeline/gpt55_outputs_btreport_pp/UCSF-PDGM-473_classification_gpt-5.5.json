@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Whole Tumor Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, and the lesion is solitary, temporal-cortical, cortical-involving, and nonenhancing with no enhancing or necrotic component. These features are more typical of lower-grade IDH-mutant glioma than IDH-wildtype glioblastoma. Evidence against IDH-mutant status is the large whole-tumor volume with midline shift and deep white-matter invasion, which can be seen in more aggressive tumors; additionally, T2-FLAIR mismatch is not present, so there is no highly specific imaging support for IDH-mutant astrocytoma. Overall, the nonenhancing temporal-cortical lesion in a 34-year-old supports IDH-mutant status despite mass effect.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the imaging evidence is limited and not strongly discriminatory. A temporal-cortical lesion in a young adult can fit an IDH-mutant astrocytoma without 1p/19q co-deletion, and there is no positive T2-FLAIR mismatch pattern provided to strongly specify an astrocytoma subtype. However, cortical involvement, absent enhancement, and absent T2-FLAIR mismatch are not exclusive and can also be compatible with oligodendroglioma, so the evidence against co-deletion is weak. Given the temporal-cortical distribution and lack of a strong codeletion-specific imaging marker in the provided metadata, the best estimate is non-codeleted with low confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "Imaging-only molecular subtyping is uncertain, especially for 1p/19q status. The lesion is large, nonenhancing, and FLAIR-dominant with mass effect, favoring a lower-grade IDH-mutant diffuse glioma, but molecular testing is required for definitive classification. Null and NaN fields were treated as not assessed.",
+  "subject_id": "UCSF-PDGM-473",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Whole Tumor Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "Deep WM invasion",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "reasoning": "The grade assessment favors CNS WHO grade 2 because the lesion is nonenhancing, has no enhancing tumor volume, no necrotic/nonenhancing core volume, and no necrosis proportion; it is also solitary. These findings argue against imaging-defined high-grade behavior. Evidence against grade 2 includes very large tumor volume, midline shift, deep white-matter invasion, and eloquent-region involvement, which indicate substantial infiltrative burden and mass effect and could occur with grade 3 or grade 4 disease. Still, in the provided structural MRI metadata, the absence of enhancement and necrosis is the strongest grade-related signal, so grade 2 is the best estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

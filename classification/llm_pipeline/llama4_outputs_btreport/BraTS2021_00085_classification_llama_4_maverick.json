@@ -1,0 +1,53 @@
+{
+  "id": "additional_patient_07",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The tumor is located in the parietal-cortex region with deep white matter invasion and cortical involvement, which is consistent with a higher likelihood of IDH wildtype tumors. The presence of mild enhancement and a relatively large edema volume also supports this, as IDH wildtype glioblastomas often present with more aggressive features. However, the absence of necrosis and the proportion of necrosis being 0.97 suggest some necrotic component, which is more typical of glioblastoma (IDH wildtype). The tumor's characteristics, such as being solitary and having a significant edema volume, are also more typical of IDH wildtype glioblastoma.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Deep WM invasion",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Edema crosses midline"
+      ],
+      "contradicting_features": [
+        "Proportion Enhancing",
+        "Thickness of enhancing margin"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the parietal-cortex region and involves the cortex, which is more typical of IDH mutant tumors. However, the presence of mild enhancement and significant edema, along with the absence of ependymal invasion, does not strongly suggest a 1p/19q co-deleted tumor, which is more commonly associated with oligodendrogliomas. The lack of specific features like calcifications (not assessed here) makes it harder to predict co-deletion status directly. Given the likely IDH mutation status is wildtype from the first prediction, the probability of 1p/19q co-deletion is lower because co-deletion is typically associated with IDH mutant tumors.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality",
+        "Edema crosses midline"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor shows significant edema, cortical involvement, and deep white matter invasion, with a large total tumor volume and mild enhancement. The presence of necrosis (Proportion Necrosis = 0.97) and a significant enhancing component suggests a high-grade tumor. The features are most consistent with a glioblastoma, which is WHO grade 4. The tumor's aggressive features, such as significant edema crossing the midline and a large volume, support this grading.",
+      "supporting_features": [
+        "ED Volume (mL)",
+        "Cortical involvement",
+        "Deep WM invasion",
+        "Proportion Necrosis",
+        "Edema crosses midline"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00085"
+}

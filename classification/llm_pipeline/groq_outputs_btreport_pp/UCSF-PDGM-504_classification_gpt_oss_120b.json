@@ -1,0 +1,46 @@
+{
+  "subject_id": "UCSF-PDGM-504",
+  "idh": {
+    "reasoning": "The tumor shows marked enhancement, high necrosis (39.28%) and a high proportion of enhancing tissue (37.87%), features that are typical of IDH\u2011wildtype glioblastoma. However, a strong T2\u2011FLAIR mismatch signal is present (T2\u2011FLAIR Mismatch Present=1.0, high score), which is a recognized surrogate for IDH\u2011mutant astrocytoma. The conflicting evidence tilts toward IDH\u2011wildtype because the enhancement and necrosis are more decisive for grade\u202f4 disease, while the mismatch may be a false positive in this case.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.62
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of IDH\u2011wildtype, the tumor cannot be an oligodendroglioma, which requires 1p/19q codeletion. Moreover, the presence of a T2\u2011FLAIR mismatch, while supporting IDH\u2011mutant status, points toward an astrocytic lineage rather than an oligodendroglial one, reinforcing a non\u2011codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.78
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement, substantial necrosis (39.28%), and a high enhancing fraction (37.87%) are characteristic of WHO grade\u202f4 glioblastoma. The tumor size (total volume\u202f\u2248\u202f58\u202fmL) and deep white\u2011matter invasion further support a high\u2011grade lesion. The T2\u2011FLAIR mismatch suggests a lower\u2011grade astrocytoma, but the aggressive imaging features outweigh this, leading to a grade\u202f4 assignment.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": 4,
+    "confidence": 0.71
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly favors IDH\u2011wildtype glioblastoma (grade\u202f4) despite a positive T2\u2011FLAIR mismatch, which introduces some uncertainty. Molecular testing (IDH1/2 sequencing, 1p/19q FISH) is recommended to confirm the genotype."
+}

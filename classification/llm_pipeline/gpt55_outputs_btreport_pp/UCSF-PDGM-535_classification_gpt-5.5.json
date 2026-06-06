@@ -1,0 +1,71 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The imaging metadata strongly favors an IDH-mutant diffuse glioma: a reported T2-FLAIR mismatch with a high mismatch score is a classic MRI marker of IDH-mutant astrocytoma, and the lesion is nonenhancing with no necrosis, which is more typical of lower-grade IDH-mutant glioma than IDH-wildtype glioblastoma. The young age also supports IDH-mutant biology over IDH-wildtype glioblastoma. Cortical involvement and a solitary lesion are compatible with diffuse glioma. The main caution is that the epicenter is recorded as midline, which is atypical for classic adult hemispheric IDH-mutant glioma and raises location-based uncertainty, but the available MRI features overall support IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "age_years",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The strongest available discriminator is the T2-FLAIR mismatch, which supports a non-codeleted astrocytic genotype rather than oligodendroglioma. The young age is also less typical for 1p/19q-codeleted oligodendroglioma. Absence of enhancement and necrosis does not specifically favor codeletion versus non-codeletion. Cortical involvement and a parietal-temporal cortical location can be seen with oligodendroglioma, so these features mildly argue against a confident non-codeleted call, but the T2-FLAIR mismatch pattern remains the dominant metadata feature supporting non-codeletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. Lack of DWI/ADC, perfusion, spectroscopy, SWI/GRE, and molecular testing limits certainty, especially for grading and for excluding atypical entities at a midline epicenter in a 19-year-old. The reported T2-FLAIR mismatch is the key feature driving an IDH-mutant, non-codeleted astrocytoma impression.",
+  "subject_id": "UCSF-PDGM-535",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Whole Tumor Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The MRI metadata favors a lower-grade lesion: there is no enhancement, no enhancing tumor volume, no necrosis, no midline shift, no ventricular asymmetry, no ependymal invasion, no deep white matter invasion, and the lesion is solitary. These features argue against grade 4 and against a high-grade aggressive phenotype. The T2-FLAIR mismatch pattern also commonly appears in lower-grade diffuse astrocytoma. The main caution is that the lesion volume is moderate at about 48 mL, and grading cannot be determined reliably from conventional MRI alone because anaplastic histology or molecular grade-defining alterations may be present without enhancement. Overall, the metadata most supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

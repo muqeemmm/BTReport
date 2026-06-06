@@ -1,0 +1,88 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young by adult glioma standards, the lesion is frontal and cortically involved, it is solitary, has only mild/minimal enhancing tumor burden, and lacks deep white matter and ependymal invasion. These features are more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. Evidence arguing the other way includes a large tumor volume, substantial edema, edema/tumor crossing the midline, a high reported necrosis proportion, and a thick enhancing margin, which can be seen in more aggressive IDH-wildtype tumors. Overall, the age, frontal-cortical location, solitary pattern, and limited enhancement outweigh the aggressive features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the strongest imaging support for co-deletion is the frontal cortical location in a relatively young adult, with absent T2-FLAIR mismatch and only mild/minimal enhancement; this pattern is often more compatible with oligodendroglial tumor than with a classic T2-FLAIR-mismatch astrocytoma. The evidence against co-deletion is that the tumor is described as midline in epicenter, has tumor/edema crossing midline, has substantial edema, large volume, and a high reported necrosis proportion, which are less specific and can favor non-codeleted astrocytic or high-grade biology. Because the frontal cortical location and absent mismatch are meaningful but not definitive without calcification or histology, the best estimate is 1p/19q-codeleted with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "n_components_enhancing"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata and remain uncertain. The imaging pattern is mixed: frontal cortical, young-age, minimally enhancing features favor an IDH-mutant oligodendroglial tumor, while large volume, edema, midline crossing, and the reported necrosis proportion raise concern for higher-grade behavior. Histopathology and molecular testing are required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0203",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, the lesion has several features beyond a typical grade 2 tumor: large total tumor volume, substantial edema, a high reported necrosis proportion, cortical/frontal mass with some enhancement, and an enhancing margin described as thick. These support at least an intermediate/high-grade glioma. However, the actual enhancing volume is extremely small, no enhancing components are counted, enhancement is only mild, midline shift is minimal, and there is no ependymal invasion, deep white matter invasion, multifocality, or satellites. These findings argue against confidently assigning grade 4 on imaging alone. Balancing the aggressive size/edema/necrosis metadata against the minimal enhancement and limited invasive features, the best estimate is CNS WHO grade 3 rather than grade 2 or grade 4.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

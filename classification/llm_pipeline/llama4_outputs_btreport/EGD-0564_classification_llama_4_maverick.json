@@ -1,0 +1,45 @@
+{
+  "id": "patient_0167",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (45 years) and the tumor's location in the brainstem are more typical of IDH wildtype gliomas, which often occur in older patients and can be found in midline structures. The presence of deep white matter invasion and the absence of ependymal invasion are noted, but the key factor here is the tumor's location and the patient's age. IDH mutant gliomas are less likely given the brainstem location and the age of the patient.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "Given the likely IDH wildtype status based on age and tumor location, 1p/19q codeletion is less likely as it is more commonly associated with IDH mutant gliomas. The tumor's location in the brainstem and the absence of features typical for oligodendrogliomas (e.g., cortical involvement, calcifications - though calcifications are not assessed here) further support the likelihood of non-codeletion.",
+      "supporting_features": [
+        "Tumor Location",
+        "age_years"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.85
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The presence of a large edema volume (ED Volume = 21.722 mL) and a relatively high total tumor volume (21.934 mL) with a significant proportion of necrosis (0.84) suggests a high-grade tumor. The mild enhancement quality and the absence of significant ependymal or cortical involvement are noted, but the overall tumor volume and edema suggest a more aggressive tumor, likely grade 4.",
+      "supporting_features": [
+        "ED Volume (mL)",
+        "Proportion Necrosis",
+        "Total tumor volume (mL)"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.75
+    }
+  ],
+  "subject_id": "EGD-0564"
+}

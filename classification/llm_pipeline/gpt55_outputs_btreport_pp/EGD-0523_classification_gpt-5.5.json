@@ -1,0 +1,67 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the strongest imaging clue is that \"T2-FLAIR Mismatch Present\" is positive with a high \"T2-FLAIR Mismatch Score\", a pattern classically enriched in IDH-mutant diffuse astrocytoma. The largely cortical/lobar distribution in \"Cortical involvement\", \"Tumor Location\", and \"Region Proportions\" is also compatible with an IDH-mutant diffuse glioma. Against IDH-mutant status, the patient is older by \"age_years\", and \"Multifocal or Multicentric\" with \"Number of lesions\" plus very large \"ED Volume (mL)\" and high \"Proportion of Oedema\" are more often seen in aggressive IDH-wildtype glioblastoma-like tumors. Because the T2-FLAIR mismatch metadata is a relatively specific IDH-mutant-associated feature but there are notable age and multifocal/edema contradictions, the balance favors IDH-mutant with moderate confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, \"T2-FLAIR Mismatch Present\" and the elevated \"T2-FLAIR Mismatch Score\" argue strongly against oligodendroglioma and toward a non-codeleted astrocytic genotype. The distribution in \"Tumor Location\" and \"Region Proportions\" is not frontal-dominant, which is less typical for 1p/19q-codeleted oligodendroglioma. Features that could still fit a codeleted tumor include \"Cortical involvement\" and some frontal component within \"Region Proportions\", since oligodendrogliomas often involve cortex and frequently have frontal lobe predilection. Overall, the T2-FLAIR mismatch feature and non-frontal-dominant distribution outweigh the limited codeletion-favoring features, so the best estimate is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without diffusion, perfusion, spectroscopy, or susceptibility/calcification assessment. The key uncertainty is discordance between a T2-FLAIR mismatch pattern favoring IDH-mutant astrocytoma and older age/multifocal extensive edema favoring a more aggressive IDH-wildtype phenotype. Tissue diagnosis with molecular testing remains required.",
+  "subject_id": "EGD-0523",
+  "who_grade": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, high-grade disease is supported by enhancing tumor in \"ET Volume (mL)\", necrotic/non-enhancing core in \"NCR Volume (mL)\", a thick enhancing margin in \"Thickness of enhancing margin\", multifocality in \"Multifocal or Multicentric\" and \"Number of lesions\", older age in \"age_years\", and extensive peritumoral abnormality in \"ED Volume (mL)\" and \"Proportion of Oedema\". These features collectively favor grade 4 over grade 2 or grade 3. However, the enhancement is described as mild in \"Enhancement Quality\", the enhancing and necrotic proportions are small in \"Proportion Enhancing\" and \"Proportion Necrosis\", and there is no midline shift, ependymal invasion, or deep white matter invasion by \"midline_shift_present\", \"Ependymal (ventricular) Invasion\", and \"Deep WM invasion\". These contradictions reduce certainty, but the presence of enhancement, necrotic core, multifocality, and very large edema make grade 4 the most likely imaging-based estimate.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "age_years",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

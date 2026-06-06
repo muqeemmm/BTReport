@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (75 years) is more typical for wildtype IDH gliomas, which are more common in older adults. The tumor's aggressive features, such as significant mass effect (midline shift present, asymmetrical ventricles, effaced ventricle), large size (total tumor volume = 167.485 mL, ED Volume = 125.117 mL, ET Volume = 34.063 mL), and involvement of multiple regions (temporal, cortex, frontal_lobe, insula) also support the wildtype IDH status. Additionally, the presence of necrosis (Proportion Necrosis = 4.96%) and marked enhancement quality are more characteristic of IDH wildtype glioblastomas.",
+    "supporting_features": [
+      "age_years",
+      "midline_shift_present",
+      "volumes_ideal_midline",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Effaced Ventricle",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH wildtype status (predicted with high confidence) makes 1p/19q co-deletion less likely, as co-deletion is typically associated with IDH mutant gliomas. Additionally, the tumor's imaging features (aggressive, necrotic, and large) are not typical for 1p/19q co-deleted tumors, which are often oligodendrogliomas with a more indolent course.",
+    "supporting_features": [
+      "age_years",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor's aggressive imaging features (large size, significant mass effect, necrosis, marked enhancement) are characteristic of a high-grade glioma. The presence of necrosis and the patient's age are particularly suggestive of glioblastoma, which is WHO grade 4. The IDH wildtype status further supports this classification, as most IDH wildtype glioblastomas are WHO grade 4.",
+    "supporting_features": [
+      "age_years",
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0311"
+}

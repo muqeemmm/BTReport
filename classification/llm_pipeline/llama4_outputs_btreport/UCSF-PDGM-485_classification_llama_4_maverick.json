@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (65 years) and the absence of enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) are more typical of IDH wildtype gliomas, which are more common in older adults and often lack significant enhancement. The presence of a non-enhancing tumor with a significant edema volume ('ED Volume (mL)': 32.084, 'Proportion of Oedema': 100.0) also aligns with the profile of IDH wildtype glioblastoma, although the absence of necrosis ('Proportion Necrosis': 0.0) is somewhat atypical. However, given the age and the non-enhancing nature of the tumor, IDH wildtype is more likely.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The likelihood of 1p/19q codeletion is low given the patient's age and the MRI features. IDH-mutant gliomas with 1p/19q codeletion (oligodendrogliomas) are more likely to present with enhancement and are typically seen in a younger population. The absence of enhancement and the patient's age (65 years) make codeletion less likely. Without explicit information on IDH status from the prediction above, we lean towards 'non-codeleted' based on the age and tumor characteristics.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor's characteristics, such as significant edema ('ED Volume (mL)': 32.084) and the absence of enhancement ('Enhancement Quality': 'None'), along with the patient's age (65 years), are suggestive of a high-grade glioma. Although the absence of necrosis and enhancement is atypical for glioblastoma (WHO grade 4), the overall profile leans towards a high-grade tumor. The presence of cortical involvement and a significant proportion of the tumor being in the temporal-cortex region also supports a more aggressive tumor. Given these features, a grade of 4 is plausible despite some atypical features.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "subject_id": "UCSF-PDGM-485"
+}

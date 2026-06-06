@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0276",
+  "idh": {
+    "reasoning": "The evidence for IDH status is conflicting. The presence of multifocality ('Multifocal or Multicentric': 'Multifocal') and a significant necrotic component ('Proportion Necrosis': 11.34%) are strong indicators of an IDH-wildtype glioma, specifically glioblastoma. These features suggest high biological aggressiveness. Conversely, the tumor exhibits extremely sharp margins ('Transition Zone Thickness (FLAIR)' median_mm: 0.75), which is a classic feature of IDH-mutant gliomas, particularly oligodendroglioma. The patient's age of 41 is ambiguous and can be seen in both subtypes. Weighing the evidence, multifocality and necrosis are potent features that more strongly favor an IDH-wildtype diagnosis over the single, albeit strong, feature of sharp margins.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is challenging due to contradictory features. The most compelling evidence for co-deletion is the very sharp tumor boundary ('Transition Zone Thickness (FLAIR)' median_mm: 0.75), a hallmark of 1p/19q-codeleted oligodendrogliomas. The frontal lobe location is also typical. However, strong evidence argues against co-deletion: the tumor is multifocal ('Multifocal or Multicentric': 'Multifocal') and has a necrotic core ('Proportion Necrosis': 11.34%), both of which are rare in oligodendrogliomas and more characteristic of astrocytic tumors (non-codeleted). The absence of a T2-FLAIR mismatch argues against an IDH-mutant astrocytoma but does not distinguish between a codeleted tumor and an IDH-wildtype tumor (which is non-codeleted). Given that multifocality and necrosis are powerful indicators of a different tumor biology than is typical for oligodendroglioma, the prediction leans towards non-codeleted status, despite the sharp margins.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO Grade 4 is based on strong and definitive imaging features. The presence of a significant necrotic core ('Proportion Necrosis': 11.34%) is a key radiological marker corresponding to histologic necrosis, which is a defining feature of WHO Grade 4 gliomas (glioblastoma). Furthermore, the tumor is multifocal ('Multifocal or Multicentric': 'Multifocal'), another characteristic of high-grade, aggressive tumors. While some features, such as the small volume of enhancement ('ET Volume (mL)': 1.137) and sharp margins ('Transition Zone Thickness (FLAIR)'), could be interpreted as signs of a lower grade, they are insufficient to outweigh the definitive evidence of necrosis and multifocality.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO Grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents a diagnostic challenge due to conflicting imaging features. The presence of multifocality and a necrotic core strongly suggests a high-grade glioma, consistent with Glioblastoma, IDH-wildtype, CNS WHO Grade 4. However, the tumor's remarkably sharp margins are atypical for glioblastoma and are a classic sign of IDH-mutant oligodendroglioma. Despite this contradiction, the features of high-grade malignancy (necrosis, multifocality) are weighted more heavily in the final assessment, leading to the predicted diagnosis. The confidence in molecular status is moderate, reflecting this ambiguity, while confidence in the grade is high."
+}

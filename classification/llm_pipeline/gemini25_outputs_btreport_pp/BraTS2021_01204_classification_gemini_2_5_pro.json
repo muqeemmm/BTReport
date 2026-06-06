@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_01204",
+  "idh": {
+    "reasoning": "The strongest predictor for IDH status is the presence of a prominent T2-FLAIR mismatch signal, with 'T2-FLAIR Mismatch Present' being true (1.0) and a high 'T2-FLAIR Mismatch Score' of 0.846. This feature is highly specific for IDH-mutant astrocytomas. The patient's age of 55 is on the higher side for IDH-mutant tumors and more typical for IDH-wildtype, representing the main contradictory evidence. However, the specificity of the T2-FLAIR mismatch sign is considered to be a more powerful predictor than age alone. The presence of mild enhancement and a small amount of necrosis are less specific but can be seen in high-grade IDH-mutant tumors. Therefore, the evidence strongly favors an IDH-mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is heavily influenced by features that differentiate astrocytic from oligodendroglial lineages. The presence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 1.0) is a key feature of IDH-mutant astrocytomas, which are by definition 1p/19q non-codeleted. Furthermore, the tumor's deep location involving the caudate and hippocampus ('Anatomical Overlap Regions') and deep white matter invasion ('Deep WM invasion') are more characteristic of astrocytomas than oligodendrogliomas. The low 'boundary_sharpness' value also suggests an infiltrative, astrocytic nature. A significant contradictory feature is the very sharp 'Transition Zone Thickness (FLAIR)' (median 0.75 mm), which is a classic sign of oligodendroglioma (codeleted). However, the combination of the highly specific T2-FLAIR mismatch sign and the tumor's overall infiltrative morphology provides stronger evidence for a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "boundary_sharpness"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The WHO grade is determined by histological and molecular features, but imaging can provide strong clues. The most critical finding for grading in this case is the presence of necrosis, indicated by a non-zero 'NCR Volume (mL)' (0.733) and 'Proportion Necrosis' (2.46%). In the context of an adult-type diffuse glioma, the presence of necrosis is a sufficient criterion for a WHO grade 4 designation. Additional features supporting a high grade include the patient's age of 55, the presence of contrast enhancement ('ET Volume (mL)': 2.993), a thick enhancing margin ('>3mm'), and deep white matter invasion. The fact that the enhancement is described as 'Mild' and the necrotic volume is small are minor counterpoints, but they do not override the definitive grading implication of necrosis being present at all. Therefore, a prediction of WHO grade 4 is well-supported.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "age_years",
+      "Deep WM invasion",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging phenotype is highly characteristic of an IDH-mutant astrocytoma, primarily due to a strong T2-FLAIR mismatch signal. The presence of both contrast enhancement and central necrosis are definitive imaging markers for high-grade disease, leading to a predicted WHO grade of 4. The combination of these findings results in a predicted diagnosis of Astrocytoma, IDH-mutant, CNS WHO grade 4. While the patient's age is slightly high for this entity and there is conflicting evidence regarding boundary sharpness, the overall weight of evidence supports this conclusion."
+}

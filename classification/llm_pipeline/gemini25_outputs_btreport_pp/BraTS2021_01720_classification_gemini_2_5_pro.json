@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_01720",
+  "idh": {
+    "reasoning": "The prediction of IDH status is challenging due to conflicting evidence. The patient's young age (31 years) is a strong demographic predictor for IDH-mutant status. Additionally, the tumor exhibits minimal contrast enhancement, which is also more typical for IDH-mutant gliomas. However, a very strong counterargument is the presence of significant central necrosis (nearly 22% of the tumor core), a hallmark feature of IDH-wildtype glioblastoma. In adult diffuse gliomas, imaging features of high-grade malignancy like necrosis often carry more weight than demographic factors. Therefore, despite the patient's age, the presence of necrosis makes an IDH-wildtype tumor more likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is performed independently of the IDH status prediction. The primary feature supporting a 1p/19q-codeleted status is the very sharp tumor margin, as indicated by the thin median transition zone on FLAIR imaging (0.75 mm). Sharply demarcated, cortically-based tumors are classic for oligodendroglioma (which are, by definition, IDH-mutant and 1p/19q-codeleted). The cortical involvement also supports this. Arguing against this is the presence of significant necrosis, which is less common in oligodendrogliomas than in high-grade astrocytomas. The absence of a T2-FLAIR mismatch sign is non-specific. On balance, the very well-defined border is a strong morphological feature pointing towards a codeleted genotype.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade is strongly driven by the presence of extensive central necrosis. The non-enhancing/necrotic component (NCR) constitutes a significant volume (9.21 mL) and proportion (21.98%) of the tumor core. Radiographically evident necrosis is a key criterion for high-grade glioma and is the defining imaging feature of WHO grade 4 tumors in the adult-type diffuse glioma setting (i.e., glioblastoma). While the patient is young and mass effect is minimal, the presence of necrosis is the most powerful radiological predictor of grade and strongly indicates a WHO grade 4 tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO CNS grade 4",
+  "consistency_check_passed": false,
+  "overall_comment": "This is a challenging case with conflicting radiological and demographic features. The young patient age strongly suggests an IDH-mutant glioma, while the prominent central necrosis is a hallmark of IDH-wildtype glioblastoma (WHO grade 4). Furthermore, the sharp tumor borders are characteristic of 1p/19q-codeleted oligodendroglioma. The independent predictions are therefore biologically inconsistent (an IDH-wildtype tumor cannot be 1p/19q-codeleted). The integrated diagnosis of Glioblastoma is favored because necrosis is the most compelling and highest-confidence imaging finding, but this case highlights significant diagnostic uncertainty based on imaging alone."
+}

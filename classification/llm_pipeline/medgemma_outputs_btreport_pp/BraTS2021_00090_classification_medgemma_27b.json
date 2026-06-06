@@ -1,0 +1,71 @@
+{
+  "subject_id": "BraTS2021_00090",
+  "idh": {
+    "reasoning": "The patient is 50 years old, which is within the typical age range for both IDH-mutant and IDH-wildtype gliomas, although IDH-mutant gliomas are more common in younger adults. The tumor is solitary and located near the midline, involving deep structures like the thalamus, caudate, putamen, pallidum, hippocampus, amygdala, and ventral DC. It shows cortical involvement and deep white matter invasion. There is ependymal invasion and effacement of the left ventricle. The tumor has a relatively large edema component (90.72% of total volume) and a small enhancing component (8.01%). The enhancing component is described as 'mild' with a thick margin (>3mm). The tumor core sphericity is high (0.868), suggesting a relatively well-defined core. The whole tumor sphericity is lower (0.577). The transition zone thickness on FLAIR is 0.5mm (median), while on T1CE it is 1.69mm (median). The T2-FLAIR mismatch score is low (0.4). These features are somewhat non-specific for IDH status without additional information like DWI or perfusion. However, the combination of deep location, ependymal invasion, significant edema relative to tumor size, and relatively well-defined core might slightly favor an IDH-wildtype glioma, which often presents in older patients with more aggressive features like deep invasion and significant edema. Conversely, the relatively small enhancing component and thick margin could be seen in either type. Given the age and aggressive features (deep invasion, ependymal involvement), IDH-wildtype cannot be ruled out but IDH-mutant remains plausible. Without definitive features like necrosis or microvascular proliferation (not assessable from this metadata), predicting IDH status based solely on these MRI features is challenging.",
+    "supporting_features": [
+      "age_years",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion of Oedema",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Tumor Core Volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Transition Zone Thickness (FLAIR)",
+      "Transition Zone Thickness (T1CE)"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient's age (50) makes both IDH-mutant/1p/19q codeleted and IDH-mutant/1p/19q non-codeleted gliomas possible. The tumor location involves deep structures and shows cortical involvement with deep white matter invasion and ependymal invasion. The tumor has a large edema component relative to its size and a small enhancing component with a thick margin (>3mm). The whole tumor sphericity is 0.577 and core sphericity is 0.868. These features are not strongly indicative of 1p/19q co-deletion status based on morphology alone; co-deletion is typically associated with oligodendrogliomas which often have more infiltrative growth patterns but can also present as diffuse astrocytomas. The presence of significant edema might argue against co-deletion but this is not a reliable feature.",
+    "supporting_features": [
+      "age_years",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion of Oedema",
+      "Proportion Enhancing",
+      "whole_tumor_sphericity",
+      "tumor_core_sphericity",
+      "Enhancement Quality",
+      "Tumor Location",
+      "Cortical involvement",
+      "Text Report"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The patient's age is 50 years old. The tumor involves deep structures including thalamus, caudate, putamen, pallidum, hippocampus, amygdala, ventral DC along with cortex and ventricles; it shows cortical involvement and deep white matter invasion with ependymal invasion causing left ventricular effacement and asymmetry ('Asymmetrical Ventricles': 'Present', 'Effaced Ventricle': 'Left'). Midline shift ('midline_shift_present': 'Yes') indicates mass effect or infiltration across the midline functionally if not anatomically ('crosses_ideal_midline': false for all components). The tumor has a large edema component (90.72%) relative to the core volume (9.057 mL) and total volume (97.635 mL). Enhancement is mild ('Enhancement Quality': 'Mild') but present ('Proportion Enhancing': 8.01%) with a thick margin (>3mm). These features suggest an infiltrative process with significant mass effect and edema formation characteristic of higher-grade gliomas (Grade 3 or 4). While Grade 2 gliomas can occur in adults, the combination of deep structure involvement, ependymal invasion, significant edema relative to tumor size, midline shift suggests at least Grade 3 astrocytoma or potentially Grade 4 glioblastoma if IDH-wildtype; if IDH mutant it would likely be Grade 3 astrocytoma or Grade 4 glioblastoma depending on other molecular markers not available here.",
+    "supporting_features": [
+      "age_years",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "midline_shift_present",
+      "Proportion of Oedema",
+      "`Tumor Core Volume (mL)`",
+      "Whole Tumor Volume (mL)",
+      "`Proportion Enhancing`",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Text Report",
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "IDH mutant diffuse astrocytoma WHO grade 4 or glioblastoma WHO grade 4.",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features suggest an aggressive glioma involving deep structures with significant mass effect and edema formation."
+}

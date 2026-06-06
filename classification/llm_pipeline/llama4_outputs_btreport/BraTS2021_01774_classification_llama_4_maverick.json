@@ -1,0 +1,71 @@
+{
+  "id": "patient_0118",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (49 years) and the presence of a large, necrotic tumor with significant edema and mass effect (midline shift of 2mm, edema crosses midline) are more typical of glioblastoma, which is often IDH wildtype. The tumor's location in the frontal lobe and involvement of deep white matter and ependymal invasion also suggest an aggressive tumor. While the enhancement quality is mild, the presence of necrosis and significant edema are indicative of a high-grade glioma, which is more likely to be IDH wildtype.",
+      "supporting_features": [
+        "age_years",
+        "n_slices_with_shift",
+        "mean_shift_mm",
+        "median_shift_mm",
+        "max_shift_mm",
+        "p95_shift_mm",
+        "midline_shift_present",
+        "volumes_ideal_midline",
+        "crosses_ideal_midline",
+        "primary_side_ideal_midline",
+        "volumes_patient_midline",
+        "primary_side_patient_midline",
+        "crosses_patient_midline",
+        "ED Volume (mL)",
+        "NCR Volume (mL)",
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "Region Proportions",
+        "Tumor Location"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's location in the frontal lobe and involvement of the cortex are consistent with either IDH-mutant 1p/19q codeleted or IDH-mutant non-codeleted tumors. However, the presence of significant necrosis and the large size of the tumor are less typical of 1p/19q codeleted tumors, which are often associated with oligodendrogliomas that tend to have a more indolent course. The absence of calcifications (not directly assessed but can be inferred from the lack of mention in the context of typical oligodendroglioma features) and the presence of significant necrosis argue against 1p/19q codeletion.",
+      "supporting_features": [
+        "Tumor Location",
+        "Region Proportions",
+        "Cortical involvement",
+        "NCR Volume (mL)",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Region Proportions"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of significant necrosis (Proportion Necrosis = 15.83%), large tumor size, and substantial edema with midline shift are characteristic features of glioblastoma, which is WHO grade 4. The mild enhancement quality is not typical but does not rule out glioblastoma. The tumor's aggressive features, including ependymal invasion and deep white matter invasion, further support a high-grade classification.",
+      "supporting_features": [
+        "NCR Volume (mL)",
+        "ED Volume (mL)",
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_01774"
+}

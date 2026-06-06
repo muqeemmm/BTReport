@@ -1,0 +1,42 @@
+{
+  "subject_id": "BraTS2021_00136",
+  "idh": {
+    "reasoning": "The provided metadata lacks features strongly indicative of either IDH-mutant or IDH-wildtype status. Features like age, specific location (e.g., frontal lobe preference for IDH-wildtype), or presence of necrosis/enhancement patterns are not definitive without additional information like DWI or perfusion. The tumor is solitary, involves the cortex, temporal, and occipital lobes, and shows marked enhancement with ependymal invasion. While some features like cortical involvement and ependymal invasion can be seen in both types, the lack of deep white matter invasion might slightly favor IDH-mutant, but this is weak evidence. Given the absence of strong differentiating features in the provided metadata, a prediction must be made based on general prevalence or slight tendencies. IDH-mutant gliomas are more common overall in adults. However, the marked enhancement and relatively large size (57.162 mL) could lean towards IDH-wildtype, which often presents as larger, more aggressive tumors with significant enhancement. The 'Thickness of enhancing margin' >3mm is also more typical of higher grade tumors which are more likely to be IDH-wildtype. Without definitive markers, this prediction is highly uncertain.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information regarding 1p/19q co-deletion status. This requires molecular testing, which is not reflected in the MRI metadata fields available.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features suggestive of a high grade: marked enhancement ('Enhancement Quality'), significant size ('Total tumor volume (mL)' = 57.162 mL), cortical involvement ('Cortical involvement'), and ependymal invasion ('Ependymal (ventricular) Invasion'). The 'Thickness of enhancing margin' >3mm also points towards a higher grade lesion. The presence of midline shift ('midline_shift_present': 'Yes') indicates mass effect. While deep white matter invasion is absent ('Deep WM invasion': 'Absent'), which might suggest a lower grade, the combination of marked enhancement, ependymal invasion, cortical involvement and significant size strongly favors a Grade 4 glioma (Glioblastoma). Grade 3 (Anaplastic Astrocytoma) is less likely given the marked enhancement and ependymal invasion; Grade 2 (Diffuse Astrocytoma) is highly unlikely due to these aggressive features.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

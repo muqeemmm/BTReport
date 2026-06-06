@@ -1,0 +1,68 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "midline_shift_present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the metadata favors IDH-wildtype because the patient is older and the lesion has marked contrast enhancement with a thick enhancing margin, measurable enhancing tumor, and a large edema fraction, which are imaging patterns more often seen with IDH-wildtype high-grade astrocytic glioma. Features arguing against this are cortical/frontal involvement, absent deep white-matter invasion, relatively small total tumor volume, and no midline shift, which can be encountered with IDH-mutant diffuse glioma. Overall, the age and enhancement/edema phenotype outweigh the more circumscribed cortical-frontal features, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "ED Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the available MRI metadata only weakly favors non-codeletion. Marked enhancement, thick enhancing margin, and a high edema proportion are less typical for classic lower-grade oligodendroglioma imaging, although they can occur in anaplastic oligodendroglioma. Features arguing for possible codeletion include frontal-lobe and cortical involvement, which are common in oligodendroglioma. Because calcification/SWI, diffusion, perfusion, and spectroscopy are unavailable and the frontal cortical location is a meaningful opposing feature, this is a low-certainty best estimate of non-codeletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "ED Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. Molecular testing remains required for definitive WHO CNS5 classification. The main uncertainty is 1p/19q status because frontal cortical location supports possible oligodendroglioma, while calcification-sensitive imaging, diffusion, perfusion, and spectroscopy were not available. Grade assessment is also limited by the very small reported necrotic component despite marked enhancement and edema.",
+  "subject_id": "BraTS2021_01279",
+  "who_grade": {
+    "confidence": 0.67,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently, the MRI phenotype favors grade 4 over lower grade because there is marked enhancement, a thick enhancing margin, measurable enhancing tumor, and extensive edema relative to tumor volume. These features support a high-grade malignant glioma. Features arguing against grade 4 include only minimal necrotic volume/proportion, modest total tumor volume, absent midline shift, absent ventricular asymmetry, and absent ependymal invasion, which make grade 3 a plausible alternative. On balance, the marked enhancement and edema pattern make grade 4 the best estimate, but confidence is limited by the minimal necrosis and lack of advanced imaging.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "ED Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

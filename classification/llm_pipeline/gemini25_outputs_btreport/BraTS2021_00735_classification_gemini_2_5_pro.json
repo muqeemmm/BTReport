@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_00735",
+  "idh": {
+    "reasoning": "The patient is 48 years old, an age where both IDH-mutant and IDH-wildtype gliomas are prevalent. The presence of contrast enhancement (`Enhancement Quality`: \"Mild\", `ET Volume (mL)`: 2.206) in a diffuse glioma in this age group increases the likelihood of an IDH-wildtype status. The deep location involving the putamen (`Anatomical Overlap Regions`) is also more commonly associated with IDH-wildtype tumors. A key feature arguing against IDH-wildtype is the complete absence of necrosis (`NCR Volume (mL)`: 0.0), which is a hallmark of glioblastoma. However, enhancement is a strong indicator, and on balance, the evidence leans towards an IDH-wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This assessment is performed independently of the IDH status prediction. The tumor's location in the deep temporal lobe involving the putamen and hippocampus (`Anatomical Overlap Regions`, `Tumor Location`) is less typical for oligodendroglioma (which are classically cortically-based, often frontal). Furthermore, the presence of contrast enhancement (`Enhancement Quality`: \"Mild\") and significant surrounding edema (`ED Volume (mL)`: 27.554) are features more characteristic of astrocytomas (non-codeleted) than oligodendrogliomas. There are no specific imaging features in the provided metadata to suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Tumor Location",
+      "Enhancement Quality",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The most critical feature for grading is the presence of contrast enhancement (`Enhancement Quality`: \"Mild\", `ET Volume (mL)`: 2.206). According to the WHO CNS5 classification, for an adult-type diffuse astrocytic glioma that is IDH-wildtype, the presence of contrast enhancement is a sufficient criterion to classify the tumor as Glioblastoma, CNS WHO grade 4. While the enhancement is mild and there is no necrosis (`NCR Volume (mL)`: 0.0), which would be more classic for grade 4, the presence of any enhancement strongly argues against a low-grade (grade 2) tumor and points towards a high grade. Given the high likelihood of IDH-wildtype status, grade 4 is the most probable diagnosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "A 48-year-old male with a deep left temporal lobe tumor. The presence of mild, solid enhancement without necrosis is the key imaging feature. This finding strongly suggests a high-grade glioma. In the context of an IDH-wildtype tumor, which is likely given the patient's age and the enhancement, this meets the criteria for Glioblastoma, CNS WHO grade 4. The astrocytic (non-codeleted) features include the deep location and presence of enhancement and edema."
+}

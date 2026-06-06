@@ -1,0 +1,41 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of a marked enhancement quality, a large necrotic core volume (NCR Volume = 11.773 mL), and a significant proportion of necrosis (Proportion Necrosis = 14.9%) are indicative of a more aggressive tumor, typically associated with IDH wildtype status. Additionally, the patient's age (50 years) is more typical for IDH wildtype gliomas, which are more common in older adults. The T2-FLAIR mismatch score is 0.4, which is not strongly indicative of IDH mutation (typically associated with a score closer to 1).",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of a significant necrotic core and marked enhancement suggests a more aggressive tumor type. IDH mutant gliomas with 1p/19q co-deletion typically present with more homogeneous enhancement and less necrosis compared to IDH wildtype gliomas. Given the prediction of IDH wildtype status, the likelihood of 1p/19q co-deletion is low because IDH wildtype gliomas are not typically associated with 1p/19q co-deletion.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "IDH Mutation Status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The presence of a large necrotic core (NCR Volume = 11.773 mL), marked enhancement, and significant edema (ED Volume = 36.601 mL) are characteristic features of high-grade gliomas. The proportion of necrosis (14.9%) and the presence of deep white matter invasion also support a higher grade. Given these features, a grade 4 glioma is more likely than grade 2 or 3.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0710"
+}

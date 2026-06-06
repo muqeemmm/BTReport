@@ -1,0 +1,38 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The patient's age (72 years) and the presence of a marked enhancement quality on MRI are more commonly associated with IDH wildtype gliomas. Additionally, the T2-FLAIR mismatch score is not indicative of a strong mismatch, which is a feature often associated with IDH mutant gliomas. The presence of necrosis (Proportion Necrosis: 0.48%) and the overall imaging characteristics (e.g., marked enhancement, ependymal invasion) are more typical of glioblastoma, which is more frequently IDH wildtype in this age group.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of IDH wildtype status predicted above makes 1p/19q co-deletion less likely since 1p/19q co-deletion is more commonly associated with IDH mutant gliomas. There are no direct MRI features that strongly indicate 1p/19q co-deletion status, but the overall clinical and imaging profile (e.g., age, enhancement pattern) is not typical for oligodendroglioma, which is where 1p/19q co-deletion is most commonly found.",
+    "supporting_features": [
+      "age_years",
+      "IDH Mutation Status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The presence of necrosis, marked enhancement, and significant edema, along with the patient's age and the overall tumor volume and characteristics, are highly suggestive of a high-grade glioma. The predicted IDH wildtype status further supports a diagnosis of glioblastoma, WHO grade 4, as this is the most common diagnosis in this age group with these imaging features.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "IDH Mutation Status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0388"
+}

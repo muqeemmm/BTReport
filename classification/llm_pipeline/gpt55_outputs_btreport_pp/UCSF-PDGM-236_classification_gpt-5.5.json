@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Side of Tumor Epicenter",
+      "Tumor Location"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because age_years indicates a young adult, and the lesion is nonenhancing with Enhancement Quality, ET Volume (mL), and Proportion Enhancing all showing no enhancing component. Cortical involvement and a hemispheric lobar Tumor Location are also more typical for lower-grade IDH-mutant glioma than for IDH-wildtype glioblastoma. Against this, T2-FLAIR Mismatch Present is absent, which weakens support for IDH-mutant astrocytoma specifically, and Side of Tumor Epicenter being reported as Midline with multilobar Tumor Location is not a classic highly specific IDH-mutant pattern. Overall, the balance still favors IDH mutation.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Tumor Location",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "whole_tumor_sphericity"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the strongest MRI-based support for co-deletion is cortical involvement with frontal_lobe participation in Tumor Location and Region Proportions, in a young adult by age_years, with nonenhancing behavior shown by Enhancement Quality, ET Volume (mL), and Proportion Enhancing. T2-FLAIR Mismatch Present is absent, which makes the classic IDH-mutant astrocytoma mismatch pattern unsupported and modestly favors an oligodendroglial/codeleted possibility. Against co-deletion, Tumor Location is not confined to a classic frontal cortical-subcortical site, Side of Tumor Epicenter is reported as Midline, and whole_tumor_sphericity is relatively high rather than suggesting a very infiltrative irregular oligodendroglial morphology. Because the available metadata lack more discriminating features, the prediction is only weakly in favor of co-deletion.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present",
+      "Side of Tumor Epicenter",
+      "whole_tumor_sphericity"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional MRI metadata. The lesion is described as a small, solitary, nonenhancing FLAIR/T2 abnormality without necrosis, deep white matter invasion, ependymal invasion, midline crossing, or mass effect, supporting a lower-grade adult-type diffuse glioma. The main uncertainty is molecular: 1p/19q status is only weakly inferable from these fields, and absent advanced imaging or histopathology limits confidence.",
+  "subject_id": "UCSF-PDGM-236",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Proportion of Oedema"
+    ],
+    "prediction": 2,
+    "reasoning": "For grade, the imaging metadata strongly favor CNS WHO grade 2: Enhancement Quality, ET Volume (mL), Proportion Enhancing, NCR Volume (mL), and Proportion Necrosis show no enhancement or necrosis; Total tumor volume (mL) is modest; midline_shift_present is No; Deep WM invasion, Ependymal (ventricular) Invasion, Multiple satellites present, and Multifocal or Multicentric do not show aggressive spread. Cortical involvement can be compatible with a lower-grade diffuse glioma. Against grade 2, Tumor Location is multilobar, Eloquent Brain Involvement is present, and Proportion of Oedema is high in the segmentation, which could reflect more extensive infiltrative abnormality; however, these are less specific for grade than the absence of enhancement, necrosis, and mass effect. The conclusion is grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "Cortical involvement",
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Proportion of Oedema"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

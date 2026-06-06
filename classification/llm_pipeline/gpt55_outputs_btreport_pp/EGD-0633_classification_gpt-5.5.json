@@ -1,0 +1,86 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors an IDH-wildtype diffuse glioma because the patient is older than the typical IDH-mutant presentation, with a large infiltrative tumor burden, extensive edema, midline shift/mass effect, necrotic component, deep white matter invasion, and satellite disease; these features are more typical of aggressive IDH-wildtype glioma. Absence of a T2-FLAIR mismatch also argues against the classic IDH-mutant astrocytoma imaging phenotype. Features that temper this call are the temporal/insular cortical location and only mild, very small enhancing volume, which can be seen in IDH-mutant tumors. Overall, the aggressive edema/mass-effect/necrosis/satellite pattern outweighs the partially lower-grade-appearing enhancement pattern, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessment of 1p/19q status from the provided MRI metadata favors non-codeleted tumor. The lesion is centered in temporal/insular regions rather than the classic frontal-predominant cortical-subcortical distribution often associated with oligodendroglioma, and it shows deep white matter invasion, marked edema, necrosis, mass effect, and satellite disease, which are less typical for 1p/19q-codeleted oligodendroglioma and more typical of non-codeleted diffuse glioma. Mild enhancement and cortical involvement could still be compatible with oligodendroglioma, and calcification-sensitive imaging is not available, so certainty is limited. On balance, the aggressive infiltrative and non-frontal pattern supports non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Multiple satellites present",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility/calcification assessment. The imaging phenotype is aggressive, but the enhancing component is small and described as mild, so molecular testing remains essential for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0633",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "n_components_enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "The MRI metadata strongly supports high-grade disease, most consistent with CNS WHO grade 4, because there is a sizable necrotic/non-enhancing core, very large edema burden, large total tumor volume, midline shift, deep white matter invasion, and satellite disease. These features collectively favor biologically aggressive glioma. Mild enhancement, very small enhancing volume, and an enhancing-components count of zero argue against a classic robustly enhancing grade 4 appearance and leave some uncertainty versus grade 3; however, necrosis, mass effect, and extensive edema make grade 2 unlikely and favor grade 4 over grade 3.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "n_components_enhancing"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

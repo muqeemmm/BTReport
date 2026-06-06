@@ -1,0 +1,49 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 69 years old, which is more typical for IDH-wildtype glioblastoma. Enhancement is mild, which is less common in wildtype tumors that often show strong enhancement. However, the tumor is solitary and located in insula/cortex/temporal lobes, which can occur in both types. No specific IDH-predictive features like T2-FLAIR mismatch are present.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Tumor Location",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.51,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves insula, cortex, frontal lobe, and temporal lobes. Oligodendrogliomas (IDH-mutant and 1p/19q codeleted) often occur in frontal lobes, but this tumor also involves insula and temporal lobes, which is less specific. No calcifications or other features suggestive of oligodendroglioma are reported. Given IDH-wildtype prediction, 1p/19q codeletion is unlikely.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "Confidence is low due to limited molecular predictors in MRI metadata. Histopathology required for definitive classification.",
+  "subject_id": "BraTS2021_00425",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (NCR volume 0.001mL) and enhancement (Proportion Enhancing 7.71%), with thick enhancing margin (>3mm). Total tumor volume is large (25.776mL) with significant edema (ED Volume 23.787mL). These features strongly suggest glioblastoma (WHO grade 4). Mild enhancement quality is atypical but necrosis presence overrides this.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)"
+    ]
+  }
+}

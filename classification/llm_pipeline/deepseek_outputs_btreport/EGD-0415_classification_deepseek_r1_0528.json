@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 35 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor is located in the frontal lobe, which is a common site for IDH-mutant gliomas. Enhancement is mild, which is more typical for lower-grade gliomas or IDH-mutant tumors compared to the intense enhancement often seen in IDH-wildtype glioblastoma.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is a common site for both astrocytomas and oligodendrogliomas. However, the absence of deep white matter invasion ('Deep WM invasion': 'Absent') and the cortical involvement ('Cortical involvement': 'Present') are more suggestive of astrocytoma than oligodendroglioma. Oligodendrogliomas often involve deep white matter and may have a more heterogeneous appearance, but without specific features like calcifications (which are not assessed here), the evidence for oligodendroglioma is weaker.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma without 1p/19q co-deletion. The CNS WHO grade is estimated as 2 due to the mild enhancement, low proportion of enhancement (26%), and absence of necrosis in the enhancing tumor volume (ET Volume: 0.041 mL). However, note that the 'Proportion Necrosis' field reports 61.93%, which contradicts the small ET volume; this discrepancy may indicate uncertainty in segmentation or reporting. The confidence in grading is moderate due to conflicting volume metrics.",
+  "subject_id": "EGD-0415",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows mild enhancement ('Enhancement Quality': 'Mild') and a low proportion of enhancing tissue (26%), which are features more consistent with WHO grade 2 or 3 glioma. The ET volume is very small (0.041 mL), suggesting minimal enhancement. However, the 'Proportion Necrosis' is reported as 61.93%, which is high and typically associated with grade 4 glioblastoma. Since necrosis is a key feature for grade 4, but the ET volume (where necrosis would be expected) is minimal, there is inconsistency in the data. Given the mild enhancement and small enhancing volume, grade 2 is more likely, but the high necrosis proportion lowers confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ]
+  }
+}

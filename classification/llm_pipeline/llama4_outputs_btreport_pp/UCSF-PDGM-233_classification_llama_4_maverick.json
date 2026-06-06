@@ -1,0 +1,39 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0 and 'T2-FLAIR Mismatch Score' is 0.7413396925678706, indicating a high likelihood of T2-FLAIR mismatch. This feature is strongly associated with IDH mutant gliomas. The patient's age (31 years) also supports the likelihood of an IDH mutant status as IDH mutant gliomas tend to occur in younger patients.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH mutant astrocytomas rather than oligodendrogliomas, which are more likely to have 1p/19q co-deletion. The absence of enhancement and the presence of a non-enhancing tumor also lean towards an astrocytoma. Therefore, the likelihood of 1p/19q co-deletion is low.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor is non-enhancing and has a significant edema volume (58.503 mL), but lacks features like necrosis or enhancement that are typically associated with higher grades. However, the presence of deep white matter invasion and cortical involvement suggests some level of aggressiveness. Given the IDH mutant status likely, the grade is likely to be either 2 or 3. The absence of high-grade features like enhancement or necrosis leans towards a lower grade, but the significant edema and involvement of deep structures suggest a higher grade within the IDH mutant category. Therefore, a grade of 3 is plausible.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "subject_id": "UCSF-PDGM-233"
+}

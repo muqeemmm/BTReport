@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_01485",
+  "idh": {
+    "reasoning": "The provided metadata lacks features strongly indicative of either IDH-mutant or IDH-wildtype status. Features like small size, minimal edema, and lack of midline shift are often associated with IDH-mutant tumors, but these are not present or are equivocal here. The tumor is relatively large (39.2 mL), involves eloquent areas, and has significant edema (97.89% of total volume). While some IDH-mutant tumors can be large and infiltrative, the overall picture doesn't strongly favor mutation. Conversely, features typically associated with IDH-wildtype (large size, significant edema, deep white matter invasion) are partially present (large size, significant edema), but deep WM invasion is explicitly absent. Given the lack of definitive features and the absence of sequences like DWI/ADC or MRS which would be more informative, predicting IDH status based solely on this T1/T2/FLAIR/T1-Gd data is highly uncertain. The tumor is solitary and cortical without deep WM invasion or ependymal involvement, which might slightly favor mutant status but is not conclusive.",
+    "supporting_features": [
+      "Number of lesions",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The metadata does not provide any information regarding 1p/19q co-deletion status. This requires molecular testing, which is not reflected in the provided MRI metadata fields. Therefore, a prediction cannot be made based on the available data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor involves eloquent brain regions ('Speech motor and Motor') and shows cortical involvement ('Present'). These features suggest a higher grade glioma. The tumor volume is substantial (39.2 mL) with a high proportion of edema (97.89%), which can be seen in higher grades. However, deep white matter invasion and ependymal invasion are absent, arguing against Grade 4 (GBM). The enhancement quality is described as 'Mild' with a thick enhancing margin (>3mm), which doesn't strongly point towards Grade 4 either. Given the cortical involvement and eloquent region infiltration without clear signs of deep invasion or ependymal spread, a Grade 3 diagnosis (Anaplastic Astrocytoma or Oligodendroglioma) seems most likely based on morphology alone. A Grade 2 is less likely due to eloquent involvement and size/edema proportion; Grade 4 is less likely due to absence of deep/ependymal invasion.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Eloquent Brain Involvement",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "IDH-mutant, non-codeleted, WHO Grade 3 glioma",
+  "consistency_check_passed": true,
+  "overall_comment": "The metadata suggests a solitary cortical glioma involving eloquent regions with significant edema but lacking deep white matter or ependymal invasion. This pattern is most consistent with a WHO Grade III glioma. IDH status cannot be reliably determined from the provided data alone; mutant status is assigned as a best estimate given the lack of strong wildtype features but with low confidence due to missing key information."
+}

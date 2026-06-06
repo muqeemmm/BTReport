@@ -1,0 +1,46 @@
+{
+  "subject_id": "UCSF-PDGM-504",
+  "idh": {
+    "reasoning": "The patient's age of 63 years is a strong predictor for IDH-wildtype status. The imaging phenotype is overwhelmingly consistent with an IDH-wildtype glioblastoma, characterized by marked, thick-rim enhancement, a large necrotic core (nearly 40% of the core volume), and deep anatomical structure involvement (basal ganglia). The sharp tumor boundary, suggested by a very narrow median FLAIR transition zone thickness of 0.75 mm, also favors an IDH-wildtype tumor. However, a powerful piece of contradictory evidence is the reported presence of a T2-FLAIR mismatch sign, which is highly specific for IDH-mutant astrocytomas. This creates significant conflict. Weighing the evidence, the combination of advanced age plus classic radiological features of glioblastoma (necrosis, enhancement) is more probable than a rare presentation of an IDH-mutant tumor with these aggressive features. Therefore, the prediction is IDH-wildtype, but with reduced confidence due to the conflicting T2-FLAIR mismatch sign.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is performed independently but must consider the differential diagnosis. 1p/19q co-deletion is the defining feature of oligodendroglioma, which is an IDH-mutant tumor. The imaging features in this case, particularly the marked enhancement and large proportion of necrosis, are highly atypical for oligodendroglioma, even high-grade (anaplastic) ones. Furthermore, if one considers the possibility of an IDH-mutant tumor based on the T2-FLAIR mismatch sign, this sign is specific to IDH-mutant astrocytomas, which are by definition 1p/19q non-codeleted. If the tumor is IDH-wildtype, as predicted, it is also non-codeleted by definition. Therefore, under all plausible molecular scenarios suggested by the imaging, the tumor is non-codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic core is a definitive radiological feature of a high-grade glioma. The `Proportion Necrosis` is substantial at 39.28%. In the context of an adult-type diffuse glioma, radiologically evident necrosis strongly corresponds to histopathological necrosis, which is a criterion for WHO Grade 4. This is further supported by the marked, thick-rim enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"). There are no imaging features to suggest a lower grade; the findings are unequivocally those of a high-grade malignancy.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 63-year-old female with a large, deeply situated right-sided tumor exhibiting classic imaging features of glioblastoma: extensive central necrosis and thick, marked ring enhancement. These findings strongly support a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. A significant point of uncertainty is the reported T2-FLAIR mismatch sign, which is a strong marker for IDH-mutant astrocytoma and conflicts with the other features. However, given the patient's age and the classic glioblastoma phenotype, the IDH-wildtype prediction is favored, albeit with reduced confidence."
+}

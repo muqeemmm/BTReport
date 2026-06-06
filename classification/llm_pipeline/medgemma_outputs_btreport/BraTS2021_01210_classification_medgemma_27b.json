@@ -1,0 +1,36 @@
+{
+  "subject_id": "BraTS2021_01210",
+  "idh": {
+    "reasoning": "The patient is 49 years old. Age is a significant factor in IDH mutation status, with IDH-mutant gliomas typically occurring in younger adults (median age ~45) and IDH-wildtype gliomas in older adults (median age ~70). While 49 is closer to the IDH-mutant median, it's not definitively young. The tumor is solitary, located in the parietal, cortex, and temporal lobes, and involves eloquent brain regions (vision). There is cortical involvement but no deep white matter invasion or ependymal invasion. The enhancement quality is mild with a thick (>3mm) margin. The tumor volume is 44.579 mL. None of these features strongly favor mutant over wildtype status based solely on MRI metadata without additional imaging modalities like DWI or MRS. Given the age is intermediate and other features are non-specific for IDH status, predicting mutant status carries significant uncertainty. However, statistically, IDH-mutant tumors are more common in this age group than IDH-wildtype tumors. Therefore, I lean towards mutant but acknowledge the uncertainty.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata provides no information regarding 1p/19q co-deletion status. Features like age, tumor location, enhancement pattern, or volume do not reliably predict co-deletion status. Without specific molecular testing or imaging features strongly associated with co-deletion (which are not available here), a prediction cannot be made with any certainty.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 49 years old with a solitary tumor involving the parietal cortex and temporal lobes. There is cortical involvement but no deep white matter invasion or ependymal invasion ('Deep WM invasion': 'Absent', 'Ependymal (ventricular) Invasion': 'Absent'). The tumor shows mild enhancement ('Enhancement Quality': 'Mild') with a thick margin (>3mm). The total tumor volume is 44.579 mL. These features are most consistent with a WHO Grade 2 or 3 glioma (IDH-mutant astrocytoma or oligodendroglioma). A Grade 4 glioma (glioblastoma) typically shows more aggressive features like deep white matter invasion, ependymal invasion, significant necrosis (Proportion Necrosis: 1.17% which is low), and often more prominent enhancement or crossing the midline (CET Crosses midline: 'False'). Given the absence of deep/ependymal invasion and relatively low necrosis proportion despite mild enhancement and cortical involvement, Grade 3 seems slightly more likely than Grade 2, but Grade 2 cannot be ruled out based on these features alone. A definitive grade requires molecular information (IDH status and potentially 1p/19q status). Assuming the IDH prediction of mutant is correct, this would be either Grade 2 (IDH-mutant astrocytoma) or Grade 3 (IDH-mutant anaplastic astrocytoma/oligodendroglioma). The presence of cortical involvement and mild enhancement might suggest higher grade than purely infiltrative Grade 2.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

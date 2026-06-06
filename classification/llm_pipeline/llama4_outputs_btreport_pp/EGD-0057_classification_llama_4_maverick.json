@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (51 years) and the tumor's characteristics (non-enhancing, large necrotic component) could suggest a higher grade glioma. The T2-FLAIR mismatch score is 0.6976333189955807, which is not strongly indicative of IDH mutation (typically, a score closer to 1 is more suggestive). However, the presence of a significant necrotic component (Proportion Necrosis: 67.42%) and the absence of enhancement are features that can be seen in IDH-mutant glioblastomas. The tumor's location in the frontal lobe and the absence of ependymal invasion are also noted. Given these features, the likelihood of IDH mutation is considered. However, the absence of strong T2-FLAIR mismatch and the presence of necrosis lean towards a wildtype status, but not conclusively. The age and necrosis presence are more aligned with IDH wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in the frontal lobe, which is a common location for 1p/19q codeleted tumors. However, the absence of enhancement and the presence of significant necrosis are not typical for 1p/19q codeleted tumors, which are more commonly associated with oligodendrogliomas that typically show a more indolent course. The presence of necrosis (Proportion Necrosis: 67.42%) suggests a more aggressive tumor, which is less characteristic of codeleted tumors. Therefore, based on the necrosis and lack of enhancement, codeletion is less likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The presence of a significant necrotic component (Proportion Necrosis: 67.42%) and a substantial tumor volume (Total tumor volume: 18.766 mL) are indicative of a high-grade glioma. The absence of enhancement does not rule out high grade as some glioblastomas, particularly IDH-wildtype, can be non-enhancing. The patient's age (51 years) also supports the likelihood of a higher-grade tumor. The features collectively point towards a grade 4 tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0057"
+}

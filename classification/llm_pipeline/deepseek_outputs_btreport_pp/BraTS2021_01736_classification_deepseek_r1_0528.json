@@ -1,0 +1,50 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 37 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor is solitary, midline, and involves the frontal lobe cortex, which is common in IDH-mutant tumors. Enhancement is mild, which is more typical of IDH-mutant gliomas than wildtype. Proportion necrosis is low at 10.02%, which is more consistent with IDH-mutant tumors. However, the age is not extremely young, and IDH-wildtype gliomas can occur in younger patients, reducing confidence.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is common in both oligodendrogliomas and astrocytomas. However, the tumor crosses the midline and involves deep white matter, which is more typical of astrocytomas. Oligodendrogliomas are more likely to be cortical and not cross midline. The enhancement is mild, which is more common in oligodendrogliomas, but the absence of calcifications (not assessed) and the deep white matter invasion support astrocytoma. The T2-FLAIR mismatch score is low (0.629), which is not typical for oligodendrogliomas that often show T2-FLAIR mismatch.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "overall_comment": "Based on the MRI metadata, the tumor is likely an IDH-mutant astrocytoma with CNS WHO grade 4. The presence of necrosis and enhancement suggests grade 4, despite the low proportion of necrosis. The midline location and deep white matter invasion support astrocytoma over oligodendroglioma. Confidence is moderate due to limited molecular data.",
+  "subject_id": "BraTS2021_01736",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows enhancement (Proportion Enhancing 0.28) and necrosis (Proportion Necrosis 10.02%), which are features of CNS WHO grade 4 glioblastoma. The enhancement is mild, but present. The necrosis proportion is low, which may suggest grade 3, but the presence of any necrosis is a key feature for grade 4. The tumor volume is large (32.515 mL), and there is deep white matter invasion, supporting higher grade. However, the low necrosis proportion reduces confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)",
+      "Deep WM invasion"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because age_years is very young for an adult-type diffuse glioma, and Tumor Location, Region Proportions, and Cortical involvement indicate a frontal cortical lesion, a common imaging-demographic pattern for IDH-mutant glioma. Enhancement Quality is only mild, Proportion Enhancing is extremely low, and ET Volume (mL) is negligible, which argues against the typical more avidly enhancing IDH-wildtype glioblastoma phenotype. Against IDH-mutant status, Deep WM invasion, substantial ED Volume (mL), large Total tumor volume (mL), and the reported Proportion Necrosis are more aggressive features that can be seen with IDH-wildtype tumors. Overall, the young age, frontal-cortical location, and minimal enhancement outweigh the aggressive-appearing contradicting fields, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the strongest available imaging support for co-deletion is the frontal cortical predominance shown by Tumor Location, Region Proportions, and Cortical involvement, which is a common pattern for oligodendroglioma. Enhancement Quality is mild and Proportion Enhancing is very low, which does not argue against oligodendroglioma. However, the evidence is limited because calcification-sensitive imaging is not available, and several provided fields are not specific: Deep WM invasion, sizable ED Volume (mL), large Total tumor volume (mL), and Side of Tumor Epicenter being midline are less classic for a straightforward oligodendroglial cortical-subcortical tumor and could fit non-codeleted astrocytoma. Overall, frontal cortical location provides modest support, but the absence of more specific metadata keeps confidence limited; the best estimate is 1p/19q-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The main uncertainty is 1p/19q status because calcification-sensitive imaging is unavailable, and WHO grade because enhancement is minimal while the metadata reports a high Proportion Necrosis. Molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0688",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, the lesion has several aggressive imaging features: Total tumor volume (mL) is large, ED Volume (mL) is substantial, Deep WM invasion is present, Lesion Sizes APxTVxCC (cm) shows a large mass, and Proportion Necrosis is reported as high. These features argue above a purely low-grade appearance and support grade 3 or higher. Against grade 4, Proportion Enhancing is extremely low, ET Volume (mL) is negligible, Enhancement Quality is only mild, midline_shift_present is absent, and Asymmetrical Ventricles is absent, so the classic imaging pattern of bulky enhancing necrotic glioblastoma with major mass effect is not well supported. The balance therefore favors an intermediate high-grade diffuse glioma rather than grade 2 or grade 4, making CNS WHO grade 3 the best estimate.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

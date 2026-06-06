@@ -1,0 +1,40 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (29 years) and the presence of ependymal invasion, deep white matter invasion, and cortical involvement are suggestive of a potentially aggressive tumor. However, the key to determining IDH mutation status lies in the radiological features and patient demographics. Younger age is associated with IDH mutant gliomas. The presence of a large necrotic component (Proportion Necrosis: 99.05%) typically suggests a more aggressive tumor, often associated with IDH wildtype in adult-type diffuse gliomas. However, necrosis can also be seen in IDH mutant gliomas, particularly in higher grades. The T2-FLAIR mismatch score is 0.4, which is not strongly indicative of an IDH mutant astrocytoma (typically, a score > 0.7 or a clear mismatch is expected). Given these factors, while the age suggests a potential for IDH mutation, the high necrosis proportion and lack of clear T2-FLAIR mismatch argue against it. Thus, weighing these factors, the prediction leans towards IDH wildtype due to the high necrosis proportion and absence of strong indicators for IDH mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The determination of 1p/19q co-deletion status is challenging based solely on the provided MRI metadata. However, certain features can guide the prediction. IDH mutant gliomas can be either 1p/19q codeleted (oligodendrogliomas) or non-codeleted (astrocytomas). Given the prediction of IDH wildtype status, the likelihood of 1p/19q codeletion is low because codeletion is typically associated with IDH mutant gliomas. Thus, by association and the initial prediction of IDH wildtype, the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "idh_mutation_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_who_grade": {
+    "reasoning": "The presence of a large necrotic component (Proportion Necrosis: 99.05%), significant mass effect (n_slices_with_shift: 116, max_shift_mm: 4.0), and ependymal invasion suggest a high-grade tumor. The tumor's size (Lesion Sizes APxTVxCC: 7.8 x 5.8 x 8.4 cm) and the involvement of multiple structures (parietal, cortex, occipital, and ventricles) further support this. The absence of edema (ED Volume: 0.0 mL) is unusual but not unheard of in high-grade gliomas. Given these aggressive features, the tumor is likely to be WHO Grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01531"
+}

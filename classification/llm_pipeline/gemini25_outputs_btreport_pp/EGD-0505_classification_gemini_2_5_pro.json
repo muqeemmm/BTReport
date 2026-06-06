@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0505",
+  "idh": {
+    "reasoning": "The patient's age (53 years), deep midline tumor location involving the brainstem and thalamus, and imaging phenotype of marked, thick-walled enhancement with necrosis are all classic features of an IDH-wildtype glioma, specifically glioblastoma. However, a significant contradictory feature is the reported presence of the T2-FLAIR mismatch sign, which is a highly specific marker for IDH-mutant astrocytoma. Given that deep midline gliomas in adults are overwhelmingly IDH-wildtype and the enhancement pattern is so pronounced, these features are weighed more heavily than the single, albeit specific, mismatch sign. The combination of location and enhancement provides strong evidence against an IDH-mutant tumor, leading to a prediction of IDH-wildtype, but with reduced confidence due to the conflicting data.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of non-codeletion is made with high confidence based on multiple converging lines of evidence. First, the tumor is located in the brainstem and thalamus, which is an extremely atypical location for a 1p/19q co-deleted oligodendroglioma. Second, the presence of marked enhancement and necrosis are features of high-grade astrocytic tumors or glioblastoma, not oligodendroglioma. Third, the T2-FLAIR mismatch sign, when present, is specifically associated with IDH-mutant astrocytomas, which are by definition 1p/19q non-codeleted. There are no imaging features in the provided metadata to suggest a co-deleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of marked, thick-walled contrast enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm') and necrosis ('Proportion Necrosis': 0.95) are the cardinal radiological features of a high-grade glioma, corresponding to CNS WHO grade 4. These features reflect aggressive biological processes like neovascularity, breakdown of the blood-brain barrier, and cell death. While the tumor volume and associated edema are small, this does not negate the definitive high-grade imaging characteristics. The evidence for grade 4 is therefore very strong.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents with strong, classic imaging features of a glioblastoma (deep midline location, marked enhancement, necrosis), supporting an IDH-wildtype, grade 4 diagnosis. A significant contradictory finding is the T2-FLAIR mismatch sign, which is highly specific for IDH-mutant astrocytoma. This creates notable uncertainty in the IDH prediction. However, weighing the totality of evidence, particularly the potent negative predictive value of a deep midline location for IDH mutation, the most likely diagnosis remains Glioblastoma, IDH-wildtype."
+}

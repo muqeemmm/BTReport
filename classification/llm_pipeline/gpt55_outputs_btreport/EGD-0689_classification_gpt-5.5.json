@@ -1,0 +1,90 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The imaging metadata is dominated by a large T2/FLAIR abnormality with essentially negligible enhancing and necrotic components, with only mild enhancement. That pattern supports an IDH-mutant diffuse glioma more than an IDH-wildtype glioblastoma pattern, which more often has substantial enhancement, necrosis, deep white-matter invasion, midline crossing, or marked mass effect. Cortical temporal involvement, solitary disease, absent deep white-matter invasion, absent ependymal invasion, and no midline crossing also support a more circumscribed IDH-mutant phenotype. The main opposing evidence is the large overall FLAIR/edema burden and ventricular/temporal involvement, which are nonspecific and can occur in aggressive IDH-wildtype tumors. Overall, the balance favors IDH-mutant status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Number of lesions",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "crosses_patient_midline",
+      "Tumor Location",
+      "Region Proportions",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the strongest location signal is temporal predominance with ventricular involvement rather than a clearly frontal cortical-subcortical pattern, which leans away from classic oligodendroglioma and toward a non-codeleted astrocytic diffuse glioma. The large predominantly nonenhancing T2/FLAIR abnormality is also compatible with a non-codeleted astrocytic tumor. However, cortical involvement and mild, very limited enhancement can be seen in oligodendroglioma, so these features argue against a confident non-codeleted call. Overall, the available metadata weakly favors non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the provided structured MRI metadata. The 1p/19q call is the least certain because the available fields lack several morphology details that often help distinguish oligodendroglioma from astrocytoma. There is also a laterality discrepancy: the text/anatomical fields describe a left temporal lesion, while some volumetric midline fields assign components to the right; this does not materially change the molecular estimates but should be reconciled clinically.",
+  "subject_id": "EGD-0689",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade, the most important MRI signals are the near-absence of enhancing tumor and necrosis, only mild enhancement, no midline shift, no deep white-matter invasion, no ependymal invasion, solitary disease, and no satellites. These features favor a lower-grade diffuse glioma and argue against CNS WHO grade 4, which would typically show more substantial enhancement, necrosis, invasion, multifocality, or mass effect. Grade 3 remains possible because the total FLAIR/edema volume is large and there is a small enhancing/noncontrast component with a reported enhancing-margin thickness, but the enhancing and necrotic proportions are extremely low. Overall, the imaging balance favors CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Number of lesions",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

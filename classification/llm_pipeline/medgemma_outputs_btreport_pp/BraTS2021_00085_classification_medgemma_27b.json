@@ -1,0 +1,59 @@
+{
+  "subject_id": "BraTS2021_00085",
+  "idh": {
+    "reasoning": "The patient is 41 years old. Age < 50 is associated with IDH-mutant gliomas, but this is not definitive. The tumor is solitary and located in the parietal cortex, crossing the midline with edema. The tumor has deep white matter invasion and cortical involvement. The enhancement quality is mild, and the enhancing margin thickness is >3mm. The tumor core volume (1.877 mL) and whole tumor volume (77.385 mL) are relatively large for an IDH-mutant glioma, but not impossible. The T2-FLAIR mismatch score is low (0.4), which can be seen in both IDH-mutant and wildtype tumors, but often higher scores are seen in IDH-wildtype tumors. Given the age, solitary nature, and lack of features strongly suggestive of IDH-wildtype (like very rapid growth or specific imaging patterns not available here), IDH-mutant is slightly more likely, but the evidence is weak.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Tumor Location",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "Tumor Core Volume (mL)",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 41 years old, which makes IDH-mutant status more likely, and IDH-mutant gliomas are typically associated with 1p/19q co-deletion. However, the tumor shows deep white matter invasion and cortical involvement, which can be seen in both codeleted and non-codeleted IDH-mutant gliomas. The tumor size (77.385 mL) is relatively large for a codeleted glioma, which are often smaller (<5cm). The enhancement quality is mild with a thick margin (>3mm), which doesn't strongly favor either status. Without molecular data or specific imaging features like extensive calcification or hemorrhage (not assessed), predicting co-deletion status based solely on these MRI features is highly uncertain.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 41 years old with a solitary glioma showing deep white matter invasion and cortical involvement. The edema crosses the midline ('Edema crosses midline': 'True'). The enhancement quality is mild ('Mild') with a thick margin (>3mm). These features suggest a relatively aggressive tumor. Deep white matter invasion and cortical involvement are characteristic of Grade 3 or 4 gliomas. Midline crossing edema also points towards higher grade disease. While the age favors lower grade initially, the combination of deep invasion, cortical involvement, and midline crossing edema strongly suggests a high-grade glioma (Grade 4). Grade 2 astrocytomas typically lack significant deep invasion or cortical involvement and rarely cross the midline with edema.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Edema crosses midline",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "IDH mutant diffuse astrocytoma WHO grade unknown",
+  "consistency_check_passed": true,
+  "overall_comment": "The provided metadata suggests an IDH mutant glioma given the patient's age and solitary nature of the lesion. However, the tumor size and presence of deep white matter invasion raise concern for higher grade disease than typically associated with co-deleted gliomas, making non-codeleted status slightly more probable but uncertain without molecular data. The combination of deep white matter invasion, cortical involvement, and midline crossing edema strongly points towards WHO Grade IV."
+}

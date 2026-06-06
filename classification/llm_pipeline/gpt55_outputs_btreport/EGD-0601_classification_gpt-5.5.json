@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the metadata favor IDH-wildtype because Proportion Necrosis is present at 10.13 with NCR Volume (mL) 7.254, there is an enhancing component by ET Volume (mL) 1.151 with Thickness of enhancing margin >3mm, and there is extensive edema by ED Volume (mL) 63.214 and Proportion of Oedema 88.26 together with Deep WM invasion present. These features support a more aggressive infiltrative phenotype. Arguing against IDH-wildtype, Tumor Location is frontal_lobe-cortex, Cortical involvement is present, Region Proportions are predominantly frontal_lobe and cortex, and Enhancement Quality is only mild, which can fit IDH-mutant glioma. Overall, the necrotic, edematous, enhancing, deep-infiltrative pattern outweighs the frontal cortical and mild-enhancement features.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the imaging evidence modestly favors non-codeletion because Proportion Necrosis is present, NCR Volume (mL) is 7.254, ED Volume (mL) and Proportion of Oedema show a large edematous component, Deep WM invasion is present, and ET Volume (mL) with Thickness of enhancing margin indicates an enhancing component. These features are less typical for a classic 1p/19q-codeleted oligodendroglial pattern. Arguing for possible codeletion, Tumor Location is frontal_lobe-cortex, Cortical involvement is present, Region Proportions are strongly frontal/cortical, and Enhancement Quality is mild, all of which can be seen in oligodendroglioma. Because the provided MRI metadata lack more specific oligodendroglial markers, the call remains only slightly weighted toward non-codeleted.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the structured pre-operative MRI metadata. The main uncertainty is that age, histology, and molecular testing are not provided, and the enhancement is small and mild despite necrosis and extensive edema.",
+  "subject_id": "EGD-0601",
+  "who_grade": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently, grade 4 is favored because Proportion Necrosis is 10.13 with NCR Volume (mL) 7.254, there is an enhancing component by ET Volume (mL) 1.151, Thickness of enhancing margin is >3mm, and there is extensive edema by ED Volume (mL) 63.214 and Proportion of Oedema 88.26 with Deep WM invasion present. Necrosis plus enhancement and substantial edema favor the highest-grade category over grade 2 or grade 3. Arguing against grade 4, Enhancement Quality is mild, ET Volume (mL) is small, Proportion Enhancing is only 1.61, midline_shift_present is Minimal, Edema crosses midline is False, and Ependymal (ventricular) Invasion is Absent. Despite these less aggressive features, necrosis and enhancing infiltrative disease make grade 4 the best estimate.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

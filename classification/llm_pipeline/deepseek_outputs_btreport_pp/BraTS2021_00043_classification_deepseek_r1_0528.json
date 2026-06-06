@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 32 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor involves temporal, cortex, and insula lobes, which are common locations for IDH-mutant gliomas. The T2-FLAIR mismatch sign is present with a high score (0.93), which is highly specific for IDH-mutant astrocytoma. Enhancement is mild, which is more common in IDH-mutant tumors. However, the age is borderline, as IDH-wildtype gliomas can occur in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.9,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "The T2-FLAIR mismatch sign is present, which is highly specific for IDH-mutant astrocytomas that are 1p/19q non-codeleted. The tumor involves deep white matter and cortex, which is more typical of astrocytomas than oligodendrogliomas. Oligodendrogliomas often have frontal lobe predilection and calcifications, but calcifications are not assessed here. No features suggest oligodendroglioma morphology.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Deep WM invasion",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "The tumor is IDH-mutant, 1p/19q non-codeleted astrocytoma. Despite the young age, molecular features strongly support IDH-mutant status. The presence of necrosis (7.38%) and enhancement suggests high-grade features. The WHO grade is 4 due to necrosis and microvascular proliferation implied by thick enhancing rim.",
+  "subject_id": "BraTS2021_00043",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "reasoning": "Necrosis is present (7.38% of total tumor volume), which is a criterion for CNS WHO grade 4 in IDH-mutant astrocytomas. Enhancement is present (mild) with a thick rim (>3mm), suggesting microvascular proliferation. The tumor volume is large (98.585 mL), and there is deep white matter invasion. However, the patient is young (32 years), and grade 4 is less common at this age, but molecular features override age considerations.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "Deep WM invasion"
+    ]
+  }
+}

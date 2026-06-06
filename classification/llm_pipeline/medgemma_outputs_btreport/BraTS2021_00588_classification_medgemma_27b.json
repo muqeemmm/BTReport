@@ -1,0 +1,38 @@
+{
+  "subject_id": "BraTS2021_00588",
+  "idh": {
+    "reasoning": "The provided metadata lacks features strongly indicative of either IDH-mutant or IDH-wildtype status. Features like age, specific location (e.g., frontal lobe preference for IDH-wildtype), or presence of necrosis/enhancement patterns are not definitive without additional information like DWI or perfusion. The tumor is multifocal, involves deep white matter and ependyma, and has a relatively large volume (95.788 mL), which can be seen in both types, although larger volumes are more common in IDH-wildtype. The proportion of necrosis (0.22) and enhancement (6.2) are relatively low, which might slightly favor IDH-mutant, but this is not a strong indicator. Given the lack of distinguishing features in the provided metadata, a prediction is difficult. I will default to mutant as it is more common overall in adults, but with low confidence.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The metadata does not contain any information related to 1p/19q co-deletion status. Features like age (often older in 1p/19q co-deleted tumors), specific location (often frontal lobe), or morphology are absent or non-specific here. Therefore, no prediction can be made based on the provided data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features suggestive of a higher grade glioma. It is multifocal, involves deep white matter ('Deep WM invasion': 'Present'), shows ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), and has cortical involvement ('Cortical involvement': 'Present'). The presence of midline shift ('midline_shift_present': 'Yes') and ventricular effacement ('Effaced Ventricle': 'Left') indicates significant mass effect. While the enhancement is described as 'Mild' and the proportion enhancing is low (6.2%), the combination of deep invasion, ependymal spread, cortical involvement, and multifocality points towards at least Grade 3 or 4. Given the deep white matter and ependymal invasion, Grade 4 is a strong possibility, especially if associated with IDH mutation (which I predicted with low confidence). However, without definitive molecular markers or imaging features like significant necrosis or hemorrhage (not mentioned), distinguishing between Grade 3 and Grade 4 based solely on these structural MRI features is challenging. The presence of multiple lesions ('Multifocal or Multicentric': 'Multifocal', 'Number of lesions': 2) also often correlates with higher grades.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-mutant, WHO grade unknown",
+  "consistency_check_passed": true,
+  "overall_comment": "The provided metadata suggests a diffuse glioma with features potentially consistent with higher grades (deep invasion, ependymal spread). However, the lack of definitive molecular markers or specific imaging characteristics makes precise grading difficult based solely on this structural data."
+}

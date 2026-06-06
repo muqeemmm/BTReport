@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_01072",
+  "idh": {
+    "reasoning": "The patient is 61 years old. Older age (>55) is associated with IDH-wildtype gliomas, while younger age is associated with IDH-mutant gliomas. The tumor is large (Total tumor volume 112.601 mL), solitary, and located in the frontal lobe with cortical involvement and deep white matter invasion. These features are more common in IDH-wildtype tumors, particularly glioblastoma (WHO grade 4). While IDH mutation status cannot be definitively determined from MRI alone, the patient's age and tumor characteristics lean towards IDH-wildtype. There are no specific MRI features strongly suggesting IDH-mutant status (e.g., smaller size, less aggressive appearance).",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information regarding 1p/19q co-deletion status. This requires molecular testing, which is not available from the MRI metadata alone. Therefore, a prediction cannot be made based on the given information.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 61 years old, and the tumor exhibits several features suggestive of high grade: large size (Total tumor volume 112.601 mL), midline shift ('midline_shift_present': 'Yes'), crossing of the ideal midline ('crosses_ideal_midline': true for ncr, ed, et, ncr_et), marked enhancement ('Enhancement Quality': 'Marked'), presence of necrosis ('Proportion Necrosis': 34.29), deep white matter invasion ('Deep WM invasion': 'Present'), ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), cortical involvement ('Cortical involvement': 'Present'), and ventricular effacement/asymmetry ('Effaced Ventricle': 'Left', 'Asymmetrical Ventricles': 'Present', 'Enlarged Ventricles': 'Right'). The combination of older age and these aggressive radiological features strongly points towards a WHO grade 4 glioma (glioblastoma). While grade 3 astrocytoma is possible, the extensive infiltration and necrosis favor grade 4. Grade 2 glioma is highly unlikely given the size, enhancement, necrosis, and infiltrative nature.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "crosses_ideal_midline",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH-wildtype, non-codeleted diffuse astrocytoma WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult (61 years) presenting with a large midline glioma involving the frontal lobe cortex and insula with significant mass effect (midline shift), edema crossing the midline, ependymal invasion, deep white matter invasion, marked enhancement with necrosis, and ventricular asymmetry/effacement. These features are highly suggestive of a high-grade glioma. Given the age and aggressive radiological characteristics including large size (>5cm), necrosis (>30%), midline shift, edema crossing midline and deep/ependymal invasion, an IDH-wildtype glioblastoma (WHO grade IV) is the most likely diagnosis based on imaging alone."
+}

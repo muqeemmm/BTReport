@@ -1,0 +1,68 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Tumor Location",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The strongest metadata-based evidence favors IDH-wildtype disease: age_years is 66, which is more typical for IDH-wildtype diffuse glioma than IDH-mutant diffuse glioma, and the lesion has measurable enhancement with ET Volume (mL), Proportion Enhancing, and a large Proportion of Oedema, a pattern more often associated with aggressive IDH-wildtype tumors. Features arguing against a confident wildtype call include Cortical involvement and Tumor Location in the temporal-cortex region, because cortical-based lower-grade IDH-mutant gliomas can present this way, and Enhancement Quality is only mild rather than frankly aggressive. Overall, the age and enhancing/edematous phenotype outweigh the cortical mild-enhancement counterfeatures, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.69,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status assessed independently, the metadata favors non-codeletion: age_years is 66, Tumor Location is temporal-cortex rather than a classic frontal cortical-subcortical predominance, and the lesion has measurable enhancement and substantial edema by ET Volume (mL), Proportion Enhancing, ED Volume (mL), and Proportion of Oedema, which is less typical for a classic oligodendroglioma imaging phenotype. Counterevidence is that Cortical involvement is present and Enhancement Quality is mild, both of which can be seen in oligodendroglioma, and the available metadata lacks calcification-sensitive imaging. On balance, the non-frontal temporal location, older age, enhancement, and edema favor non-codeleted status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility/calcification assessment. There is some uncertainty because enhancement is mild and necrosis is minimal, and the metadata contains laterality discordance between Anatomical Overlap Regions and volumetric side fields; this does not materially change the molecular estimate but should be checked against the source images/report.",
+  "subject_id": "EGD-0447",
+  "who_grade": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade assessed independently from molecular predictions, the lesion shows high-grade imaging features: there is measurable enhancing tumor by ET Volume (mL) and Proportion Enhancing, a thick enhancing margin by Thickness of enhancing margin, and extensive associated edema by ED Volume (mL) and Proportion of Oedema. These support grade 4 over grade 2 and make at least high-grade glioma likely. Features arguing against a strong grade 4 call are Enhancement Quality being mild, very low necrotic burden by Proportion Necrosis and NCR Volume (mL), relatively small Total tumor volume (mL), no midline shift by midline_shift_present, and solitary disease without satellites by Multifocal or Multicentric and Multiple satellites present. Despite these mitigating features, the combination of enhancement, thick enhancing margin, and large edema burden makes grade 4 the best MRI-based estimate, with only moderate confidence.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "age_years"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

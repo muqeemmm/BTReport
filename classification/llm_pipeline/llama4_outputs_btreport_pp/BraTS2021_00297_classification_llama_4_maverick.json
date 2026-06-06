@@ -1,0 +1,49 @@
+{
+  "id": "patient_0811",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (65 years) and the presence of a large, enhancing, necrotic tumor with significant mass effect (midline shift, ventricular asymmetry, and ependymal invasion) are more typical of IDH-wildtype glioblastoma. The absence of T2-FLAIR mismatch (score 0.4, degree 0.43) also argues against IDH-mutant astrocytoma, as T2-FLAIR mismatch is a characteristic feature of IDH-mutant, 1p/19q non-codeleted gliomas. The marked enhancement and necrosis further support a more aggressive, typically IDH-wildtype tumor.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "T2-FLAIR Mismatch Score",
+        "T2-FLAIR Mismatch Degree"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of a large, solitary, enhancing tumor with necrosis and significant mass effect, along with the patient's age, is more typical of glioblastoma, which is usually IDH-wildtype and 1p/19q non-codeleted. The absence of T2-FLAIR mismatch also makes 1p/19q codeletion less likely, as codeleted tumors often show this feature. The clinical and radiological profile does not strongly suggest an oligodendroglioma, which is typically associated with 1p/19q codeletion.",
+      "supporting_features": [
+        "age_years",
+        "Number of lesions",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "T2-FLAIR Mismatch Score"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor's large size, marked enhancement, significant necrosis (31.53%), and substantial mass effect (midline shift, ventricular asymmetry) are characteristic of a high-grade glioma. The presence of ependymal invasion and cortical involvement further supports an aggressive tumor. These features are most consistent with WHO grade 4 glioblastoma, IDH-wildtype, given the patient's age and the radiological findings.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00297"
+}

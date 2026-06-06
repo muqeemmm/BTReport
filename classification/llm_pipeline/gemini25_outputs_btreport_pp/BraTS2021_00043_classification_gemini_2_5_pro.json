@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_00043",
+  "idh": {
+    "reasoning": "The patient's young age (32 years) is a strong demographic predictor for an IDH-mutant glioma. The most compelling imaging evidence is the definitive presence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.926), which is highly specific for IDH-mutant astrocytomas. Insular involvement also favors an IDH-mutant status. These features are weighed against findings more typical of IDH-wildtype tumors, such as significant contrast enhancement ('ET Volume (mL)': 11.259) and necrosis ('NCR Volume (mL)': 7.276). However, the high specificity of the T2-FLAIR mismatch sign, especially in a young patient, outweighs the contradictory high-grade features, leading to a prediction of IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is heavily influenced by the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0). This sign is a specific marker for IDH-mutant astrocytomas, which are, by definition, 1p/19q non-codeleted. The presence of necrosis ('NCR Volume (mL)' > 0) and deep gray matter involvement ('Anatomical Overlap Regions' including thalamus and putamen) are also more characteristic of astrocytic tumors than oligodendrogliomas. A contradictory feature is the very sharp tumor boundary ('Transition Zone Thickness (FLAIR)' median_mm: 0.75), which is more classic for oligodendrogliomas (1p/19q co-deleted). However, the T2-FLAIR mismatch sign is a much stronger and more specific biomarker, making a non-codeleted status most likely.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "NCR Volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The WHO grade is determined by the most aggressive radiological features present. This tumor demonstrates both significant contrast enhancement ('ET Volume (mL)': 11.259) and central necrosis ('NCR Volume (mL)': 7.276). The presence of both of these features, particularly necrosis, are the radiological hallmarks of a WHO grade 4 glioma. The significant mass effect ('max_shift_mm': 8.0) and thick enhancing margin ('>3mm') further support a high-grade assessment. While the 'Enhancement Quality' is described as 'Mild', this is a subjective term that is outweighed by the quantitative evidence of substantial enhancing and necrotic tissue volumes. The findings are inconsistent with a grade 2 (non-enhancing) or grade 3 (enhancing but typically non-necrotic) tumor.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This 32-year-old patient presents with a large left temporal-insular tumor with conflicting imaging features. The definitive T2-FLAIR mismatch sign strongly indicates an IDH-mutant, 1p/19q non-codeleted astrocytoma. However, the tumor also exhibits aggressive features, including significant enhancement, necrosis, and mass effect, which are radiologically consistent with WHO grade 4. The integrated diagnosis is therefore an Astrocytoma, IDH-mutant, CNS WHO grade 4. This represents a case where a genetically lower-grade tumor type presents with high-grade radiological and histological features."
+}

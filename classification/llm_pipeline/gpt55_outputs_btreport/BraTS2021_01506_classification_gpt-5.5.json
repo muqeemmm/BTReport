@@ -1,0 +1,80 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the strongest IDH-mutant-leaning metadata are age_years of 43, Tumor Location in a frontal_lobe-cortex region, Region Proportions dominated by frontal_lobe and cortex, and relatively limited enhancement described by Enhancement Quality as mild with low Proportion Enhancing. These features fit the common imaging-demographic pattern of an IDH-mutant diffuse glioma. Against IDH mutation, Proportion Necrosis is substantial, Proportion of Oedema and ED Volume (mL) are large, Edema crosses midline and CET Crosses midline are true, Multiple satellites present is present, Ependymal (ventricular) Invasion and Deep WM invasion are present, and midline_shift_present with max_shift_mm indicates mass effect; these aggressive infiltrative features can favor IDH-wildtype glioblastoma. Weighing the younger age, frontal cortical predominance, and mild/low-volume enhancement against the high-grade invasive behavior, the balance slightly favors IDH-mutant, but with substantial uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.77,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the metadata supporting non-codeletion include Deep WM invasion, Ependymal (ventricular) Invasion, Multiple satellites present, Edema crosses midline, CET Crosses midline, large ED Volume (mL), high Proportion of Oedema, substantial Proportion Necrosis, and midline_shift_present. This degree of deep infiltrative spread, ventricular involvement, satellite disease, edema, necrosis, and mass effect is more typical of astrocytic/glioblastoma biology than classic oligodendroglioma. The main codeletion-leaning features are Tumor Location and Region Proportions showing frontal cortical predominance, age_years of 43, and mild/low-volume enhancement from Enhancement Quality and Proportion Enhancing, which can be seen in oligodendroglioma. However, the aggressive infiltrative and necrotic pattern outweighs the frontal cortical location, so non-codeletion is favored.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "midline_shift_present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, susceptibility, or histology. The IDH call is the least certain because younger age, frontal cortical location, and mild low-volume enhancement conflict with necrosis, extensive edema, midline crossing, satellites, and ventricular/deep white matter invasion. Molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "BraTS2021_01506",
+  "who_grade": {
+    "confidence": 0.89,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the metadata strongly support grade 4 behavior: Proportion Necrosis is substantial, NCR Volume (mL) is large, ED Volume (mL) and Proportion of Oedema are high, Total tumor volume (mL) is large, Lesion Sizes APxTVxCC (cm) shows a large lesion, midline_shift_present with max_shift_mm indicates mass effect, CET Crosses midline and Edema crosses midline indicate extensive spread, and Ependymal (ventricular) Invasion, Deep WM invasion, and Multiple satellites present indicate aggressive infiltrative disease. These findings argue much more for grade 4 than grade 2 or grade 3. The main lower-grade counterpoints are Enhancement Quality described as mild and low Proportion Enhancing, but these do not offset the necrosis, edema, mass effect, and invasive pattern. Therefore the best estimate is CNS WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

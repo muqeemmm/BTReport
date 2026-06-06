@@ -1,0 +1,42 @@
+{
+  "subject_id": "EGD-0564",
+  "idh": {
+    "reasoning": "The evidence for IDH status is highly conflicting. The strongest feature supporting an IDH-mutant status is the definitive presence of the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0), which is highly specific for IDH-mutant astrocytomas. The patient's age of 45 is also more typical for IDH-mutant gliomas. Conversely, the tumor's location in the brainstem (`Tumor Location`: \"brainstem\") is a very strong predictor of IDH-wildtype status, as midline gliomas in adults are often H3 K27-altered and thus IDH-wildtype. Furthermore, the high proportion of necrosis (`Proportion Necrosis`: 0.84) is more characteristic of aggressive, IDH-wildtype tumors like glioblastoma. Given the very high specificity of the T2-FLAIR mismatch sign for molecular status, I will cautiously predict IDH-mutant, but the contradictory features significantly lower the confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q status is primarily driven by the `T2-FLAIR Mismatch Present` value of 1.0. The T2-FLAIR mismatch sign is a well-established imaging biomarker for astrocytic lineage tumors (1p/19q non-codeleted) and is characteristically absent in oligodendrogliomas (1p/19q codeleted). The brainstem location is also atypical for oligodendrogliomas, which predominantly occur in the cerebral hemispheres. There are no significant features in the provided metadata to suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The key feature for grading this tumor is the extremely high proportion of necrosis (`Proportion Necrosis`: 0.84). The presence of necrosis is a hallmark of high-grade glioma and is a defining criterion for CNS WHO grade 4 in adult-type diffuse gliomas. While the enhancement is described as mild (`Enhancement Quality`: \"Mild\"), any contrast enhancement typically excludes a grade 2 diagnosis. The brainstem location is also associated with biologically aggressive tumors. Although the T2-FLAIR mismatch sign is more commonly seen in lower-grade (2 or 3) gliomas, the definitive imaging evidence of necrosis strongly compels a grade 4 classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a complex case with conflicting radiological features. The T2-FLAIR mismatch sign strongly suggests an IDH-mutant astrocytoma. However, the brainstem location and high proportion of necrosis are features of a high-grade, aggressive tumor, with the location being more typical for an IDH-wildtype glioma. The final integrated prediction of 'Astrocytoma, IDH-mutant, CNS WHO grade 4' reconciles these findings, as necrosis is a criterion for grade 4 in IDH-mutant astrocytomas. The confidence in the IDH status is low due to these significant contradictions."
+}

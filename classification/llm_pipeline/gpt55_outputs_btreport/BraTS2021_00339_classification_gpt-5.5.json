@@ -1,0 +1,69 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors IDH-wildtype status because age_years is 66, and older age is a strong clinical correlate of IDH-wildtype diffuse glioma. The tumor also shows substantial infiltrative/peritumoral abnormality and enhancement, with ED Volume (mL), Proportion of Oedema, ET Volume (mL), Proportion Enhancing, Deep WM invasion, and Thickness of enhancing margin supporting a more aggressive IDH-wildtype phenotype. Evidence against IDH-wildtype includes Cortical involvement and a parietal/frontal cortical Tumor Location, which can be seen in IDH-mutant gliomas, and Enhancement Quality is only mild with very low Proportion Necrosis, which is less definitive for glioblastoma-like biology. Overall, the age and enhancing infiltrative phenotype outweigh these counterfeatures, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Deep WM invasion",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessed independently, the metadata favors 1p/19q non-codeletion because the lesion is predominantly parietal with deep white matter invasion and a relatively aggressive enhancing/edematous pattern, reflected by Tumor Location, Region Proportions, Deep WM invasion, ED Volume (mL), Proportion of Oedema, ET Volume (mL), and Thickness of enhancing margin. These findings are less typical for classic oligodendroglioma, which more often has a frontal cortical-subcortical predilection. Evidence supporting possible codeletion is that Cortical involvement is present and Tumor Location includes frontal_lobe, with Region Proportions showing some frontal component, so an oligodendroglial tumor cannot be excluded from metadata alone. On balance, the non-frontal-predominant location and aggressive enhancing/edematous features favor non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, or histomolecular testing. The low necrosis proportion and mild enhancement create some uncertainty, but the older age and enhancing, edematous, deep-infiltrative phenotype support an IDH-wildtype grade 4 integrated call.",
+  "subject_id": "BraTS2021_00339",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "Assessed independently for grade, the metadata favors CNS WHO grade 4 because there is a measurable enhancing component and very large edema burden, with ET Volume (mL), Proportion Enhancing, ED Volume (mL), Proportion of Oedema, Deep WM invasion, and Thickness of enhancing margin supporting high-grade biology. age_years also supports an aggressive adult diffuse glioma presentation. Features arguing against a confident grade 4 call include Enhancement Quality being only mild, Proportion Necrosis and NCR Volume (mL) being very low, midline_shift_present being absent, and the tumor being solitary without satellites by Multifocal or Multicentric and Multiple satellites present. These counterfeatures leave grade 3 in the differential, but the enhancing, thick-margin, markedly edematous, deep-infiltrative phenotype is most consistent with grade 4.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Thickness of enhancing margin",
+      "age_years"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

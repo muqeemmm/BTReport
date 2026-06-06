@@ -1,0 +1,45 @@
+{
+  "subject_id": "EGD-0187",
+  "idh": {
+    "reasoning": "The tumor is completely non-enhancing and non-necrotic, which are classic features of IDH-mutant gliomas. The location in the temporal lobe with cortical involvement is also common for IDH-mutant astrocytomas. There are no features, such as ring enhancement or extensive necrosis, to suggest an IDH-wildtype tumor (glioblastoma). Therefore, an IDH-mutant status is strongly favored.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The primary feature distinguishing between IDH-mutant astrocytoma (non-codeleted) and oligodendroglioma (codeleted) in this case is the location. The tumor's epicenter is in the temporal lobe. Oligodendrogliomas have a strong predilection for the frontal lobes, whereas temporal lobe involvement is more characteristic of astrocytomas. While other features like cortical involvement and lack of enhancement can be seen in both, the location is the strongest differentiator available in the provided metadata.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The tumor lacks all imaging hallmarks of high-grade glioma. Specifically, there is no contrast enhancement and no necrosis. According to the WHO CNS5 classification, the presence of contrast enhancement is a common correlate of microvascular proliferation, and necrosis is a key feature for grade 4. Their absence, combined with the small tumor volume and minimal mass effect, strongly supports a WHO grade 2 diagnosis. There is no imaging evidence to suggest a grade 3 or 4 tumor.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI metadata describes a small, solitary, non-enhancing, non-necrotic tumor in the right temporal lobe with cortical involvement. These features are highly characteristic of a low-grade glioma. The temporal location strongly favors an astrocytic lineage (IDH-mutant, 1p/19q non-codeleted) over an oligodendroglial one. The complete absence of aggressive imaging features makes a CNS WHO grade 2 diagnosis most likely. The combined predictions are internally consistent."
+}

@@ -1,20 +1,26 @@
-import trimesh, ants
+from __future__ import annotations
+
+import trimesh
 import numpy as np
 import pandas as pd
 import time
 import os, logging
 from typing import Tuple
 from skimage import measure
-from vasari_features.vasari_auto_v2 import NiftiImage
+from ..vasari_features.vasari_auto_v2 import NiftiImage
 from scipy.ndimage import (
     label,
     binary_dilation,
     binary_erosion,
+    binary_closing,
     generate_binary_structure,
     distance_transform_edt,
-    map_coordinates,
 )
 import attrs
+from .transition_zone_thickness import (
+    transition_zone_thickness_distance_transform,
+    transition_zone_thickness_raycast,
+)
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)
@@ -77,15 +83,30 @@ def compute_sphericity(seg_path: str) -> float:
 
 # ---------------------------------------------------------------------------------------------- #
 
-def _robust_zscore(x: np.ndarray, mask: np.ndarray | None = None, clip=(1, 99), eps=1e-8) -> np.ndarray:
-    """Robust intensity normalization: percentile clip + median/MAD scaling."""
+def _robust_zscore(
+    x: np.ndarray,
+    mask: np.ndarray | None = None,
+    clip: tuple[float, float] | None = (1, 99),
+    eps: float = 1e-8,
+) -> np.ndarray:
+    """
+    Robust intensity normalization: optional percentile clip + median/MAD scaling.
+
+    Pass ``clip=None`` to skip percentile clipping (useful when downstream code
+    needs to preserve the high-intensity tail, e.g. for gradient computations
+    across sharp tissue boundaries where clipping would compress the very
+    contrast we want to measure).
+    """
     if mask is None:
         mask = np.isfinite(x)
     vals = x[mask]
     if vals.size == 0:
         return x.astype(np.float32)
-    lo, hi = np.percentile(vals, clip)
-    xc = np.clip(x, lo, hi)
+    if clip is not None:
+        lo, hi = np.percentile(vals, clip)
+        xc = np.clip(x, lo, hi)
+    else:
+        xc = x
     med = np.median(xc[mask])
     mad = np.median(np.abs(xc[mask] - med))
     scale = 1.4826 * mad + eps
@@ -156,60 +177,175 @@ def compute_rim_core_adjacency(
         "adjacency_fraction": float(num / (denom + 1e-9)),
     }
 
+def _empty_boundary_sharpness_result(
+    shell_mm: tuple[float, float],
+    reason: str,
+) -> dict:
+    """Standardized return dict for boundary-sharpness failure modes (keeps the
+    schema stable so downstream DataFrame aggregation never hits KeyError)."""
+    return {
+        "boundary_sharpness": float("nan"),
+        "boundary_grad_median": float("nan"),
+        "boundary_grad_p90": float("nan"),
+        "boundary_grad_iqr": float("nan"),
+        "peritumoral_shell_grad_median": float("nan"),
+        "peritumoral_shell_grad_p90": float("nan"),
+        "n_boundary_vox": 0,
+        "n_shell_vox": 0,
+        "shell_mm": (float(shell_mm[0]), float(shell_mm[1])),
+        "reason": reason,
+    }
+
+
 def compute_boundary_sharpness(
     intensity: np.ndarray,
     tumor_mask: np.ndarray,
     *,
     spacing_mm: tuple[float, float, float] = (1.0, 1.0, 1.0),
     brain_mask: np.ndarray | None = None,
-    connectivity: int = 2,
+    connectivity: int = 1,
     shell_mm: tuple[float, float] = (2.0, 5.0),
+    normalize: bool = True,
+    shell_grad_floor: float = 1e-6,
 ) -> dict:
     """
-    Boundary sharpness from intensity gradient magnitude at the tumor boundary,
-    normalized by gradient magnitude in a peritumoral shell (reduces sensitivity to image texture/noise).
+    Relative gradient ratio at the tumor boundary (a proxy for "boundary
+    sharpness"), comparing intensity gradient magnitude on a thin band straddling
+    the tumor surface against the gradient magnitude in a peritumoral shell.
 
-    Score = median(|∇I| on boundary) / median(|∇I| in outside shell).
+    Score = median(|∇I| on boundary band) / median(|∇I| in outside shell).
+
+    Notes & caveats
+    ---------------
+    * The score is a unitless ratio, not a calibrated physical measurement, and
+      should not be compared directly across protocols/scanners without
+      harmonization.
+    * ``intensity`` axes are assumed to align with ``spacing_mm`` element-wise
+      (i.e. ``spacing_mm[i]`` is the spacing along ``intensity.shape[i]``). If
+      your loader returns a permuted ``spacing`` tuple this will silently
+      corrupt the gradient magnitude.
+    * ``shell_mm = (2.0, 5.0)`` mm is a default; on highly anisotropic data the
+      inner offset may be only one voxel thick along the coarse axis. Override
+      explicitly when voxel size deviates strongly from ~1 mm³.
+
+    Parameters
+    ----------
+    intensity   : 3-D intensity volume.
+    tumor_mask  : Boolean (or coercible) tumor mask in the same grid as ``intensity``.
+    spacing_mm  : Voxel spacing per axis, matching ``intensity.shape`` order.
+    brain_mask  : Brain mask in the same grid; strongly recommended. If None, a
+                  conservative default of ``isfinite(intensity) & (intensity != 0)``
+                  is used and a warning is logged.
+    connectivity: Structuring-element connectivity for the inner boundary erosion.
+    shell_mm    : (min_dist, max_dist) in mm defining the peritumoral shell.
+    normalize   : If True, apply median/MAD normalization (no percentile clip)
+                  before differentiation. The ratio cancels global scale either
+                  way; normalization mainly stabilizes the per-subject absolute
+                  gradient values that are also returned.
+    shell_grad_floor : If the peritumoral shell median gradient falls below
+                  this floor, the score is returned as NaN (rather than blowing
+                  up via a tiny denominator).
+
+    Returns
+    -------
+    dict with a fixed schema (NaNs in failure cases) — see
+    ``_empty_boundary_sharpness_result``. Includes p90 statistics in addition
+    to medians/IQR because the discriminative signal for "sharp vs diffuse"
+    edges sits in the upper tail of |∇I|.
     """
-    st = generate_binary_structure(3, connectivity)
     tumor_mask = tumor_mask.astype(bool)
 
     if not np.any(tumor_mask):
-        return {"boundary_sharpness": float("nan"), "reason": "Empty tumor mask."}
+        return _empty_boundary_sharpness_result(shell_mm, reason="Empty tumor mask.")
+
+    if intensity.shape != tumor_mask.shape:
+        return _empty_boundary_sharpness_result(
+            shell_mm,
+            reason=f"Shape mismatch: intensity {intensity.shape} vs mask {tumor_mask.shape}.",
+        )
 
     if brain_mask is None:
-        # Conservative default (matches typical NIfTI background=0)
+        logger.warning(
+            "compute_boundary_sharpness: brain_mask not provided; falling back to "
+            "(intensity != 0) & isfinite. This is unreliable for non-skull-stripped "
+            "or bias-corrected volumes — pass brain_mask explicitly when possible."
+        )
         brain_mask = np.isfinite(intensity) & (intensity != 0)
+    else:
+        brain_mask = brain_mask.astype(bool)
+        if brain_mask.shape != intensity.shape:
+            return _empty_boundary_sharpness_result(
+                shell_mm,
+                reason=f"brain_mask shape {brain_mask.shape} does not match intensity {intensity.shape}.",
+            )
 
-    x = _robust_zscore(intensity, mask=brain_mask)
+    # Optional median/MAD normalization (no percentile clip — clipping would
+    # compress the tumor/edema contrast we are trying to measure).
+    if normalize:
+        x = _robust_zscore(intensity, mask=brain_mask, clip=None)
+    else:
+        x = intensity.astype(np.float32)
 
     gx, gy, gz = np.gradient(x, spacing_mm[0], spacing_mm[1], spacing_mm[2])
     grad = np.sqrt(gx * gx + gy * gy + gz * gz)
 
-    boundary = tumor_mask & ~binary_erosion(tumor_mask, structure=st, border_value=0)
+    # --- Boundary band: one voxel inside + one voxel outside the surface.
+    # A pure inner ring under-samples the gradient peak, which often straddles
+    # the partial-volume voxel just outside the mask, especially at oblique
+    # interfaces.
+    st = generate_binary_structure(3, connectivity)
+    inner_ring = tumor_mask & ~binary_erosion(tumor_mask, structure=st, border_value=0)
+    outer_ring = binary_dilation(tumor_mask, structure=st) & ~tumor_mask & brain_mask
+    boundary = inner_ring | outer_ring
 
-    outside = (~tumor_mask) & brain_mask
-    # distance from outside voxels to nearest tumor voxel (0 distance at boundary-adjacent outside voxels)
-    dt_out = distance_transform_edt(outside, sampling=spacing_mm)
-    shell = outside & (dt_out >= float(shell_mm[0])) & (dt_out <= float(shell_mm[1]))
+    # --- Peritumoral shell: distance to the *tumor* (not "distance to the
+    # nearest non-tumor voxel within the outside region"), then intersect with
+    # brain. The previous implementation passed `outside` to the EDT which
+    # produced a distance-to-(tumor OR brain-edge) map, biasing the shell near
+    # peripheral lesions.
+    dt_to_tumor = distance_transform_edt(~tumor_mask, sampling=spacing_mm)
+    
+    # Reference region
+    shell = (
+        brain_mask
+        & ~tumor_mask
+        & (dt_to_tumor >= float(shell_mm[0]))
+        & (dt_to_tumor <= float(shell_mm[1]))
+    )
 
     bvals = grad[boundary]
     svals = grad[shell]
 
     if bvals.size == 0:
-        return {"boundary_sharpness": float("nan"), "reason": "No boundary voxels."}
+        return _empty_boundary_sharpness_result(shell_mm, reason="No boundary voxels.")
+    if svals.size == 0:
+        return _empty_boundary_sharpness_result(
+            shell_mm,
+            reason="Empty peritumoral shell (lesion may abut brain edge — try smaller shell_mm).",
+        )
 
-    shell_med = float(np.median(svals)) if svals.size else 0.0
-    score = float(np.median(bvals) / (shell_med + 1e-9))
+    boundary_med = float(np.median(bvals))
+    boundary_p90 = float(np.percentile(bvals, 90))
+    boundary_iqr = float(np.percentile(bvals, 75) - np.percentile(bvals, 25))
+    shell_med = float(np.median(svals))
+    shell_p90 = float(np.percentile(svals, 90))
+
+    if not np.isfinite(shell_med) or shell_med < shell_grad_floor:
+        score = float("nan")
+    else:
+        score = boundary_med / shell_med
 
     return {
         "boundary_sharpness": score,
-        "boundary_grad_median": float(np.median(bvals)),
-        "boundary_grad_iqr": float(np.percentile(bvals, 75) - np.percentile(bvals, 25)),
+        "boundary_grad_median": boundary_med,
+        "boundary_grad_p90": boundary_p90,
+        "boundary_grad_iqr": boundary_iqr,
         "peritumoral_shell_grad_median": shell_med,
+        "peritumoral_shell_grad_p90": shell_p90,
         "n_boundary_vox": int(np.sum(boundary)),
         "n_shell_vox": int(np.sum(shell)),
         "shell_mm": (float(shell_mm[0]), float(shell_mm[1])),
+        "reason": "ok",
     }
 
 def compute_vasari_style_morphometrics(
@@ -275,117 +411,85 @@ def compute_vasari_style_morphometrics(
     return out
 # ---------------------------------------------------------------------------------------------- #
 
-def compute_transition_zone_thickness(t1ce_pth, seg_pth,
-                              step_vox = 0.25, max_dist_mm = 80.0,) -> float:
-    
-    t1ce_img    = NiftiImage(t1ce_pth)
-    t1ce_img    = t1ce_img.array.astype(np.float32)
+def compute_transition_zone_thickness(
+    seg_path: str,
+    flair_path: str | None = None,
+    t1ce_path: str | None = None,
+    method: str = "method_b",
+) -> dict:
+    """
+    Wrapper around the two transition zone thickness methods.
 
-    seg_img   = NiftiImage(seg_pth)
+    Parameters
+    ----------
+    seg_path   : path to BraTS-style segmentation NIfTI.
+    flair_path : path to FLAIR NIfTI — required for method_b.
+    t1ce_path  : path to T1CE NIfTI — used by method_b to compute a separate
+                 intensity-aware thickness in the T1CE sequence.
+    method     : "method_a" (distance-transform, default, recommended) or
+                 "method_b" (ray-casting along outward normals, intensity-aware).
+
+    Returns
+    -------
+    For method_a: dict with key "Transition Zone Thickness" (geometric, modality-independent).
+    For method_b: dict with keys "Transition Zone Thickness (FLAIR)" and, if t1ce_path
+    is provided, "Transition Zone Thickness (T1CE)".
+    The thickness_map array (Method A) is excluded as it is not JSON-serialisable.
+    """
+    seg_img = NiftiImage(seg_path)
     seg_array = seg_img.array.astype(np.int16)
-    spacing   = tuple(float(s) for s in seg_img.spacing)
+    voxel_spacing = tuple(float(s) for s in seg_img.spacing)
 
-    # Define tumor regions
-    tc_mask     = np.isin(seg_array, [1, 3, 4]).astype(bool)          # Tumor Core
-    ed_mask     = np.isin(seg_array, [2]).astype(bool)                # Edema
+    if method == "method_a":
+        result = transition_zone_thickness_distance_transform(seg_array, voxel_spacing)
+        result.pop("thickness_map", None)  # ndarray — not JSON-serialisable
+        return {"Transition Zone Thickness": result}
 
-    # Helper: nearest-neighbor membership test for floating (z,y,x)
-    def nn_mask(mask, p):
-        iz, iy, ix = np.round(p).astype(int)
-        if (iz < 0 or iy < 0 or ix < 0 or
-            iz >= mask.shape[0] or iy >= mask.shape[1] or ix >= mask.shape[2]):
-            return False
-        return bool(mask[iz, iy, ix])
+    elif method == "method_b":
+        if flair_path is None:
+            raise ValueError("flair_path must be provided for method_b (ray-casting).")
+        flair_img = NiftiImage(flair_path)
+        flair_array = flair_img.array.astype(np.float32)
+        flair_result = transition_zone_thickness_raycast(flair_array, seg_array, voxel_spacing)
 
-    # 1) boundary voxels: enhancing adjacent to edema
-    edema_dil = binary_dilation(ed_mask, iterations = 1)
-    boundary  = tc_mask & edema_dil & ~ed_mask
+        out = {"Transition Zone Thickness (FLAIR)": flair_result}
 
-    boundary_coords = np.argwhere(boundary)
-    if boundary_coords.size == 0:
-        return np.nan
+        if t1ce_path is not None:
+            t1ce_img = NiftiImage(t1ce_path)
+            t1ce_array = t1ce_img.array.astype(np.float32)
+            t1ce_result = transition_zone_thickness_raycast(t1ce_array, seg_array, voxel_spacing)
+            out["Transition Zone Thickness (T1CE)"] = t1ce_result
 
-    # 2) edema intensity band 
-    ed_vals = t1ce_img[ed_mask]
-    if ed_vals.size == 0:
-        return np.nan
+        return out
 
-    ed_med = np.median(ed_vals)
-    mad    = np.median(np.abs(ed_vals - ed_med)) + 1e-6
-    abs_band = max(1.4826 * mad, 1e-6)  # robust sigma-like width
-    ed_lower, ed_upper = ed_med - abs_band, ed_med + abs_band
-
-    if ed_lower < np.min(ed_vals):
-        ed_lower = np.min(ed_vals)
-        
-    if ed_upper > np.max(ed_vals):
-        ed_upper = np.max(ed_vals)
-
-    # 3) ray direction = nearest edema voxel
-    inv_edema = ~ed_mask
-    _, (zi, yi, xi) = distance_transform_edt(inv_edema, return_indices = True, sampling = spacing)
-    nearest_edema_idx = np.stack([zi, yi, xi], axis = -1)
-
-    spacing = np.asarray(spacing, dtype=float)  # (z,y,x)
-
-    thicknesses = []
-    for zyx in boundary_coords:
-        z0, y0, x0 = zyx.astype(float)
-
-        ze, ye, xe = nearest_edema_idx[tuple(zyx)]
-        v = np.array([ze - z0, ye - y0, xe - x0], dtype=float)
-        nv = np.linalg.norm(v)
-        if nv == 0:
-            thicknesses.append(0.0)
-            continue
-
-        u = v / nv
-        mm_per_step = np.linalg.norm(u * spacing)
-        if mm_per_step == 0:
-            continue
-        n_steps = int(np.ceil(max_dist_mm / (step_vox * mm_per_step)))
-
-        p0 = np.array([z0, y0, x0], dtype=float)
-        prev_int = map_coordinates(t1ce_img, [[z0], [y0], [x0]], order = 1, mode = "nearest")[0]
-        prev_d_mm = 0.0
-
-        # only accept a "hit" if we're in edema OR we've exited tc_mask
-        in_edema0 = nn_mask(ed_mask, p0)
-        out_of_tc0 = not nn_mask(tc_mask, p0)
-        if (ed_lower <= prev_int <= ed_upper) and (in_edema0 or out_of_tc0):
-            thicknesses.append(prev_d_mm)
-            continue
-
-        for k in range(1, n_steps + 1):
-            p = p0 + u * (k * step_vox)
-            I = map_coordinates(t1ce_img, [[p[0]], [p[1]], [p[2]]], order=1, mode="nearest")[0]
-            d_mm = k * step_vox * np.linalg.norm(u * spacing)
-
-            in_edema = nn_mask(ed_mask, p)
-            out_of_tc = not nn_mask(tc_mask, p)
-
-            if (ed_lower <= I <= ed_upper) and (in_edema or out_of_tc):
-                # optional linear interpolation between prev and current
-                if abs(I - prev_int) > 1e-6:
-                    if prev_int > ed_upper and I <= ed_upper:
-                        target = ed_upper
-                    elif prev_int < ed_lower and I >= ed_lower:
-                        target = ed_lower
-                    else:
-                        target = ed_med  # fallback
-                    alpha = (target - prev_int) / (I - prev_int + 1e-12)
-                    alpha = float(np.clip(alpha, 0.0, 1.0))
-                    d_mm = prev_d_mm + alpha * (d_mm - prev_d_mm)
-                thicknesses.append(d_mm)
-                break
-
-            prev_int, prev_d_mm = I, d_mm
-
-    return {"transition_zone_thickness_in_mm": float(np.nanmedian(thicknesses)) if len(thicknesses) else np.nan}
+    else:
+        raise ValueError(
+            f"Unknown tz_method '{method}'. Choose 'method_a' or 'method_b'."
+        )
 
 # ---------------------------------------------------------------------------------------------- #
 @attrs.define
 class ExtractT2FLAIRMismatch:
+    """
+    T2-FLAIR mismatch extractor.
+
+    Pipeline (all calibration baked in; no toggles):
+        * Lesion mask = BraTS Tumor Core (NCR + ET), with a fallback to
+          Whole Tumor (NCR + ED + ET) when TC < 1 mL or TC/WT < 0.10.
+        * Center / rim split (mm-based): center = deepest
+          max(3 mm, 50% of max inward depth) of the lesion; rim =
+          lesion minus the dilated center.
+        * Intensity normalisation: contralateral normal white matter
+          (CNWM) from SynthSeg labels (2/7 left, 41/46 right), with
+          bilateral-WM and brain-median fallbacks.
+        * Decision: weighted soft score
+              0.20 * s_t2 + 0.60 * s_supp + 0.20 * s_rim   >= 0.70
+          on the CNWM-ratio scale.
+
+    Validated on AKU-WHO (62 positive + 62 sampled negative subjects,
+    6 negative-sample seeds): sensitivity 0.726, specificity 0.74 +- 0.04,
+    Youden J 0.47 +- 0.04.
+    """
 
     verbose: bool = False
 
@@ -394,19 +498,34 @@ class ExtractT2FLAIRMismatch:
     nonenhancing_label: int = 1
     oedema_label: int = 2
 
-    # thresholds / heuristics
-    min_core_voxels: int = 100
-    min_center_voxels: int = 30
-    min_rim_voxels: int = 30
-    min_wt_voxels: int = 100
+    # Size guards (voxels). One lower bound on the lesion (post-fallback),
+    # one each on the center and rim sub-regions.
+    min_lesion_voxels: int = 100
+    min_center_voxels: int = 10
+    min_rim_voxels: int = 10
 
-    # normalized intensity thresholds
-    center_t2_high_thresh: float = 0.60
-    center_flair_low_thresh: float = 0.50
-    rim_flair_high_thresh: float = 0.55
+    # TC -> WT fallback when the segmenter collapses TC into ED
+    min_core_volume_ml: float = 1.0
+    tc_wt_ratio_floor: float = 0.10
 
-    # decision threshold for final binary flag
-    mismatch_score_thresh: float = 0.12
+    # Center / rim geometry (mm-based)
+    center_inward_mm: float = 3.0
+    center_depth_fraction: float = 0.50
+
+    # CNWM-ratio anchor for the central-FLAIR-suppression ramp.
+    # The suppression ramp runs from 0 at (anchor + 0.30) down to 1 at
+    # (anchor + 0.30 - soft_supp_span), i.e. saturates fully suppressed at
+    # ratio ~ 1.25 with this configuration.
+    ratio_center_flair_low: float = 1.55
+
+    # Soft-score ramp spans. The s_t2 and s_rim ramps run from 1.0 (CNWM
+    # parity) to 1.0 + span; s_supp uses the dedicated anchor above.
+    soft_t2_span: float = 0.50
+    soft_supp_span: float = 0.60
+    soft_rim_span: float = 0.50
+
+    # Decision threshold on the weighted soft score
+    soft_score_thresh: float = 0.70
 
     COL_NAMES = [
         "T2-FLAIR Mismatch Present",
@@ -419,120 +538,105 @@ class ExtractT2FLAIRMismatch:
         "Whole Tumor Volume (mL)",
     ]
 
-    def robust_normalize(self, img: np.ndarray, brain_mask: np.ndarray) -> np.ndarray:
-        """
-        Robust min-max normalization to [0,1] inside a brain mask.
-        """
-        arr = np.asarray(img, dtype=np.float32)
-        vals = arr[brain_mask]
-
-        vals = vals[np.isfinite(vals)]
-        if vals.size == 0:
-            return np.zeros_like(arr, dtype=np.float32)
-
-        lo = np.percentile(vals, 1)
-        hi = np.percentile(vals, 99)
-
-        if not np.isfinite(lo) or not np.isfinite(hi) or hi <= lo:
-            return np.zeros_like(arr, dtype=np.float32)
-
-        arr = np.clip(arr, lo, hi)
-        arr = (arr - lo) / (hi - lo + 1e-8)
-        return arr.astype(np.float32)
-
     def get_whole_tumor_mask(self, segmentation: NiftiImage) -> np.ndarray:
-        """
-        Whole tumor = NCR/NET + ED + ET
-        """
+        """Whole tumor = NCR/NET + ED + ET."""
         return np.isin(
             segmentation.array,
             [self.nonenhancing_label, self.oedema_label, self.enhancing_label],
         )
 
     def get_tumor_core_mask(self, segmentation: NiftiImage) -> np.ndarray:
-        """
-        Tumor core = NCR/NET + ET
-        Excludes edema.
-        """
+        """Tumor core = NCR/NET + ET (excludes edema)."""
         return np.isin(
             segmentation.array,
             [self.nonenhancing_label, self.enhancing_label],
         )
 
-    def get_center_and_rim_masks(self, core_mask: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+    def get_center_and_rim_masks(
+        self,
+        lesion_mask: np.ndarray,
+        spacing: tuple[float, float, float],
+    ) -> tuple[np.ndarray, np.ndarray]:
         """
-        Split tumor core into a central component and a peripheral rim.
+        Split the lesion into a small deep center and a thick peripheral rim.
 
-        - center: voxels sufficiently far from the boundary
-        - rim: shell near the boundary
-
-        Uses a distance transform so it behaves more consistently across lesion sizes.
+        Distances are in mm so the split is scanner-agnostic.
+        - center: inward depth >= max(center_inward_mm, center_depth_fraction * max_depth)
+        - rim:    lesion minus the dilated center (the two regions never touch)
         """
-        core_mask = core_mask.astype(bool)
+        lesion_mask = lesion_mask.astype(bool)
+        if not lesion_mask.any():
+            empty = np.zeros_like(lesion_mask, dtype=bool)
+            return empty, empty
 
-        if not core_mask.any():
-            return np.zeros_like(core_mask, dtype=bool), np.zeros_like(core_mask, dtype=bool)
+        dt_mm = distance_transform_edt(lesion_mask, sampling=spacing)
+        max_mm = float(dt_mm.max())
+        if max_mm <= 0:
+            empty = np.zeros_like(lesion_mask, dtype=bool)
+            return empty, empty
 
-        dt = distance_transform_edt(core_mask)
+        cutoff = max(self.center_inward_mm, self.center_depth_fraction * max_mm)
+        center_mask = lesion_mask & (dt_mm >= cutoff)
 
-        # center = deeper half of the lesion thickness (at least >0)
-        max_dt = float(dt.max())
-        if max_dt <= 0:
-            return np.zeros_like(core_mask, dtype=bool), np.zeros_like(core_mask, dtype=bool)
-
-        center_mask = core_mask & (dt >= 0.25 * max_dt)
-        rim_mask = core_mask & (~center_mask)
-
-        # fallback if center/rim are too small
+        # Tiny-lesion fallback: keep the deepest 5% of voxels by inward depth.
         if center_mask.sum() < self.min_center_voxels:
-            eroded = binary_erosion(core_mask, iterations=1)
-            if eroded.sum() > 0:
-                center_mask = eroded
-                rim_mask = core_mask & (~center_mask)
+            inside = dt_mm[lesion_mask]
+            if inside.size:
+                q = np.percentile(inside, 95)
+                center_mask = lesion_mask & (dt_mm >= q)
 
+        rim_mask = lesion_mask & ~binary_dilation(center_mask, iterations=1)
         return center_mask, rim_mask
+
+    def get_cnwm_mask(
+        self,
+        merged_seg_array: np.ndarray,
+        laterality: str | None,
+    ) -> np.ndarray:
+        """Contralateral normal WM mask from SynthSeg labels; bilateral fallback."""
+        wm_left = np.isin(merged_seg_array, [2, 7])
+        wm_right = np.isin(merged_seg_array, [41, 46])
+        if laterality == "left":
+            mask = wm_right
+        elif laterality == "right":
+            mask = wm_left
+        else:
+            mask = wm_left | wm_right
+        if mask.sum() == 0:
+            mask = wm_left | wm_right
+        return mask
+
+    @staticmethod
+    def _ramp(x: float, lo: float, span: float) -> float:
+        """Linear ramp from 0 at x=lo to 1 at x=lo+span, clipped to [0,1]."""
+        if span <= 0:
+            return 1.0 if x >= lo else 0.0
+        return float(np.clip((x - lo) / span, 0.0, 1.0))
 
     def compute_mismatch_score(
         self,
-        t2_norm: np.ndarray,
-        flair_norm: np.ndarray,
-        center_mask: np.ndarray,
-        rim_mask: np.ndarray,
-    ) -> tuple[float, float, float, float]:
+        center_t2_ratio: float,
+        center_flair_ratio: float,
+        rim_flair_ratio: float,
+    ) -> float:
         """
-        Continuous heuristic score for T2-FLAIR mismatch.
+        Weighted soft mismatch score on the CNWM-ratio scale:
 
-        Desired pattern:
-        - central T2 high
-        - central FLAIR relatively low
-        - peripheral rim FLAIR relatively high
+            score = 0.20 * s_t2  + 0.60 * s_supp + 0.20 * s_rim
 
-        Score is higher when this pattern is stronger.
+        where each s_* is a linear ramp on the corresponding component.
+        The weighting concentrates decision power on central FLAIR
+        suppression, which is the only component that meaningfully
+        separates mismatch-positive from mismatch-negative tumors on the
+        AKU-WHO cohort (the other two saturate near 1.0 for both classes).
         """
-        if center_mask.sum() == 0 or rim_mask.sum() == 0:
-            return np.nan, np.nan, np.nan, np.nan
-
-        center_t2_mean = float(np.mean(t2_norm[center_mask]))
-        center_flair_mean = float(np.mean(flair_norm[center_mask]))
-        rim_flair_mean = float(np.mean(flair_norm[rim_mask]))
-
-        # components of the mismatch pattern
-        central_t2_component = max(0.0, center_t2_mean - self.center_t2_high_thresh)
-        central_suppression_component = max(0.0, self.center_flair_low_thresh - center_flair_mean)
-        rim_component = max(0.0, rim_flair_mean - self.rim_flair_high_thresh)
-
-        mismatch_score = (
-            central_t2_component
-            + central_suppression_component
-            + rim_component
-        ) / 3.0
-
-        return (
-            float(mismatch_score),
-            float(center_t2_mean),
-            float(center_flair_mean),
-            float(rim_flair_mean),
+        s_t2 = self._ramp(center_t2_ratio, 1.0, self.soft_t2_span)
+        s_supp = self._ramp(
+            self.ratio_center_flair_low + 0.30 - center_flair_ratio,
+            0.0, self.soft_supp_span,
         )
+        s_rim = self._ramp(rim_flair_ratio, 1.0, self.soft_rim_span)
+        return float(0.20 * s_t2 + 0.60 * s_supp + 0.20 * s_rim)
 
     def extract_t2_flair_mismatch(
         self,
@@ -540,141 +644,139 @@ class ExtractT2FLAIRMismatch:
         t2_path: str,
         flair_path: str,
         brain_mask_path: str,
-        laterility: str | None = None,
+        laterality: str | None = None,
         merged_seg: str | None = None,
     ) -> pd.DataFrame:
         """
         Run T2-FLAIR mismatch extraction in subject space.
 
-        Inputs should all be in the same space:
-        - tumorseg_ss
-        - T2
-        - FLAIR
+        All inputs must share the subject-space grid: tumor segmentation,
+        T2, FLAIR, brain mask, and (optional) SynthSeg merged segmentation
+        used to localise contralateral white matter.
         """
         start_time = time.time()
 
         segmentation = NiftiImage(tumorseg_ss)
-        merged_segmentation = NiftiImage(merged_seg)
         t2 = NiftiImage(t2_path)
         flair = NiftiImage(flair_path)
+        spacing = tuple(float(s) for s in segmentation.spacing)
+        voxel_mm3 = float(np.prod(spacing))
 
-        brain_mask = NiftiImage(brain_mask_path).array.astype(bool)
+        if brain_mask_path is not None:
+            brain_mask = NiftiImage(brain_mask_path).array.astype(bool)
+        else:
+            brain_mask = np.isfinite(t2.array) & (t2.array != 0)
 
         whole_tumor_mask = self.get_whole_tumor_mask(segmentation)
         tumor_core_mask = self.get_tumor_core_mask(segmentation)
-
-        merged_seg_array = merged_segmentation.array.astype(np.int16)
-        wm_left = np.isin(merged_seg_array, [2, 7])  # left hemisphere white matter
-        wm_right = np.isin(merged_seg_array, [41, 46])  # right hemisphere white matter
-        if laterility == "left":
-            cnwm_mask = wm_right
-        elif laterility == "right":
-            cnwm_mask = wm_left
-        else:
-            cnwm_mask = wm_left | wm_right
-
-        voxel_volume_mm3 = float(np.prod(segmentation.spacing))
-        whole_tumor_volume_ml = float(whole_tumor_mask.sum() * voxel_volume_mm3 / 1000.0)
-        tumor_core_volume_ml = float(tumor_core_mask.sum() * voxel_volume_mm3 / 1000.0)
+        whole_tumor_volume_ml = float(whole_tumor_mask.sum() * voxel_mm3 / 1000.0)
+        tumor_core_volume_ml = float(tumor_core_mask.sum() * voxel_mm3 / 1000.0)
 
         if self.verbose:
             logger.debug(f"Whole tumor voxels: {int(whole_tumor_mask.sum())}")
-            logger.debug(f"Tumor core voxels: {int(tumor_core_mask.sum())}")
+            logger.debug(f"Tumor core voxels:  {int(tumor_core_mask.sum())}")
+
+        # TC -> WT fallback when the segmenter has assigned the lesion to ED
+        lesion_mask = tumor_core_mask
+        if (tumor_core_volume_ml < self.min_core_volume_ml) or (
+            whole_tumor_volume_ml > 0
+            and tumor_core_volume_ml / whole_tumor_volume_ml < self.tc_wt_ratio_floor
+        ):
+            if whole_tumor_mask.sum() >= self.min_lesion_voxels:
+                lesion_mask = whole_tumor_mask
+                if self.verbose:
+                    logger.debug("TC too small -> falling back to WT for mismatch scoring")
 
         result = pd.DataFrame(columns=self.COL_NAMES)
+        nan_row = {col: np.nan for col in self.COL_NAMES}
+        nan_row["Tumor Core Volume (mL)"] = tumor_core_volume_ml
+        nan_row["Whole Tumor Volume (mL)"] = whole_tumor_volume_ml
 
-        if tumor_core_mask.sum() < self.min_core_voxels:
-            if self.verbose:
-                logger.debug("Tumor core too small for reliable T2-FLAIR mismatch assessment")
-
-            result.loc[len(result)] = {
-                "T2-FLAIR Mismatch Present": np.nan,
-                "T2-FLAIR Mismatch Score": np.nan,
-                "T2-FLAIR Mismatch Degree": np.nan,
-                "Central Core T2 Mean": np.nan,
-                "Central Core FLAIR Mean": np.nan,
-                "Peripheral Rim FLAIR Mean": np.nan,
-                "Tumor Core Volume (mL)": tumor_core_volume_ml,
-                "Whole Tumor Volume (mL)": whole_tumor_volume_ml,
-            }
+        if lesion_mask.sum() < self.min_lesion_voxels:
+            result.loc[len(result)] = nan_row
             return result
 
-        t2_norm = self.robust_normalize(t2.array, brain_mask)
-        flair_norm = self.robust_normalize(flair.array, brain_mask)
-
-        # Add assert statement later on
-
-        center_mask, rim_mask = self.get_center_and_rim_masks(tumor_core_mask)
-
+        center_mask, rim_mask = self.get_center_and_rim_masks(lesion_mask, spacing)
         if self.verbose:
-            logger.debug(f"Center voxels: {int(center_mask.sum())}")
-            logger.debug(f"Rim voxels: {int(rim_mask.sum())}")
+            logger.debug(f"Center voxels: {int(center_mask.sum())}, Rim voxels: {int(rim_mask.sum())}")
 
         if center_mask.sum() < self.min_center_voxels or rim_mask.sum() < self.min_rim_voxels:
-            mismatch_score = np.nan
-            center_t2_mean = np.nan
-            center_flair_mean = np.nan
-            rim_flair_mean = np.nan
-            mismatch_present = np.nan
-        else:
-            (
-                mismatch_score,
-                center_t2_mean,
-                center_flair_mean,
-                rim_flair_mean,
-            ) = self.compute_mismatch_score(
-                t2_norm=t2_norm,
-                flair_norm=flair_norm,
-                center_mask=center_mask,
-                rim_mask=rim_mask,
-            )
+            result.loc[len(result)] = nan_row
+            return result
 
-            # Binary decision:
-            # central T2 high, central FLAIR lower, rim FLAIR higher, and overall score above threshold
-            mismatch_present = int(
-                (center_t2_mean >= self.center_t2_high_thresh)
-                and (center_flair_mean <= self.center_flair_low_thresh)
-                and (rim_flair_mean >= self.rim_flair_high_thresh)
-                and (mismatch_score >= self.mismatch_score_thresh)
-            )
-        
-            # Mismatch degree
-            t2_tumour_mean = float(np.mean(t2.array[tumor_core_mask]))
-            flair_tumour_mean = float(np.mean(flair.array[tumor_core_mask]))
+        # CNWM reference, with robust fallbacks.
+        if merged_seg is not None:
+            merged_seg_array = NiftiImage(merged_seg).array.astype(np.int16)
+            cnwm_mask = self.get_cnwm_mask(merged_seg_array, laterality)
+        else:
+            cnwm_mask = None
+
+        if cnwm_mask is not None and cnwm_mask.sum() > 0:
             t2_cnwm_mean = float(np.mean(t2.array[cnwm_mask]))
             flair_cnwm_mean = float(np.mean(flair.array[cnwm_mask]))
+        else:
+            t2_cnwm_mean = float(np.median(t2.array[brain_mask]))
+            flair_cnwm_mean = float(np.median(flair.array[brain_mask]))
 
-            mismatch_degree = (t2_tumour_mean / (t2_cnwm_mean + 1e-8)) - (flair_tumour_mean / (flair_cnwm_mean + 1e-8))
+        if t2_cnwm_mean <= 0 or flair_cnwm_mean <= 0:
+            result.loc[len(result)] = nan_row
+            return result
 
+        center_t2_ratio = float(np.mean(t2.array[center_mask])) / (t2_cnwm_mean + 1e-8)
+        center_flair_ratio = float(np.mean(flair.array[center_mask])) / (flair_cnwm_mean + 1e-8)
+        rim_flair_ratio = float(np.mean(flair.array[rim_mask])) / (flair_cnwm_mean + 1e-8)
+
+        mismatch_score = self.compute_mismatch_score(
+            center_t2_ratio=center_t2_ratio,
+            center_flair_ratio=center_flair_ratio,
+            rim_flair_ratio=rim_flair_ratio,
+        )
+        mismatch_present = int(mismatch_score >= self.soft_score_thresh)
+
+        # Mismatch degree (raw intensities against CNWM, same definition as before)
+        if tumor_core_mask.sum() > 0:
+            t2_tumour_mean = float(np.mean(t2.array[tumor_core_mask]))
+            flair_tumour_mean = float(np.mean(flair.array[tumor_core_mask]))
+            mismatch_degree = (
+                t2_tumour_mean / (t2_cnwm_mean + 1e-8)
+                - flair_tumour_mean / (flair_cnwm_mean + 1e-8)
+            )
+        else:
+            mismatch_degree = np.nan
 
         result.loc[len(result)] = {
             "T2-FLAIR Mismatch Present": mismatch_present,
-            "T2-FLAIR Mismatch Score": mismatch_score,
-            "T2-FLAIR Mismatch Degree": mismatch_degree,
-            "Central Core T2 Mean": center_t2_mean,
-            "Central Core FLAIR Mean": center_flair_mean,
-            "Peripheral Rim FLAIR Mean": rim_flair_mean,
+            "T2-FLAIR Mismatch Score": float(mismatch_score),
+            "T2-FLAIR Mismatch Degree": float(mismatch_degree) if mismatch_degree == mismatch_degree else np.nan,
+            "Central Core T2 Mean": center_t2_ratio,
+            "Central Core FLAIR Mean": center_flair_ratio,
+            "Peripheral Rim FLAIR Mean": rim_flair_ratio,
             "Tumor Core Volume (mL)": tumor_core_volume_ml,
             "Whole Tumor Volume (mL)": whole_tumor_volume_ml,
         }
 
-        end_time = time.time()
-        time_taken = np.round(end_time - start_time, 2)
-
         if self.verbose:
-            logger.debug("Time taken: " + str(time_taken) + " seconds")
             logger.debug(f"T2-FLAIR mismatch result: {result.iloc[0].to_dict()}")
+            logger.debug(f"Time taken: {time.time() - start_time:.2f}s")
 
         return result
 
-    def __call__(self, tumorseg_ss: str, t2_path: str, flair_path: str, laterility: str, merged_seg: str, brain_mask_path: str) -> dict:
+    def __call__(
+        self,
+        tumorseg_ss: str,
+        t2_path: str,
+        flair_path: str,
+        laterality: str,
+        merged_seg: str,
+        brain_mask_path: str,
+    ) -> dict:
         report = self.extract_t2_flair_mismatch(
             tumorseg_ss=tumorseg_ss,
             t2_path=t2_path,
             flair_path=flair_path,
-            laterility=laterility,
+            laterality=laterality,
             merged_seg=merged_seg,
-            brain_mask_path=brain_mask_path
+            brain_mask_path=brain_mask_path,
         )
         logger.info("* Finished T2-FLAIR mismatch extraction!")
         return report.iloc[0].to_dict()

@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_01127",
+  "idh": {
+    "reasoning": "The patient's advanced age (80 years) is the strongest predictor for IDH-wildtype status. This is strongly corroborated by imaging features classic for glioblastoma, IDH-wildtype: the presence of a large necrotic core, marked and thick contrast enhancement, and a large overall tumor volume. There are no significant features to suggest an IDH-mutant tumor, which typically occurs in younger patients and often presents with less aggressive features like minimal to no enhancement or necrosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly indicative of an astrocytic lineage (non-codeleted) rather than an oligodendroglial one (codeleted). The presence of extensive necrosis and marked, thick-rimmed enhancement are hallmark features of high-grade astrocytomas (glioblastoma). Oligodendrogliomas, the tumors defined by 1p/19q co-deletion, typically exhibit less aggressive features, such as minimal or patchy enhancement and rarely show extensive necrosis. While cortical involvement is common in oligodendroglioma, it is not specific and is also frequently seen in glioblastoma.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large volume of central necrosis (`NCR Volume (mL)` of 16.215) is a definitive radiological feature corresponding to WHO Grade 4. This is further supported by other high-grade features, including marked and thick contrast enhancement. Grade 2 tumors are typically non-enhancing, and Grade 3 tumors, while enhancing, usually lack the extensive necrosis seen in this case. The patient's advanced age also makes a high-grade tumor far more likely. The absence of deep white matter invasion does not preclude a Grade 4 diagnosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an 80-year-old male with a large left temporal tumor. The imaging findings, including a large necrotic core, marked ring enhancement, and significant tumor volume, are classic for a high-grade glioma. The advanced age and these aggressive radiological features strongly support the diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. All individual predictions are internally consistent with this diagnosis."
+}

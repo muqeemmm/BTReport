@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_01127",
+  "idh": {
+    "reasoning": "Patient is 80 years old (age_years) which strongly favors IDH-wildtype glioma. The lesion shows marked contrast enhancement (Enhancement Quality) and a high proportion of necrosis (Proportion Necrosis) and edema (Proportion of Oedema), typical of IDH-wildtype glioblastoma. Conversely, cortical involvement (Cortical involvement) is present, a feature more common in IDH-mutant lower\u2011grade tumors, and deep white\u2011matter invasion (Deep WM invasion) is absent, which slightly argues against wildtype. We weigh the strong age and aggressive imaging features higher, leading to a prediction of IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Marked enhancement (Enhancement Quality) and substantial necrosis (Proportion Necrosis) are atypical for oligodendroglioma, which usually shows less enhancement and calcifications; together with the patient's advanced age (age_years) and temporal location (Tumor Location) these findings favor a non\u2011codeleted status. No imaging features specifically suggest codeletion, so we predict non\u2011codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "age_years",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits marked contrast enhancement (Enhancement Quality), a high necrotic fraction (Proportion Necrosis), considerable edema (Proportion of Oedema), and a total volume of 56.76\u202fmL, all hallmarks of a high\u2011grade (grade\u202f4) glioma. While cortical involvement (Cortical involvement) and lack of deep white\u2011matter invasion (Deep WM invasion) are more typical of lower\u2011grade lesions, the dominant aggressive imaging characteristics outweigh these, leading to a grade\u202f4 prediction.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "CET Crosses midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH-wildtype, non\u2011codeleted high\u2011grade glioma consistent with glioblastoma. Absence of advanced sequences (DWI, perfusion, spectroscopy) limits certainty; however, the available features provide moderate\u2011high confidence in the predictions."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "patient_0013",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (44 years) and the absence of enhancement on MRI (Enhancement Quality: 'None', Proportion Enhancing: 0.0) are more commonly associated with IDH-mutant gliomas. The tumor's location in the cortex, insula, and frontal/temporal lobes is also consistent with this subtype. However, the lack of specific molecular markers in the provided metadata means we cannot be definitive. The presence of a non-enhancing tumor with significant edema (ED Volume: 33.615 mL, Proportion of Oedema: 100.0) also aligns with IDH-mutant gliomas, which often present with non-enhancing features.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "Cortical involvement",
+        "Region Proportions"
+      ],
+      "contradicting_features": [],
+      "prediction": "mutant",
+      "confidence": 0.75
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's involvement of the insula and frontal lobe, along with its non-enhancing nature, could suggest an oligodendroglial component, which is often associated with 1p/19q co-deletion. However, the absence of clear molecular or histological evidence in the metadata makes this prediction uncertain. The presence of cortical involvement and the tumor's location are consistent with either codeleted or non-codeleted status. Given the lack of definitive evidence, the prediction leans towards non-codeleted due to the more common association of IDH-mutant astrocytomas with similar imaging features.",
+      "supporting_features": [
+        "Region Proportions",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.6
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor's significant edema (ED Volume: 33.615 mL) and involvement of eloquent brain areas (Speech motor) suggest a higher grade lesion. However, the lack of enhancement and necrosis (Proportion Enhancing: 0.0, Proportion Necrosis: 0.0) are more typical of lower-grade gliomas. The presence of significant edema without enhancement is somewhat atypical but can be seen in IDH-mutant astrocytomas. Given the patient's age and the tumor's characteristics, a grade 3 is plausible, balancing between the aggressive features (edema, eloquent area involvement) and the non-aggressive features (lack of enhancement, necrosis).",
+      "supporting_features": [
+        "ED Volume (mL)",
+        "Eloquent Brain Involvement",
+        "Proportion Enhancing",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 3,
+      "confidence": 0.65
+    }
+  ],
+  "subject_id": "UCSF-PDGM-250"
+}

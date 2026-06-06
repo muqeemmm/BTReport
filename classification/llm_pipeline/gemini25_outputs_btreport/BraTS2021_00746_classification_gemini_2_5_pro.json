@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_00746",
+  "idh": {
+    "reasoning": "The patient's age of 59 is a very strong predictor for IDH-wildtype status, as the incidence of IDH-mutant gliomas decreases significantly after age 55. The imaging phenotype strongly supports this prediction. The presence of a necrotic core ('Proportion Necrosis' of 16.2%) and 'Marked' 'Enhancement Quality' with a 'Thickness of enhancing margin' >3mm are classic features of glioblastoma, which is the archetypal IDH-wildtype glioma. While the predominantly 'frontal_lobe' location is common in IDH-mutant tumors, this feature is non-specific and is overwhelmingly outweighed by the combination of advanced age and aggressive imaging characteristics (necrosis and enhancement).",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. The presence of a significant necrotic core ('Proportion Necrosis' of 16.2%) and 'Marked' 'Enhancement Quality' are highly atypical for 1p/19q-codeleted oligodendrogliomas. Oligodendrogliomas, even when high-grade, tend to have less organized, patchy enhancement and rarely present with such prominent necrosis. These aggressive features are much more characteristic of an astrocytic lineage (non-codeleted). The frontal, cortical location ('Region Proportions') is a feature often seen in oligodendrogliomas, but the enhancement pattern and necrosis are stronger discriminators and point strongly toward a non-codeleted status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of a necrotic core, evidenced by a non-zero 'NCR Volume (mL)' (2.833) and a 'Proportion Necrosis' of 16.2%, is a key radiological surrogate for histopathological necrosis. In an adult-type diffuse glioma, the presence of necrosis is a defining feature of CNS WHO grade 4. This is further supported by other features of high-grade malignancy, including 'Marked' 'Enhancement Quality' and a thick enhancing margin ('>3mm'). The relatively small tumor volume and absence of midline shift or deep white matter invasion do not negate the definitive evidence of necrosis, which is sufficient for a grade 4 designation.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (59) and MRI features including a solitary frontal lesion with marked, thick-walled enhancement and central necrosis is highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predictions for IDH status, 1p/19q status, and WHO grade are internally consistent and point strongly to this diagnosis."
+}

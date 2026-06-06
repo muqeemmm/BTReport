@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (29 years old), which is more common in IDH-mutant gliomas. The T2-FLAIR mismatch sign is present with a high score (0.8639) and degree (0.9428), which is highly specific for IDH-mutant astrocytomas. However, the proportion of necrosis (69.23%) is high, which is more typical of IDH-wildtype glioblastomas, and enhancement is mild, which is less common in IDH-mutant tumors.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex (Motor) and is located in the frontal lobe, which is more common in astrocytomas (non-codeleted) than oligodendrogliomas (codeleted). The T2-FLAIR mismatch sign is present, which is specific for IDH-mutant astrocytomas and argues against oligodendroglioma. However, frontal lobe location can also be seen in oligodendrogliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The high proportion of necrosis suggests possible grade 4 features, but the T2-FLAIR mismatch sign supports IDH-mutant status. Confidence in IDH mutation is high due to age and T2-FLAIR mismatch, but reduced by necrosis and mild enhancement. Confidence in 1p/19q status is moderate due to frontal location and eloquent involvement favoring astrocytoma.",
+  "subject_id": "BraTS2021_01724",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The proportion of necrosis is high (69.23%), which is a feature of glioblastoma (grade 4). Enhancement is mild, which is atypical for grade 4 tumors but can occur. The tumor involves eloquent cortex (Motor), which may suggest higher grade. However, the T2-FLAIR mismatch sign is more common in lower grade IDH-mutant tumors, and the patient is young, which might favor lower grade. Overall, necrosis dominates for grade assignment.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "subject_id": "BraTS2021_00012",
+  "idh": {
+    "reasoning": "The tumor exhibits multiple strong indicators of IDH-wildtype status. It is a very large, midline-crossing lesion with a massive non-enhancing core, which is highly suggestive of necrosis. The tumor volume is 263.755 mL, the non-enhancing/necrotic volume is 171.723 mL (65% of the tumor), and it causes a severe midline shift of 27 mm. These features\u2014large size, necrosis, and significant mass effect\u2014are hallmarks of glioblastoma, IDH-wildtype. The presence of satellite lesions also points towards an aggressive, IDH-wildtype phenotype. The primary counter-evidence is the minimal contrast enhancement (0.224 mL), as IDH-mutant tumors are often non-enhancing. However, the overwhelming evidence of necrosis and aggressive biological behavior strongly favors an IDH-wildtype prediction.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "crosses_ideal_midline",
+      "Side of Tumor Epicenter",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly indicative of an astrocytic lineage (non-codeleted). The tumor is deeply infiltrative, as evidenced by deep white matter invasion, extensive edema, and involvement of bilateral deep gray nuclei (thalamus, caudate). This infiltrative pattern with poorly defined margins is characteristic of astrocytomas. Most importantly, the presence of a very large necrotic core (NCR Volume 171.723 mL) is a classic feature of high-grade astrocytoma and is virtually never seen in oligodendroglioma (1p/19q-codeleted). The only feature weakly favoring codeletion is the frontal lobe epicenter, but this is a non-specific finding that is overwhelmingly contradicted by the other features.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive necrosis is a defining feature of a CNS WHO Grade 4 tumor. The metadata shows a very large non-enhancing core (NCR Volume 171.723 mL), which constitutes 65% of the total tumor volume. This radiographic evidence of necrosis is sufficient for a Grade 4 designation. This is further supported by other features of high-grade malignancy, including the massive tumor size (263.755 mL), severe mass effect (27 mm midline shift), and the presence of satellite lesions. While the contrast enhancement is minimal, which can sometimes be seen in lower-grade tumors, the definitive evidence of widespread necrosis establishes the diagnosis as Grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "max_shift_mm",
+      "midline_shift_present",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features are highly characteristic of a glioblastoma, IDH-wildtype. This is based on the very large tumor size, extensive central necrosis, significant mass effect with a 27 mm midline shift, and a bilateral, infiltrative growth pattern. Although contrast enhancement is minimal, the presence of extensive necrosis is a sufficient radiological criterion for a Grade 4 diagnosis in this context. The combination of IDH-wildtype, non-codeleted status, and Grade 4 is internally consistent."
+}

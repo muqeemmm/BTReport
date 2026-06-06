@@ -1,0 +1,43 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "reasoning": "No IDH-specific features available. IDH-mutant gliomas often show frontal lobe involvement and cortical involvement, which are present here, but without specific markers like 2HG MRS (not available) or characteristic enhancement patterns, the evidence is insufficient. Proportion of necrosis (0.02) is low, which is more common in wildtype glioblastomas, but not definitive. Given the lack of direct evidence, prediction defaults to wildtype with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "No direct evidence for 1p/19q status. Oligodendrogliomas (codeleted) typically involve frontal lobes and cortex, which is present, but also show calcifications (not assessed) and minimal enhancement. Here, enhancement is mild and proportion enhancing is low (0.07), which could suggest oligodendroglioma, but without calcification data or molecular markers, evidence is insufficient. Prediction defaults to non-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "Insufficient metadata for confident molecular subtyping. Key sequences like DWI/ADC, perfusion, MRS, and SWI are unavailable. Tumor is solitary, frontal cortical, mildly enhancing with minimal necrosis and predominant edema. Grade prediction relies on enhancement and necrosis proportions.",
+  "subject_id": "EGD-0312",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "Grade 4 glioblastoma typically shows necrosis and ring enhancement. Here, necrosis proportion is very low (0.02), which argues against grade 4. However, enhancement is present (mild) and the tumor involves eloquent motor cortex, which is common in high-grade gliomas. The thick enhancing margin (>3mm) is suggestive of high grade. Total tumor volume is large (29.071 mL), which correlates with higher grade. Given predominant edema and solitary lesion, grade 4 is possible but necrosis absence lowers confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Eloquent Brain Involvement",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

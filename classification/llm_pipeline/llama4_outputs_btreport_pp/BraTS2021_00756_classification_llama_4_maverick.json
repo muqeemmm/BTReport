@@ -1,0 +1,49 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (69 years) and the presence of a large, enhancing, and necrotic tumor with significant mass effect (midline shift, ventricular asymmetry, and ependymal invasion) are more typical of glioblastoma, IDH-wildtype. The T2-FLAIR mismatch score is 1.0, which is often associated with IDH-mutant astrocytomas, but the degree is relatively low (0.227). However, given the patient's age and the aggressive imaging features, IDH wildtype is more likely. The presence of necrosis (NCR Volume = 28.022 mL) and marked enhancement also supports a more aggressive tumor type, typically associated with IDH-wildtype glioblastoma.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "midline_shift_present",
+      "volumes_ideal_midline",
+      "CET Crosses midline",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect is more typical of glioblastoma or IDH-mutant astrocytoma rather than oligodendroglioma, which is more commonly associated with 1p/19q co-deletion. The T2-FLAIR mismatch score is 1.0, suggesting an astrocytic lineage, which is not typically codeleted. Given the likely diagnosis of either IDH-wildtype glioblastoma or IDH-mutant astrocytoma based on the previous prediction, non-codeleted is more probable.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor exhibits aggressive features such as large size, necrosis (NCR Volume = 28.022 mL), marked enhancement, significant mass effect (midline shift, ventricular asymmetry), and ependymal invasion. These characteristics are typical of a high-grade glioma. Given the likely IDH-wildtype status and the presence of necrosis and marked enhancement, the tumor is most likely to be a glioblastoma, WHO grade 4.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "midline_shift_present",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00756"
+}

@@ -1,0 +1,58 @@
+{
+  "subject_id": "BraTS2021_01528",
+  "idh": {
+    "reasoning": "The tumor shows a high necrosis proportion (Proportion Necrosis=42.12) and deep white\u2011matter invasion (Deep WM invasion=Present), both typical of IDH\u2011wildtype high\u2011grade glioma. Edema crosses the midline (Edema crosses midline=True) and there is ependymal invasion, further supporting a wildtype phenotype. However, the patient is young (age_years=28) and the enhancement is mild (Enhancement Quality=Mild, Proportion Enhancing=2.06), which are more common in IDH\u2011mutant tumors, creating some uncertainty.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Midline shift present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of extensive necrosis, deep infiltration and midline edema are more consistent with non\u2011codeleted diffuse glioma, while cortical involvement and a temporal location are features sometimes seen in oligodendroglioma (codeleted). The balance of evidence therefore favors a non\u2011codeleted status, though the lack of calcification data limits certainty.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "Key high\u2011grade indicators include a large necrotic component (Proportion Necrosis=42.12), edema crossing the midline, ependymal invasion, and a substantial total tumor volume (Total tumor volume (mL)=227.356). These support WHO grade\u202f4. Counter\u2011points are the mild enhancement and the patient\u2019s young age, which are more typical of lower\u2011grade lesions, but the necrosis and invasive features outweigh them.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Midline shift present",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI suggests a high\u2011grade IDH\u2011wildtype glioma (grade\u202f4) with non\u2011codeleted status, but the mild enhancement and young age introduce some uncertainty. Molecular testing (IDH1/2 sequencing, 1p/19q FISH) is recommended to confirm the diagnosis."
+}

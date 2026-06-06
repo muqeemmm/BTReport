@@ -1,0 +1,50 @@
+{
+  "subject_id": "UCSF-PDGM-236",
+  "idh": {
+    "reasoning": "The tumor is entirely non-enhancing, with zero volume of enhancing tumor or necrosis. This is a very strong indicator of IDH-mutant status, as IDH-wildtype gliomas (glioblastomas) are characterized by enhancement and necrosis. The tumor's location, involving the frontal lobe and cortex, is also classic for IDH-mutant gliomas. The lack of significant mass effect (no midline shift) further supports a less aggressive, IDH-mutant phenotype. There are no features suggestive of an IDH-wildtype tumor.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Cortical involvement",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging features present a challenge in differentiating between an oligodendroglioma (codeleted) and an astrocytoma (non-codeleted). Features common to both, such as frontal lobe involvement, cortical location, and lack of enhancement, are present. However, the tumor involves multiple lobes (frontal, parietal, temporal), which can be more characteristic of the diffusely infiltrative nature of an astrocytoma compared to the often more circumscribed appearance of an oligodendroglioma. Without features like calcification or specific signal characteristics (e.g., T2-FLAIR mismatch), this distinction is difficult. The multi-lobar spread provides weak evidence favoring a non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is strongly guided by enhancement and necrosis. This tumor shows a complete absence of both contrast enhancement (`ET Volume (mL)` is 0.0) and necrosis (`NCR Volume (mL)` is 0.0). These findings are the defining imaging characteristics of a low-grade glioma, specifically WHO grade 2. Features of higher-grade tumors, such as enhancement (grade 3 or 4) or necrosis (grade 4), are absent. The lack of significant mass effect (`midline_shift_present`: \"No\") and deep white matter invasion further corroborates a lower-grade diagnosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are highly characteristic of a low-grade diffuse glioma. The complete lack of enhancement or necrosis strongly supports a WHO grade 2 designation and an IDH-mutant status. The distinction between astrocytoma and oligodendroglioma is uncertain based on the available metadata, but the multi-lobar involvement provides slight preference for astrocytoma (1p/19q non-codeleted)."
+}

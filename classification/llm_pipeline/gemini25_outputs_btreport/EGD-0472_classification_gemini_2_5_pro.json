@@ -1,0 +1,51 @@
+{
+  "subject_id": "EGD-0472",
+  "idh": {
+    "reasoning": "The tumor is entirely non-enhancing, as indicated by an 'Enhancement Quality' of 'None', zero 'ET Volume (mL)', and zero 'Proportion Enhancing'. The complete absence of contrast enhancement is a very strong predictor for IDH-mutant status, as IDH-wildtype gliomas (glioblastomas) are typically characterized by avid, often ring-like, enhancement. Furthermore, the tumor's location involving the insula is a classic site for IDH-mutant astrocytomas. While there is significant mass effect ('midline_shift_present': 'Yes'), which can be seen in high-grade tumors of any type, the lack of enhancement is a more specific and powerful feature. Therefore, the evidence strongly favors an IDH-mutant glioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status hinges on differentiating between astrocytic and oligodendroglial features. The tumor's involvement of the insula ('Tumor Location') and deep gray matter structures including the thalamus, putamen, and pallidum ('Anatomical Overlap Regions') is highly characteristic of IDH-mutant astrocytomas (non-codeleted). Oligodendrogliomas (codeleted) are more typically cortically-based and less commonly involve the insula or deep gray matter so extensively. While the tumor does have cortical involvement and is non-enhancing, features which can be seen in oligodendrogliomas, the specific location in the insula and deep nuclei is a stronger differentiator. The balance of evidence, therefore, points towards a non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The grading is ambiguous due to conflicting features. The complete absence of enhancement ('Enhancement Quality': 'None') and necrosis ('NCR Volume (mL)': 0.0) are strong arguments against a grade 4 diagnosis and are typical for lower-grade gliomas (grade 2 or 3). However, the tumor exerts significant mass effect, with a 'max_shift_mm' of -6.0 and the presence of 'Deep WM invasion'. This degree of mass effect and infiltration suggests a more aggressive biological behavior than is typical for a grade 2 glioma. In the context of an IDH-mutant astrocytoma, where the distinction between grade 2 and 3 is primarily histological, the significant mass effect pushes the prediction towards the higher end of the non-enhancing spectrum. Therefore, grade 3 is the most likely diagnosis, balancing the lack of aggressive imaging features (enhancement, necrosis) with signs of significant growth and infiltration.",
+    "supporting_features": [
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features are highly characteristic of an IDH-mutant astrocytoma, given the insular location and complete lack of contrast enhancement. The significant mass effect in the absence of enhancement or necrosis creates some ambiguity in grading, but is most suggestive of a CNS WHO grade 3 tumor. A grade 4 designation would be unlikely without enhancement but cannot be fully excluded as it can be conferred by molecular features (CDKN2A/B homozygous deletion) not visible on imaging."
+}

@@ -1,0 +1,80 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status considered independently, the imaging metadata leans toward IDH-mutant disease because age_years is 39, Tumor Location and Region Proportions show a cortical/insular/temporal distribution, Enhancement Quality is only mild with very small ET Volume (mL), and Deep WM invasion plus Ependymal (ventricular) Invasion are absent. These are less typical of a classic older, deeply invasive, strongly enhancing IDH-wildtype glioblastoma pattern. Against IDH-mutant status, Multifocal or Multicentric disease with Number of lesions 2, substantial Proportion of Oedema and ED Volume (mL), NCR Volume (mL) with Proportion Necrosis, and absent T2-FLAIR Mismatch Present raise concern for more aggressive IDH-wildtype biology. Overall, the younger age and limited enhancement/invasion slightly outweigh the aggressive features, so IDH-mutant is favored with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Cortical involvement",
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the evidence is weak and mixed. Tumor Location and Region Proportions emphasize insular/temporal involvement rather than a classic frontal-predominant oligodendroglial pattern, while Multifocal or Multicentric disease, Number of lesions 2, high Proportion of Oedema with ED Volume (mL), and NCR Volume (mL) with Proportion Necrosis are less characteristic of a straightforward lower-grade oligodendroglioma pattern and therefore favor non-codeleted disease. Against non-codeleted status, Cortical involvement, age_years 39, mild Enhancement Quality, and absent T2-FLAIR Mismatch Present could still be compatible with oligodendroglioma. Because the metadata lacks strong discriminators and the findings conflict, non-codeleted is only slightly favored.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured T1/T2/FLAIR/T1-Gd metadata and remain uncertain. The main ambiguity is whether the aggressive features represent grade 3 versus grade 4 biology, because enhancement is mild and tiny despite edema, multifocality, and necrosis-labeled nonenhancing core.",
+  "subject_id": "EGD-0411",
+  "who_grade": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "n_components_enhancing"
+    ],
+    "prediction": 3,
+    "reasoning": "For CNS WHO grade considered independently, grade 2 is disfavored because Enhancement Quality is mild rather than absent, Thickness of enhancing margin is reported as >3mm, NCR Volume (mL) and Proportion Necrosis are present, and there is substantial Proportion of Oedema with ED Volume (mL) plus Multifocal or Multicentric disease. Grade 4 is also considered because Proportion Necrosis, Multifocal or Multicentric disease, Number of lesions 2, and edema burden are aggressive features. However, grade 4 is not unequivocal because ET Volume (mL) is very small, Enhancement Quality is only mild, n_components_enhancing reports no discrete enhancing components, midline_shift_present is minimal, and Deep WM invasion plus Ependymal (ventricular) Invasion are absent. Balancing high-grade features against the limited enhancement and lack of major invasive/mass-effect findings, grade 3 is favored over grade 2 or 4, with limited confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

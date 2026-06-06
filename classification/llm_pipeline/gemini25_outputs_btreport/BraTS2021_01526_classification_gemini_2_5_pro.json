@@ -1,0 +1,47 @@
+{
+  "subject_id": "BraTS2021_01526",
+  "idh": {
+    "reasoning": "The tumor is entirely non-enhancing (ET Volume (mL) is 0.0), which is a very strong indicator for IDH-mutant status. IDH-wildtype gliomas, typically glioblastomas, almost always exhibit enhancement. The tumor's location is predominantly in the frontal lobe, another classic feature of IDH-mutant gliomas. Furthermore, the lack of significant mass effect (midline_shift_present: 'No') despite a relatively large total volume (61.032 mL) is characteristic of the infiltrative nature of IDH-mutant tumors. There are no imaging features strongly suggestive of an IDH-wildtype status.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Region Proportions",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The evidence for 1p/19q co-deletion status is ambiguous. The tumor's location in the frontal lobe with significant cortical involvement ('Cortical involvement': 'Present', 'Region Proportions': ['cortex', 0.526]) is a classic feature of oligodendrogliomas (1p/19q-codeleted). However, other key distinguishing features are absent from the metadata. For instance, there is no information on the distinctness of tumor margins or the presence of calcifications, which would further support a codeleted status. The large amount of surrounding edema ('ED Volume (mL)': 32.801) and involvement of the caudate ('Anatomical Overlap Regions') can be seen in both subtypes but might slightly favor an astrocytoma (non-codeleted). Given the strong frontal and cortical preference, the evidence slightly favors a codeleted status, but confidence is low due to the lack of more specific features.",
+    "supporting_features": [
+      "Region Proportions",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The tumor is completely non-enhancing ('ET Volume (mL)': 0.0), which argues strongly against a WHO grade 4 diagnosis, as enhancement is a key feature of glioblastoma and grade 4 IDH-mutant astrocytoma. The choice is therefore between grade 2 and grade 3. The lack of enhancement is typical for grade 2 gliomas. However, the tumor is quite large ('Total tumor volume (mL)': 61.032), which raises suspicion for a higher grade. While grade 2 gliomas can grow to this size, a large volume is more frequently associated with grade 3 tumors. Without diffusion or perfusion imaging to assess cellularity, the distinction is difficult. Balancing the lack of enhancement against the large size, a grade 3 tumor is more probable than a grade 2, but this is uncertain.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are most consistent with an IDH-mutant glioma, given the complete lack of enhancement and frontal lobe location. The cortical involvement suggests an oligodendroglioma, though this is uncertain. The large tumor volume favors a higher grade, leading to a predicted diagnosis of Oligodendroglioma, CNS WHO grade 3. The absence of enhancement makes a grade 4 diagnosis highly unlikely."
+}

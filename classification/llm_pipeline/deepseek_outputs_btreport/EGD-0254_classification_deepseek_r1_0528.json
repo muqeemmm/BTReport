@@ -1,0 +1,42 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 72 years old, which is advanced age and typically associated with IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger patients. The tumor characteristics such as marked enhancement, necrosis proportion, and midline crossing are consistent with IDH-wildtype tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Edema crosses midline"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.9,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "IDH-wildtype gliomas are typically not 1p/19q codeleted. Since IDH is wildtype, 1p/19q co-deletion is unlikely. Additionally, the tumor location involves cortex, insula, temporal and frontal lobes, which is atypical for oligodendrogliomas that favor frontal lobes but are usually IDH-mutant and codeleted.",
+    "supporting_features": [
+      "idh.prediction",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor exhibits features typical of glioblastoma IDH-wildtype: advanced patient age, marked enhancement, necrosis, midline crossing, and involvement of eloquent areas. Confidence in IDH wildtype is high due to age and imaging features; confidence in non-codeletion is very high as it follows from IDH status.",
+  "subject_id": "EGD-0254",
+  "who_grade": {
+    "confidence": 0.95,
+    "contradicting_features": [],
+    "prediction": 4,
+    "reasoning": "The presence of necrosis (Proportion Necrosis 2.56%) and marked enhancement are hallmark features of glioblastoma (WHO grade 4). The tumor volume is large (306.914 mL) and involves eloquent areas, further supporting high-grade glioma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

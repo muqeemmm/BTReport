@@ -1,0 +1,44 @@
+{
+  "subject_id": "UCSF-PDGM-485",
+  "idh": {
+    "reasoning": "The patient's age of 65 is a very strong predictor for IDH-wildtype status, as the vast majority of diffuse gliomas in patients over 55 are IDH-wildtype. This demographic evidence is weighed against the imaging phenotype. The tumor is entirely non-enhancing ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0), which is a classic feature of IDH-mutant gliomas. However, the predictive power of age in this context is extremely high, often overriding ambiguous or even contradictory imaging features. Therefore, despite the non-enhancing appearance, an IDH-wildtype glioma is the more probable diagnosis.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status hinges on differentiating between astrocytic and oligodendroglial lineages. The tumor involves the left putamen and hippocampus ('Anatomical Overlap Regions'). Involvement of deep gray matter structures and limbic regions is more characteristic of astrocytomas (which are non-codeleted) than oligodendrogliomas. The temporal lobe location ('Tumor Location') is also somewhat less common for oligodendrogliomas, which have a predilection for the frontal lobes. While the non-enhancing nature is compatible with either, the anatomical involvement points more strongly towards a non-codeleted status.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "There is significant conflict between the patient's age and the tumor's imaging features. The complete absence of enhancement ('ET Volume (mL)': 0.0) and necrosis ('NCR Volume (mL)': 0.0), along with the lack of significant midline shift, are hallmarks of a lower-grade glioma (WHO grade 2 or 3). However, the patient's age of 65 makes a high-grade glioma statistically far more likely. According to the WHO CNS5 classification, an adult-type diffuse astrocytic glioma that is IDH-wildtype is, by definition, a Glioblastoma, CNS WHO grade 4, regardless of histological features like enhancement. Given the high likelihood of IDH-wildtype status based on age, a grade 4 diagnosis is the most probable, representing a non-enhancing or 'molecular' glioblastoma.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The predictions are primarily driven by the patient's advanced age (65), which strongly suggests an IDH-wildtype glioblastoma (WHO grade 4). However, there is a notable discordance with the imaging findings, which show a completely non-enhancing tumor more typical of a lower-grade glioma. This conflict lowers the confidence in the IDH prediction. The final diagnosis is consistent with a non-enhancing, 'molecular' glioblastoma."
+}

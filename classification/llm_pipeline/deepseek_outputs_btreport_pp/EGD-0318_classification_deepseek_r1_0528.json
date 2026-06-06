@@ -1,0 +1,55 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 49 years old, which is typical for IDH-wildtype glioblastoma. The tumor is midline and multifocal, features more common in IDH-wildtype tumors. Enhancement is marked and crosses midline, suggesting aggressive behavior. However, the T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present=0.0), which is a strong indicator of IDH-mutant astrocytoma. The mismatch score and degree are low, further arguing against IDH-mutant status. Given the age and aggressive features outweighing the absence of mismatch sign, IDH-wildtype is predicted.",
+    "supporting_features": [
+      "age_years",
+      "Side of Tumor Epicenter",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "CET Crosses midline"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves deep white matter (Deep WM invasion=Present) and eloquent areas are not involved (Eloquent Brain Involvement=No involvement), which is more typical of astrocytomas than oligodendrogliomas. Oligodendrogliomas often involve cortex and avoid deep structures. The tumor location includes cortex and corpus callosum, but deep WM invasion argues against oligodendroglial phenotype. The midline location and multifocality are uncommon in oligodendrogliomas. However, the absence of ependymal invasion and ventricular asymmetry does not contradict oligodendroglioma. Given mixed evidence, non-codeleted is predicted with low confidence.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Eloquent Brain Involvement",
+      "Side of Tumor Epicenter",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Asymmetrical Ventricles"
+    ]
+  },
+  "overall_comment": "The tumor shows features of high-grade glioma: marked enhancement, necrosis (Proportion Necrosis=1.23%), and large volume. The midline location and multifocality suggest aggressive behavior. Absence of T2-FLAIR mismatch supports IDH-wildtype. Deep WM invasion and lack of oligodendroglial features suggest astrocytic lineage. Grade 4 is assigned due to necrosis and enhancement.",
+  "subject_id": "EGD-0318",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has necrosis (Proportion Necrosis=1.23%), which is a hallmark of glioblastoma (grade 4). Enhancement is marked and crosses midline, indicating BBB breakdown. The tumor volume is large (33.609 mL) and multifocal. Necrosis presence overrides other grading criteria. Although necrosis proportion is low, its presence alone is sufficient for grade 4. No features suggest lower grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "CET Crosses midline",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric"
+    ]
+  }
+}

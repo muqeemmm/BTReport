@@ -1,0 +1,69 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the strongest MRI-metadata pattern favors an IDH-mutant diffuse glioma: age_years is 31, and younger adult age is more typical of IDH-mutant tumors; Enhancement Quality is None, ET Volume (mL) is 0.0, and Proportion Enhancing is 0.0, which supports a nonenhancing lower-grade-type diffuse glioma pattern rather than the more typical enhancing IDH-wildtype glioblastoma pattern. Cortical involvement is Present, and Tumor Location plus Region Proportions show a predominantly temporal/cortical multilobar infiltrative lesion, also compatible with IDH-mutant diffuse glioma. Evidence against IDH-mutant status includes Ependymal (ventricular) Invasion Present, Deep WM invasion Present, large Total tumor volume (mL) and Lesion Sizes APxTVxCC (cm), and high Proportion Necrosis, which are more concerning for aggressive biology and can be seen with IDH-wildtype tumors. On balance, the young age and complete absence of enhancement are stronger predictors here, so the conclusion is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the lesion distribution argues more for non-codeleted astrocytic diffuse glioma than oligodendroglioma: Tumor Location and Region Proportions emphasize temporal, cortical, occipital, parietal, and ventricular involvement rather than a frontal-predominant mass, which would more strongly support 1p/19q-codeletion. Deep WM invasion and Ependymal (ventricular) Invasion also fit an infiltrative astrocytic pattern. Evidence that could support 1p/19q-codeletion includes age_years of 31, Enhancement Quality None, ET Volume (mL) 0.0, Proportion Enhancing 0.0, and Cortical involvement Present, since oligodendrogliomas can occur in younger adults, involve cortex, and be nonenhancing. However, without frontal predominance or calcification information, and given the temporal/multilobar deep infiltrative pattern, the conclusion is non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional structural MRI metadata. Absence of DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification assessment limits confidence, especially for grade and 1p/19q status. The high Proportion Necrosis field is atypical in the setting of Enhancement Quality None and ET Volume (mL) 0.0, so histopathology and molecular testing remain essential.",
+  "subject_id": "BraTS2021_01534",
+  "who_grade": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "For CNS WHO grade, the imaging metadata most strongly supports a lower-grade, nonenhancing diffuse glioma pattern: Enhancement Quality is None, ET Volume (mL) is 0.0, Proportion Enhancing is 0.0, and midline_shift_present is Minimal, all of which argue against a conventional enhancing high-grade glioma appearance. Multiple satellites present is Absent, Multifocal or Multicentric is Solitary, and Number of lesions is 1, which also do not suggest disseminated aggressive behavior. Evidence against grade 2 includes high Proportion Necrosis, Ependymal (ventricular) Invasion Present, Deep WM invasion Present, large Total tumor volume (mL), large Lesion Sizes APxTVxCC (cm), and ED Volume (mL) 17.152, which raise concern for at least grade 3 or grade 4 biology. Because the absence of enhancement is a major feature favoring grade 2 while the invasive/necrosis-related fields create substantial uncertainty, the best estimate is CNS WHO grade 2 with limited confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

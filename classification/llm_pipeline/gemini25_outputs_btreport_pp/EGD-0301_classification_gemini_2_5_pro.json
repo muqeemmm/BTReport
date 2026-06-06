@@ -1,0 +1,51 @@
+{
+  "subject_id": "EGD-0301",
+  "idh": {
+    "reasoning": "The patient's young age (36 years) is a strong predictor for an IDH-mutant glioma, as IDH-wildtype gliomas typically occur in older patients. The tumor's location in the frontal lobe is also classic for IDH-mutant subtypes. Furthermore, the imaging phenotype is predominantly non-enhancing, with a very small enhancing volume (ET Volume (mL): 0.054) and mild enhancement quality, which is characteristic of IDH-mutant tumors rather than the aggressive enhancement seen in IDH-wildtype glioblastoma. The absence of deep white matter invasion also supports a less aggressive, likely IDH-mutant, biology. While there is a small focus of necrosis, which is a high-grade feature often seen in IDH-wildtype tumors, it is a minor component of the overall lesion and can be seen in higher-grade IDH-mutant gliomas. The balance of evidence, particularly the strong demographic and macroscopic features, heavily favors an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made assuming an IDH-mutant status. The key feature differentiating between codeleted (oligodendroglioma) and non-codeleted (astrocytoma) is the tumor margin. The quantitative measure of the FLAIR transition zone is relatively narrow (median_mm: 1.51), suggesting a sharply demarcated border. This feature is classically associated with oligodendrogliomas (codeleted). The frontal lobe location is also very common for this subtype. The primary feature arguing against this is the absence of the T2-FLAIR mismatch sign, which is highly specific for IDH-mutant astrocytomas (non-codeleted). However, the absence of this sign is not specific and does not rule out an astrocytoma or argue strongly for an oligodendroglioma. Given the positive evidence of a sharp border, the prediction leans towards codeleted, but with moderate confidence due to the lack of definitive features.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis (NCR Volume (mL): 0.19) is a definitive imaging marker of high-grade glioma. Although the volume of necrosis is small and the tumor is overwhelmingly non-enhancing, the mere presence of necrosis elevates the grade. In the context of an IDH-mutant, 1p/19q-codeleted glioma (oligodendroglioma), the presence of necrosis and/or microvascular proliferation (for which contrast enhancement is a proxy) defines the tumor as anaplastic, corresponding to CNS WHO grade 3. If this were an IDH-mutant astrocytoma, necrosis would define it as grade 4. Given the other features suggesting an oligodendroglioma, grade 3 is the most likely diagnosis. The minimal mass effect and small volume of the high-grade components argue against a grade 4 lesion.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Tumor Core Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's young age and predominantly non-enhancing frontal lobe tumor strongly suggest an IDH-mutant glioma. The relatively sharp tumor borders favor an oligodendroglioma (1p/19q-codeleted). The presence of a small focus of necrosis and mild enhancement, despite the overall low-grade appearance, indicates anaplastic features, making a WHO grade 3 diagnosis most likely. The integrated diagnosis is therefore consistent with an anaplastic oligodendroglioma."
+}

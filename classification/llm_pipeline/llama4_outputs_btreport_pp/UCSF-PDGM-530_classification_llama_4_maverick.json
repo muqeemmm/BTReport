@@ -1,0 +1,42 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Score' is 0.87, and 'T2-FLAIR Mismatch Degree' is 0.52, both indicating a positive T2-FLAIR mismatch. This feature is strongly associated with IDH-mutant gliomas. The patient's age (34 years) also aligns with the demographic more commonly associated with IDH-mutant gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are more likely to be 1p/19q co-deleted. The tumor's multifocal nature and involvement of multiple structures could suggest a more aggressive or diffuse type, which is less typical for co-deleted tumors. The absence of calcifications (not directly assessed but inferred from the lack of mention in the provided metadata) and the presence of ependymal invasion might also steer away from the typical profile of 1p/19q co-deleted tumors.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows significant mass effect (midline shift present, 'n_slices_with_shift' = 131, 'mean_shift_mm' = 4.34), is multifocal, and has a large edema volume (ED Volume = 182.62 mL), indicating a high level of aggressiveness. The presence of ependymal invasion and deep white matter invasion further supports a high-grade tumor. While the enhancement quality is 'Mild', the overall tumor behavior suggests a high-grade glioma. IDH-mutant gliomas with such aggressive features are likely to be grade 4.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "ED Volume (mL)",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "UCSF-PDGM-530"
+}

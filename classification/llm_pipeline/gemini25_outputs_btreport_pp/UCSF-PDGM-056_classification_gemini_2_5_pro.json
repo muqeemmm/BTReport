@@ -1,0 +1,48 @@
+{
+  "subject_id": "UCSF-PDGM-056",
+  "idh": {
+    "reasoning": "The patient's advanced age (79 years) is a very strong predictor for IDH-wildtype status. The MRI features provide overwhelming corroborating evidence. The tumor displays marked, thick-rimmed contrast enhancement with a large enhancing volume and a significant necrotic core, which is the classic presentation of an IDH-wildtype glioblastoma. Furthermore, the tumor has very sharp, well-defined borders, as evidenced by the high boundary sharpness score and very thin transition zone, which is characteristic of IDH-wildtype gliomas and argues against the diffusely infiltrative nature of IDH-mutant astrocytomas. The absence of the T2-FLAIR mismatch sign further reduces the likelihood of an IDH-mutant astrocytoma. There are no contradicting features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "boundary_sharpness",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.99
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification must be performed independently of the IDH prediction. The imaging phenotype is strongly indicative of an astrocytic lineage tumor rather than an oligodendroglioma. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically have indistinct borders and are less likely to present with extensive necrosis and marked, thick-rim enhancement. This tumor exhibits the opposite: very sharp borders, significant necrosis, and marked enhancement. The posterior location (parietal/occipital) is also less typical for oligodendroglioma, which has a predilection for the frontal lobes. Therefore, the features are highly suggestive of a non-codeleted status.",
+    "supporting_features": [
+      "boundary_sharpness",
+      "Transition Zone Thickness (FLAIR)",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of a significant necrotic core is a defining feature of a CNS WHO grade 4 diffuse glioma. The metadata explicitly quantifies a substantial proportion of necrosis (14.62%) and a necrotic volume of over 4 mL. This is strongly supported by the presence of marked, thick-rim contrast enhancement, another key radiological feature of a grade 4 lesion. The combination of central necrosis and ring enhancement is the hallmark of the highest grade, and there are no imaging features to suggest a lower grade (e.g., non-enhancement or lack of necrosis).",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age and classic imaging features\u2014a solitary lesion with marked ring enhancement, central necrosis, and sharp margins\u2014provides a high-confidence diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. All individual predictions are strongly supported by the data and are internally consistent with WHO CNS5 classification criteria."
+}

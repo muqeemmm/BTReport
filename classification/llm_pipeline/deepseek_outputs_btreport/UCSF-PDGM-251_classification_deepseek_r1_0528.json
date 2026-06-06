@@ -1,0 +1,42 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 36 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor is nonenhancing, which is more common in IDH-mutant tumors. There is no necrosis, which is typical for IDH-mutant tumors. The eloquent brain involvement is absent, which is more common in IDH-mutant tumors.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region, which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas (codeleted). Oligodendrogliomas often involve frontal lobes and may have calcifications, but calcifications are not assessed here. The tumor is nonenhancing, which can occur in both, but without specific features favoring oligodendroglioma, astrocytoma is more likely.",
+    "supporting_features": [
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma. The absence of enhancement and necrosis suggests lower grade, but without diffusion/perfusion data, grade assignment is uncertain.",
+  "subject_id": "UCSF-PDGM-251",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Proportion of Oedema"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor is nonenhancing with no necrosis, which is typical for grade 2 gliomas. However, there is significant edema (100% proportion) which can be seen in higher grades. Without diffusion/perfusion to assess cellularity or microvascular proliferation, grade assignment is uncertain. The absence of enhancement and necrosis favors grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

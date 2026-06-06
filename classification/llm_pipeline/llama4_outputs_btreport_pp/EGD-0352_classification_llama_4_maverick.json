@@ -1,0 +1,41 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The T2-FLAIR mismatch score is 0.6489237182698563, which is below the typical threshold for a positive T2-FLAIR mismatch sign (usually considered around 0.9 or higher). The presence of a T2-FLAIR mismatch is a strong indicator of IDH-mutant astrocytomas. Given the score is not high, it suggests the absence of a significant T2-FLAIR mismatch. Additionally, the patient's age (47 years) and the presence of enhancement (Enhancement Quality: 'Mild', Proportion Enhancing: 0.82) are more commonly associated with IDH-wildtype gliomas. Therefore, based on the available metadata, the tumor is likely IDH wildtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of a mild enhancement and the absence of a significant T2-FLAIR mismatch are not specific indicators for 1p/19q co-deletion status. However, the tumor's characteristics such as cortical involvement and the location (temporal, cortex, parietal, and insula lobes) could be seen in oligodendrogliomas, which are typically IDH-mutant and 1p/19q co-deleted. But given the IDH status is predicted as wildtype, and there's no direct evidence from the provided metadata that strongly supports 1p/19q co-deletion, it is reasonable to infer that the tumor is non-codeleted.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "IDH mutation status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows mild enhancement, has a significant proportion of necrosis (Proportion Necrosis: 15.97%), and a large edema volume (ED Volume: 83.191 mL). These features, along with the presence of deep white matter invasion and the patient's age, are suggestive of a higher-grade tumor. The presence of necrosis and significant edema typically correlates with higher-grade gliomas. Given these characteristics, the tumor is likely to be of a higher grade, such as grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0352"
+}

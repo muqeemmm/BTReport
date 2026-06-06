@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_00337",
+  "idh": {
+    "reasoning": "The patient is 53 years old. Age > 50 is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in older adults. The tumor is solitary, located in the temporal lobe, cortex, and insula, and involves deep white matter. There is marked enhancement and significant necrosis (35.19%). While these features can be seen in both IDH-mutant and wildtype tumors, the combination of age > 50, large size (87.182 mL), deep white matter invasion, marked enhancement, and significant necrosis leans towards IDH-wildtype status. However, the absence of specific features strongly favoring wildtype (like extensive hemorrhage or calcification, which are not assessed here) and the possibility of IDH-mutant tumors in this age group make a definitive prediction difficult based solely on these structural MRI features. Given the age and tumor characteristics (size, necrosis, deep invasion), IDH-wildtype is slightly more probable.",
+    "supporting_features": [
+      "age_years",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information regarding 1p/19q co-deletion status. Features like age or tumor location are not reliable predictors of co-deletion status. Therefore, a prediction cannot be made based on the available data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 53 years old with a large solitary tumor (87.182 mL) involving the temporal lobe, cortex, and insula with deep white matter invasion ('Deep WM invasion': 'Present'). There is marked enhancement ('Enhancement Quality': 'Marked') and significant necrosis ('Proportion Necrosis': 35.19%). The tumor effaces the right ventricle ('Effaced Ventricle': 'Right') and causes midline shift ('midline_shift_present': 'Yes'). Cortical involvement is present ('Cortical involvement': 'Present'). These features suggest aggressive behavior. While IDH status is uncertain (predicted as wildtype with moderate confidence), even if it were mutant, the combination of large size, deep invasion, marked enhancement, significant necrosis, and mass effect points towards a high grade. If IDH-wildtype (as predicted), this would be Grade 4. If IDH-mutant with these features (especially deep invasion and necrosis), it would likely be Grade 3 or potentially Grade 4 depending on other molecular markers not available here. Given the strong indicators of aggressive growth (large size, deep invasion, necrosis) and mass effect in an adult patient, a WHO Grade 4 diagnosis is the most likely scenario based on these structural MRI findings alone.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Effaced Ventricle",
+      "midline_shift_present",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "IDH-wildtype diffuse astrocytoma WHO Grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an adult female presenting with a large solitary glioma involving multiple structures including the temporal lobe cortex and insula with deep white matter invasion and significant necrosis. The tumor causes mass effect including ventricular effacement and midline shift. Based on these structural MRI findings alone: IDH status prediction leans towards wildtype due to age >50 combined with large size/necrosis/deep invasion; co-deletion status cannot be determined; WHO grade is predicted as Grade IV due to aggressive features."
+}

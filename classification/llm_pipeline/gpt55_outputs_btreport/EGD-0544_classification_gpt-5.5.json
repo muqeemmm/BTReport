@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status, the strongest imaging evidence favoring IDH-wildtype is an aggressive enhancing and necrotic phenotype: Enhancement Quality is marked, Thickness of enhancing margin is >3mm, Proportion Enhancing is substantial, Proportion Necrosis is high, Proportion of Oedema is present, and midline_shift_present is Yes. These features are more typical of IDH-wildtype glioblastoma than lower-grade IDH-mutant diffuse glioma. Evidence arguing against IDH-wildtype includes Tumor Location and Region Proportions showing frontal_lobe/cortex/insula involvement, Cortical involvement being Present, Deep WM invasion and Ependymal (ventricular) Invasion being Absent, and a Solitary single lesion, which can be seen in IDH-mutant glioma. Overall, the aggressive enhancement-necrosis-mass-effect pattern outweighs the frontal cortical location, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, non-codeleted is favored by the aggressive imaging phenotype: Enhancement Quality is marked, Thickness of enhancing margin is >3mm, Proportion Necrosis is high, Proportion of Oedema is present, and midline_shift_present is Yes. These features are less typical of classic oligodendroglioma, which often presents as a frontal cortical/subcortical tumor but is not usually dominated by thick marked enhancement and extensive necrosis on conventional MRI. Evidence supporting codeletion is limited to Tumor Location and Region Proportions showing frontal_lobe and cortex involvement with Cortical involvement Present. Because the aggressive necrotic enhancing pattern is stronger than the location-based oligodendroglial clue, the best estimate is non-codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, calcification assessment, or patient age. The frontal cortical/insular location introduces uncertainty for IDH and 1p/19q calls, but the marked enhancement, thick enhancing margin, necrosis, edema, and mass effect strongly support a high-grade glioma phenotype.",
+  "subject_id": "EGD-0544",
+  "who_grade": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade, grade 4 is strongly favored by Enhancement Quality being marked, Thickness of enhancing margin being >3mm, Proportion Enhancing being substantial, Proportion Necrosis being high, Proportion of Oedema being present, and midline_shift_present being Yes with measurable max_shift_mm. Necrosis and thick marked enhancement are especially concerning for grade 4 biology on conventional MRI. Features arguing against the most advanced appearance include a moderate Lesion Sizes APxTVxCC, Total tumor volume that is not massive, Multifocal or Multicentric being Solitary, Multiple satellites present being Absent, and Ependymal (ventricular) Invasion being Absent. Despite these, the necrotic enhancing phenotype with edema and shift outweighs the absence of multifocal or ependymal spread, so grade 4 is the best estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "ED Volume (mL)",
+      "ET Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

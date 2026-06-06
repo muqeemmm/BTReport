@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "gender",
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "Independently assessing IDH status from the MRI metadata, the pattern favors IDH-mutant diffuse glioma because the lesion is cortically involved, has only mild and extremely small enhancing tumor burden, is solitary, shows absent deep white matter invasion and absent ependymal invasion, and has only minimal midline shift; these features argue against the typical MRI phenotype of IDH-wildtype glioblastoma with bulky enhancement, aggressive invasion, and marked mass effect. Evidence arguing against IDH-mutant is the large component labeled noncontrast/necrotic by Proportion Necrosis and NCR Volume (mL), which can be seen in higher-grade IDH-wildtype tumors; male gender is nonspecific, and age_years is not assessed, removing an important discriminator. On balance, the available MRI metadata supports IDH-mutant over IDH-wildtype.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "Independently assessing 1p/19q status from the MRI metadata, co-deletion is favored by cortical involvement, frontal-lobe involvement within the regional distribution, mild enhancement with minimal enhancing volume, and absent deep white matter and ependymal invasion; this combination is compatible with an oligodendroglial-type diffuse glioma. Evidence against co-deletion is that the lesion is predominantly parietal rather than purely frontal, the epicenter is reported as midline, and the enhancing margin is described as greater than 3 mm, which are less specific for oligodendroglioma and can overlap with astrocytic tumors. Because the provided MRI metadata lacks highly specific discriminators, the balance only mildly favors 1p/19q co-deletion.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without age, diffusion, perfusion, spectroscopy, or susceptibility information. The very large nonenhancing/necrotic label conflicts with the near-absent enhancement, so the grade estimate is uncertain and should be confirmed histomolecularly.",
+  "subject_id": "EGD-0230",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "Independently assessing CNS WHO grade from the MRI metadata, grade 2 is favored by mild enhancement, extremely small enhancing volume, very low enhancing proportion, solitary presentation, absent satellites, absent deep white matter invasion, absent ependymal invasion, no tumor-associated ventricular asymmetry, and only minimal midline shift; these features argue against a high-grade tumor with extensive enhancement, invasion, and mass effect. Evidence against grade 2 includes a large component labeled as necrosis/noncontrast tumor by Proportion Necrosis and NCR Volume (mL), an enhancing margin greater than 3 mm, and a moderate lesion size/total volume, which could support grade 3 or grade 4 if true necrosis or aggressive biology is present. Given the dominant low-enhancement and low-invasion pattern but meaningful conflict from the necrosis-labeled component, grade 2 is the best estimate with moderate uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Asymmetrical Ventricles",
+      "midline_shift_present",
+      "max_shift_mm",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

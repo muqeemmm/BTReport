@@ -1,0 +1,99 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The imaging metadata favors IDH-wildtype disease because the patient is older and the tumor shows aggressive behavior: very large whole-tumor and edema burden, necrosis, enhancing tumor, midline involvement/crossing, deep white matter invasion, ependymal invasion, multiple satellites, and mass effect with midline shift. These features are more typical of IDH-wildtype glioblastoma than lower-grade IDH-mutant diffuse glioma. Features arguing against IDH-wildtype include frontal/cortical/insular location, which can be seen in IDH-mutant gliomas, and only mild/low-proportion enhancement rather than florid enhancement. Overall, the aggressive infiltrative and high-grade pattern outweighs the location-based counterevidence, supporting IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Whole Tumor Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "midline_shift_present",
+      "max_shift_mm",
+      "level_max_shift",
+      "Asymmetrical Ventricles",
+      "Text Report",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata favors non-codeleted status because the lesion has multiple aggressive features that are less typical of classic 1p/19q-codeleted oligodendroglioma: extensive edema, necrosis, enhancing tumor, midline crossing, ependymal invasion, deep white matter invasion, multiple satellites, and marked mass effect. Features that could support codeletion include frontal-lobe and cortical involvement, which are common in oligodendroglioma, plus mild enhancement. However, the overall pattern is dominated by infiltrative high-grade features rather than a typical oligodendroglial imaging phenotype, so non-codeleted is favored.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Side of Tumor Epicenter",
+      "Text Report",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, SWI/GRE, or calcification assessment. Molecular testing remains required for definitive WHO CNS5 classification. The strongest uncertainty is that frontal/cortical/insular location can overlap with IDH-mutant and oligodendroglial tumors, but the extensive edema, necrosis, invasion, satellites, and mass effect favor glioblastoma, IDH-wildtype.",
+  "subject_id": "EGD-0700",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ],
+    "prediction": 4,
+    "reasoning": "The metadata strongly supports CNS WHO grade 4 because there is necrotic/non-enhancing core, measurable enhancing tumor with a thick enhancing margin, very large edema burden, substantial whole-tumor volume, midline shift, ventricular asymmetry, ependymal invasion, deep white matter invasion, enhancing and edema components crossing midline, and multiple satellites. These are aggressive features favoring grade 4 over grade 2 or grade 3. Features arguing against grade 4 include only mild enhancement, a relatively small enhancing proportion, and a solitary lesion rather than frank multifocal disease. Nonetheless, the presence of necrosis, enhancement, invasion, satellites, and mass effect makes grade 4 the best estimate.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Whole Tumor Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Multiple satellites present",
+      "Text Report",
+      "n_components_enhancing"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,43 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (36 years old), which is more common in IDH-mutant gliomas. The tumor is located in the frontal lobe and cortex, which is typical for IDH-mutant tumors. However, there is no enhancement, which is more common in IDH-wildtype gliomas. The T2-FLAIR mismatch score is 0.596, which is below the typical threshold for mismatch (usually >0.8), suggesting no mismatch, which is more common in IDH-wildtype tumors.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (speech motor and motor), which is more common in astrocytomas (non-codeleted) than oligodendrogliomas (codeleted). However, the frontal lobe location is common in both, and there is no specific feature strongly favoring either.",
+    "supporting_features": [
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "The tumor is nonenhancing and consists entirely of edema, with no enhancing tumor or necrosis. The T2-FLAIR mismatch score is low, suggesting no mismatch. The patient is young, and the tumor is frontal, cortical, and involves eloquent areas. Given the absence of enhancement and necrosis, and the low T2-FLAIR mismatch, the tumor is likely a low-grade glioma. The involvement of eloquent areas and frontal location suggest astrocytoma over oligodendroglioma, but confidence is low due to conflicting features.",
+  "subject_id": "UCSF-PDGM-231",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "reasoning": "There is no enhancement (Enhancement Quality: None), no necrosis (NCR Volume: 0.0), and no deep white matter invasion. These features suggest a low-grade glioma (WHO grade 2). However, the involvement of eloquent areas (speech motor and motor) may suggest higher grade, but without enhancement or necrosis, grade 2 is more likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume",
+      "Deep WM invasion"
+    ]
+  }
+}

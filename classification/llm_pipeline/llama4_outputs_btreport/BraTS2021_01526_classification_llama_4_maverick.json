@@ -1,0 +1,44 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The tumor is located in the frontal lobe, involves the cortex, and is non-enhancing. Adult-type diffuse gliomas that are IDH-mutant often present with these characteristics. The absence of enhancement (Enhancement Quality: 'None', Proportion Enhancing: 0.0) is more typical of IDH-mutant gliomas, which are less likely to show robust enhancement compared to IDH-wildtype gliomas. Additionally, the presence of significant necrosis (Proportion Necrosis: 46.26) is not typical for IDH-mutant gliomas but can be seen in higher-grade tumors. However, the overall profile leans towards an IDH-mutant tumor due to its non-enhancing nature and frontal lobe involvement.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor involves the frontal lobe and cortex, and is non-enhancing. IDH-mutant gliomas with 1p/19q co-deletion (oligodendrogliomas) often present in a similar manner. The absence of ependymal invasion and deep white matter invasion could be consistent with this subtype. However, the presence of significant necrosis is unusual for typical oligodendrogliomas. Given the IDH mutation status is predicted as 'mutant', the likelihood of 1p/19q co-deletion is considered based on the tumor's characteristics.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor has a significant proportion of necrosis (46.26%) and a substantial total tumor volume (61.032 mL), indicating a high-grade tumor. The absence of enhancement is less typical for high-grade gliomas, but the presence of necrosis and large volume suggests aggressive features. Given the predicted IDH mutation status is 'mutant', and considering the presence of necrosis, the tumor is likely to be grade 4 (glioblastoma, IDH-mutant).",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01526"
+}

@@ -1,0 +1,61 @@
+{
+  "subject_id": "EGD-0606",
+  "idh": {
+    "reasoning": "The lesion shows only mild contrast enhancement (\"Enhancement Quality\":\"Mild\") and a very low proportion of enhancing tumor (\"Proportion Enhancing\":0.05), together with low necrosis (\"Proportion Necrosis\":0.17). These imaging patterns are more typical of IDH\u2011mutant diffuse gliomas and argue against the strong enhancement and necrosis usually seen in IDH\u2011wildtype glioblastoma. However, the tumor is multifocal (\"Multifocal or Multicentric\":\"Multifocal\"), bilateral (\"Side of Tumor Epicenter\":\"Bilateral\"), and has edema crossing the midline (\"Edema crosses midline\":\"True\"), features that can be seen in aggressive IDH\u2011wildtype disease, creating some uncertainty. Balancing the predominance of low\u2011grade imaging signs against the few high\u2011grade cues leads to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor is located in the frontal lobe with cortical involvement (\"Region Proportions\" includes \"frontal_lobe\" and \"cortex\"), and shows only mild enhancement, which are imaging hallmarks often associated with 1p/19q\u2011codeleted oligodendrogliomas. Conversely, the presence of deep white\u2011matter invasion (\"Deep WM invasion\":\"Present\"), ependymal invasion (\"Ependymal (ventricular) Invasion\":\"Present\"), and a multifocal bilateral pattern (\"Multifocal or Multicentric\":\"Multifocal\", \"Side of Tumor Epicenter\":\"Bilateral\") are more typical of astrocytic tumors and argue against codeletion. Considering the mixed evidence, the balance favors a non\u2011codeleted status.",
+    "supporting_features": [
+      "Region Proportions",
+      "Enhancement Quality",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.66
+  },
+  "who_grade": {
+    "reasoning": "Mild contrast enhancement (\"Enhancement Quality\":\"Mild\") and a very low enhancing tumor volume (\"Proportion Enhancing\":0.05) are more consistent with a lower WHO grade (II). Yet, the lesion demonstrates edema crossing the midline (\"Edema crosses midline\":\"True\"), ependymal invasion (\"Ependymal (ventricular) Invasion\":\"Present\"), and a multifocal bilateral distribution (\"Multifocal or Multicentric\":\"Multifocal\", \"Side of Tumor Epicenter\":\"Bilateral\"), which are features suggestive of a higher grade (III). The necrosis proportion is low (\"Proportion Necrosis\":0.17) and the enhancing tumor volume is minimal (\"ET Volume (mL)\":0.119), arguing against grade IV. We therefore assign WHO grade III as the most plausible grade given the mixed but overall higher\u2011grade cues.",
+    "supporting_features": [
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.67
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, non-codeleted, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks advanced sequences (DWI, perfusion, spectroscopy) that could better differentiate IDH\u2011wildtype from IDH\u2011mutant disease and clarify 1p/19q status. The multifocal, bilateral nature introduces some uncertainty, but the imaging profile leans toward an IDH\u2011mutant astrocytoma, WHO grade III."
+}

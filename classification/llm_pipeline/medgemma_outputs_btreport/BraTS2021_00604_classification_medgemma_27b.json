@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_00604",
+  "idh": {
+    "reasoning": "The available metadata does not contain features typically associated with IDH-mutant gliomas (e.g., smaller size, less necrosis, less enhancement, less edema, less mass effect) nor features strongly suggestive of IDH-wildtype (e.g., large size, significant necrosis, marked enhancement, significant edema, midline shift). The tumor is large (Total tumor volume 148.496 mL), has marked enhancement (Enhancement Quality: Marked), significant necrosis (Proportion Necrosis: 18.32), and substantial edema (Proportion of Oedema: 39.56). It also causes midline shift (midline_shift_present: Yes) and ventricular effacement (Effaced Ventricle: Right). These features are more commonly seen in IDH-wildtype tumors, particularly glioblastoma. However, the presence of multiple satellites (Multiple satellites present: Present) can be seen in both IDH-mutant and wildtype tumors. Given the lack of definitive features for either status and the presence of several features leaning towards wildtype, I will predict wildtype but with low confidence due to the absence of key differentiating features like DWI/perfusion.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Effaced Ventricle"
+    ],
+    "contradicting_features": [
+      "Multiple satellites present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata lacks any information regarding 1p/19q co-deletion status. There are no imaging features that reliably predict this molecular marker. Therefore, a prediction cannot be made based on the available data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features suggestive of a high grade. It is large (Total tumor volume 148.496 mL), shows marked enhancement (Enhancement Quality: Marked), has significant necrosis (Proportion Necrosis: 18.32), involves deep white matter (Deep WM invasion: Present), shows ependymal invasion (Ependymal (ventricular) Invasion: Present), causes midline shift (midline_shift_present: Yes), and involves eloquent brain regions (Eloquent Brain Involvement: Speech motor and Motor). The presence of marked enhancement, necrosis, deep white matter invasion, and ependymal invasion strongly points towards a Grade 4 glioma according to WHO CNS5 criteria. While some Grade 3 gliomas can show enhancement and deep invasion, the combination of marked enhancement, significant necrosis (>10%), ependymal invasion, and midline shift is highly characteristic of Grade 4.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "IDH-wildtype, non-codeleted Glioblastoma WHO Grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The tumor exhibits several features suggestive of a high grade glioma based on the provided metadata."
+}

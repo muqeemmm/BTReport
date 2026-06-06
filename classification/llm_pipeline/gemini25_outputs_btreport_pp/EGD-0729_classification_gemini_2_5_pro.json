@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0729",
+  "idh": {
+    "reasoning": "The prediction of IDH status is challenging due to conflicting features. The strongest evidence for IDH-mutant status is the definitive presence of the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0, `T2-FLAIR Mismatch Score`: 0.7365), which is highly specific for IDH-mutant astrocytomas. The patient's relatively young age (`age_years`: 37) also favors an IDH-mutant glioma. However, several features strongly suggest an IDH-wildtype tumor (glioblastoma), including `Marked` `Enhancement Quality`, a very high `Proportion Necrosis` (46.15%), a thick enhancing margin (`Thickness of enhancing margin`: \">3mm\"), and `Ependymal (ventricular) Invasion`. Given the high molecular specificity of the T2-FLAIR mismatch sign, it is weighted more heavily than the less specific, albeit aggressive, imaging features. Therefore, the prediction is IDH-mutant, but with moderate confidence reflecting the significant contradictory evidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q status is primarily driven by the T2-FLAIR mismatch sign. The presence of a T2-FLAIR mismatch (`T2-FLAIR Mismatch Present`: 1.0) is a well-established imaging biomarker for IDH-mutant astrocytomas, which are, by definition, 1p/19q non-codeleted. The aggressive features, such as marked enhancement and high necrosis, are also more commonly seen in the progression of high-grade astrocytomas than in oligodendrogliomas (which are 1p/19q codeleted). There are no strong features to suggest a codeleted status. Therefore, the evidence points strongly towards a non-codeleted tumor.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is based on the presence of high-grade imaging features. The most definitive feature is the large proportion of central tumor necrosis (`Proportion Necrosis`: 46.15%), which is a radiological surrogate for histopathological necrosis and a defining characteristic of WHO grade 4 gliomas. This is strongly supported by the `Marked` `Enhancement Quality`, a large enhancing volume (`ET Volume (mL)`: 64.184), and a thick enhancing margin (`Thickness of enhancing margin`: \">3mm\"), which suggest significant microvascular proliferation. Additional features indicating high-grade biology include the very large tumor size (`Total tumor volume (mL)`: 222.373), significant mass effect (`max_shift_mm`: 13.0), and `Ependymal (ventricular) Invasion`. There is no imaging evidence to support a lower grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents with conflicting imaging features. The strong T2-FLAIR mismatch sign is highly specific for an IDH-mutant astrocytoma. However, the tumor also displays aggressive features more typical of an IDH-wildtype glioblastoma, including marked enhancement and extensive necrosis. Weighing the high specificity of the molecular imaging marker, the most likely diagnosis is an IDH-mutant astrocytoma that has undergone high-grade transformation. The presence of extensive necrosis on imaging strongly indicates a CNS WHO grade 4."
+}

@@ -1,0 +1,51 @@
+{
+  "id": "patient_0426",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (60 years) and the presence of a large, enhancing tumor with significant mass effect (midline shift, ependymal invasion, and edema crossing midline) are more typical of IDH wildtype glioblastoma. The tumor's aggressive features, such as marked enhancement, large size (7.2 cm in CC dimension), and necrosis (Proportion Necrosis: 24.8%), further support this prediction. IDH mutant gliomas are less likely to present with such aggressive features at this age.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Lesion Sizes APxTVxCC (cm)",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "crosses_ideal_midline",
+        "Ependymal (ventricular) Invasion",
+        "Edema crosses midline"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect is more typical of glioblastoma, which is usually IDH wildtype and non-codeleted. The tumor's frontal lobe location and lack of features typical for oligodendroglioma (e.g., calcifications, which are not assessable here) make codeletion less likely. The clinical and radiological presentation does not strongly suggest an oligodendroglioma, which is more commonly associated with 1p/19q codeletion.",
+      "supporting_features": [
+        "Lesion Sizes APxTVxCC (cm)",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "age_years"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor exhibits aggressive features such as large size, marked enhancement, significant necrosis (24.8%), and substantial mass effect (midline shift, edema crossing midline). These characteristics are typical of a high-grade glioma. The presence of necrosis and the overall radiological appearance strongly suggest a WHO Grade 4 tumor, likely glioblastoma, given the patient's age and the tumor's characteristics.",
+      "supporting_features": [
+        "Lesion Sizes APxTVxCC (cm)",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "midline_shift_present",
+        "crosses_ideal_midline",
+        "Edema crosses midline"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00558"
+}

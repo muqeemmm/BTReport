@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_00213",
+  "idh": {
+    "reasoning": "The patient's advanced age (69 years) is a strong predictor for IDH-wildtype status. The imaging phenotype strongly supports this, characterized by marked, thick-rimmed contrast enhancement ('Enhancement Quality': 'Marked', 'Proportion Enhancing': 63.61%, 'Thickness of enhancing margin': '>3mm'). Furthermore, the very sharp T2-FLAIR transition zone ('Transition Zone Thickness (FLAIR)' median 0.58 mm) and the absence of a T2-FLAIR mismatch sign are classic features of IDH-wildtype gliomas, particularly glioblastoma. Evidence suggesting IDH-mutant status, such as the frontal lobe location and lack of deep white matter invasion, is weak in comparison. The balance of evidence overwhelmingly favors an IDH-wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This analysis is performed independently of the IDH prediction. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically show minimal or no enhancement and have ill-defined T2/FLAIR boundaries. This tumor displays features that are the opposite of a typical oligodendroglioma: 'Marked' enhancement, a high 'Proportion Enhancing' (63.61%), and a thick enhancing margin. Additionally, the T2-FLAIR transition zone is very sharp ('Transition Zone Thickness (FLAIR)' median 0.58 mm), which is uncharacteristic of oligodendroglioma. While the frontal, cortical location is common for oligodendrogliomas, the aggressive enhancement pattern is a much stronger differentiator and argues strongly against co-deletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of central necrosis ('NCR Volume (mL)' > 0) is a histologic hallmark of WHO grade 4. Radiologically, this is supported by the 'Marked' 'Enhancement Quality' and a 'Thickness of enhancing margin' >3mm, which are imaging correlates of microvascular proliferation and necrosis. The patient's advanced age (69 years) also strongly favors a high-grade tumor. While the overall tumor volume and mass effect are not extensive, the presence of necrosis and intense enhancement are definitive features that establish a WHO grade 4 diagnosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult (69 years) with a solitary frontal lobe tumor. Imaging features, including marked, thick-rimmed enhancement, central necrosis, and a sharp tumor-edema boundary, are all classic radiological hallmarks of Glioblastoma, IDH-wildtype. The predictions for IDH-wildtype, 1p/19q non-codeletion, and WHO grade 4 are highly confident and internally consistent."
+}

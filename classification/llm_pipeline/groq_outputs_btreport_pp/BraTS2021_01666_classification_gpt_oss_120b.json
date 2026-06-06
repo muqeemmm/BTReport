@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_01666",
+  "idh": {
+    "reasoning": "The T2\u2011FLAIR mismatch sign (field \"T2-FLAIR Mismatch Present\" = 1.0) is highly specific for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. The patient is young (field \"age_years\" = 20) and the tumor is non\u2011enhancing (field \"Enhancement Quality\" = \"None\"), both typical of IDH\u2011mutant disease. The presence of a large necrotic component (field \"Proportion Necrosis\" = 44.29) could suggest a higher\u2011grade wildtype glioma, but necrosis without contrast enhancement is less characteristic of IDH\u2011wildtype glioblastoma, so it is a weak contradictory cue. Overall the supportive evidence outweighs the contradictory, leading to an IDH\u2011mutant prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "age_years",
+      "Enhancement Quality",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The T2\u2011FLAIR mismatch sign is associated with astrocytoma rather than oligodendroglioma, indicating a lack of 1p/19q co\u2011deletion. The tumor is non\u2011enhancing (field \"Enhancement Quality\" = \"None\") and located in cortical and deep white\u2011matter regions (fields \"Cortical involvement\" and \"Deep WM invasion\"), patterns more typical of IDH\u2011mutant astrocytoma. No imaging features specifically suggest 1p/19q codeletion, so the evidence supports a non\u2011codeleted status, with the necrotic proportion being a minor contradictory element.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Features supporting a WHO grade 3 include substantial necrosis (field \"Proportion Necrosis\" = 44.29), large total tumor volume (field \"Total tumor volume (mL)\" = 135.724), edema crossing the midline (field \"Edema crosses midline\" = \"True\"), ependymal invasion (field \"Ependymal (ventricular) Invasion\" = \"Present\"), and significant midline shift (field \"Midline_shift_present\" = \"Yes\"). These suggest a more aggressive lesion. Counter\u2011evidence is the complete lack of contrast enhancement (field \"Enhancement Quality\" = \"None\"), which is typical of lower\u2011grade (grade 2) tumors. Balancing these, the preponderance of aggressive imaging signs leads to a grade 3 prediction with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, likely WHO grade 3. The absence of contrast enhancement introduces some uncertainty, especially given the high necrotic fraction. Molecular testing (IDH sequencing, 1p/19q FISH) is recommended to confirm the genotype and guide definitive grading."
+}

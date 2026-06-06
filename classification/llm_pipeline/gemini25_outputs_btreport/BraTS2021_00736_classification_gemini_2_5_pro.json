@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00736",
+  "idh": {
+    "reasoning": "The patient's advanced age of 76 years is a very strong predictor for IDH-wildtype status. The imaging features strongly corroborate this, specifically the presence of marked, thick-walled ring enhancement and a significant volume of central necrosis. These are the classic radiological hallmarks of glioblastoma, which is the most common IDH-wildtype glioma. Involvement of deep gray matter structures like the caudate and putamen also favors an IDH-wildtype diagnosis. There are no features, such as younger age or non-enhancement, to suggest an IDH-mutant tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This task is performed independently of the IDH prediction. The presence of marked, thick-walled enhancement and central necrosis is highly uncharacteristic of a 1p/19q co-deleted glioma (oligodendroglioma). Oligodendrogliomas typically exhibit less aggressive features and rarely show extensive necrosis or thick, irregular ring enhancement. The imaging phenotype is strongly suggestive of an astrocytic lineage tumor, which is by definition non-codeleted. While the frontal lobe location is common for oligodendrogliomas, it is a non-specific finding and is overwhelmingly outweighed by the aggressive features.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of a significant volume of central necrosis (NCR Volume (mL) of 5.184) is a key radiological feature that corresponds to the histopathological criterion for CNS WHO grade 4. This is further supported by the presence of marked, thick-walled ring enhancement, which is a radiological correlate of microvascular proliferation, another hallmark of grade 4 gliomas. The combination of these features provides definitive evidence for the highest grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age (76) and classic imaging features of a large, solitary frontal lobe mass with thick, marked ring enhancement and central necrosis provides a very high-confidence diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The findings are highly characteristic and internally consistent."
+}

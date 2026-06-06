@@ -1,0 +1,46 @@
+{
+  "id": "patient_0973",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (50 years) and the presence of a large, enhancing tumor with necrosis (Proportion Necrosis: 11.88%) and significant edema (ED Volume: 37.219 mL) are more typical of glioblastoma, which is often IDH wildtype. The tumor's location and involvement (occipital, ventricles, and parietal lobes) and ependymal invasion also suggest an aggressive tumor. While there's no direct evidence from the metadata that conclusively determines IDH status, the overall tumor characteristics lean towards a more aggressive, likely IDH wildtype tumor.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Ependymal (ventricular) Invasion",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis and significant edema, along with ependymal invasion, suggests a high-grade glioma. IDH-mutant gliomas with 1p/19q codeletion typically present as oligodendrogliomas, which are less likely to have the aggressive features seen here. The tumor's characteristics (e.g., marked enhancement, necrosis) are more suggestive of a glioblastoma or an astrocytoma, which are typically non-codeleted. Without direct evidence, we infer non-codeletion based on the tumor's aggressive features.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Ependymal (ventricular) Invasion",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.75
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor exhibits aggressive features such as marked enhancement, significant necrosis (Proportion Necrosis: 11.88%), and large size (Total tumor volume: 78.007 mL), which are characteristic of high-grade gliomas. The presence of necrosis is particularly indicative of WHO grade 4. The tumor's involvement of multiple regions and ependymal invasion further supports a high-grade diagnosis.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_01038"
+}

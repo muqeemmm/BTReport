@@ -1,0 +1,71 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young for adult diffuse glioma (age_years), the lesion is nonenhancing with no enhancing component (Enhancement Quality, ET Volume (mL), Proportion Enhancing), has no necrotic component (NCR Volume (mL), Proportion Necrosis), and is frontal/cortical (Tumor Location, Region Proportions, Cortical involvement), a pattern more typical of lower-grade IDH-mutant glioma than IDH-wildtype glioblastoma. Evidence that could argue toward IDH-wildtype includes deep white-matter invasion and apparent FLAIR/edema extension across midline with a midline epicenter (Deep WM invasion, Edema crosses midline, Side of Tumor Epicenter), but the lack of enhancement/necrosis and young age outweigh this. Therefore the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "age_years",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest imaging clues for codeletion are frontal-lobe and cortical involvement (Tumor Location, Region Proportions, Cortical involvement), a nonenhancing appearance (Enhancement Quality, ET Volume (mL), Proportion Enhancing), and absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present, T2-FLAIR Mismatch Score), since a true mismatch pattern would be more suggestive of non-codeleted astrocytoma. Features arguing against a confident codeleted call include the relatively young age compared with the typical oligodendroglioma peak (age_years), midline epicenter (Side of Tumor Epicenter), and deep white-matter invasion (Deep WM invasion), which are not specific for oligodendroglioma. Because supportive frontal/cortical nonenhancing morphology and absent mismatch outweigh but do not eliminate uncertainty, the best estimate is 1p/19q-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "overall_comment": "Prediction is limited by absence of diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, and histologic markers. The lesion is entirely nonenhancing by the supplied metadata, so molecular status is inferred mainly from age, location, and FLAIR/T2 pattern rather than definitive imaging biomarkers.",
+  "subject_id": "UCSF-PDGM-235",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "WHO grade estimation from MRI alone favors grade 2 because there is no enhancement (Enhancement Quality, ET Volume (mL), Proportion Enhancing), no necrosis (NCR Volume (mL), Proportion Necrosis), no substantial midline shift (midline_shift_present, max_shift_mm), and the lesion is solitary (Multifocal or Multicentric, Multiple satellites present), all of which argue against grade 4 and make high-grade behavior less likely. Features that temper confidence include deep white-matter invasion, crossing FLAIR/edema signal, and moderate tumor burden (Deep WM invasion, Edema crosses midline, ED Volume (mL), Total tumor volume (mL)), which can be seen with more infiltrative or higher-grade tumors, but without enhancement or necrosis the best imaging-based grade estimate is CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

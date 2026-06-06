@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest imaging metadata signal is a reported T2-FLAIR mismatch with high mismatch score/degree, which is a classic MRI pattern favoring an IDH-mutant diffuse glioma. The frontal, cortical, and insular location, solitary lesion pattern, mild enhancement, and absence of midline shift also fit better with an IDH-mutant glioma than with a typical IDH-wildtype glioblastoma phenotype. Counterevidence is the adult age of 48 years and the reported substantial non-contrast/necrotic component with a thick enhancing margin, which can be encountered in more aggressive IDH-wildtype tumors. Overall, the T2-FLAIR mismatch pattern is the dominant discriminator, so IDH-mutant is favored.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the reported T2-FLAIR mismatch with high score/degree strongly favors a non-codeleted astrocytic diffuse glioma rather than an oligodendroglioma. The central T2/FLAIR signal relationship also supports this mismatch-based interpretation. Features that could argue toward codeletion include the frontal, cortical, and insular tumor distribution and adult age, because oligodendrogliomas commonly involve frontal cortex; however, without calcification/SWI or other oligodendroglial-specific metadata, these are weaker than the mismatch sign. On balance, non-codeleted is favored.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata. The key molecular discriminator is the reported T2-FLAIR mismatch, while grade is more uncertain because the metadata contains both aggressive features, especially high necrotic/non-contrast component and thick enhancing margin, and lower-grade-leaning features such as mild/tiny enhancement and no mass effect. DWI/ADC, perfusion, spectroscopy, SWI/GRE, and histopathology/molecular testing are not available here and would materially affect confidence.",
+  "subject_id": "EGD-0253",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently from molecular predictions, the reported large non-contrast/necrotic tumor component, high necrosis proportion, thick enhancing margin, rim-core adjacency, and moderate edema favor a high-grade diffuse glioma, with necrosis particularly supporting grade 4 over grades 2 or 3. The lesion size and tumor-core volume also support clinically significant aggressive disease. Against grade 4, enhancement is described as mild, the enhancing tumor volume is very small, no enhancing components are counted, there is no midline shift or ventricular asymmetry, and there is no ependymal invasion, deep white matter invasion, or satellites; the T2-FLAIR mismatch also can be associated with lower-grade biology. Despite these contradictions, the necrosis-related metadata most strongly favors CNS WHO grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "rim_core_adjacency",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Tumor Core Volume (mL)",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

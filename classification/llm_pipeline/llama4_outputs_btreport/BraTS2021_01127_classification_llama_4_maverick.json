@@ -1,0 +1,39 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (80 years) is highly suggestive of a wildtype IDH status, as IDH mutant gliomas are more commonly found in younger patients. The tumor's location in the temporal cortex and its imaging characteristics (marked enhancement, necrosis, and significant edema) are also more typical of IDH wildtype glioblastomas, which are more common in older adults. The absence of features like ependymal invasion or deep white matter invasion does not strongly influence IDH status directly, but the overall clinical and radiological picture aligns with an IDH wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The likelihood of 1p/19q co-deletion is low given the patient's age and the tumor's imaging characteristics. IDH mutant tumors with 1p/19q co-deletion (oligodendrogliomas) typically present in younger adults and often have a more indolent course. The tumor's aggressive features (marked enhancement, necrosis, significant edema, and large size) are not typical for oligodendrogliomas. Since we've already predicted IDH wildtype status with high confidence, the likelihood of 1p/19q co-deletion is further diminished as these are largely mutually exclusive with IDH wildtype status in adult-type diffuse gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor exhibits aggressive imaging features including marked enhancement, significant necrosis (28.57%), substantial edema (31.36%), and a large size (total tumor volume of 56.76 mL). These characteristics are hallmarks of high-grade gliomas. Given the patient's age and the tumor's radiological appearance, a grade 4 tumor (glioblastoma, IDH wildtype) is most likely. The presence of necrosis is particularly indicative of high-grade pathology.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "subject_id": "BraTS2021_01127"
+}

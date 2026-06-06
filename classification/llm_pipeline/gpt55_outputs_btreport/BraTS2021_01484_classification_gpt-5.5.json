@@ -1,0 +1,82 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status considered independently, the strongest MRI-demographic pattern favors IDH-mutant diffuse glioma: the patient is very young, the lesion has cortical involvement in a parietal/occipital cortical location, is solitary, and has no enhancing component on the provided post-contrast metadata. These features are more typical of an IDH-mutant lower-grade diffuse glioma than a conventional IDH-wildtype glioblastoma. Features arguing the other way are the very large tumor volume/size, deep white matter and ependymal involvement, midline shift, and the reported high necrosis proportion, which can be associated with more aggressive IDH-wildtype biology. However, the complete absence of enhancement makes typical IDH-wildtype glioblastoma less favored. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the available MRI metadata is limited because calcification-sensitive imaging and other classic oligodendroglioma markers are not provided. The tumor is predominantly parietal/occipital rather than a classic frontal cortical-subcortical oligodendroglioma pattern, and it shows deep white matter and ependymal involvement with large infiltrative extent, which favors a non-codeleted diffuse astrocytic pattern over 1p/19q-codeleted oligodendroglioma. The main counterpoint is that cortical involvement and nonenhancement can also be seen in oligodendroglioma, so the evidence is not strong. Overall, the balance modestly supports non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata. The absence of enhancement strongly supports a lower-grade-appearing diffuse glioma, but the large size, mass effect, ependymal/deep white matter involvement, and reported necrosis proportion introduce uncertainty. Missing diffusion, perfusion, spectroscopy, and susceptibility/calcification information limit molecular subtyping, especially for 1p/19q status.",
+  "subject_id": "BraTS2021_01484",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Effaced Ventricle",
+      "ED Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "For CNS WHO grade considered independently, the imaging phenotype most strongly supports grade 2: the lesion is nonenhancing, has zero enhancing tumor volume, zero enhancing proportion, is solitary, and does not cross the midline. These are typical lower-grade imaging features. Against grade 2, the tumor is very large, produces midline shift and ventricular effacement, shows deep white matter and ependymal involvement, has measurable edema, and has a high reported necrosis proportion, all of which raise concern for higher grade. Still, in the provided metadata the absence of any enhancement is the most grade-discriminating feature and argues against a definite grade 3 or 4 imaging call. Overall, grade 2 is favored, with only modest confidence because of the aggressive mass-effect and invasion features.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

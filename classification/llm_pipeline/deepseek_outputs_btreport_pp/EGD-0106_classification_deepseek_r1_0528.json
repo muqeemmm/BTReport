@@ -1,0 +1,50 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 52 years old, which is typical for IDH-mutant gliomas. The tumor is non-enhancing, which is more common in IDH-mutant tumors. However, the T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0), which argues against IDH-mutant astrocytoma. The absence of enhancement and the frontal lobe location support IDH-mutant, but the lack of T2-FLAIR mismatch creates uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is midline and involves frontal, parietal, and cortex lobes. Oligodendrogliomas (IDH-mutant and 1p/19q codeleted) are typically frontal and cortical but rarely midline. The midline location argues against oligodendroglioma. However, the absence of deep white matter invasion and cortical involvement are typical for oligodendroglioma, creating uncertainty.",
+    "supporting_features": [
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "The tumor is non-enhancing, midline, and involves frontal, parietal, and cortex lobes. The absence of T2-FLAIR mismatch and midline location create uncertainty for IDH status and 1p/19q codeletion.",
+  "subject_id": "EGD-0106",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor is non-enhancing (Enhancement Quality = None, Proportion Enhancing = 0.0) and has no necrosis (Proportion Necrosis = 0.05, but note ET Volume = 0.0). WHO grade 2 gliomas are typically non-enhancing. However, the significant edema volume (ED Volume = 25.825 mL) and midline shift (max_shift_mm = 4.0 mm) suggest possible higher grade. The absence of enhancement strongly supports grade 2, but the mass effect introduces some doubt.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ET Volume (mL)"
+    ]
+  }
+}

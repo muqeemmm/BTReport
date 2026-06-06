@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The MRI metadata favors an IDH-mutant diffuse glioma because the tumor is predominantly frontal and cortical, with Cortical involvement present and no Deep WM invasion, a pattern more typical of IDH-mutant lower-grade lineage than primary IDH-wildtype glioblastoma. Enhancement is described as mild, with a very small ET Volume and low Proportion Enhancing, and midline_shift_present is No, which also argues against a classic aggressive IDH-wildtype presentation. The main opposing evidence is the reported NCR Volume, Proportion Necrosis, high Proportion of Oedema, and thick enhancing margin, which can be seen in high-grade IDH-wildtype tumors. Overall, the anatomic pattern and limited enhancement outweigh the high-grade-appearing components, so IDH-mutant is favored with moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the strongest MRI support for a codeleted oligodendroglial phenotype is the frontal-lobe predominance with substantial cortical involvement. Mild Enhancement Quality and low Proportion Enhancing are also compatible with oligodendroglioma. Evidence against codeletion is the reported NCR Volume, Proportion Necrosis, high Proportion of Oedema, and thick enhancing margin, which are less specific and can fit a non-codeleted astrocytic high-grade tumor. Because the provided metadata lacks a direct molecular surrogate and the imaging evidence is indirect, the frontal cortical pattern leads to a best estimate of 1p/19q-codeleted with only modest confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "These are MRI-metadata-based estimates only. The main uncertainty is the mixed phenotype: frontal cortical location and mild, low-volume enhancement favor an IDH-mutant oligodendroglial tumor, while the reported necrotic/non-enhancing component, edema burden, and thick enhancing margin raise concern for higher-grade biology.",
+  "subject_id": "EGD-0514",
+  "who_grade": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present"
+    ],
+    "prediction": 3,
+    "reasoning": "For grade, the metadata shows features above a typical grade 2 lesion: there is measurable enhancing tumor, a thick enhancing margin, substantial edema burden, and a reported necrotic/non-enhancing component. However, the enhancement is mild, the ET Volume and Proportion Enhancing are small, the lesion is solitary, there is no midline shift, no deep white matter invasion, no ependymal invasion, and no multifocal or multicentric disease, which argues against a confident grade 4 call. The competing evidence therefore best fits an intermediate high-grade diffuse glioma, favoring CNS WHO grade 3 rather than grade 2 or grade 4, but confidence is limited by the conflicting necrosis-versus-mild-enhancement pattern.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

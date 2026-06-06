@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_01115",
+  "idh": {
+    "reasoning": "The tumor shows marked contrast enhancement (Enhancement Quality: \"Marked\"), a high proportion of enhancing tissue (Proportion Enhancing: 55.83) and measurable necrosis (Proportion Necrosis: 12.96), all features typical of IDH-wildtype glioblastoma. The patient is elderly (age_years: 73) and the T2\u2011FLAIR mismatch is absent (T2-FLAIR Mismatch Present: 0.0), which argues against an IDH\u2011mutant astrocytoma that usually displays this mismatch. Absence of midline crossing (CET Crosses midline: \"False\", Edema crosses midline: \"False\") and lack of deep white\u2011matter invasion are not strong enough to overturn the weight of the aggressive imaging signs. Therefore the balance of evidence favors IDH\u2011wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "IDH\u2011wildtype gliomas are by definition 1p/19q non\u2011codeleted; the imaging profile (marked enhancement, necrosis, lack of T2\u2011FLAIR mismatch) is inconsistent with an oligodendroglioma, which would be IDH\u2011mutant and often shows calcifications and less aggressive enhancement. No imaging feature suggests 1p/19q codeletion, so the safest inference is non\u2011codeleted.",
+    "supporting_features": [
+      "idh\" (derived from IDH\u2011wildtype prediction)",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.88
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, necrosis, high enhancing proportion, large total tumor volume (Total tumor volume: 81.259\u202fmL) and thick enhancing margin (>3mm) are hallmarks of WHO grade\u202f4 glioblastoma. While the lesion does not cross the midline and lacks deep white\u2011matter or ependymal invasion, these absent features are not sufficient to downgrade given the strong high\u2011grade imaging signs. Hence the prediction is grade\u202f4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "Rim_core_adjacency"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.84
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty, especially for 1p/19q status. However, the imaging pattern strongly supports an IDH\u2011wildtype, non\u2011codeleted, WHO grade\u202f4 glioblastoma."
+}

@@ -1,0 +1,53 @@
+{
+  "subject_id": "UCSF-PDGM-123",
+  "idh": {
+    "reasoning": "The patient's age of 52 is at the upper end for IDH-mutant gliomas and more typical for IDH-wildtype. The imaging phenotype strongly supports an IDH-wildtype tumor. Key features include marked, thick-rim enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm'), a large necrotic core ('NCR Volume (mL)': 18.163), and extensive vasogenic edema ('ED Volume (mL)': 149.904). These are all classic radiological hallmarks of glioblastoma, IDH-wildtype. Furthermore, aggressive features such as midline crossing ('CET Crosses midline': 'True'), deep white matter and deep gray nuclei invasion ('Deep WM invasion', 'Anatomical Overlap Regions'), and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present') are present. The absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0) argues against an IDH-mutant astrocytoma. There are no contradicting features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "CET Crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The constellation of imaging findings is highly uncharacteristic of an oligodendroglioma (which are 1p/19q-codeleted). The presence of marked, thick rim-enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm') and a large necrotic core ('NCR Volume (mL)': 18.163) are classic features of a high-grade astrocytoma, not an oligodendroglioma. Aggressive features like ependymal invasion ('Ependymal (ventricular) Invasion') and extensive deep gray matter involvement ('Anatomical Overlap Regions') also favor an astrocytic lineage. While the frontal lobe location ('Tumor Location') is common for oligodendrogliomas, this is a non-specific finding that is overwhelmingly outweighed by the features of high-grade malignancy typical of an astrocytoma. Therefore, a non-codeleted status is predicted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of a significant volume of central necrosis ('NCR Volume (mL)': 18.163) is a defining feature of a WHO grade 4 diffuse glioma. This finding alone is sufficient to assign the highest grade. This is strongly corroborated by other features of high-grade malignancy, including a large volume of enhancing tumor ('ET Volume (mL)': 36.923), marked mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': 9.0), ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), and deep white matter invasion ('Deep WM invasion': 'Present'). There is no imaging evidence to support a lower grade (2 or 3).",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are classic for a Glioblastoma, IDH-wildtype. The large, left frontal tumor exhibits prominent rim enhancement, a large necrotic core, and extensive vasogenic edema causing significant mass effect. The aggressive nature is further indicated by invasion of deep gray matter, deep white matter, and the ependyma, as well as crossing of the midline. The combination of these features is highly indicative of a CNS WHO grade 4 tumor."
+}

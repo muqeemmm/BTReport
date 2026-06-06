@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00366",
+  "idh": {
+    "reasoning": "The patient's age of 59 years is a strong demographic predictor for IDH-wildtype status. The imaging features overwhelmingly support this prediction. The tumor exhibits a very large necrotic core, with a 'Proportion Necrosis' of 72.46%, which is a hallmark of IDH-wildtype glioblastoma. Furthermore, the tumor margin is very sharp, as indicated by a 'Transition Zone Thickness (FLAIR)' median of only 0.75 mm; this is characteristic of IDH-wildtype tumors, which are often more demarcated than the diffusely infiltrative IDH-mutant astrocytomas. The absence of a 'T2-FLAIR Mismatch Present' (value 0.0) argues against an IDH-mutant astrocytoma. Ependymal invasion is also more common in aggressive, IDH-wildtype tumors. The only weakly contradictory feature is the low 'Proportion Enhancing' (1.62%), but this is insignificant given the massive extent of necrosis.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of extensive necrosis ('Proportion Necrosis' of 72.46%) is extremely rare in 1p/19q co-deleted oligodendrogliomas and is a very strong indicator of an astrocytic lineage tumor (non-codeleted). The tumor's location, involving the temporal, parietal, and insular lobes, is also less typical for oligodendroglioma, which has a predilection for the frontal lobes. The very sharp tumor border ('Transition Zone Thickness (FLAIR)' median 0.75 mm) and features of high-grade aggression like ependymal invasion are more consistent with a high-grade astrocytoma/glioblastoma than an oligodendroglioma. There are no features in the provided metadata to suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Transition Zone Thickness (FLAIR)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The most definitive imaging feature for CNS WHO grade 4 is necrosis. This tumor has a massive necrotic component, with 'Proportion Necrosis' accounting for 72.46% of the tumor core. This finding alone is sufficient for a grade 4 prediction. Supporting this are other features of high-grade malignancy: the presence of contrast enhancement ('ET Volume (mL)' > 0), a thick enhancing margin ('Thickness of enhancing margin' >3mm), very large tumor volume ('Total tumor volume (mL)' of 100.483), and 'Ependymal (ventricular) Invasion'. There is no evidence to suggest a lower grade; the presence of both enhancement and necrosis rules out grade 2, and the sheer extent of necrosis makes grade 3 highly improbable.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 59-year-old female with a large, right-sided multi-lobar tumor characterized by a massive necrotic core, minimal but thick marginal enhancement, and sharply defined borders. These imaging findings, in conjunction with the patient's age and the absence of a T2-FLAIR mismatch, are highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

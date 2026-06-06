@@ -1,0 +1,84 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status, the strongest MRI metadata favors an IDH-wildtype diffuse glioma: the patient is 50 years old, there is measurable enhancing tumor, extensive oedema, ventricular/ependymal involvement, deep white matter invasion, ventricular effacement/asymmetry, and midline shift, all of which are more typical of biologically aggressive IDH-wildtype glioma than lower-grade IDH-mutant astrocytoma. Evidence against IDH-wildtype includes temporal/cortical involvement and only mild enhancement, which can be seen in IDH-mutant tumors. Overall, the aggressive infiltrative and mass-effect pattern outweighs the location-based counterevidence, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the metadata leans away from a codeleted oligodendroglioma. Codeleted tumors often have cortical-subcortical involvement, which is present here, and the temporal/cortical location with age 50 does not exclude codeletion. However, the very large oedema burden, measurable enhancement, small necrotic component, deep white matter invasion, ependymal/ventricular invasion, and mass effect with midline shift are less typical for classic 1p/19q-codeleted oligodendroglioma and favor a non-codeleted diffuse glioma. Because calcification-sensitive imaging and molecular data are unavailable, uncertainty remains, but the overall MRI phenotype supports non-codeletion.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histomolecular data. The major uncertainty is that temporal/cortical involvement can occur in IDH-mutant and oligodendroglial tumors, but the enhancement, oedema, ventricular/ependymal involvement, deep invasion, mass effect, and necrotic component make an aggressive IDH-wildtype non-codeleted grade 4 glioma the most coherent pre-operative estimate.",
+  "subject_id": "BraTS2021_00090",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade estimated from MRI metadata alone, the findings most strongly support grade 4 behavior: there is enhancing tumor, a necrotic/non-contrast-enhancing component, extensive oedema, thick enhancing margin, ependymal/ventricular invasion, deep white matter invasion, large total tumor volume, ventricular effacement/asymmetry, and midline shift. These features favor high-grade diffuse glioma over grade 2 or grade 3. The main counterpoints are that enhancement is described as mild and the necrotic proportion is small, so imaging cannot prove histologic grade 4 criteria with certainty. Nevertheless, the combined enhancement, necrotic component, invasion, oedema, and mass effect best fit CNS WHO grade 4.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "midline_shift_present",
+      "max_shift_mm"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_00389",
+  "idh": {
+    "reasoning": "The patient is 68 years old, an age range where IDH-wildtype diffuse gliomas are most common. The tumor shows marked contrast enhancement (Enhancement Quality = 'Marked') and a measurable necrotic component (Proportion Necrosis = 12.44%), both imaging hallmarks of higher\u2011grade, IDH\u2011wildtype gliomas. Although the lesion is relatively small (Total tumor volume = 16.585\u202fmL) and involves cortex (Cortical involvement = 'Present'), which can be seen in IDH\u2011mutant tumors, the dominant imaging pattern of strong enhancement and necrosis outweighs these opposing clues, leading to a prediction of IDH\u2011wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Marked enhancement and presence of necrosis are atypical for oligodendrogliomas, which are usually IDH\u2011mutant and 1p/19q\u2011codeleted and tend to show less contrast enhancement. The patient's older age and the imaging profile therefore favor a non\u2011codeleted status. Features such as cortical location and frontal lobe involvement are common in oligodendroglioma and thus constitute minor contradictory evidence, but they are outweighed by the enhancement pattern.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement (Enhancement Quality = 'Marked'), a necrotic component (Proportion Necrosis = 12.44%) and a relatively high proportion of enhancing tissue (Proportion Enhancing = 21.77%) are imaging hallmarks of high\u2011grade glioma, most consistent with WHO grade\u202f4. The lesion does not cross the midline, lacks deep white\u2011matter or ependymal invasion, and is modest in size, which are features more typical of lower grades, but the presence of necrosis and thick enhancing margin (>3\u202fmm) tip the balance toward grade\u202f4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "CET Crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011wildtype, non\u2011codeleted high\u2011grade glioma, but definitive molecular classification requires tissue testing. Lack of advanced sequences (perfusion, spectroscopy) limits certainty, especially regarding grade."
+}

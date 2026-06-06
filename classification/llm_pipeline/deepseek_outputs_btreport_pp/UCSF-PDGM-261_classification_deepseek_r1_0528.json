@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 29 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. However, there is no enhancement or necrosis, which are more typical of IDH-wildtype tumors. The absence of enhancement and necrosis supports IDH-mutant status. The tumor is located in the temporal-cortex region, which is common for IDH-mutant gliomas. The T2-FLAIR mismatch score is 0.4, which is below the typical threshold for IDH-mutant astrocytoma (usually >0.8), but the mismatch is not present (0.0), so this is inconclusive. Overall, the young age and non-enhancing nature suggest IDH-mutant, but the low T2-FLAIR mismatch score is contradictory.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region, which is more typical for astrocytomas (non-codeleted) rather than oligodendrogliomas (codeleted). Oligodendrogliomas often involve frontal lobes and may show calcifications, but calcifications are not assessed here. There is no enhancement, which is more common in oligodendrogliomas, but absence of enhancement is not definitive. The deep white matter invasion is absent, which is more common in oligodendrogliomas, but this is not strongly supportive. Overall, the temporal location suggests astrocytoma (non-codeleted), but without frontal involvement or calcifications, the evidence is weak.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor is non-enhancing, solitary, with no necrosis, located in temporal-cortex region, midline. The absence of enhancement and necrosis suggests lower grade. The T2-FLAIR mismatch is not present, which is atypical for IDH-mutant astrocytoma, but the score is low (0.4). The young age supports IDH-mutant. For grade, no necrosis or enhancement suggests WHO grade 2.",
+  "subject_id": "UCSF-PDGM-261",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": 2,
+    "reasoning": "There is no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) and no necrosis (Proportion Necrosis: 0.0), which are features of WHO grade 2 gliomas. The tumor volume is 20.418 mL, which is moderate but not indicative of high grade alone. The T2-FLAIR mismatch score is 0.4, which is low and not typical for grade 2 IDH-mutant astrocytoma (which often has high mismatch), but since mismatch is not present (0.0), it may not be reliable. The absence of deep white matter invasion and ependymal invasion also supports lower grade. However, the midline location and involvement of temporal cortex might suggest higher grade, but not definitively. Overall, the lack of enhancement and necrosis strongly suggest grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

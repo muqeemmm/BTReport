@@ -1,0 +1,37 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The patient's age (67 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 43.58%) are more typical of glioblastoma, which is often IDH wildtype. The T2-FLAIR mismatch score is 0.905, which is a strong indicator of IDH mutation status. However, the presence of necrosis and the patient's age are contradictory features. Despite these contradictions, the high T2-FLAIR mismatch score is a strong predictor for IDH mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of a T2-FLAIR mismatch is typically associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are more likely to be 1p/19q co-deleted. The tumor's characteristics, such as being solitary and having a significant necrotic component, are not typical for oligodendrogliomas. Therefore, it is less likely to be 1p/19q co-deleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 43.58%) and the significant size of the tumor (Total tumor volume: 25.702 mL) are indicative of a high-grade glioma. The patient's age (67 years) also supports a higher grade. Given the IDH mutation status is predicted to be mutant, and considering the presence of necrosis, the tumor is likely to be an astrocytoma, CNS grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "age_years",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0421"
+}

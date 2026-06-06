@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_00097",
+  "idh": {
+    "reasoning": "The patient's advanced age (66 years) is the strongest predictor for an IDH-wildtype glioma. This is strongly corroborated by imaging features classic for glioblastoma: marked, thick-rimmed contrast enhancement with a large necrotic core. The absence of a T2-FLAIR mismatch sign further argues against an IDH-mutant astrocytoma. The relatively sharp tumor boundary is also more consistent with an IDH-wildtype tumor. Contradictory evidence, such as the absence of deep white matter invasion or significant midline shift, is weak and does not outweigh the compelling evidence for an IDH-wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "midline_shift_present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. The presence of marked, thick-rimmed enhancement and a substantial necrotic core are highly uncharacteristic of 1p/19q co-deleted oligodendrogliomas. These features are hallmarks of high-grade astrocytic tumors, which are non-codeleted. While cortical involvement is common in oligodendrogliomas, it is non-specific. The aggressive radiological phenotype strongly suggests a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic core, evidenced by a significant 'NCR Volume (mL)', is a key radiological correlate of WHO Grade 4. This finding, combined with marked and thick contrast enhancement, is sufficient for a radiological diagnosis of a high-grade glioma. The patient's advanced age also increases the a priori probability of a Grade 4 tumor. The lack of significant mass effect is noted but does not preclude a Grade 4 diagnosis, especially given the definitive evidence of necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO Grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 66-year-old male with a large, solitary tumor in the left parietal and temporal lobes. The imaging findings of marked ring enhancement, a large necrotic core, and relatively sharp margins in a patient of this age are all highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO Grade 4. The predictions for IDH status, 1p/19q status, and WHO grade are internally consistent and strongly supported by the provided MRI metadata."
+}

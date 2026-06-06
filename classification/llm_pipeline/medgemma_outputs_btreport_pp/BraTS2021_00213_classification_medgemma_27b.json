@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00213",
+  "idh": {
+    "reasoning": "The patient is 69 years old. Older age (>60) is associated with IDH-wildtype gliomas. The tumor is solitary, located in the frontal lobe cortex, and shows marked enhancement with a thick enhancing margin (>3mm). While these features can be seen in both IDH-mutant and IDH-wildtype tumors, the combination of advanced age and marked enhancement leans towards IDH-wildtype status. There are no features strongly suggesting IDH-mutant status (e.g., younger age, significant T2-FLAIR mismatch).",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 69 years old, which is more typical for IDH-wildtype gliomas, which are typically non-codeleted. The tumor shows marked enhancement and a thick enhancing margin (>3mm), features often associated with IDH-wildtype glioblastoma (which is non-codeleted). While codeletion is strongly associated with IDH-mutant oligodendrogliomas, the predicted IDH status is wildtype, making codeletion highly unlikely. There are no features suggesting codeletion.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (69) and the tumor's characteristics (marked enhancement, thick enhancing margin >3mm, solitary lesion) are highly suggestive of a high-grade glioma. Given the predicted IDH-wildtype status and non-codeleted status, the most likely diagnosis according to WHO CNS5 criteria is Glioblastoma (IDH-wildtype), which corresponds to WHO grade 4. The absence of deep white matter invasion or ependymal invasion does not preclude a grade 4 diagnosis in the context of other features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "idh",
+      "one_p_nineteen_q"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

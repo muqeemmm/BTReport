@@ -1,0 +1,57 @@
+{
+  "subject_id": "BraTS2021_00146",
+  "idh": {
+    "reasoning": "The imaging features are highly suggestive of an IDH-wildtype glioma. There is marked enhancement, a very large necrotic core ('NCR Volume (mL)' of 70.673, 'Proportion Necrosis' of 38.6%), and significant mass effect ('max_shift_mm' of 15.0). Additional aggressive features include deep white matter invasion, ependymal invasion, midline crossing of enhancement, and the presence of satellite lesions. The tumor boundaries are infiltrative, with a very thin FLAIR transition zone ('median_mm': 0.75). These features are all hallmarks of glioblastoma, IDH-wildtype. However, there is a strong contradicting feature: the 'T2-FLAIR Mismatch Present' is 1.0 with a high score, which is a classic sign of an IDH-mutant astrocytoma. Given the overwhelming weight of multiple aggressive features, the diagnosis of IDH-wildtype is more probable, but the T2-FLAIR mismatch introduces significant uncertainty and lowers confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Multiple satellites present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q status is performed independently of the IDH status prediction. The most significant imaging biomarker for differentiating IDH-mutant astrocytomas (non-codeleted) from oligodendrogliomas (codeleted) is the T2-FLAIR mismatch sign. In this case, 'T2-FLAIR Mismatch Present' is 1.0 with a high score of 0.799. This feature is highly specific for astrocytic lineage (non-codeleted). Additionally, the tumor exhibits infiltrative margins, evidenced by a very thin 'Transition Zone Thickness (FLAIR)' (median 0.75 mm), which is also more characteristic of astrocytomas than the typically more well-defined oligodendrogliomas. While the frontal lobe location can be seen in oligodendrogliomas, the strong T2-FLAIR mismatch sign is the dominant feature guiding the prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The evidence for a high-grade tumor is overwhelming and points specifically to WHO grade 4. The key feature for grade 4 is necrosis, which is extensive in this tumor ('NCR Volume (mL)' of 70.673, 'Proportion Necrosis' of 38.6%). Furthermore, there is 'Marked' enhancement with a thick margin ('>3mm'). The tumor also demonstrates significant mass effect ('max_shift_mm' of 15.0, 'Effaced Ventricle') and widespread invasion ('Deep WM invasion', 'Ependymal (ventricular) Invasion', 'CET Crosses midline'). These features are the radiological definition of a grade 4 glioma. There is no evidence supporting a grade 2 or 3 diagnosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a large, aggressive, midline-crossing frontal lobe tumor with imaging features highly characteristic of a Glioblastoma, IDH-wildtype (CNS WHO Grade 4). The diagnosis is strongly supported by the presence of extensive necrosis, marked enhancement, and significant mass effect. The primary diagnostic challenge is the presence of a strong T2-FLAIR mismatch signal, a feature classically associated with IDH-mutant astrocytoma. This creates a conflict in the imaging data, reducing confidence in the IDH-wildtype prediction. However, the sheer number and magnitude of aggressive features make an IDH-wildtype glioblastoma the most likely diagnosis."
+}

@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0547",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present = 1.0, high T2-FLAIR Mismatch Score = 0.748) is a highly specific imaging surrogate for IDH\u2011mutant astrocytoma. Although the patient is older (age_years = 69) and the tumor shows marked enhancement (Enhancement Quality = Marked) and necrosis (Proportion Necrosis = 17.33), these features are less specific and can be seen in high\u2011grade IDH\u2011mutant tumors. Therefore the balance favors an IDH\u2011mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is associated with IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma. No imaging features such as calcifications or classic oligodendroglial morphology are present, making codeletion unlikely. Hence the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, necrosis, large tumor volume (Total tumor volume = 195.317\u202fmL), ependymal invasion, deep white\u2011matter invasion, and presence of satellite nodules are features of higher grade (grade\u202f3). The T2\u2011FLAIR mismatch sign points to lower grade, but it can be present in grade\u202f3 astrocytoma. The preponderance of high\u2011grade imaging signs leads to a grade\u202f3 prediction.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma, but the marked enhancement, necrosis, and patient age introduce uncertainty regarding grade and molecular status. Molecular testing (IDH sequencing, 1p/19q FISH) is recommended to confirm the diagnosis."
+}

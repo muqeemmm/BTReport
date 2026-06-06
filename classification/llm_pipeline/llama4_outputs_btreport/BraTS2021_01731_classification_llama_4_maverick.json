@@ -1,0 +1,48 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (35 years) and the presence of a non-enhancing tumor with significant necrosis (Proportion Necrosis: 58.66%) and edema (Proportion of Oedema: 41.34%) could suggest a high-grade glioma. However, the absence of enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) and the presence of deep white matter invasion are features that can be seen in both IDH mutant and wildtype gliomas. The tumor's location in the temporal cortex region and the patient's relatively young age are more commonly associated with IDH mutant gliomas. Given these features, the likelihood of an IDH mutation is higher.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "n_slices_with_shift",
+      "midline_shift_present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a non-enhancing tumor with significant necrosis and the tumor's location in the temporal cortex are features that can be seen in both 1p/19q codeleted and non-codeleted gliomas. However, the absence of enhancement and the presence of deep white matter invasion are more typical of IDH mutant gliomas, which can be either codeleted or non-codeleted. The patient's age and tumor location might slightly favor a diagnosis associated with IDH mutation, which is often seen in codeleted tumors (oligodendrogliomas). However, the absence of clear indicators for 1p/19q codeletion status in the provided metadata makes this prediction uncertain.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.55
+  },
+  "grade": {
+    "reasoning": "The tumor has significant necrosis (Proportion Necrosis: 58.66%) and causes midline shift, indicating a high-grade lesion. The presence of deep white matter invasion and the large tumor volume (Total tumor volume: 91.057 mL) also support a high-grade glioma. However, the absence of enhancement (Enhancement Quality: None) is less typical for the highest grade gliomas (Grade 4). Given the necrosis and mass effect, a Grade 3 or 4 is likely. The significant necrosis tips the balance towards Grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Total tumor volume (mL)",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01731"
+}

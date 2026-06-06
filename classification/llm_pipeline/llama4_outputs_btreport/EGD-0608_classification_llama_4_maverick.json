@@ -1,0 +1,40 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of a large enhancing tumor with necrosis (NCR Volume = 3.52 mL, Proportion Necrosis = 8.18%) and marked enhancement quality suggests a high-grade glioma. The tumor's location in the frontal lobe, involvement of the cortex, and absence of deep white matter invasion are noted. However, the key factor for IDH mutation status is not directly available from the given metadata. Generally, IDH mutant gliomas are more likely to have a better prognosis and are often associated with certain imaging features such as less aggressive appearance. Given the presence of necrosis and marked enhancement, which are more typical of aggressive tumors, and the absence of specific features that are strongly indicative of IDH mutation (such as calcifications, which are not available in the metadata), the likelihood of IDH wildtype is higher. Thus, based on the aggressive features like necrosis and marked enhancement, the tumor is more likely to be IDH wildtype.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular information. However, certain imaging features can provide clues. IDH mutant gliomas with 1p/19q co-deletion (oligodendrogliomas) often present with calcifications, cortical involvement, and a more frontal lobe predominance. The given tumor involves the frontal lobe and cortex, which is consistent with oligodendroglioma features. However, the absence of information on calcifications (due to the unavailability of SWI/GRE sequences) and the presence of necrosis and marked enhancement (more typical of glioblastomas or IDH wildtype tumors) complicate the assessment. Assuming the tumor is IDH mutant (though predicted as wildtype above), the frontal lobe involvement and cortical invasion might suggest a higher likelihood of 1p/19q co-deletion. However, given the necrosis and enhancement pattern, this is not a strong indication.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "CNS WHO grade": {
+    "reasoning": "The presence of necrosis (NCR Volume = 3.52 mL, Proportion Necrosis = 8.18%) and marked enhancement are indicative of a high-grade glioma. The total tumor volume and the presence of a significant proportion of necrosis and enhancement are features more commonly associated with higher-grade gliomas. The absence of ependymal invasion and deep white matter invasion are noted, but the presence of necrosis is a strong indicator of a high-grade tumor. Given these features, the tumor is likely to be Grade 4, as it exhibits necrosis and significant enhancement, characteristic of glioblastoma, which is typically classified as Grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0608"
+}

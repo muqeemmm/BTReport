@@ -1,0 +1,39 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8090941167718664, indicating a high likelihood of IDH mutation. The patient's age (36 years) also aligns with the demographic more commonly associated with IDH mutant gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH mutation is likely based on the T2-FLAIR mismatch. For codeletion status, we typically look for features that are more commonly associated with 1p/19q codeletion, such as frontal lobe involvement and presence of cortical involvement. The tumor is located in the frontal lobe and involves the cortex, which are characteristics often seen in 1p/19q codeleted tumors. However, without direct evidence of 1p/19q codeletion status from the MRI metadata, we must infer based on these associations.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor shows mild enhancement and has a significant proportion of necrosis (45.29%). The presence of necrosis typically indicates a higher grade. The tumor's volume and the presence of eloquent brain involvement also suggest a potentially higher grade. However, the enhancement quality is described as 'Mild', which might suggest a lower grade. Considering these factors, the tumor is likely to be of a higher grade due to the presence of necrosis and significant tumor volume.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Eloquent Brain Involvement",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0744"
+}

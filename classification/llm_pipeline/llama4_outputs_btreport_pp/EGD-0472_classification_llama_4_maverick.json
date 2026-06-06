@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (45 years) and the tumor's characteristics (non-enhancing, located in the cortex, temporal, and insula lobes, with deep white matter invasion) are considered. The absence of enhancement and the presence of a non-enhancing tumor with significant edema suggest a lower likelihood of IDH wildtype glioblastoma, which is more common in older patients. However, the lack of clear indicators such as T2-FLAIR mismatch (score is 0.5325493408727274, which is not indicative of a strong mismatch) makes the prediction challenging. IDH mutant gliomas are more likely to have a better prognosis and are often associated with certain characteristics, but the provided metadata does not strongly support or refute IDH mutation status directly. Given the tumor's location and non-enhancing nature, there's a leaning towards IDH mutant status, but it's not conclusive.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging with the given metadata. IDH-mutant gliomas with 1p/19q co-deletion (oligodendrogliomas) often present with certain characteristics, but direct indicators are not provided. The tumor's location in the cortex and involvement of the insula are noted in some oligodendrogliomas. However, without clear evidence of calcification or specific molecular markers, this prediction is uncertain. Given the leaning towards IDH mutant status, and considering that some features like cortical involvement are present, there's a cautious leaning towards non-codeleted due to the lack of strong evidence for co-deletion.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "grade": {
+    "reasoning": "The WHO grade prediction is based on the tumor's characteristics and behavior. The absence of enhancement and necrosis, along with the presence of significant edema and deep white matter invasion, are considered. The tumor's non-enhancing nature and lack of necrosis might suggest a lower grade. However, the presence of significant edema and mass effect (midline shift) could indicate a higher grade. The total tumor volume and edema volume are relatively significant, suggesting a potentially higher grade. Given these mixed indicators, a grade 3 is considered plausible as it reflects a tumor with potentially aggressive behavior but without the typical features of glioblastoma (e.g., enhancement, necrosis).",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "EGD-0472"
+}

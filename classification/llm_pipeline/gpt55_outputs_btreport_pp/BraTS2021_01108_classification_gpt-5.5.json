@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Deep WM invasion",
+      "crosses_patient_midline",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors IDH-wildtype over IDH-mutant: age_years is advanced, Enhancement Quality is marked, Proportion Enhancing is high, Proportion Necrosis and NCR Volume (mL) show necrotic/nonenhancing core, Thickness of enhancing margin is thick, and T2-FLAIR Mismatch Present is absent, which does not support the classic IDH-mutant astrocytoma mismatch pattern. These features fit a de novo high-grade IDH-wildtype phenotype better than a typical lower-grade IDH-mutant glioma. Evidence against IDH-wildtype includes Cortical involvement and Tumor Location in the temporal-cortex region, absent Deep WM invasion, no crossing on crosses_patient_midline, low ED Volume (mL), no midline_shift_present, and small Total tumor volume (mL), which are less typical of a widely infiltrative bulky glioblastoma and can be seen with IDH-mutant tumors. Overall, the high-grade enhancing/necrotic pattern in an elderly patient outweighs the more circumscribed cortical features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present",
+      "ET Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.69,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessed independently, the imaging metadata favors 1p/19q non-codeleted over codeleted: age_years is advanced, Tumor Location is temporal-cortex rather than a classic frontal-predominant pattern, Enhancement Quality is marked, Proportion Enhancing is high, Proportion Necrosis is present, and Thickness of enhancing margin is thick, all of which are more compatible with a non-codeleted high-grade astrocytic/glioblastoma-type tumor than a typical oligodendroglioma. Evidence against non-codeleted includes Cortical involvement, absent Deep WM invasion, low ED Volume (mL), and small Total tumor volume (mL), which can be compatible with a more circumscribed cortical oligodendroglial tumor. Because MRI features alone are not specific for 1p/19q status and key discriminators are not available in the provided metadata, the prediction is only moderately confident.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The strongest pattern is an elderly patient with a small but markedly enhancing and necrotic temporal cortical mass, favoring IDH-wildtype glioblastoma, CNS WHO grade 4. Molecular testing remains required, especially because the lesion is cortical, small, minimally edematous, and lacks deep white matter invasion or midline shift.",
+  "subject_id": "BraTS2021_01108",
+  "who_grade": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Multifocal or Multicentric",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "Assessed independently for grade, the metadata strongly favors CNS WHO grade 4 over grades 2 or 3: Enhancement Quality is marked, Proportion Enhancing is high, ET Volume (mL) is substantial relative to Whole Tumor Volume (mL), Proportion Necrosis and NCR Volume (mL) indicate necrotic/nonenhancing core, Thickness of enhancing margin is greater than 3 mm, and rim_core_adjacency shows a rim-core configuration. These features argue against grade 2 and make grade 4 more likely than grade 3. Evidence against grade 4 includes small Total tumor volume (mL), low ED Volume (mL), no midline_shift_present, solitary disease on Multifocal or Multicentric, and absent Deep WM invasion, which indicate limited mass effect and less extensive spread. The enhancing necrotic morphology outweighs these mitigating features.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "rim_core_adjacency"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

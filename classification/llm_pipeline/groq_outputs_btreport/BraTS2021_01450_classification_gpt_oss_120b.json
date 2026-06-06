@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_01450",
+  "idh": {
+    "reasoning": "The patient is 46 years old, which is younger than typical IDH\u2011wildtype glioblastoma and aligns with IDH\u2011mutant diffuse gliomas. The tumor shows only mild contrast enhancement (Enhancement Quality = 'Mild') and a low proportion of enhancing tissue (Proportion Enhancing = 10.47\u202f%), both favoring IDH\u2011mutant status. Necrosis is minimal (Proportion Necrosis = 4.4\u202f%). Cortical involvement is present (Cortical involvement = 'Present'), a common feature of IDH\u2011mutant tumors. Absence of ependymal invasion (Ependymal (ventricular) Invasion = 'Absent') also supports IDH\u2011mutant. Conversely, the lesion has a high edema proportion (Proportion of Oedema = 85.13\u202f%) and a noticeable midline shift (midline_shift_present = 'Yes'), which are more typical of IDH\u2011wildtype glioblastoma. Balancing these, the preponderance of supportive features leads to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Level_max_shift"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor is located in the temporal and insular cortex (Tumor Location = 'temporal, cortex and insula lobes'), a region less typical for oligodendroglioma which preferentially involves the frontal lobes. The lesion is multifocal (Multifocal or Multicentric = 'Multifocal') and shows substantial peritumoral edema (Proportion of Oedema = 85.13\u202f%), both uncommon in 1p/19q\u2011codeleted oligodendroglioma. No imaging evidence such as calcifications that would support codeletion is available. These imaging patterns therefore favor a non\u2011codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Multifocal or Multicentric",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The lesion shows mild but definite contrast enhancement (Enhancement Quality = 'Mild', Proportion Enhancing = 10.47\u202f%) and a measurable enhancing margin thickness >3\u202fmm, which is atypical for WHO grade\u202f2 astrocytoma that usually lacks enhancement. The tumor volume is sizable (Total tumor volume (mL) = 89.516) and there is a midline shift (midline_shift_present = 'Yes'), indicating mass effect. These features point toward WHO grade\u202f3 rather than grade\u202f2. Absence of marked necrosis (Proportion Necrosis = 4.4\u202f%) and only mild enhancement argue against grade\u202f4. Therefore grade\u202f3 is the most consistent.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Level_max_shift"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma, WHO grade 3. Confidence is limited by the absence of advanced sequences (DWI, perfusion, spectroscopy) and lack of histopathologic confirmation; these could refine grade and molecular status."
+}

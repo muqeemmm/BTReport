@@ -1,0 +1,44 @@
+{
+  "subject_id": "BraTS2021_00313",
+  "idh": {
+    "reasoning": "The patient's advanced age of 71 is a very strong predictor for IDH-wildtype status, as IDH-mutant gliomas typically present in younger adults. Furthermore, the presence of both a necrotic core (NCR Volume (mL) of 4.122) and contrast enhancement (ET Volume (mL) of 3.691) are hallmark features of glioblastoma, which is the most common IDH-wildtype primary brain tumor in adults. The thick enhancing margin (>3mm) further supports this conclusion. There is minimal evidence to suggest an IDH-mutant tumor.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically present as non-enhancing or minimally enhancing masses with indistinct borders and rarely show necrosis. This tumor exhibits significant necrosis (NCR Volume (mL) > 0) and a thick enhancing margin (Thickness of enhancing margin: \">3mm\"), which are imaging features strongly arguing against an oligodendroglial lineage and in favor of an astrocytic tumor (which are non-codeleted). The parietal/occipital location is also less typical for oligodendroglioma, which favors the frontal lobes. There are no features specifically suggesting co-deletion.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of a necrotic core (NCR Volume (mL) of 4.122) is a defining radiological feature of a CNS WHO Grade 4 glioma in the context of adult-type diffuse gliomas. The presence of contrast enhancement (ET Volume (mL) of 3.691) also indicates a high-grade tumor (at least Grade 3). The combination of both necrosis and enhancement, particularly with a thick margin, is the classic presentation of a Grade 4 tumor. The patient's advanced age (71) also strongly correlates with a high-grade diagnosis. The 'Mild' enhancement quality is noted but is strongly outweighed by the definitive presence of necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "A 71-year-old patient with a solitary left parieto-occipital lesion. The presence of a necrotic core and thick contrast enhancement in a patient of this age are classic radiological features of Glioblastoma, IDH-wildtype. All individual predictions (IDH-wildtype, 1p/19q non-codeleted, and WHO Grade 4) are made with high confidence and are internally consistent, leading to an integrated diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

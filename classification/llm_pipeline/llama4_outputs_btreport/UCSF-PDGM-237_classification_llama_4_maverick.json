@@ -1,0 +1,45 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (42 years) and the tumor's characteristics (non-enhancing, large edema volume) are consistent with either IDH mutant or wildtype glioma. However, the lack of enhancement and the presence of a large edematous component are more typical of IDH mutant gliomas. The tumor's location in the temporal cortex region also supports the possibility of an IDH mutant glioma, as these tumors often occur in younger patients and in the frontal or temporal lobes. The absence of necrosis and enhancement argues against a high-grade wildtype glioblastoma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in the temporal cortex region, which is more commonly associated with IDH mutant gliomas. The presence of a large edematous component without enhancement is also consistent with this subtype. 1p/19q codeletion is more commonly seen in IDH mutant gliomas with an oligodendroglial component, which often present with a more frontal location and a characteristic 'fried egg' appearance on histology (not available here). However, the temporal location is less typical for codeleted tumors. Thus, while IDH mutation is likely, codeletion is less certain.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "idh_status"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor has a large edematous component (77.239 mL) without necrosis or enhancement, suggesting a lower grade glioma. The absence of necrosis and enhancement argues against a grade 4 tumor. However, the presence of significant edema and the involvement of eloquent brain areas (vision) could suggest a more aggressive tumor, potentially grade 3. The lack of clear indicators for high-grade features (e.g., necrosis, enhancement) makes grade 2 more plausible than grade 4, but the significant edema and patient's age make grade 2 more likely than grade 3.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 2,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-237"
+}

@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_00096",
+  "idh": {
+    "reasoning": "The patient is 55 years old, an age where IDH-wildtype gliomas are more common. The T2-FLAIR mismatch is absent (value 0.0), a feature that strongly supports IDH-wildtype status and argues against IDH-mutant astrocytoma. Presence of necrosis (8.1%) and ependymal invasion are also more typical of IDH-wildtype tumors. Mild enhancement and low enhancing proportion slightly favor a lower\u2011grade lesion, but overall the lack of mismatch and age dominate.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.66
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion occurs almost exclusively in IDH\u2011mutant tumors. Because the IDH status is predicted to be wildtype and the T2-FLAIR mismatch is absent, the evidence points toward a non\u2011codeleted tumor. No imaging features (e.g., calcifications) suggest codeletion, and age further supports non\u2011codeletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.71
+  },
+  "who_grade": {
+    "reasoning": "IDH\u2011wildtype diffuse gliomas are classified as WHO grade 4 when they show any high\u2011grade radiologic hallmarks such as necrosis, ependymal invasion, and a large total tumor volume (119\u202fmL). Necrosis is present (8.1%) and the edema proportion is high (79.2%), both favoring grade\u202f4. However, the enhancement is only mild and the enhancing proportion is low (12.7%), which are more typical of lower\u2011grade lesions, reducing certainty.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement"
+    ],
+    "prediction": 4,
+    "confidence": 0.62
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits confidence, especially for grade determination. Advanced imaging could clarify microvascular proliferation and molecular hallmarks."
+}

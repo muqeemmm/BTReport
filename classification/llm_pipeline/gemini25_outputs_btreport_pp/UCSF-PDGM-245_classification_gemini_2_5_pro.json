@@ -1,0 +1,50 @@
+{
+  "subject_id": "UCSF-PDGM-245",
+  "idh": {
+    "reasoning": "The patient is young (34 years), which is strongly associated with IDH-mutant gliomas. The most definitive imaging feature is the presence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.937), a sign highly specific for IDH-mutant astrocytomas. Furthermore, the complete absence of contrast enhancement ('Enhancement Quality': 'None') and necrosis ('NCR Volume (mL)': 0.0) argues strongly against an IDH-wildtype glioblastoma, which is typically enhancing and necrotic. While the tumor is large and shows ependymal invasion, these features are less specific for IDH status than the T2-FLAIR mismatch and lack of enhancement. The balance of evidence overwhelmingly supports an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is heavily influenced by the features that determine IDH status and astrocytic vs. oligodendroglial lineage. The presence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 1.0) is a hallmark of IDH-mutant astrocytomas and is not typically seen in oligodendrogliomas (which are 1p/19q co-deleted). Therefore, this feature strongly suggests a non-codeleted status. The presence of deep white matter invasion ('Deep WM invasion': 'Present') and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present') are also more characteristic of the infiltrative nature of astrocytomas. There are no specific imaging features in the provided metadata to suggest an oligodendroglioma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "Based on the predicted IDH-mutant and 1p/19q non-codeleted status, this is an astrocytoma, which can be grade 2, 3, or 4. The complete lack of contrast enhancement ('Enhancement Quality': 'None') and necrosis ('NCR Volume (mL)': 0.0) argues against a grade 4 diagnosis. However, several features suggest more aggressive biology than a typical grade 2 tumor. These include the very large tumor volume ('Total tumor volume (mL)': 167.512), significant mass effect ('midline_shift_present': 'Yes'), and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'). In the context of an IDH-mutant astrocytoma, these aggressive features, even without enhancement, make a grade 3 more likely than a grade 2. The final grade depends on histology or CDKN2A/B status, but based on imaging, grade 3 represents the best balance of the conflicting evidence.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly characteristic of an IDH-mutant astrocytoma due to the young patient age and a prominent T2-FLAIR mismatch sign. The complete lack of enhancement is a key feature. Despite this, the tumor's large size, mass effect, and ependymal invasion suggest a higher grade, making a CNS WHO grade 3 the most probable diagnosis over a grade 2. The final integrated diagnosis is Astrocytoma, IDH-mutant, CNS WHO grade 3."
+}

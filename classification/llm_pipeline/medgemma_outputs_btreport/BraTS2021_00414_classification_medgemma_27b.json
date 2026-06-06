@@ -1,0 +1,40 @@
+{
+  "subject_id": "BraTS2021_00414",
+  "idh": {
+    "reasoning": "The patient is 51 years old. Age > 50 is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in older adults. The tumor is solitary, infiltrative (deep WM invasion, cortical involvement), and large (Total tumor volume 106.5 mL). These features are more common in IDH-wildtype tumors. However, the presence of multiple satellites is more typical of IDH-mutant tumors. Without molecular data or advanced imaging (DWI, perfusion, MRS), distinguishing between IDH-mutant and wildtype based solely on morphology and age is challenging. The age leans towards wildtype, while the satellites lean towards mutant. Given the conflicting signals and lack of definitive features like necrosis or enhancement patterns strongly associated with one type, I will predict mutant based on the presence of satellites, but with low confidence.",
+    "supporting_features": [
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q co-deletion is strongly associated with IDH-mutant oligodendrogliomas (WHO grade 2 or 3). Since I predicted IDH-mutant status above (albeit with low confidence), there's a possibility of co-deletion. However, the tumor morphology (large size, deep WM invasion) is not classic for oligodendroglioma, which often presents as smaller, more circumscribed lesions. The available metadata does not provide any specific features strongly suggestive or refuting co-deletion. Therefore, predicting co-deletion status is highly uncertain.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits deep white matter invasion and cortical involvement, indicating infiltrative growth characteristic of high-grade gliomas (Grade 3 or 4). The presence of multiple satellites also suggests a higher grade. The large size (106.5 mL) and marked enhancement are also common in higher grades. While the absence of midline crossing by the tumor itself or edema might argue against Grade 4, these are not definitive criteria. Given the infiltrative nature (deep WM invasion), cortical involvement, multiple satellites, and large size, a Grade 4 diagnosis is most likely.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Multiple satellites present",
+      "Total tumor volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

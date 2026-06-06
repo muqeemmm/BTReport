@@ -1,0 +1,41 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (59 years) and the presence of a large, enhancing tumor with necrosis (Proportion Necrosis: 36.44%) and significant edema (Proportion of Oedema: 35.23%) that crosses midline (Edema crosses midline: True) are more typical of glioblastoma, IDH-wildtype. The tumor's aggressive features, such as marked enhancement (Enhancement Quality: Marked), presence of necrosis, and significant mass effect (n_slices_with_shift: 89, max_shift_mm: 4.0), further support this. IDH-mutant gliomas are less likely to present with such aggressive features at this age.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "Enhancement Quality",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "IDH-mutant gliomas are more likely to have 1p/19q co-deletion, but the prediction of IDH mutation status is 'wildtype'. Given the low likelihood of 1p/19q co-deletion in IDH-wildtype gliomas, and the absence of specific MRI features that are strongly indicative of 1p/19q co-deletion (such as frontal lobe involvement), it is reasonable to predict 'non-codeleted'.",
+    "supporting_features": [
+      "IDH mutation status prediction"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The presence of a large, enhancing tumor with significant necrosis (Proportion Necrosis: 36.44%), marked enhancement (Enhancement Quality: Marked), and substantial edema that crosses midline suggests a high-grade glioma. The patient's age and the tumor's aggressive features are most consistent with glioblastoma, WHO grade 4. The significant mass effect and the presence of necrosis further support this diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Edema crosses midline",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01458"
+}

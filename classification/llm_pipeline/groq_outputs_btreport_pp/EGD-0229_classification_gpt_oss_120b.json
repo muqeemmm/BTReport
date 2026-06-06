@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0229",
+  "idh": {
+    "reasoning": "The T2\u2011FLAIR mismatch is present (T2\u2011FLAIR Mismatch Present=1.0, Score=0.99) which is a strong imaging surrogate for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. The patient is young (age 30) and the lesion shows only mild contrast enhancement (Enhancement Quality=Mild) and does not cross the midline (CET Crosses midline=False), both typical of IDH\u2011mutant lower\u2011grade gliomas. The high necrosis proportion (Proportion Necrosis=76.33) argues against IDH\u2011mutant status, but necrosis can be over\u2011estimated by segmentation and is less reliable without diffusion/perfusion data. Overall the supportive evidence outweighs the contradictory necrosis signal, leading to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch, which is highly specific for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, is present (T2\u2011FLAIR Mismatch Present=1.0, Score=0.99). No imaging features suggest a 1p/19q\u2011codeleted oligodendroglioma such as marked calcification or homogeneous dense enhancement. Therefore the evidence supports a non\u2011codeleted status. No contradictory features are identified.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows only mild contrast enhancement (Enhancement Quality=Mild) and a very small enhancing tumor volume (ET Volume (mL)=0.101), suggesting a lower\u2011grade lesion. It is solitary, cortical, without deep white\u2011matter or ependymal invasion, and does not cross the midline, all favoring WHO grade 2. However, the proportion of necrosis is high (Proportion Necrosis=76.33) which is more typical of higher\u2011grade glioma and introduces uncertainty. Balancing these opposing signs, the pre\u2011operative imaging most closely aligns with WHO grade 2, but with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "CET Crosses midline",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "confidence": 0.66
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging strongly suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, but the unusually high necrosis proportion creates some uncertainty about the exact WHO grade. Advanced sequences (diffusion, perfusion, spectroscopy) would help resolve grade ambiguity."
+}

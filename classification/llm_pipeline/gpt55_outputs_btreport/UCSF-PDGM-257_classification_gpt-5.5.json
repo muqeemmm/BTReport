@@ -1,0 +1,69 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors IDH-mutant diffuse glioma because the patient is young, the lesion is nonenhancing with no enhancing or necrotic component, and it involves cortical/temporal/insular regions, a pattern often seen with lower-grade IDH-mutant glioma. Features arguing against a straightforward IDH-mutant call are the reported midline epicenter and overlap with deep gray/mesial temporal structures, which are less specific and can be seen in other diffuse gliomas. Overall, the nonenhancing morphology in a 32-year-old supports IDH mutation more than IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest anatomic clue is the temporal and insular distribution rather than a classic frontal-predominant cortical-subcortical pattern, which leans toward non-codeleted diffuse astrocytoma. The absence of enhancement and the presence of cortical involvement are compatible with oligodendroglioma as well, and the young age is not discriminatory. Because the available metadata lacks calcification-sensitive imaging and molecularly specific features, the evidence only mildly favors non-codeletion.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Anatomical Overlap Regions"
+    ]
+  },
+  "overall_comment": "Predictions are based only on available structural MRI metadata. Lack of DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification-sensitive information limits confidence, especially for 1p/19q status and occult higher-grade biology. Histopathology and molecular testing remain required for definitive WHO CNS5 classification.",
+  "subject_id": "UCSF-PDGM-257",
+  "who_grade": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "Grade assessment considered independently favors CNS WHO grade 2 because the lesion is entirely nonenhancing, has no necrotic component, shows no midline crossing, and lacks major mass-effect indicators such as midline shift or ventricular asymmetry. It is solitary and there is no ependymal or deep white matter invasion, which also supports lower-grade behavior. The moderate tumor volume leaves some uncertainty because nonenhancing grade 3 gliomas can occur, and structural MRI alone cannot exclude molecular grade-defining alterations. Overall, the imaging phenotype is most consistent with grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

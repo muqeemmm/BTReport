@@ -1,0 +1,35 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7216939043547617, indicating a strong presence of this feature. This is a characteristic imaging feature associated with IDH-mutant gliomas. Therefore, the evidence strongly supports the presence of an IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular information. However, the presence of IDH mutation and certain imaging features can provide indirect evidence. IDH-mutant gliomas can be either 1p/19q co-deleted (Oligodendrogliomas) or non-co-deleted (Astrocytomas). The presence of cortical involvement and a relatively well-defined tumor might be seen in both types. However, the absence of specific features like calcifications (not available) or other characteristic features makes it difficult to definitively predict co-deletion status. Given the IDH mutant status, if we had to choose, the presence of a 'rim_core_adjacency' and certain morphological features might lean towards a non-co-deleted status, but this is highly uncertain.",
+    "supporting_features": [
+      "rim_core_adjacency",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The WHO grade can be inferred from the presence of certain aggressive features. The tumor has a significant necrotic component (Proportion Necrosis: 51.45%) and is enhancing (Enhancement Quality: Mild, Proportion Enhancing: 0.92), with a large size (Total tumor volume: 136.892 mL). These features are indicative of a high-grade tumor. The presence of necrosis and enhancement typically correlates with WHO grade 4. The age of the patient (40 years) and the presence of IDH mutation also need to be considered; IDH-mutant glioblastomas are typically seen in younger patients compared to IDH-wildtype glioblastomas.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0413"
+}

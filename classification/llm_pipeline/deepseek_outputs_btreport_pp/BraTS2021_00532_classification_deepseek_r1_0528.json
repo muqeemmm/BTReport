@@ -1,0 +1,53 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 58 years old, which is more typical for IDH-wildtype glioblastoma. The tumor is multifocal with ependymal invasion and crosses midline, features associated with IDH-wildtype tumors. However, the T2-FLAIR mismatch is absent (score 0.4, degree 0.816), which is typically associated with IDH-mutant astrocytomas. The absence of mismatch supports wildtype, but the degree is not zero, introducing some uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (speech motor and motor) and is midline, which is more common in astrocytomas (non-codeleted). Oligodendrogliomas typically present in frontal lobes without midline crossing. However, the frontal lobe predominance (49.8%) and cortical involvement could suggest oligodendroglioma. The evidence is conflicting.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Side of Tumor Epicenter",
+      "Region Proportions",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor shows features of high-grade glioma with necrosis (9.62%), enhancement (16.49%), and marked enhancement quality. The midline shift and large edema volume (124.757 mL) support aggressiveness. The transition zone thickness is thin (median 0.75mm on both sequences), suggesting infiltrative growth. The absence of T2-FLAIR mismatch and older age point toward IDH-wildtype, but some features are ambiguous.",
+  "subject_id": "BraTS2021_00532",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has necrosis (9.62%), which is a hallmark of grade 4 glioblastoma. Additionally, there is marked enhancement, multifocality, ependymal invasion, and significant edema. The proportion necrosis is below typical GBM thresholds (often >10%), but other features strongly support grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Proportion of Oedema"
+    ]
+  }
+}

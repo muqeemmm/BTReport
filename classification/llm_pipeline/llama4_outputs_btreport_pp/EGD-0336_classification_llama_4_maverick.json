@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (68 years) and the presence of a multifocal tumor with significant mass effect (midline shift present, asymmetrical ventricles, effaced ventricle) suggest a more aggressive tumor. The T2-FLAIR mismatch score is high (0.9935411919207148), which is indicative of IDH mutation. However, the presence of necrosis (Proportion Necrosis: 19.19%) and enhancement (Enhancement Quality: Mild, Proportion Enhancing: 11.16%) are more commonly associated with IDH wildtype tumors. Despite these conflicting features, the high T2-FLAIR mismatch score strongly supports the presence of an IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH mutation is predicted, but the codeletion status is not directly inferable from the given metadata. However, the tumor's multifocal nature and significant mass effect are not typical for 1p/19q codeleted tumors, which are more commonly associated with oligodendrogliomas. The presence of necrosis and enhancement also leans away from a codeleted tumor. Thus, based on the available information and the predicted IDH mutation status, it is more likely that the tumor is non-codeleted.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits significant mass effect (midline shift, asymmetrical ventricles), necrosis (19.19%), and mild enhancement, which are features commonly associated with higher-grade gliomas. The presence of necrosis is particularly indicative of a higher grade. The predicted IDH mutation status and the absence of 1p/19q codeletion further support a diagnosis of astrocytoma, IDH-mutant. Given these features, a higher grade (3 or 4) is likely. The presence of necrosis strongly supports grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0336"
+}

@@ -1,0 +1,56 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (22 years old), which is more common in IDH-mutant gliomas. The tumor is located in the frontal lobe and cortex, which are typical locations for IDH-mutant gliomas. There is no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0), which is more common in IDH-mutant gliomas. However, the tumor volume is large (25.447 mL) and consists entirely of edema (Proportion of Oedema: 100.0), which is atypical for IDH-mutant gliomas. The absence of necrosis (Proportion Necrosis: 0.0) and enhancing tumor (ET Volume: 0.0) also argues against a high-grade glioma, which is more common in IDH-wildtype cases.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe and cortex, which is common in both oligodendrogliomas and astrocytomas. However, the involvement of eloquent brain regions (Speech motor and Motor) is more typical of astrocytomas (non-codeleted) than oligodendrogliomas (codeleted). The absence of enhancement and necrosis also does not strongly favor either subtype. Given the lack of strong evidence for codeletion, the prediction leans towards non-codeleted.",
+    "supporting_features": [
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "The tumor is a non-enhancing lesion in a young patient, suggesting a lower-grade glioma. The frontal lobe location and eloquent involvement favor an astrocytoma. However, the large edema volume and lack of solid tumor components create uncertainty.",
+  "subject_id": "UCSF-PDGM-232",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None), no necrosis (Proportion Necrosis: 0.0), and no enhancing tumor (ET Volume: 0.0), which are features of CNS WHO grade 2 gliomas. However, the large total tumor volume (25.447 mL) and the fact that it consists entirely of edema (Proportion of Oedema: 100.0) are unusual for grade 2 gliomas and may suggest higher grade. The absence of deep white matter invasion and ependymal invasion also supports a lower grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 31 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor is nonenhancing, which is more characteristic of IDH-mutant gliomas. The tumor location involves cortex, frontal lobe, temporal lobe, and insula, which are common sites for IDH-mutant tumors. The absence of deep white matter invasion and ependymal invasion also aligns with IDH-mutant profiles. However, the age is borderline, as IDH-mutant gliomas can occur in this age group but are not exclusive.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Tumor Location",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "IDH-mutant tumors with 1p/19q codeletion are typically oligodendrogliomas, which often present in the frontal lobe and may have cortical involvement. This tumor involves frontal lobe and cortex, which could support oligodendroglioma. However, the tumor is multifocal and involves temporal lobe and insula, which are less typical for oligodendrogliomas and more common in astrocytomas. The absence of enhancement and necrosis also does not strongly favor oligodendroglioma. Given the mixed evidence, non-codeleted is more likely but with moderate confidence.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "The tumor characteristics suggest an IDH-mutant astrocytoma. The absence of enhancement and necrosis, along with the multifocal presentation and involvement of temporal and insular regions, supports an astrocytic lineage. The grade is challenging without enhancement or necrosis, but the proportion of necrosis is reported as 56.08%, which is high and may indicate grade 4; however, ET volume is 0 mL, suggesting no enhancing tumor. This discrepancy lowers confidence in grading. The WHO CNS5 grading relies on molecular features; IDH-mutant astrocytomas are graded 2, 3, or 4 based on histological features. Without histology, we rely on imaging: necrosis is a criterion for grade 4, but here it is reported despite ET=0. This inconsistency must be noted. Given the high necrosis proportion and total tumor volume, grade 4 is considered but with low confidence.",
+  "subject_id": "UCSF-PDGM-475",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The proportion of necrosis is 56.08%, which meets the imaging criterion for necrosis in glioblastoma (grade 4). However, the ET volume is 0 mL, indicating no enhancing tumor, which contradicts the presence of necrosis since necrosis typically occurs within enhancing tumor. This inconsistency suggests possible mislabeling or measurement error. The total tumor volume is large (102.356 mL), which is concerning for high-grade glioma. The absence of enhancement is atypical for grade 4 gliomas. Given the conflicting data, grade 4 is assigned based on necrosis proportion but with low confidence due to the ET volume discrepancy.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

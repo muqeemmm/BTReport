@@ -1,0 +1,43 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (35 years) and the MRI characteristics of the tumor (non-enhancing, absence of necrosis, and presence of cortical involvement) are suggestive of an IDH-mutant glioma. The T2-FLAIR mismatch score is 0.4, which is not strongly indicative of an IDH-mutant astrocytoma (typically associated with a higher T2-FLAIR mismatch score). However, the absence of enhancement and necrosis, along with the patient's relatively young age, supports the likelihood of an IDH mutation. The presence of cortical involvement is also consistent with this diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is non-enhancing and involves the cortex, which are features that can be seen in both 1p/19q codeleted and non-codeleted tumors. However, the absence of a significant T2-FLAIR mismatch score (0.4) and the lack of specific indicators for 1p/19q codeletion in the provided metadata make it challenging to definitively predict codeletion status. Given the patient's age and tumor characteristics, a codeleted status is possible but not strongly supported by the available evidence.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, lacks necrosis, and has a significant edema volume. These features, along with the patient's age and the tumor's involvement of the cortex, are more typical of a lower-grade glioma. However, the absence of clear indicators for grade 2 vs. grade 3 (such as specific molecular markers or more detailed morphological features) makes it challenging to definitively assign a grade. The presence of edema and the tumor's size suggest a potentially higher grade, but the lack of enhancement and necrosis argues against a grade 4 tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-252"
+}

@@ -1,0 +1,38 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.876, indicating a strong presence of this feature. This is a characteristic imaging feature associated with IDH-mutant gliomas. The patient's age (26 years) also aligns with a higher likelihood of IDH mutation, as IDH-mutant gliomas tend to occur in younger patients.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutation, and the absence of features typical for 1p/19q co-deleted tumors (such as a more circumscribed appearance or specific locations like the frontal lobe) does not directly indicate co-deletion. However, IDH-mutant gliomas can be either 1p/19q co-deleted or non-co-deleted. The 'Cortical involvement' and 'Tumor Location' involving frontal lobe and cortex might be seen in both types. Without direct evidence or specific features strongly indicative of 1p/19q co-deletion (like a classic 'salt and pepper' appearance on MRI, which isn't directly assessable from the given metadata), and given the presence of T2-FLAIR mismatch which is more commonly associated with astrocytomas (non-co-deleted), the prediction leans towards non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows multifocality, mild enhancement, and a significant necrotic proportion (57.23%), which are features concerning for a higher grade. The presence of necrosis and the multifocal nature are indicative of a more aggressive tumor. IDH-mutant gliomas with these features are likely to be grade 4, especially given the high proportion of necrosis and the presence of multiple satellites.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Proportion Necrosis",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0128"
+}

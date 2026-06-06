@@ -1,0 +1,39 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (75 years) is more typical for wildtype IDH status, as IDH mutant gliomas are more common in younger patients. The tumor's location in the parietal, cortex, temporal, and frontal lobes, and its significant mass effect (max_shift_mm = 4.0, median_shift_mm = 2.0) are also consistent with a more aggressive tumor, which is more likely to be IDH wildtype. Additionally, the presence of necrosis (Proportion Necrosis = 12.43%) and the enhancement quality being 'Mild' with a 'Thickness of enhancing margin' >3mm are features that can be seen in glioblastoma, typically IDH wildtype.",
+    "supporting_features": [
+      "age_years",
+      "max_shift_mm",
+      "median_shift_mm",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH wildtype status is highly suggestive of a non-codeleted 1p/19q status because 1p/19q codeletion is almost exclusively associated with IDH mutant gliomas. Therefore, given the prediction of IDH wildtype status, it is highly likely that the 1p/19q status is non-codeleted.",
+    "supporting_features": [
+      "age_years",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor's significant mass effect, necrosis (Proportion Necrosis = 12.43%), and the presence of enhancement with a thickness >3mm are characteristic features of glioblastoma, which is WHO grade 4. The patient's age (75 years) also supports this, as glioblastoma is more common in older adults. The proportion of edema (75.8%) and the tumor's large size (Total tumor volume = 78.982 mL, Lesion Sizes APxTVxCC = 4.3 x 4.3 x 3.9 cm) further indicate an aggressive tumor, consistent with WHO grade 4.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00231"
+}

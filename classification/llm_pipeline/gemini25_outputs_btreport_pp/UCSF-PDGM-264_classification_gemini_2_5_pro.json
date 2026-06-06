@@ -1,0 +1,47 @@
+{
+  "subject_id": "UCSF-PDGM-264",
+  "idh": {
+    "reasoning": "The patient is a 48-year-old female with a solitary, completely non-enhancing and non-necrotic tumor involving the left insula, temporal lobe, and deep gray matter. The absence of contrast enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0) and necrosis ('NCR Volume (mL)': 0.0) in a diffuse glioma in a middle-aged adult is highly suggestive of an IDH-mutant status. IDH-wildtype gliomas in this age group are typically glioblastomas (WHO grade 4) and almost invariably demonstrate enhancement and/or necrosis. The insular location is also a classic site for IDH-mutant gliomas. The primary feature that could argue against a specific subtype of IDH-mutant astrocytoma is the absence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0), but this sign is not always present and its absence does not rule out an IDH mutation. The overwhelming evidence from the lack of aggressive features strongly supports an IDH-mutant prediction.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Region Proportions",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed assuming an IDH-mutant tumor. The evidence is conflicting. The tumor's location involving the insula ('Region Proportions') and deep gray nuclei ('Anatomical Overlap Regions') is highly characteristic of IDH-mutant astrocytomas (non-codeleted). However, the absence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0) argues against this diagnosis, as this sign is highly specific for astrocytomas, though not perfectly sensitive. Oligodendrogliomas (codeleted) are typically cortically-based ('Cortical involvement': 'Present'), which is seen here, and they do not exhibit the T2-FLAIR mismatch sign. Without other classic features like well-defined margins (the 'boundary_sharpness' metric is ambiguous) or calcifications (not assessed), the distinction is difficult. I am weighing the classic insular location as slightly stronger evidence for an astrocytoma (non-codeleted) against the negative finding of the T2-FLAIR mismatch sign, leading to a prediction of non-codeleted but with low confidence.",
+    "supporting_features": [
+      "Region Proportions",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The key imaging features for grading are the absence of contrast enhancement and necrosis. The metadata confirms this: 'Enhancement Quality' is 'None', 'ET Volume (mL)' is 0.0, and 'NCR Volume (mL)' is 0.0. These findings strongly argue against a WHO grade 4 diagnosis, which requires necrosis or microvascular proliferation (which typically manifests as enhancement). The distinction between WHO grade 2 and 3 is more challenging on imaging alone, as some grade 3 tumors can be non-enhancing. However, the classic presentation of a completely non-enhancing, non-necrotic diffuse glioma is most consistent with a lower-grade entity. Therefore, a WHO grade 2 is the most probable diagnosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly characteristic of a low-grade, IDH-mutant glioma. The complete lack of enhancement or necrosis strongly supports this and makes a high-grade diagnosis unlikely. The insular and deep gray matter involvement favors an astrocytoma, although the absence of a T2-FLAIR mismatch sign introduces some uncertainty in differentiating it from an oligodendroglioma. The most likely integrated diagnosis is an Astrocytoma, IDH-mutant, CNS WHO grade 2."
+}

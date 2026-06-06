@@ -1,0 +1,78 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors IDH-mutant diffuse glioma: the patient is young, the lesion is frontal/cortical, solitary, nonenhancing, and lacks necrosis, all of which are more typical of IDH-mutant lower-grade diffuse glioma than IDH-wildtype glioblastoma. Features arguing against IDH-mutant status are limited: a definite T2-FLAIR mismatch is not present, and the epicenter is reported as midline, which is less classic for a typical hemispheric IDH-mutant diffuse glioma. Overall, the imaging phenotype is much more supportive of IDH mutation than IDH-wildtype disease.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Present",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, the lesion has several features compatible with oligodendroglioma/codeletion: frontal-lobe cortical involvement, nonenhancing appearance, solitary disease, and absence of deep white matter or ependymal invasion. The lack of a definite T2-FLAIR mismatch does not prove codeletion but makes the classic astrocytoma mismatch pattern unsupported. Against codeletion, the metadata lacks calcification-sensitive imaging and reports a midline epicenter, which is less typical for classic cortical-subcortical oligodendroglioma. Overall the available MRI metadata modestly favors codeletion, but specificity is limited.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are limited by structured metadata only and absence of diffusion, perfusion, spectroscopy, and susceptibility/calcification assessment. The lesion is entirely nonenhancing FLAIR/T2 abnormality without a measurable enhancing or necrotic core, favoring a lower-grade adult-type diffuse glioma, but molecular testing is required for definitive WHO CNS5 classification.",
+  "subject_id": "UCSF-PDGM-231",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade considered independently from molecular status, the imaging strongly favors grade 2: there is no enhancement, no necrosis, no tumor core, no midline shift, no ventricular asymmetry, solitary disease, and no deep white matter or ependymal invasion. These findings argue against high-grade biology, especially grade 4, which usually shows enhancement and/or necrosis. The main caution is that the FLAIR abnormality is a moderate volume and involves eloquent brain, and grade 3 tumors can occasionally be nonenhancing, so grade 3 cannot be excluded by MRI metadata alone. Overall, grade 2 is the best estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Tumor Core Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

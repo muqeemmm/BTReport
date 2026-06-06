@@ -1,0 +1,50 @@
+{
+  "subject_id": "UCSF-PDGM-444",
+  "idh": {
+    "reasoning": "The patient's young age (32 years) is a strong demographic predictor for IDH-mutant status. The imaging findings are classic for an IDH-mutant glioma, specifically a large, solitary, purely non-enhancing tumor with no evidence of necrosis. The complete absence of contrast enhancement and necrosis are key features arguing against an IDH-wildtype glioma, which typically presents with these features, especially in older adults. While ependymal invasion can be seen in aggressive tumors, it is not specific and does not outweigh the strong evidence from the patient's age and the non-enhancing, non-necrotic tumor morphology.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the high likelihood of an IDH-mutant tumor, the differential is between an astrocytoma (non-codeleted) and an oligodendroglioma (codeleted). The tumor demonstrates features more consistent with an astrocytoma, including its highly infiltrative nature with involvement of deep white matter and deep gray matter structures such as the thalamus and basal ganglia. Oligodendrogliomas, while also cortically based, tend to have better-defined margins. The extensive, ill-defined T2/FLAIR hyperintensity without clear borders strongly favors a non-codeleted status.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The tumor lacks contrast enhancement and necrosis, making a WHO Grade 4 designation based on imaging features unlikely. The distinction between Grade 2 and 3 is challenging on conventional MRI. However, several features suggest a higher grade than 2. The tumor is exceptionally large (164.85 mL) and exerts significant mass effect, with an 8mm midline shift. Furthermore, the presence of ependymal (ventricular) invasion is another feature often associated with more aggressive behavior. Collectively, these findings make a CNS WHO Grade 3 more probable than a Grade 2, despite the absence of enhancement. A Grade 4 designation based on CDKN2A/B homozygous deletion cannot be excluded by imaging.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "max_shift_mm",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings in this young patient are highly characteristic of an IDH-mutant astrocytoma. The large, non-enhancing, infiltrative mass involving deep gray matter structures strongly supports this diagnosis. While the lack of enhancement argues against a high grade, the tumor's very large volume, significant mass effect, and ependymal invasion favor a CNS WHO grade 3. The final grade may be influenced by molecular markers not visible on MRI, such as CDKN2A/B status."
+}

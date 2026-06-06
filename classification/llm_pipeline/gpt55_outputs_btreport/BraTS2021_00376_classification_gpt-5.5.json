@@ -1,0 +1,67 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status, the strongest metadata pattern favors IDH-wildtype: advanced age in age_years, measurable enhancement in ET Volume (mL) and Proportion Enhancing, extensive edema in ED Volume (mL) and Proportion of Oedema, and a small necrotic/nonenhancing component in NCR Volume (mL) and Proportion Necrosis are more typical of an aggressive IDH-wildtype diffuse glioma than of a lower-grade IDH-mutant glioma. Evidence arguing against IDH-wildtype includes Cortical involvement and Tumor Location in the parietal-cortex region, a relatively small Lesion Sizes APxTVxCC (cm), Mild Enhancement Quality, and Minimal midline_shift_present, which can be seen with IDH-mutant tumors. Overall, the age and enhancing/edematous phenotype outweigh the more indolent-appearing features, so the conclusion is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.67,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the metadata leans non-codeleted. The age_years value is advanced, Tumor Location is parietal-cortex rather than a classic frontal-predominant location, and the lesion shows measurable enhancement and extensive edema by ET Volume (mL), Proportion Enhancing, ED Volume (mL), and Proportion of Oedema; this pattern is less characteristic of a classic oligodendroglioma genotype. Evidence against non-codeletion is that Cortical involvement can be seen in oligodendroglioma, and Mild Enhancement Quality does not exclude a codeleted tumor. Because key oligodendroglioma-specific MRI discriminators are not available in the provided metadata, the conclusion is non-codeleted with only moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, or histopathology. The high-grade IDH-wildtype pattern is favored, but molecular testing remains required for definitive WHO CNS5 integrated diagnosis.",
+  "subject_id": "BraTS2021_00376",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently, the metadata favors grade 4 over grades 2 or 3 because there is definite enhancing tumor by ET Volume (mL) and Proportion Enhancing, marked edema by ED Volume (mL) and Proportion of Oedema, and a necrotic/nonenhancing component by NCR Volume (mL) and Proportion Necrosis. These findings argue against grade 2 and support a high-grade diffuse glioma phenotype; the necrotic component makes grade 4 more likely than grade 3. Features arguing against grade 4 include small Lesion Sizes APxTVxCC (cm), Mild Enhancement Quality, Minimal midline_shift_present, low Proportion Necrosis, and absence of Deep WM invasion and Ependymal (ventricular) Invasion. Overall, the enhancement, edema, and necrotic component support grade 4, though confidence is not maximal because the necrotic component is small and mass effect is limited.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

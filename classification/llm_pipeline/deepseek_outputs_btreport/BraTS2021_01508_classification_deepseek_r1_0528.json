@@ -1,0 +1,45 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "reasoning": "The patient is 41 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor is located in the frontal lobe, a common site for IDH-mutant gliomas. Enhancement is mild, which is more typical of lower-grade gliomas or IDH-mutant tumors. However, the proportion of necrosis is high (66.46%), which is more characteristic of IDH-wildtype glioblastoma. The absence of deep white matter invasion and ependymal invasion also argues against a highly aggressive IDH-wildtype tumor. Given the conflicting evidence, the prediction leans toward IDH-mutant with low confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe, which is common for both oligodendrogliomas and astrocytomas. However, the tumor crosses the midline according to 'crosses_ideal_midline' for ncr_et, but 'CET Crosses midline' is False, indicating inconsistency. The primary side is left for all components, and the tumor epicenter is midline. Oligodendrogliomas (which are 1p/19q codeleted) typically do not cross the midline and are hemispheric. The absence of deep white matter invasion and cortical involvement present are non-specific. Given the midline involvement and frontal location, but with conflicting midline crossing information, the prediction is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "primary_side_ideal_midline",
+      "Side of Tumor Epicenter",
+      "crosses_ideal_midline",
+      "CET Crosses midline"
+    ]
+  },
+  "overall_comment": "The metadata shows inconsistencies in midline crossing assessment. The high necrosis proportion suggests high-grade features, but mild enhancement and younger age suggest IDH-mutant. Confidence is low due to conflicting evidence.",
+  "subject_id": "BraTS2021_01508",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has a high proportion of necrosis (66.46%), which is a hallmark of glioblastoma (CNS WHO grade 4). The total tumor volume is 35.701 mL, which is substantial. Enhancement is mild, which is atypical for grade 4 gliomas that usually show strong enhancement. However, necrosis is a strong indicator of high grade. The absence of deep white matter invasion and ependymal invasion argues against grade 4, but necrosis predominates. The tumor involves eloquent motor cortex, which is consistent with high-grade tumors. Given the necrosis volume, the prediction is grade 4 with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

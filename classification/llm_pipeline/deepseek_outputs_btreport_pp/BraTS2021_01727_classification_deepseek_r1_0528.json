@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The tumor is nonenhancing (Enhancement Quality: None, Proportion Enhancing: 0.0) which is more common in IDH-mutant gliomas. However, the patient age (54 years) is older than typical for IDH-mutant gliomas, which are more common in younger adults. The absence of enhancement supports IDH-mutant, while age argues against it.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (Speech motor and Vision) and is located in cortex, temporal, insula and frontal_lobe lobes, which are more typical for astrocytomas (non-codeleted). However, the deep white matter invasion (Deep WM invasion: Present) is present, which can be seen in both oligodendrogliomas and astrocytomas. The location and eloquence favor non-codeleted, but evidence is not strong.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor is nonenhancing, solitary, with no ependymal invasion. Deep white matter invasion is present. The patient is 54 years old. Based on the available MRI metadata, the tumor is likely an IDH-mutant astrocytoma (non-codeleted) but with moderate confidence due to conflicting features.",
+  "subject_id": "BraTS2021_01727",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None) and no necrosis (Proportion Necrosis: 60.72% is high but ET Volume is 0.0 mL, indicating no enhancing tumor; NCR Volume is 50.351 mL which is non-enhancing core, so necrosis proportion may be misinterpreted). WHO grade 2 gliomas are typically nonenhancing. However, the high proportion reported as necrosis (60.72%) might suggest higher grade, but since ET volume is 0, this may be cystic or non-enhancing tumor rather than true necrosis. Thus, grade 2 is suggested with caution.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_00834",
+  "idh": {
+    "reasoning": "The patient's age of 56 years is more typical for IDH-wildtype gliomas. The imaging findings are highly characteristic of an IDH-wildtype tumor, specifically a glioblastoma. The tumor is multifocal, which is a strong predictor of IDH-wildtype status. Furthermore, the presence of marked, thick-rim enhancement and central necrosis are classic hallmarks of glioblastoma. There are no significant features, such as younger age or non-enhancement, to suggest an IDH-mutant tumor.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of IDH-wildtype status makes a 1p/19q co-deletion highly unlikely, as this alteration defines oligodendroglioma, which is IDH-mutant. Evaluating the features independently, the tumor's characteristics argue strongly against a co-deleted status. Oligodendrogliomas typically have indistinct borders and are less likely to show marked enhancement or necrosis. This tumor exhibits both marked enhancement and necrosis. Additionally, the multifocal presentation is highly atypical for an oligodendroglioma. The temporal/occipital location is also less common than the classic frontal lobe predilection of oligodendrogliomas.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.97
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis on imaging is a strong radiological correlate of WHO Grade 4 glioma. The metadata confirms the presence of a necrotic component (`NCR Volume (mL)` of 4.544). This finding, in combination with other high-grade features such as marked, thick-rim enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\") and multifocality, provides compelling evidence for a Grade 4 diagnosis. There are no features suggestive of a lower-grade tumor (e.g., lack of enhancement for Grade 2, or enhancement without necrosis for Grade 3).",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 56-year-old female with a large, multifocal tumor involving the left temporal and occipital lobes. The combination of older age, multifocality, marked enhancement, and central necrosis provides very strong evidence for a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The confidence in all predictions is high due to the classic presentation."
+}

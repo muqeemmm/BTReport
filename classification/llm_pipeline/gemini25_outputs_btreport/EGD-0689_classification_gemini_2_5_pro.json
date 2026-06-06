@@ -1,0 +1,43 @@
+{
+  "subject_id": "EGD-0689",
+  "idh": {
+    "reasoning": "The tumor is characterized by a very large non-enhancing and non-necrotic component, with the vast majority of the volume (99.98%) being T2/FLAIR hyperintense edema or non-enhancing tumor. The proportion of enhancement (0.01) and necrosis (0.01) are minimal. This imaging phenotype, a large, predominantly non-enhancing mass, is highly characteristic of an IDH-mutant glioma. Features that would suggest an IDH-wildtype tumor, such as significant ring enhancement and central necrosis, are absent. The absence of deep white matter invasion also supports an IDH-mutant status.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant status, the key distinction is between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). This tumor demonstrates an infiltrative pattern, involving not just the temporal lobe cortex but also deep gray matter structures including the putamen, pallidum, and hippocampus. This deep, infiltrative growth is more characteristic of an astrocytoma. Oligodendrogliomas are more typically cortically-centered with better-defined margins. The large volume of T2/FLAIR signal abnormality relative to any solid component also favors an astrocytoma.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Tumor Location",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The tumor is very large, but mostly non-enhancing. However, there is explicit reporting of both mild enhancement and a small necrotic component (`NCR Volume (mL)` of 0.019, `Proportion Necrosis` of 0.01). According to WHO CNS5 criteria for an IDH-mutant astrocytoma, the presence of necrosis is a defining feature of CNS WHO grade 4. While the volume of necrosis is minimal and could potentially be artifactual, its presence in the provided data is a strong indicator for the highest grade. The mild enhancement also argues against a grade 2 diagnosis, suggesting at least grade 3. Given the presence of necrosis, grade 4 is the most appropriate prediction.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging features are highly suggestive of an IDH-mutant glioma due to the overwhelming predominance of non-enhancing tumor volume. The infiltrative nature involving deep gray matter structures favors an astrocytoma (1p/19q non-codeleted). Although enhancement and necrosis are minimal, their reported presence is sufficient to classify this as a high-grade lesion, with the presence of necrosis specifically pointing towards a CNS WHO grade 4 astrocytoma, IDH-mutant."
+}

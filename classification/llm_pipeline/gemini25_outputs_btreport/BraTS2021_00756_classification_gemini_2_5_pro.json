@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_00756",
+  "idh": {
+    "reasoning": "The patient's advanced age of 69 is a very strong predictor for IDH-wildtype status. The MRI features overwhelmingly corroborate this, demonstrating a classic high-grade glioma phenotype. Key indicators include marked, thick-walled contrast enhancement, a large necrotic core, and aggressive trans-midline growth. Specifically, the `Enhancement Quality` is 'Marked', `Proportion Necrosis` is high at 21.98%, and `CET Crosses midline` is 'True'. These features are hallmarks of glioblastoma, the archetypal IDH-wildtype tumor. Deep involvement of the thalamus and basal ganglia (`Anatomical Overlap Regions`) further supports this prediction. There are no imaging features suggestive of an IDH-mutant tumor, which typically presents in younger patients and is often non-enhancing or minimally enhancing.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.99
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically exhibit minimal to no enhancement and rarely show necrosis. This tumor, in contrast, displays 'Marked' `Enhancement Quality`, a thick enhancing margin ('>3mm'), and a substantial necrotic component (`Proportion Necrosis` of 21.98%). Furthermore, aggressive features such as midline crossing of the enhancing tumor (`CET Crosses midline`: 'True') and deep gray matter invasion (`Anatomical Overlap Regions` including thalamus and putamen) are characteristic of astrocytic lineage tumors (non-codeleted), particularly glioblastoma. The frontal lobe location is common for oligodendrogliomas but is non-specific. The overwhelming evidence points to a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of central necrosis on imaging is a strong surrogate for histologic necrosis, which is a defining feature of CNS WHO grade 4. This tumor has a large necrotic core, with `Proportion Necrosis` at 21.98% and an `NCR Volume (mL)` of 28.022. In addition, the presence of marked, thick-walled contrast enhancement (`Enhancement Quality`: 'Marked', `ET Volume (mL)`: 49.361) is a reliable indicator of high-grade histology (microvascular proliferation). The combination of both extensive enhancement and necrosis provides definitive imaging evidence for a grade 4 glioma. Supporting features of high-grade malignancy include the very large tumor volume, significant mass effect (`max_shift_mm`: -11.0), and invasive behavior (`CET Crosses midline`, `Ependymal (ventricular) Invasion`). There is no evidence to support a lower grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult (69 years) with a large, right-sided, deeply invasive frontal lobe mass. The imaging findings are unequivocal for a high-grade glioma, with classic features of glioblastoma including a large necrotic core, thick and marked ring enhancement, and aggressive features like midline crossing and ependymal invasion. The combination of patient age and these MRI characteristics provides very high confidence for the integrated diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

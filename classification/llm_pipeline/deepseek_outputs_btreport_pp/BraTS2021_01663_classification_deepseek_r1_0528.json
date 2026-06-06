@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 32 years old, which is younger than typical for IDH-wildtype glioblastomas that peak around 55-65 years. IDH-mutant gliomas are more common in younger adults. The tumor location in frontal lobe cortex is also more common in IDH-mutant tumors. Enhancement is mild, which is more typical for IDH-mutant tumors than the strong enhancement seen in IDH-wildtype. However, the age alone is not definitive.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent motor cortex, which is more common in astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas typically occur in non-eloquent frontal lobes. However, the frontal lobe location could support oligodendroglioma. The absence of calcifications (not assessed) and lack of deep white matter invasion argue against oligodendroglioma, but these features are not definitive.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The prediction for IDH mutation is mutant with moderate confidence based on age and location. 1p/19q is predicted non-codeleted due to eloquent involvement. Grade is assigned as 4 due to necrosis presence.",
+  "subject_id": "BraTS2021_01663",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "There is necrosis present (NCR Volume 0.437 mL, Proportion Necrosis 0.77%), which is a criterion for CNS WHO grade 4 in IDH-mutant gliomas. The tumor also shows enhancement, though mild. The presence of necrosis overrides other features for grading.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  }
+}

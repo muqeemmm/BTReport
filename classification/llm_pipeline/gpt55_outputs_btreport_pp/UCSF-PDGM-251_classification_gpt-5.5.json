@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions",
+      "Tumor Core Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The MRI pattern favors IDH-mutant diffuse glioma: 'T2-FLAIR Mismatch Present' and a high 'T2-FLAIR Mismatch Score' are strongly associated with IDH-mutant astrocytoma, while 'age_years' of 36 is younger than typical IDH-wildtype glioblastoma. 'Enhancement Quality', 'ET Volume (mL)', 'Proportion Enhancing', 'NCR Volume (mL)', and 'Proportion Necrosis' indicate no enhancement or necrosis, also arguing against the usual imaging phenotype of IDH-wildtype glioblastoma. 'Tumor Location' and 'Cortical involvement' are compatible with a lower-grade diffuse glioma. Against this, 'Side of Tumor Epicenter' being reported as midline and 'Anatomical Overlap Regions' including deep/mesial structures are less specific, and 'Tumor Core Volume (mL)' being 0.0 reflects a segmentation limitation that reduces certainty. Overall the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, 'T2-FLAIR Mismatch Present' with a high 'T2-FLAIR Mismatch Score' strongly favors a non-codeleted astrocytic glioma over oligodendroglioma. 'Tumor Location' in the temporal-cortex region is not the classic frontal-predominant pattern often seen with codeleted oligodendroglioma. Features that keep some uncertainty are 'Cortical involvement', 'Enhancement Quality' showing no enhancement, and 'age_years' of 36, because these can also be seen in oligodendroglioma and are not decisive. Overall, the T2-FLAIR mismatch pattern is the dominant discriminator and supports non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "This is an MRI-only prediction from structured metadata. The strongest imaging discriminator is the high T2-FLAIR mismatch score, favoring IDH-mutant, 1p/19q-non-codeleted astrocytoma. Lack of enhancement and necrosis supports a lower grade, but grade 3 cannot be fully excluded without histology, mitotic activity, molecular markers, and unavailable sequences such as DWI/ADC and perfusion.",
+  "subject_id": "UCSF-PDGM-251",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade considered independently, the available metadata favors grade 2 because 'Enhancement Quality', 'ET Volume (mL)', and 'Proportion Enhancing' show no enhancement, while 'NCR Volume (mL)' and 'Proportion Necrosis' show no necrosis. 'Multiple satellites present', 'Multifocal or Multicentric', 'Ependymal (ventricular) Invasion', 'Deep WM invasion', 'midline_shift_present', and 'Edema crosses midline' do not show aggressive spread or mass-effect features typical of higher grade. 'T2-FLAIR Mismatch Present' is also commonly seen in lower-grade astrocytoma. Against grade 2, 'ED Volume (mL)', 'Effaced Ventricle', 'Asymmetrical Ventricles', and 'Total tumor volume (mL)' indicate a sizable FLAIR lesion with some local mass effect, and nonenhancing grade 3 glioma remains possible. Overall the absence of enhancement, necrosis, and invasive/aggressive features supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Edema crosses midline",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

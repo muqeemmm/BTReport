@@ -1,0 +1,44 @@
+{
+  "subject_id": "BraTS2021_00778",
+  "idh": {
+    "reasoning": "The patient's age of 62 years is a strong demographic predictor for IDH-wildtype status. The MRI findings are classic for an IDH-wildtype glioma (glioblastoma), including marked and thick-rim enhancement, a significant volume of both enhancing tissue and central necrosis, and extensive surrounding edema. Furthermore, the absence of the T2-FLAIR mismatch sign argues strongly against an IDH-mutant astrocytoma. The tumor also exhibits relatively well-defined margins, which is more characteristic of IDH-wildtype tumors. There are no imaging features to suggest an IDH-mutant glioma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The presence of marked, thick-rim enhancement and central necrosis is highly uncharacteristic of 1p/19q co-deleted gliomas (oligodendrogliomas), which typically present as non-enhancing or minimally enhancing tumors without necrosis, especially at initial diagnosis. The temporal lobe location is less common than the frontal lobe for oligodendrogliomas. The overall imaging phenotype, dominated by aggressive features like enhancement and necrosis, strongly favors a non-codeleted (astrocytic) lineage.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of central necrosis is a key histopathological and radiological feature that defines a WHO grade 4 glioma in the context of adult-type diffuse gliomas. The metadata explicitly shows a non-zero volume of necrosis (`NCR Volume (mL)` of 3.745). This is further supported by the presence of marked, thick-rim contrast enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"). These features are the radiological hallmarks of a grade 4 tumor. There is no evidence to support a lower grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 62-year-old female with a solitary temporal lobe tumor. The imaging findings are unequivocal for a high-grade glioma. The combination of advanced age, marked ring enhancement, and central necrosis provides very strong evidence for a diagnosis of Glioblastoma, IDH-wildtype, WHO grade 4. All individual predictions are consistent and made with high confidence."
+}

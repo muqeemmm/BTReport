@@ -1,0 +1,55 @@
+{
+  "subject_id": "BraTS2021_01045",
+  "idh": {
+    "reasoning": "The imaging features are highly characteristic of an IDH-wildtype glioma. The patient's age of 52 is more typical for IDH-wildtype tumors. The tumor exhibits marked, thick rim-enhancement and a large necrotic core, which are classic hallmarks of glioblastoma, the archetypal IDH-wildtype tumor. The lesion is large, deeply infiltrative, crosses the midline via the corpus callosum, and involves deep gray matter structures, indicating aggressive biological behavior typical of IDH-wildtype status. Furthermore, the absence of a T2-FLAIR mismatch sign is a strong negative predictor for IDH-mutant astrocytoma. While the FLAIR transition zone is noted to be sharp, this single feature is insufficient to counteract the overwhelming evidence for an IDH-wildtype glioma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas are typically cortically based, show minimal to no enhancement, and rarely exhibit necrosis. This tumor, in contrast, is characterized by marked, thick rim-enhancement, a large necrotic core, and deep, extensive infiltration involving the corpus callosum and deep gray matter. These features are hallmarks of a high-grade astrocytic glioma and are antithetical to the typical appearance of an oligodendroglioma. Therefore, a 1p/19q co-deleted status is extremely unlikely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.99
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic core is a definitive radiological feature of a WHO grade 4 glioma in the context of adult-type diffuse gliomas. The metadata confirms a substantial necrotic component (`NCR Volume (mL)` of 19.148) surrounded by a thick, markedly enhancing rim (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"). These findings are the imaging correlates of microvascular proliferation and necrosis, which are histological criteria for grade 4. The tumor's large size, extensive infiltration, and significant mass effect (`max_shift_mm` of 11.0) further corroborate its high-grade nature. There are no features to suggest a lower grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "rim_core_adjacency",
+      "max_shift_mm",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 1.0
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features are pathognomonic for a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The large, deeply infiltrative mass with extensive midline crossing, marked rim-enhancement, and a substantial necrotic core provides unequivocal evidence for this diagnosis. The absence of a T2-FLAIR mismatch sign further supports an IDH-wildtype status."
+}

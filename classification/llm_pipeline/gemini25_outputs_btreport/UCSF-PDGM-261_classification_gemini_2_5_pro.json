@@ -1,0 +1,42 @@
+{
+  "subject_id": "UCSF-PDGM-261",
+  "idh": {
+    "reasoning": "The patient is young (29 years old), which is a very strong predictor for IDH-mutant status. Furthermore, the tumor is entirely non-enhancing and non-necrotic, as indicated by zero volume for both enhancing tumor and necrosis. This constellation of features \u2013 young age and a lack of aggressive imaging characteristics \u2013 is classic for an IDH-mutant diffuse glioma. There are no features to suggest an IDH-wildtype tumor, which typically presents in older patients with significant enhancement and necrosis.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The distinction between codeleted and non-codeleted tumors based on the available MRI metadata is challenging. Neither has pathognomonic features here. However, the tumor's involvement of deep gray matter (putamen) and limbic structures (hippocampus, amygdala) in addition to the temporal cortex is more characteristic of the infiltrative nature of an astrocytoma (non-codeleted) than a typically more cortically-based oligodendroglioma (codeleted). This is a weak predictor, and other classic differentiating features are not available, leading to low confidence.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The key determinants of high grade (3 or 4) on conventional MRI are contrast enhancement and necrosis. This tumor shows a complete absence of both, with an enhancing tumor volume of 0.0 mL and a necrotic volume of 0.0 mL. The mass effect is also minimal relative to the tumor volume. These findings are the hallmark of a low-grade (WHO grade 2) diffuse glioma. There is no imaging evidence to support a diagnosis of a grade 3 or 4 tumor.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a young adult with a solitary, non-enhancing, non-necrotic glioma involving the left temporal lobe, putamen, and limbic structures. The imaging findings are highly characteristic of a low-grade, IDH-mutant glioma. The location slightly favors an astrocytoma over an oligodendroglioma. The integrated radiological diagnosis is most consistent with an Astrocytoma, IDH-mutant, CNS WHO grade 2."
+}

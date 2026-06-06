@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because age_years is 43 and the lesion is frontal/cortical by Tumor Location, Cortical involvement, and Region Proportions, with small Total tumor volume (mL), no midline_shift_present, no Ependymal (ventricular) Invasion, no Deep WM invasion, and solitary disease by Multifocal or Multicentric and Number of lesions. These features are less typical of an IDH-wildtype glioblastoma pattern. Evidence against IDH mutation includes mild enhancement by Enhancement Quality, a measurable ET Volume (mL), Proportion Enhancing, high Proportion of Oedema, and absence of a T2-FLAIR mismatch by T2-FLAIR Mismatch Present and T2-FLAIR Mismatch Score, which reduces support for IDH-mutant astrocytoma specifically. Overall, the younger age, frontal cortical location, small volume, and lack of aggressive invasion/mass effect outweigh the limited enhancing/edematous features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status assessed independently, the frontal cortical distribution by Tumor Location, Cortical involvement, and Region Proportions, together with age_years of 43, supports an oligodendroglioma-like imaging phenotype and therefore favors 1p/19q co-deletion. T2-FLAIR Mismatch Present being absent and the low T2-FLAIR Mismatch Score also reduce support for the classic non-codeleted astrocytoma mismatch pattern, though absence of mismatch is nonspecific. Evidence against co-deletion includes Side of Tumor Epicenter described as midline rather than clearly hemispheric cortical-subcortical, mild enhancement by Enhancement Quality with measurable ET Volume (mL), and high Proportion of Oedema, which are not specific for oligodendroglioma. The balance modestly favors codeletion, but confidence is limited because key discriminating information is not available in the provided metadata.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured T1w, T2w, T2-FLAIR, and T1-Gd metadata. Molecular status cannot be determined definitively from MRI metadata alone. The very small enhancing and non-enhancing core volumes, mild enhancement, small total tumor volume, and lack of mass effect favor a lower-grade diffuse glioma phenotype, but the high edema proportion and measurable enhancement introduce uncertainty.",
+  "subject_id": "EGD-0561",
+  "who_grade": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "WHO grade is assessed independently from the molecular predictions. The small Total tumor volume (mL), very small Tumor Core Volume (mL), mild Enhancement Quality, tiny ET Volume (mL), absence of midline_shift_present, absence of Ependymal (ventricular) Invasion and Deep WM invasion, solitary disease by Multifocal or Multicentric and Number of lesions, and no ventricular asymmetry by Asymmetrical Ventricles support a lower-grade imaging phenotype, most consistent with grade 2. Evidence against grade 2 includes mild enhancement, measurable enhancing tumor volume, Thickness of enhancing margin greater than 3 mm, high Proportion of Oedema, and small NCR Volume (mL), which can raise concern for grade 3 or grade 4 biology. However, the enhancing and necrotic/non-enhancing core components are extremely small and there is no substantial mass effect or invasive extension in the provided fields, so grade 2 is the best estimate with limited confidence.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Tumor Core Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Asymmetrical Ventricles"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

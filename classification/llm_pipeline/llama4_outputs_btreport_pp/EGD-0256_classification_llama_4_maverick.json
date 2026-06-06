@@ -1,0 +1,35 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7235217451310293, indicating a significant mismatch. This feature is strongly associated with IDH mutant gliomas. The patient's age (36 years) also aligns with the demographic more commonly associated with IDH mutant gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of a significant T2-FLAIR mismatch, as indicated by the 'T2-FLAIR Mismatch Present' and 'T2-FLAIR Mismatch Score', is more commonly associated with IDH mutant astrocytomas rather than oligodendrogliomas. While not definitive, this suggests a lower likelihood of 1p/19q co-deletion. Additionally, the clinical and radiological features do not strongly suggest the typical profile for oligodendroglioma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows marked enhancement and has a significant necrotic component (Proportion Necrosis: 7.21%), suggesting a higher grade. The presence of necrosis and enhancement quality are indicators of a more aggressive tumor. Given the IDH mutation status is predicted as 'mutant', and considering the presence of necrosis and marked enhancement, the tumor is likely to be grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "IDH Mutation Status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0256"
+}

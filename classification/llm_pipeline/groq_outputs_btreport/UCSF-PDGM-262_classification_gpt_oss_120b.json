@@ -1,0 +1,52 @@
+{
+  "subject_id": "UCSF-PDGM-262",
+  "idh": {
+    "reasoning": "The tumor shows no contrast enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) and no necrosis (Proportion Necrosis: 0.0), which are typical of low\u2011grade gliomas. The patient is 44\u202fyears old (age_years) and the lesion is non\u2011enhancing, solitary, and involves cortex and deep white matter, all favoring an IDH\u2011mutant diffuse glioma rather than an IDH\u2011wildtype, which usually presents with enhancement, necrosis, and higher grade features. The presence of a midline shift and a relatively large total volume introduce some uncertainty, but these findings alone do not outweigh the strong low\u2011grade imaging pattern.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Midline_shift_present",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Imaging lacks specific features that suggest 1p/19q codeletion such as calcifications or a classic oligodendroglial appearance; instead the lesion shows cortical involvement and deep white\u2011matter invasion, patterns more commonly seen in IDH\u2011mutant astrocytomas. Because no supportive imaging hallmark for codeletion is present, the best estimate is non\u2011codeleted, though the evidence is limited.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The absence of enhancement, necrosis, and contrast\u2011enhancing tumor (ET Volume: 0.0, Proportion Enhancing: 0.0) together with cortical and deep white\u2011matter involvement points to a low\u2011grade lesion. According to WHO CNS5, IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted tumors without enhancement are classified as WHO grade\u202f2. The only opposing factors are the presence of a midline shift and a relatively large overall volume, which could suggest a higher grade, but these are insufficient to change the grade assignment.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Midline_shift_present",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q non-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "1p/19q status is inferred from imaging patterns and remains uncertain without molecular testing or advanced imaging (e.g., perfusion, spectroscopy). The large tumor volume and midline shift introduce some ambiguity regarding grade, but the lack of enhancement strongly supports a WHO grade\u202f2 lesion."
+}

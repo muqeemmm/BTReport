@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is relatively young for adult diffuse glioma, the lesion is nonenhancing with no enhancing tumor volume, and there is no necrosis. A temporal-cortex location with cortical involvement is also a common presentation for lower-grade IDH-mutant glioma. Limited mass effect and lack of deep white matter invasion or midline crossing further support a less aggressive molecular phenotype. Against IDH-mutant status, the tumor/edema volume is large and the epicenter is labeled midline, which can be seen in more aggressive IDH-wildtype tumors, but these are weaker than the nonenhancing, non-necrotic, cortically based pattern. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the temporal-cortex location favors a non-codeleted astrocytic diffuse glioma over oligodendroglioma, since oligodendrogliomas more often show a frontal-predominant pattern. The absence of deep white matter invasion and solitary nature do not specifically support codeletion. Features that can support codeletion include cortical involvement and nonenhancement, but these are nonspecific and also common in lower-grade astrocytic tumors. Because key discriminators such as calcification, susceptibility, perfusion, and spectroscopy are not available in the provided metadata, the evidence is only modest. Overall, the balance favors non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "MRI metadata favors a nonenhancing, non-necrotic, cortically based temporal diffuse glioma, most compatible with an IDH-mutant lower-grade astrocytoma. Confidence is limited for 1p/19q because the available sequences do not assess calcification, susceptibility, perfusion, diffusion, or metabolic markers.",
+  "subject_id": "UCSF-PDGM-237",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "Grading considered independently favors CNS WHO grade 2 because there is no contrast enhancement, no enhancing tumor volume, no necrosis, no necrotic core volume, no midline crossing, no deep white matter invasion, no ependymal invasion, no multifocality, and no meaningful midline shift. These features argue against grade 4, and also make grade 3 less likely in the absence of aggressive imaging features. The main opposing feature is the relatively large total tumor/edema volume, which can be seen in higher-grade infiltrative glioma, but size alone is insufficient to outweigh the completely nonenhancing and non-necrotic pattern. Overall, the imaging metadata supports grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "midline_shift_present",
+      "mean_shift_mm",
+      "max_shift_mm"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

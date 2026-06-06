@@ -1,0 +1,69 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "n_components_enhancing",
+      "n_components_nonenhancing",
+      "rim_core_adjacency",
+      "Transition Zone Thickness (FLAIR)",
+      "Transition Zone Thickness (T1CE)",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 61 years old, which is more typical for IDH-wildtype glioblastoma. However, there is no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0), no necrosis (Proportion Necrosis: 0.0), and no tumor core (Tumor Core Volume: 0.0, ET Volume: 0.0, NCR Volume: 0.0). These features are atypical for IDH-wildtype glioblastoma, which usually shows enhancement and necrosis. The absence of a tumor core makes assessment difficult. The T2-FLAIR mismatch score is 0.47, which is not indicative of IDH-mutant astrocytoma (typically >0.8). Given the age and lack of mismatch, but with contradictory features of no enhancement or necrosis, the prediction is IDH-wildtype with low confidence.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe-cortex region and involves eloquent areas (Speech motor and Motor). Oligodendrogliomas (1p/19q codeleted) often involve frontal lobes but typically do not involve eloquent cortex early. However, deep white matter invasion is absent, which is more common in oligodendrogliomas. Ependymal invasion is absent. The absence of enhancement and necrosis does not strongly favor either subtype. Given the frontal location but eloquent involvement and absence of deep WM invasion, prediction is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "The tumor is a solitary nonenhancing lesion with 100% edema proportion and no tumor core. The absence of enhancement and necrosis is unusual for glioblastoma but consistent with diffuse astrocytoma. However, the patient's age (61) is atypical for IDH-mutant tumors. The T2-FLAIR mismatch score (0.47) does not support IDH-mutant status. The frontal location could suggest oligodendroglioma, but eloquent involvement argues against it. Overall, the features are ambiguous.",
+  "subject_id": "EGD-0215",
+  "who_grade": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "n_components_enhancing",
+      "n_components_nonenhancing"
+    ],
+    "prediction": 2,
+    "reasoning": "There is no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) and no necrosis (Proportion Necrosis: 0.0). The tumor core volume is 0.0 mL. These features are typical for grade 2 diffuse gliomas. However, the patient is 61 years old, which is unusual for grade 2 tumors that are more common in younger patients. Additionally, eloquent brain involvement (Speech motor and Motor) is present, which is more typical of higher grade tumors. Given the absence of enhancement/necrosis but advanced age and eloquent involvement, prediction is grade 2 with low confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ]
+  }
+}

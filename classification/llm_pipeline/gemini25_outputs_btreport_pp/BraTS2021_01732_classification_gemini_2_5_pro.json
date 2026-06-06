@@ -1,0 +1,55 @@
+{
+  "subject_id": "BraTS2021_01732",
+  "idh": {
+    "reasoning": "The patient is 23 years old, which is a very strong predictor for IDH-mutant status, as the vast majority of diffuse gliomas in this age group are IDH-mutant. The tumor is very large (200.282 mL) but has minimal enhancement (0.392 mL), a pattern characteristic of IDH-mutant gliomas which are often T2/FLAIR-dominant. While features like significant necrosis (38.18%), deep gray matter involvement, and ependymal invasion are often associated with IDH-wildtype tumors, they can also be present in high-grade IDH-mutant astrocytomas. The patient's young age is the most compelling piece of evidence and outweighs the aggressive imaging features in predicting IDH status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The evidence for 1p/19q co-deletion status is conflicting. The very sharp tumor-to-edema transition zone on FLAIR (median thickness of 0.5 mm) is a classic feature of oligodendroglioma (IDH-mutant, 1p/19q-codeleted). However, several features argue against this, pointing towards a non-codeleted (astrocytic) lineage. These include extensive invasion into deep gray matter structures (thalamus, caudate, putamen, pallidum) and ependymal (ventricular) invasion, both of which are more characteristic of astrocytomas. The absence of a T2-FLAIR mismatch sign is non-specific but slightly argues against an astrocytoma. On balance, the deeply infiltrative pattern into critical structures is a stronger indicator of astrocytic lineage than the sharp border is of oligodendroglioma lineage.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic core, comprising 38.18% of the tumor core volume, is a very strong indicator of high-grade glioma. Radiographically evident necrosis is a defining feature of WHO Grade 4 tumors (e.g., glioblastoma or IDH-mutant astrocytoma, grade 4). This is further supported by other aggressive features, including significant mass effect (11 mm midline shift), ependymal invasion, and deep white matter invasion. While the patient is young and the tumor shows only mild enhancement, the presence of substantial necrosis is the most critical factor and overwhelmingly points to a WHO Grade 4 classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "max_shift_mm",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a large, deeply invasive glioma in a very young patient. The young age strongly suggests an IDH-mutant tumor. However, the imaging features are highly aggressive, with significant necrosis, mass effect, and invasion of deep gray matter and the ependyma, which are definitive for a WHO Grade 4 classification. The combination of these findings leads to a predicted diagnosis of Astrocytoma, IDH-mutant, CNS WHO grade 4. The 1p/19q status is the most uncertain prediction, as the sharp tumor border conflicts with the deeply invasive pattern."
+}

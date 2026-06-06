@@ -1,0 +1,66 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Deep WM invasion",
+      "midline_shift_present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the strongest metadata favoring IDH-wildtype is an older adult age_years of 51 together with aggressive structural features: high Proportion Necrosis, Multiple satellites present, Thickness of enhancing margin >3mm, and measurable Proportion of Oedema. These are more typical of IDH-wildtype glioblastoma-like biology. Evidence arguing against IDH-wildtype includes Tumor Location and Region Proportions showing a predominantly frontal/cortical/insular lesion with Cortical involvement, which can be seen in IDH-mutant diffuse glioma, plus Enhancement Quality described as mild, very small ET Volume (mL), absent Deep WM invasion, and no midline_shift_present. Balancing these, the necrosis/satellite pattern in a 51-year-old supports IDH-wildtype despite the frontal cortical location.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Multiple satellites present",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the features supporting non-codeletion are the aggressive components: high Proportion Necrosis, Multiple satellites present, Thickness of enhancing margin >3mm, and Proportion of Oedema. These are less typical for classic oligodendroglioma imaging. Evidence arguing against non-codeletion is substantial: Tumor Location and Region Proportions indicate frontal/cortical/insular predominance with Cortical involvement, a pattern that can fit oligodendroglioma, and Enhancement Quality is mild with Deep WM invasion absent. Because the provided metadata lacks highly specific oligodendroglioma markers and shows necrosis/satellite behavior, the balance favors non-codeleted with limited confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multiple satellites present",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the provided structured MRI metadata. The main uncertainty is that the lesion has a frontal cortical/insular distribution and only mild, very small enhancing volume, which can overlap with lower-grade or IDH-mutant tumors, while the reported high necrosis and satellite lesions favor glioblastoma-like behavior.",
+  "subject_id": "EGD-0101",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently, the metadata supporting grade 4 includes high Proportion Necrosis, Multiple satellites present, Thickness of enhancing margin >3mm, Proportion of Oedema, and a moderate Total tumor volume (mL), all of which suggest high-grade aggressive disease. Evidence against grade 4 includes Enhancement Quality described as mild, very small ET Volume (mL), no midline_shift_present, absent Asymmetrical Ventricles, and Multifocal or Multicentric reported as solitary, which reduce the certainty of a grade 4 call. Overall, the reported necrosis and satellite lesions outweigh the limited enhancement and mass effect, supporting CNS WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multiple satellites present",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

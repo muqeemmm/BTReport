@@ -1,0 +1,81 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The MRI metadata favors an IDH-mutant diffuse glioma because the patient is young, the lesion is frontal/cortical, solitary, mildly enhancing, and lacks deep white-matter invasion, ependymal invasion, midline crossing, and appreciable mass effect. These features are more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. The main counterpoint is the reported large necrotic/non-enhancing core proportion with a small enhancing component, which can be seen in aggressive IDH-wildtype tumors, but the overall age-location-enhancement pattern still supports IDH mutation.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the frontal cortical location and young age provide some support for oligodendroglioma/codeletion. However, the reported high necrotic/non-enhancing core proportion, measurable edema, and enhancing component are less typical of classic lower-grade oligodendroglioma and favor a non-codeleted astrocytic glioma pattern. Because calcification/SWI and other discriminating sequences are unavailable and frontal cortical tumors overlap substantially between oligodendroglioma and astrocytoma, the evidence is weak; on balance the metadata slightly favors non-codeletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/calcification assessment. The major uncertainty is that the field labeled necrosis/non-enhancing core is large despite only minimal enhancement; if this represents non-enhancing tumor rather than true necrosis, the grade estimate could be lower and 1p/19q status could shift toward codeletion.",
+  "subject_id": "EGD-0415",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the strongest high-grade feature is the reported high necrotic/non-enhancing core proportion, with a measurable enhancing component; necrosis on MRI raises concern for grade 4 biology in an adult diffuse glioma. Against grade 4, enhancement is described as mild with very small enhancing volume and a thin enhancing margin, edema and tumor volume are modest, there is no midline shift, and there is no deep white-matter or ependymal invasion. These mitigating features lower certainty, but the explicit necrosis-associated metadata makes grade 4 more likely than grade 2 or 3.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

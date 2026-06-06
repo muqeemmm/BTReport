@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_00542",
+  "idh": {
+    "reasoning": "Patient is 71 years old, which is typical for IDH-wildtype glioblastoma. The tumor shows marked contrast enhancement (Enhancement Quality) and a substantial necrotic component (Proportion Necrosis 10.94%), both imaging hallmarks of IDH-wildtype high\u2011grade glioma. The large total tumor volume (86.481\u202fmL) and high proportion of enhancing tissue (Proportion Enhancing 49.73%) further support a wildtype status. Conversely, cortical involvement and a frontal/temporal location are more common in IDH\u2011mutant tumors, providing some contradictory evidence. Overall the preponderance of age and imaging features favors IDH\u2011wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor exhibits marked enhancement and necrosis, which are atypical for 1p/19q\u2011codeleted oligodendroglioma that usually shows minimal enhancement and calcifications. The patient\u2019s age (71) is also higher than the typical age range for oligodendroglioma. These factors support a non\u2011codeleted status. The presence of frontal lobe involvement could be seen in oligodendroglioma, but without the characteristic imaging phenotype, it is insufficient to suggest codeletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement, necrosis (10.94%), high enhancing proportion (~50%) and large tumor volume (86.481\u202fmL) are imaging criteria for WHO grade\u202f4 glioblastoma. The presence of cortical involvement does not preclude grade\u202f4, and the lack of deep white\u2011matter invasion is not contradictory. Therefore grade\u202f4 is most likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Based solely on conventional MRI metadata, the findings strongly favor an IDH-wildtype, 1p/19q non\u2011codeleted glioblastoma (WHO grade\u202f4). Advanced sequences (diffusion, perfusion, spectroscopy) are unavailable, which could refine molecular inference, but the current evidence yields high confidence in the presented classification."
+}

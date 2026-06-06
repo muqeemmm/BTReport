@@ -1,0 +1,51 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 35 years old, which is younger than typical for IDH-wildtype gliomas that peak in older adults. The tumor is located in the frontal lobe cortex, a common site for IDH-mutant tumors. Enhancement is mild, which is more typical of IDH-mutant tumors than wildtype. However, the proportion necrosis is 11.73%, which is somewhat high for grade 2/3 IDH-mutant tumors but not as high as grade 4 IDH-wildtype. The T2-FLAIR mismatch sign is absent (score 0.4, degree -0.36), which strongly supports IDH-mutant status since mismatch is specific to IDH-mutant astrocytomas.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas (codeleted). Involvement of eloquent motor cortex also favors astrocytoma over oligodendroglioma. However, the patient is young (35 years) and the tumor is solitary with no deep white matter invasion, which are features that could be seen in either. The absence of calcifications (not assessed) doesn't help. Overall, astrocytoma features outweigh.",
+    "supporting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "Based on MRI features: IDH-mutant astrocytoma is most likely. Grade prediction follows.",
+  "subject_id": "BraTS2021_01738",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor shows mild enhancement and proportion necrosis of 11.73%, which is above the typical threshold for grade 2 (<10%) but below grade 4 (>20%). The edema volume is large (87.52% of total tumor volume), which can occur in grade 3 tumors. No ependymal invasion or deep white matter invasion noted. The thick enhancing margin (>3mm) suggests grade 3 rather than grade 2. However, the low ET volume (0.31 mL) and absence of multifocality argue against grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Edema Volume (mL)",
+      "Thickness of enhancing margin"
+    ]
+  }
+}

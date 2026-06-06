@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (39 years old), which is more common in IDH-mutant gliomas. However, there is no enhancement (Enhancement Quality: None) and T2-FLAIR mismatch is absent (T2-FLAIR Mismatch Present: 0.0, T2-FLAIR Mismatch Score: 0.4), which are features associated with IDH-mutant astrocytomas. The absence of enhancement and T2-FLAIR mismatch supports IDH-mutant status, but the low T2-FLAIR mismatch score (0.4) is not strongly supportive. Age supports mutant, but lack of classic imaging features reduces confidence.",
+    "supporting_features": [
+      "age_years"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (Speech motor and Motor) and cortex (Cortical involvement: Present), which are more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often present with frontal lobe involvement and may have cortical involvement, but eloquent involvement is less common. However, frontal lobe involvement is present (Region Proportions includes frontal_lobe), which can be seen in both. The evidence is conflicting and insufficient for high confidence.",
+    "supporting_features": [
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The tumor is non-enhancing, solitary, with no necrosis or enhancing tumor, and consists entirely of edema. The patient is young. These features suggest a low-grade glioma. The absence of T2-FLAIR mismatch and enhancement points towards IDH-mutant astrocytoma, but confidence is low due to insufficient classic features. 1p/19q status is predicted as non-codeleted based on eloquent involvement, but confidence is also low. Grade is assigned as 2 due to absence of necrosis and enhancement.",
+  "subject_id": "UCSF-PDGM-286",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": 2,
+    "reasoning": "There is no necrosis (Necrosis Volume: 0.0) and no enhancement (Enhancement Quality: None), which are hallmarks of grade 4 glioblastoma. The tumor volume is 71.373 mL, which is large for a grade 2 glioma, but without necrosis or enhancement, grade 4 is unlikely. Deep white matter invasion is present (Deep WM invasion: Present), which can be seen in grade 2 and 3 gliomas. The absence of necrosis and enhancement strongly supports grade 2, but the large size and deep invasion suggest possible higher grade, reducing confidence.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

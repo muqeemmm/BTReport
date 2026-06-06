@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0705",
+  "idh": {
+    "reasoning": "The patient's young age (28) is a very strong predictor for an IDH-mutant glioma. The frontal lobe location with insular involvement is also typical. Furthermore, the tumor exhibits very sharp margins, as evidenced by a small median `Transition Zone Thickness (FLAIR)` of 0.75 mm, a feature strongly associated with IDH-mutant tumors (specifically oligodendrogliomas). The absence of deep white matter invasion and only mild enhancement also favor an IDH-mutant status. The primary contradicting feature is the absence of a T2-FLAIR mismatch, but this is expected in the oligodendroglioma subtype of IDH-mutant gliomas. Overall, the evidence strongly supports an IDH-mutant prediction.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Transition Zone Thickness (FLAIR)",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the high likelihood of an IDH-mutant tumor, the key differentiators for 1p/19q status are tumor margin definition and the T2-FLAIR mismatch sign. This tumor has exceptionally well-defined borders, with a median `Transition Zone Thickness (FLAIR)` of only 0.75 mm, which is a classic radiological sign of 1p/19q-codeleted oligodendroglioma. Additionally, the `T2-FLAIR Mismatch Present` value is 0.0, meaning the sign is absent. The absence of this sign in an IDH-mutant tumor strongly argues against an astrocytoma (non-codeleted) and for an oligodendroglioma (codeleted). The frontal lobe location is also highly typical for oligodendroglioma. There are no strong contradicting features.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade relies on features of anaplasia. The most significant finding is the presence of a non-enhancing/necrotic core, with an `NCR Volume (mL)` of 2.178. In an oligodendroglioma (the predicted subtype), the presence of necrosis is a histologic criterion for CNS WHO grade 3. The presence of mild contrast enhancement (`ET Volume (mL)` of 0.052, `Enhancement Quality` of 'Mild') further supports a grade higher than 2. While the patient's young age and the absence of deep white matter invasion are features often seen in lower-grade tumors, the presence of necrosis is a more definitive grading feature. A grade 4 diagnosis is not possible for an oligodendroglioma. Therefore, grade 3 is the most likely prediction.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Deep WM invasion"
+    ],
+    "prediction": 3,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "A young patient with a right frontal lobe tumor. The imaging features, particularly the very sharp tumor margins on FLAIR and lack of a T2-FLAIR mismatch sign, are highly characteristic of an oligodendroglioma. The presence of a necrotic core and mild contrast enhancement suggests a higher grade, consistent with CNS WHO grade 3."
+}

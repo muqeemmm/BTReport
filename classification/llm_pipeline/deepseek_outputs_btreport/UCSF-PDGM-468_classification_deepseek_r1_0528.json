@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "reasoning": "The patient is 38 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor is nonenhancing ('Enhancement Quality': 'None'), which is more common in IDH-mutant gliomas. There is no necrosis ('Proportion Necrosis': 0.0) and no enhancing component ('Proportion Enhancing': 0.0), both features atypical for IDH-wildtype tumors. However, the tumor involves eloquent cortex ('Eloquent Brain Involvement': 'Speech motor') and deep white matter ('Deep WM invasion': 'Present'), which can occur in both subtypes.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex, frontal lobe, and insula ('Tumor Location'), which are frontal lobe structures often associated with oligodendrogliomas that are 1p/19q codeleted. However, the tumor is midline ('Side of Tumor Epicenter': 'Midline') and involves deep white matter ('Deep WM invasion': 'Present'), which is less typical for oligodendrogliomas. The absence of enhancement ('Enhancement Quality': 'None') and necrosis ('Proportion Necrosis': 0.0) could be consistent with either subtype. Given the midline location and deep white matter invasion, astrocytoma is more likely.",
+    "supporting_features": [
+      "Side of Tumor Epicenter",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor is nonenhancing with no necrosis, suggesting a lower-grade glioma, but the eloquent involvement and deep white matter invasion raise concern for higher-grade features. The midline location is atypical for oligodendroglioma.",
+  "subject_id": "UCSF-PDGM-468",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows no enhancement ('Enhancement Quality': 'None') and no necrosis ('Proportion Necrosis': 0.0), which are features of lower-grade gliomas (WHO grade 2 or 3). However, there is significant edema ('ED Volume (mL)': 65.423) and involvement of eloquent cortex ('Eloquent Brain Involvement': 'Speech motor'), which are concerning for higher-grade tumors. Deep white matter invasion ('Deep WM invasion': 'Present') is also more common in higher-grade tumors. The midline shift ('midline_shift_present': 'Yes') with maximum shift of 7mm suggests mass effect, typically seen in higher-grade tumors. Given these conflicting features, WHO grade 4 is considered possible due to the eloquent involvement and mass effect.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "max_shift_mm"
+    ]
+  }
+}

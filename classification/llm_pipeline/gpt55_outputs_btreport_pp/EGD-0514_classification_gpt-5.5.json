@@ -1,0 +1,71 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI-derived feature favoring IDH-mutant diffuse glioma is a reported complete T2-FLAIR mismatch, which is highly associated with IDH-mutant astrocytoma when present. The frontal cortical location is also compatible with an IDH-mutant diffuse glioma presentation. Evidence arguing toward IDH-wildtype includes the advanced age, measurable necrotic/non-enhancing core, enhancement, and substantial edema, which are common in IDH-wildtype glioblastoma. Because the T2-FLAIR mismatch is a strong specific imaging marker but the age and aggressive components are substantial counter-evidence, the balance still favors IDH-mutant with moderate confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, a reported complete T2-FLAIR mismatch strongly favors a non-codeleted astrocytic genotype rather than oligodendroglioma. The available metadata do include frontal cortical involvement, which can be seen in oligodendroglioma and therefore argues somewhat toward codeletion, but this is less specific than the T2-FLAIR mismatch pattern. In the absence of calcification-sensitive imaging or other oligodendroglioma-specific features, the balance favors non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/GRE. The complete T2-FLAIR mismatch strongly supports an IDH-mutant, non-codeleted astrocytic tumor, but the patient's age and necrotic/enhancing components introduce important uncertainty, especially for IDH status. Imaging grade is favored as CNS WHO grade 4 because necrotic core and enhancement are present, though histologic and molecular confirmation is required.",
+  "subject_id": "EGD-0514",
+  "who_grade": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently, the presence of a substantial necrotic/non-enhancing core, measurable contrast enhancement with an enhancing margin, and extensive edema support a high-grade diffuse glioma, most consistent with grade 4 on imaging. Ventricular effacement and tumor-side ventricular asymmetry also support clinically significant mass effect despite no measured midline shift. Features arguing against grade 4 include only mild enhancement, a small enhancing volume and low enhancing proportion, absence of midline crossing, absence of deep white matter or ependymal invasion, and solitary non-multifocal disease. Overall, the necrotic component plus enhancement and edema outweigh the less aggressive features, favoring CNS WHO grade 4 with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "rim_core_adjacency",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

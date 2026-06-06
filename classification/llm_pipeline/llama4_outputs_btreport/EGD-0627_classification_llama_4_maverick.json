@@ -1,0 +1,46 @@
+{
+  "id": "patient_1382",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The tumor is located in the right insula, cortex, and frontal lobe, and is described as mostly enhancing with marked enhancement quality. The presence of a large edema volume (24.985 mL) and a relatively small necrotic core (0.407 mL) is noted. The tumor does not cross the midline with its enhancing component, but edema does. The WHO CNS5 classification often associates IDH wildtype tumors with a more aggressive appearance on MRI, such as necrosis and enhancement. The presence of marked enhancement and a significant edema volume could suggest an IDH wildtype status, as these features are more commonly associated with glioblastomas, which are typically IDH wildtype. However, the absence of necrosis and the relatively low proportion of necrosis (1.36%) might argue against a highly aggressive tumor. Despite this, the overall appearance and the significant edema suggest a more aggressive tumor type, leaning towards IDH wildtype.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Edema crosses midline",
+        "Proportion Enhancing",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor involves the insula and cortex, and has a significant cortical involvement. IDH-mutant gliomas with 1p/19q co-deletion (oligodendrogliomas) often present with cortical involvement. Given the prediction of IDH wildtype status with a confidence of 0.70, the likelihood of 1p/19q co-deletion is lower because co-deletion is typically associated with IDH-mutant tumors. Therefore, based on the predicted IDH status, it is more likely that the tumor is non-codeleted.",
+      "supporting_features": [
+        "Cortical involvement",
+        "IDH mutation status"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor shows marked enhancement, significant edema (24.985 mL), and a relatively low necrotic core volume (0.407 mL). The presence of marked enhancement and significant edema is often associated with higher-grade gliomas. Given the predicted IDH wildtype status, which is commonly seen in glioblastomas (WHO grade 4), and the presence of enhancement and edema, the tumor is likely to be of a higher grade. The absence of necrosis is not typical for glioblastoma, but the overall aggressive features suggest a high grade.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "ED Volume (mL)",
+        "Proportion Enhancing"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": 4,
+      "confidence": 0.75
+    }
+  ],
+  "subject_id": "EGD-0627"
+}

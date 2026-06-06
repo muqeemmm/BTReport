@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_00735",
+  "idh": {
+    "reasoning": "The patient is 48 years old, an age where both IDH-mutant and wildtype gliomas are common. The imaging phenotype strongly suggests an IDH-mutant tumor. This is primarily supported by the large non-enhancing component of the tumor (Proportion of Oedema: 92.59%) and the complete absence of necrotic core (NCR Volume (mL): 0.0). IDH-wildtype gliomas in this age group are typically glioblastomas, which almost always present with significant necrosis and more avid enhancement. While there is some mild enhancement present (ET Volume (mL): 2.206), this can be seen in higher-grade IDH-mutant tumors. The most significant feature arguing against a specific subtype of IDH-mutant astrocytoma is the absence of the T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 0.0), but this sign has low sensitivity. Overall, the lack of necrosis in a predominantly non-enhancing tumor heavily favors an IDH-mutant status.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "ET Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the distinction is between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). Oligodendrogliomas often have better-defined margins and a predilection for the frontal lobes. This tumor is located in the temporal lobe ('Tumor Location': 'temporal-cortex region') and appears infiltrative, as suggested by the 'Transition Zone Thickness (FLAIR)' of 2.68 mm. These features\u2014temporal location and indistinct borders\u2014are more characteristic of IDH-mutant astrocytomas. There are no strong features to suggest an oligodendroglioma. The absence of the T2-FLAIR mismatch sign is a weak argument against astrocytoma, as the sign is not present in all cases. Therefore, based on location and tumor margin characteristics, a non-codeleted status is more likely.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "WHO grading for adult diffuse gliomas depends on histological and molecular features, which we infer from imaging proxies. The presence of contrast enhancement ('ET Volume (mL)': 2.206, 'Enhancement Quality': 'Mild', 'Thickness of enhancing margin': 'Solid') suggests blood-brain barrier breakdown, which is a marker of higher biological activity and typically rules out a grade 2 diagnosis. However, the complete absence of necrosis ('NCR Volume (mL)': 0.0) makes a grade 4 diagnosis based on imaging less likely, as necrosis is a key feature of grade 4 gliomas. Therefore, the imaging findings are intermediate, pointing away from the extremes of grade 2 and grade 4. This balance of features\u2014enhancement without necrosis\u2014is most consistent with a CNS WHO grade 3 tumor. A grade 4 designation could still be made based on molecular findings (e.g., CDKN2A/B homozygous deletion), but this cannot be determined from the provided MRI data.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The 48-year-old patient presents with a left temporal lobe tumor. MRI features, particularly the large non-enhancing volume and absence of necrosis, strongly suggest an IDH-mutant glioma. The temporal location and infiltrative characteristics favor an astrocytoma (1p/19q non-codeleted). The presence of mild, solid enhancement points towards a higher grade, making CNS WHO grade 3 the most probable diagnosis. The integrated MRI-based prediction is Astrocytoma, IDH-mutant, CNS WHO grade 3."
+}

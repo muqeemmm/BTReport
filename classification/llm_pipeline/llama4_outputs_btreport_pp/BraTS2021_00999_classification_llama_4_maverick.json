@@ -1,0 +1,37 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8950904270797033, indicating a high likelihood of IDH mutation. The patient's age (31 years) also supports this prediction as IDH mutant gliomas are more common in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of IDH mutation is established, but 1p/19q co-deletion status cannot be directly inferred from the given metadata. However, the presence of 'Multiple satellites present' and 'Cortical involvement' along with the frontal lobe involvement might suggest a higher likelihood of 1p/19q non-codeletion. The 'T2-FLAIR Mismatch' feature is more commonly associated with IDH-mutant astrocytomas, which are typically non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor shows significant necrosis (Proportion Necrosis: 36.33%) and has a large enhancing component with a thickness of the enhancing margin >3mm. These features are indicative of a high-grade tumor. The presence of ependymal invasion and multiple satellites also supports a higher grade. Given the IDH mutation status is mutant and likely non-codeleted, the tumor is likely an astrocytoma, CNS WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00999"
+}

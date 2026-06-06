@@ -1,0 +1,42 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 35 years old, which is younger than typical for IDH-wildtype gliomas that usually occur in older patients. However, the tumor is located in the brainstem, which is more commonly associated with IDH-wildtype tumors like diffuse midline glioma. The absence of enhancement and necrosis also suggests a lower grade tumor, which could be IDH-mutant, but brainstem location argues against IDH-mutant status. Given conflicting evidence, prediction defaults to mutant with low confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "1p/19q codeletion is typically associated with oligodendrogliomas, which are supratentorial and rarely occur in the brainstem. The tumor location in the brainstem strongly argues against oligodendroglioma and thus against 1p/19q codeletion. There is no supporting evidence for codeletion. Given the location, prediction is non-codeleted with low confidence due to lack of molecular data.",
+    "supporting_features": []
+  },
+  "overall_comment": "The tumor is located in the brainstem, midline, with no enhancement or necrosis, and significant edema crossing midline. Deep white matter invasion is present. The patient is young (35 years). Given the brainstem location, this could represent a diffuse midline glioma, H3 K27-altered, which is IDH-wildtype and grade 4 by definition. However, without molecular data (H3 K27 status not assessed), we rely on MRI features. The absence of enhancement and necrosis suggests a lower grade, but brainstem location is highly suggestive of a high-grade tumor. This creates significant uncertainty.",
+  "subject_id": "UCSF-PDGM-274",
+  "who_grade": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Tumor Location",
+      "Deep WM invasion"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None) and no necrosis (Proportion Necrosis: 0.0), which are features of lower grade gliomas (grade 2). However, the tumor is located in the brainstem and shows deep white matter invasion, which are features more typical of high-grade tumors. Additionally, midline location in brainstem is associated with diffuse midline glioma, H3 K27-altered, which is grade 4. Given conflicting features, prediction defaults to grade 2 with low confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

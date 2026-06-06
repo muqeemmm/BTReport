@@ -1,0 +1,39 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (70 years) and the absence of enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) are more typical of IDH wildtype gliomas, which are more common in older adults and often lack significant enhancement. The presence of a non-enhancing tumor with a significant edema volume ('ED Volume (mL)': 24.678, 'Proportion of Oedema': 100.0) also aligns with the profile of IDH wildtype glioblastomas. The T2-FLAIR mismatch score is not indicative of an IDH mutant tumor (T2-FLAIR Mismatch Score: 0.4332442621783458, which is below the threshold typically associated with IDH mutant gliomas).",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The absence of 1p/19q co-deletion is more likely given the age and the radiological features of the tumor. IDH mutant, 1p/19q co-deleted tumors are more commonly associated with younger age and specific radiological features such as heterogeneous enhancement and a more circumscribed appearance. The lack of enhancement and the patient's age (70 years) make 'codeleted' less likely. The prediction relies on the age and typical radiological features associated with 1p/19q co-deletion status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "cns_grade": {
+    "reasoning": "The tumor's radiological features, such as significant edema ('ED Volume (mL)': 24.678), lack of enhancement ('Enhancement Quality': 'None'), and the patient's age (70 years), are highly suggestive of a high-grade glioma. The absence of necrosis or enhancement does not rule out glioblastoma (WHO grade 4), as not all glioblastomas show these features, especially if they are non-enhancing. The presence of significant edema and the patient's age are strong indicators of a high-grade tumor. The most likely diagnosis is glioblastoma, IDH wildtype, which corresponds to CNS WHO grade 4.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "UCSF-PDGM-540"
+}

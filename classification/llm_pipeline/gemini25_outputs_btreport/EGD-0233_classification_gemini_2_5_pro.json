@@ -1,0 +1,51 @@
+{
+  "subject_id": "EGD-0233",
+  "idh": {
+    "reasoning": "The presence of a large necrotic core, with an NCR Volume (mL) of 17.93, is a very strong radiological indicator of an IDH-wildtype glioma, specifically glioblastoma. This feature often outweighs others. The significant surrounding edema (ED Volume (mL) of 36.405) also supports a high-grade, aggressive tumor, which is most commonly IDH-wildtype. Contradictory evidence includes the frontal lobe location, minimal enhancement volume (ET Volume (mL) of 0.391), and absence of deep white matter invasion, which are more typically associated with IDH-mutant tumors. However, the large volume of necrosis is a more specific and powerful predictor of IDH-wildtype status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The key feature determining the 1p/19q status is the large necrotic core (NCR Volume (mL) of 17.93). Necrosis is exceptionally rare in 1p/19q-codeleted oligodendrogliomas but is a hallmark of high-grade astrocytomas (which are non-codeleted). While the frontal lobe location and minimal enhancement could be seen in oligodendroglioma, the presence of extensive necrosis strongly argues against it. Therefore, a non-codeleted status is highly probable.",
+    "supporting_features": [
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The WHO CNS5 classification defines the presence of necrosis in an adult-type diffuse astrocytic glioma as a criterion for WHO Grade 4. The MRI metadata shows a substantial necrotic core (NCR Volume (mL) of 17.93). This is the single most definitive radiological feature for assigning the highest grade. While other features, such as the very low volume of enhancement (ET Volume (mL) of 0.391) and absence of deep white matter invasion, are atypical for a classic Grade 4 tumor, the presence of necrosis itself is sufficient for this grading. The thick enhancing margin (>3mm) also supports a high-grade designation.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO Grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are most consistent with a Glioblastoma, IDH-wildtype, CNS WHO Grade 4. The diagnosis is primarily driven by the large necrotic core, a hallmark of Grade 4 disease. Some features are atypical, such as the minimal volume of contrast enhancement and lack of deep white matter invasion, creating a slightly mixed picture. However, the presence of necrosis is the most compelling feature for determining grade and likely molecular subtype."
+}

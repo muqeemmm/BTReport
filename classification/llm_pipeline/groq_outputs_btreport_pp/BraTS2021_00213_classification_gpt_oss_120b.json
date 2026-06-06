@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_00213",
+  "idh": {
+    "reasoning": "The absence of T2-FLAIR mismatch (\"T2-FLAIR Mismatch Present\": 0.0) strongly argues against an IDH\u2011mutant tumor, as this imaging surrogate is typical for IDH\u2011mutant, 1p/19q\u2011codeleted oligodendrogliomas. The patient\u2019s older age (\"age_years\": 69), marked contrast enhancement (\"Enhancement Quality\": \"Marked\") and a high proportion of enhancing tissue (\"Proportion Enhancing\": 63.61) are classic for IDH\u2011wildtype glioblastoma. A small necrotic component (\"Proportion Necrosis\": 0.6) further supports high\u2011grade, IDH\u2011wildtype disease. No contradictory imaging features are present.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.86
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion is almost exclusively found in IDH\u2011mutant gliomas. Given the strong imaging evidence for IDH\u2011wildtype status (absence of T2\u2011FLAIR mismatch, marked enhancement, older age), the tumor is unlikely to harbor 1p/19q codeletion. Additionally, the marked enhancement pattern is more typical of astrocytic, non\u2011codeleted tumors. No imaging findings suggest a codeleted phenotype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.81
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement (\"Enhancement Quality\": \"Marked\") and a high proportion of enhancing tissue (\"Proportion Enhancing\": 63.61) together with the presence of necrosis (\"Proportion Necrosis\": 0.6) are imaging hallmarks of WHO grade 4 glioblastoma. The patient\u2019s age (69) also favors a high\u2011grade lesion. While the overall tumor volume is modest (\"Total tumor volume (mL)\": 7.475, \"Tumor Core Volume (mL)\": 4.8), high\u2011grade gliomas can be small, especially early in presentation, so size alone does not outweigh the other high\u2011grade features. No contradictory features strongly argue for a lower grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "age_years",
+      "Total tumor volume (mL)",
+      "Tumor Core Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Tumor Core Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.78
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Advanced imaging (diffusion, perfusion, spectroscopy) is unavailable, which limits definitive molecular inference. The small tumor volume introduces modest uncertainty for grade, but the combination of marked enhancement, necrosis, older age, and lack of T2\u2011FLAIR mismatch strongly supports an IDH\u2011wildtype, non\u2011codeleted, WHO grade 4 glioblastoma."
+}

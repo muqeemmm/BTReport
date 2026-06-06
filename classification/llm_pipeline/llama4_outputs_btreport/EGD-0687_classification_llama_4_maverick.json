@@ -1,0 +1,56 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of a large tumor with significant mass effect (midline shift of 3.116 mm, asymmetrical ventricles, and effaced right ventricle) and the involvement of multiple regions including deep structures (thalamus, caudate, putamen, pallidum, hippocampus, amygdala) and ependymal invasion suggest an aggressive tumor. The marked enhancement quality and presence of necrosis (Proportion Necrosis: 8.66%) are more commonly associated with IDH wildtype glioblastomas. IDH mutant gliomas tend to have a more favorable prognosis and less aggressive imaging features. Therefore, the aggressive features here argue towards IDH wildtype status.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "median_shift_mm",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor's imaging features, such as significant necrosis (Proportion Necrosis: 8.66%) and marked enhancement, are not typical for 1p/19q co-deleted oligodendrogliomas, which usually present with more homogeneous enhancement and less necrosis. The presence of necrosis and the aggressive features are more characteristic of astrocytic tumors, which are typically non-codeleted. Therefore, the evidence argues against 1p/19q co-deletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor exhibits aggressive features such as significant mass effect (midline shift, asymmetrical ventricles), necrosis (Proportion Necrosis: 8.66%), and marked enhancement. These features are characteristic of high-grade gliomas. The presence of necrosis is particularly indicative of glioblastoma, which is WHO grade 4. The large tumor size and significant edema also support a high-grade diagnosis.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "median_shift_mm",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0687"
+}

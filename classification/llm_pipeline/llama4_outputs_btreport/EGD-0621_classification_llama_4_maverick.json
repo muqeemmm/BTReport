@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of a large tumor with significant mass effect (midline shift of 6mm, asymmetrical ventricles, effaced ventricle) and aggressive features such as ependymal invasion and deep white matter invasion suggests a high-grade glioma. The tumor's location and involvement of multiple lobes (temporal, cortex, occipital, ventricles, parietal) indicate an aggressive nature. IDH-wildtype glioblastomas are more common in adults and tend to be more aggressive. The enhancement quality is marked, and there's a significant proportion of necrosis (7.87%), which is more typical of IDH-wildtype glioblastoma. While not definitive, these features collectively lean towards an IDH-wildtype status.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of ependymal invasion and significant necrosis is more typical of glioblastoma, which is usually IDH-wildtype and non-codeleted. The tumor's aggressive features and lack of characteristics typical of oligodendrogliomas (e.g., calcifications, which are not available but often associated with codeletion) suggest a non-codeleted status. The tumor's location and involvement are not specific to either codeletion status.",
+    "supporting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits significant mass effect, necrosis, and ependymal invasion, which are hallmarks of high-grade gliomas. The presence of marked enhancement and a significant proportion of necrosis (7.87%) further supports a high-grade diagnosis. The tumor's volume and involvement of multiple structures also suggest an aggressive tumor. These features are most consistent with a WHO grade 4 tumor.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0621"
+}

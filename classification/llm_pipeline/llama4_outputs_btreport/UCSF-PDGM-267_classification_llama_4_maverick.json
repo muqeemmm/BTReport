@@ -1,0 +1,52 @@
+{
+  "id": "patient_0194",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The tumor is located in the right hemisphere, involving the cortex, insula, and frontal lobe, with significant edema (51.697 mL) but no enhancement. The lack of enhancement and the presence of significant edema are more commonly associated with IDH-mutant gliomas, which tend to be non-enhancing or minimally enhancing. The tumor's location and characteristics do not strongly suggest a highly aggressive or typical IDH-wildtype glioblastoma, which often presents with necrosis and enhancement.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "ED Volume (mL)",
+        "Proportion Enhancing",
+        "Proportion Necrosis",
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Eloquent Brain Involvement"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor involves the insula and frontal lobe, which is consistent with the typical locations for IDH-mutant gliomas. The lack of enhancement and significant edema are also consistent with an IDH-mutant glioma. Given that the tumor is likely IDH-mutant (as predicted), the presence of cortical involvement and insular involvement could suggest a higher likelihood of 1p/19q co-deletion, as these features are more common in oligodendrogliomas, which are typically IDH-mutant and 1p/19q co-deleted.",
+      "supporting_features": [
+        "Cortical involvement",
+        "Tumor Location",
+        "Region Proportions"
+      ],
+      "contradicting_features": [
+        "Ependymal (ventricular) Invasion"
+      ],
+      "prediction": "codeleted",
+      "confidence": 0.6
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor is non-enhancing, has significant edema, and involves the cortex and insula. These features are more typical of lower-grade gliomas. The absence of necrosis and enhancement suggests a lower grade. However, the presence of deep white matter invasion could indicate a more aggressive tumor. Given the likely IDH mutation status and the presence of significant edema without enhancement, a grade 3 is plausible, balancing between the lower-grade appearance and potential aggressiveness indicated by deep white matter invasion.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "ED Volume (mL)",
+        "Proportion Enhancing",
+        "Proportion Necrosis",
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 3,
+      "confidence": 0.65
+    }
+  ],
+  "subject_id": "UCSF-PDGM-267"
+}

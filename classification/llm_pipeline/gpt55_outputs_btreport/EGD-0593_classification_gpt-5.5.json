@@ -1,0 +1,80 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The MRI metadata favors an IDH-wildtype diffuse glioma because the tumor is markedly enhancing with a thick enhancing margin, substantial enhancing component, extensive edema, multifocality, and a large total tumor volume, which are more typical of aggressive IDH-wildtype glioblastoma than lower-grade IDH-mutant astrocytoma. Features that could argue toward IDH-mutant disease include cortical involvement and some frontal lobe component, plus absence of deep white matter invasion, ependymal invasion, and midline shift. Overall, the enhancing, edematous, multifocal phenotype is the stronger pattern, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata favors a non-codeleted tumor because the lesion shows marked enhancement, a thick enhancing margin, substantial edema, multifocal disease, and a large overall tumor burden; this pattern is less characteristic of classic 1p/19q-codeleted oligodendroglioma on MRI. Features that could support codeletion include cortical involvement and some frontal lobe involvement, which can be seen in oligodendroglioma. However, without calcification-sensitive imaging and given the aggressive enhancing multifocal phenotype, the best estimate is 1p/19q non-codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the provided structural MRI metadata. Absence of DWI/ADC, perfusion, MR spectroscopy, and SWI/GRE limits assessment of cellularity, vascularity, 2HG, and calcification. The metadata contains an internal discrepancy between zero enhancing volume in the segmented ideal/patient-midline volume dictionaries and a reported ET Volume of 30.344 mL with marked enhancement; the explicit enhancement descriptors were weighted for the imaging phenotype.",
+  "subject_id": "EGD-0593",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "The metadata strongly supports CNS WHO grade 4 behavior because there is marked contrast enhancement, a thick enhancing margin, a large enhancing component, extensive edema, multifocality, and large total tumor volume. Necrosis is present but relatively limited, and there is no reported midline shift, ependymal invasion, deep white matter invasion, enhancing midline crossing, or satellite lesions, which slightly reduces certainty. Even with those mitigating features, the overall enhancing, edematous, multifocal phenotype is most consistent with grade 4 rather than grade 2 or 3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Total tumor volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,55 @@
+{
+  "subject_id": "EGD-0720",
+  "idh": {
+    "reasoning": "The patient is young (age_years=34) and has a frontal cortical lesion with mild enhancement that does not cross the midline (CET Crosses midline=False, Edema crosses midline=False). These features favor IDH\u2011mutant diffuse glioma. However, the T2\u2011FLAIR mismatch is absent (T2-FLAIR Mismatch Present=0.0) and there is measurable necrosis (Proportion Necrosis=12.99%), which are more typical of IDH\u2011wildtype glioblastoma. Balancing the supportive young age and imaging pattern against the contradictory lack of mismatch and presence of necrosis leads to a prediction of IDH\u2011mutant with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Deep white\u2011matter invasion, extensive peritumoral edema (Proportion of Oedema=86.11) and mild, non\u2011calcified enhancement are typical of astrocytic tumors and argue against oligodendroglioma, which usually shows less edema and may have calcifications. No imaging feature suggests 1p/19q codeletion. Therefore predict non\u2011codeleted with high confidence.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "Presence of necrosis (Proportion Necrosis=12.99%) and contrast enhancement (Proportion Enhancing=0.9, Enhancement Quality=Mild, Thickness of enhancing margin=>3mm) together with large tumor volume (Total tumor volume (mL)=122.294) are imaging hallmarks of high\u2011grade glioma (grade\u202f4). The lack of aggressive features such as ring enhancement or crossing midline slightly tempers the certainty, but overall the necrosis and enhancement favor grade\u202f4 over lower grades. Hence grade\u202f4 is predicted with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks advanced sequences (DWI, perfusion, spectroscopy) that could better differentiate IDH\u2011wildtype glioblastoma from IDH\u2011mutant high\u2011grade astrocytoma. The absence of T2\u2011FLAIR mismatch reduces certainty for IDH\u2011mutant status. Nonetheless, imaging favors an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, WHO grade\u202f4."
+}

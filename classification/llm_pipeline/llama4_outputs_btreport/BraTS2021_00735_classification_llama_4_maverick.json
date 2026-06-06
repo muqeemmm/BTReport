@@ -1,0 +1,39 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (48 years) and the tumor's characteristics, such as being located in the temporal cortex region, being mildly enhancing, and having a significant edema volume, are considered. IDH mutant gliomas are more common in younger patients and often have distinct imaging features. However, the presence of mild enhancement and significant edema could be seen in both IDH mutant and wildtype gliomas. The absence of necrosis (Proportion Necrosis: 0.0) and the presence of enhancement (Proportion Enhancing: 7.41) are noted. Given the age and some imaging features, IDH wildtype is considered more likely due to the higher prevalence of IDH wildtype gliomas in older adults.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The tumor is located in the temporal cortex region and is mildly enhancing. IDH mutant gliomas with 1p/19q co-deletion (oligodendrogliomas) often present with calcifications and cortical involvement, and tend to have a more favorable prognosis. While cortical involvement is present, the absence of information on calcifications (due to the lack of SWI/GRE sequences) and the tumor's other characteristics make it difficult to definitively predict 1p/19q co-deletion status. However, given that IDH mutation status is predicted as wildtype with a certain confidence, and IDH wildtype gliomas are less likely to have 1p/19q co-deletion, non-codeleted is considered more likely.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "idh_mutation_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor shows mild enhancement, significant edema (ED Volume: 27.554 mL), and a relatively small enhancing component (ET Volume: 2.206 mL). The absence of necrosis (NCR Volume: 0.0 mL) and the presence of enhancement suggest a glioma. Given the patient's age and the tumor's imaging characteristics, a higher grade is likely due to the significant edema and the presence of enhancement. However, the lack of necrosis and the solid enhancement pattern are considered. The tumor's characteristics are more suggestive of a high-grade glioma, likely grade 4, given the significant edema and the patient's age.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "subject_id": "BraTS2021_00735"
+}

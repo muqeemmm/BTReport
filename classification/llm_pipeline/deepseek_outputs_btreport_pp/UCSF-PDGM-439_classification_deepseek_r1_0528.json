@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (38 years), which favors IDH-mutant glioma. There is no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0), which is more common in IDH-mutant tumors. However, the absence of necrosis (Proportion Necrosis: 0.0) and lack of tumor core (Tumor Core Volume: 0.0) are atypical for high-grade gliomas but consistent with low-grade IDH-mutant tumors. The T2-FLAIR mismatch score is 0.57, which is below the typical threshold for mismatch sign (>0.8), but still suggests some heterogeneity. The tumor involves cortex and parietal/frontal lobes, which are common locations for IDH-mutant gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is midline and involves cortex and parietal/frontal lobes, which is atypical for oligodendrogliomas that favor frontal lobes and are rarely midline. There is no deep white matter invasion (Deep WM invasion: Absent), which is more common in astrocytomas. However, the absence of enhancement and young age could be seen in both oligodendrogliomas and astrocytomas. The lack of ependymal invasion and eloquent involvement doesn't strongly differentiate. Overall, the midline location argues against oligodendroglioma.",
+    "supporting_features": [
+      "Side of Tumor Epicenter",
+      "Tumor Location",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor appears to be a low-grade glioma given the absence of enhancement, necrosis, and tumor core. The midline location and cortical involvement suggest astrocytic lineage.",
+  "subject_id": "UCSF-PDGM-439",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "There is no contrast enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0), no necrosis (Proportion Necrosis: 0.0), and no tumor core (Tumor Core Volume: 0.0). The entire tumor volume is edema (Proportion of Oedema: 100%). These features are characteristic of WHO grade 2 gliomas. However, the T2-FLAIR mismatch score is 0.57, which is not strongly indicative of grade 2 astrocytoma (which typically has higher mismatch). The young age supports low-grade tumor. The absence of deep white matter invasion and ependymal invasion also favors grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "age_years",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The T2-FLAIR mismatch score is 0.4, which is below the typical threshold of 0.5 for considering a tumor as having T2-FLAIR mismatch. This feature is often associated with IDH-mutant gliomas. However, the score is not far below the threshold, and other features such as the tumor's multifocal nature, mild enhancement, and involvement of the frontal lobe could be consistent with IDH-mutant glioma. Despite this, the absence of a clear T2-FLAIR mismatch makes it less likely to be IDH mutant. The age of the patient is not available, which is a significant factor as IDH mutations are more common in younger patients. Given the information available, the prediction leans towards IDH wildtype due to the lack of strong evidence for IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "Multifocal or Multicentric",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of multifocality and the involvement of multiple lobes (frontal, cortex, and parietal) could be indicative of a more aggressive tumor type. IDH-mutant gliomas with 1p/19q co-deletion tend to have a more favorable prognosis and are typically associated with oligodendrogliomas. The T2-FLAIR mismatch score is not strongly indicative of an IDH-mutant astrocytoma (which would be non-codeleted). However, without a clear indication of IDH mutation status from the T2-FLAIR mismatch and without molecular or histological evidence, predicting 1p/19q co-deletion status directly is challenging. Generally, codeletion is less likely in tumors without clear IDH mutation features. Given the likely IDH wildtype status from the first prediction, codeletion is less likely.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor is multifocal, has mild enhancement, and involves multiple regions including the frontal lobe and cortex. The presence of multiple satellites and a relatively large edema volume (55.142 mL) compared to the enhancing tumor volume (0.29 mL) suggests an aggressive tumor. The proportion of necrosis is 1.91%, which is not high but is present. The tumor's characteristics, such as being multifocal and having a significant edema volume, are more typical of higher-grade gliomas. Given the likely IDH wildtype status and the aggressive features, a higher grade is more probable. The confidence in grading is influenced by the presence of multifocality and significant edema.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "ED Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0137"
+}

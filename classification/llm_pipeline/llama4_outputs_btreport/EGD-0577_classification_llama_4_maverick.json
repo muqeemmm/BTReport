@@ -1,0 +1,47 @@
+{
+  "id": "patient_0171",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is relatively young (24 years) with a glioma in the frontal lobe, which is a common location for IDH-mutant gliomas. The tumor is described as mildly enhancing and solitary, with no ependymal invasion or deep white matter invasion. These features are consistent with IDH-mutant gliomas, which are more likely to occur in younger patients and have a better prognosis. The presence of cortical involvement also supports this prediction, as IDH-mutant gliomas often involve the cortex.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis",
+        "Thickness of enhancing margin"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "Given the prediction of IDH mutation status as 'mutant', the next step is to determine the 1p/19q co-deletion status. The tumor's location in the frontal lobe and cortical involvement are features that can be associated with 1p/19q co-deleted gliomas. However, the absence of specific radiological features that are strongly indicative of 1p/19q co-deletion (such as calcifications, which are not available in the provided metadata) makes this prediction challenging. The presence of cortical involvement and frontal lobe location slightly supports the possibility of 1p/19q co-deletion.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.6
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor has a significant proportion of necrosis (24.64%) and a mildly enhancing component with a thickness of the enhancing margin >3mm. These features are concerning for a higher grade glioma. However, the patient is young and the tumor is IDH-mutant, which generally confers a better prognosis. The presence of necrosis and the size of the tumor suggest a higher grade, likely grade 3 or 4. Given the IDH mutation status is predicted as 'mutant', and considering the presence of necrosis and significant edema, a grade of 3 is plausible, but the presence of necrosis leans more towards a grade 4. However, IDH-mutant gliomas with necrosis are typically classified as grade 4 if they are astrocytomas, but the 1p/19q co-deletion status also plays a role in final grading.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Thickness of enhancing margin",
+        "ED Volume (mL)"
+      ],
+      "contradicting_features": [
+        "age_years"
+      ],
+      "prediction": 3,
+      "confidence": 0.7
+    }
+  ],
+  "subject_id": "EGD-0577"
+}

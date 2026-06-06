@@ -1,0 +1,51 @@
+{
+  "subject_id": "UCSF-PDGM-241",
+  "idh": {
+    "reasoning": "The patient is young (age_years=30) and the tumor shows only mild enhancement (Enhancement Quality=\"Mild\") with no necrosis (Proportion Necrosis=0.0) and a low proportion of enhancing tissue (Proportion Enhancing=0.26). These imaging features are typical of IDH\u2011mutant diffuse gliomas, especially low\u2011grade astrocytomas, and contrast with the more aggressive appearance of IDH\u2011wildtype glioblastoma (which usually shows strong enhancement, necrosis and higher enhancing proportion). The high edema proportion (Proportion of Oedema=99.74) and edema crossing the midline are somewhat atypical for IDH\u2011mutant tumors, but the overall balance of evidence favors IDH\u2011mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "Edema crosses midline"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Deep white\u2011matter invasion (Deep WM invasion=\"Present\") and the absence of imaging signs typical for oligodendroglioma (e.g., calcifications, which are not reported) favor a non\u2011codeleted status. While the tumor is located in the frontal lobe (Region Proportions showing high frontal_lobe proportion) and is cortical, features that can be seen in 1p/19q\u2011codeleted oligodendrogliomas, the presence of deep WM invasion is more characteristic of astrocytomas, suggesting 1p/19q non\u2011codeleted. The lack of definitive codeletion\u2011specific imaging makes the evidence moderate.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.62
+  },
+  "who_grade": {
+    "reasoning": "The lesion shows only mild enhancement (Enhancement Quality=\"Mild\"), no necrosis (Proportion Necrosis=0.0), a very small enhancing volume (ET Volume=0.172\u202fmL) and does not cross the midline (CET Crosses midline=\"False\"), all of which are characteristic of WHO grade\u202f2 diffuse gliomas. Factors that argue against a higher grade include the large edema proportion (Proportion of Oedema=99.74) and edema crossing the midline, which can be seen in higher\u2011grade tumors, but the lack of necrosis and strong enhancement outweighs these. Hence grade\u202f2 is the most likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume",
+      "CET Crosses midline",
+      "Midline shift present"
+    ],
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "Edema crosses midline"
+    ],
+    "prediction": 2,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma, WHO grade\u202f2. However, the absence of advanced sequences (DWI, perfusion, spectroscopy) and lack of calcification data limit certainty, particularly for the 1p/19q status, which remains moderately confident."
+}

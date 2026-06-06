@@ -1,0 +1,35 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8903417998232308, indicating a strong presence of this feature. This is a characteristic imaging feature associated with IDH-mutant gliomas. Therefore, the evidence strongly supports the presence of an IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular information. However, the presence of T2-FLAIR mismatch is more commonly associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are typically 1p/19q co-deleted. Therefore, the presence of T2-FLAIR mismatch suggests that the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor has a significant necrotic component (Proportion Necrosis: 58.66) and a large tumor volume (Total tumor volume: 91.057 mL), which are features often associated with higher-grade gliomas. The absence of enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) does not necessarily indicate a lower grade as IDH-mutant gliomas can be non-enhancing. Given the presence of necrosis and the large size, a higher grade is likely. However, the presence of T2-FLAIR mismatch suggests IDH mutation, which is often associated with grade 2 or 3 gliomas. The presence of significant necrosis might lean towards a grade 4, but IDH-mutant glioblastomas are less common than IDH-wildtype. Therefore, a grade of 3 is a reasonable prediction given the IDH mutant status suggested by T2-FLAIR mismatch.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "subject_id": "BraTS2021_01731"
+}

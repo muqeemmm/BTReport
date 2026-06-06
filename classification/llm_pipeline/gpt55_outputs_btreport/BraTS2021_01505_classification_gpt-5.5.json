@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.67,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is relatively young for glioblastoma, and the lesion is predominantly frontal/cortical with only mild enhancement and a very small enhancing component relative to the overall tumor burden. These are more typical of IDH-mutant astrocytoma or oligodendroglioma than IDH-wildtype glioblastoma. Evidence arguing toward IDH-wildtype includes reported necrotic/non-enhancing burden, thick enhancing margin, deep white matter and ependymal invasion, edema, and large overall volume, which are aggressive features. Overall, the frontal cortical location, age, and limited enhancement outweigh the aggressive-but-not-specific features, so IDH-mutant is the best estimate.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The 1p/19q call is uncertain from the available MRI metadata. Frontal cortical location, middle adult age, mild enhancement, and low enhancing proportion are features that can support oligodendroglioma with 1p/19q co-deletion. However, the lesion is very large, deeply infiltrative, has ependymal invasion, edema crossing midline, and a midline epicenter, which are less classic for a circumscribed frontal oligodendroglial phenotype and somewhat favor non-codeleted astrocytic diffuse glioma. Because the supporting and contradicting features are mixed and key discriminators such as calcification are not available, non-codeleted is only a modest best estimate.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histomolecular data. The 1p/19q prediction is particularly uncertain because frontal cortical location and mild enhancement support possible oligodendroglioma, while deep/ependymal invasion and very large infiltrative extent support astrocytic non-codeleted tumor. Reported necrosis/non-enhancing burden drives the grade 4 estimate, but MRI cannot establish WHO grade definitively without histology and molecular testing.",
+  "subject_id": "BraTS2021_01505",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "The grade estimate favors CNS WHO grade 4 because the metadata reports a high necrotic proportion, thick enhancing margin, very large tumor volume, deep white matter invasion, ependymal invasion, and edema crossing midline, all of which are aggressive imaging features. Grade 2 or 3 remain possible because enhancement is described as mild, the enhancing volume and enhancing proportion are small, there is no reported midline shift, and the lesion is solitary without satellites. Despite these mitigating features, the reported necrotic component and infiltrative extent make grade 4 the best radiologic estimate.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "ED Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

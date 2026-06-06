@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0088",
+  "idh": {
+    "reasoning": "The patient's advanced age of 71 years is the strongest predictor for IDH-wildtype status. The presence of both contrast enhancement (ET Volume > 0, mild quality, thick margin) and central necrosis (NCR Volume > 0) are classic radiological hallmarks of glioblastoma, which is the most common IDH-wildtype glioma. While the tumor is relatively small and lacks deep white matter invasion, the combination of age and high-grade imaging features overwhelmingly supports an IDH-wildtype prediction.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. 1p/19q co-deleted tumors (oligodendrogliomas) typically present with indistinct margins and often lack enhancement or necrosis. This tumor, however, demonstrates both contrast enhancement and necrosis, with a thick enhancing margin. These features are highly uncharacteristic of oligodendroglioma and are much more suggestive of an astrocytic lineage tumor, which is by definition non-codeleted. The temporal lobe location is also less common for oligodendroglioma compared to the frontal lobe. There are no features strongly suggesting co-deletion.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The WHO CNS5 classification defines Grade 4 in adult-type diffuse astrocytic gliomas by the presence of microvascular proliferation or necrosis. The provided metadata explicitly indicates the presence of a necrotic component (NCR Volume (mL) of 0.092). The presence of any necrosis automatically elevates the tumor to WHO Grade 4. This is further supported by the patient's advanced age (71) and the presence of a thick enhancing margin, which are both associated with high-grade gliomas. The tumor's small size and lack of deep white matter invasion are noted but do not override the definitive grading criterion of necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "age_years",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO Grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced age (71), contrast enhancement, and central necrosis in this temporal lobe tumor provides a classic presentation for Glioblastoma, IDH-wildtype, CNS WHO Grade 4. All individual predictions (IDH-wildtype, 1p/19q non-codeleted, Grade 4) are consistent with this final diagnosis. A minor data discrepancy was noted regarding tumor laterality between anatomical region labels and volumetric data; the analysis proceeded assuming a left-sided lesion based on the latter."
+}

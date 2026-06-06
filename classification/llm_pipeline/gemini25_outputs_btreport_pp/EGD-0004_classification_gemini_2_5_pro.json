@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0004",
+  "idh": {
+    "reasoning": "The patient's age of 45 is within the typical range for both IDH-mutant and wildtype gliomas. The strongest evidence for IDH-wildtype status is the presence of significant central non-enhancement, interpreted as necrosis (`NCR Volume (mL)` of 5.4, `Proportion Necrosis` of 25.22%). Necrosis is a hallmark of high-grade glioma, most commonly Glioblastoma, which is IDH-wildtype. The presence of contrast enhancement, even if mild, with a thick margin (`Thickness of enhancing margin`: \">3mm\") also supports a wildtype diagnosis. Arguing against this is the frontal lobe location and the extremely well-defined tumor border (`Transition Zone Thickness (FLAIR)` median of 0.75 mm), which are features more commonly associated with IDH-mutant gliomas. However, the presence of necrosis is a more powerful predictor of IDH-wildtype status than tumor location or border sharpness.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The most compelling feature is the exceptionally sharp tumor margin, with a median `Transition Zone Thickness (FLAIR)` of only 0.75 mm. Such well-circumscribed, non-infiltrative borders are a classic imaging hallmark of 1p/19q-codeleted oligodendrogliomas. The tumor's location in the frontal lobe (`Region Proportions`) and cortical involvement (`Cortical involvement`) are also very typical for this entity. Features that are less typical, but can be seen in higher-grade (anaplastic) oligodendrogliomas, include the presence of necrosis and mild enhancement. The absence of a T2-FLAIR mismatch sign argues against an IDH-mutant astrocytoma, indirectly increasing the likelihood of a codeleted tumor if it were IDH-mutant. The sharp border is the dominant feature, strongly favoring a codeleted genotype.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is primarily driven by the presence of high-grade features. This tumor demonstrates a significant volume of central non-enhancement (`NCR Volume (mL)`: 5.396), accounting for over 25% of the tumor core (`Proportion Necrosis`). Radiographically evident necrosis is a defining feature of WHO Grade 4 gliomas. Additionally, the presence of contrast enhancement (`Enhancement Quality`: \"Mild\", `ET Volume (mL)`: 0.034), is indicative of at least a grade 3 tumor, but in combination with necrosis, strongly points to grade 4. Features arguing for a lower grade, such as the relatively small total tumor volume and sharp margins, are superseded by the definitive presence of necrosis. Therefore, a prediction of WHO Grade 4 is most appropriate.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": false,
+  "overall_comment": "This case presents highly conflicting imaging features. The presence of significant necrosis strongly supports a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. However, the tumor's exceptionally sharp margins are a classic feature of Oligodendroglioma, IDH-mutant, and 1p/19q-codeleted. Because the independent predictions for IDH status (wildtype) and 1p/19q status (codeleted) are mutually exclusive under the WHO CNS5 classification, they are inconsistent. The integrated diagnosis prioritizes the most aggressive imaging features (necrosis and enhancement), leading to the conclusion of Glioblastoma."
+}

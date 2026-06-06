@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0677",
+  "idh": {
+    "reasoning": "The MRI features are highly characteristic of an IDH-wildtype glioma. The presence of a large necrotic core (NCR Volume (mL): 26.811, Proportion Necrosis: 30.93%) and marked, thick-walled contrast enhancement (ET Volume (mL): 32.417, Enhancement Quality: 'Marked', Thickness of enhancing margin: '>3mm') are classic hallmarks of glioblastoma, which is the most common IDH-wildtype tumor. The presence of satellite lesions ('Multiple satellites present': 'Present') further supports this diagnosis. In contrast, IDH-mutant gliomas typically present as non-enhancing, T2/FLAIR hyperintense lesions with more circumscribed borders, which is inconsistent with the findings here. The combination of extensive necrosis and avid enhancement strongly argues for an IDH-wildtype status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically show minimal to no necrosis and less avid enhancement compared to astrocytomas of similar grade. This tumor exhibits extensive necrosis ('NCR Volume (mL)': 26.811, 'Proportion Necrosis': 30.93%) and marked, thick enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm'). These features are hallmarks of a high-grade astrocytic glioma, which is, by definition, 1p/19q non-codeleted. The presence of satellite lesions ('Multiple satellites present': 'Present') is also more characteristic of astrocytomas than oligodendrogliomas. Therefore, the evidence strongly points towards a non-codeleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive central necrosis is a key histopathological and radiological feature for assigning CNS WHO grade 4. The metadata explicitly quantifies a large necrotic component ('NCR Volume (mL)': 26.811, 'Proportion Necrosis': 30.93%). Additionally, the tumor shows marked contrast enhancement ('Enhancement Quality': 'Marked', 'ET Volume (mL)': 32.417), which is also a feature of high-grade gliomas. The combination of both marked enhancement and, critically, necrosis, is definitive for a grade 4 glioma on imaging. Lower grades (2 and 3) would not be expected to have such prominent necrosis. The infiltrative nature ('Deep WM invasion': 'Present') and presence of satellites also support a high grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI metadata presents a classic case of glioblastoma. The large, solitary mass with prominent, thick-walled enhancement, extensive central necrosis, and satellite lesions are all hallmark features. The predictions of IDH-wildtype, 1p/19q non-codeleted, and CNS WHO grade 4 are all strongly supported by the data and are internally consistent according to the WHO CNS5 classification."
+}

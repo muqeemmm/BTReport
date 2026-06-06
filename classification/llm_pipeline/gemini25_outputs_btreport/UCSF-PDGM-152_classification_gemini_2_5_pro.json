@@ -1,0 +1,46 @@
+{
+  "subject_id": "UCSF-PDGM-152",
+  "idh": {
+    "reasoning": "The presence of marked, thick-walled contrast enhancement and a significant volume of central necrosis are classic radiological hallmarks of an IDH-wildtype glioma, specifically glioblastoma. IDH-mutant tumors typically lack these aggressive features, presenting with non-enhancement or minimal, wispy enhancement and rarely showing necrosis. While the absence of deep white matter invasion is noted, it does not outweigh the strong evidence provided by the enhancement and necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype, characterized by marked enhancement and substantial necrosis, is highly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas, even high-grade ones, typically show less aggressive features and rarely exhibit this degree of necrosis. The features are much more characteristic of an astrocytic lineage tumor. While cortical involvement is common in oligodendrogliomas, it is a non-specific finding and is strongly outweighed by the features arguing against co-deletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of a significant necrotic component is a defining feature of a CNS WHO grade 4 diffuse glioma. The metadata explicitly quantifies this with a non-zero 'NCR Volume (mL)' and a 'Proportion Necrosis' of nearly 18%. In the context of a diffusely infiltrating glioma in an adult, the presence of necrosis automatically confers a grade 4 diagnosis, irrespective of other features. The marked contrast enhancement further supports a high-grade assignment. There is no imaging evidence to suggest a lower grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI metadata presents a classic picture of a glioblastoma. The combination of marked, thick-walled enhancement and a substantial necrotic core are strong predictors for IDH-wildtype status and are definitive for CNS WHO grade 4. The predictions are internally consistent and lead to a high-confidence diagnosis of Glioblastoma, IDH-wildtype."
+}

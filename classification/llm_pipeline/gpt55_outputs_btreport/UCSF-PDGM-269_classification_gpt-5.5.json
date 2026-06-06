@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "n_slices_with_shift",
+      "median_shift_mm",
+      "max_shift_mm",
+      "p95_shift_mm"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata describes a small left temporal-cortical lesion that is nonenhancing, has no enhancing tumor volume, no necrotic component, no deep white matter invasion, no ependymal invasion, is solitary, and has no midline shift; this pattern is more typical of a lower-grade diffuse glioma with IDH mutation than an IDH-wildtype glioblastoma phenotype. The main features arguing against a confident IDH-mutant call are that the lesion is labeled entirely as oedema and there is measurable image shift, which can be seen with more infiltrative or aggressive tumors, although midline shift is explicitly absent. Overall, the balance favors IDH-mutant status, but MRI-only metadata cannot exclude IDH-wildtype molecular glioblastoma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "Total tumor volume (mL)",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Considering 1p/19q status independently, the strongest location clue is a temporal-cortical epicenter rather than a frontal-predominant tumor pattern, which modestly favors a non-codeleted astrocytic diffuse glioma. Lack of deep white matter invasion also does not specifically support oligodendroglioma. However, cortical involvement and a nonenhancing appearance can also be seen in oligodendroglioma, and key discriminating information such as calcification is not assessed in the provided metadata. Therefore the evidence only slightly favors non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are MRI-metadata based only. The lesion is small, left temporal-cortical, solitary, and nonenhancing without necrosis, favoring a lower-grade IDH-mutant diffuse glioma. The 1p/19q call is the least secure because the provided MRI metadata lacks strong discriminators such as calcification or advanced imaging markers. Final diagnosis requires histopathology and molecular testing.",
+  "subject_id": "UCSF-PDGM-269",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "n_slices_with_shift",
+      "median_shift_mm",
+      "max_shift_mm",
+      "p95_shift_mm"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade assessed independently, the lesion has no enhancement, no enhancing tumor volume, no necrosis, a small total tumor volume, solitary disease, no ependymal invasion, no deep white matter invasion, and no midline shift, all of which support a lower-grade diffuse glioma phenotype rather than grade 3 or grade 4. Features arguing against complete certainty are the 100% oedema label and measurable shift metrics, which can accompany more aggressive tumors, but these are limited by the absence of enhancement, necrosis, and reported midline shift. The imaging metadata therefore most strongly supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

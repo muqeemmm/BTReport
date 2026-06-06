@@ -1,0 +1,86 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.67,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "reasoning": "Using only the provided structural and post-contrast metadata, the lesion pattern is more compatible with IDH-mutant diffuse glioma: it is small, solitary, cortically involved, mildly enhancing, has negligible necrotic/non-enhancing core, minimal midline shift, and lacks ependymal invasion, deep white matter invasion, satellites, multifocality, or midline crossing. These features argue against a highly infiltrative IDH-wildtype glioblastoma-like phenotype. Features arguing against IDH-mutant status include the high reported oedema proportion, measurable enhancing component with a thick enhancing margin, midline epicenter labeling, and overlap with deep structures, which can be seen in more aggressive IDH-wildtype tumors. Overall, the balance favors IDH-mutant status, but not with high certainty.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Number of lesions",
+      "Multifocal or Multicentric",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "crosses_ideal_midline",
+      "crosses_patient_midline"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status assessed independently, the strongest feature that could support codeletion is cortical involvement, since oligodendrogliomas often involve cortex. However, the provided location is predominantly temporal with occipital extension rather than a strongly frontal cortical-subcortical pattern, and the lesion shows notable oedema proportion and enhancement, which do not specifically favor codeletion. There are no highly specific provided MRI metadata features that strongly establish 1p/19q co-deletion. Therefore, the best estimate is non-codeleted, with low confidence because the available metadata are weak discriminators for this task.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the supplied pre-operative MRI metadata and remain uncertain without tissue molecular testing. The lesion is small, mildly enhancing, and predominantly FLAIR/oedema-labeled, which makes imaging-based grade and 1p/19q inference particularly limited.",
+  "subject_id": "EGD-0703",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade assessed independently from MRI metadata, the measurable enhancing component, mild enhancement, thick enhancing margin, and high oedema proportion argue for a tumor above grade 2. Against grade 4, the necrotic/non-enhancing core is extremely small, necrosis proportion is minimal, midline shift is minimal, there is no enhancing or oedema midline crossing, no ependymal invasion, no deep white matter invasion, no satellites, no multifocality, no ventricular asymmetry, and the overall lesion size is small. These features make grade 4 less likely, while the enhancement and oedema make grade 2 less favored. The best imaging-based estimate is CNS WHO grade 3.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema",
+      "ED Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

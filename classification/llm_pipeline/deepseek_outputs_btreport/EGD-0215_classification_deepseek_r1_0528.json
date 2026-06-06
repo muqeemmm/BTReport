@@ -1,0 +1,52 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 61 years old, which is more typical for IDH-wildtype gliomas. The tumor is nonenhancing, with no necrosis and 100% edema, which is atypical for IDH-mutant gliomas that often show enhancement and necrosis. However, frontal lobe location and cortical involvement are more common in IDH-mutant tumors. Overall, the age and lack of enhancement/necrosis outweigh the location.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (speech motor and motor) and is located in the frontal lobe cortex, which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often involve non-eloquent frontal white matter. However, without specific features like calcifications (not available) or strong enhancement, the evidence is insufficient.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely IDH-wildtype glioblastoma (CNS WHO grade 4) given the age, nonenhancing nature with predominant edema, and eloquent involvement. However, confidence is moderate due to lack of enhancement and necrosis which are typical for GBM.",
+  "subject_id": "EGD-0215",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has no enhancement or necrosis, which is atypical for grade 4 glioblastoma. However, the patient is 61 years old, the tumor involves eloquent areas, and has a large volume (33.269 mL) of edema. Grade 4 is suggested by age and eloquent involvement despite absence of necrosis.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

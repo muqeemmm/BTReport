@@ -1,0 +1,54 @@
+{
+  "id": "patient_0036",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (45 years) and the presence of a multifocal, midline tumor with ependymal invasion and deep white matter invasion are more commonly associated with IDH wildtype gliomas, which often present with more aggressive features. The tumor's mild enhancement and lack of significant necrosis also align with characteristics seen in IDH wildtype tumors, although not exclusively. The presence of cortical involvement and the tumor's location (temporal) could be seen in both IDH mutant and wildtype tumors. However, the overall profile leans towards a more aggressive tumor type, typically associated with IDH wildtype status.",
+      "supporting_features": [
+        "age_years",
+        "Multifocal or Multicentric",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion",
+        "Side of Tumor Epicenter"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Tumor Location"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of a multifocal tumor with ependymal invasion and the tumor's location (temporal) could be seen in various molecular subtypes. However, the lack of specific features like significant cortical involvement or a characteristic 'frontal' location for 1p/19q codeleted tumors makes it less likely. The tumor's mild enhancement and absence of necrosis are not strongly indicative of either codeletion status. Given the IDH wildtype prediction and the typical association of 1p/19q codeletion with IDH mutant tumors, a non-codeleted status is more likely.",
+      "supporting_features": [
+        "Multifocal or Multicentric",
+        "Ependymal (ventricular) Invasion",
+        "Tumor Location",
+        "IDH mutation status"
+      ],
+      "contradicting_features": [
+        "Cortical involvement"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor's multifocal nature, presence of ependymal invasion, deep white matter invasion, and significant edema volume are indicative of a high-grade glioma. The mild enhancement and lack of necrosis could be seen in various grades, but the overall aggressive features (e.g., midline shift, multifocality) suggest a high-grade tumor. Given the likely IDH wildtype status and non-codeleted status, a grade 4 tumor is plausible. The presence of a significant edema volume and mass effect (midline shift) supports a higher grade.",
+      "supporting_features": [
+        "Multifocal or Multicentric",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion",
+        "ED Volume (mL)",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "UCSF-PDGM-308"
+}

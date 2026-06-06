@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 44 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas often present in younger adults. The tumor location in parietal cortex and midline epicenter is also more common in IDH-mutant tumors. Enhancement is mild, which is atypical for wildtype GBM that usually shows strong enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the parietal cortex region with midline epicenter. Oligodendrogliomas (which are codeleted) typically occur in frontal lobes and are rarely midline. Deep white matter invasion is present, which is more typical of astrocytomas than oligodendrogliomas. However, the patient age (44) is within the typical range for oligodendroglioma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "age_years"
+    ]
+  },
+  "overall_comment": "Based on MRI features: IDH-mutant astrocytoma is most likely. Grade 4 is assigned due to necrosis present (4.93% proportion) and enhancement. Confidence in grade is lower due to limited necrosis quantification.",
+  "subject_id": "EGD-0183",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "Necrosis is present (4.93% proportion) which is a hallmark of grade 4 glioma. Enhancement is mild but present. However, the proportion of necrosis is relatively low, and edema proportion is high (89.06%) which may suggest lower grade. Total tumor volume is large (43.49 mL), supporting higher grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema"
+    ]
+  }
+}

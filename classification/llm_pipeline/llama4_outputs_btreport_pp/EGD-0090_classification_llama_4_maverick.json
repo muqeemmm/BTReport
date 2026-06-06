@@ -1,0 +1,49 @@
+{
+  "id": "patient_0125",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.9099177098815293) is highly suggestive of an IDH mutant glioma. The patient's age (26 years) also supports this prediction as IDH mutant gliomas are more common in younger adults. The tumor's location in the frontal lobe cortex and its solitary nature further align with characteristics often seen in IDH mutant gliomas.",
+      "supporting_features": [
+        "T2-FLAIR Mismatch Present",
+        "T2-FLAIR Mismatch Score",
+        "age_years",
+        "Tumor Location",
+        "Multifocal or Multicentric"
+      ],
+      "contradicting_features": [],
+      "prediction": "mutant",
+      "confidence": 0.95
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutant glioma. Given the IDH mutant status, the absence of features typical for 1p/19q co-deleted tumors (such as a more frontal location with cortical involvement, which is present but not specific) and the lack of other specific indicators for 1p/19q co-deletion in the provided metadata, we lean towards non-codeleted. The tumor's characteristics (e.g., frontal lobe involvement, cortical involvement) could be seen in both codeleted and non-codeleted tumors, but the overall profile doesn't strongly suggest codeletion.",
+      "supporting_features": [
+        "T2-FLAIR Mismatch Present",
+        "Tumor Location",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits characteristics of a lower grade glioma, such as T2-FLAIR mismatch indicating IDH mutation, and lacks aggressive features like significant enhancement or large necrotic areas. The proportion of necrosis is relatively high (68.91%), but the overall tumor volume and the presence of a significant non-enhancing component suggest a lower grade. The patient's age and tumor location are also more typical of lower-grade gliomas. However, the presence of some enhancement and a relatively large tumor size could suggest a higher grade. Given these mixed features, a grade 3 is a reasonable estimate, balancing between the indicators of lower and higher grade.",
+      "supporting_features": [
+        "T2-FLAIR Mismatch Present",
+        "age_years",
+        "Proportion Necrosis",
+        "Proportion Enhancing",
+        "ED Volume (mL)",
+        "NCR Volume (mL)"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": 3,
+      "confidence": 0.65
+    }
+  ],
+  "subject_id": "EGD-0090"
+}

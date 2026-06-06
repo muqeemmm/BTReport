@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The MRI metadata favors an IDH-mutant diffuse glioma: the patient is very young, the lesion is cortical and fronto-insular/temporal, and it is entirely nonenhancing with no enhancing tumor volume or enhancing proportion. These features fit an IDH-mutant lower-grade diffuse glioma better than an IDH-wildtype glioblastoma pattern. Evidence arguing toward IDH-wildtype or more aggressive biology includes deep white matter invasion, large tumor size/volume, edema volume, and a high reported nonenhancing/necrosis proportion; however, the absence of enhancement substantially weakens the IDH-wildtype glioblastoma pattern. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Considering 1p/19q status independently from IDH, the evidence is mixed. Frontal cortical involvement and lack of enhancement are compatible with oligodendroglioma and therefore argue for codeletion. However, the broad fronto-insular/temporal distribution, deep white matter invasion, and very young age are not specific for oligodendroglioma and can fit a non-codeleted diffuse astrocytic tumor. Because calcification-sensitive imaging is unavailable and the provided metadata lacks highly specific oligodendroglioma markers, the balance only slightly favors non-codeleted status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The strongest imaging signal is for a young patient with a large, nonenhancing cortical/subcortical diffuse glioma, favoring IDH-mutant disease and low grade. The 1p/19q call is uncertain because calcification/SWI, perfusion, diffusion, and spectroscopy are unavailable, and frontal cortical nonenhancing morphology overlaps between oligodendroglioma and astrocytoma.",
+  "subject_id": "BraTS2021_01529",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "WHO grade 2 is favored by the absence of enhancement, zero enhancing tumor volume, zero enhancing proportion, solitary lesion status, absence of satellites, absence of ependymal invasion, and no midline shift. These features argue against grade 4 and make grade 3 less likely on imaging alone. Features arguing for higher grade include deep white matter invasion, sizable edema, large overall tumor size/volume, and the reported high proportion of necrosis/nonenhancing core; however, the lack of enhancement makes frank high-grade imaging behavior less compelling. Overall, the imaging best supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,54 @@
+{
+  "subject_id": "UCSF-PDGM-489",
+  "idh": {
+    "reasoning": "The patient is 42 years old (age_years) which is typical for IDH\u2011mutant diffuse gliomas that occur in younger adults. The lesion shows no contrast enhancement (Enhancement Quality='None', Proportion Enhancing=0.0) and no necrosis (Proportion Necrosis=0.0), features that are uncommon in IDH\u2011wildtype glioblastoma, which usually enhances and necroses. Although the tumor has extensive edema and deep white\u2011matter invasion, these can be seen in infiltrative IDH\u2011mutant astrocytomas. Therefore the balance of evidence favors an IDH\u2011mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Edema crosses midline"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Frontal cortical location (Region Proportions, Tumor Location) and non\u2011enhancing nature are typical of oligodendroglioma which is 1p/19q\u2011codeleted. However the presence of deep white\u2011matter invasion (Deep WM invasion), ependymal invasion (Ependymal (ventricular) Invasion) and edema crossing the midline (Edema crosses midline) are more characteristic of astrocytoma, which is usually non\u2011codeleted. The lack of calcification information limits confidence. Overall the infiltrative features outweigh the cortical location, leading to a prediction of non\u2011codeleted.",
+    "supporting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "Absence of contrast enhancement (Enhancement Quality='None'), necrosis (Proportion Necrosis=0.0) and low proportion of enhancing tumor (Proportion Enhancing=0.0) are hallmarks of low\u2011grade (grade 2) diffuse gliomas. The tumor is solitary, cortical, and does not show necrosis or marked contrast uptake. While the edema volume is large (ED Volume (mL)=196.818) and crosses the midline, edema alone does not define high grade. Therefore grade 2 is most consistent with the imaging findings.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Edema crosses midline"
+    ],
+    "prediction": 2,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks diffusion, perfusion, and spectroscopy; deep white\u2011matter and ependymal invasion raise some concern for higher grade; histopathology with molecular testing is required."
+}

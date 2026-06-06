@@ -1,0 +1,47 @@
+{
+  "subject_id": "BraTS2021_01737",
+  "idh": {
+    "reasoning": "The presence of multifocal disease and a significant necrotic core are strong indicators of an IDH-wildtype glioma, which is typically more aggressive and infiltrative. While the frontal lobe location and large non-enhancing component can be seen in IDH-mutant tumors, these features are less specific. The combination of multifocality and necrosis heavily outweighs the location, strongly favoring an IDH-wildtype prediction.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Proportion of Oedema"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This analysis is performed independently of the IDH status prediction. The presence of a significant necrotic component is highly atypical for 1p/19q co-deleted oligodendrogliomas, which tend to be non-necrotic. Furthermore, multifocality is much more characteristic of astrocytic tumors (non-codeleted) than oligodendrogliomas. While the frontal lobe location is classic for oligodendroglioma, the aggressive features of necrosis and multifocality argue strongly against it.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The presence of a necrotic core, evidenced by a `NCR Volume (mL)` of 2.726 and `Proportion Necrosis` of 9.83%, is a key radiological feature corresponding to the histopathological criterion for CNS WHO grade 4 in an adult-type diffuse astrocytoma. The multifocal nature of the tumor also supports a high-grade, aggressive process. While the mass effect is minimal and enhancement is mild, the definitive presence of necrosis on imaging is the most critical factor for assigning a grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "midline_shift_present",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging features, particularly the multifocal presentation and the presence of a necrotic core, are highly suggestive of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The tumor is located in the right frontal lobe with cortical involvement. Despite the large non-enhancing component and minimal mass effect, the presence of necrosis is a strong indicator of high-grade malignancy."
+}

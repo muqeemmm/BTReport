@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_00474",
+  "idh": {
+    "reasoning": "The available metadata provides limited information to directly infer IDH mutation status. Features like tumor size (133.391 mL), location (frontal lobe), and presence of edema (88.38%) are non-specific regarding IDH status. The presence of deep white matter invasion and ependymal invasion are common in both IDH-mutant and IDH-wildtype gliomas, although perhaps slightly more characteristic of IDH-wildtype tumors, especially when large. The midline shift ('Yes', 'midline_shift_present') and edema crossing the midline ('True', 'Edema crosses midline') suggest a potentially aggressive tumor, which could be either IDH-mutant grade 4 or IDH-wildtype grade 4. Without features like age (often younger in IDH-mutant), specific imaging characteristics strongly associated with IDH status (e.g., diffusion restriction, perfusion patterns, spectroscopy), or molecular data, a definitive prediction is difficult. Given the large size and significant mass effect (midline shift, ventricular effacement), an IDH-wildtype tumor is statistically more likely in adults, but this is weak evidence. Therefore, I will predict wildtype with low confidence.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information related to 1p/19q co-deletion status. Features like tumor size, location, enhancement pattern, or invasion characteristics are not specific predictors of 1p/19q co-deletion. This co-deletion is typically found in oligodendrogliomas (IDH-mutant and 1p/19q codeleted), which are distinct from astrocytomas. While the tumor is described as a glioma, its specific subtype cannot be determined from the given data. Therefore, predicting the 1p/19q status is not possible based on the available information.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features suggestive of high grade: large size (Total tumor volume 133.391 mL), significant edema (Proportion of Oedema 88.38%, Edema crosses midline 'True'), deep white matter invasion ('Present', 'Deep WM invasion'), ependymal invasion ('Present', 'Ependymal (ventricular) Invasion'), midline shift ('Yes', 'midline_shift_present'), and effacement of the left ventricle ('Left', 'Effaced Ventricle'). The cortical involvement ('Present', 'Cortical involvement') is also noted. These features collectively point towards a WHO grade 4 glioma according to CNS5 criteria, regardless of IDH status (as both IDH-mutant grade 4 astrocytomas and IDH-wildtype grade 4 astrocytomas share these aggressive characteristics). The mild enhancement quality does not argue against a high grade.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

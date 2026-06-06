@@ -1,0 +1,69 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors an IDH-wildtype diffuse glioma because the patient is older, and the tumor shows contrast-enhancing disease with a sizable enhancing component, extensive edema, and multifocality, a pattern more typical of aggressive IDH-wildtype glioma. Against this, cortical/temporal involvement can be seen in IDH-mutant gliomas, enhancement is described as mild rather than florid, and the necrotic proportion is very low, which weakens a classic glioblastoma-like imaging pattern. Overall, the age and aggressive enhancing/edematous multifocal phenotype outweigh the contradictory features, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessed independently, the imaging metadata provides more support for a non-codeleted glioma than for oligodendroglioma with 1p/19q co-deletion. The older age, multifocality, substantial edema, and measurable enhancement favor a more aggressive non-codeleted diffuse glioma phenotype. Features that argue against this include cortical involvement and temporal location, which can be encountered in oligodendroglioma, and only mild enhancement, which is not specific. Because key oligodendroglioma discriminators such as calcification are not available and the provided MRI features are not definitive for 1p/19q status, the prediction is non-codeleted with only moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/GRE. The imaging phenotype is most compatible with an aggressive IDH-wildtype glioma, but molecular confirmation is required. The 1p/19q estimate is less certain because conventional MRI features are limited and calcification-sensitive imaging was not available.",
+  "subject_id": "BraTS2021_00241",
+  "who_grade": {
+    "confidence": 0.81,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 4,
+    "reasoning": "Assessed independently of molecular status, the grade is most consistent with CNS WHO grade 4 because there is a definite enhancing tumor component, a thick enhancing margin, extensive surrounding edema, multifocal disease, and cortical plus multilobar involvement, all of which support high-grade biology. Features arguing against grade 4 include enhancement described as mild, very low necrotic proportion, only minimal midline shift, and absent tumor-associated ventricular asymmetry. Despite the limited necrosis and mass effect, the combination of enhancement, thick enhancing margin, extensive edema, and multifocality favors grade 4 over grades 2 or 3.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Cortical involvement",
+      "Tumor Location"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

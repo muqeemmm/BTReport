@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is a young adult, the lesion is frontal/cortical, and it is entirely nonenhancing without necrosis. These are common imaging-demographic features of IDH-mutant lower-grade diffuse glioma. Evidence against IDH-mutant status is the midline epicenter, deep white-matter and ependymal invasion, edema crossing midline, mass effect, and large tumor volume, which can be seen with more aggressive IDH-wildtype disease. Overall, the nonenhancing frontal cortical presentation in a 34-year-old weighs more strongly toward IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "The metadata modestly favors 1p/19q co-deletion because the lesion is frontal and cortical, nonenhancing, and occurs in a young adult; this constellation is often associated with oligodendroglioma. However, the midline epicenter, deep white-matter invasion, ependymal invasion, edema crossing midline, and large volume are less specific and can fit non-codeleted astrocytic glioma. Because key discriminators such as calcification, T2-FLAIR mismatch, diffusion, perfusion, and spectroscopy are not available, the evidence is limited; the balance slightly favors codeletion.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "Imaging-only molecular prediction is uncertain, especially for 1p/19q status. Missing discriminators include calcification-sensitive imaging, diffusion/ADC, perfusion, spectroscopy, and T2-FLAIR mismatch assessment. The large nonenhancing FLAIR-abnormal tumor with mass effect and ventricular/ependymal involvement is atypically extensive for a straightforward low-grade lesion, so tissue diagnosis remains essential.",
+  "subject_id": "UCSF-PDGM-245",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Effaced Ventricle",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline"
+    ],
+    "prediction": 2,
+    "reasoning": "The metadata favors CNS WHO grade 2 because the lesion is entirely nonenhancing and has no necrotic component, which argues against grade 4 imaging phenotype and against many grade 3 tumors with aggressive enhancement. The solitary, nonenhancing pattern also supports a lower-grade diffuse glioma. Features arguing for a higher grade are the very large FLAIR/edema volume, midline shift, ventricular effacement, deep white-matter invasion, ependymal invasion, and crossing of midline edema, which indicate extensive disease and mass effect. Still, in the absence of enhancement or necrosis on the provided sequences, grade 2 is the best MRI-based estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

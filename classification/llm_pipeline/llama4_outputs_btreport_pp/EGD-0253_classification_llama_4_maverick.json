@@ -1,0 +1,35 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.7897974881414872) is highly suggestive of an IDH-mutant glioma. This feature is strongly associated with IDH mutation status. The tumor's location and other characteristics do not directly contradict this association. Therefore, based on the T2-FLAIR mismatch, the prediction is IDH mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are more likely to have 1p/19q co-deletion. The tumor's characteristics, such as the absence of ependymal invasion and the presence of cortical involvement, do not directly indicate 1p/19q co-deletion status. Given the IDH mutant status predicted, the likelihood of 1p/19q co-deletion is lower due to the T2-FLAIR mismatch feature. Therefore, the prediction is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS_WHO_grade": {
+    "reasoning": "The tumor has a significant proportion of necrosis (Proportion Necrosis: 58.77) and a mild enhancement quality (Enhancement Quality: Mild), with a notable volume of edema (ED Volume: 18.358 mL) and a large tumor volume (Total tumor volume: 45.199 mL). These features are indicative of a high-grade glioma. The presence of necrosis is particularly associated with higher grades. Given the IDH mutant status and the absence of 1p/19q co-deletion, the tumor is likely an astrocytoma. The features support a higher grade, likely grade 4, given the significant necrosis and large tumor volume.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0253"
+}

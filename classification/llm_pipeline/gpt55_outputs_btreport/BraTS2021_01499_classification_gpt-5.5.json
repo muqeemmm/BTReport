@@ -1,0 +1,81 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The available MRI metadata favors IDH-mutant diffuse glioma: the patient is relatively young for an adult diffuse glioma, and the lesion is a solitary, predominantly temporal-cortical, nonenhancing mass with absent enhancing tumor volume and no ependymal or deep white matter invasion. These features are more typical of IDH-mutant lower-grade diffuse glioma than IDH-wildtype glioblastoma. Evidence against IDH-mutant status includes the large total tumor volume, substantial edema, ventricular effacement/midline shift, and a reported necrosis proportion, which can be seen with more aggressive IDH-wildtype tumors. Overall, the nonenhancing temporal-cortical phenotype in a 39-year-old outweighs the mass-effect features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.63,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the temporal-cortical epicenter favors a non-codeleted astrocytic diffuse glioma because oligodendrogliomas are more classically frontal and cortically/subcortically based. The absence of deep white matter invasion and the solitary nonenhancing appearance do not strongly separate codeleted from non-codeleted tumors, and the patient's age is compatible with either molecular group. Cortical involvement and lack of enhancement can be seen in oligodendroglioma as well, so the evidence is not definitive. Overall, the temporal predominance makes non-codeleted status the best estimate, with only moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional MRI metadata without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, or histomolecular data. The main uncertainty is grading: the lack of enhancement favors grade 2, but large volume, edema, midline shift, and the reported necrosis proportion raise concern for higher grade disease that cannot be excluded from the supplied metadata alone.",
+  "subject_id": "BraTS2021_01499",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Effaced Ventricle",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade considered independently from molecular predictions, the strongest imaging evidence supports a lower-grade lesion: there is no contrast enhancement, no enhancing tumor volume, zero enhancing proportion, solitary disease, no ependymal invasion, no deep white matter invasion, no satellites, and no midline crossing. These features favor CNS WHO grade 2 over grade 3 or 4. Against grade 2, the lesion is large, has substantial edema, causes midline shift and ventricular effacement, and has a reported necrosis proportion/NCR component, all of which raise concern for higher grade biology. Because enhancement is absent and advanced MRI markers are unavailable, grade 4 is not strongly supported, while grade 3 cannot be excluded. The best estimate is grade 2, but confidence is limited by the mass effect and reported necrosis-related metadata.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "crosses_ideal_midline",
+      "crosses_patient_midline"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

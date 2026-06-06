@@ -1,0 +1,43 @@
+{
+  "id": "patient_0792",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (79 years) is significantly higher than the typical age range for IDH-mutant gliomas, which are more common in younger adults. The tumor's imaging characteristics, such as marked enhancement and large size, are more typical of IDH-wildtype glioblastomas, which are more common in older adults. The presence of necrosis (Proportion Necrosis: 18.69%) and the large tumor volume (Total tumor volume: 116.016 mL) also support the likelihood of an IDH-wildtype glioblastoma.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.95
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "IDH-wildtype gliomas are less likely to have 1p/19q co-deletion. Given the prediction of IDH-wildtype status with high confidence, it is reasonable to infer that the tumor is unlikely to be 1p/19q codeleted. The absence of specific features that are strongly associated with 1p/19q codeletion (e.g., frontal lobe predominance, which is not exclusively the case here) further supports this inference.",
+      "supporting_features": [
+        "age_years",
+        "IDH_status_prediction"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.85
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 18.69%), marked enhancement, and large tumor volume (Total tumor volume: 116.016 mL) are characteristic features of glioblastoma, which corresponds to CNS WHO grade 4. The patient's age (79 years) is also consistent with the typical demographic for glioblastoma.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.95
+    }
+  ],
+  "subject_id": "BraTS2021_00273"
+}

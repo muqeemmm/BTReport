@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_01501",
+  "idh": {
+    "reasoning": "The patient is 38 years old. Younger age (<50) is strongly associated with IDH-mutant gliomas. While age alone is not definitive, it significantly increases the likelihood of an IDH mutation. No other features in the provided metadata strongly argue against an IDH mutation (e.g., very large size, extensive necrosis, or specific imaging patterns typically associated with IDH-wildtype tumors are not present). The tumor size (161.651 mL) is large but not exceptionally so for either type. The proportion of necrosis (44.64%) is substantial but can be seen in both IDH-mutant and wildtype tumors, although higher necrosis is more common in wildtype. The presence of multiple satellites might slightly favor IDH-mutant, but this feature is not highly specific. Given the strong age association and lack of strong contradictory features, IDH-mutant is the most likely status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient's age (38 years) makes an IDH-mutant glioma more likely, and 1p/19q co-deletion is almost exclusively found in IDH-mutant gliomas, particularly those classified as WHO grade 2 or 3 (astrocytomas). The tumor involves deep white matter ('Deep WM invasion': 'Present') and shows ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), which are features often seen in diffuse astrocytomas, including those with 1p/19q co-deletion. The tumor size (161.651 mL) and substantial necrosis (44.64%) are somewhat less typical for classic 1p/19q co-deleted astrocytomas, which tend to be smaller and less necrotic, but they do not rule it out completely. The presence of multiple satellites could be seen in either codeleted or non-codeleted IDH-mutant tumors. Without definitive molecular data or specific imaging features like calcification or hemorrhage (which are absent), predicting co-deletion based solely on these MRI features and age is challenging. However, given the young age and deep/ependymal invasion patterns often associated with lower-grade astrocytomas where co-deletion occurs, codeletion is plausible.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Multiple satellites present"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (38 years) favors a lower grade glioma (IDH-mutant). The presence of deep white matter invasion ('Deep WM invasion': 'Present') and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present') suggests infiltrative growth characteristic of diffuse gliomas. The tumor involves eloquent brain regions ('Eloquent Brain Involvement': 'Speech motor and Vision'), indicating potential functional impact but not necessarily a higher grade itself. The tumor size (161.651 mL) is relatively large, and the proportion of necrosis (44.64%) is substantial (>20%). These features lean towards a higher grade within the IDH-mutant spectrum. While the mild enhancement ('Enhancement Quality': 'Mild') might suggest a lower grade, significant necrosis and size often correlate with Grade 3 or 4 disease even in younger patients with IDH mutations. Given the combination of young age suggesting potential for lower grade, but also significant size and necrosis pointing towards higher grade infiltrative behavior within the likely IDH-mutant context, Grade 3 seems a reasonable prediction balancing these factors.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-mutant",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's age strongly suggests an IDH mutant glioma which typically corresponds to WHO grades II or III in adults based on WHO CNS5 criteria without molecular markers like codeletion status available here."
+}

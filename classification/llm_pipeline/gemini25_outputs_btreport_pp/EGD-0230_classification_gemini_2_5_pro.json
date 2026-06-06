@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0230",
+  "idh": {
+    "reasoning": "The prediction of IDH-mutant status is primarily driven by the strong and specific T2-FLAIR mismatch sign, with a `T2-FLAIR Mismatch Present` value of 1.0 and a high `T2-FLAIR Mismatch Score` of 0.94. This feature is a hallmark of IDH-mutant astrocytomas. Supporting this are other features typical of IDH-mutant gliomas, including minimal contrast enhancement (`Proportion Enhancing` of 0.02) and limited surrounding edema (`ED Volume (mL)` of 9.434). The main contradicting feature is the very high `Proportion Necrosis` (73.84%), which is more typical of IDH-wildtype glioblastoma. However, given the lack of enhancement, this likely represents a non-enhancing cystic or necrotic core rather than the classic tumor necrosis seen in glioblastoma, and is a common finding in IDH-mutant astrocytomas. The sharp tumor boundary (`Transition Zone Thickness (FLAIR)` median 0.75 mm) is also somewhat atypical but does not outweigh the powerful T2-FLAIR mismatch evidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of a non-codeleted status is based almost entirely on the presence of a definitive T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0, `T2-FLAIR Mismatch Score`: 0.94). This sign is highly specific for the astrocytic lineage (1p/19q non-codeleted) among IDH-mutant gliomas. The large non-enhancing, likely cystic, core (`NCR Volume (mL)` of 26.645) is also more frequently observed in astrocytomas than oligodendrogliomas. The primary contradicting evidence is the remarkably sharp tumor margin, as indicated by a very thin `Transition Zone Thickness (FLAIR)` (median 0.75 mm). Sharp, well-defined borders are a classic feature of oligodendrogliomas (1p/19q-codeleted). However, the molecular specificity of the T2-FLAIR mismatch sign is considered stronger evidence than the morphological feature of margin definition.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "boundary_sharpness"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The WHO grade is challenging to determine due to conflicting features. The extremely high `Proportion Necrosis` (73.84%) is a strong indicator for a high grade, potentially grade 4, as necrosis is a defining feature of glioblastoma. However, this is powerfully contradicted by the near-complete absence of contrast enhancement (`Proportion Enhancing`: 0.02, `ET Volume (mL)`: 0.008). Significant enhancement is a hallmark of WHO grade 4 gliomas. The high 'necrosis' value likely represents the large non-enhancing/cystic core, not necessarily histologically confirmed necrosis with palisading cells. Given the lack of enhancement, a grade 4 diagnosis is unlikely. The tumor's large size and significant non-enhancing core suggest a grade higher than 2. Therefore, WHO grade 3 is the most plausible prediction, balancing the evidence for biological activity (large necrotic/cystic core) against the lack of definitive high-grade radiological features like enhancement.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a solitary, predominantly parietal lobe tumor with imaging features highly suggestive of an IDH-mutant astrocytoma, driven by a classic T2-FLAIR mismatch sign. The grading is ambiguous; a large non-enhancing core suggests high-grade features, but the profound lack of contrast enhancement argues against a WHO grade 4 diagnosis. The predicted diagnosis is Astrocytoma, IDH-mutant, CNS WHO grade 3, though confidence in the grade is low. The absence of patient age is a significant limitation."
+}

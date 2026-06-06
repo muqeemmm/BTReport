@@ -1,0 +1,49 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient is relatively young (32 years) with a non-enhancing glioma involving the temporal lobe and cortex, suggesting a possible IDH mutant glioma. The absence of enhancement (Enhancement Quality: 'None', Proportion Enhancing: 0.0) is consistent with this, as IDH mutant gliomas are less likely to show robust enhancement. However, the presence of significant mass effect (midline shift present, n_slices_with_shift: 112, mean_shift_mm: 2.0838709677419356) and ependymal invasion could be seen in higher-grade gliomas, which can be either IDH mutant or wildtype. The tumor's involvement of deep structures and ependymal invasion might lean towards a more aggressive tumor, but doesn't directly indicate IDH status. Given the age and location, IDH mutant is more likely than wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor involves the cortex and is located in the temporal region, which is a common location for IDH mutant gliomas. IDH mutant gliomas can be either 1p/19q codeleted (oligodendrogliomas) or non-codeleted (astrocytomas). The absence of enhancement and necrosis suggests a lower grade, which is consistent with oligodendroglioma. However, the presence of significant edema and mass effect is less typical for low-grade oligodendrogliomas. The ependymal invasion is also not a strong indicator for codeletion status. Given the cortical involvement and temporal location, which are more typical of oligodendrogliomas, a codeleted status is plausible.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows significant mass effect (midline shift, high n_slices_with_shift) and ependymal invasion, suggesting a higher grade. However, the absence of enhancement and necrosis (Enhancement Quality: 'None', Proportion Enhancing: 0.0, Proportion Necrosis: 0.0) is more typical of lower-grade gliomas. The presence of edema (ED Volume: 164.853 mL) and deep white matter invasion also suggests a more aggressive tumor. Given the patient's age and the tumor's characteristics, a grade 3 is plausible as it balances between the indicators of aggressiveness (mass effect, ependymal invasion) and the lack of enhancement or necrosis.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-444"
+}

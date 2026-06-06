@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (30 years) and the tumor's characteristics, such as its location in the right hemisphere involving temporal, cortex, and parietal lobes, and the presence of ependymal invasion, are considered. The T2-FLAIR mismatch score is 0.4, which is not indicative of a strong mismatch, a feature often associated with IDH-mutant astrocytomas. However, the presence of a relatively low-grade appearance (mild enhancement, no mention of necrosis or high-grade features) and the patient's relatively young age might suggest a potential for IDH mutation. Nonetheless, the absence of a clear T2-FLAIR mismatch and other specific features makes the prediction challenging. The presence of a significant edema and mass effect (midline shift, asymmetrical ventricles) could be seen in both IDH mutant and wildtype gliomas. Given the information available, the prediction leans towards IDH wildtype due to the lack of strong evidence for IDH mutation (e.g., T2-FLAIR mismatch).",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q codeletion status is challenging based on the provided metadata. Typically, 1p/19q codeletion is associated with oligodendrogliomas, which often present with calcifications (not assessed here) and have a more favorable prognosis. The tumor's location and characteristics (e.g., involvement of multiple lobes, ependymal invasion) do not strongly suggest or rule out codeletion. The absence of specific features like calcifications and the lack of direct molecular information make it difficult to predict codeletion status with high confidence. Given the tumor's characteristics and the patient's age, a non-codeleted status is slightly favored due to the more common occurrence of astrocytic tumors.",
+    "supporting_features": [
+      "Tumor Location",
+      "Ependymal (ventricular) Invasion",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "cns_grade": {
+    "reasoning": "The tumor exhibits significant mass effect (midline shift, asymmetrical ventricles), involves multiple structures (temporal, cortex, parietal lobes), and has ependymal invasion, suggesting an aggressive tumor. The presence of enhancement and a relatively large size (Total tumor volume = 151.492 mL) also support a higher grade. The proportion of necrosis is 0.67%, which is relatively low, but the presence of enhancement and significant edema supports a high-grade glioma. The tumor's characteristics (e.g., significant edema, mass effect, enhancement) are more typical of a high-grade glioma. Given the available information, a grade of 4 is considered due to the aggressive features and significant mass effect, despite the relatively low proportion of necrosis.",
+    "supporting_features": [
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01665"
+}

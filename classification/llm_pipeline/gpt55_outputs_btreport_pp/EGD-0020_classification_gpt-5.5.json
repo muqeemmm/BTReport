@@ -1,0 +1,83 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest imaging discriminator provided is a reported T2-FLAIR mismatch, which favors an IDH-mutant diffuse astrocytic tumor, especially in a frontal cortical lesion. Cortical/frontal predominance also fits an IDH-mutant diffuse glioma phenotype. Against IDH mutation, the patient is older, and the lesion is multifocal with measurable enhancement, small necrotic/non-enhancing core, and extensive edema, all of which are more concerning for IDH-wildtype biology. Balancing these, the explicit T2-FLAIR mismatch and frontal cortical location outweigh the adverse features, but the conflict keeps confidence moderate.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the reported T2-FLAIR mismatch argues strongly against a classic oligodendroglioma/codeleted phenotype and favors a non-codeleted astrocytic pattern. The multifocal enhancing components and small necrotic component are also less typical for a lower-grade codeleted tumor. Features arguing toward possible codeletion include frontal cortical involvement and older adult age, which can be seen with oligodendroglioma. Overall, the mismatch feature is the most specific available metadata, so the best estimate is non-codeleted with moderately high confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Multifocal or Multicentric",
+      "n_components_enhancing",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without diffusion, perfusion, spectroscopy, susceptibility imaging, or histomolecular data. The most discordant elements are the T2-FLAIR mismatch favoring IDH-mutant/non-codeleted astrocytoma versus the patient age, multifocality, enhancement, necrotic component, and extensive edema favoring aggressive biology. Tissue diagnosis and molecular testing remain required.",
+  "subject_id": "EGD-0020",
+  "who_grade": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "Grade assessment from MRI is driven by signs of aggressive biology. Multifocal disease, multiple lesions, measurable enhancement, a thick enhancing margin, necrotic/non-enhancing core, and very large edema proportion support a high-grade tumor, with the necrotic component and multifocality favoring grade 4 over grade 3. Arguing against unequivocal grade 4, the enhancement is described as mild, the enhancing and necrotic volumes are relatively small, there is no midline shift or ventricular asymmetry, and no ependymal or deep white matter invasion is reported. Despite these mitigating features, the combination of multifocality, enhancement, necrotic component, and extensive edema best supports CNS WHO grade 4.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "n_components_enhancing",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0282",
+  "idh": {
+    "reasoning": "The patient's advanced age (74 years) is a very strong predictor for IDH-wildtype status. The imaging features overwhelmingly support this prediction, including marked, thick-rimmed contrast enhancement, a large volume of central necrosis, and a high proportion of enhancing tissue. Furthermore, the absence of a T2-FLAIR mismatch sign and the presence of a very sharp T2/FLAIR transition zone are both features that strongly argue against an IDH-mutant astrocytoma. There is no significant contradicting evidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.99
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The presence of marked contrast enhancement and, most significantly, a large volume of central necrosis are highly uncharacteristic of 1p/19q co-deleted oligodendrogliomas. These features are hallmarks of high-grade astrocytic tumors, which are non-codeleted. While the sharp tumor margin (low `Transition Zone Thickness (FLAIR)`) and cortical involvement can be seen in oligodendrogliomas, the evidence for necrosis is a much stronger differentiator and points decisively toward non-codeletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade 4 is unequivocal based on the provided MRI metadata. The tumor exhibits marked, thick-rimmed contrast enhancement (`Enhancement Quality`, `Thickness of enhancing margin`) and, critically, a substantial volume of central necrosis (`NCR Volume (mL)` of 14.199). The presence of radiologically evident necrosis in a diffuse astrocytic glioma is a defining feature of CNS WHO grade 4. Additional features supporting a high grade include deep white matter and ependymal invasion. There are no features to suggest a lower grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 1.0
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age and MRI features of a large, solitary, ring-enhancing mass with extensive central necrosis provides a classic presentation for Glioblastoma, IDH-wildtype. All three independent predictions (IDH-wildtype, 1p/19q non-codeleted, and WHO grade 4) are highly confident and internally consistent, leading to a definitive integrated diagnosis."
+}

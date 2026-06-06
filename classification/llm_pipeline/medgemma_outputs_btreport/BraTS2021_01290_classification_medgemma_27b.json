@@ -1,0 +1,37 @@
+{
+  "subject_id": "BraTS2021_01290",
+  "idh": {
+    "reasoning": "The patient is 70 years old. Older age (>65) is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it significantly increases the likelihood of IDH-wildtype status. No other features in the metadata strongly suggest IDH-mutant status (e.g., younger age, specific location, or imaging characteristics typically associated with lower-grade gliomas). The tumor size (37.8 mL) and enhancement pattern are non-specific regarding IDH status. Given the strong age association, IDH-wildtype is the more probable status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata lacks features typically associated with 1p/19q co-deletion, such as younger age, lower WHO grade (oligodendroglioma), or specific imaging characteristics. The patient's age (70) makes 1p/19q co-deletion less likely, as it is primarily found in lower-grade gliomas and oligodendrogliomas, which are more common in younger adults. The tumor's location and size are non-specific for co-deletion status. Without features pointing towards oligodendroglioma or lower grade, the default assumption based on age and lack of specific indicators is non-codeleted.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The patient is 70 years old, which increases the likelihood of a higher grade glioma. The tumor demonstrates marked enhancement ('Enhancement Quality': 'Marked'), deep white matter invasion ('Deep WM invasion': 'Present'), cortical involvement ('Cortical involvement': 'Present'), and significant size ('Total tumor volume (mL)': 37.828). The presence of deep white matter invasion and marked enhancement are features often associated with higher grades (Grade 3 or 4). While the patient's age favors IDH-wildtype (often Grade 4), the combination of marked enhancement and deep invasion points towards at least Grade 3, potentially Grade 4 depending on IDH status and proliferation index (not available). Given the marked enhancement and deep invasion in an older patient, Grade 4 is highly probable if IDH-wildtype, but Grade 3 remains possible if IDH-mutant with high proliferation. However, based solely on the provided imaging features (marked enhancement, deep invasion) and age, a higher grade is strongly suggested. Considering the high likelihood of IDH-wildtype in this age group, Grade 4 becomes the most probable diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

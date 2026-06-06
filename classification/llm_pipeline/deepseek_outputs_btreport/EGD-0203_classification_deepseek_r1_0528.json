@@ -1,0 +1,43 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 35 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger patients. However, the proportion of necrosis is high (69.86%), which is more typical of IDH-wildtype tumors.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is a common location for both oligodendrogliomas and astrocytomas. However, the absence of deep white matter invasion ('Deep WM invasion': 'Absent') and cortical involvement ('Cortical involvement': 'Present') are more suggestive of astrocytoma than oligodendroglioma. Oligodendrogliomas often involve deep white matter and may have less cortical involvement. The high proportion of necrosis is also more typical of astrocytoma.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "The tumor is midline, solitary, and involves eloquent motor cortex. Enhancement is mild with thick margins (>3mm). High necrosis proportion suggests high-grade tumor. Absence of ependymal invasion and deep white matter invasion are noted.",
+  "subject_id": "EGD-0203",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The proportion of necrosis is high (69.86%), which is a hallmark of glioblastoma (CNS WHO grade 4). Enhancement is present but mild ('Enhancement Quality': 'Mild'), which might suggest lower grade, but the necrosis proportion strongly supports grade 4. The tumor involves eloquent motor cortex ('Eloquent Brain Involvement': 'Motor'), which is consistent with high-grade glioma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

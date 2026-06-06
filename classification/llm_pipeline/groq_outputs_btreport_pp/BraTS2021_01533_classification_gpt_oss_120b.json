@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_01533",
+  "idh": {
+    "reasoning": "The patient is 60 years old, an age where IDH-wildtype glioblastoma is common. The tumor shows a high necrosis proportion (52.24%) and large total volume (360.9\u202fmL) with significant edema and midline shift, both imaging hallmarks of IDH-wildtype high\u2011grade glioma. The T2\u2011FLAIR mismatch is absent (value 0.0), which argues against IDH\u2011mutant astrocytoma. Although the enhancement is mild and the enhancing tumor volume is small, the presence of necrosis and mass effect outweighs these points, supporting an IDH\u2011wildtype classification.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "Midline shift present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of IDH\u2011wildtype, 1p/19q codeletion is highly unlikely, as codeletion occurs almost exclusively in IDH\u2011mutant oligodendrogliomas. The imaging lacks features typical of oligodendroglioma such as calcifications (not assessed) and shows high necrosis, supporting a non\u2011codeleted status. No imaging evidence suggests codeletion.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The lesion exhibits extensive necrosis (52.24%), marked edema, midline shift, and a large overall volume, all characteristic of WHO grade\u202f4 glioblastoma. Presence of any contrast enhancement, even if mild, together with necrosis fulfills radiographic criteria for grade\u202f4. While the enhancing component is small and does not cross the midline, these factors are outweighed by the necrotic and mass\u2011effect features, leading to a grade\u202f4 assignment.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Midline shift present",
+      "Edema crosses midline",
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "CET Crosses midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of advanced sequences (perfusion, spectroscopy) limits certainty, especially regarding the low enhancing volume. Mild enhancement introduces some ambiguity, but the high necrosis and mass effect favor a grade\u202f4 IDH\u2011wildtype glioblastoma. Confidence is moderate\u2011high."
+}

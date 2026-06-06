@@ -1,0 +1,44 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (67 years) and the presence of a large, necrotic tumor with significant edema and mass effect (as indicated by the 'n_slices_with_shift', 'ED Volume (mL)', and 'midline_shift_present' fields) are more typical of glioblastoma, which is commonly IDH wildtype in older adults. The 'T2-FLAIR Mismatch Score' and 'T2-FLAIR Mismatch Degree' do not indicate a strong mismatch, which is a feature often associated with IDH-mutant astrocytomas. Furthermore, the presence of necrosis (Proportion Necrosis: 30.65%) and the tumor's aggressive features (e.g., ependymal invasion, deep white matter invasion) are more characteristic of IDH wildtype glioblastomas.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of a solitary, large tumor with necrosis and significant edema, along with the absence of 'T2-FLAIR Mismatch Present' and a low 'T2-FLAIR Mismatch Score', suggests that this tumor is unlikely to be an oligodendroglioma, which typically harbors 1p/19q co-deletion. The clinical and radiological features are more suggestive of a glioblastoma or an astrocytoma. Given the IDH wildtype prediction, 1p/19q co-deletion is less likely.",
+    "supporting_features": [
+      "Number of lesions",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 30.65%), large size (Lesion Sizes APxTVxCC: 5.2 x 4.1 x 4.2 cm), ependymal invasion, and deep white matter invasion. These characteristics are typical of a high-grade glioma. Given the patient's age and the tumor's radiological features, a grade 4 glioma (glioblastoma) is the most likely diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01744"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "patient_0089",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.9290397024976954) is highly suggestive of an IDH mutant glioma. The patient's age (30 years) also aligns with a higher likelihood of IDH mutation, as IDH mutant gliomas are more common in younger adults. The tumor's location and other characteristics do not strongly argue against IDH mutation.",
+      "supporting_features": [
+        "T2-FLAIR Mismatch Score",
+        "age_years"
+      ],
+      "contradicting_features": [],
+      "prediction": "mutant",
+      "confidence": 0.95
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of T2-FLAIR mismatch is more commonly associated with astrocytomas, which are typically IDH mutant but 1p/19q non-codeleted. The tumor's characteristics, such as its location and enhancement pattern, do not strongly suggest 1p/19q co-deletion. Therefore, it is more likely that the tumor is non-codeleted.",
+      "supporting_features": [
+        "T2-FLAIR Mismatch Score"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 74.34%) and has a large necrotic volume, which is typically associated with higher-grade gliomas. The presence of ependymal invasion and significant mass effect (midline shift present) also suggests a high-grade tumor. While the enhancement quality is mild, the overall tumor characteristics point towards a high-grade glioma, likely grade 4.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "n_slices_with_shift",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_01523"
+}

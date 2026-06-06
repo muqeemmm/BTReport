@@ -1,0 +1,49 @@
+{
+  "id": "patient_0684",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (81 years) is significantly higher than the typical age range for IDH-mutant gliomas, which are more common in younger adults. The presence of a large, enhancing mass with necrosis (Proportion Necrosis: 6.75%) and significant mass effect (midline shift present, max_shift_mm: 7.0 mm) is more characteristic of glioblastoma, typically IDH-wildtype in older adults. The tumor's aggressive features (marked enhancement, ependymal invasion, deep white matter invasion) further support this interpretation.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "max_shift_mm",
+        "midline_shift_present",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.95
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "IDH-wildtype gliomas are rarely 1p/19q codeleted. Given the high likelihood of IDH-wildtype status based on age and imaging features, it is improbable that this tumor is 1p/19q codeleted. The presence of necrosis and marked enhancement also argues against 1p/19q codeletion, as codeleted tumors (oligodendrogliomas) typically show more indolent features.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.9
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor exhibits aggressive imaging features: large size (Lesion Sizes APxTVxCC: 5.3 x 5.5 x 5.5 cm), necrosis (Proportion Necrosis: 6.75%), marked enhancement, significant mass effect (midline shift), and ependymal invasion. These characteristics are hallmarks of glioblastoma, CNS WHO grade 4. The patient's age (81 years) further supports this diagnosis, as glioblastoma is the most common glioma in this age group.",
+      "supporting_features": [
+        "Lesion Sizes APxTVxCC (cm)",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion",
+        "age_years"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.98
+    }
+  ],
+  "subject_id": "BraTS2021_00132"
+}

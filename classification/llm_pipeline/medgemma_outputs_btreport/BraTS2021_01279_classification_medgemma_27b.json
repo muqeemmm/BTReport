@@ -1,0 +1,40 @@
+{
+  "subject_id": "BraTS2021_01279",
+  "idh": {
+    "reasoning": "The patient is 57 years old. Older age (>50) is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in this age group. The tumor is solitary, located in the frontal, parietal lobes and cortex, and involves eloquent brain regions (speech motor and motor). These features are not strongly indicative of either IDH status. The tumor volume is 15.4 mL, which is relatively large but can be seen in both IDH-mutant and wildtype tumors. The proportion of edema (83.36%) is high, which can be seen in both types. The enhancement quality is marked, and the enhancing margin is thick (>3mm), which are non-specific features. Without molecular markers like 2HG spectroscopy or diffusion imaging (DWI/ADC), it's difficult to definitively determine IDH status based solely on morphology and location. Given the age and lack of specific features pointing towards IDH-mutant (e.g., younger age, typical location like temporal lobe), I lean towards wildtype, but the evidence is weak.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 57 years old. 1p/19q co-deletion is almost exclusively found in IDH-mutant astrocytomas, particularly oligodendrogliomas. Since I predicted IDH-wildtype based on age and lack of specific features, it's highly unlikely that this tumor has a 1p/19q co-deletion. The tumor location (frontal/parietal cortex) is less typical for oligodendroglioma compared to temporal or frontal lobes, further reducing the likelihood of co-deletion.",
+    "supporting_features": [
+      "age_years",
+      "id"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient is 57 years old with a solitary tumor measuring 2.3x2.2x2.3 cm (Total volume 15.4 mL). The tumor involves the cortex and shows marked enhancement with a thick margin (>3mm). There is significant edema (83.36% of total volume). Deep white matter invasion and ependymal invasion are absent. Ventricular asymmetry is absent ('Asymmetrical Ventricles': 'Absent'). Eloquent brain involvement (speech motor and motor) is present. Based on WHO CNS5 criteria: Grade 2 typically involves minimal enhancement and no deep WM invasion; Grade 4 (GBM) usually shows significant necrosis, deep WM invasion, or crossing the midline; Grade 3 (anaplastic astrocytoma) often shows marked enhancement, deep WM invasion may be present but not required, and necrosis may be present but not required for diagnosis if other features are present. This tumor has marked enhancement and cortical involvement but lacks deep WM invasion or ependymal invasion ('Deep WM invasion': 'Absent', 'Ependymal (ventricular) Invasion': 'Absent'). While necrosis proportion (0.55) isn't high enough to strongly suggest GBM without other features like deep invasion or crossing midline, the marked enhancement and cortical involvement point towards a higher grade than Grade 2. Given the absence of definitive Grade 4 features like deep WM invasion or crossing midline, Grade 3 seems most likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "IDH-wildtype diffuse astrocytoma, WHO grade 3.",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

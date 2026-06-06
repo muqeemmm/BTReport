@@ -1,0 +1,80 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "midline_shift_present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the metadata favors IDH-wildtype over IDH-mutant because Enhancement Quality is marked, ET Volume and Proportion Enhancing show a substantial enhancing component, and NCR Volume with Proportion Necrosis indicates necrotic tumor. ED Volume and Proportion of Oedema show extensive edema, and Deep WM invasion supports an infiltrative aggressive phenotype. T2-FLAIR Mismatch Present is absent, which reduces support for the classic IDH-mutant astrocytoma imaging pattern. Evidence against IDH-wildtype is that age_years is 44, younger than the most typical IDH-wildtype glioblastoma population, and Tumor Location with Cortical involvement and temporal/cortical Region Proportions can be seen in IDH-mutant glioma; midline_shift_present is No despite the large lesion. Overall the aggressive enhancing-necrotic phenotype outweighs these counterfeatures, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the metadata favors non-codeleted over codeleted because Tumor Location and Region Proportions indicate a predominantly temporal rather than classic frontal-predominant pattern, while Enhancement Quality is marked with substantial ET Volume and Proportion Enhancing. NCR Volume and Proportion Necrosis indicate necrosis, and ED Volume with Proportion of Oedema plus Deep WM invasion supports a more aggressive non-codeleted diffuse glioma phenotype. Evidence against non-codeleted is that age_years of 44 is compatible with oligodendroglioma, and Cortical involvement with temporal/cortical Tumor Location and Region Proportions can occur in 1p/19q-codeleted tumors. Because key oligodendroglioma-supporting features such as calcification are not assessed in the available metadata and the enhancement-necrosis pattern is more persuasive, the best estimate is non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the provided structural MRI metadata. DWI/ADC, perfusion, spectroscopy, SWI/GRE, calcification assessment, and molecular pathology are unavailable; these limitations especially affect molecular subtype confidence. The imaging phenotype is dominated by marked enhancement, necrosis, and extensive edema, supporting a high-grade non-codeleted IDH-wildtype diagnosis, but tissue diagnosis remains required.",
+  "subject_id": "BraTS2021_00139",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "midline_shift_present",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently, the metadata strongly favors grade 4 over grade 2 or 3 because Enhancement Quality is marked, ET Volume and Proportion Enhancing show a sizable enhancing tumor component, Thickness of enhancing margin is greater than 3 mm, and NCR Volume with Proportion Necrosis indicates necrosis. ED Volume, Proportion of Oedema, Total tumor volume, Lesion Sizes APxTVxCC (cm), and Deep WM invasion further support a biologically aggressive lesion. Evidence against grade 4 is that midline_shift_present is No, Multiple satellites present is Absent, Ependymal (ventricular) Invasion is Absent, CET Crosses midline is False, and Proportion Necrosis is present but not dominant. Despite those counterfeatures, the combination of marked enhancement and necrosis is most consistent with CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Deep WM invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,52 @@
+{
+  "subject_id": "UCSF-PDGM-308",
+  "idh": {
+    "reasoning": "The patient's age of 45 is indeterminate. Key features suggesting IDH-wildtype status include the tumor's multifocal nature ('Multifocal or Multicentric': \"Multifocal\") and the presence of ependymal invasion ('Ependymal (ventricular) Invasion': \"Present\"), both of which are strongly associated with IDH-wildtype gliomas. The extensive vasogenic edema ('ED Volume (mL)': 116.633) and significant mass effect ('max_shift_mm': 8.0) also point towards a more aggressive biology typical of IDH-wildtype tumors. Conversely, features arguing for IDH-mutant status are the absence of necrosis ('NCR Volume (mL)': 0.0) and the very small volume of mild enhancement ('ET Volume (mL)': 0.632). On balance, multifocality and ependymal invasion are potent predictors that outweigh the atypical enhancement pattern, leading to a prediction of IDH-wildtype.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The evidence strongly favors a non-codeleted status, consistent with an astrocytic lineage. The tumor demonstrates extensive infiltration into deep white matter ('Deep WM invasion': \"Present\") and involves multiple deep gray matter structures and the brainstem ('Anatomical Overlap Regions'). This highly infiltrative pattern is characteristic of astrocytomas. Furthermore, the temporal lobe location ('Tumor Location': \"temporal\") is more common for astrocytomas than oligodendrogliomas, which typically favor the frontal lobes. The multifocal presentation and ependymal invasion also align better with an astrocytoma. There are no specific features to suggest an oligodendroglioma (codeleted) diagnosis.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Tumor Location",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "This tumor presents a conflict between classic radiological grading criteria and features of biological aggressiveness. It lacks the typical hallmarks of a grade 4 lesion, namely necrosis ('NCR Volume (mL)': 0.0) and significant contrast enhancement ('ET Volume (mL)': 0.632, 'Enhancement Quality': \"Mild\"). However, several other features strongly indicate high-grade behavior: it is multifocal ('Multifocal or Multicentric': \"Multifocal\"), shows ependymal invasion ('Ependymal (ventricular) Invasion': \"Present\"), causes significant mass effect ('max_shift_mm': 8.0), and has extensive deep infiltration. In the context of an adult-type diffuse glioma, particularly one suspected to be IDH-wildtype, these aggressive features often correlate with molecular markers that define a CNS WHO grade 4 tumor, even in the absence of necrosis. Therefore, despite the lack of classic enhancement, the overall picture is most consistent with a grade 4 tumor.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "max_shift_mm",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are complex, with features of a lower-grade tumor (minimal enhancement, no necrosis) conflicting with features of high-grade aggression (multifocality, ependymal invasion, significant mass effect). This pattern is suggestive of a molecularly high-grade glioma (i.e., a molecular glioblastoma) that has not yet developed the classic radiological hallmarks of necrosis. The combination of multifocality and deep infiltration strongly points to an IDH-wildtype astrocytoma, which per WHO CNS5 guidelines is classified as grade 4."
+}

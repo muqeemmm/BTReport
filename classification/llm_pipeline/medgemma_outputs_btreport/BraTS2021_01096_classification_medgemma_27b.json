@@ -1,0 +1,41 @@
+{
+  "subject_id": "BraTS2021_01096",
+  "idh": {
+    "reasoning": "The provided metadata lacks features strongly indicative of either IDH-mutant or IDH-wildtype status. Features like small tumor size, well-defined margins, or specific locations (e.g., temporal lobe) often associated with IDH-mutant tumors are absent. Conversely, features typically associated with IDH-wildtype tumors (large size, irregular margins, necrosis, edema) are present but not definitive. The tumor is multifocal and involves deep white matter and ependymal structures, which can be seen in both types. The proportion of enhancing tissue (15.39%) is relatively low, which might lean towards IDH-mutant, but the overall tumor volume (146.441 mL) is substantial. Given the lack of distinguishing features and the presence of some characteristics potentially seen in both subtypes, a definitive prediction is difficult. I will default to the more common subtype in adults, which is IDH-wildtype, but with low confidence due to the ambiguity.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The metadata does not contain any information related to 1p/19q co-deletion status. Features like age (typically younger for codeleted), location (frontal lobe preference), or specific imaging characteristics are not provided or are non-specific. Therefore, no prediction can be made based on the available data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features suggestive of a high grade. It is multifocal ('Multifocal or Multicentric': 'Multifocal'), involves deep white matter ('Deep WM invasion': 'Present'), shows ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), and has cortical involvement ('Cortical involvement': 'Present'). The total tumor volume is substantial (146.441 mL). While necrosis ('Proportion Necrosis': 2.65) and edema ('Proportion of Oedema': 81.96) are present, they are not overwhelmingly dominant relative to the total volume compared to some Grade 4 gliomas. The enhancement quality is marked ('Enhancement Quality': 'Marked'), and the enhancing margin is thick (>3mm). The presence of deep white matter invasion and ependymal invasion strongly points towards at least Grade 3 or 4 according to WHO CNS5 criteria. Given these aggressive features, Grade 4 is the most likely diagnosis.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Total tumor volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH-wildtype astrocytoma, WHO grade IV",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a multifocal glioma involving deep white matter and ependymal structures with marked enhancement and significant edema. These features are highly suggestive of a high-grade glioma, specifically WHO grade IV astrocytoma (glioblastoma). The lack of specific features pointing towards IDH mutation leads to a prediction of IDH-wildtype status."
+}

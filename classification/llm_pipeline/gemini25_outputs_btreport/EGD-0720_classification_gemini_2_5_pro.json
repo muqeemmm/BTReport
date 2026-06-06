@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0720",
+  "idh": {
+    "reasoning": "The patient's young age (34) is a strong predictor for an IDH-mutant glioma. The tumor's imaging phenotype, characterized by a large non-enhancing component with only mild, minimal enhancement, is also classic for an IDH-mutant astrocytoma. The frontal lobe location further supports this. However, a significant contradicting feature is the presence of a necrotic core, which is a hallmark of IDH-wildtype glioblastoma. On balance, the combination of young age and predominantly non-enhancing character is more suggestive of an IDH-mutant tumor that has undergone high-grade transformation, rather than a primary IDH-wildtype glioma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The key feature for determining 1p/19q status is the presence of necrosis. The significant necrotic volume (NCR Volume (mL): 15.884) is highly uncharacteristic of 1p/19q-codeleted oligodendrogliomas and is a strong indicator of an astrocytic lineage (non-codeleted). While the frontal lobe location and cortical involvement can be seen in oligodendrogliomas, the presence of necrosis, extensive edema, and deep white matter invasion overwhelmingly favors a diagnosis of an IDH-mutant astrocytoma.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is primarily driven by the presence of high-grade features. In this case, there is clear evidence of a significant necrotic core (NCR Volume (mL) of 15.884, Proportion Necrosis of 12.99%). Radiographic necrosis is a surrogate for histopathologic necrosis, which is a defining feature of WHO Grade 4 in adult-type diffuse gliomas. The presence of enhancement, even if mild, and deep white matter invasion further support a high-grade designation. The evidence for Grade 4 is very strong and overrides other factors like the patient's young age.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a large left frontal lobe glioma in a young adult. The imaging features are conflicting for IDH status determination: young age and minimal enhancement suggest IDH-mutant, while significant necrosis suggests IDH-wildtype. The balance of evidence slightly favors an IDH-mutant tumor with high-grade transformation. The presence of necrosis is a strong indicator of non-codeletion (astrocytoma) and definitively points to WHO Grade 4. The predicted diagnosis is therefore Astrocytoma, IDH-mutant, CNS WHO grade 4."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "patient_0164",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is relatively young (39 years) and the tumor is located in the frontal lobe, which is a common location for IDH-mutant gliomas. The tumor is multifocal but does not cross the midline, and there's mild enhancement. These features are consistent with IDH-mutant gliomas, which are more likely to be found in younger patients and in the frontal lobe. The absence of ependymal invasion and deep white matter invasion also aligns with characteristics often seen in IDH-mutant tumors.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Multifocal or Multicentric",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "CET Crosses midline",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the frontal lobe and involves the cortex, which is typical for 1p/19q co-deleted gliomas. The presence of cortical involvement and the frontal lobe location are characteristic features of oligodendrogliomas, which are typically IDH-mutant and 1p/19q co-deleted. Given the likely IDH mutation status (predicted above), the cortical involvement and frontal lobe location support the likelihood of 1p/19q co-deletion.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Region Proportions"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.75
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor shows mild enhancement and is multifocal, but there's no significant mass effect or midline shift. The proportion of necrosis is relatively low (0.84%), and the enhancement quality is mild. These features are more suggestive of a lower grade glioma. However, the presence of multifocality could indicate a higher grade. Given the likely IDH-mutant and 1p/19q co-deleted status, the tumor is likely to be an oligodendroglioma, which can be grade 2 or 3 based on the presence of high cellularity or proliferation indices not directly assessable from the given metadata. The mild enhancement and relatively low proportion of necrosis favor a grade 2 classification.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Multifocal or Multicentric"
+      ],
+      "contradicting_features": [
+        "Multifocal or Multicentric"
+      ],
+      "prediction": 2,
+      "confidence": 0.7
+    }
+  ],
+  "subject_id": "EGD-0521"
+}

@@ -1,0 +1,84 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors IDH-wildtype because age_years is 55, and the lesion shows aggressive adult diffuse glioma features: measurable enhancing tumor on ET Volume (mL) and Proportion Enhancing, non-enhancing/necrotic component on NCR Volume (mL) and Proportion Necrosis, extensive edema on ED Volume (mL) and Proportion of Oedema, mass effect on midline_shift_present and Effaced Ventricle, plus Ependymal (ventricular) Invasion, Deep WM invasion, and Multiple satellites present. T2-FLAIR Mismatch Present is absent, which argues against the classic IDH-mutant astrocytoma imaging pattern. Evidence against IDH-wildtype is that Cortical involvement and Tumor Location/Region Proportions indicate a parietal-cortical lesion, which can be seen with IDH-mutant glioma, and Enhancement Quality with Proportion Enhancing indicates only mild/limited enhancement; Multifocal or Multicentric and Number of lesions show a solitary lesion. Overall, the balance supports IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata favors non-codeleted status because Tumor Location and Region Proportions place the tumor predominantly in the parietal-cortex region rather than the more typical frontal-predominant oligodendroglioma pattern, and the lesion has aggressive features including Ependymal (ventricular) Invasion, Deep WM invasion, Multiple satellites present, substantial ED Volume (mL), measurable ET Volume (mL), and NCR Volume (mL). Evidence for codeletion is limited but not absent: Cortical involvement is compatible with oligodendroglioma, and Enhancement Quality is mild, which can be seen in lower-grade or oligodendroglial tumors. Because no calcification-sensitive sequence is available and the imaging markers are indirect, the conclusion is non-codeleted with only moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/GRE. The strongest imaging signal is an aggressive enhancing/necrotic, edematous, infiltrative right parietal-cortical mass with ependymal invasion and satellites. Molecular confirmation remains required for definitive WHO CNS5 classification.",
+  "subject_id": "BraTS2021_00375",
+  "who_grade": {
+    "confidence": 0.83,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "crosses_patient_midline"
+    ],
+    "prediction": 4,
+    "reasoning": "The metadata supports CNS WHO grade 4 because there is enhancing tumor on ET Volume (mL), a non-enhancing/necrotic component on NCR Volume (mL) and Proportion Necrosis, very large edema on ED Volume (mL) and Proportion of Oedema, mass effect on midline_shift_present, Effaced Ventricle, and Asymmetrical Ventricles, and infiltrative/aggressive spread on Ependymal (ventricular) Invasion, Deep WM invasion, and Multiple satellites present. Thickness of enhancing margin also indicates a substantial enhancing margin. Features arguing against unequivocal grade 4 are Enhancement Quality described as mild, relatively low Proportion Enhancing and Proportion Necrosis, a solitary lesion on Multifocal or Multicentric, and no crossing on crosses_patient_midline. Overall, the presence of enhancement plus necrotic/non-enhancing core, extensive edema, mass effect, ependymal invasion, and satellites supports grade 4.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,52 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The tumor is nonenhancing (Enhancement Quality: None, Proportion Enhancing: 0.0) which is more common in IDH-mutant gliomas. Additionally, the T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high score (0.8549), which is highly specific for IDH-mutant astrocytomas. The patient is relatively young (age_years: 39), which also favors IDH mutation. However, the absence of deep white matter invasion (Deep WM invasion: Absent) and cortical involvement (Cortical involvement: Present) are less typical for IDH-mutant tumors, but these features are not strongly contradictory.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region (Tumor Location) and involves eloquent cortex (Eloquent Brain Involvement: Vision), which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas. The absence of deep white matter invasion (Deep WM invasion: Absent) also argues against oligodendroglioma. However, the T2-FLAIR mismatch sign is present, which is rare in oligodendrogliomas. The cortical involvement and temporal location could be seen in both, but oligodendrogliomas often have frontal lobe predilection.",
+    "supporting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "The tumor is IDH-mutant, non-codeleted, consistent with astrocytoma. Despite the absence of necrosis and enhancement, the high proportion of necrosis (43.62%) and the presence of midline shift suggest aggressive features. The T2-FLAIR mismatch sign strongly supports IDH mutation. The grade is assigned as 4 due to necrosis presence and midline shift.",
+  "subject_id": "BraTS2021_01499",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis: 43.62%) which is a criterion for CNS WHO grade 4 in IDH-mutant astrocytomas. There is also significant midline shift (midline_shift_present: Yes, mean_shift_mm: -3.04mm) and ventricular effacement (Effaced Ventricle: Right), indicating mass effect. However, there is no contrast enhancement (Enhancement Quality: None) and no enhancing tumor volume (ET Volume: 0.0), which are atypical for grade 4 tumors. The absence of microvascular proliferation is not reported, but necrosis alone is sufficient for grade 4 in IDH-mutant astrocytomas.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "mean_shift_mm",
+      "Effaced Ventricle"
+    ]
+  }
+}

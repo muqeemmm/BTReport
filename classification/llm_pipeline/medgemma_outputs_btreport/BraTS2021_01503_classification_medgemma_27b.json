@@ -1,0 +1,38 @@
+{
+  "subject_id": "BraTS2021_01503",
+  "idh": {
+    "reasoning": "The patient is 53 years old. Older age (>50) is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur at this age. The tumor is solitary, located in the frontal lobe cortex, and shows deep white matter invasion. The proportion of enhancement (0.21) is relatively low, and the enhancement quality is mild. The presence of multiple satellites is noted. While age leans towards wildtype, the other features are not strongly indicative of either status without further information like DWI or perfusion. Given the age and lack of features strongly suggesting IDH-mutant (e.g., very young age, specific location like thalamus), IDH-wildtype is slightly more probable, but the evidence is weak.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not contain any information directly related to 1p/19q co-deletion status (e.g., specific imaging features strongly associated with it, or molecular data). Features like age and tumor location are not reliable predictors of 1p/19q status on their own. Therefore, a prediction cannot be reliably made based on the provided MRI metadata.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 53 years old with a solitary frontal lobe glioma showing cortical involvement and deep white matter invasion ('Deep WM invasion': 'Present'). The tumor volume is substantial (45.689 mL). The proportion enhancing is low (0.21), and the enhancement quality is mild ('Enhancement Quality': 'Mild'). Edema crosses the midline ('Edema crosses midline': 'True'), suggesting significant mass effect or infiltrative growth. Multiple satellites are present ('Multiple satellites present': 'Present'). While the low enhancement might suggest a lower grade, the deep white matter invasion, significant volume, edema crossing midline, and presence of satellites are features often seen in higher-grade gliomas (Grade 3 or 4). Given the deep WM invasion and edema crossing midline in an adult patient, Grade 3 (Anaplastic Astrocytoma) or Grade 4 (Glioblastoma) are more likely than Grade 2 (Diffuse Astrocytoma). Without definitive features pointing towards Grade 4 (like significant necrosis or strong enhancement), Grade 3 seems a reasonable estimate based on infiltrative behavior.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "Multiple satellites present",
+      "Total tumor volume (mL)",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "diffuse astrocytoma",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient has a solitary frontal lobe glioma with cortical involvement and deep white matter invasion. The tumor volume is substantial (45.689 mL), and edema crosses the midline ('Edema crosses midline': 'True'). Multiple satellites are present ('Multiple satellites present': 'Present'). The proportion enhancing is low (0.21), and the enhancement quality is mild ('Enhancement Quality': 'Mild'). Given these features in an adult patient, a WHO Grade III diagnosis (Anaplastic Astrocytoma) seems most likely."
+}

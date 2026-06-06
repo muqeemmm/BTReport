@@ -1,0 +1,46 @@
+{
+  "subject_id": "EGD-0421",
+  "idh": {
+    "reasoning": "The presence of a T2-FLAIR mismatch (field \"T2-FLAIR Mismatch Present\") is a strong imaging surrogate for IDH\u2011mutant astrocytoma. Mild contrast enhancement (field \"Enhancement Quality\") and cortical involvement (field \"Cortical involvement\") further align with typical IDH\u2011mutant behavior, whereas the patient\u2019s older age (field \"age_years\") and a high necrotic proportion (field \"Proportion Necrosis\") are more common in IDH\u2011wildtype glioblastoma. Balancing these, the mismatch and mild enhancement outweigh the age and necrosis, leading to an IDH\u2011mutant prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2-FLAIR mismatch is highly specific for non\u2011codeleted 1p/19q status in the context of an IDH\u2011mutant tumor. No imaging features suggesting oligodendroglioma (such as homogeneous T2 signal or calcification) are present, and the mismatch itself (field \"T2-FLAIR Mismatch Present\") supports a non\u2011codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Necrotic proportion is high (field \"Proportion Necrosis\"), and there is measurable contrast enhancement (field \"Proportion Enhancing\" and \"Thickness of enhancing margin\"), which are features more typical of WHO grade 3 astrocytoma than grade 2. However, the enhancing tumor volume is very low (field \"ET Volume (mL)\"), the enhancement does not cross the midline (field \"CET Crosses midline\"), and there is no ependymal or deep white\u2011matter invasion (fields \"Ependymal (ventricular) Invasion\" and \"Deep WM invasion\"), which argue against a higher grade. The balance of moderate necrosis and enhancement favors grade 3 over grade 2, while lacking overt high\u2011grade signs (e.g., thick, irregular enhancement, midline crossing).",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": 3,
+    "confidence": 0.68
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant and 1p/19q-non-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma, likely WHO grade 3. Confidence is limited by the absence of advanced sequences (perfusion, spectroscopy, diffusion) that could better differentiate grade and molecular status."
+}

@@ -1,0 +1,49 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 38 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor is located in the frontal lobe, which is a common site for IDH-mutant gliomas. Enhancement is mild, which is more typical for lower-grade gliomas or IDH-mutant tumors. Proportion necrosis is 30%, which is high and might suggest a higher grade, but IDH-mutant tumors can have necrosis. The text report indicates frontal lobe cortex involvement, solitary, no ependymal invasion, no deep white matter invasion, which aligns with IDH-mutant characteristics.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is a common location for both oligodendrogliomas and astrocytomas. However, oligodendrogliomas (which are 1p/19q codeleted) often involve the cortex and white matter, but here deep white matter invasion is absent. The text report indicates no deep white matter invasion, which is more typical for astrocytomas. Enhancement is mild, which can be seen in both, but oligodendrogliomas often have more calcifications (not assessed here). The proportion necrosis is high (30%), which is unusual for oligodendrogliomas. Overall, evidence for non-codeleted is stronger.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma with CNS WHO grade 4. Confidence in IDH mutation is moderate due to age and location, but contradicted by high necrosis. Confidence in 1p/19q non-codeletion is moderate due to absence of deep WM invasion and high necrosis. Grade 4 is assigned due to necrosis proportion >10% and enhancement, though enhancement is mild.",
+  "subject_id": "EGD-0074",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The proportion necrosis is 30%, which exceeds the 10% threshold for grade 4 astrocytoma. Enhancement is present (mild) and proportion enhancing is 0.03 (3%), which is low but still indicates some enhancement. The text report mentions mild enhancement. Necrosis is a key feature for grade 4. However, enhancement is mild, which is atypical for GBM but can occur in IDH-mutant tumors. No ependymal invasion or deep WM invasion noted. Total tumor volume is 6.907 mL, which is moderate. Age is young for GBM but consistent with IDH-mutant.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Text Report"
+    ]
+  }
+}

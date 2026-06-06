@@ -1,0 +1,71 @@
+{
+  "subject_id": "BraTS2021_00185",
+  "idh": {
+    "reasoning": "The patient is 61 years old, which is older than the typical age for IDH-mutant gliomas (median age ~45). The tumor is multifocal and involves the cortex. The enhancing component is marked, and the tumor volume is relatively large (61.778 mL). While age alone is not definitive, the combination of older age, multifocal presentation, and large size leans towards IDH-wildtype. There are no features strongly suggesting IDH-mutant status (e.g., younger age, single focal lesion).",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Total tumor volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is older (61 years) and the tumor is IDH-wildtype (predicted above). 1p/19q co-deletion is almost exclusively found in IDH-mutant astrocytomas, particularly oligodendrogliomas. Therefore, given the predicted IDH-wildtype status, 1p/19q co-deletion is highly unlikely.",
+    "supporting_features": [
+      "age_years",
+      "idh.prediction"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The predicted molecular subtype is IDH-wildtype and non-codeleted. Based on WHO CNS5 criteria, an IDH-wildtype diffuse astrocytoma is classified as Grade 4. The large tumor volume (61.778 mL), multifocal nature, cortical involvement, and marked enhancement further support a high grade. Although deep WM invasion and ependymal invasion are absent, these are not required for Grade 4 in the IDH-wildtype setting.",
+    "supporting_features": [
+      "idh.prediction",
+      "one_p_nineteen_q.prediction",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Text Report",
+      "Tumor Location",
+      "Eloquent Brain Involvement: Vision",
+      "Asymmetrical Ventricles: Present",
+      "Effaced Ventricle: Right",
+      "Enlarged Ventricles: Left",
+      "Edema crosses midline: True",
+      "midline_shift_present: Minimal",
+      "level_max_shift: fourth ventricle",
+      "crosses_ideal_midline.ed: true",
+      "crosses_ideal_midline.ncr: false",
+      "crosses_ideal_midline.et: false",
+      "crosses_ideal_midline.ncr_et: false",
+      "crosses_patient_midline.ed: false",
+      "crosses_patient_midline.et: false",
+      "crosses_patient_midline.ncr: false",
+      "crosses_patient_midline.ncr_et: false",
+      "Edema crosses midline: True",
+      "CET Crosses midline: False",
+      "volumes ideal midline ed right > left ed left",
+      "volumes patient midline ed right > left ed left",
+      "volumes ideal midline ncr right > left ncr left",
+      "volumes patient midline ncr right > left ncr left",
+      "volumes ideal midline et right > left et left",
+      "volumes patient midline et right > left et left",
+      "volumes ideal midline ncr et right > left ncr et left",
+      "volumes patient midline ncr et right > left ncr et left"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "IDH-wildtype diffuse astrocytoma, WHO Grade 4.",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of older age, large multifocal tumor with cortical involvement and marked enhancement strongly suggests an IDH-wildtype glioma. Given the predicted IDH-wildtype status and lack of 1p/19q co-deletion features (which are rare in this context), the diagnosis aligns with WHO Grade 4 diffuse astrocytoma."
+}

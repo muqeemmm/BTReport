@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_01501",
+  "idh": {
+    "reasoning": "The tumor shows absent T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present = 0.0) and a high proportion of necrosis (Proportion Necrosis = 44.64\u202f%), both features typical of IDH\u2011wildtype glioblastoma and arguing against an IDH\u2011mutant astrocytoma, which usually displays T2\u2011FLAIR mismatch. Although the patient is relatively young (age_years = 38) and the enhancement is mild (Enhancement Quality = Mild, Proportion Enhancing = 10.62\u202f%), these factors are less specific and are outweighed by the necrosis and mismatch findings. Therefore the balance of evidence favors IDH\u2011wildtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the IDH\u2011wildtype prediction and the lack of T2\u2011FLAIR mismatch, there is no imaging pattern suggestive of an oligodendroglioma, which requires both IDH mutation and 1p/19q codeletion. The tumor\u2019s cortical location and patient age could be compatible with oligodendroglioma, but without IDH mutation the codeletion is highly unlikely. Therefore the best estimate is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.66
+  },
+  "who_grade": {
+    "reasoning": "The lesion has a large necrotic component (Proportion Necrosis = 44.64\u202f%) and causes significant mass effect (midline_shift_present = Yes, Edema crosses midline = True). According to WHO CNS5, any IDH\u2011wildtype diffuse astrocytic tumor with necrosis is classified as grade\u202f4, irrespective of the degree of contrast enhancement. Although the enhancement is mild (Enhancement Quality = Mild, Proportion Enhancing = 10.62\u202f%), the necrosis and mass effect outweigh this, supporting a grade\u202f4 assignment.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Edema crosses midline",
+      "Total tumor volume",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks diffusion and perfusion data; mild enhancement creates some uncertainty, but necrosis and mass effect strongly support IDH\u2011wildtype GBM grade\u202f4. Molecular confirmation recommended."
+}

@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0229",
+  "idh": {
+    "reasoning": "The patient's young age (30 years) is a very strong predictor for an IDH-mutant glioma. This is strongly corroborated by the imaging features: the tumor is very large (27.7 mL total volume) but has an extremely small volume of enhancement (0.101 mL) and is described as having 'Mild' enhancement quality. The vast majority of the tumor is non-enhancing. Furthermore, the amount of surrounding edema is relatively low (6.4 mL) for the tumor size. The absence of deep white matter invasion and ependymal invasion also supports a less aggressive, IDH-mutant phenotype. There are no significant features to suggest an IDH-wildtype tumor, which typically occurs in older patients and demonstrates avid ring enhancement and central necrosis.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The distinction between an IDH-mutant astrocytoma (non-codeleted) and an oligodendroglioma (codeleted) is challenging based on these features. The frontal lobe and cortical involvement are common in both. The minimal enhancement also does not strongly differentiate them. However, the tumor involves multiple lobes (frontal and parietal), suggesting a more diffusely infiltrative pattern that can be more characteristic of astrocytomas. The description of the minimal enhancement having a 'Thickness of enhancing margin' >3mm, while based on a tiny volume, is morphologically more in line with astrocytic tumors than the typically patchy, non-rim enhancement of oligodendrogliomas. The evidence is not definitive, but slightly favors a non-codeleted status.",
+    "supporting_features": [
+      "Region Proportions",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "ET Volume (mL)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The grading is based on imaging markers of aggressiveness. The most compelling evidence for a low grade (WHO grade 2) is the near-complete absence of contrast enhancement ('ET Volume (mL)' is 0.101, 'Proportion Enhancing' is 0.37%). High-grade gliomas (grade 4, and often grade 3) are characterized by significant enhancement. The high 'Proportion Necrosis' value is derived from the non-enhancing core and, in the absence of a surrounding enhancing rim, represents non-enhancing tumor rather than true necrosis, which is a hallmark of grade 4. The lack of significant mass effect ('midline_shift_present': 'No') also favors a lower grade. While any enhancement raises the possibility of a grade 3 tumor, the overwhelmingly non-enhancing nature of this large lesion makes grade 2 the most probable diagnosis.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Thickness of enhancing margin"
+    ],
+    "prediction": 2,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "A 30-year-old patient presents with a large, predominantly non-enhancing tumor involving the left frontal and parietal lobes. The patient's young age combined with the lack of significant enhancement or mass effect are highly characteristic of an IDH-mutant, lower-grade glioma. The imaging features are most consistent with an Astrocytoma, IDH-mutant, CNS WHO grade 2. The distinction from an oligodendroglioma is difficult on imaging alone and represents the main diagnostic uncertainty."
+}

@@ -1,0 +1,38 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7663327044522341, indicating a significant mismatch. This feature is strongly associated with IDH mutant gliomas. Additionally, the tumor's characteristics, such as its location and involvement of multiple regions, are consistent with the typical presentation of IDH mutant gliomas. Therefore, based on the strong evidence of T2-FLAIR mismatch, the prediction is that the IDH status is 'mutant'.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, the presence of a significant T2-FLAIR mismatch typically points towards an astrocytic tumor, which is more commonly associated with IDH mutant but 1p/19q non-codeleted status. The tumor's characteristics, such as its location and enhancement pattern, do not strongly suggest a classic oligodendroglioma profile, which is typically associated with 1p/19q co-deletion. Therefore, based on the available MRI features and the association of T2-FLAIR mismatch with astrocytic tumors, the prediction is that the 1p/19q co-deletion status is 'non-codeleted'.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as significant mass effect (midline shift present, 'midline_shift_present': 'Yes'), large size ('Lesion Sizes APxTVxCC (cm)': [6.2, 6.5, 5.7]), and marked enhancement ('Enhancement Quality': 'Marked'). The presence of necrosis ('Proportion Necrosis': 13.02) and the large volume of edema ('ED Volume (mL)': 209.288) further support a high-grade tumor. While the T2-FLAIR mismatch suggests an IDH mutant astrocytoma, the aggressive features point towards a higher grade. Therefore, considering the balance of these features, the prediction is that the CNS WHO grade is 4.",
+    "supporting_features": [
+      "midline_shift_present",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "UCSF-PDGM-455"
+}

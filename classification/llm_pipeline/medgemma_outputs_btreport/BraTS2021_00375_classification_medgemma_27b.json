@@ -1,0 +1,44 @@
+{
+  "subject_id": "BraTS2021_00375",
+  "idh": {
+    "reasoning": "The patient is 55 years old. Older age (>50) is associated with IDH-wildtype gliomas, while younger age (<40) is associated with IDH-mutant gliomas. The presence of multiple satellites and deep white matter invasion are features more commonly seen in IDH-wildtype tumors, although they can occur in IDH-mutant tumors. The tumor is solitary and midline, which doesn't strongly favor either subtype. Given the age and presence of multiple satellites and deep WM invasion, IDH-wildtype is more likely. However, the age is not definitively old (>60-65), and the other features are not exclusive to wildtype. Therefore, I predict wildtype but with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Multiple satellites present",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Number of lesions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not contain any features strongly indicative of 1p/19q co-deletion status. This status is typically associated with IDH-mutant oligodendrogliomas (Grade 2 or 3). Since the prediction for IDH status is wildtype, the likelihood of 1p/19q co-deletion is very low, as it is almost exclusively found in IDH-mutant tumors. Therefore, I predict non-codeleted.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows deep white matter invasion and ependymal (ventricular) invasion, which are features associated with higher grades (Grade 3 or 4). The presence of multiple satellites also suggests a more aggressive tumor, often Grade 4. The tumor is midline and causes ventricular effacement and asymmetry ('Asymmetrical Ventricles': 'Present', 'Effaced Ventricle': 'Right'). While enhancement quality is described as 'Mild' and the proportion enhancing is relatively low (6.09%), the combination of deep WM invasion, ependymal invasion, multiple satellites, and midline location points towards a high grade. Given these aggressive features, Grade 4 is the most likely diagnosis.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH-wildtype astrocytoma, WHO grade IV",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a midline parietal glioma exhibiting features suggestive of a high-grade tumor. The age of onset (55 years) leans towards an IDH-wildtype glioma. Radiologically, the presence of deep white matter invasion, ependymal invasion, multiple satellites, and midline location with ventricular effacement are all indicative of aggressive behavior typically seen in Grade IV gliomas. While the enhancement quality is mild and the proportion enhancing relatively low compared to necrosis and edema, these findings do not exclude a Grade IV diagnosis in the context of other aggressive features."
+}

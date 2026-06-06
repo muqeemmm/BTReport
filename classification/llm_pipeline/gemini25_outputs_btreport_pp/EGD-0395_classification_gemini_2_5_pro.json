@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0395",
+  "idh": {
+    "reasoning": "The patient's advanced age (70 years) is a very strong predictor for IDH-wildtype status. The MRI features are classic for a high-grade glioma, most commonly IDH-wildtype: a very large tumor with extensive necrosis (NCR Volume (mL) of 49.792), marked and thick ring enhancement (Enhancement Quality: 'Marked', Thickness of enhancing margin: '>3mm'), and significant mass effect. The tumor crosses the midline and shows ependymal invasion, both signs of aggressive behavior. Furthermore, the absence of a T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) argues against an IDH-mutant astrocytoma. There is no significant evidence to support an IDH-mutant diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The 1p/19q co-deletion is the molecular signature of oligodendroglioma, which is, by definition, IDH-mutant. Given the extremely high likelihood of an IDH-wildtype status based on age and imaging, a co-deletion is biologically inconsistent. The imaging phenotype, characterized by extensive necrosis (NCR Volume (mL): 49.792) and marked, thick enhancement (Enhancement Quality: 'Marked'), is characteristic of a glioblastoma, not an oligodendroglioma. There are no features to suggest a co-deleted tumor.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.99
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive central necrosis is a defining radiological feature of a CNS WHO grade 4 glioma. This is strongly supported by a large necrotic core volume (NCR Volume (mL): 49.792) and a high proportion of necrosis (18.09%). Additionally, the presence of marked, thick ring enhancement (Enhancement Quality: 'Marked', Thickness of enhancing margin: '>3mm') is also a hallmark of grade 4. Other supporting features for a high grade include the very large total tumor volume, significant mass effect with midline shift, and ependymal invasion. There is no evidence to suggest a lower grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age (70) and classic imaging features\u2014a large, solitary, midline-crossing mass with extensive necrosis and marked ring enhancement\u2014is highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. All individual predictions are consistent with this diagnosis."
+}

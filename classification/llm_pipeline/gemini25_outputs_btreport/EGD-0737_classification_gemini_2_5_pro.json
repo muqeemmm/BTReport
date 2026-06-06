@@ -1,0 +1,46 @@
+{
+  "subject_id": "EGD-0737",
+  "idh": {
+    "reasoning": "The patient's age (45) and tumor location, with significant insular involvement, are classic features of an IDH-mutant glioma. Furthermore, the tumor shows very minimal contrast enhancement (ET Volume of 0.209 mL), which strongly argues against an IDH-wildtype glioblastoma, which typically enhances avidly. However, there is a major contradictory feature: a large proportion of the tumor is necrotic (Proportion Necrosis: 33.16%). Extensive necrosis is a hallmark of IDH-wildtype glioblastoma. Despite this strong conflicting evidence, the combination of location and near-absent enhancement is more suggestive of an IDH-mutant phenotype, possibly a high-grade one.",
+    "supporting_features": [
+      "age_years",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status relies heavily on tumor location. This tumor has significant involvement of the insula (38% of the tumor volume). Insular involvement is a strong predictor of astrocytic lineage (1p/19q non-codeleted). While there is also frontal lobe involvement, which is common in oligodendrogliomas (1p/19q codeleted), the prominent insular component is the most differentiating feature available in the metadata. The presence of significant necrosis also favors an astrocytoma over an oligodendroglioma. Therefore, a non-codeleted status is most likely.",
+    "supporting_features": [
+      "Region Proportions",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The most definitive imaging feature for determining WHO grade is the presence of necrosis. This tumor has a very large necrotic component, with a 'Proportion Necrosis' of 33.16% and an 'NCR Volume (mL)' of 14.557. The presence of radiologically evident necrosis is a defining criterion for CNS WHO grade 4 in both IDH-mutant and IDH-wildtype diffuse gliomas. The significant mass effect, evidenced by a 6mm midline shift, further supports a high-grade designation. The minimal contrast enhancement is atypical for a grade 4 tumor but does not override the definitive presence of necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents with conflicting imaging features. The insular location and minimal enhancement are highly suggestive of an IDH-mutant astrocytoma. However, the large necrotic core is a strong indicator of grade 4 biology. The combination of these findings leads to a predicted diagnosis of Astrocytoma, IDH-mutant, CNS WHO grade 4. The confidence in IDH status is lowered due to the conflicting presence of necrosis."
+}

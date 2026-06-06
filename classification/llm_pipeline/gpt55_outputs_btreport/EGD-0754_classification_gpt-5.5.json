@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status assessed independently from the other tasks, the strongest imaging evidence favors IDH-wildtype: the tumor has a midline epicenter, involves ventricles/corpus callosum/thalamus, shows deep white matter and ependymal invasion, and has marked enhancement with substantial enhancing and necrotic components. This infiltrative, centrally located, necrotic, enhancing pattern is more typical of IDH-wildtype diffuse glioma than IDH-mutant astrocytoma. Evidence against IDH-wildtype is that cortical involvement and parietal/cortical location can be seen in IDH-mutant diffuse gliomas, but these are less specific and are outweighed by the aggressive enhancing/necrotic and deep midline/ventricular features. Therefore the best prediction is IDH-wildtype.",
+    "supporting_features": [
+      "Side of Tumor Epicenter",
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status assessed independently, the imaging pattern favors non-codeleted tumor. Codeleted oligodendrogliomas more often present as cortically based hemispheric tumors, classically frontal, whereas this lesion has a midline epicenter with prominent ventricular, corpus callosum, thalamic, deep white matter, and ependymal involvement plus marked enhancement and necrosis. Those features are less typical for 1p/19q-codeleted oligodendroglioma and favor non-codeleted diffuse glioma. The main evidence that could support codeletion is cortical involvement and a parietal/cortical component, but without calcification/SWI information and given the central invasive necrotic pattern, the best prediction is non-codeleted.",
+    "supporting_features": [
+      "Side of Tumor Epicenter",
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata. DWI/ADC, perfusion, spectroscopy, and SWI/calcification information are unavailable and could materially refine confidence, especially for 1p/19q. There is an internal metadata inconsistency: segmentation fields list et volume as 0 in volumes_ideal_midline/volumes_patient_midline, while ET Volume (mL), Enhancement Quality, Proportion Enhancing, Text Report, and Thickness of enhancing margin indicate substantial enhancement; the latter fields were used for the imaging phenotype.",
+  "subject_id": "EGD-0754",
+  "who_grade": {
+    "confidence": 0.87,
+    "contradicting_features": [
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "CET Crosses midline"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade assessed independently, the metadata strongly support CNS WHO grade 4. Marked enhancement, a large enhancing component, necrosis, thick enhancing margin, substantial edema, large total tumor volume, corpus callosum/deep white matter involvement, and ependymal invasion are imaging markers of high-grade aggressive diffuse glioma and are most consistent with grade 4 rather than grade 2 or grade 3. Grade 2 would usually lack marked enhancement and necrosis, and grade 3 may enhance but is less strongly suggested when necrosis and thick rim enhancement are present. Features arguing against the most aggressive grade include absent midline shift, absent ventricular asymmetry, solitary/non-multifocal disease, no satellites, and enhancing tumor not crossing midline, but these do not outweigh the necrotic, markedly enhancing phenotype. Therefore the best prediction is CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

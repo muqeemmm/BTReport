@@ -1,0 +1,57 @@
+{
+  "subject_id": "EGD-0368",
+  "idh": {
+    "reasoning": "The patient is young (age_years=32) and the lesion shows cortical involvement (Cortical involvement=Present) with mild enhancement (Enhancement Quality=Mild) and no deep white matter or ependymal invasion (Deep WM invasion=Absent, Ependymal (ventricular) Invasion=Absent). These features favor an IDH\u2011mutant glioma. The relatively low necrosis proportion (Proportion Necrosis=7.28) and multifocal pattern (Multifocal or Multicentric=Multifocal, Multiple satellites present=Present) also align with IDH\u2011mutant tumors. Counter\u2011evidence includes a high proportion of enhancing tissue (Proportion Enhancing=0.77) and some necrosis, which are more typical of IDH\u2011wildtype, but the dominant age and cortical pattern outweigh these. Hence the prediction is IDH\u2011mutant.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor is cortical, located in frontal and parietal lobes (Region Proportions includes frontal_lobe and parietal) and is multifocal with mild enhancement, a pattern commonly seen in oligodendrogliomas that are IDH\u2011mutant and 1p/19q\u2011codeleted. The low necrosis proportion (Proportion Necrosis=7.28) and absence of deep white matter invasion further support a codeleted phenotype. The only opposing evidence is the relatively high enhancing proportion (Proportion Enhancing=0.77), which is not typical for low\u2011grade codeleted tumors, but the overall imaging profile leans toward codeletion.",
+    "supporting_features": [
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.77
+  },
+  "who_grade": {
+    "reasoning": "Mild but definite enhancement (Enhancement Quality=Mild) with a thick enhancing margin (>3mm) and a high proportion of enhancing tissue (Proportion Enhancing=0.77) suggest a higher grade than a purely low\u2011grade lesion. The presence of necrosis (Proportion Necrosis=7.28) and multifocality also point toward WHO grade 3 rather than grade 2. However, the enhancing tumor volume is small (ET Volume (mL)=0.611) and necrosis is limited, which temper the grade assessment. Balancing these factors leads to a prediction of WHO grade 3 with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Molecular predictions are based solely on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty. The imaging pattern strongly suggests an IDH\u2011mutant, 1p/19q\u2011codeleted tumor, but definitive classification requires molecular testing."
+}

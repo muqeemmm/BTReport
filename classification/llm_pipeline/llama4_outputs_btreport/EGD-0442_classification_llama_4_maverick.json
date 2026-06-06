@@ -1,0 +1,57 @@
+{
+  "id": "patient_1325",
+  "predictions": [
+    {
+      "type": "IDH Mutation Status",
+      "reasoning": "The patient's age (56 years) and the presence of a large, enhancing tumor with necrosis (NCR Volume = 50.207 mL, Proportion Necrosis = 25.91%) and significant edema (ED Volume = 117.752 mL, Proportion of Oedema = 60.77%) that crosses the midline (Edema crosses midline = True) are more typical of glioblastoma, IDH-wildtype. The tumor's aggressive features, such as ependymal invasion and deep white matter invasion, also support this classification. While the presence of cortical involvement and eloquent brain involvement could be seen in various glioma subtypes, the overall profile leans towards a more aggressive, IDH-wildtype tumor.",
+      "supporting_features": [
+        "age_years",
+        "NCR Volume (mL)",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Proportion of Oedema",
+        "Edema crosses midline",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Eloquent Brain Involvement"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q Co-deletion Status",
+      "reasoning": "The tumor's characteristics, such as significant necrosis, large size, and the absence of specific features like calcifications (not directly assessed but often associated with oligodendrogliomas), along with the presence of cortical involvement and deep white matter invasion, are not typical for 1p/19q co-deleted tumors, which are more commonly associated with IDH-mutant gliomas. The presence of necrosis and the overall aggressive features are more suggestive of a non-codeleted status. However, the lack of direct molecular or histological evidence means this prediction is based on the tumor's radiological profile.",
+      "supporting_features": [
+        "NCR Volume (mL)",
+        "Proportion Necrosis",
+        "Deep WM invasion",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [
+        "Cortical involvement"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO Grade",
+      "reasoning": "The tumor exhibits aggressive features such as significant necrosis (NCR Volume = 50.207 mL, Proportion Necrosis = 25.91%), large size (Total tumor volume = 193.754 mL), ependymal invasion, and deep white matter invasion. These characteristics are hallmarks of a high-grade glioma. The presence of necrosis, in particular, is a defining feature of glioblastoma, WHO Grade 4. While the proportion of enhancing tumor is relatively low (13.31%), the overall tumor profile suggests a high-grade malignancy.",
+      "supporting_features": [
+        "NCR Volume (mL)",
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Proportion Enhancing"
+      ],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0442"
+}

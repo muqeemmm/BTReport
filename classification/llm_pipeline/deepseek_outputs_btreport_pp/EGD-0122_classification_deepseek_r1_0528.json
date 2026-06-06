@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 40 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor is located in the frontal lobe cortex, which is common in IDH-mutant gliomas. Enhancement is mild and proportion enhancing is low (0.04), suggesting a lower grade tumor more consistent with IDH-mutant status. Proportion necrosis is high (42.43%), which could argue against mutant, but necrosis can occur in both. The T2-FLAIR mismatch score is low (0.454), which is not typical for IDH-mutant astrocytoma, but the mismatch degree is also low (0.443) and mismatch present is 0.0, meaning no mismatch, which is more common in IDH-wildtype. However, the frontal location and age strongly support mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is typical for oligodendrogliomas that are 1p/19q codeleted. However, the tumor crosses midline (Side of Tumor Epicenter is Midline) and eloquent brain involvement is speech motor, which is more common in astrocytomas. The enhancement is mild and proportion enhancing is low, which could support oligodendroglioma, but the proportion necrosis is high (42.43%), which is unusual for oligodendroglioma. The T2-FLAIR mismatch is absent, which is more typical for oligodendroglioma, but the frontal location is the main supporting feature. Overall, evidence is mixed.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "The tumor is midline frontal lobe with cortical involvement, mild enhancement, and high necrosis. Age favors IDH-mutant, but T2-FLAIR mismatch absence contradicts. For 1p/19q, frontal location supports codeletion but midline epicenter contradicts. Grade is challenging due to necrosis but volume suggests grade 4.",
+  "subject_id": "EGD-0122",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has a high proportion of necrosis (42.43%), which is a feature of glioblastoma (grade 4). The enhancement is mild, which is atypical for GBM, but the necrosis percentage is high. The total tumor volume is 56.686 mL, which is large and consistent with high-grade glioma. The proportion enhancing is very low (0.04), which is unusual for GBM but could be due to treatment or other factors. Eloquent involvement (speech motor) and cortical location do not directly indicate grade. Necrosis is a key feature for grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

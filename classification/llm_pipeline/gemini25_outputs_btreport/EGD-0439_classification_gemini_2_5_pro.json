@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0439",
+  "idh": {
+    "reasoning": "The patient's age of 39 years is more typical for an IDH-mutant glioma. The tumor is also predominantly non-enhancing (Proportion Enhancing: 0.09), another feature often seen in IDH-mutant tumors. However, there are several powerful features pointing to IDH-wildtype status. The most significant is the extremely high proportion of necrosis (61.61%), which is a hallmark of glioblastoma (IDH-wildtype). Additionally, the tumor is very large (Total tumor volume > 100 mL), causes significant midline shift, and shows ependymal invasion, all of which are features of aggressive, high-grade tumors that are typically IDH-wildtype. While enhancement is minimal, its margin is described as thick (>3mm). The extensive necrosis is a more specific indicator of IDH-wildtype status than the patient's age or the low degree of enhancement, leading to a prediction of wildtype.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor involves the frontal lobe, which is a common location for both astrocytomas and oligodendrogliomas. However, several features strongly argue against a 1p/19q co-deleted (oligodendroglioma) diagnosis. The tumor shows extensive deep white matter invasion and involves deep gray matter structures (caudate, putamen, pallidum) and the insula, which is more characteristic of an infiltrative astrocytoma. Most importantly, the presence of extensive necrosis (Proportion Necrosis: 61.61%) is highly atypical for an oligodendroglioma and is a strong indicator of an astrocytic lineage, specifically a glioblastoma. Therefore, the tumor is predicted to be non-codeleted.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is strongly driven by the presence of high-grade features. In this case, the evidence for Grade 4 is compelling. The most definitive feature is the extensive necrosis, with a measured 'Proportion Necrosis' of 61.61%. Necrosis is a key histological criterion for WHO Grade 4 in diffuse astrocytic gliomas. Supporting this are other features of high-grade malignancy: a very large tumor volume (102.8 mL), significant mass effect ('midline_shift_present': 'Yes'), the presence of contrast enhancement (even if mild), and ependymal invasion. The minimal volume of enhancement does not argue against a Grade 4 diagnosis, as necrosis alone is sufficient. The combination of these features unequivocally points to a WHO Grade 4 tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a large, right-sided fronto-insular tumor with significant mass effect. Despite the patient's relatively young age (39) and minimal contrast enhancement, the presence of extensive central necrosis is a dominant radiological feature. This finding is a strong indicator of a WHO Grade 4 tumor and makes an IDH-wildtype glioblastoma the most likely diagnosis. The deep infiltration pattern further supports an astrocytic lineage over an oligodendroglial one. Note: A discrepancy exists between the qualitative 'Anatomical Overlap Regions' (listing left-sided structures) and the quantitative volume data, which clearly localizes the tumor to the right hemisphere; the analysis is based on the quantitative data."
+}

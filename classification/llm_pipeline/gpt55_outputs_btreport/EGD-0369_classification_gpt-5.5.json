@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata pattern favors an IDH-mutant diffuse glioma because the lesion is predominantly frontal and cortical, is solitary, has absent deep white-matter and ependymal invasion, has no midline crossing, no tumor-associated ventricular asymmetry, and only mild enhancement with very small enhancing volume. These features fit better with an IDH-mutant glioma than an IDH-wildtype glioblastoma phenotype. Evidence against IDH-mutant status is the reported high necrosis proportion, edema proportion, and thick enhancing margin, which can be seen in more aggressive IDH-wildtype tumors. On balance, the frontal cortical location and limited aggressive invasion/enhancement support IDH-mutant status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Asymmetrical Ventricles",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the most supportive metadata are the frontal-lobe predominance and cortical involvement, a common imaging distribution for oligodendroglioma, with solitary disease and absent deep white-matter invasion. However, the available MRI metadata lack stronger discriminators for 1p/19q status, and the high reported necrosis proportion, thick enhancing margin, and edema proportion are not specific and can fit non-codeleted astrocytic tumors as well. Because the frontal cortical pattern modestly favors codeletion but the evidence is limited and partially conflicting, the best estimate is 1p/19q-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. Molecular subtype is uncertain, especially 1p/19q status, because stronger discriminating data are not provided. The grading call is limited by conflicting metadata: very small enhancing volume and absent mass effect favor lower grade, while reported necrosis and edema favor higher grade.",
+  "subject_id": "EGD-0369",
+  "who_grade": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_patient_midline",
+      "crosses_ideal_midline"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, the metadata show mixed signals. Features supporting a higher-than-grade-2 tumor include reported necrosis proportion, edema proportion, lesion size, and a thick enhancing margin. Features arguing against grade 4 include only mild enhancement, extremely small enhancing volume, no midline shift, absent ventricular asymmetry, absent deep white-matter invasion, absent ependymal invasion, and no midline crossing. This combination is more aggressive than a typical purely nonenhancing grade 2 glioma but lacks the robust enhancement, invasion, and mass effect expected for many grade 4 tumors. Therefore, the most balanced imaging estimate is CNS WHO grade 3.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

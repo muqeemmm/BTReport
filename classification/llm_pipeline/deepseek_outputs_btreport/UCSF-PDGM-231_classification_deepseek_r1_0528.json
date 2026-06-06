@@ -1,0 +1,49 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (36 years), which is more common in IDH-mutant gliomas. The tumor is nonenhancing (Enhancement Quality: None, Proportion Enhancing: 0.0), which is typical for IDH-mutant tumors. However, the high proportion of edema (100%) and absence of necrosis (Proportion Necrosis: 0.0) are less typical for IDH-mutant gliomas, which often have necrosis. The tumor location in frontal lobe cortex is common for IDH-mutant tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (Speech motor and Motor) and is located in the frontal lobe cortex, which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often have less eloquent involvement and may be more frontal but not necessarily cortical. However, the absence of enhancement and young age could be seen in both, leading to low confidence.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the glioma is likely an IDH-mutant astrocytoma (non-codeleted) with CNS WHO grade 2. Confidence is low to moderate due to conflicting features.",
+  "subject_id": "UCSF-PDGM-231",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor is nonenhancing (Enhancement Quality: None) and has no necrosis (Proportion Necrosis: 0.0), which are features of lower-grade gliomas (grade 2). However, the presence of significant edema (ED Volume: 37.162 mL) and eloquent involvement might suggest higher grade, but without enhancement or necrosis, grade 2 is more likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

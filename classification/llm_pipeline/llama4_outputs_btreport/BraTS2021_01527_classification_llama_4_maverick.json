@@ -1,0 +1,53 @@
+{
+  "id": "patient_0091",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (27 years) and the tumor's location in the temporal lobe with cortical involvement are suggestive of a higher likelihood of IDH mutation. Adult-type diffuse gliomas in younger patients are more likely to be IDH-mutant. The presence of cortical involvement and the tumor's characteristics (e.g., mild enhancement, absence of ependymal invasion) are also consistent with IDH-mutant gliomas, which are more common in lower-grade gliomas but can also be seen in higher grades. The absence of necrosis and the proportion of necrosis being relatively low might also hint towards a potentially lower grade or IDH-mutant type, though the presence of necrosis doesn't directly correlate with IDH status.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Cortical involvement",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis",
+        "n_slices_with_shift",
+        "mean_shift_mm"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's location in the temporal lobe and cortical involvement could be indicative of an astrocytic or oligodendroglial lineage. IDH-mutant gliomas can be either 1p/19q codeleted (oligodendrogliomas) or non-codeleted (astrocytomas). The presence of cortical involvement is seen in both types. However, without specific radiological features that are strongly indicative of oligodendroglioma (such as calcifications, which are not available in the provided metadata), it's challenging to definitively predict 1p/19q co-deletion status. Given the IDH mutation status is predicted as 'mutant', and assuming a possible oligodendroglial component, the likelihood of 1p/19q co-deletion is considered.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "IDH mutation status"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.55
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 71.86%) and the significant mass effect (n_slices_with_shift: 95, mean_shift_mm: 0.6645161290322581) suggest a high-grade tumor. The tumor's size and the presence of deep white matter invasion also support a higher grade. However, the mild enhancement quality might argue against the highest grade. Given these features, a grade 4 is plausible due to the presence of necrosis, significant tumor size, and mass effect, despite the mild enhancement.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "n_slices_with_shift",
+        "mean_shift_mm",
+        "Deep WM invasion",
+        "Lesion Sizes APxTVxCC (cm)"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.8
+    }
+  ],
+  "subject_id": "BraTS2021_01527"
+}

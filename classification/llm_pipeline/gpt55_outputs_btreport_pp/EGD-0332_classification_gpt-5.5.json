@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "Considering IDH status independently, the imaging metadata more strongly favors IDH-wildtype disease: the patient is older, the lesion is multifocal with multiple lesions, has deep white-matter invasion, and shows a very large edema-dominant whole-tumor burden with absent T2-FLAIR mismatch. These features are more typical of aggressive IDH-wildtype diffuse glioma. Features arguing the other way are the frontal cortical location and only mild, very small enhancing component, which can be seen in IDH-mutant glioma. On balance, the aggressive multifocal edema-dominant pattern in an older adult supports IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Whole Tumor Volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Considering 1p/19q status independently, the evidence is mixed. Non-codeleted status is favored by older age, multifocal disease, deep white-matter invasion, and a very large edema-dominant tumor burden, which are less typical for a classic oligodendroglioma pattern. However, the frontal cortical location, mild enhancement, and absence of T2-FLAIR mismatch can be compatible with 1p/19q-codeleted oligodendroglioma. Because the available MRI metadata lacks more specific markers and the features overlap, the best estimate is non-codeleted with only modest confidence.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Whole Tumor Volume (mL)"
+    ]
+  },
+  "overall_comment": "The predictions are imaging-based only and limited by absence of DWI/ADC, perfusion, spectroscopy, and susceptibility-sensitive assessment. The main uncertainty is the frontal cortical, mildly enhancing appearance, which can overlap with IDH-mutant and oligodendroglial tumors, but the older age, multifocality, deep invasion, and large edema burden favor an aggressive IDH-wildtype, non-codeleted, grade 4 process.",
+  "subject_id": "EGD-0332",
+  "who_grade": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "n_components_enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "Considering CNS WHO grade independently, grade 4 is favored by multifocal disease with multiple lesions, deep white-matter invasion, large whole-tumor and edema volumes, and metadata indicating necrotic/non-enhancing tumor burden plus a measurable enhancing component with a thick enhancing margin. These features support a high-grade diffuse glioma rather than grade 2 or grade 3. Features arguing against grade 4 are that enhancement is described as mild, the enhancing volume is very small, there is no midline shift, no ependymal invasion, and no enhancing components were counted by the component analysis. Despite these contradictions, the multifocal aggressive edema-dominant pattern with necrotic/core metadata most strongly supports CNS WHO grade 4.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Whole Tumor Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

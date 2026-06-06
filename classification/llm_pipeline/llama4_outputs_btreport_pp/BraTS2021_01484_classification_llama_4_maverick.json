@@ -1,0 +1,43 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8636108301593426, indicating a high likelihood of IDH mutation. The patient's age (22 years) also supports this prediction as IDH mutant gliomas are more common in younger adults. The tumor's non-enhancing nature ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) further supports the likelihood of an IDH mutant glioma, as these are often non-enhancing.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutant glioma. Given the IDH mutant status, the next step is to determine 1p/19q co-deletion status. The tumor's location and characteristics (involving the parietal, cortex, and occipital lobes, with ependymal invasion) do not strongly suggest a typical oligodendroglioma profile. However, the absence of enhancement and the presence of T2-FLAIR mismatch are more commonly associated with astrocytomas. Therefore, without clear indicators for 1p/19q co-deletion, and considering the tumor's characteristics, it is more likely to be non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "Given the IDH mutant status and likely non-codeleted status, the tumor is likely an astrocytoma. The high proportion of necrosis ('Proportion Necrosis': 82.61) and significant tumor volume ('NCR Volume (mL)': 131.251) suggest a high-grade tumor. The presence of midline shift and ventricular asymmetry also indicate significant mass effect. While the absence of enhancement is more typical of lower-grade gliomas, the overall aggressive features (high necrosis proportion, large volume, and significant mass effect) suggest a higher grade. Therefore, the tumor is likely to be grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01484"
+}

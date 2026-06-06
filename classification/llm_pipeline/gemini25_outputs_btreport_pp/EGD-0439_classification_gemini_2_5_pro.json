@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0439",
+  "idh": {
+    "reasoning": "The patient's age of 39, frontal lobe location, very minimal enhancement (ET Volume 0.088 mL), and sharp tumor-edema boundary (Transition Zone Thickness median 0.75 mm) are all strong indicators of an IDH-mutant glioma. However, there is a profound contradicting feature: an extremely high proportion of necrosis (61.61%). Extensive necrosis is a classic hallmark of IDH-wildtype glioblastoma. While IDH-mutant gliomas can develop necrosis upon high-grade transformation, this extensive degree in a largely non-enhancing tumor strongly favors an IDH-wildtype diagnosis. The absence of a T2-FLAIR mismatch also slightly argues against an IDH-mutant astrocytoma. Weighing these conflicting features, the massive necrosis is a more powerful predictor of molecular status than the other features combined, thus favoring an IDH-wildtype prediction, albeit with low confidence.",
+    "supporting_features": [
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. The tumor involves the frontal lobe, which is common for both astrocytomas and oligodendrogliomas. However, the significant involvement of the insula (38% of the tumor volume) is a very strong predictor of 1p/19q non-codeletion (astrocytic lineage). Arguing against this is the very sharp tumor border (Transition Zone Thickness median 0.75 mm), which is more characteristic of oligodendrogliomas (codeleted). The absence of the T2-FLAIR mismatch sign also argues against an astrocytoma. In the balance of evidence, insular involvement is one of the most reliable imaging markers for non-codeletion, and it is weighed more heavily here than the conflicting border sharpness feature.",
+    "supporting_features": [
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade is strongly driven by the presence of extensive necrosis. The metadata reports a 'Proportion Necrosis' of 61.61%. According to the WHO CNS5 classification, the presence of necrosis in an adult-type diffuse astrocytic glioma is sufficient for a diagnosis of WHO grade 4, irrespective of other features. This is further supported by findings indicating significant mass effect, such as the presence of midline shift ('midline_shift_present': 'Yes') and the large total tumor volume (102.8 mL). The minimal contrast enhancement is atypical for a grade 4 tumor but does not preclude the diagnosis, especially when necrosis is so prominent.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a large frontal and insular mass with highly conflicting features for IDH status. The young age, minimal enhancement, and sharp borders suggest an IDH-mutant glioma. However, the massive proportion of necrosis is a cardinal feature of glioblastoma and is the deciding factor for the IDH-wildtype prediction (with low confidence) and the WHO grade 4 prediction (with high confidence). The significant insular involvement strongly favors a 1p/19q non-codeleted status. The integrated diagnosis is therefore Glioblastoma, IDH-wildtype, CNS WHO grade 4, though the imaging phenotype is atypical."
+}

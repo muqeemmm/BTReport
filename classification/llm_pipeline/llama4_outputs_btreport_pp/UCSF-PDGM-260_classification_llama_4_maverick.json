@@ -1,0 +1,45 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (56 years) and the presence of a mildly enhancing tumor with a large edema volume (8.233 mL) and a small enhancing tumor volume (0.18 mL) are more typical of IDH wildtype gliomas, which are more common in older adults. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.4, Degree: 0.3559) also argues against IDH mutant astrocytoma, as T2-FLAIR mismatch is a characteristic feature of IDH mutant astrocytomas. While the tumor's location in the frontal lobe and cortical involvement could be seen in both IDH mutant and wildtype gliomas, the overall profile leans towards IDH wildtype due to the patient's age and the tumor's enhancement characteristics.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a mildly enhancing tumor with a significant edema volume and a small enhancing component is more typical of IDH wildtype glioblastomas or IDH mutant astrocytomas without 1p/19q codeletion. The absence of T2-FLAIR mismatch and the patient's age argue against IDH mutant astrocytoma. 1p/19q codeletion is typically associated with oligodendrogliomas, which are more likely to be IDH mutant and have a better prognosis. Given the prediction of IDH wildtype status, the likelihood of 1p/19q codeletion is low.",
+    "supporting_features": [
+      "age_years",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "grade": {
+    "reasoning": "The tumor's characteristics, including mild enhancement, significant edema (8.233 mL), and a small enhancing component (0.18 mL), along with the patient's age (56 years), are highly suggestive of a high-grade glioma. The absence of necrosis (NCR Volume: 0.0 mL) might initially suggest a lower grade, but the presence of enhancement and significant edema is more typical of glioblastoma (WHO grade 4). The predicted IDH wildtype status further supports this, as IDH wildtype glioblastomas are more common in this age group and often present with these imaging characteristics.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "idh_status"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "UCSF-PDGM-260"
+}

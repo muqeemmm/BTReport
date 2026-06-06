@@ -1,0 +1,56 @@
+{
+  "subject_id": "EGD-0214",
+  "idh": {
+    "reasoning": "The presence of a very large tumor volume (192.1 mL) with a significant necrotic component (18.95% of the tumor, 36.4 mL) and extensive vasogenic edema (155.7 mL) causing substantial midline shift (-6.0 mm) are all strong indicators of an IDH-wildtype glioma. These features reflect high cellularity, aggressive growth, and neo-angiogenesis, which are characteristic of IDH-wildtype tumors, particularly glioblastoma. While the lack of contrast enhancement is atypical for a necrotic tumor, non-enhancing glioblastomas are a known entity, and the presence of necrosis is a more powerful predictor of IDH-wildtype status than the absence of enhancement is for IDH-mutant status. The deep white matter and ependymal invasion further support a high-grade, aggressive phenotype associated with IDH-wildtype status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically have more circumscribed margins and less associated edema. This tumor demonstrates features of a high-grade astrocytoma: extensive vasogenic edema (155.7 mL), significant mass effect (midline shift), deep white matter invasion, and ependymal invasion. Most importantly, the presence of a large necrotic core (36.4 mL) is extremely rare in oligodendrogliomas. These aggressive features strongly favor an astrocytic lineage, making a 1p/19q co-deletion highly improbable.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis is a defining feature of WHO grade 4 in adult-type diffuse astrocytomas. This tumor has a large necrotic component, with a 'Proportion Necrosis' of 18.95% and an 'NCR Volume (mL)' of 36.416. According to WHO CNS5 criteria, this finding alone is sufficient to assign a grade of 4. This is further supported by other features of high-grade malignancy, including the very large tumor volume (192.1 mL), extensive edema (155.7 mL), and significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': -6.0). The lack of contrast enhancement is unusual for a grade 4 tumor but does not override the definitive histological correlate of necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The key diagnostic feature is the large necrotic core, which, in an adult-type diffuse glioma, is sufficient for a grade 4 designation. The extensive edema and mass effect are also consistent with this diagnosis. The absence of significant contrast enhancement is an atypical but well-documented presentation. A notable data inconsistency exists regarding the tumor's side, with volumetric data indicating a right-sided lesion while some categorical fields state it is left-sided; the volumetric data is considered more reliable."
+}

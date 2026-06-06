@@ -1,0 +1,51 @@
+{
+  "subject_id": "EGD-0356",
+  "idh": {
+    "reasoning": "The patient's age of 50 years is more typical for IDH-wildtype gliomas. The most compelling evidence is the extensive central necrosis, with a `Proportion Necrosis` of 53.45%, which is a hallmark feature of glioblastoma, IDH-wildtype. Additional features supporting an IDH-wildtype status include significant mass effect (`max_shift_mm` of 9.0), the presence of satellite lesions (`Multiple satellites present`: \"Present\"), and ependymal invasion (`Ependymal (ventricular) Invasion`: \"Present\"). These features collectively point towards a highly aggressive tumor, most commonly IDH-wildtype in this age group. While the proportion of enhancement is low, which can sometimes be seen in IDH-mutant tumors, the presence of extensive necrosis is a much stronger predictor and heavily favors an IDH-wildtype diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The evidence strongly suggests a non-codeleted status. The presence of extensive necrosis (`Proportion Necrosis`: 53.45%), ependymal invasion, and satellite lesions are all highly atypical for 1p/19q co-deleted oligodendrogliomas, which tend to be less necrotic and aggressive. These features are much more characteristic of an astrocytic lineage tumor (IDH-mutant astrocytoma or IDH-wildtype glioblastoma). The primary feature supporting co-deletion is the very sharp tumor border, indicated by a `Transition Zone Thickness (FLAIR)` median of 0.75 mm. While this is a classic sign of oligodendroglioma, it is insufficient to outweigh the multiple, strong imaging features of high-grade astrocytic differentiation. Therefore, a non-codeleted status is much more likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is made with high confidence based on the definitive presence of extensive tumor necrosis. The `Proportion Necrosis` is 53.45% of the tumor core, and the non-enhancing/necrotic component has a large volume (`NCR Volume (mL)`: 91.322). Radiologically evident necrosis is a hallmark of WHO grade 4 gliomas. This is strongly corroborated by other features of high-grade malignancy, including contrast enhancement (`ET Volume (mL)` > 0) with a thick margin (`Thickness of enhancing margin`: \">3mm\"), significant mass effect (`max_shift_mm`: 9.0), ependymal invasion, and the presence of satellite lesions. There is no significant contradicting evidence for a lower grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (50), a large, deeply infiltrating frontal lobe mass with extensive necrosis, significant mass effect, and ependymal invasion provides a classic imaging presentation for a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The sharp tumor margin on FLAIR is an atypical feature but is strongly outweighed by the numerous indicators of high-grade malignancy. The predictions for IDH-wildtype, 1p/19q non-codeleted, and WHO grade 4 are mutually consistent and strongly supported by the provided metadata."
+}

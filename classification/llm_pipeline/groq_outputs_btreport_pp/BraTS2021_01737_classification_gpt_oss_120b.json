@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_01737",
+  "idh": {
+    "reasoning": "The patient is 60 years old, which favors IDH-wildtype gliomas. A very high proportion of edema (89.93%) and multifocal disease are typical of aggressive IDH-wildtype tumors. The T2\u2011FLAIR mismatch is absent, a strong negative marker for IDH\u2011mutant astrocytoma. Although the enhancement is mild and the enhancing tumor volume is small, the presence of measurable necrosis (9.83%) and the overall aggressive imaging pattern outweigh these points. Therefore the balance of evidence supports an IDH\u2011wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "IDH\u2011wildtype tumors are never 1p/19q\u2011codeleted; the imaging does not show features typical of oligodendroglioma such as marked calcification or a classic cortical\u2011only, low\u2011edema appearance. The lack of T2\u2011FLAIR mismatch and the aggressive edema pattern further argue against codeletion. While cortical involvement could be seen in oligodendroglioma, the overall profile aligns with a non\u2011codeleted tumor.",
+    "supporting_features": [
+      "idh.prediction",
+      "T2-FLAIR Mismatch Present",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "Given the IDH\u2011wildtype status, the default WHO grade is 4 (glioblastoma). The imaging shows extensive edema, measurable necrosis, and multifocal disease, all consistent with grade\u202f4. The mild enhancement and very small enhancing volume are atypical for classic glioblastoma but do not outweigh the other high\u2011grade features. Hence grade\u202f4 is the most plausible assignment.",
+    "supporting_features": [
+      "idh.prediction",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction leans toward IDH\u2011wildtype, non\u2011codeleted glioblastoma (grade\u202f4). Lack of diffusion, perfusion, and spectroscopy limits certainty; the mild contrast enhancement and tiny enhancing volume introduce some residual uncertainty, but the overall imaging pattern supports a high\u2011grade IDH\u2011wildtype tumor."
+}

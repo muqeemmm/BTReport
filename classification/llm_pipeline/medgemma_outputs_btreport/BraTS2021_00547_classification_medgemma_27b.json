@@ -1,0 +1,39 @@
+{
+  "subject_id": "BraTS2021_00547",
+  "idh": {
+    "reasoning": "The patient is 76 years old. Older age (>65-70) is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it significantly increases the likelihood of IDH-wildtype status. No other features in the metadata strongly suggest IDH-mutant status (e.g., younger age, specific location, or morphology). The tumor is solitary and located in the frontal lobe cortex, which can be seen in both IDH-mutant and wildtype tumors. The large tumor volume (33.6 mL) and high proportion of edema (77.8%) are more commonly associated with high-grade gliomas, which are more frequently IDH-wildtype in older adults. Given the strong age association and lack of contradictory features, IDH-wildtype is the most probable status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information regarding 1p/19q co-deletion status. Features like tumor location (frontal lobe), morphology (enhancing, solitary), or patient age do not reliably predict 1p/19q co-deletion status. Therefore, a prediction cannot be made based on the available data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (76 years) strongly suggests an IDH-wildtype glioma, which are typically high grade (WHO Grade 4). The tumor exhibits marked enhancement, cortical involvement, a large size (33.6 mL), and a high proportion of edema (77.8%), all features consistent with a high-grade glioma. The presence of eloquent brain involvement (motor) also points towards a potentially aggressive tumor requiring careful surgical planning, often seen in higher grades. While deep white matter invasion and ependymal invasion are absent, these are not required for a Grade 4 diagnosis, especially in the context of likely IDH-wildtype status and other aggressive features like marked enhancement and cortical involvement.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH-wildtype, non-codeleted diffuse astrocytoma, WHO Grade 4.",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is elderly (76 years old), which strongly suggests an IDH-wildtype glioma according to WHO CNS5 criteria. The tumor exhibits features consistent with high grade: marked enhancement, cortical involvement, large size (33.6 mL), and significant edema (77.8%). Although deep white matter and ependymal invasion are absent, these are not required for a Grade IV diagnosis in the context of likely IDH-wildtype status and other aggressive features observed on MRI metadata."
+}

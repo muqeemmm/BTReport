@@ -1,0 +1,49 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high mismatch score (0.78), which is strongly associated with IDH-mutant astrocytomas. Additionally, the tumor involves eloquent areas (Speech motor and Vision) and shows mild enhancement, both more common in IDH-mutant tumors. However, the patient's age (70 years) is atypical for IDH-mutant gliomas, which usually present in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves deep white matter (Deep WM invasion: Present) and thalamic regions (Anatomical Overlap Regions include thalamus), which are more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often involve cortex more prominently, but here cortical involvement is only 25.4% (Region Proportions). The T2-FLAIR mismatch also supports astrocytoma lineage. However, the tumor location includes temporal lobe and insula, which can be seen in oligodendrogliomas.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "T2-FLAIR Mismatch Present",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "Based on MRI features, this is likely an IDH-mutant astrocytoma. The T2-FLAIR mismatch sign is a strong indicator. Grade assignment is challenging without necrosis or ring enhancement; proportion necrosis is low (3.5%) and enhancement is mild, suggesting grade 2 or 3. However, the large edema volume and midline shift may indicate higher grade.",
+  "subject_id": "BraTS2021_00103",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "Significant midline shift (midline_shift_present: Yes, max_shift_mm: -10.0) and large edema volume (ED Volume: 198.267 mL) suggest mass effect typical of high-grade tumors. Ependymal invasion (Present) is a feature of CNS WHO grade 4. However, necrosis proportion is low (3.5%) and enhancement is mild, which are atypical for grade 4 glioblastomas that usually show prominent necrosis and ring enhancement.",
+    "supporting_features": [
+      "midline_shift_present",
+      "max_shift_mm",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

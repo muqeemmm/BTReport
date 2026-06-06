@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_01085",
+  "idh": {
+    "reasoning": "The patient's advanced age (66 years) is a very strong predictor for IDH-wildtype status. The imaging phenotype is classic for glioblastoma, IDH-wildtype: a large, solitary, midline-crossing mass with marked, thick-walled ring enhancement and a significant necrotic core. The presence of extensive vasogenic edema and a relatively sharp tumor-edema boundary further supports this. The absence of a T2-FLAIR mismatch argues against an IDH-mutant astrocytoma. There are no features suggestive of an IDH-mutant tumor.",
+    "supporting_features": [
+      "age_years",
+      "crosses_ideal_midline",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently, but the imaging features are highly inconsistent with an oligodendroglioma, the archetypal 1p/19q-codeleted tumor. Oligodendrogliomas typically lack the marked ring enhancement, central necrosis, and extensive deep white matter invasion seen in this case. The presence of a large necrotic core and thick, irregular enhancement strongly suggests a non-codeleted phenotype, characteristic of high-grade astrocytic tumors. There are no imaging features to suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "crosses_ideal_midline",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of a significant non-enhancing/necrotic core (`NCR Volume (mL)` of 6.017) within a ring-enhancing lesion is a key radiographic hallmark of a CNS WHO grade 4 glioma. This is further supported by the marked and thick (`>3mm`) contrast enhancement, which corresponds to microvascular proliferation. Additional features confirming high grade include the very large tumor volume, significant mass effect (`max_shift_mm` of 11.0), and ependymal invasion. There is no evidence to support a lower grade diagnosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 66-year-old female with a large, midline-crossing frontal mass. The combination of advanced age and imaging features\u2014including marked ring enhancement, central necrosis, and significant mass effect\u2014are pathognomonic for a glioblastoma. All three independent predictions (IDH-wildtype, 1p/19q non-codeleted, and WHO grade 4) are made with very high confidence and are mutually consistent, leading to an integrated diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_01225",
+  "idh": {
+    "reasoning": "The patient's advanced age (70 years) is a very strong predictor for IDH-wildtype status. The imaging phenotype overwhelmingly supports this, characterized by features typical of glioblastoma: marked, thick-rim enhancement, central necrosis, multifocal presentation, and extensive deep infiltration into the thalamus, basal ganglia, and brain-stem. These aggressive features are classic for IDH-wildtype gliomas and argue strongly against an IDH-mutant tumor, which typically presents in younger patients with less aggressive features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Anatomical Overlap Regions",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging features are highly indicative of an astrocytic lineage tumor, which are 1p/19q non-codeleted. The presence of marked enhancement, central necrosis, multifocal growth pattern, and deep infiltration are hallmarks of high-grade astrocytomas (specifically glioblastoma). In contrast, 1p/19q co-deleted tumors (oligodendrogliomas) typically exhibit less aggressive features, such as minimal to no enhancement and an absence of necrosis. The aggressive phenotype seen here is inconsistent with an oligodendroglioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.97
+  },
+  "who_grade": {
+    "reasoning": "The presence of central necrosis (`Proportion Necrosis` of 3.43%) is a defining feature of WHO grade 4 gliomas. This is strongly corroborated by the presence of marked, thick-rim contrast enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"), which is the classic radiological sign of glioblastoma. Additional features supporting a grade 4 designation include the large tumor volume, significant mass effect (`max_shift_mm`: 11.0), multifocality, and invasion of deep white matter and ependymal surfaces.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 70-year-old male with a large, multifocal, deeply infiltrating lesion. The combination of advanced age, marked ring-enhancement, and central necrosis provides overwhelming evidence for a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. All individual predictions are consistent with this final integrated diagnosis."
+}

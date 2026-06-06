@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Side of Tumor Epicenter",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The imaging pattern is dominated by aggressive features: a large predominantly enhancing tumor, marked enhancement with a thick enhancing margin, measurable necrosis, ventricular/ependymal and deep white-matter invasion, mass effect with midline shift, and age 50. These features are more typical of IDH-wildtype glioblastoma than lower-grade IDH-mutant diffuse glioma. Features that keep uncertainty from being absolute include frontal/cortical involvement and solitary presentation, which can be seen in IDH-mutant astrocytoma or oligodendroglioma; however, the absence of a T2-FLAIR mismatch does not support the classic IDH-mutant astrocytoma imaging phenotype. Overall, the metadata favors IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.79,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the strongest imaging evidence points away from oligodendroglioma: the lesion is mostly and markedly enhancing, has a thick enhancing margin, has necrosis, and shows ependymal and deep white-matter invasion with mass effect. These features are less typical of classic 1p/19q-codeleted oligodendroglioma, which more often presents as a frontal cortical/subcortical tumor but is not usually defined by this degree of enhancement and aggressive invasion on conventional MRI. Contradicting evidence is that the tumor is frontal and cortically involved in a 50-year-old, which can fit oligodendroglioma. Because calcification and perfusion are unavailable, confidence is moderate rather than definitive. Overall, the metadata favors non-codeleted.",
+    "supporting_features": [
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "overall_comment": "Prediction is based only on conventional MRI metadata. Lack of DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification assessment limits molecular inference, especially for 1p/19q status. The very high enhancing fraction, necrosis, ventricular/ependymal invasion, deep white-matter invasion, and mass effect make a high-grade IDH-wildtype glioblastoma phenotype most likely, but histopathology and molecular testing remain required.",
+  "subject_id": "EGD-0501",
+  "who_grade": {
+    "confidence": 0.93,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "For grade, the conventional MRI metadata strongly supports a high-grade, grade 4 phenotype: there is a large tumor with marked, predominantly enhancing disease, a thick enhancing margin, measurable necrosis, ventricular/ependymal invasion, deep white-matter invasion, and substantial mass effect with midline shift. These findings argue strongly against grade 2 and are more aggressive than typical grade 3 imaging. Features that slightly temper confidence include the relatively modest edema proportion and solitary lesion without satellites, but these do not outweigh the necrotic, markedly enhancing, invasive appearance. Overall, the metadata favors CNS WHO grade 4.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "n_slices_with_shift"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

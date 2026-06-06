@@ -1,0 +1,87 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "crosses_patient_midline",
+      "CET Crosses midline"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the imaging phenotype is aggressive: marked enhancement, a substantial enhancing component, necrotic component, very large edema/tumor burden, midline shift, deep white-matter invasion, and ependymal invasion all favor an IDH-wildtype adult diffuse glioma pattern. Features that reduce specificity are cortical involvement and solitary non-midline-crossing disease without satellites, which can be seen in IDH-mutant glioma. Overall, the aggressive enhancing/necrotic and infiltrative metadata outweigh the less specific cortical/solitary features, supporting IDH-wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the lesion is not dominated by the classic oligodendroglial imaging pattern: it is a very large, markedly enhancing, necrotic, extensively edematous mass with deep white-matter and ependymal invasion, involving parietal/temporal/occipital regions rather than a clearly frontal-predominant cortical-subcortical tumor. Cortical involvement is the main feature that can fit oligodendroglioma and therefore argues against a confident non-codeleted call. On balance, the aggressive enhancement/necrosis/edema and non-frontal distribution support non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "The MRI metadata strongly favors an aggressive adult-type diffuse glioma, but molecular testing is required for definitive WHO-CNS5 classification. There is an internal inconsistency between ET Volume (mL) indicating enhancing tumor and the nested midline volume fields listing et as 0, which slightly lowers confidence in enhancement-based interpretation.",
+  "subject_id": "EGD-0687",
+  "who_grade": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "volumes_ideal_midline",
+      "volumes_patient_midline",
+      "Multiple satellites present",
+      "CET Crosses midline",
+      "crosses_patient_midline"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently, the metadata strongly supports the highest grade: marked enhancement, thick enhancing margin, sizable enhancing volume, necrotic component, extensive edema, very large total tumor volume, midline shift, deep white-matter invasion, and ependymal invasion are all imaging markers of biologically aggressive disease. The main limitations are that nested midline volume fields record et as 0 despite ET Volume (mL) being large, and the lesion is solitary without satellite lesions or enhancing midline crossing, which are not required for grade 4 but reduce certainty. Overall, the enhancement, necrosis, mass effect, and invasive features support CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

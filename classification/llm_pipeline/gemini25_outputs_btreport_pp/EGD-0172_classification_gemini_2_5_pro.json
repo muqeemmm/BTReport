@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0172",
+  "idh": {
+    "reasoning": "The patient's age of 60 years strongly favors an IDH-wildtype status, as this is the typical demographic for glioblastoma. The imaging findings overwhelmingly support a high-grade, aggressive tumor, which is characteristic of IDH-wildtype gliomas. These features include a large necrotic core (`NCR Volume (mL)` of 13.33), thick enhancement (`Thickness of enhancing margin`: \">3mm\"), significant mass effect (`midline_shift_present`: \"Yes\"), and invasion of deep gray matter and ependyma (`Ependymal (ventricular) Invasion`: \"Present\"). However, a significant contradictory feature is the presence of a strong T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0, `T2-FLAIR Mismatch Score`: 0.79), which is highly specific for IDH-mutant astrocytomas. Despite this strong counter-evidence, the combination of advanced age and the multitude of aggressive radiological features makes an IDH-wildtype glioma the more probable diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of non-codeletion is based on several key features that are atypical for 1p/19q co-deleted oligodendrogliomas. First, the presence of significant necrosis (`Proportion Necrosis`: 6.2%) and thick, irregular enhancement (`Thickness of enhancing margin`: \">3mm\") are hallmarks of astrocytic tumors, particularly glioblastoma, and are rare in oligodendrogliomas. Second, the reported strong T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0) is a specific marker for IDH-mutant *astrocytomas* (which are non-codeleted), providing direct evidence against a codeleted status. There are no features in the provided metadata that would suggest an oligodendroglioma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The imaging features are unequivocally indicative of a high-grade glioma, specifically WHO grade 4. The definitive feature for this grade on imaging is the presence of a necrotic core, which is clearly documented here with a non-zero `NCR Volume (mL)` (13.33 mL) and `Proportion Necrosis` (6.2%). This is strongly corroborated by other features of high-grade malignancy, including a large volume of contrast enhancement (`ET Volume (mL)`: 17.621), extensive peritumoral edema (`ED Volume (mL)`: 183.919), significant mass effect with a 10mm midline shift (`max_shift_mm`), and invasion into deep brain structures and the ventricular system (`Ependymal (ventricular) Invasion`: \"Present\"). There is no evidence to support a lower grade of 2 or 3.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a large, left temporal lobe tumor with features highly suggestive of a high-grade glioma, specifically Glioblastoma, IDH-wildtype, CNS WHO grade 4. This is supported by the patient's age (60 years), the presence of extensive necrosis and thick contrast enhancement, and significant mass effect. The primary diagnostic challenge is the presence of a strong T2-FLAIR mismatch sign, a feature highly specific for IDH-mutant astrocytoma. While this creates significant diagnostic uncertainty regarding IDH status, the overwhelming weight of other aggressive imaging features favors an IDH-wildtype diagnosis."
+}

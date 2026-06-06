@@ -1,0 +1,42 @@
+{
+  "subject_id": "BraTS2021_01064",
+  "idh": {
+    "reasoning": "The patient is 56 years old. Older age (>50) is associated with IDH-wildtype gliomas, while younger age (<40) is associated with IDH-mutant gliomas. The presence of multifocal lesions, deep white matter invasion, and ependymal invasion are features more commonly seen in IDH-wildtype tumors, particularly glioblastoma. While cortical involvement can be seen in both, the combination of older age and aggressive features (multifocal, deep WM invasion, ependymal invasion) points towards IDH-wildtype status. The lack of information on specific molecular markers (like 1p/19q co-deletion or MGMT methylation) necessitates relying on these imaging features and age.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q co-deletion is almost exclusively found in IDH-mutant astrocytomas, specifically oligodendrogliomas. Given the prediction of IDH-wildtype status based on age and aggressive features (multifocal, deep WM invasion, ependymal invasion), the likelihood of 1p/19q co-deletion is extremely low. The imaging features do not specifically suggest oligodendroglioma morphology (e.g., calcification, which is not assessed here). Therefore, the tumor is predicted to be non-codeleted.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (56) and the presence of multiple aggressive features strongly suggest a high-grade glioma. These features include multifocal lesions ('Multifocal or Multicentric': 'Multifocal'), deep white matter invasion ('Deep WM invasion': 'Present'), and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'). The tumor involves eloquent brain regions ('Eloquent Brain Involvement': 'Motor and Vision'). While the enhancement quality is described as 'Mild', the overall picture points towards a WHO Grade 4 glioma (glioblastoma), which is typically IDH-wildtype in this age group and exhibits these infiltrative characteristics. Grade 2 and Grade 3 gliomas are less likely given the combination of multifocality, deep WM invasion, and ependymal involvement in a patient of this age.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-wildtype, WHO grade unknown",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's age (56 years) and imaging features such as multifocality, deep white matter invasion, and ependymal involvement are highly suggestive of an IDH-wildtype glioma. Given these factors, a WHO grade of at least Grade III is expected; however, without further molecular data or specific imaging characteristics like necrosis or pseudopalisading necrosis typically seen in Grade IV gliomas (glioblastoma), assigning a definitive grade between III and IV based solely on these metadata fields is challenging. The prediction leans towards Grade IV due to the combination of aggressive features in an older adult."
+}

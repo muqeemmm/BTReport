@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (31 years old), which is more common in IDH-mutant gliomas. However, there is no enhancement (Enhancement Quality: None) and T2-FLAIR mismatch is absent (T2-FLAIR Mismatch Present: 0.0, T2-FLAIR Mismatch Score: 0.4), which are features associated with IDH-mutant astrocytomas. The absence of enhancement and T2-FLAIR mismatch supports IDH-mutant status, but the low mismatch score and absence of mismatch present are contradictory.",
+    "supporting_features": [
+      "age_years"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe-cortex region, which is common in oligodendrogliomas (1p/19q codeleted). However, there is no eloquent brain involvement, which is more typical of astrocytomas. The frontal location supports codeletion, but the lack of eloquent involvement contradicts it.",
+    "supporting_features": [
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor is non-enhancing, solitary, midline, with predominant edema and no necrosis. The patient is young, suggesting IDH-mutant glioma. The absence of T2-FLAIR mismatch and enhancement supports IDH-mutant astrocytoma. Frontal location hints at oligodendroglioma but lack of eloquent involvement favors astrocytoma. Grade is uncertain due to lack of enhancement and necrosis.",
+  "subject_id": "UCSF-PDGM-307",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "There is no enhancement (Enhancement Quality: None) and no necrosis (Proportion Necrosis: 0.0), which are features of lower-grade gliomas (grade 2). However, the tumor volume is significant (10.391 mL), and there is edema, which can be seen in higher grades. The absence of enhancement and necrosis supports grade 2, but the volume and edema suggest possible higher grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

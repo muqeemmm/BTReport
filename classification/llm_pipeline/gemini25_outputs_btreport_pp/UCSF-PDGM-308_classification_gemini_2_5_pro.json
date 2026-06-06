@@ -1,0 +1,52 @@
+{
+  "subject_id": "UCSF-PDGM-308",
+  "idh": {
+    "reasoning": "The evidence for IDH status is highly conflicting. The strongest feature supporting an IDH-mutant status is the definitive presence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.87), which is a highly specific biomarker for IDH-mutant astrocytomas. The patient's age (45 years) and the absence of necrosis ('NCR Volume (mL)': 0.0) also favor an IDH-mutant glioma. Conversely, several features strongly suggest an IDH-wildtype tumor. The tumor is multifocal ('Multifocal or Multicentric': 'Multifocal'), which is a classic feature of IDH-wildtype glioblastoma. Additionally, the presence of ependymal invasion ('Ependymal (ventricular) Invasion': 'Present') and involvement of deep brain structures including the thalamus and brainstem ('Anatomical Overlap Regions') are more characteristic of IDH-wildtype gliomas. Despite the strong contradictory evidence, the T2-FLAIR mismatch sign is a more direct molecular correlate than macroscopic growth patterns. Therefore, I will cautiously favor an IDH-mutant prediction, acknowledging the significant uncertainty.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the features strongly favor a non-codeleted status (astrocytoma). The most compelling piece of evidence is the 'T2-FLAIR Mismatch Present' value of 1.0, a sign highly specific to IDH-mutant astrocytomas and not typically observed in oligodendrogliomas (1p/19q-codeleted). Furthermore, the tumor's infiltrative pattern, including 'Deep WM invasion', 'Ependymal (ventricular) Invasion', and involvement of deep gray matter and the brainstem ('Anatomical Overlap Regions'), is more characteristic of an astrocytic lineage. The primary feature suggesting a codeleted status is the very sharp tumor border, indicated by a small 'Transition Zone Thickness (FLAIR)' median of 0.5 mm. However, this feature is less specific than the T2-FLAIR mismatch sign. Therefore, the balance of evidence points decisively toward a non-codeleted tumor.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits features of both lower and higher grades. The absence of necrosis ('NCR Volume (mL)': 0.0) and very minimal enhancement ('ET Volume (mL)': 0.632, 'Enhancement Quality': 'Mild') argue against a WHO Grade 4 diagnosis. However, several features indicate aggressive behavior inconsistent with a WHO Grade 2 tumor. These include the multifocal nature ('Multifocal or Multicentric': 'Multifocal'), significant mass effect ('midline_shift_present': 'Yes', 'mean_shift_mm': 3.23), 'Ependymal (ventricular) Invasion', and 'Deep WM invasion'. The presence of any enhancement, even if mild, also points away from Grade 2. This combination of features\u2014mild enhancement without necrosis but with clear signs of aggressive infiltration and growth\u2014is most consistent with a CNS WHO Grade 3 tumor.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a challenging case with conflicting imaging features. The strong T2-FLAIR mismatch sign is highly suggestive of an IDH-mutant astrocytoma. However, the multifocal nature of the tumor is a very atypical and aggressive feature for this entity, more commonly seen in IDH-wildtype glioblastoma. Weighing the high specificity of the T2-FLAIR mismatch sign, an IDH-mutant astrocytoma is favored. The presence of mild enhancement, significant mass effect, and deep infiltration, combined with the multifocality, argues for a higher grade, with Grade 3 being the most likely given the absence of necrosis. The final prediction is therefore Astrocytoma, IDH-mutant, CNS WHO Grade 3, but the multifocality introduces significant diagnostic uncertainty."
+}

@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_00134",
+  "idh": {
+    "reasoning": "The provided metadata lacks features strongly indicative of either IDH-mutant or IDH-wildtype status. Features like age, specific location (e.g., temporal lobe), presence of calcification, or diffusion restriction are absent. The tumor is large (157.682 mL), involves deep structures (thalamus, caudate, putamen, pallidum, ventricles), and shows significant mass effect (midline shift, ventricular effacement/enlargement). While large size and deep involvement can be seen in both IDH-mutant and wildtype tumors, they are more characteristic of IDH-wildtype glioblastoma. However, the presence of multiple satellites is more commonly associated with IDH-mutant gliomas. The proportion of necrosis (62.04%) is high, which can be seen in both but is often more pronounced in high-grade tumors like IDH-wildtype glioblastoma. Given the lack of definitive features and conflicting indicators (large size/deep invasion vs. satellites), a prediction is difficult. I will default to mutant as it's more common overall in adults, but with low confidence.",
+    "supporting_features": [
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The metadata does not contain any information regarding 1p/19q co-deletion status. This requires molecular testing, which is not reflected in the provided MRI metadata.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features suggestive of a high grade. It is large (157.682 mL), infiltrates deep structures including the thalamus, caudate, putamen, pallidum, and ventricles ('Ependymal (ventricular) Invasion': 'Present'), causes significant mass effect ('midline_shift_present': 'Yes', 'Effaced Ventricle': 'Left', 'Enlarged Ventricles': 'Left and Right'), involves eloquent brain regions ('Eloquent Brain Involvement': 'Speech motor'), shows cortical involvement ('Cortical involvement': 'Present'), deep white matter invasion ('Deep WM invasion': 'Present'), and has a high proportion of necrosis (62.04%). The enhancement quality is described as 'Mild', and the proportion enhancing is low (7.6%), which might seem contradictory to a high grade but can occur in glioblastomas with extensive necrosis or infiltrative growth patterns. The presence of multiple satellites could suggest a lower grade or IDH mutation, but the overall picture points towards aggressive behavior consistent with WHO Grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "Anatomical Overlap Regions",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "Enlarged Ventricles",
+      "Eloquent Brain Involvement",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma, WHO grade unknown",
+  "consistency_check_passed": true,
+  "overall_comment": "The provided metadata suggests an IDH-mutant glioma due to the presence of multiple satellites. However, the large size and deep invasion are more typical of IDH-wildtype tumors. The WHO grade is likely high (Grade 4) based on size, deep invasion, mass effect, and necrosis."
+}

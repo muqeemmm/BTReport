@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0606",
+  "idh": {
+    "reasoning": "The patient's advanced age of 65 is a very strong predictor for IDH-wildtype status. The presence of a multifocal tumor ('Multifocal or Multicentric': \"Multifocal\", 'Number of lesions': 3) is a classic imaging feature of IDH-wildtype glioblastoma. Furthermore, the tumor involves deep gray matter structures ('Anatomical Overlap Regions' includes bilateral caudate and putamen) and shows ependymal invasion ('Ependymal (ventricular) Invasion': \"Present\"), both of which are more common in IDH-wildtype gliomas. The absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0) also argues against an IDH-mutant astrocytoma. The main contradictory evidence is the very sharp transition zone on FLAIR ('Transition Zone Thickness (FLAIR)' median_mm: 0.75), which is more typical of IDH-mutant tumors. However, the combination of age, multifocality, and deep involvement provides overwhelming evidence for an IDH-wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The most compelling feature is the very sharp tumor margin, as indicated by a 'Transition Zone Thickness (FLAIR)' median of 0.75 mm. Oligodendrogliomas (which are 1p/19q-codeleted) classically present with indistinct, infiltrative borders. A sharp border is therefore strong evidence against co-deletion. Additionally, the multifocal nature of the disease ('Multifocal or Multicentric': \"Multifocal\") and involvement of deep gray matter structures ('Anatomical Overlap Regions') are atypical for oligodendroglioma. There are no specific imaging features in the provided metadata to support a co-deleted status.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Multifocal or Multicentric",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "Multiple features strongly suggest a high-grade tumor. The patient's advanced age (65) is a significant risk factor for a high-grade glioma. The tumor is multifocal ('Multifocal or Multicentric': \"Multifocal\"), a finding highly associated with WHO Grade 4 glioblastoma. Most importantly, there is evidence of necrosis ('Proportion Necrosis': 0.17). In an adult-type diffuse astrocytic glioma, the presence of necrosis is a sufficient criterion for a WHO Grade 4 diagnosis. Other supporting features include extensive vasogenic edema ('ED Volume (mL)': 237.951), deep white matter invasion ('Deep WM invasion': \"Present\"), and ependymal invasion ('Ependymal (ventricular) Invasion': \"Present\"). The only feature arguing against a high grade is the mild and limited enhancement ('Enhancement Quality': \"Mild\", 'Proportion Enhancing': 0.05), but non-enhancing or minimally enhancing glioblastomas are well-recognized, and the presence of necrosis overrides the lack of avid enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings in this 65-year-old patient are highly characteristic of a glioblastoma. The combination of advanced age, multifocal disease, deep structural invasion, and the presence of necrosis strongly supports the diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. Atypical features include minimal contrast enhancement and unusually sharp FLAIR margins, but these do not outweigh the powerful predictors of high-grade, IDH-wildtype disease."
+}

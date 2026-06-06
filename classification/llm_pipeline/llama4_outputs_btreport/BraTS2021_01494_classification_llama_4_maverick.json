@@ -1,0 +1,46 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (41 years) and the presence of a multifocal, non-enhancing tumor with significant edema and mass effect (midline shift, ventricular asymmetry) could be indicative of a high-grade glioma. The absence of enhancement (Enhancement Quality: 'None', Proportion Enhancing: 0.0) is more commonly seen in IDH-mutant gliomas, particularly in the context of a non-enhancing tumor. However, the presence of necrosis (Proportion Necrosis: 22.07) and significant mass effect are concerning for a more aggressive tumor, which is often associated with IDH wildtype status in adult-type diffuse gliomas. Given the multifocal nature and the significant mass effect, the likelihood of IDH wildtype is higher.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor's location (involving cortex, frontal lobe, insula, and temporal lobes) and the presence of cortical involvement could suggest a higher likelihood of 1p/19q co-deletion if it were IDH-mutant. However, the absence of enhancement and the presence of necrosis are less typical for 1p/19q co-deleted tumors, which are more commonly associated with IDH mutation and often have a more favorable prognosis. Given the predicted IDH wildtype status, the likelihood of 1p/19q co-deletion is low.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 22.07), significant mass effect (midline shift, ventricular asymmetry), and multifocality are indicative of a high-grade glioma. The absence of enhancement does not rule out a high-grade tumor, as glioblastomas can be non-enhancing in some cases, although this is less common. Given the predicted IDH wildtype status and the presence of necrosis, the tumor is likely to be CNS WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Multifocal or Multicentric",
+      "n_slices_with_shift"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01494"
+}

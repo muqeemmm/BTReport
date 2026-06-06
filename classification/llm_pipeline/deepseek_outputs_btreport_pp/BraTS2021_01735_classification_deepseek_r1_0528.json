@@ -1,0 +1,53 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.95,
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (33 years old), which is more common in IDH-mutant gliomas. Additionally, the T2-FLAIR mismatch sign is present with a high score (0.896) and degree (0.725), which is highly specific for IDH-mutant astrocytomas. The tumor is solitary, midline, and involves the cortex and deep white matter, consistent with diffuse gliomas. There is no evidence to suggest IDH wildtype.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Multifocal or Multicentric",
+      "Tumor Location",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "IDH-mutant gliomas with 1p/19q codeletion are oligodendrogliomas, which typically do not show ependymal invasion. Here, ependymal invasion is present, which is more characteristic of astrocytomas. The T2-FLAIR mismatch sign also supports astrocytoma. However, the tumor involves deep white matter and cortex, which can occur in both types, but ependymal invasion strongly argues against oligodendroglioma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma without 1p/19q codeletion. The presence of T2-FLAIR mismatch and ependymal invasion are key features. The grade is estimated as WHO grade 3 due to the presence of enhancement and necrosis, but confidence is moderate due to lack of mitotic count or molecular markers.",
+  "subject_id": "BraTS2021_01735",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor shows mild enhancement and a proportion of necrosis (25%), which suggests higher grade (grade 3 or 4). However, the enhancement is mild and the necrosis proportion is moderate. Grade 4 glioblastomas typically show ring enhancement and extensive necrosis, which is not clearly present here. The tumor volume is large (90 mL) and there is deep white matter invasion, supporting higher grade. But without perfusion or diffusion data, confidence is moderate.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Proportion Enhancing"
+    ]
+  }
+}

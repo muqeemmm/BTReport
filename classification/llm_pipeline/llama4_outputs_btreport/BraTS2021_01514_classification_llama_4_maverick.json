@@ -1,0 +1,51 @@
+{
+  "id": "patient_0084",
+  "predictions": [
+    {
+      "type": "IDH Mutation Status",
+      "reasoning": "The patient's age (51 years) and the presence of a large, necrotic tumor with significant mass effect (midline shift of 8mm, edema crossing midline) and ependymal invasion are more typical of IDH wildtype glioblastoma. The tumor's characteristics, such as high necrosis proportion (65.85%) and presence of multiple satellites, also align with a more aggressive tumor type, which is more commonly associated with IDH wildtype status. While the presence of cortical involvement and deep white matter invasion could be seen in both IDH mutant and wildtype tumors, the overall profile leans towards IDH wildtype due to the aggressive features and older age.",
+      "supporting_features": [
+        "age_years",
+        "n_slices_with_shift",
+        "max_shift_mm",
+        "Proportion Necrosis",
+        "Multiple satellites present",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q Co-deletion Status",
+      "reasoning": "The presence of a large, necrotic tumor with significant mass effect and ependymal invasion, along with the patient's age, suggests a more aggressive tumor type. IDH-mutant 1p/19q codeleted tumors are typically associated with oligodendrogliomas, which are less likely to present with such aggressive features at this age. Given the high likelihood of IDH wildtype status from the first prediction, and the rarity of 1p/19q codeletion in IDH wildtype tumors, it is reasonable to infer that the tumor is non-codeleted.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Ependymal (ventricular) Invasion",
+        "Multiple satellites present"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO Grade",
+      "reasoning": "The tumor exhibits aggressive features such as high necrosis proportion (65.85%), significant mass effect (midline shift of 8mm), ependymal invasion, and multiple satellites. These characteristics are hallmarks of a high-grade glioma. The presence of necrosis and the overall tumor profile are most consistent with a WHO Grade 4 tumor, particularly given the likely IDH wildtype status.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "n_slices_with_shift",
+        "max_shift_mm",
+        "Ependymal (ventricular) Invasion",
+        "Multiple satellites present"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_01514"
+}

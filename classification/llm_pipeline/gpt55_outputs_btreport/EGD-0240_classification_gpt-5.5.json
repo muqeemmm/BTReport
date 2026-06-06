@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is a relatively young adult, the tumor is predominantly temporal-cortical with cortical involvement, and enhancement is described as mild with very small enhancing volume. Minimal midline shift and absence of deep white matter, ependymal, satellite, and multicentric involvement also fit a less infiltratively aggressive phenotype often seen with IDH-mutant glioma. Against this, the large tumor volume, substantial edema, and especially the high reported necrosis proportion are features that can be seen with IDH-wildtype glioblastoma. Balancing these, the age and cortical temporal, mildly enhancing phenotype slightly outweigh the aggressive features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The available MRI metadata is limited for predicting 1p/19q status because calcification, susceptibility, perfusion, spectroscopy, and a formal T2-FLAIR mismatch assessment are not available. A temporal-cortical lesion can be seen in either oligodendroglioma or astrocytoma, but a non-frontal temporal predominance and the presence of a thick enhancing margin with substantial necrosis are somewhat less typical for classic 1p/19q-codeleted oligodendroglioma. Arguing toward codeletion, cortical involvement, mild enhancement, and age in the early 40s are compatible with oligodendroglioma. Because the evidence is nonspecific and mixed, the best estimate is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. Molecular markers cannot be determined reliably from these fields alone; DWI/ADC, perfusion, spectroscopy, SWI/GRE for calcification/hemorrhage, and histopathology would materially affect confidence. The main atypical tension is very small/mild enhancement despite a high reported necrosis proportion.",
+  "subject_id": "EGD-0240",
+  "who_grade": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For grade estimation, the strongest high-grade feature is the explicitly reported high necrosis proportion, accompanied by large non-enhancing core volume, substantial edema, large total tumor volume, and a thick enhancing margin. These findings argue more for CNS WHO grade 4 than grade 2 or 3. Features arguing against grade 4 include only mild enhancement, extremely small enhancing tumor volume, low enhancing proportion, minimal midline shift, no midline crossing, no ependymal invasion, no satellites, solitary disease, and absent deep white matter invasion. Despite those lower-aggression features, reported necrosis is a key imaging marker of grade 4 biology, so the best estimate is CNS WHO grade 4, with only moderate confidence because enhancement is minimal.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

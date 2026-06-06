@@ -1,0 +1,45 @@
+{
+  "subject_id": "EGD-0487",
+  "idh": {
+    "reasoning": "The patient's age of 39 falls within the typical range for IDH-mutant gliomas. The imaging features are highly suggestive of an IDH-mutant phenotype. Specifically, the complete lack of contrast enhancement and the very well-defined tumor margins, as evidenced by a small median FLAIR transition zone thickness of 1.0 mm, are classic signs. IDH-wildtype gliomas (glioblastomas) typically occur in older patients and present with significant, often ring-like, enhancement and infiltrative margins, none of which are present here. The evidence strongly favors an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed assuming an IDH-mutant tumor, where this distinction is clinically relevant. The key imaging features that differentiate between 1p/19q co-deleted (oligodendroglioma) and non-codeleted (astrocytoma) tumors are border definition and the T2-FLAIR mismatch sign. This tumor exhibits very sharp, well-defined borders ('Transition Zone Thickness (FLAIR)' median of 1.0 mm), which is a hallmark of oligodendroglioma. Furthermore, the 'T2-FLAIR Mismatch Present' is explicitly 0.0, meaning the sign is absent. The absence of the T2-FLAIR mismatch sign is strong evidence against an IDH-mutant astrocytoma and, consequently, supports a 1p/19q co-deleted status. The cortical involvement is also common in oligodendroglioma. The combination of these features is highly characteristic of a co-deleted tumor.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The imaging findings strongly suggest a low-grade tumor. The most compelling feature is the complete absence of contrast enhancement ('ET Volume (mL)' is 0.0 and 'Enhancement Quality' is 'None'), which argues strongly against a WHO grade 4 diagnosis. Additional features supporting a lower grade include the small tumor volume, minimal mass effect, and well-demarcated borders. While there is a small non-enhancing core ('NCR Volume (mL)' of 1.036), in the absence of enhancement, this is more likely cystic change than the extensive necrosis required for a grade 4 diagnosis. Differentiating between grade 2 and 3 on imaging is challenging, but the constellation of features (small, non-enhancing, sharp borders) is more typical of a WHO grade 2 glioma.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features present a classic picture of a low-grade oligodendroglioma. The lack of enhancement, extremely sharp borders, and absence of a T2-FLAIR mismatch sign provide high confidence in the IDH-mutant and 1p/19q-codeleted molecular prediction. The grade is favored to be 2 based on the indolent appearance, though imaging-based differentiation between grade 2 and 3 has inherent limitations."
+}

@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0216",
+  "idh": {
+    "reasoning": "The T2\u2011FLAIR mismatch sign is present (T2-FLAIR Mismatch Present=1.0, high mismatch score), which is highly specific for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. This strongly supports an IDH\u2011mutant status. Opposing evidence includes the patient\u2019s advanced age (age_years=72), marked contrast enhancement (Enhancement Quality=Marked), multifocal disease (Multifocal or Multicentric=Multifocal) and a high proportion of enhancing tumor (Proportion Enhancing=39.62), all features more typical of IDH\u2011wildtype glioblastoma. Balancing the very specific mismatch sign against these less specific adverse features leads to a confident but not absolute call for IDH\u2011mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The same T2\u2011FLAIR mismatch sign that favors IDH\u2011mutant astrocytoma also indicates a non\u2011codeleted 1p/19q status, as the mismatch is rarely seen in oligodendroglioma (which is 1p/19q\u2011codeleted). Supporting cortical involvement (Cortical involvement=Present) aligns with astrocytoma. Contradictory cues are the multifocal pattern and marked enhancement, which are more common in oligodendroglioma with codeletion, but these are not decisive. Hence the best estimate is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement (Enhancement Quality=Marked), a high enhancing fraction (Proportion Enhancing=39.62), multifocal disease, and a thick enhancing margin (>3mm) are typical of high\u2011grade (grade\u202f4) glioma. The low necrosis proportion (Proportion Necrosis=0.26) and presence of the T2\u2011FLAIR mismatch sign suggest a lower grade, but in IDH\u2011mutant astrocytoma the mismatch can persist even in grade\u202f4. Considering the predominance of high\u2011grade imaging features, grade\u202f4 is the most likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Age and marked enhancement introduce some uncertainty, but the robust T2\u2011FLAIR mismatch sign strongly points to an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. Lack of diffusion, perfusion, and spectroscopy limits definitive grading; however, imaging suggests WHO grade\u202f4. Further molecular testing is recommended to confirm IDH and 1p/19q status."
+}

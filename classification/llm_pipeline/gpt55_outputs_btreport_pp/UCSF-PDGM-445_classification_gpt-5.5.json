@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "age_years",
+      "Side of Tumor Epicenter",
+      "Edema crosses midline",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI pattern is a frontal_lobe-cortex region lesion with Cortical involvement, Solitary disease, Enhancement Quality of None, ET Volume of 0.0, Proportion Enhancing of 0.0, NCR Volume of 0.0, and Proportion Necrosis of 0.0. This nonenhancing, non-necrotic cortical frontal phenotype favors an IDH-mutant diffuse glioma over an IDH-wildtype glioblastoma-like phenotype. Deep WM invasion and Ependymal (ventricular) Invasion are Absent, which also argues against a more aggressive IDH-wildtype imaging pattern. Countervailing features are age_years of 48, Side of Tumor Epicenter listed as Midline, Edema crosses midline as True, and T2-FLAIR Mismatch Present of 0.0, which reduce specificity for IDH-mutant astrocytoma. Overall, the available structural MRI metadata favors IDH mutation, but not with high certainty.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Edema crosses midline",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, the lesion location is the main discriminator: Tumor Location is frontal_lobe-cortex region, Region Proportions show frontal_lobe and cortex predominance, and Cortical involvement is Present, a pattern that is compatible with oligodendroglial tumors. Enhancement Quality of None, ET Volume of 0.0, NCR Volume of 0.0, and Proportion Necrosis of 0.0 are also compatible with a lower-grade codeleted tumor. T2-FLAIR Mismatch Present is 0.0, so there is no clear mismatch sign favoring a non-codeleted astrocytic pattern. Against co-deletion, Side of Tumor Epicenter is Midline and Edema crosses midline is True, which are not classic for a purely cortical-subcortical frontal oligodendroglial pattern, and T2-FLAIR Mismatch Score is not entirely negligible. Overall the balance modestly favors codeletion, but the confidence is limited because the provided metadata lacks highly specific oligodendroglial markers.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata. The lesion is nonenhancing and non-necrotic, so imaging strongly disfavors a classic grade 4 phenotype, but grade 2 versus grade 3 remains uncertain without histology and without advanced MRI sequences. Molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "UCSF-PDGM-445",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "age_years",
+      "Edema crosses midline",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement",
+      "midline_shift_present"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade considered independently, Enhancement Quality is None, ET Volume is 0.0, Proportion Enhancing is 0.0, NCR Volume is 0.0, Proportion Necrosis is 0.0, and Tumor Core Volume is 0.0. These features strongly favor a lower-grade diffuse glioma and argue against grade 4, where enhancing tumor and/or necrotic core would be expected on conventional MRI. Multifocal or Multicentric is Solitary, Multiple satellites present is Absent, Ependymal (ventricular) Invasion is Absent, Deep WM invasion is Absent, and midline_shift_present is Minimal, which also support a less aggressive grade 2 pattern. Against grade 2, age_years is 48, Edema crosses midline is True, Total tumor volume is 34.101 mL, and Eloquent Brain Involvement is Motor; these features do not prove high grade but reduce certainty, and grade 3 can be nonenhancing. The best MRI-based estimate is CNS WHO grade 2, with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

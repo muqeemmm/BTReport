@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_00136",
+  "idh": {
+    "reasoning": "The evidence for IDH status is highly conflicting. The strongest feature supporting an IDH-mutant status is the definitive presence of the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0, `T2-FLAIR Mismatch Score`: 0.88), which is a highly specific marker for IDH-mutant astrocytomas. Conversely, multiple features strongly suggest an IDH-wildtype tumor (glioblastoma), including marked, thick-rim enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\"), the presence of central necrosis (`Proportion Necrosis`: 7.28%), and very sharp tumor borders (`Transition Zone Thickness (FLAIR)` median 0.5mm). While these aggressive features are classic for glioblastoma, they can also be seen in IDH-mutant astrocytomas that have progressed to WHO grade 4. Given the high specificity of the T2-FLAIR mismatch sign for the underlying mutation, it is weighted more heavily than the less specific (though classic) macroscopic features of high grade. Therefore, the prediction is IDH-mutant, but with low confidence due to the strong contradictory evidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)",
+      "boundary_sharpness"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q status is primarily driven by features that distinguish between astrocytic and oligodendroglial lineages, assuming an IDH-mutant tumor. The most compelling piece of evidence is the `T2-FLAIR Mismatch Present` value of 1.0, which is a pathognomonic sign for IDH-mutant astrocytomas, and thus 1p/19q non-codeletion. The tumor's involvement of limbic structures (`Anatomical Overlap Regions` including hippocampus and amygdala) is also more typical for astrocytomas. While the very sharp tumor boundary (`boundary_sharpness`, `Transition Zone Thickness (FLAIR)`) could be argued as a feature more typical of oligodendroglioma, this is less specific than the T2-FLAIR mismatch sign. The presence of necrosis is also more common in high-grade astrocytomas than oligodendrogliomas. The evidence strongly favors a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "boundary_sharpness",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The imaging findings are unequivocally those of a high-grade glioma. The presence of extensive, thick-rim contrast enhancement (`Enhancement Quality`: \"Marked\", `ET Volume (mL)`: 15.114, `Thickness of enhancing margin`: \">3mm\") combined with a significant necrotic core (`Proportion Necrosis`: 7.28%) are the defining radiological features of a CNS WHO grade 4 tumor. Additional findings supporting a high grade include significant mass effect (`max_shift_mm`: 6.0) and ependymal invasion (`Ependymal (ventricular) Invasion`: \"Present\"). There is no imaging evidence to suggest a lower grade, such as grade 2 (non-enhancing) or grade 3 (enhancing but typically non-necrotic).",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents a significant diagnostic challenge due to conflicting imaging features. The strong T2-FLAIR mismatch sign is highly specific for an IDH-mutant, non-codeleted astrocytoma. However, the tumor exhibits aggressive features typical of an IDH-wildtype glioblastoma, including marked necrosis and thick, ring-enhancement. This combination points to a high-grade (WHO grade 4) transformation of an IDH-mutant astrocytoma. The confidence in IDH status is consequently low, while the predictions for non-codeletion and grade 4 are high."
+}

@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0392",
+  "idh": {
+    "reasoning": "The patient's advanced age (68 years) is a strong predictor for IDH-wildtype status. The imaging phenotype is classic for glioblastoma, featuring marked, thick (>3mm) ring enhancement, a large enhancing volume, and central necrosis. Furthermore, the tumor exhibits a sharp transition zone on FLAIR imaging and lacks a T2-FLAIR mismatch sign, both of which are features strongly associated with IDH-wildtype gliomas. The insular involvement is a weak counter-indicator, vastly outweighed by the evidence for wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is performed independently of the IDH status. The imaging features are strongly indicative of a non-codeleted (astrocytic) lineage. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically show indistinct margins and minimal to no enhancement or necrosis. In contrast, this lesion displays features that are the antithesis of an oligodendroglioma: marked, thick rim-enhancement, a significant necrotic core, and a sharp tumor-brain interface on FLAIR. These characteristics are highly suggestive of a non-codeleted glioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of both contrast enhancement and central necrosis are key radiological features that define a CNS WHO grade 4 glioma. The metadata confirms marked enhancement (`Enhancement Quality`: 'Marked'), a large enhancing tumor volume (`ET Volume (mL)`: 25.363), and a significant necrotic component (`NCR Volume (mL)`: 4.775). The thick enhancing margin further supports a high-grade diagnosis. The absence of deep white matter or ependymal invasion does not preclude a grade 4 diagnosis. Therefore, the evidence for grade 4 is overwhelming.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 68-year-old female with a large, solitary, right-sided brain tumor. The imaging features, including advanced age, marked and thick rim-enhancement, and central necrosis, are classic for a high-grade glioma. The sharp tumor margins and absence of a T2-FLAIR mismatch sign further corroborate this prediction. The findings are highly consistent with a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

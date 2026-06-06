@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Tumor Core Volume (mL)",
+      "NCR Volume (mL)",
+      "Number of lesions"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, the lesion is frontal/cortical, nonenhancing, solitary, and has a reported T2-FLAIR mismatch, a strong imaging marker for IDH-mutant astrocytoma. Lack of enhancement and necrosis also fits the usual imaging phenotype of lower-grade IDH-mutant tumors. Against a confident call, the segmentation reports no measurable tumor core and even zero lesions in some fields, so the imaging-derived lesion characterization may be incomplete; however, the available positive features still favor IDH mutation over IDH-wildtype disease.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Considered independently, the strongest metadata for 1p/19q status is the presence of T2-FLAIR mismatch, which is much more typical of IDH-mutant astrocytoma and argues against oligodendroglioma with 1p/19q co-deletion. Nonenhancement and absent necrosis are compatible with either lower-grade astrocytoma or oligodendroglioma, so they are not decisive. Frontal cortical location and young age can be seen in oligodendroglioma and therefore mildly argue against a non-codeleted call, but without calcification/SWI data and with a positive T2-FLAIR mismatch, the balance favors non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The lesion is very small and the segmentation is atypical, with edema/FLAIR abnormality reported but no measurable enhancing or nonenhancing tumor core and zero lesions in one field, which limits confidence. DWI/ADC, perfusion, spectroscopy, SWI/calcification assessment, and histomolecular testing are not available here and would materially affect certainty.",
+  "subject_id": "EGD-0297",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "Tumor Core Volume (mL)",
+      "Number of lesions"
+    ],
+    "prediction": 2,
+    "reasoning": "Assessed independently for grade, the metadata favors CNS WHO grade 2 because there is no contrast enhancement, no enhancing tumor volume, no necrosis, no midline shift, no deep white matter or ependymal invasion, no multifocality, no satellites, and the reported total tumor/FLAIR abnormality volume is small. These features argue against grade 3 or 4, particularly the absence of enhancement and necrosis. The main limitation is that the lesion is represented as entirely edema/FLAIR abnormality with no tumor core and a zero-lesion count in one field, so under-segmentation or incomplete characterization could hide higher-grade components; nevertheless, the available conventional MRI features support grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

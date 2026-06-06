@@ -1,0 +1,49 @@
+{
+  "id": "patient_0127",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (52 years) and the absence of contrast enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) are more commonly associated with IDH mutant gliomas. However, the lack of deep white matter invasion and the presence of cortical involvement could be seen in both IDH mutant and wildtype gliomas. The tumor's large edema volume relative to its total volume ('Proportion of Oedema': 99.95) is not strongly indicative of IDH status. Given the age and lack of enhancement, IDH mutant is more likely.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Enhancing"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "IDH mutant gliomas are more likely to have 1p/19q co-deletion. Given the prediction of IDH mutant status, we can infer a higher likelihood of 1p/19q co-deletion. The tumor's location in the frontal lobe and involvement of the cortex ('Cortical involvement': 'Present', 'Region Proportions': including 'frontal_lobe' and 'cortex') are features that can be associated with 1p/19q co-deleted tumors. However, without direct molecular or specific imaging markers for 1p/19q co-deletion, this remains an educated guess based on the tumor's characteristics and predicted IDH status.",
+      "supporting_features": [
+        "Region Proportions",
+        "Cortical involvement",
+        "IDH mutation status prediction"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.65
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor shows significant edema ('ED Volume (mL)': 25.825, 'Proportion of Oedema': 99.95) and has a relatively large total volume ('Total tumor volume (mL)': 25.839), which could indicate a higher grade. However, the absence of contrast enhancement ('Enhancement Quality': 'None') and necrosis ('Proportion Necrosis': 0.05) might suggest a lower grade. The presence of cortical involvement and the lack of deep white matter invasion are mixed indicators. Given the significant edema and the patient's age, a higher grade is plausible, but the lack of enhancement argues against it. A grade of 3 is a reasonable compromise, reflecting the uncertainty.",
+      "supporting_features": [
+        "ED Volume (mL)",
+        "Proportion of Oedema",
+        "Total tumor volume (mL)",
+        "age_years"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality",
+        "Proportion Necrosis"
+      ],
+      "prediction": 3,
+      "confidence": 0.6
+    }
+  ],
+  "subject_id": "EGD-0106"
+}

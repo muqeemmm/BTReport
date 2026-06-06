@@ -1,0 +1,41 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (28 years) and the tumor's characteristics, such as involvement of multiple lobes (frontal, temporal, insula) and deep structures, along with the presence of cortical involvement and deep white matter invasion, are suggestive of a glioma. The T2-FLAIR mismatch score is 0.4, which is below the typical threshold for a positive T2-FLAIR mismatch sign (usually considered when the score is significantly higher, often >0.7 or presence indicated directly). However, the absence of a clear T2-FLAIR mismatch does not directly indicate IDH status. The presence of multiple satellites and the tumor's location and characteristics are more commonly seen in IDH-mutant gliomas in younger adults. Therefore, considering the age and certain tumor characteristics, the likelihood of an IDH mutant status is higher.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH mutation is likely given the patient's age and tumor characteristics. For codeletion status, 1p/19q co-deletion is more commonly associated with oligodendrogliomas, which are typically IDH-mutant. The tumor's involvement of multiple lobes and presence of cortical involvement could be consistent with this. However, the definitive determination of 1p/19q co-deletion status from the given MRI metadata is challenging without direct molecular or histopathological information. Given the likely IDH mutant status and the tumor's characteristics, there's a possibility of codeletion, but it's not directly inferable from the provided data. Thus, we lean towards a non-codeleted status due to the lack of specific indicators for codeletion in the metadata.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor has a significant necrotic proportion (42.75%) and a relatively large size with multiple satellites, indicating a high-grade tumor. The presence of necrosis and the tumor's aggressive features (e.g., deep white matter invasion, cortical involvement) are more characteristic of higher-grade gliomas. The proportion of edema and the presence of multiple satellites also suggest a more aggressive tumor. Given these features, a higher grade is likely. The presence of necrosis is particularly indicative of WHO grade 4 tumors.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multiple satellites present",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0758"
+}

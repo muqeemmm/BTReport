@@ -1,0 +1,41 @@
+{
+  "subject_id": "BraTS2021_00273",
+  "idh": {
+    "reasoning": "The patient is 79 years old. Advanced age (>65-70) is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it is a significant risk factor. No other features in the provided metadata (like specific imaging characteristics often associated with IDH-mutant tumors, such as minimal edema or specific enhancement patterns) strongly argue against an IDH-wildtype status. Given the high age, IDH-wildtype is the more probable status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "There are no features provided in the metadata that are specifically indicative of 1p/19q co-deletion, which is typically associated with IDH-mutant oligodendrogliomas. The patient's age makes an IDH-mutant tumor less likely overall, further reducing the probability of co-deletion. Without specific molecular markers or characteristic imaging features (which are not available here), predicting co-deletion is highly uncertain. Therefore, assuming non-codeleted is the most reasonable default given the lack of supporting evidence and the patient's age.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits marked enhancement, deep white matter invasion, cortical involvement, and significant mass effect causing midline shift and ventricular effacement ('Effaced Ventricle': 'Left', 'midline_shift_present': 'Yes'). The total tumor volume is substantial (116 mL). These features are characteristic of a high-grade glioma. While the proportion of enhancing tissue (21.7%) might seem relatively low compared to the total volume, the presence of necrosis (18.69%) and significant edema (59.61%) along with marked enhancement and invasive features points towards aggressive behavior consistent with WHO Grade 4 (Glioblastoma). The patient's advanced age also increases the likelihood of a high-grade tumor.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "IDH-wildtype, non-codeleted, WHO Grade 4 Glioblastoma.",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

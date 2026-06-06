@@ -1,0 +1,46 @@
+{
+  "id": "patient_1313",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (67 years) and the presence of a large, enhancing tumor with significant mass effect (midline shift of 2.3439153439153437 mm, asymmetrical ventricles, and effaced right ventricle) are more typical of IDH wildtype glioblastoma. The tumor's location in the parietal, cortex, and temporal lobes, and its significant necrosis (Proportion Necrosis: 26.35%) and enhancement (Proportion Enhancing: 19.91%) also support this prediction. IDH mutant gliomas are less likely given the aggressive features and older age.",
+      "supporting_features": [
+        "age_years",
+        "mean_shift_mm",
+        "midline_shift_present",
+        "Proportion Necrosis",
+        "Proportion Enhancing",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of a large, enhancing tumor with significant necrosis and mass effect, along with the patient's age, is more typical of IDH wildtype glioblastoma or IDH mutant astrocytoma rather than 1p/19q codeleted oligodendroglioma. The lack of specific features like calcifications (not assessed here due to data constraints) or other characteristic features of oligodendroglioma makes codeletion less likely. Given the likely IDH wildtype status from the first prediction, codeletion is even less probable.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor's significant necrosis (Proportion Necrosis: 26.35%), marked enhancement (Enhancement Quality: Marked), large size (Lesion Sizes APxTVxCC: 6.4 x 5.3 x 5.4 cm), and mass effect (midline shift present, asymmetrical ventricles) are characteristic of a high-grade glioma. The likely IDH wildtype status further supports a diagnosis of glioblastoma, WHO grade 4.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Lesion Sizes APxTVxCC (cm)",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0405"
+}

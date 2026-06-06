@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (33 years old), which is more common in IDH-mutant gliomas. The tumor is located in the temporal-cortex region and involves the cortex, which is typical for IDH-mutant astrocytomas. However, the age is not extremely young, and there is no specific molecular marker provided.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region and involves the cortex, which is more typical for astrocytomas (non-codeleted) rather than oligodendrogliomas (codeleted). Oligodendrogliomas often involve white matter and frontal lobes. However, without specific molecular testing, there is uncertainty.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma. The absence of deep white matter invasion and ependymal invasion supports a lower grade. The proportion of necrosis (33.02%) and mild enhancement suggest CNS WHO grade 2.",
+  "subject_id": "EGD-0188",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows mild enhancement (Enhancement Quality: Mild) and a low proportion of enhancing tissue (0.12). The proportion of necrosis is 33.02%, which is high for grade 2 but not definitive. The absence of deep white matter invasion and ependymal invasion also supports a lower grade. However, necrosis is more typical of grade 4 glioblastoma, creating some uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

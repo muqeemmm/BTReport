@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_01727",
+  "idh": {
+    "reasoning": "The patient's age of 54 is in a range where both IDH-mutant and wildtype gliomas occur. The most compelling imaging feature is the complete absence of contrast enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0). This is a strong indicator for an IDH-mutant glioma, as IDH-wildtype gliomas (glioblastomas) are characteristically enhancing. The insular involvement is also frequently seen in IDH-mutant tumors. The primary contradicting feature is the absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0), which argues against the IDH-mutant astrocytoma subtype, but does not rule out an IDH-mutant oligodendroglioma. On balance, the lack of enhancement is a more powerful predictor of IDH status than the T2-FLAIR mismatch sign, leading to a prediction of IDH-mutant.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This analysis seeks to differentiate between an oligodendroglioma (codeleted) and an astrocytoma (non-codeleted). The tumor exhibits sharply demarcated borders, as evidenced by a low median 'Transition Zone Thickness (FLAIR)' of 1.0 mm. This feature is classic for oligodendrogliomas. Furthermore, the absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0) is a very strong argument against an IDH-mutant astrocytoma, for which this sign is highly specific. Therefore, by exclusion, an IDH-mutant glioma without a T2-FLAIR mismatch is very likely to be an oligodendroglioma. The deep gray matter involvement is somewhat atypical but does not outweigh the strong evidence from the tumor margins and the T2-FLAIR mismatch status. Thus, a codeleted status is predicted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)",
+      "boundary_sharpness"
+    ],
+    "contradicting_features": [
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "Grading is based on imaging features of aggressiveness. The complete lack of contrast enhancement ('ET Volume (mL)': 0.0) strongly argues against a WHO grade 4 designation, which typically requires enhancement or necrosis. The reported high 'Proportion Necrosis' of 60.72% is inconsistent with the absence of enhancement and is interpreted as representing the non-enhancing, T1-hypointense tumor core rather than true coagulative necrosis. However, the tumor is very large ('Total tumor volume (mL)': 82.918) and exerts mass effect ('midline_shift_present': 'Minimal', 'Effaced Ventricle': 'Right'), which are features suggestive of a higher biological activity than a typical grade 2 tumor. Therefore, balancing the lack of enhancement (arguing against grade 4) with the large size and mass effect (arguing against grade 2), a WHO grade of 3 is the most likely prediction.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging features are highly characteristic of an oligodendroglioma. The lack of enhancement, sharp tumor margins, and absence of a T2-FLAIR mismatch strongly support an IDH-mutant, 1p/19q-codeleted molecular profile. The large tumor size and mass effect suggest a higher grade, favoring WHO grade 3 over 2. The reported high necrosis proportion is considered an artifact of the non-enhancing core volume calculation, given the complete absence of enhancement."
+}

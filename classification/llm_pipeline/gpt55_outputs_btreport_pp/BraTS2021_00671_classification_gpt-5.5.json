@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The IDH assessment favors wildtype because age_years is in an older adult range and the lesion shows an aggressive enhancing phenotype: Enhancement Quality is marked, ET Volume (mL) and Proportion Enhancing indicate a substantial enhancing component, Thickness of enhancing margin is thick, and ED Volume (mL) plus Proportion of Oedema indicate extensive surrounding FLAIR abnormality. T2-FLAIR Mismatch Present is absent, which argues against the classic imaging pattern of IDH-mutant astrocytoma. Evidence against wildtype is that Cortical involvement and the Tumor Location/Region Proportions involving cortex, insula, temporal, and frontal regions can be seen in IDH-mutant diffuse glioma, and Proportion Necrosis with NCR Volume (mL) is low rather than showing dominant necrosis. Overall, the enhancing aggressive phenotype in a 53-year-old supports IDH-wildtype despite some location-based ambiguity.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The 1p/19q assessment is less specific from the provided MRI metadata. A non-codeleted tumor is favored because Enhancement Quality is marked, ET Volume (mL) and Proportion Enhancing show a large enhancing component, Thickness of enhancing margin is thick, ED Volume (mL) and Proportion of Oedema show extensive edema, and Tumor Location/Region Proportions show a multi-regional insular-temporal-frontal pattern rather than a purely classic frontal cortical-subcortical oligodendroglial pattern. Evidence against non-codeletion is that Cortical involvement and frontal/insular components in Tumor Location and Region Proportions can be compatible with oligodendroglioma, and T2-FLAIR Mismatch Present is absent, which does not support the classic non-codeleted IDH-mutant astrocytoma mismatch pattern. Overall, the balance modestly favors non-codeleted, but confidence is limited because key oligodendroglioma-discriminating features are not assessed in this metadata.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The predictions are based only on structured conventional MRI metadata. There is internal inconsistency between ET Volume (mL)/Proportion Enhancing/Enhancement Quality and the et entries in volumes_ideal_midline and volumes_patient_midline, so the enhancing-tumor assessment should be verified against the source segmentation. Molecular testing remains required for definitive WHO-CNS5 classification.",
+  "subject_id": "BraTS2021_00671",
+  "who_grade": {
+    "confidence": 0.83,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "The WHO grade assessment favors grade 4 on imaging because Enhancement Quality is marked, ET Volume (mL) is sizable, Proportion Enhancing is substantial, Thickness of enhancing margin is greater than 3 mm, Total tumor volume (mL) is large, ED Volume (mL) and Proportion of Oedema are extensive, and Deep WM invasion is present. These features support a high-grade diffuse glioma rather than grade 2 or grade 3. Evidence against grade 4 is that Proportion Necrosis and NCR Volume (mL) are low, midline_shift_present is absent, Ependymal (ventricular) Invasion is absent, Multiple satellites present is absent, and Multifocal or Multicentric is solitary. Despite limited necrosis and lack of disseminated features, the marked thick enhancement with extensive edema and invasion best supports CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 33 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor location in thalamus and brainstem is also more typical for IDH-mutant tumors. Enhancement is mild, which is more common in IDH-mutant gliomas. T2-FLAIR mismatch is present with a high score (0.96), which is highly specific for IDH-mutant astrocytoma.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves thalamus and brainstem, which are midline structures not typically associated with oligodendrogliomas. Oligodendrogliomas are usually cortical or subcortical. The presence of ependymal invasion and deep white matter invasion is more typical of astrocytic tumors. T2-FLAIR mismatch is present, which is specific for IDH-mutant astrocytoma and argues against oligodendroglioma (which would be codeleted).",
+    "supporting_features": [
+      "Tumor Location",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "The tumor is midline, involving thalamus and brainstem, with mild enhancement and T2-FLAIR mismatch. This favors IDH-mutant astrocytoma. Grade 4 is assigned due to necrosis presence and ependymal invasion.",
+  "subject_id": "UCSF-PDGM-318",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis 9.54%), which is a criterion for CNS WHO grade 4 in IDH-mutant astrocytomas. Ependymal invasion is present, which can be associated with higher grade. Enhancement is mild but present. The proportion of necrosis is relatively low, but any necrosis qualifies for grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality"
+    ]
+  }
+}

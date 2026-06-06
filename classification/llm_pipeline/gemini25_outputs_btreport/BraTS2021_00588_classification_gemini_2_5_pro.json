@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_00588",
+  "idh": {
+    "reasoning": "The presence of multiple aggressive features strongly suggests an IDH-wildtype status. The tumor is multifocal, which is a classic hallmark of IDH-wildtype glioblastoma. Furthermore, its location is deep and involves midline structures including the thalamus and basal ganglia, another feature more common in wildtype tumors. The presence of contrast enhancement, significant vasogenic edema, ependymal invasion, and substantial mass effect all collectively argue against an IDH-mutant glioma, which typically presents as a single, non-enhancing, cortically-based lesion with less edema. There are no features in the provided metadata that would favor an IDH-mutant diagnosis.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas are typically solitary, cortically-based tumors with indistinct margins and often lack significant enhancement or edema. This tumor is multifocal, deeply located with invasion of the thalamus and basal ganglia, shows definite contrast enhancement, and is associated with extensive edema and ependymal invasion. These features are all atypical for an oligodendroglioma and strongly favor a non-codeleted status.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Anatomical Overlap Regions",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of both contrast enhancement and necrosis are key radiological features indicating a high-grade glioma, specifically WHO grade 4. The metadata confirms the presence of an enhancing tumor component (`ET Volume (mL)`: 5.942) with a thick margin (`Thickness of enhancing margin`: \">3mm\") and a necrotic core (`NCR Volume (mL)`: 0.21). Although the proportion of necrosis is small and enhancement is described as mild, their mere presence is highly significant. Additional features supporting a grade 4 diagnosis include the tumor's multifocality, significant mass effect (`max_shift_mm`: 6.0), and ependymal invasion, all of which point to an aggressive, high-grade process.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are highly characteristic of a multifocal glioblastoma. The deep, midline location involving the thalamus and basal ganglia, combined with contrast enhancement, necrosis, extensive edema, and ependymal invasion, strongly support the diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

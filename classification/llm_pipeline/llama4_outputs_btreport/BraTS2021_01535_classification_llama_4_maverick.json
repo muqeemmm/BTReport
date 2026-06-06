@@ -1,0 +1,44 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (44 years) and the tumor's characteristics (non-enhancing, large necrotic component) are more typical of glioblastoma, which is often IDH wildtype. The absence of enhancement (Enhancement Quality: 'None', Proportion Enhancing: 0.0) and the presence of necrosis (Proportion Necrosis: 61.02) also align more with glioblastoma, typically IDH wildtype in this age group. While the location (involving cortex, temporal, insula, and frontal lobe) could be seen in IDH mutant gliomas, the overall profile leans towards IDH wildtype due to the significant necrotic component and lack of enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor's imaging characteristics (non-enhancing, significant necrosis) and the patient's age are not typical for 1p/19q co-deleted gliomas, which are more commonly associated with oligodendrogliomas that typically show less necrosis and are often found in the frontal lobe. The presence of significant necrosis (Proportion Necrosis: 61.02) and the lack of enhancement argue against a typical oligodendroglioma profile. Thus, the likelihood of 1p/19q co-deletion is low.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "CNS WHO grade": {
+    "reasoning": "The presence of a significant necrotic component (Proportion Necrosis: 61.02) and a substantial tumor volume (Total tumor volume: 53.625 mL) are characteristic features of glioblastoma, which is classified as CNS WHO grade 4. The lack of enhancement does not rule out glioblastoma, as glioblastomas can be non-enhancing or have variable enhancement patterns. The patient's age and the tumor's aggressive features (large size, necrosis) support a high-grade tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01535"
+}

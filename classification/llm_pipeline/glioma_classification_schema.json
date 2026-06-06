@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GliomaClassificationOutput",
+  "description": "Structured-output schema for joint IDH / 1p19q / WHO-grade prediction from pre-operative brain-MRI metadata, following WHO CNS5 (2021). Field order within each task block follows Chain-of-Thought Confidence Elicitation: reasoning and feature analysis are generated BEFORE the prediction and confidence score, so the chain of thought informs the score rather than rationalising it post hoc. Drop-in for OpenAI response_format, Anthropic tool use, and Gemini responseSchema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "subject_id",
+    "idh",
+    "one_p_nineteen_q",
+    "who_grade",
+    "integrated_diagnosis",
+    "consistency_check_passed",
+    "overall_comment"
+  ],
+  "properties": {
+    "subject_id": {
+      "type": "string",
+      "description": "Subject identifier echoed from the input metadata."
+    },
+    "idh": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reasoning", "supporting_features", "contradicting_features", "prediction", "confidence"],
+      "properties": {
+        "reasoning": { "type": "string", "minLength": 1, "description": "Clinically grounded chain of thought. MUST be written before committing to a prediction; weigh supporting against contradicting evidence here." },
+        "supporting_features": { "type": "array", "items": { "type": "string" } },
+        "contradicting_features": { "type": "array", "items": { "type": "string" } },
+        "prediction": { "type": "string", "enum": ["mutant", "wildtype"] },
+        "confidence": { "type": "number", "minimum": 0.0, "maximum": 1.0, "description": "Derived from the reasoning above: high when key features are well supported and few contradict; near 0.50-0.60 when evidence is insufficient." }
+      }
+    },
+    "one_p_nineteen_q": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reasoning", "supporting_features", "contradicting_features", "prediction", "confidence"],
+      "properties": {
+        "reasoning": { "type": "string", "minLength": 1, "description": "Clinically grounded chain of thought. MUST be written before committing to a prediction; weigh supporting against contradicting evidence here." },
+        "supporting_features": { "type": "array", "items": { "type": "string" } },
+        "contradicting_features": { "type": "array", "items": { "type": "string" } },
+        "prediction": { "type": "string", "enum": ["codeleted", "non-codeleted"] },
+        "confidence": { "type": "number", "minimum": 0.0, "maximum": 1.0, "description": "Derived from the reasoning above: high when key features are well supported and few contradict; near 0.50-0.60 when evidence is insufficient." }
+      }
+    },
+    "who_grade": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reasoning", "supporting_features", "contradicting_features", "prediction", "confidence"],
+      "properties": {
+        "reasoning": { "type": "string", "minLength": 1, "description": "Clinically grounded chain of thought. MUST be written before committing to a prediction; weigh supporting against contradicting evidence here." },
+        "supporting_features": { "type": "array", "items": { "type": "string" } },
+        "contradicting_features": { "type": "array", "items": { "type": "string" } },
+        "prediction": { "type": "integer", "enum": [2, 3, 4] },
+        "confidence": { "type": "number", "minimum": 0.0, "maximum": 1.0, "description": "Derived from the reasoning above: high when key features are well supported and few contradict; near 0.50-0.60 when evidence is insufficient." }
+      }
+    },
+    "integrated_diagnosis": {
+      "type": "string",
+      "description": "Full WHO-CNS5 integrated diagnosis string, e.g. 'Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2'."
+    },
+    "consistency_check_passed": {
+      "type": "boolean",
+      "description": "True iff the three predictions are mutually compatible under WHO-CNS5."
+    },
+    "overall_comment": {
+      "type": "string",
+      "description": "Residual diagnostic uncertainty, missing sequences that would change the call, or atypical features worth flagging to the treating team."
+    }
+  }
+}

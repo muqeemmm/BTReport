@@ -1,0 +1,58 @@
+{
+  "subject_id": "BraTS2021_01774",
+  "idh": {
+    "reasoning": "The patient is 49 years old, which is younger than the typical age for IDH-wildtype glioblastoma. Imaging shows only mild contrast enhancement (Enhancement Quality = \"Mild\"), a very low proportion of enhancing tumor (Proportion Enhancing = 0.02) and a large non\u2011enhancing component (NCR Volume = 21.469\u202fmL). The lesion is solitary, located in the frontal cortex, and does not cross the midline on enhancement (CET Crosses midline = \"False\"). These features are characteristic of IDH\u2011mutant diffuse gliomas, which often present with less aggressive enhancement and occur in younger adults. The presence of necrosis (Proportion Necrosis = 15.83%) and ependymal invasion are somewhat atypical for low\u2011grade IDH\u2011mutant tumors but do not outweigh the predominant supportive findings. Therefore the balance of evidence favors an IDH\u2011mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "Text Report"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Features that would support 1p/19q codeletion include a frontal cortical location (Region Proportions shows 76% frontal lobe, cortical involvement present) and the patient\u2019s age, both typical for oligodendroglioma. However, the lesion shows necrosis (Proportion Necrosis = 15.83%), ependymal invasion, and deep white\u2011matter infiltration, which are more common in astrocytomas and less typical for classic oligodendrogliomas. Because the imaging does not provide calcification information and the necrotic/ invasive features argue against codeletion, the evidence leans toward a non\u2011codeleted status, though the support is not definitive.",
+    "supporting_features": [
+      "Region Proportions",
+      "Cortical involvement",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits mild enhancement and a very small enhancing volume (ET Volume = 0.028\u202fmL), which are features of lower\u2011grade gliomas. However, there is a measurable necrotic component (Proportion Necrosis = 15.83%), ependymal invasion, and edema crossing the midline, indicating a more aggressive behavior than a pure grade\u202f2 lesion. The combination of these findings aligns best with WHO grade\u202f3 (anaplastic astrocytoma) rather than grade\u202f2 or grade\u202f4, the latter of which would require marked enhancement and extensive necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "ET Volume",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Advanced imaging (perfusion, spectroscopy, diffusion) and histopathology are not available, limiting certainty especially for 1p/19q status. The imaging suggests an IDH\u2011mutant astrocytoma, but codeletion cannot be completely excluded without molecular testing."
+}

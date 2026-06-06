@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "age_years",
+      "Side of Tumor Epicenter",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The MRI metadata favor an IDH-mutant diffuse glioma because the lesion is nonenhancing, with no enhancing tumor volume, is solitary, is predominantly temporal-cortical, and lacks deep white-matter or ependymal invasion and midline crossing. These features fit a less aggressive hemispheric diffuse glioma pattern more than a typical IDH-wildtype aggressive phenotype. Features arguing against IDH mutation are the age of 51 years, the reported midline epicenter, and a small nonenhancing/necrosis-labeled component, which introduce overlap with more aggressive biology. Overall, the nonenhancing solitary cortical pattern outweighs these contradictions, so IDH-mutant is favored.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the available MRI metadata are not strongly specific. A non-codeleted tumor is slightly favored because the location metadata emphasize a temporal-cortical lesion rather than a more typical frontal-predominant codeleted pattern, and the structured report does not provide a strongly codeletion-specific imaging signature. Against non-codeletion, cortical involvement, absent enhancement, and absent T2-FLAIR mismatch can be seen in codeleted tumors. Because the evidence is thin and partly conflicting, the best estimate is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured pre-operative MRI metadata and remain probabilistic; definitive adult-type diffuse glioma classification requires tissue-based molecular testing. The 1p/19q estimate is particularly uncertain because the provided metadata lack highly specific discriminators.",
+  "subject_id": "EGD-0022",
+  "who_grade": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "CNS WHO grade 2 is favored because the tumor is entirely nonenhancing, has no enhancing component, is solitary, shows no midline shift, does not cross midline, and lacks deep white-matter or ependymal invasion. These features argue against grade 3 or grade 4 imaging behavior. Against grade 2, the patient is 51 years old and there is a small necrosis/nonenhancing-core label, but this component is very small and occurs without enhancement. Overall the low-grade imaging pattern predominates, so grade 2 is favored.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "midline_shift_present",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

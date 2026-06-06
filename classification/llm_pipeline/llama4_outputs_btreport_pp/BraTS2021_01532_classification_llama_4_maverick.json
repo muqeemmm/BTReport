@@ -1,0 +1,43 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (29 years) and the presence of a large, heterogeneous tumor with significant necrosis (Proportion Necrosis: 73.2%) and mild enhancement (Enhancement Quality: Mild) could suggest a high-grade glioma. The T2-FLAIR Mismatch Score is 0.6497166523435763, which is not indicative of a strong mismatch, typically associated with IDH-mutant astrocytomas. The absence of a clear T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) leans towards an IDH wildtype status, as IDH-mutant astrocytomas often exhibit this feature. Therefore, considering the lack of T2-FLAIR mismatch and the presence of significant necrosis, the tumor is likely IDH wildtype.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor is located in the frontal lobe and involves the cortex, with significant necrosis and mild enhancement. The presence of necrosis and the absence of T2-FLAIR mismatch are not typical for 1p/19q co-deleted oligodendrogliomas. Furthermore, the clinical and radiological features (e.g., significant necrosis, mild enhancement) are more suggestive of a higher-grade glioma without 1p/19q co-deletion. Therefore, based on the available metadata, the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 73.2%), a large size (Total tumor volume: 183.634 mL), and involves critical structures with mass effect (midline shift present, asymmetrical ventricles, ependymal invasion). These features are characteristic of high-grade gliomas. The presence of necrosis and the large tumor size are particularly indicative of a WHO Grade 4 tumor. While the enhancement is mild, the overall aggressive features suggest a high-grade tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01532"
+}

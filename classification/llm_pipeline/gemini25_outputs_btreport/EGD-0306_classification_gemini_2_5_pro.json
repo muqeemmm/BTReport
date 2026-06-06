@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0306",
+  "idh": {
+    "reasoning": "The evidence for IDH status is conflicting. Features supporting IDH-wildtype status are paramount: the tumor is multifocal ('Multifocal or Multicentric': \"Multifocal\", 'Number of lesions': 2), which is a very strong predictor for IDH-wildtype gliomas. Additionally, the presence of necrosis ('NCR Volume (mL)': 1.162) and a thick enhancing margin ('Thickness of enhancing margin': \">3mm\") are classic features of glioblastoma (IDH-wildtype). Conversely, features suggesting IDH-mutant status include the patient's relatively young age (45), the very low proportion of enhancement and necrosis, and the overwhelmingly T2/FLAIR-hyperintense non-enhancing component ('Proportion of Oedema': 96.78%). However, multifocality is a highly specific marker for the IDH-wildtype genotype, and its presence, along with other high-grade features, outweighs the non-specific features of a T2-dominant lesion. Therefore, the prediction is IDH-wildtype.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The features strongly argue against 1p/19q co-deletion. Tumors with co-deletion (oligodendrogliomas) are rarely multifocal, and this lesion is explicitly described as such ('Multifocal or Multicentric': \"Multifocal\", 'Number of lesions': 2). Furthermore, the presence of necrosis ('NCR Volume (mL)': 1.162) and contrast enhancement ('ET Volume (mL)': 0.633), even if minimal, is more characteristic of an astrocytic lineage than an oligodendroglial one. While the tumor involves the cortex ('Cortical involvement': \"Present\"), which is common in oligodendrogliomas, the combination of multifocality and necrosis makes a co-deleted status highly improbable. The evidence points strongly towards a non-codeleted tumor.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "NCR Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The WHO CNS5 classification defines grade based on specific features. For adult-type diffuse gliomas, the presence of necrosis is a defining feature of WHO Grade 4. This patient's tumor has a quantifiable necrotic component ('NCR Volume (mL)': 1.162, 'Proportion Necrosis': 2.08%). This finding alone is sufficient for a Grade 4 designation. This is further supported by other high-grade features such as multifocality ('Multifocal or Multicentric': \"Multifocal\") and a thick enhancing margin ('Thickness of enhancing margin': \">3mm\"). While the volume of necrosis and enhancement is small relative to the total tumor volume, their presence is diagnostically definitive for the highest grade. Therefore, a prediction of WHO Grade 4 is made with high confidence.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of multifocality and radiographically evident necrosis provides strong evidence for a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predominantly non-enhancing character is somewhat atypical but does not override these highly specific high-grade features. The predicted molecular profile (IDH-wildtype, 1p/19q non-codeleted) and grade (4) are internally consistent with the WHO CNS5 classification."
+}

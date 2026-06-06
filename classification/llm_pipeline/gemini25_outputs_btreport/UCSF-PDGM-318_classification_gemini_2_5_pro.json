@@ -1,0 +1,52 @@
+{
+  "subject_id": "UCSF-PDGM-318",
+  "idh": {
+    "reasoning": "The tumor's location is a powerful predictor of IDH-wildtype status. It is centered in the midline, involving the thalamus and brainstem, which is a classic location for IDH-wildtype gliomas and highly atypical for IDH-mutant tumors. Furthermore, the presence of significant necrosis (9.54%) and contrast enhancement with a thick margin are hallmark features of IDH-wildtype glioblastoma. The extensive infiltrative features, including ependymal invasion and crossing the midline, along with a large tumor volume, further support this conclusion. There is no significant evidence to suggest an IDH-mutant status.",
+    "supporting_features": [
+      "Side of Tumor Epicenter",
+      "Region Proportions",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas are typically cortically based, often in the frontal lobes, and while they can enhance, extensive necrosis and thick margins are less common than in high-grade astrocytomas. This tumor's deep midline location in the thalamus and brainstem is highly uncharacteristic for an oligodendroglioma. The presence of necrosis and a thick enhancing margin are features of an astrocytic lineage tumor. Therefore, a non-codeleted status is strongly favored.",
+    "supporting_features": [
+      "Side of Tumor Epicenter",
+      "Tumor Location",
+      "Region Proportions",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis is a defining feature of WHO grade 4 gliomas, particularly in the context of adult-type diffuse astrocytomas. The metadata clearly indicates a significant proportion of necrosis (9.54%). This finding alone is sufficient for a grade 4 designation. Supporting this are other features of high-grade malignancy, including contrast enhancement with a thick margin, extensive vasogenic edema, significant mass effect with midline shift, and widespread infiltration including ependymal invasion. There are no features suggestive of a lower grade (2 or 3).",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features are unequivocally those of a high-grade glioma. The deep midline location involving the thalamus and brainstem, combined with the presence of both necrosis and contrast enhancement, are classic for a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The possibility of a diffuse midline glioma, H3 K27-altered, should also be considered given the location, but based on the provided molecular markers, glioblastoma is the most fitting diagnosis."
+}

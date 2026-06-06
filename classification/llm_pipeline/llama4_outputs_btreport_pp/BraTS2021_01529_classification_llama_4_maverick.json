@@ -1,0 +1,45 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (21 years) and the tumor's characteristics, such as being non-enhancing (Enhancement Quality: 'None', Proportion Enhancing: 0.0), having a significant necrotic proportion (Proportion Necrosis: 73.64), and involving deep white matter (Deep WM invasion: 'Present'), are considered. The T2-FLAIR mismatch score is 0.4, which is not strongly indicative of an IDH mutation. However, the absence of enhancement and the presence of necrosis are more commonly associated with glioblastoma, which is often IDH-wildtype in adults. Given the patient's young age and the tumor's aggressive features, the likelihood of an IDH mutation is considered. However, the T2-FLAIR mismatch score is not conclusive for IDH mutant status. The final prediction leans towards 'mutant' due to the patient's age, despite some conflicting evidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor involves the frontal lobe, insula, and temporal lobe, which are common locations for 1p/19q co-deleted gliomas. However, the absence of enhancement and the significant necrosis are not typical for 1p/19q co-deleted tumors, which are more commonly associated with oligodendrogliomas that often show a more indolent course. The presence of necrosis and the tumor's aggressive features argue against co-deletion. The prediction is 'non-codeleted' based on the tumor's aggressive features and the presence of necrosis.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor has a large necrotic component (Proportion Necrosis: 73.64), is non-enhancing, and has a significant volume (NCR Volume: 50.291 mL). These features are indicative of a high-grade glioma. The presence of necrosis is typically associated with WHO grade 4 tumors. The patient's young age might suggest a different molecular profile, but the imaging features strongly suggest a high-grade tumor. Therefore, the prediction is grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01529"
+}

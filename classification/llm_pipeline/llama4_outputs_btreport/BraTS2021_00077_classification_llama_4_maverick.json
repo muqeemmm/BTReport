@@ -1,0 +1,46 @@
+{
+  "id": "patient_0346",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (84 years) is significantly higher than the typical age range for IDH-mutant gliomas, which are more common in younger adults. The presence of a large, enhancing mass with necrosis (Proportion Necrosis: 10.54%) and significant mass effect (midline shift present, Edema crosses midline) is more characteristic of IDH-wildtype glioblastomas, which are more aggressive and typical in older adults. The enhancement quality is marked, and there's a significant proportion of necrosis, both of which are features more commonly associated with IDH-wildtype tumors.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "midline_shift_present",
+        "Edema crosses midline"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.95
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "IDH-mutant gliomas are more likely to have 1p/19q codeletion, but given the high likelihood of this tumor being IDH-wildtype based on age and imaging features, the probability of 1p/19q codeletion is low. The presence of marked enhancement and necrosis, along with the patient's age, suggests a more aggressive tumor type, which is less likely to be associated with 1p/19q codeletion.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.85
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The presence of a large, enhancing mass with significant necrosis (10.54%), marked enhancement quality, and substantial mass effect (midline shift, edema crossing midline) are characteristic features of a high-grade glioma. The patient's age and these imaging features are highly suggestive of glioblastoma, which is classified as CNS WHO grade 4. The presence of necrosis and marked enhancement are key features that distinguish grade 4 from lower grades.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "midline_shift_present",
+        "Edema crosses midline"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.98
+    }
+  ],
+  "subject_id": "BraTS2021_00077"
+}

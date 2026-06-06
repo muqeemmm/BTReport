@@ -1,0 +1,54 @@
+{
+  "subject_id": "EGD-0541",
+  "idh": {
+    "reasoning": "The imaging phenotype is highly suggestive of an IDH-wildtype glioma. The key features are the presence of a large necrotic core (Proportion Necrosis of 21.52%), extensive midline crossing of all tumor components including the enhancing portion (CET Crosses midline: True), and deep infiltration involving bilateral deep gray matter structures (thalamus, caudate). These features, along with the presence of satellite lesions and ependymal invasion, are classic hallmarks of glioblastoma, which is prototypically IDH-wildtype. The only mildly contradicting feature is the 'Mild' Enhancement Quality, as IDH-wildtype tumors often enhance avidly. However, this is far outweighed by the strong evidence of aggressive biology, particularly the extensive necrosis and infiltrative pattern.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "crosses_ideal_midline",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor morphology strongly argues against a 1p/19q co-deletion. Co-deleted tumors (oligodendrogliomas) rarely exhibit large necrotic cores, whereas this tumor has a significant necrotic component (Proportion Necrosis: 21.52%). Furthermore, the highly infiltrative and destructive pattern, with extensive midline crossing and invasion of deep gray matter structures, is characteristic of an astrocytic lineage (non-codeleted) tumor. Oligodendrogliomas typically have more circumscribed or diffusely infiltrative but less destructive margins. The frontal lobe location is common for oligodendrogliomas but is non-specific and does not overcome the powerful evidence for an astrocytoma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic component (Proportion Necrosis: 21.52%) is the strongest imaging correlate for histopathological necrosis, which is a defining feature of WHO Grade 4 in adult-type diffuse gliomas. This is further supported by the presence of contrast enhancement (ET Volume > 0), significant mass effect (max_shift_mm of 9.0), extensive vasogenic edema (ED Volume of 227.377 mL), midline crossing, and ependymal invasion. These are all features of a high-grade, aggressive tumor. The 'Mild' quality of enhancement is a minor point, as the presence of any enhancement with a necrotic core is sufficient to classify the tumor as grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "max_shift_mm",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are classic for a glioblastoma, IDH-wildtype (CNS WHO Grade 4). The large, necrotic, enhancing mass extensively crossing the midline ('butterfly glioma') and involving deep gray matter structures is a textbook presentation. The high confidence across all predictions reflects the strong concordance of multiple aggressive imaging features."
+}

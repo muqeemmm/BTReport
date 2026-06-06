@@ -1,0 +1,50 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (57 years) and the presence of a large, enhancing, midline tumor with significant mass effect (midline shift of 3.806 mm, n_slices_with_shift = 140) and necrosis (Proportion Necrosis = 26.92%) are more typical of glioblastoma, IDH-wildtype. The tumor's aggressive features, such as ependymal invasion and marked enhancement, also align with a higher-grade glioma. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score = 0.4, Degree = -0.456) argues against an IDH-mutant astrocytoma. The presence of necrosis and the overall imaging characteristics are less typical for IDH-mutant gliomas, which are more commonly associated with lower-grade features or different molecular profiles.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor's imaging characteristics, such as its location (midline, involving ventricles, frontal lobe, cortex, and corpus callosum), marked enhancement, and significant necrosis, are not typical for 1p/19q co-deleted gliomas, which are more commonly associated with oligodendroglial features and a more favorable prognosis. The presence of necrosis and the tumor's aggressive behavior are more characteristic of astrocytic or glioblastoma-type tumors. The absence of specific features like calcifications (not assessed here) or a more indolent course also argues against a co-deleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "CET Crosses midline"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis = 26.92%), marked enhancement, significant mass effect (midline shift, ependymal invasion), and a large tumor volume (Total tumor volume = 103.304 mL) are characteristic features of a high-grade glioma. According to the WHO CNS5 classification, these features are most consistent with a Grade 4 glioma, typically glioblastoma, IDH-wildtype. The tumor's aggressive imaging features and the patient's age further support this classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00159"
+}

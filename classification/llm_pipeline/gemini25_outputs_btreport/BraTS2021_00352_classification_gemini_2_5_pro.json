@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_00352",
+  "idh": {
+    "reasoning": "The patient's advanced age of 86 years is the strongest predictor for IDH-wildtype status, as IDH-mutant gliomas are exceedingly rare in this demographic. This is strongly corroborated by key radiological features of a high-grade glioma: the presence of significant central necrosis (NCR Volume (mL) of 4.729) and marked, thick-walled contrast enhancement (Enhancement Quality: 'Marked', Thickness of enhancing margin: '>3mm'). These findings are classic for glioblastoma, the archetypal IDH-wildtype tumor. The only contradicting feature is the absence of deep white matter invasion, which is less typical for glioblastoma but is heavily outweighed by the combination of age and aggressive imaging features.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification must be performed independently of the IDH prediction. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically lack significant necrosis and avid enhancement. This tumor displays the opposite characteristics: marked enhancement (Enhancement Quality: 'Marked'), a thick enhancing margin (Thickness of enhancing margin: '>3mm'), and a substantial necrotic core (NCR Volume (mL): 4.729). These features are hallmarks of astrocytic lineage tumors, which are non-codeleted. The temporal lobe location is also more common for astrocytomas than for oligodendrogliomas. There are no features to suggest a co-deleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of a significant necrotic component (NCR Volume (mL): 4.729, Proportion Necrosis: 10.71) is a definitive radiological correlate of the histopathological criterion for WHO Grade 4. Furthermore, the presence of marked, thick-walled contrast enhancement (Enhancement Quality: 'Marked', Thickness of enhancing margin: '>3mm') indicates high-grade biological activity, including neovascularity and blood-brain barrier breakdown, which are also characteristic of Grade 4 gliomas. The absence of deep white matter invasion is noted but does not preclude a Grade 4 diagnosis, especially when a defining feature like necrosis is present.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age (86) and MRI findings of a large, solitary temporal lobe mass with marked ring enhancement and central necrosis provides a classic presentation for Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predictions for IDH status, 1p/19q status, and WHO grade are highly confident and internally consistent."
+}

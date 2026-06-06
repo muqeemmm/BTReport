@@ -1,0 +1,51 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 29 years old, which is younger than typical for IDH-wildtype glioblastomas. IDH-mutant gliomas are more common in younger adults. The tumor location in the cortex-brainstem region and midline epicenter are consistent with diffuse midline glioma, but IDH status is not specified for midline tumors in WHO CNS5. Enhancement is mild, which is more common in lower-grade gliomas often associated with IDH mutation. However, the age is a strong indicator for IDH mutation.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Diffuse midline glioma, H3 K27-altered",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the cortex-brainstem region with midline epicenter. 1p/19q codeletion is typically associated with oligodendrogliomas, which are supratentorial and rarely involve midline structures like the brainstem. The absence of cortical involvement in the primary location argues against oligodendroglioma. However, multifocality and deep white matter invasion are non-specific. Given the midline location, codeletion is unlikely.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is classified as a diffuse midline glioma, H3 K27-altered, which is IDH-wildtype by definition in WHO CNS5. However, the patient's young age (29) is atypical for IDH-wildtype tumors, creating uncertainty. The midline location (brainstem/4th ventricle) and H3 K27 alteration status (inferred from location) override IDH status for classification. 1p/19q codeletion is not expected in midline gliomas. Confidence in IDH prediction is moderate due to age conflict.",
+  "subject_id": "BraTS2021_00243",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows mild enhancement and low proportion of enhancing volume (3.45%), which are atypical for grade 4 glioblastoma. However, the location in the brainstem and midline, multifocality, and involvement of eloquent areas (brainstem) suggest high-grade behavior. The presence of deep white matter invasion and the large edema volume relative to enhancing tumor may indicate aggressiveness. WHO grade 4 is assigned due to the brainstem location and diffuse midline glioma classification, but the mild enhancement lowers confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "ET Volume (mL)"
+    ]
+  }
+}

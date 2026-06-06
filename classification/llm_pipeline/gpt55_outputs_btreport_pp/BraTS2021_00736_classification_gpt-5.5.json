@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status, the strongest MRI-derived pattern is an elderly patient with a substantially enhancing tumor, marked enhancement, thick enhancing margin, necrotic component, prominent edema, and deep white matter invasion, which favors IDH-wildtype diffuse glioma. Features arguing toward IDH-mutant include a reported T2-FLAIR mismatch and frontal cortical involvement. Weighing these, the age and high-grade enhancing/necrotic phenotype are more typical of IDH-wildtype than IDH-mutant glioma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the reported T2-FLAIR mismatch strongly argues against oligodendroglioma and therefore against 1p/19q co-deletion. Marked enhancement, a thick enhancing margin, and necrosis also make a classic lower-grade oligodendroglioma imaging phenotype less likely, although high-grade oligodendrogliomas can enhance. Frontal cortical location is a feature that can be seen with oligodendroglioma and therefore argues against the non-codeleted prediction. Overall, the T2-FLAIR mismatch and enhancing necrotic phenotype favor non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the provided structural MRI metadata. The main uncertainty is the discordance between a reported T2-FLAIR mismatch, which favors IDH-mutant astrocytoma/non-codeleted status, and the patient age plus marked enhancing necrotic phenotype, which favors IDH-wildtype glioblastoma. DWI/ADC, perfusion, spectroscopy, and susceptibility-based assessment were not available and were not used.",
+  "subject_id": "BraTS2021_00736",
+  "who_grade": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "midline_shift_present",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the imaging phenotype is strongly high grade: marked enhancement, a measurable enhancing tumor component, thick enhancing margin, necrotic component, prominent edema, large overall tumor volume, and deep white matter invasion all support grade 4 behavior. Features arguing against the most aggressive grade include absence of midline shift, no enhancing or edema crossing of midline, absent ependymal invasion, no satellites, and solitary disease. Despite those mitigating features, the enhancing necrotic mass pattern best supports CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Deep WM invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

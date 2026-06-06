@@ -1,0 +1,69 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the older adult age, midline brainstem-thalamus location, absent cortical involvement, deep white matter invasion, marked enhancement, near-complete enhancing proportion, and thick enhancing margin favor an IDH-wildtype biology over a typical IDH-mutant diffuse glioma. Against this, the reported T2-FLAIR mismatch metrics favor IDH-mutant astrocytoma, and the very low necrosis, minimal oedema, and small total tumor volume are less typical for a classic aggressive IDH-wildtype glioblastoma. Because the enhancement pattern, age, and deep midline location outweigh but do not eliminate the T2-FLAIR mismatch signal, the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the midline brainstem-thalamus location, absent cortical involvement, and deep white matter invasion are not the usual imaging pattern for an oligodendroglioma with 1p/19q co-deletion. The presence of T2-FLAIR mismatch also supports a non-codeleted astrocytic pattern rather than codeleted oligodendroglioma. Marked and near-complete enhancement can be seen in higher-grade oligodendroglial tumors and is therefore a limited opposing feature, but the overall anatomic and signal pattern favors non-codeletion.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "overall_comment": "The predictions are MRI-based estimates only. The strongest uncertainty is the discordance between a reported T2-FLAIR mismatch pattern, which favors IDH-mutant non-codeleted astrocytoma, and the older age, deep midline brainstem-thalamus location, and marked enhancement, which favor IDH-wildtype high-grade glioma. DWI/ADC, perfusion, spectroscopy, susceptibility imaging, histology, and molecular testing were not available in the provided metadata.",
+  "subject_id": "EGD-0505",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently, marked enhancement, very high enhancing proportion, thick enhancing margin, deep white matter invasion, and older adult age favor a high-grade diffuse glioma, with grade 4 favored over grade 2 and over many grade 3 tumors. Features arguing against grade 4 include minimal necrosis, minimal oedema, no midline shift, absent ventricular asymmetry, and relatively small total tumor volume. Despite these mitigating features, the dominant solid enhancement pattern and adult deep infiltrative location support grade 4 as the best estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "age_years",
+      "Tumor Location"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

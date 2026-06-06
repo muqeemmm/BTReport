@@ -1,0 +1,52 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 60 years old, which is more typical for IDH-wildtype glioblastoma. Enhancement quality is marked and proportion enhancing is 35.83%, both suggestive of wildtype. However, the tumor crosses midline and involves cortex and deep white matter, which can occur in both types. The absence of T2-FLAIR mismatch (score 0.58) argues against IDH-mutant astrocytoma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves cortex and deep white matter, and eloquence (vision) is affected, which is more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often have frontal lobe preference and calcifications (not assessed here), but this tumor is parietal/occipital. The midline crossing and solitary nature don't strongly differentiate.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on MRI features, this is likely a glioblastoma IDH-wildtype. Confidence is moderate due to lack of diffusion/perfusion data.",
+  "subject_id": "EGD-0008",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The presence of necrosis (17.83% proportion) and marked enhancement strongly suggest WHO grade 4. Tumor volume is large (81.657 mL) and crosses midline, which aligns with high-grade glioma. Proportion necrosis is below typical thresholds but still present.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "CET Crosses midline"
+    ]
+  }
+}

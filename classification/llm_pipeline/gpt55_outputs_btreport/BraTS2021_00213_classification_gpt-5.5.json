@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status, the strongest MRI-derived and demographic evidence favors IDH-wildtype: age_years is 69, and the lesion is mostly enhancing with Enhancement Quality marked, Proportion Enhancing 63.61, ET Volume (mL) 4.755, and Thickness of enhancing margin >3mm, a pattern more typical of IDH-wildtype diffuse glioma than lower-grade IDH-mutant astrocytoma. The evidence against IDH-wildtype is that Tumor Location and Region Proportions place the tumor in the frontal_lobe-cortex region, Cortical involvement is present, Deep WM invasion is absent, Proportion Necrosis is very low, and Total tumor volume (mL) is small, which can be seen with IDH-mutant diffuse gliomas. Balancing these, the patient age and marked, predominantly enhancing phenotype outweigh the frontal cortical location and limited necrosis, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the enhancing phenotype argues against a classic 1p/19q-codeleted oligodendroglioma: Enhancement Quality is marked, Proportion Enhancing is 63.61, ET Volume (mL) is 4.755, and Thickness of enhancing margin is >3mm, indicating a predominantly enhancing mass rather than a more typical less avidly enhancing oligodendroglial presentation. The evidence supporting codeletion is that Tumor Location and Region Proportions identify a frontal_lobe-cortex region lesion, Cortical involvement is present, Deep WM invasion is absent, and Eloquent Brain Involvement shows no involvement, which are compatible with oligodendroglioma. Because frontal cortical location supports codeletion but the marked predominantly enhancing phenotype and older age_years argue against it, the best estimate is non-codeleted with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, or histology. The frontal cortical location is a notable oligodendroglial-pattern feature, but the patient age and marked predominantly enhancing phenotype favor IDH-wildtype glioblastoma. Very low necrotic proportion and small total volume temper confidence for grade 4 on imaging alone.",
+  "subject_id": "BraTS2021_00213",
+  "who_grade": {
+    "confidence": 0.77,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade, the imaging phenotype favors high-grade disease, most likely grade 4: Enhancement Quality is marked, Proportion Enhancing is 63.61, ET Volume (mL) is 4.755, and Thickness of enhancing margin is >3mm, indicating substantial avid enhancement; age_years is 69, which also favors aggressive adult diffuse glioma biology. Evidence arguing against grade 4 includes Proportion Necrosis 0.6 and NCR Volume (mL) 0.045, indicating little necrosis; ED Volume (mL) is limited, midline_shift_present is minimal, Asymmetrical Ventricles is absent, Ependymal (ventricular) Invasion is absent, Deep WM invasion is absent, and Total tumor volume (mL) is small. Despite limited necrosis and mass effect, the marked predominantly enhancing lesion in an older adult is more consistent with CNS WHO grade 4 than grade 2 or 3, so grade 4 is the best estimate.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

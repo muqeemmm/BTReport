@@ -1,0 +1,35 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.8338604731520323) is highly suggestive of an IDH-mutant glioma. This feature is strongly associated with IDH mutation status. The tumor's location and other characteristics do not directly contradict this association. Therefore, based on the T2-FLAIR mismatch feature, the prediction is IDH mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH-mutant astrocytomas, which are usually non-codeleted. The absence of features strongly indicative of 1p/19q co-deletion (e.g., classic oligodendroglioma features like calcifications, which are not available here) and the presence of T2-FLAIR mismatch suggests a lower likelihood of 1p/19q co-deletion. Therefore, the prediction is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS_WHO_grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 64.84) and has a substantial enhancing component (Proportion Enhancing: 4.97), with a mild enhancement quality. The presence of necrosis and the size of the tumor (Total tumor volume: 76.798 mL) are indicative of a high-grade glioma. IDH-mutant glioblastomas (WHO Grade 4) often show necrosis and irregular enhancement. Given the IDH mutation status is predicted to be mutant, and considering the presence of necrosis and significant tumor volume, the tumor is likely to be Grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01497"
+}

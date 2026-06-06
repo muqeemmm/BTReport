@@ -1,0 +1,61 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The tumor is nonenhancing (Enhancement Quality: None) with no necrosis (Proportion Necrosis: 0.0) and minimal non-enhancing core (NCR Volume: 0.001 mL). IDH-mutant gliomas often show nonenhancement and minimal necrosis, but wildtype glioblastomas can also present without enhancement initially. The tumor volume is large (24.46 mL) with extensive edema (Proportion of Oedema: 100%), which is more typical of wildtype glioblastoma. However, the absence of enhancement and necrosis argues against wildtype. Given conflicting features and lack of definitive molecular markers, IDH status is uncertain.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex (Tumor Location: frontal_lobe-cortex region) with cortical involvement (Cortical involvement: Present). Oligodendrogliomas (IDH-mutant and 1p/19q codeleted) often involve cortex and are frontal. However, IDH-wildtype gliomas (predicted above) are typically non-codeleted. Without IDH mutation, 1p/19q co-deletion is unlikely. The involvement of motor cortex (Eloquent Brain Involvement: Motor) is non-specific. Given uncertainty in IDH status and lack of definitive features, co-deletion status is indeterminate.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "Confidence scores are low (0.5) for both IDH and 1p/19q due to conflicting evidence and absence of key molecular markers. Grade prediction requires integration with molecular status.",
+  "subject_id": "BraTS2021_01747",
+  "who_grade": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None) and no necrosis (Proportion Necrosis: 0.0), which are atypical for grade 4 glioblastoma. However, the large total tumor volume (24.46 mL) with extensive edema (ED Volume: 24.459 mL) and involvement of eloquent motor cortex suggest aggressive behavior. Grade 4 gliomas typically show enhancement and necrosis, but IDH-wildtype gliomas can present without these features initially. Given the predicted IDH-wildtype status and large size, grade 4 is possible but uncertain due to lack of necrosis and enhancement.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

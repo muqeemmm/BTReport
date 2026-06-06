@@ -1,0 +1,81 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.83,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "ED Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma: the patient is young, the lesion is frontal/cortical, solitary, nonenhancing, and has no necrotic component, which is a pattern more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. Features arguing toward IDH-wildtype are limited but include deep white matter invasion, involvement of deep structures listed in the anatomical overlap regions, a midline epicenter descriptor, and a relatively large FLAIR/edema volume. Overall, the nonenhancing frontal cortical tumor in a 31-year-old outweighs the infiltrative/deep extension features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, the frontal cortical location, young adult age, nonenhancing appearance, solitary lesion, and absence of necrosis are compatible with oligodendroglioma and therefore support a codeleted prediction. However, the evidence is not specific: astrocytoma can share this nonenhancing frontal pattern, and the metadata lacks more discriminating assessed features. Deep white matter invasion, overlap with caudate/putamen/lateral ventricle, midline epicenter wording, and eloquent motor/speech-motor involvement are not classic specific markers of 1p/19q co-deletion. Because supportive location and enhancement features are present but specificity is limited, the best estimate is codeleted with low confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. Absence of enhancement and necrosis strongly favors a lower-grade diffuse glioma phenotype, but molecular subtype discrimination is limited without more specific imaging biomarkers or tissue testing. The 1p/19q call is particularly uncertain from the available fields.",
+  "subject_id": "UCSF-PDGM-266",
+  "who_grade": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Eloquent Brain Involvement",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade considered independently, the lesion is entirely nonenhancing by the provided metadata, has no enhancing tumor volume, no necrosis, is solitary, does not cross midline, and has no reported midline shift or ependymal invasion; these features favor CNS WHO grade 2 over grade 3 or 4. Features that could raise concern for higher grade include a relatively large total/FLAIR abnormality volume, deep white matter invasion, eloquent-region involvement, and overlap with deep structures, but these do not outweigh the absence of enhancement and necrosis on the available sequences. Grade 4 is especially disfavored by absent enhancement and necrosis. The best imaging estimate is CNS WHO grade 2, with moderate confidence because histologic mitotic activity and molecular grade-defining alterations are not assessable from these metadata.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

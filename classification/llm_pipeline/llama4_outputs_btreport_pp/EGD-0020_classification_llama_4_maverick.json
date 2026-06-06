@@ -1,0 +1,37 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8102820728599436, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in gliomas according to the WHO CNS5 classification. The patient's age (57 years) is not typical for IDH mutant gliomas, which are more common in younger patients, but the imaging feature takes precedence in this assessment.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH mutant gliomas that are not co-deleted for 1p/19q. The high 'T2-FLAIR Mismatch Score' supports the likelihood of an IDH mutant status but does not directly indicate co-deletion status. However, the absence of features like calcifications (not directly assessable from the given metadata) and the presence of a 'rim_core_adjacency' with a high 'adjacency_fraction' (0.8223760092262717) might suggest a non-codeleted pattern, as codeleted tumors often have different morphological characteristics. The multifocal nature and other morphological features do not strongly suggest 1p/19q co-deletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "rim_core_adjacency"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows a 'Proportion Enhancing' of 7.03% and a 'Proportion Necrosis' of 3.16%, with a 'Thickness of enhancing margin' >3mm. These features, along with the presence of enhancement and the multifocal nature of the tumor, suggest a higher grade. The presence of necrosis and enhancement typically correlates with higher grades (3 or 4). Given the IDH mutant status predicted, the presence of necrosis leans more towards a grade 4 classification, as IDH mutant glioblastomas (grade 4) can present with necrosis.",
+    "supporting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "subject_id": "EGD-0020"
+}

@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, indicating a high likelihood of T2-FLAIR mismatch, which is a characteristic feature of IDH-mutant gliomas. Additionally, the patient's age (58 years) is within the range where IDH mutations can occur, although it's on the older side. The multifocal nature of the tumor and other features like the presence of cortical involvement and mild enhancement quality are also consistent with IDH-mutant gliomas. Therefore, based on the T2-FLAIR mismatch and other supportive features, the tumor is likely IDH mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular information. However, the presence of IDH mutation (predicted with high confidence) is a prerequisite for 1p/19q co-deletion. The tumor's multifocal nature and the presence of cortical involvement might be more commonly associated with IDH-mutant astrocytomas. The T2-FLAIR mismatch, which is more typical of IDH-mutant astrocytomas, further suggests that the tumor is likely not co-deleted. Therefore, based on the available information and the typical characteristics of IDH-mutant gliomas, the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "grade": {
+    "reasoning": "The tumor is predicted to be IDH mutant and non-codeleted, suggesting it is likely an astrocytoma. The presence of mild enhancement and a relatively large edema volume could indicate a higher grade. However, the absence of necrosis (Proportion Necrosis is 0.81, which is not extremely high) and the presence of T2-FLAIR mismatch, which is more typical of lower-grade IDH-mutant astrocytomas, complicate the grading. Given the patient's age and the tumor's multifocal nature, a higher grade is plausible. The WHO grade for IDH-mutant astrocytomas can range from 2 to 4. Considering the multifocality and the age of the patient, a grade of 3 or 4 is possible. However, without clear indicators of high-grade features like significant necrosis or high mitotic activity (not directly assessable from the given metadata), assigning a grade of 4 is challenging. Therefore, a grade of 3 is a reasonable prediction, balancing between the indicators of potential aggressiveness and the characteristics more typical of lower-grade tumors.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "subject_id": "EGD-0523"
+}

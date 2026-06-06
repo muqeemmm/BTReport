@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (28 years) and the MRI characteristics of the tumor (non-enhancing, solitary, no ependymal invasion, no deep white matter invasion) are more commonly associated with IDH mutant gliomas. IDH mutant gliomas are more likely to occur in younger adults and often present with a more favorable prognosis. The absence of enhancement and necrosis also aligns with a lower grade glioma, which is more typical of IDH mutant tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in the temporal-cortex region and is non-enhancing, which are characteristics that can be associated with 1p/19q codeleted gliomas. However, the definitive determination of 1p/19q codeletion status typically requires molecular testing. Based on the available MRI metadata, we can make an educated guess. The presence of a non-enhancing tumor in a younger patient slightly favors the possibility of an IDH mutant glioma, which can be either codeleted or non-codeleted. However, codeletion is more commonly associated with oligodendrogliomas, which often present with calcifications (not assessed here) and are typically located in the frontal lobe. The temporal location is less typical for codeleted tumors.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has a relatively small volume (0.898 mL), and is classified as having a high proportion of edema (99.99%). The absence of enhancement and necrosis, along with the patient's age, suggests a lower grade glioma. However, the presence of significant edema relative to the tumor volume is somewhat unusual. Given the patient's age and the tumor's characteristics, a grade 2 glioma is plausible. The lack of aggressive features like enhancement or large size supports a lower grade.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Proportion of Oedema"
+    ],
+    "prediction": 2,
+    "confidence": 0.7
+  },
+  "subject_id": "EGD-0378"
+}

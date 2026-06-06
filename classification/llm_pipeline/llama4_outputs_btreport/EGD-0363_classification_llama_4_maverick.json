@@ -1,0 +1,52 @@
+{
+  "id": "patient_1293",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (49 years) and the presence of a large, enhancing tumor with necrosis (Proportion Necrosis: 6.01%) and significant edema (ED Volume: 3.216 mL) are more typical of glioblastoma, which is often IDH wildtype. The tumor's location in the frontal lobe, insula, and cortex, with deep white matter invasion, also aligns with aggressive tumor behavior. While the absence of ependymal invasion and the tumor being solitary could be seen in various glioma subtypes, the overall profile leans towards a more aggressive, IDH wildtype tumor.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Tumor Location",
+        "Deep WM invasion",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Cortical involvement"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The tumor's location and characteristics (e.g., frontal lobe, insula involvement, significant enhancement, and necrosis) are not typical for 1p/19q codeleted tumors, which are more commonly associated with oligodendrogliomas. These tumors often present with more indolent features and calcifications (not assessed here). The presence of necrosis and marked enhancement suggests a more aggressive tumor type, less likely to be codeleted. Thus, based on the available metadata, the tumor is likely non-codeleted.",
+      "supporting_features": [
+        "Tumor Location",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Cortical involvement"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.75
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis (6.01%) and significant edema, along with deep white matter invasion and marked enhancement, are characteristic features of high-grade gliomas. The tumor's aggressive features, such as necrosis and significant enhancement, are hallmarks of glioblastoma, corresponding to CNS WHO grade 4. The patient's age and the tumor's characteristics align with this diagnosis.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Enhancement Quality",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0363"
+}

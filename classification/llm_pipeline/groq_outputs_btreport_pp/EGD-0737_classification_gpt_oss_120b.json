@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0737",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present = 1.0, high mismatch score 0.93) is a validated imaging surrogate for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. Mild enhancement, lack of midline crossing, and absent ependymal invasion further support a lower\u2011grade, IDH\u2011mutant lesion. The relatively high necrosis proportion (33%) is atypical for pure IDH\u2011mutant low\u2011grade tumors and could argue for wildtype, but the mismatch evidence outweighs this.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is specific for IDH\u2011mutant astrocytoma, which by definition lacks 1p/19q codeletion. No imaging features such as homogeneous T2 signal or calcification that would suggest an oligodendroglioma are present, making codeletion unlikely.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "Necrosis proportion of 33% and moderate enhancement (48% of tumor) suggest a higher grade than WHO grade 2, while the mild enhancement quality, absence of crossing midline, and no ependymal invasion argue against grade 4. The combination best fits WHO grade 3 (anaplastic astrocytoma).",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Midline Shift Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "CET Crosses midline"
+    ],
+    "prediction": 3,
+    "confidence": 0.78
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Advanced imaging (diffusion, perfusion, spectroscopy) is unavailable, limiting certainty. Necrosis is relatively high, which could raise concern for a higher grade, but lack of strong enhancement and midline crossing makes WHO grade 4 unlikely. The diagnosis remains a best estimate based on available MRI metadata."
+}

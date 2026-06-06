@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (23 years) and the presence of certain MRI features such as ependymal invasion, deep white matter invasion, and cortical involvement are suggestive of a glioma. IDH mutant gliomas are more common in younger adults. The presence of necrosis (Proportion Necrosis: 56.03) and the large tumor size (Total tumor volume: 397.765 mL) could be seen in both IDH mutant and wildtype gliomas, but the age of the patient leans towards an IDH mutant status. However, the absence of specific molecular markers or spectroscopy data (like 2HG) makes this prediction based on demographic and morphological features.",
+    "supporting_features": [
+      "age_years",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "1p/19q co-deletion is often associated with oligodendroglial features and is more likely in tumors with certain characteristics such as frontal lobe involvement and calcifications (not directly assessable from the given data). The tumor involves the frontal lobe and cortex, which could be consistent with an oligodendroglioma, a type of glioma that can have 1p/19q co-deletion. However, without direct molecular or histopathological evidence, or specific imaging features like calcifications, this remains speculative. IDH mutant status is often a prerequisite for 1p/19q co-deletion.",
+    "supporting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 56.03), large tumor size (Total tumor volume: 397.765 mL), and significant edema (ED Volume: 174.684 mL) with midline shift are indicative of a high-grade glioma. The WHO CNS5 classification typically associates IDH mutant gliomas with lower grades (2 or 3) if they are without certain aggressive features, and higher grades (3 or 4) if they have features like necrosis or high mitotic activity. Given the necrosis and large size, a higher grade is likely. For IDH mutant gliomas, the presence of necrosis typically indicates a grade 4 tumor if it's an astrocytoma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0585"
+}

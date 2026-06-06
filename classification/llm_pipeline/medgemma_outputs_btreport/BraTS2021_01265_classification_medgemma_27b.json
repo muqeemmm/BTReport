@@ -1,0 +1,40 @@
+{
+  "subject_id": "BraTS2021_01265",
+  "idh": {
+    "reasoning": "The patient is 85 years old. Older age (>65-70) is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it significantly increases the likelihood of IDH-wildtype status. No other features in the metadata strongly suggest IDH-mutant status (e.g., younger age, specific location, or imaging characteristics typically associated with lower-grade gliomas). The tumor size (58.149 mL) and marked enhancement are more common in higher-grade tumors, which are more frequently IDH-wildtype in older adults. Therefore, based primarily on the advanced age, the prediction leans towards IDH-wildtype.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "There are no features provided in the metadata that specifically suggest 1p/19q co-deletion. This deletion is characteristic of oligodendrogliomas, which are typically IDH-mutant and grade 2 or 3. Given the prediction of IDH-wildtype based on age, 1p/19q co-deletion is highly unlikely as it is mutually exclusive with IDH-wildtype status in diffuse gliomas according to WHO CNS5 criteria. Therefore, the prediction is non-codeleted.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (85 years) strongly suggests an IDH-wildtype glioma. IDH-wildtype diffuse gliomas are classified as WHO grade 4 (glioblastoma). The tumor volume (58.149 mL), marked enhancement ('Enhancement Quality': 'Marked'), high proportion enhancing (64%), presence of cortical involvement ('Cortical involvement': 'Present'), and thickness of enhancing margin (>3mm) are all features consistent with a high-grade glioma, specifically glioblastoma (WHO grade 4). While deep white matter invasion is absent ('Deep WM invasion': 'Absent'), this does not exclude grade 4 in the context of other features and likely IDH-wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Thickness of enhancing margin",
+      "idh"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

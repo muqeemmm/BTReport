@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00140",
+  "idh": {
+    "reasoning": "The key feature is the `T2-FLAIR Mismatch Present`: 1.0, which is a highly specific sign for IDH-mutant astrocytomas. The patient's age of 46 is also more consistent with an IDH-mutant tumor than a primary IDH-wildtype glioblastoma. However, there is strong contradictory evidence from the `Enhancement Quality`: 'Marked' and `Thickness of enhancing margin`: '>3mm', which are classic features of IDH-wildtype glioblastoma. The presence of necrosis (`NCR Volume (mL)` > 0) also favors IDH-wildtype. Given the high molecular specificity of the T2-FLAIR mismatch sign, an IDH-mutant status is favored, though with low confidence due to the conflicting enhancement and necrosis features.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The most compelling feature is the `T2-FLAIR Mismatch Present`: 1.0. This sign is considered specific for IDH-mutant astrocytomas, which are, by definition, 1p/19q non-codeleted. This strongly argues against an oligodendroglioma (which would be codeleted). The main feature suggesting codeletion is the very sharp tumor border, indicated by a thin `Transition Zone Thickness (FLAIR)` median of 0.5 mm. However, the T2-FLAIR mismatch sign is a more direct surrogate for the astrocytic lineage. Therefore, a non-codeleted status is predicted with high confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is based on strong radiological evidence of high-grade malignancy. The presence of necrosis (`NCR Volume (mL)`: 0.06) is a key feature that, if histologically confirmed, defines a grade 4 tumor in both IDH-mutant and IDH-wildtype gliomas. This is strongly supported by the `Enhancement Quality`: 'Marked' and the `Thickness of enhancing margin`: '>3mm', which indicate aggressive neovascularity. While the `T2-FLAIR Mismatch Present` is often associated with lower-grade tumors, its presence does not preclude a grade 4 diagnosis, which can arise from malignant transformation. The evidence for grade 4 is compelling.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents conflicting imaging features. The definitive T2-FLAIR mismatch sign strongly suggests an IDH-mutant astrocytoma. However, the marked enhancement and presence of necrosis are classic indicators of a WHO grade 4 lesion. The most parsimonious diagnosis is an Astrocytoma, IDH-mutant, CNS WHO grade 4, likely representing a tumor that has undergone high-grade transformation. The sharp FLAIR border is an atypical finding for an astrocytoma."
+}

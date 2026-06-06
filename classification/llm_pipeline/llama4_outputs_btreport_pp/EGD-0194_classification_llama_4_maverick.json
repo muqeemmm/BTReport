@@ -1,0 +1,46 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (71 years) and the presence of a multifocal, mildly enhancing tumor with a large edema volume (124.83 mL) and a relatively small enhancing tumor volume (4.34 mL) are more typical of glioblastoma, IDH-wildtype. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.439646429845156) also argues against IDH-mutant astrocytoma. The tumor's location in the temporal cortex region and its multifocal nature further support a more aggressive, wildtype tumor. While the lack of ependymal invasion and deep white matter invasion are noted, these do not strongly influence IDH status directly.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "ED Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q_co_deletion_status": {
+    "reasoning": "Given the prediction of IDH-wildtype status with high confidence, the likelihood of 1p/19q co-deletion is low because co-deletion is typically associated with IDH-mutant oligodendrogliomas. The presence of a mildly enhancing, multifocal tumor without specific features suggestive of oligodendroglioma (like calcifications, which are not available in the metadata but are often associated with co-deleted tumors) further supports non-codeleted status.",
+    "supporting_features": [
+      "idh_mutation_status",
+      "Multifocal or Multicentric",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor's characteristics, such as being multifocal, having a large edema volume, and a relatively small but enhancing tumor volume, along with the patient's age, are highly suggestive of glioblastoma, WHO grade 4. The absence of features like T2-FLAIR mismatch and the presence of mild enhancement also align with glioblastoma, IDH-wildtype, which is classified as WHO grade 4.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Score",
+      "idh_mutation_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0194"
+}

@@ -1,0 +1,84 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter",
+      "Total tumor volume (mL)",
+      "Number of lesions",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The available metadata is limited because there is no measurable segmented tumor, but the imaging phenotype described by Enhancement Quality, ET Volume (mL), Proportion Enhancing, Proportion Necrosis, ED Volume (mL), Proportion of Oedema, midline_shift_present, and Asymmetrical Ventricles is nonenhancing, non-necrotic, non-edematous, and without meaningful mass effect, which favors a less aggressive adult diffuse glioma phenotype and modestly supports IDH-mutant status over IDH-wildtype glioblastoma-type biology. Arguing against a confident IDH-mutant call, Tumor Location is brainstem rather than a typical supratentorial hemispheric location, Cortical involvement and Deep WM invasion are absent, Side of Tumor Epicenter is un-defined, and Total tumor volume (mL), Number of lesions, and Lesion Sizes APxTVxCC (cm) provide very sparse tumor characterization. Overall, the nonenhancing low-mass-effect pattern slightly outweighs the atypical location and absent measurable lesion data, so the best estimate is IDH-mutant with low confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Text Report"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, Tumor Location in the brainstem, Cortical involvement being absent, Deep WM invasion being absent, Side of Tumor Epicenter being un-defined, and the lack of measurable tumor in Total tumor volume (mL), Number of lesions, and Lesion Sizes APxTVxCC (cm) do not support the usual cortical or subcortical hemispheric pattern expected for oligodendroglioma; this favors non-codeleted status. Arguing against certainty, Enhancement Quality, ET Volume (mL), Proportion Enhancing, ED Volume (mL), Proportion of Oedema, and the Text Report describe a nonenhancing lesion without edema, which can be seen in lower-grade oligodendroglioma but is nonspecific. Because the location and absence of cortical involvement weigh more strongly against oligodendroglioma than the nonspecific nonenhancing phenotype weighs for it, the best estimate is 1p/19q non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter",
+      "Total tumor volume (mL)",
+      "Number of lesions",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "overall_comment": "Predictions are limited by absence of DWI/ADC, perfusion, spectroscopy, SWI/GRE, and by the metadata showing no measurable segmented tumor volume despite a text description of a nonenhancing brainstem lesion. Molecular testing is required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0739",
+  "who_grade": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Tumor Location",
+      "Total tumor volume (mL)",
+      "Number of lesions",
+      "Lesion Sizes APxTVxCC (cm)",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade, Enhancement Quality, ET Volume (mL), Proportion Enhancing, Proportion Necrosis, NCR Volume (mL), ED Volume (mL), Proportion of Oedema, midline_shift_present, Asymmetrical Ventricles, Ependymal (ventricular) Invasion, Deep WM invasion, Multiple satellites present, and Multifocal or Multicentric show no enhancement, no necrosis, no edema, no ventricular or deep white matter invasion, no satellites, solitary disease, and no appreciable mass effect, which favors CNS WHO grade 2 over grade 3 or 4. Arguing against certainty, Tumor Location is brainstem, and Total tumor volume (mL), Number of lesions, and Lesion Sizes APxTVxCC (cm) indicate absent measurable segmented tumor; n_slices_with_shift and max_shift_mm show some measured shift even though midline_shift_present is No. The absence of enhancement, necrosis, edema, invasion, and mass effect supports grade 2, but the confidence is limited by sparse measurable-tumor data.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Multifocal or Multicentric",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

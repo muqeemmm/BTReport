@@ -1,0 +1,44 @@
+{
+  "subject_id": "BraTS2021_01746",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present = 1.0, high mismatch score 0.889) is a well\u2011described imaging surrogate for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. Conversely, the tumor shows marked contrast enhancement, necrosis (Proportion Necrosis = 23.92) and crosses the midline, features that are more typical of IDH\u2011wildtype glioblastoma. We weigh the strong positive surrogate against these opposing signs and conclude the balance favors IDH\u2011mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "CET Crosses midline"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.73
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is characteristically absent in 1p/19q\u2011codeleted oligodendroglioma and present in IDH\u2011mutant, non\u2011codeleted astrocytoma. No imaging evidence of features typical for codeletion (e.g., calcifications, homogeneous cortical involvement) is provided, so the balance supports a non\u2011codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement (Enhancement Quality = Marked), a high necrosis proportion (Proportion Necrosis = 23.92), crossing of the midline (CET Crosses midline = True), ependymal invasion, large total tumor volume (Total tumor volume = 243.565\u202fmL) and a thick enhancing margin (>3mm) are typical of high\u2011grade (WHO grade\u202f4) glioma. Low\u2011grade tumors rarely exhibit such necrosis or strong enhancement, leading to a grade\u202f4 prediction.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.78
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty, especially for distinguishing IDH\u2011mutant grade\u202f4 from IDH\u2011wildtype glioblastoma. T2\u2011FLAIR mismatch strongly suggests IDH\u2011mutant, non\u2011codeleted status, but advanced molecular imaging would be needed for definitive confirmation."
+}

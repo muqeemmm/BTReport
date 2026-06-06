@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0050",
+  "idh": {
+    "reasoning": "Presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present = 1.0, high T2-FLAIR Mismatch Score = 0.875) is a validated imaging surrogate for IDH\u2011mutant diffuse glioma. This strongly supports an IDH\u2011mutant status. The patient\u2019s older age (age_years = 70) and the relatively high necrotic component (Proportion Necrosis = 29.83%) are more typical of IDH\u2011wildtype glioblastoma and therefore argue against mutation. Overall the mismatch evidence outweighs the age and necrosis, leading to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2-FLAIR mismatch also favors an IDH\u2011mutant astrocytoma, which by definition lacks 1p/19q codeletion. No imaging features such as marked calcification or homogeneous T2 signal that would suggest oligodendroglioma are present. Therefore the lesion is predicted to be 1p/19q non\u2011codeleted. Mild enhancement (Enhancement Quality = Mild) does not provide evidence for codeletion and thus does not contradict the prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "Necrotic component is substantial (Proportion Necrosis = 29.83%) and necrosis is a histologic criterion for WHO grade\u202f4 in IDH\u2011mutant astrocytoma. The lesion also shows ependymal invasion (Ependymal (ventricular) Invasion = Present) and edema crossing the midline (Edema crosses midline = True), both features associated with higher grade. Conversely, the enhancement is only mild (Enhancement Quality = Mild) and the proportion of enhancing tumor is modest (Proportion Enhancing = 14.71%), which are more typical of lower grades. The presence of necrosis outweighs the modest enhancement, leading to a grade\u202f4 prediction.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Prediction relies on imaging surrogate T2\u2011FLAIR mismatch; lack of molecular testing and absence of advanced sequences (DWI, perfusion, spectroscopy) limit certainty. Necrosis assessment may be affected by segmentation; grade could be over\u2011estimated."
+}

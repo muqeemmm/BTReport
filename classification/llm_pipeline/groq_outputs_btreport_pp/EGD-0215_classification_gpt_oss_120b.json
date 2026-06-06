@@ -1,0 +1,54 @@
+{
+  "subject_id": "EGD-0215",
+  "idh": {
+    "reasoning": "The lesion is non\u2011enhancing (Enhancement Quality: None, Proportion Enhancing: 0.0) and lacks necrosis (Proportion Necrosis: 0.0), features that favor an IDH\u2011mutant lower\u2011grade glioma over an IDH\u2011wildtype glioblastoma, which typically enhances and necroses. Cortical involvement (Cortical involvement: Present) also aligns with IDH\u2011mutant tumors. However, the patient is older (age_years: 61) and the T2\u2011FLAIR mismatch is absent (T2-FLAIR Mismatch Present: 0.0, T2-FLAIR Mismatch Score: 0.4709), which reduces confidence for IDH\u2011mutant astrocytoma. Balancing these, the most likely status is IDH\u2011mutant but with moderate certainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Absence of contrast enhancement (Enhancement Quality: None) and a solitary cortical lesion (Cortical involvement: Present, Multifocal or Multicentric: Solitary) are typical of oligodendroglioma, which is 1p/19q\u2011codeleted. The lack of T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) further argues against an IDH\u2011mutant astrocytoma and leans toward a codeleted tumor. No imaging evidence (e.g., calcifications) directly confirms codeletion, so the prediction remains tentative.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0), no necrosis (Proportion Necrosis: 0.0), a modest total volume (Total tumor volume (mL): 33.269), and does not cross the midline (Edema crosses midline: False, CET Crosses midline: False). These imaging characteristics are most consistent with a WHO grade 2 diffuse glioma. The patient\u2019s age (age_years: 61) and eloquent brain involvement (Eloquent Brain Involvement: Speech motor and Motor) raise some concern for higher grade, but the lack of high\u2011risk imaging features keeps the grade estimate at 2 with reasonable confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "Midline_shift_present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests a non\u2011enhancing, low\u2011grade diffuse glioma. Absence of T2\u2011FLAIR mismatch and lack of calcification data limit certainty about 1p/19q status. Advanced sequences (DWI, perfusion, spectroscopy) are unavailable, which would help refine IDH and grade assessment."
+}

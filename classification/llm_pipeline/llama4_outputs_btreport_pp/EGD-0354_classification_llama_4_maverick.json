@@ -1,0 +1,38 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7985435450645626, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in gliomas according to the WHO CNS5 classification. The age of the patient (55 years) is not particularly indicative of IDH status as it is not strongly correlated with either mutant or wildtype status without other contextual information.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are more likely to have 1p/19q co-deletion. Given the strong indication of IDH mutation from the T2-FLAIR mismatch, and without specific features directly indicating 1p/19q co-deletion (such as specific morphological or signal characteristics typical of oligodendrogliomas), it is less likely that this tumor is codeleted. The absence of clear indicators for 1p/19q co-deletion in the provided metadata leans towards a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows marked enhancement, significant necrosis (Proportion Necrosis: 9.1%), and a large size (Total tumor volume: 165.227 mL), which are features concerning for a higher grade. The presence of ependymal invasion and deep white matter invasion also suggests aggressiveness. While the T2-FLAIR mismatch suggests IDH mutation, IDH-mutant glioblastomas (Grade 4) can present with these aggressive features. The age of the patient and the presence of necrosis are particularly indicative of a higher grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0354"
+}

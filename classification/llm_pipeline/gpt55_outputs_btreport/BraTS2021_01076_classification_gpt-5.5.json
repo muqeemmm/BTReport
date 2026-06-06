@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.83,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favor IDH-wildtype status because the patient is older, and the tumor shows an enhancing component with very large edema burden and ependymal invasion, a pattern more typical of aggressive IDH-wildtype diffuse glioma. Supporting fields include age_years, ET Volume (mL), Proportion Enhancing, ED Volume (mL), Proportion of Oedema, Ependymal (ventricular) Invasion, and Enhancement Quality. Features arguing against IDH-wildtype include a cortical parietal location, mild rather than florid enhancement, very low necrotic proportion, solitary disease, and no midline crossing, which can be seen in lower-grade or IDH-mutant glioma. Overall, the age and aggressive MRI phenotype outweigh these counterfeatures, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest available metadata favor a non-codeleted tumor: marked edema, measurable enhancement, ependymal invasion, and older age are less typical for classic oligodendroglioma than for non-codeleted diffuse glioma. Supporting fields include age_years, ED Volume (mL), Proportion of Oedema, ET Volume (mL), Proportion Enhancing, and Ependymal (ventricular) Invasion. Features arguing against non-codeletion are the parietal cortical location and mild enhancement, since oligodendrogliomas often involve cortex and can occur in frontal/parietal cortical-subcortical regions. However, no calcification or other oligodendroglioma-specific marker is available, and the aggressive edema/enhancement pattern supports non-codeleted status overall.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structural MRI metadata without diffusion, perfusion, spectroscopy, susceptibility, or histopathology. The strongest pattern is an older adult with a solitary enhancing, highly edematous lesion and ependymal invasion, supporting glioblastoma, IDH-wildtype. Cortical parietal location and mild enhancement introduce some uncertainty, particularly for 1p/19q status.",
+  "subject_id": "BraTS2021_01076",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "For grade considered independently, the metadata favor CNS WHO grade 4 because there is a definite enhancing tumor component, very extensive edema, ependymal invasion, and substantial total tumor volume in an older adult, all of which support high-grade biology. Supporting fields include age_years, ET Volume (mL), Proportion Enhancing, ED Volume (mL), Proportion of Oedema, Ependymal (ventricular) Invasion, Total tumor volume (mL), and Thickness of enhancing margin. Features arguing against grade 4 include only mild enhancement, very low necrotic proportion, small necrotic/non-enhancing core volume, no reported midline shift, a solitary lesion without satellites, and modest linear lesion dimensions, which could fit grade 3 or less commonly grade 2. Despite these counterfeatures, the enhancement plus extensive edema and ependymal invasion most strongly support grade 4.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

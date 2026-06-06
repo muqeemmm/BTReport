@@ -1,0 +1,64 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the most specific MRI marker provided is a positive T2-FLAIR mismatch, which supports an IDH-mutant astrocytic glioma when present. The absence of necrosis also does not favor the classic imaging pattern of an aggressive IDH-wildtype glioblastoma. Features arguing against IDH mutation include advanced age, measurable enhancement, deep white-matter invasion, and a large edematous component, all of which are more common in IDH-wildtype tumors. Balancing these, the T2-FLAIR mismatch is a strong molecular-imaging clue, but the patient age and enhancement reduce certainty; the conclusion is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the positive T2-FLAIR mismatch supports a non-codeleted IDH-mutant astrocytoma rather than oligodendroglioma. The lesion involves temporal, frontal, cortical, and insular regions, and cortical involvement can be seen in oligodendroglioma, so those fields provide some counterweight toward possible codeletion, but they are not specific. No provided metadata demonstrates a classic oligodendroglial imaging signature, and the T2-FLAIR mismatch weighs most strongly toward non-codeleted status; the conclusion is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "overall_comment": "Prediction is limited by absence of DWI/ADC, perfusion, MR spectroscopy, and susceptibility/calcification-sensitive imaging. The strongest molecular-imaging clue is the reported T2-FLAIR mismatch, but the patient age and enhancing/edematous phenotype make IDH status less certain than it would be in a younger, nonenhancing tumor.",
+  "subject_id": "BraTS2021_00621",
+  "who_grade": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, the presence of measurable enhancement, solid enhancing tissue, deep white-matter invasion, and substantial edema support a higher-grade diffuse glioma rather than a purely low-grade lesion. However, the absence of necrosis, no midline shift, absent ventricular asymmetry, absent ependymal invasion, and only mild enhancement argue against a confident imaging diagnosis of grade 4. These features are more compatible with an intermediate/high-grade but non-necrotic tumor; the conclusion is CNS WHO grade 3.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

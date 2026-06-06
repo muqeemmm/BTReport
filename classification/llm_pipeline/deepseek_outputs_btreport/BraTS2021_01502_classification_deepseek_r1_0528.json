@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (33 years old), which is more common in IDH-mutant gliomas. The tumor is non-enhancing ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0), which is typical for IDH-mutant gliomas. However, the absence of enhancement is not exclusive to IDH-mutant tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex ('Cortical involvement': 'Present') and deep white matter ('Deep WM invasion': 'Present'), which is more characteristic of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas typically have cortical involvement but less deep white matter invasion. However, without specific molecular testing, this is indirect evidence.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Based on the MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The absence of enhancement and young age support IDH mutation. Cortical involvement with deep white matter invasion suggests astrocytoma rather than oligodendroglioma. Confidence is moderate due to lack of direct molecular markers.",
+  "subject_id": "BraTS2021_01502",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement ('Enhancement Quality': 'None') and no necrosis ('Proportion Necrosis': 32.74% is listed but 'ET Volume (mL)' is 0.0, suggesting no enhancing tumor; necrosis is typically associated with enhancing tumor in high-grade gliomas). The absence of necrosis and enhancement suggests WHO grade 2. However, the proportion necrosis field is non-zero, which may indicate some necrotic component, but since ET volume is 0, this might be misinterpretation.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ]
+  }
+}

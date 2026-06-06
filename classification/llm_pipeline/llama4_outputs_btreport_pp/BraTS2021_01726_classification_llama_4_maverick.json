@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (45 years) and the presence of a large, bilateral tumor with significant edema and ependymal invasion suggest a high-grade glioma. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.4, T2-FLAIR Mismatch Degree: -0.6635373949347061) argues against an IDH-mutant, 1p/19q non-codeleted glioma, as T2-FLAIR mismatch is a characteristic feature of IDH-mutant astrocytomas. The presence of mild enhancement and necrosis (Proportion Necrosis: 12.81%) is more typical of glioblastoma, which is often IDH-wildtype. Therefore, based on the available metadata, the tumor is more likely to be IDH wildtype.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, bilateral tumor with significant edema and ependymal invasion, along with the absence of T2-FLAIR mismatch, suggests a glioblastoma or an IDH-wildtype glioma. 1p/19q co-deletion is more commonly associated with oligodendrogliomas, which are typically IDH-mutant and have a better prognosis. The metadata does not strongly support the presence of 1p/19q co-deletion, as there is no clear indication of the characteristic features of oligodendroglioma, such as calcifications (not assessed here). Therefore, it is more likely that the tumor is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features, including large size (Lesion Sizes APxTVxCC: 5.5 x 5.0 x 5.6 cm), significant edema (ED Volume: 109.467 mL), necrosis (Proportion Necrosis: 12.81%), and ependymal invasion. These characteristics are typical of high-grade gliomas. The presence of mild enhancement and a large necrotic core further supports a diagnosis of glioblastoma, WHO grade 4. The absence of T2-FLAIR mismatch also argues against a lower-grade IDH-mutant astrocytoma.",
+    "supporting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01726"
+}

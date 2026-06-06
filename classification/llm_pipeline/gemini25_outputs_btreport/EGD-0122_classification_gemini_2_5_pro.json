@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0122",
+  "idh": {
+    "reasoning": "The patient's age of 40 is younger than the typical presentation for IDH-wildtype gliomas. The most compelling evidence is the near-complete absence of contrast enhancement, with an enhancing volume of only 0.02 mL and a proportion of enhancement of just 0.04%. This lack of enhancement is a classic radiological feature of IDH-mutant gliomas. The frontal lobe location is also common for this molecular subtype. There is minimal evidence to support an IDH-wildtype prediction.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This is a challenging distinction based on the available data. The frontal lobe location and significant cortical involvement are features often seen in 1p/19q co-deleted oligodendrogliomas. However, the high proportion of edema (57.53%) relative to the tumor size is more characteristic of the infiltrative nature of astrocytomas (1p/19q non-codeleted). In the absence of other specific features like calcification or well-defined borders, the extensive edema is the strongest differentiating feature, favoring a non-codeleted status.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The imaging features strongly suggest a lower-grade tumor. The primary evidence is the profound lack of contrast enhancement (ET Volume 0.02 mL, Proportion Enhancing 0.04%). This is the cardinal sign of a low-grade (WHO grade 2) glioma. Furthermore, there is no evidence of other aggressive features such as deep white matter invasion or ependymal invasion. While the tumor is moderately large (Total tumor volume 56.686 mL), this is not sufficient to suggest a higher grade in the absence of enhancement or necrosis. The high 'Proportion Necrosis' is considered an artifact of the segmentation label representing non-enhancing tumor, not true biological necrosis, given the lack of an enhancing rim. Therefore, the evidence overwhelmingly supports a grade 2 classification.",
+    "supporting_features": [
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings in this 40-year-old patient are highly characteristic of a low-grade, IDH-mutant glioma, given the frontal location and near-absent contrast enhancement. The significant edema suggests an astrocytic lineage. The integrated radiological diagnosis is therefore an Astrocytoma, IDH-mutant, CNS WHO grade 2."
+}

@@ -1,0 +1,38 @@
+{
+  "subject_id": "BraTS2021_01076",
+  "idh": {
+    "reasoning": "The patient is 67 years old. Older age (>60) is associated with IDH-wildtype gliomas, while younger age is associated with IDH-mutant gliomas. The tumor is solitary, located in the parietal cortex, and shows cortical involvement and ependymal invasion. While these features can be seen in both IDH-mutant and IDH-wildtype tumors, the older age is a significant factor pointing towards IDH-wildtype status. There are no features strongly suggesting IDH-mutant status (e.g., very young age, specific location like temporal lobe). Therefore, based primarily on age, the prediction leans towards IDH-wildtype.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not contain any information directly related to 1p/19q co-deletion status (e.g., specific imaging features strongly associated with it, or molecular data). The tumor characteristics provided (age 67, solitary parietal lesion, cortical involvement, ependymal invasion) are not specific predictors of 1p/19q co-deletion status. 1p/19q co-deletion is typically associated with oligodendrogliomas, which are often IDH-mutant and occur in younger patients, but can occur in older patients as well. Without specific features or molecular data, predicting co-deletion status is highly uncertain.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 67 years old with a solitary glioma involving the parietal cortex and extending to the thalamus, caudate, putamen, hippocampus and left lateral ventricle. The tumor shows cortical involvement and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'). There is no deep white matter invasion ('Deep WM invasion': 'Absent'). Enhancement is mild ('Enhancement Quality': 'Mild') with a thick margin (>3mm). The proportion of enhancing tissue is relatively low (7.98%), while edema constitutes a large proportion (90.81%). Given the patient's age (>60), the presence of ependymal invasion, and cortical involvement without deep white matter invasion or significant enhancement, this tumor likely represents a high-grade glioma (WHO Grade 4) if IDH-wildtype or potentially Grade 3 if IDH-mutant (though less likely given age). However, ependymal invasion itself often points towards higher grade pathology. Considering the age and ependymal spread without deep WM invasion or strong enhancement suggests a Grade 4 glioma.",
+    "supporting_features": [
+      "age_years",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "IDH-wildtype diffuse astrocytoma, WHO Grade 4.",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's age (67) strongly suggests an IDH-wildtype glioma according to WHO CNS5 criteria. The tumor morphology (solitary parietal lesion with cortical involvement and ependymal spread but no deep white matter invasion) combined with the age points towards a WHO Grade IV glioma (glioblastoma). The lack of specific features for co-deletion makes predicting that status unreliable; non-codeleted is assumed as default given the likely IDH-wildtype status."
+}

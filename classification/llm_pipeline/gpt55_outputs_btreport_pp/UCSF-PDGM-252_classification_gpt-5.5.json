@@ -1,0 +1,100 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the metadata favors an IDH-mutant diffuse glioma because the patient is young for adult diffuse glioma, and the lesion is described as nonenhancing, solitary, cortical, without necrosis, without ependymal invasion, without deep white matter invasion, without midline crossing, and without tumor-associated ventricular asymmetry or meaningful mass effect. These features are more typical of lower-grade IDH-mutant glioma than IDH-wildtype glioblastoma, which more often shows aggressive enhancement, necrosis, infiltrative deep spread, and mass effect. Evidence against IDH-mutant status is limited: the reported midline epicenter is atypical for many lower-grade hemispheric IDH-mutant gliomas, and absence of a T2-FLAIR mismatch does not provide supportive evidence for an IDH-mutant astrocytoma pattern. Overall, the balance of available MRI metadata supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Text Report",
+      "Tumor Location",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "ED Volume (mL)",
+      "Region Proportions",
+      "Multiple satellites present",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "NCR Volume (mL)",
+      "Tumor Core Volume (mL)",
+      "n_components_enhancing",
+      "rim_core_adjacency"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the evidence is limited and somewhat mixed. A non-codeleted astrocytoma is favored because the lesion is posterior rather than predominantly frontal, with occipital and parietal involvement, and there is no reported classic frontal-predominant oligodendroglioma pattern in the structured location fields. The available metadata also lacks assessable calcification-sensitive imaging, so a key oligodendroglioma-supporting feature cannot be used. Evidence that could support codeletion includes young adult age, cortical involvement, nonenhancing appearance, and absent T2-FLAIR mismatch, all of which can be seen in oligodendroglioma, but these are not specific. Given the posterior location and absence of stronger codeletion-specific imaging features in the provided metadata, the best estimate is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Text Report",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or calcification assessment. The lesion is entirely nonenhancing/FLAIR-abnormal in the metadata, with no measurable enhancing or necrotic core, supporting a lower-grade diffuse glioma phenotype but limiting molecular specificity. Histopathology and molecular testing remain required for definitive WHO CNS5 classification.",
+  "subject_id": "UCSF-PDGM-252",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "Tumor Core Volume (mL)",
+      "NCR Volume (mL)",
+      "Number of lesions"
+    ],
+    "prediction": 2,
+    "reasoning": "For CNS WHO grade, the metadata most strongly favors grade 2. The lesion is nonenhancing, has no enhancing tumor volume, no necrosis, no non-contrast-enhancing tumor core, is solitary, does not cross midline, lacks ependymal invasion, lacks deep white matter invasion, has no midline shift, and shows no tumor-associated ventricular asymmetry. These features argue against high-grade imaging behavior. Grade 3 can occasionally be nonenhancing, so absence of enhancement does not exclude it, but there are no provided imaging markers of anaplasia. Grade 4 is disfavored because there is no enhancement, necrosis, ependymal spread, multifocality, or substantial mass effect. The main uncertainty is that the segmented abnormality is represented entirely as edema/FLAIR abnormality with an empty tumor core, which may reflect limitations of segmentation rather than true biology. Overall, the imaging metadata supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Tumor Core Volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Text Report",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "n_components_enhancing",
+      "rim_core_adjacency"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

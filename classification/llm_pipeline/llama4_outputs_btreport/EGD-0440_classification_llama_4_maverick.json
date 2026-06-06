@@ -1,0 +1,43 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (60 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 12.65%) and significant edema (Proportion of Oedema: 77.04%) that crosses the midline are more typical of glioblastoma, IDH-wildtype. The tumor's location in the frontal lobe and involvement of deep white matter and ependymal invasion also suggest an aggressive tumor. While the enhancement quality is mild, the presence of necrosis and significant mass effect (midline shift present) are indicative of a high-grade glioma, likely IDH-wildtype given the age and imaging characteristics.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a mildly enhancing tumor with necrosis and significant edema, along with the patient's age, suggests a glioblastoma, IDH-wildtype, which is typically non-codeleted for 1p/19q. The tumor's aggressive features (necrosis, mass effect, ependymal invasion) are not typical of oligodendroglioma, which is more likely to be IDH-mutant and 1p/19q codeleted.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as necrosis (Proportion Necrosis: 12.65%), significant edema that crosses the midline, and mass effect (midline shift present). These characteristics are indicative of a high-grade glioma. The presence of necrosis is particularly suggestive of WHO grade 4. The tumor's enhancement quality is mild, but the overall imaging profile is consistent with glioblastoma, WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0440"
+}

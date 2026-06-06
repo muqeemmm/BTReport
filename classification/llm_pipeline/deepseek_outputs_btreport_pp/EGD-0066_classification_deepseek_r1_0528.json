@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 34 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor location involves cortex, frontal lobe, parietal and insula lobes, which are common sites for IDH-mutant gliomas. Enhancement is mild, which is more typical of IDH-mutant tumors. Proportion necrosis is 50.58%, which is high but not exclusive to wildtype. Deep white matter invasion is present, which can occur in both types.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves cortex, frontal lobe, parietal and insula lobes, which are typical for astrocytomas rather than oligodendrogliomas. Oligodendrogliomas often have frontal lobe involvement but are less likely to involve parietal and insula extensively. The tumor is solitary with multiple satellites present, which is more common in astrocytomas. Enhancement is mild, which can occur in both, but the location suggests astrocytoma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma with CNS WHO grade 4. The high proportion of necrosis and the presence of enhancement suggest grade 4, despite the patient's young age. Confidence is moderate due to conflicting features.",
+  "subject_id": "EGD-0066",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has a high proportion of necrosis (50.58%) and enhancement (5.58%), which are features of high-grade gliomas. The enhancement quality is mild, but the thickness of enhancing margin is >3mm, which is more typical of glioblastoma. The tumor core volume is 81.58 mL, which is large and suggestive of high grade. However, the patient is young (34 years), and IDH-mutant gliomas can have necrosis at lower grades, but the extent supports grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Tumor Core Volume"
+    ]
+  }
+}

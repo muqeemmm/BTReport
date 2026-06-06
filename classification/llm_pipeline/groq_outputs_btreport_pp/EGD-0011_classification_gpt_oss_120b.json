@@ -1,0 +1,51 @@
+{
+  "subject_id": "EGD-0011",
+  "idh": {
+    "reasoning": "The patient is 49 years old (age_years) which is typical for IDH\u2011mutant gliomas. Imaging shows only mild enhancement (Enhancement Quality) with a very small enhancing tumor volume (ET Volume (mL)=0.2) and a large non\u2011enhancing component (ED Volume (mL)=69.592), features that favor lower\u2011grade, IDH\u2011mutant disease. Cortical involvement (Cortical involvement) and deep white\u2011matter invasion (Deep WM invasion) are also more common in IDH\u2011mutant astrocytomas. However, the T2\u2011FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present=0.0) and there is a notable proportion of necrosis (Proportion Necrosis=20.97), both of which argue for IDH\u2011wildtype. Balancing these, the evidence leans toward IDH\u2011mutant but is not definitive.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.62
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of IDH\u2011mutant status, the tumor could be either 1p/19q\u2011codeleted oligodendroglioma or non\u2011codeleted astrocytoma. The lack of a T2\u2011FLAIR mismatch sign (T2-FLAIR Mismatch Present=0.0) does not support the classic oligodendroglioma phenotype, and the presence of deep white\u2011matter invasion (Deep WM invasion) and cortical involvement (Cortical involvement) are more typical of astrocytoma. No imaging features strongly indicate codeletion, so the balance favors a non\u2011codeleted status, though certainty is limited.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.58
+  },
+  "who_grade": {
+    "reasoning": "The lesion shows mild but definite enhancement (Enhancement Quality) with a small enhancing volume (ET Volume (mL)=0.2) and a measurable necrotic component (Proportion Necrosis=20.97), suggesting a higher grade than pure grade\u202f2. The edema proportion is high (Proportion of Oedema=78.8) and the tumor involves eloquent cortex (Eloquent Brain Involvement), features that are more consistent with WHO grade\u202f3 rather than grade\u202f2. The very low enhancing volume and lack of strong necrosis argue against grade\u202f4, so grade\u202f3 is the most plausible.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Molecular predictions are limited by the absence of diffusion, perfusion, and spectroscopy data. The lack of a T2\u2011FLAIR mismatch sign reduces confidence in IDH\u2011mutant status and 1p/19q non\u2011codeletion, but age and imaging morphology favor an IDH\u2011mutant astrocytoma. Grade assignment leans toward WHO grade\u202f3 based on modest enhancement and necrosis. Further molecular testing is recommended."
+}

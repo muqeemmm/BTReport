@@ -1,0 +1,66 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status considered independently, the metadata is more typical of an IDH-mutant diffuse glioma: age_years is young for adult diffuse glioma, Enhancement Quality is none with ET Volume (mL) 0.0 and Proportion Enhancing 0.0, and the tumor is cortically/insular based by Cortical involvement, Region Proportions, and Tumor Location. These features argue against the more typical imaging pattern of IDH-wildtype glioblastoma, which more often presents in older patients with enhancing aggressive disease. The main contrary points are Side of Tumor Epicenter listed as midline and Anatomical Overlap Regions including deep gray structures, which are less classic for a superficial hemispheric IDH-mutant pattern. Overall, the nonenhancing young-patient cortical/insular pattern outweighs the atypical deep/midline descriptors, so the conclusion is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the evidence is mixed. Features that can support oligodendroglioma/codeletion include age_years in a younger adult, Cortical involvement, nonenhancement by Enhancement Quality, ET Volume (mL), and Proportion Enhancing, and some frontal component in Region Proportions and Tumor Location. However, the lesion is predominantly insular by Region Proportions and Tumor Location, with Anatomical Overlap Regions including amygdala and deep gray nuclei, a distribution that is not as specifically suggestive of classic frontal oligodendroglioma. Because calcification, susceptibility, and molecular data are not available, the distinction is weak; the anatomic pattern slightly favors a non-codeleted diffuse glioma over a codeleted oligodendroglioma.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Region Proportions",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Prediction is limited by structured metadata only and absence of diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, and histology. The strongest imaging signal is a young adult with a solitary nonenhancing cortical/insular lesion, favoring IDH-mutant lower-grade diffuse glioma. The 1p/19q call is the least certain because available MRI metadata lacks the most discriminating oligodendroglioma markers.",
+  "subject_id": "UCSF-PDGM-300",
+  "who_grade": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "For CNS WHO grade considered independently, the imaging metadata favors a lower-grade lesion. Enhancement Quality is none, ET Volume (mL) is 0.0, Proportion Enhancing is 0.0, midline_shift_present is no, Multifocal or Multicentric is solitary, Multiple satellites present is absent, Ependymal (ventricular) Invasion is absent, and Deep WM invasion is absent; together these argue against high-grade aggressive imaging behavior. The main opposing features are Total tumor volume (mL) and ED Volume (mL), which indicate a sizable FLAIR/T2 abnormality, plus NCR Volume (mL) and Proportion Necrosis showing a small noncontrast/necrotic component; however, the absence of enhancement and mass-effect markers makes grade 4 less likely on imaging, and there is insufficient imaging evidence to prefer grade 3 over grade 2. The conclusion is CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

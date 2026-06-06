@@ -1,0 +1,62 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Tumor Core Volume (mL)",
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 60 years old, which is more typical for IDH-wildtype glioblastoma. The tumor is located in the frontal lobe cortex and involves eloquent motor areas, which is common in IDH-wildtype tumors. There is no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0), which is atypical for IDH-wildtype glioblastoma but could occur in non-enhancing gliomas. The tumor core volume is very small (0.007 mL) with minimal necrosis (Proportion Necrosis: 0.03), which is not characteristic of IDH-wildtype tumors. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present: 0.0), which argues against IDH-mutant astrocytoma. However, the absence of enhancement and small core volume create uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex with cortical involvement and no deep white matter invasion, which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often involve deep white matter and may have less cortical involvement. However, frontal lobe location is common in both. The absence of enhancement and small core volume do not strongly differentiate. The evidence is insufficient for a confident call.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor is non-enhancing with minimal necrosis and large edema. The T2-FLAIR mismatch sign is absent. The patient is older, and the tumor involves eloquent motor cortex. These features suggest IDH-wildtype glioblastoma, but the lack of enhancement and small core volume are atypical, leading to low confidence. For 1p/19q, cortical involvement without deep WM invasion favors astrocytoma (non-codeleted).",
+  "subject_id": "BraTS2021_01742",
+  "who_grade": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Tumor Core Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has a large edema volume (23.204 mL) and total tumor volume (23.211 mL) but minimal necrosis (0.03 proportion) and no enhancement. WHO grade 4 glioblastoma typically shows necrosis and enhancement, which are absent here. However, the patient's age (60) and eloquent involvement suggest high-grade tumor. The absence of necrosis and enhancement could indicate lower grade, but the large size and edema may suggest aggressive behavior. Evidence is conflicting.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

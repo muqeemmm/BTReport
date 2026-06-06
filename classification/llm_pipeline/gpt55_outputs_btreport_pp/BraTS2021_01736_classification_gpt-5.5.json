@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favor an IDH-mutant diffuse glioma because age_years is young for adult diffuse glioma, Tumor Location is frontal_lobe-cortex region, Cortical involvement is present, Enhancement Quality is only mild, ET Volume (mL) is very small, n_components_enhancing reports no enhancing components, and the lesion is solitary by Multifocal or Multicentric and Number of lesions. These features weigh against a typical IDH-wildtype glioblastoma phenotype. Features arguing the other way include Deep WM invasion, Edema crosses midline, large ED Volume (mL), high Proportion of Oedema, and Proportion Necrosis, which suggest more aggressive infiltrative biology. Overall, the younger age, frontal cortical location, solitary lesion, and minimal enhancement outweigh the aggressive edema-related features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.63,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, Tumor Location in the frontal_lobe-cortex region, high cortical proportion in Region Proportions, Cortical involvement, and absent T2-FLAIR Mismatch Present support a codeleted oligodendroglial-type imaging pattern. The evidence is not definitive because Deep WM invasion, Edema crosses midline, large ED Volume (mL), high Proportion of Oedema, Proportion Necrosis, and Side of Tumor Epicenter listed as midline are less classic for a localized frontal oligodendroglial tumor and can be seen with non-codeleted infiltrative glioma. On balance, the frontal cortical distribution and lack of T2-FLAIR mismatch favor codeletion, but only moderately.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "age_years"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the structured MRI metadata. The call is most uncertain for 1p/19q status and grade because calcification-sensitive imaging, diffusion, perfusion, spectroscopy, and histologic markers are not available in the provided metadata. The very small enhancing volume with mild enhancement argues against a classic grade 4 enhancing phenotype, while edema, deep white matter invasion, and reported necrotic/non-enhancing core argue against a purely low-grade lesion.",
+  "subject_id": "BraTS2021_01736",
+  "who_grade": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "reasoning": "For grade considered independently, the lesion has several features above a typical grade 2 pattern: large ED Volume (mL), high Proportion of Oedema, Deep WM invasion, Edema crosses midline, Mild Enhancement Quality, Thickness of enhancing margin >3mm, NCR Volume (mL), and Proportion Necrosis. These support an anaplastic/high-grade process. A grade 4 call is considered because Proportion Necrosis and edema-related fields are aggressive, but this is counterbalanced by very small ET Volume (mL), n_components_enhancing showing no enhancing components, midline_shift_present reported as No, Ependymal (ventricular) Invasion absent, and limited Lesion Sizes APxTVxCC (cm). Therefore, the best imaging-based grade estimate is CNS WHO grade 3 rather than grade 2 or grade 4.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

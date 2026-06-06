@@ -1,0 +1,43 @@
+{
+  "subject_id": "EGD-0228",
+  "idh": {
+    "reasoning": "The patient's age (38) is typical for IDH-mutant gliomas. The tumor is located in the frontal lobe and is entirely non-enhancing, both features strongly associated with an IDH-mutant status. The most definitive feature is the presence of the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0), which is a highly specific imaging biomarker for IDH-mutant astrocytomas. There are no contradicting features.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction is based primarily on the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0). This sign is highly specific for IDH-mutant astrocytomas, which are, by definition, 1p/19q non-codeleted. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically do not exhibit this feature. The tumor's non-enhancing nature and frontal location are compatible with both codeleted and non-codeleted tumors, but the T2-FLAIR mismatch sign is the decisive factor pointing towards a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The tumor lacks any features of high-grade malignancy. Specifically, there is a complete absence of contrast enhancement (`Enhancement Quality`: 'None', `ET Volume (mL)`: 0.0) and necrosis (`NCR Volume (mL)`: 0.0). This presentation is characteristic of a low-grade glioma, making WHO grade 4 highly improbable. While distinguishing between WHO grade 2 and 3 on imaging can be difficult, the classic presentation of a non-enhancing tumor with a T2-FLAIR mismatch sign is most typical for a WHO grade 2 astrocytoma. Therefore, grade 2 is the most likely prediction, although grade 3 cannot be definitively excluded.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings, particularly the presence of a T2-FLAIR mismatch sign in a non-enhancing frontal lobe tumor in a 38-year-old male, are highly characteristic of an Astrocytoma, IDH-mutant, CNS WHO grade 2. The confidence in the molecular predictions (IDH and 1p/19q status) is very high due to this specific biomarker. The grade is predicted as 2 due to the lack of any aggressive features, though grade 3 remains a possibility."
+}

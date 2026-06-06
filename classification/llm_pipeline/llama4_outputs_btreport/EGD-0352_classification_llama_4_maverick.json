@@ -1,0 +1,51 @@
+{
+  "id": "patient_0260",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The tumor is located in the right hemisphere, involving the temporal, cortex, parietal, and insula lobes. It is described as mildly enhancing and solitary with deep white matter invasion. The presence of deep white matter invasion and cortical involvement are more commonly associated with IDH wildtype gliomas. Additionally, the tumor's location and enhancement pattern are consistent with a more aggressive tumor, which is often seen in IDH wildtype gliomas. The lack of ependymal invasion and the fact that the enhancing region does not cross midline are noted, but these features are not strongly indicative of IDH mutation status. Overall, the features suggest a higher likelihood of IDH wildtype status.",
+      "supporting_features": [
+        "Deep WM invasion",
+        "Cortical involvement",
+        "Enhancement Quality",
+        "Side of Tumor Epicenter",
+        "Tumor Location"
+      ],
+      "contradicting_features": [
+        "Ependymal (ventricular) Invasion"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor involves the insula and is located in the right hemisphere. IDH-mutant gliomas with 1p/19q co-deletion often involve the frontal lobe and are less common in the temporal lobe. Given the tumor's location and the previous prediction of IDH wildtype status, the likelihood of 1p/19q co-deletion is low. The presence of cortical involvement and deep white matter invasion also suggests a non-codeleted status, as these features are more typical of IDH wildtype or IDH-mutant astrocytomas.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Deep WM invasion",
+        "Side of Tumor Epicenter"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.85
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor is described as mildly enhancing with a significant proportion of necrosis (15.97%) and a large edema volume (83.191 mL). The presence of necrosis and significant edema are indicative of a high-grade tumor. The tumor's size and the involvement of multiple lobes (temporal, cortex, parietal, and insula) also suggest an aggressive nature. Given these features, a higher grade is likely. The enhancement quality being 'Mild' might suggest a lower grade, but the presence of necrosis and significant edema outweighs this, pointing towards a grade 4 tumor.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Lesion Sizes APxTVxCC (cm)",
+        "Tumor Location",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0352"
+}

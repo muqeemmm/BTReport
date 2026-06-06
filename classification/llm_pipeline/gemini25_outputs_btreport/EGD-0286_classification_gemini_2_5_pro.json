@@ -1,0 +1,43 @@
+{
+  "subject_id": "EGD-0286",
+  "idh": {
+    "reasoning": "The presence of multiple strong indicators for IDH-wildtype status makes this a confident prediction. Specifically, the tumor is multifocal ('Multifocal or Multicentric': \"Multifocal\", 'Number of lesions': 2) and contains a significant necrotic core ('NCR Volume (mL)': 11.295, 'Proportion Necrosis': 17.75%). Both multifocality and necrosis are classic hallmarks of IDH-wildtype glioblastoma and are rare in IDH-mutant gliomas. The presence of contrast enhancement ('ET Volume (mL)': 1.13), even if mild, in combination with these features further supports an IDH-wildtype prediction. There are no imaging features suggestive of an IDH-mutant tumor.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. The presence of a large necrotic component ('NCR Volume (mL)': 11.295, 'Proportion Necrosis': 17.75%) is a very strong feature against 1p/19q co-deletion, as necrosis is exceptionally rare in oligodendrogliomas (the tumor type defined by co-deletion). Furthermore, the tumor is multifocal ('Multifocal or Multicentric': \"Multifocal\"), which is also atypical for oligodendrogliomas. The combination of these aggressive features strongly points towards an astrocytic lineage, which is by definition non-codeleted.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "According to the WHO CNS5 classification, the presence of necrosis in an adult-type diffuse astrocytic glioma is a defining feature of WHO Grade 4. The metadata clearly indicates a significant necrotic volume ('NCR Volume (mL)': 11.295, 'Proportion Necrosis': 17.75%). This single feature is sufficient to assign the highest grade. Other supporting features for a high-grade tumor include contrast enhancement ('ET Volume (mL)': 1.13), multifocality ('Multifocal or Multicentric': \"Multifocal\"), and deep white matter invasion ('Deep WM invasion': \"Present\"). There is no evidence to support a lower grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings, particularly the presence of multifocality and a significant necrotic core, are highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predictions for IDH status, 1p/19q status, and WHO grade are all consistent with this diagnosis. A notable data inconsistency exists regarding the tumor's laterality; volumetric data strongly indicates a left-sided primary lesion, while some text fields ('Side of Tumor Epicenter', 'Text Report') state it is on the right. This analysis is based on the quantitative volumetric data."
+}

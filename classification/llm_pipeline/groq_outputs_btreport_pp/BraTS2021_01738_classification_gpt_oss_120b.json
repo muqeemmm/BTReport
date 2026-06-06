@@ -1,0 +1,55 @@
+{
+  "subject_id": "BraTS2021_01738",
+  "idh": {
+    "reasoning": "The patient is young (age_years=35) and the lesion shows mild enhancement (Enhancement Quality=\"Mild\"), a very small enhancing tumor volume (ET Volume (mL)=0.31) and lacks deep white matter (Deep WM invasion=\"Absent\") and ependymal invasion (Ependymal (ventricular) Invasion=\"Absent\"), all features that favor an IDH\u2011mutant diffuse glioma over IDH\u2011wildtype glioblastoma, which typically shows strong enhancement, larger ET volume and more aggressive invasion. However, the T2\u2011FLAIR mismatch is absent (T2-FLAIR Mismatch Present=0.0, T2-FLAIR Mismatch Score=0.4), which is a classic imaging surrogate for IDH\u2011mutant astrocytoma and its absence weakens the evidence. The high proportion enhancing (Proportion Enhancing=0.75) and edema crossing the midline (Edema crosses midline=\"True\") are somewhat atypical for a low\u2011grade IDH\u2011mutant tumor and thus act as contradictory evidence. Balancing these, the preponderance of supportive features leads to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Enhancing",
+      "Edema crosses midline"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The lesion is cortically based (Cortical involvement=\"Present\") with mild enhancement (Enhancement Quality=\"Mild\") and a relatively high proportion of enhancing tissue (Proportion Enhancing=0.75) and substantial edema crossing the midline (Edema crosses midline=\"True\"), patterns more typical of IDH\u2011mutant astrocytoma (1p/19q non\u2011codeleted) than of oligodendroglioma, which often shows less enhancement and may have calcifications (not assessed). No imaging evidence suggests classic oligodendroglioma features such as homogeneous non\u2011enhancing cortical mass or calcification, so the balance favors a non\u2011codeleted status. The absence of T2\u2011FLAIR mismatch does not directly inform 1p/19q status but does not contradict the non\u2011codeleted interpretation.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.74
+  },
+  "who_grade": {
+    "reasoning": "Mild but definite enhancement (Enhancement Quality=\"Mild\") together with measurable necrosis (Proportion Necrosis=11.73) and edema crossing the midline (Edema crosses midline=\"True\") suggest a lesion more aggressive than a WHO grade 2 astrocytoma, which often lacks necrosis and shows little or no enhancement. The small enhancing tumor volume (ET Volume (mL)=0.31) and overall modest tumor size (Total tumor volume (mL)=41.083) argue against a full glioblastoma (grade 4), which typically has larger enhancing components. Thus the imaging profile aligns best with a WHO grade 3 diffuse astrocytoma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.76
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, non-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma, grade 3, but the absence of T2\u2011FLAIR mismatch and lack of advanced imaging (perfusion, spectroscopy) limit certainty. Molecular confirmation is recommended."
+}

@@ -1,0 +1,58 @@
+{
+  "id": "patient_1045",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (54 years) and the presence of a large, enhancing tumor with necrosis (NCR Volume: 48.932 mL, ET Volume: 77.776 mL, Proportion Necrosis: 28.35%) and significant mass effect (midline shift present, asymmetrical ventricles, effaced ventricle on the right) are more typical of glioblastoma, IDH-wildtype. The tumor's location in the right hemisphere, involving deep structures and the cortex, with ependymal invasion, also aligns with a more aggressive tumor type. While the presence of cortical involvement and deep white matter invasion could be seen in various glioma subtypes, the overall profile leans towards a high-grade, IDH-wildtype glioma.",
+      "supporting_features": [
+        "age_years",
+        "NCR Volume (mL)",
+        "ET Volume (mL)",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "Asymmetrical Ventricles",
+        "Effaced Ventricle",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect, along with the absence of multiple satellites and the tumor being solitary, does not strongly suggest an oligodendroglioma, which is more commonly associated with 1p/19q co-deletion. The tumor's characteristics (e.g., significant necrosis, marked enhancement, ependymal invasion) are more typical of astrocytic lineage tumors. Therefore, it is less likely to be codeleted.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Multifocal or Multicentric",
+        "Multiple satellites present",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Cortical involvement"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits aggressive features such as significant necrosis (NCR Volume: 48.932 mL, Proportion Necrosis: 28.35%), marked enhancement (Enhancement Quality: Marked, ET Volume: 77.776 mL), and ependymal invasion. These characteristics, along with the patient's age and the presence of significant mass effect (midline shift, asymmetrical ventricles), are indicative of a high-grade glioma. The presence of necrosis and marked enhancement are hallmarks of glioblastoma, WHO grade 4.",
+      "supporting_features": [
+        "age_years",
+        "NCR Volume (mL)",
+        "ET Volume (mL)",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_01143"
+}

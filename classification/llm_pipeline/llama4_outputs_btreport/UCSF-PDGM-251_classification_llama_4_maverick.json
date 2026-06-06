@@ -1,0 +1,45 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (36 years) and the tumor's characteristics (non-enhancing, solitary, no ependymal invasion, significant edema) are considered. Younger age and non-enhancing tumors are more commonly associated with IDH mutant gliomas. The presence of significant edema and the tumor's location in the temporal cortex region also support this prediction, as IDH mutant gliomas often present with these features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "IDH mutant gliomas are more likely to have 1p/19q co-deletion if they are located in certain regions such as the frontal lobe and have a characteristic imaging profile. However, the tumor's location in the temporal cortex and the lack of specific indicators for 1p/19q co-deletion in the provided metadata make it less clear. Given the IDH mutation status is predicted as 'mutant', the likelihood of co-deletion is considered based on typical associations, but the confidence is lower due to the absence of direct evidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "idh_status"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has significant edema, and is located in the temporal cortex. These features can be associated with both grade 2 and grade 3 gliomas. However, the presence of significant edema (ED Volume = 44.707 mL) and the tumor's impact on the ventricles (asymmetrical ventricles, effaced ventricle) might suggest a higher grade. The lack of enhancement and necrosis suggests it is less likely to be grade 4. Given the patient's age and the tumor's characteristics, a grade 3 glioma is considered plausible.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "subject_id": "UCSF-PDGM-251"
+}

@@ -1,0 +1,45 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (42 years) and the tumor's characteristics, such as being located in the frontal lobe, having a significant necrotic proportion (38.62%), and mild enhancement, are considered. The T2-FLAIR mismatch score is 0.4848423580021387, which is below the typical threshold for a positive T2-FLAIR mismatch sign (usually considered when the score is significantly higher, often above 0.7 or 0.8). The absence of a clear T2-FLAIR mismatch sign argues against IDH mutation, as this sign is often associated with IDH-mutant gliomas, particularly astrocytomas. However, the presence of cortical involvement and the tumor being solitary with no ependymal invasion are noted. Given these features and the lack of strong evidence for IDH mutation (like a high T2-FLAIR mismatch score), the prediction leans towards IDH wildtype due to the absence of strong indicators for IDH mutant status.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "Cortical involvement",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Multiple satellites present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or specific imaging biomarkers. However, the presence of cortical involvement and the tumor being located in the frontal lobe could be considered. Typically, 1p/19q co-deleted tumors are more likely to be oligodendrogliomas, which often present with calcifications (not assessed here) and have a more favorable prognosis. The mild enhancement and absence of ependymal invasion are noted. Given the lack of specific indicators for 1p/19q co-deletion in the provided metadata and considering the tumor's characteristics, the prediction leans towards non-codeleted as there's no strong evidence to support co-deletion.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Multiple satellites present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor has a significant necrotic proportion (38.62%), mild enhancement, and a large size (total tumor volume of 81.684 mL), which are features often associated with higher-grade gliomas. The presence of necrosis and the tumor's size and location (frontal lobe, cortical involvement) suggest a high-grade tumor. The proportion of edema (61.24%) and the presence of multiple satellites also indicate a potentially aggressive tumor. Given these characteristics, a higher WHO grade is likely. The presence of necrosis is particularly indicative of a grade 4 tumor, as it is a hallmark of glioblastoma, which is typically classified as WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Multiple satellites present",
+      "Tumor Core Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0668"
+}

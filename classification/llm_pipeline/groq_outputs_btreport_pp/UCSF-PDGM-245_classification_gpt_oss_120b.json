@@ -1,0 +1,52 @@
+{
+  "subject_id": "UCSF-PDGM-245",
+  "idh": {
+    "reasoning": "The tumor shows a strong T2\u2011FLAIR mismatch (\"T2-FLAIR Mismatch Present\"=1.0, high \"T2-FLAIR Mismatch Score\"=0.94) which is a validated imaging surrogate for IDH\u2011mutant astrocytoma. The patient is young (\"age_years\"=34) and the lesion is non\u2011enhancing (\"Enhancement Quality\"=\"None\", \"Proportion Enhancing\"=0.0), both favoring IDH mutation. Minor contradictory signs such as the presence of midline shift (\"midline_shift_present\"=\"Yes\") and ventricular effacement are more related to tumor size than to IDH status. Overall the supporting evidence outweighs the contradictions, leading to an IDH\u2011mutant prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "midline_shift_present",
+      "Effaced Ventricle"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is characteristic of IDH\u2011mutant astrocytoma, which by definition lacks 1p/19q codeletion. The lesion is non\u2011enhancing (\"Enhancement Quality\"=\"None\"), solitary (\"Multifocal or Multicentric\"=\"Solitary\") and located in the frontal cortex, patterns more typical of non\u2011codeleted tumors. No imaging features suggest oligodendroglioma (e.g., calcifications or marked homogenous T2 signal). Thus the evidence supports a non\u2011codeleted status; there are no clear contradictory features.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The tumor lacks any contrast enhancement (\"Enhancement Quality\"=\"None\", \"Proportion Enhancing\"=0.0) and necrosis (\"Proportion Necrosis\"=0.0), which are hallmarks of higher WHO grades. The imaging shows a large non\u2011enhancing edema component (\"Proportion of Oedema\"=100.0) typical of low\u2011grade glioma. While there is mass effect (midline shift, ventricular effacement) and deep white\u2011matter/ependymal invasion, these can occur with large low\u2011grade lesions and are not definitive for grade 3/4. Therefore the balance of evidence points to WHO grade\u202f2 with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 2,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q non-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma, WHO grade\u202f2. Absence of advanced sequences (DWI, perfusion, spectroscopy) limits definitive molecular confirmation; recommend tissue\u2011based testing for IDH and 1p/19q status to validate the radiologic inference."
+}

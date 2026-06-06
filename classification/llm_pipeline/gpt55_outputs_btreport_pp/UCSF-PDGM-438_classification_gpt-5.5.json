@@ -1,0 +1,78 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.9,
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma: the patient is young for adult diffuse glioma, the lesion is nonenhancing with no necrotic component, and there is a strong T2-FLAIR mismatch signal, a pattern classically associated with IDH-mutant astrocytic glioma. The frontal/cortical/insular location is also compatible with an IDH-mutant lower-grade diffuse glioma phenotype. There are no strong MRI metadata features here that favor IDH-wildtype biology, such as enhancement, necrosis, multifocality, deep white matter invasion, or ependymal invasion.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present Present",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessed independently from IDH status, the strongest imaging clue is the T2-FLAIR mismatch pattern, which favors a non-codeleted astrocytic genotype rather than oligodendroglioma. The high mismatch score, higher central T2 signal relative to central FLAIR signal, and preserved peripheral FLAIR signal support this direction. Features that could argue toward a codeleted oligodendroglial tumor include frontal/cortical involvement and nonenhancement, but these are less specific than the T2-FLAIR mismatch pattern.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured MRI metadata from T1w, T2w, T2-FLAIR, and T1-Gd. The absence of diffusion, perfusion, spectroscopy, and susceptibility/calcification assessment limits grading and oligodendroglioma discrimination. The segmentation describes the visible lesion as entirely nonenhancing T2/FLAIR abnormality with empty enhancing/necrotic core, which supports a lower-grade call but leaves residual uncertainty between CNS WHO grade 2 and nonenhancing grade 3.",
+  "subject_id": "UCSF-PDGM-438",
+  "who_grade": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "ED Volume (mL)",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm"
+    ],
+    "prediction": 2,
+    "reasoning": "Assessed independently, the grade is most consistent with CNS WHO grade 2 because the lesion is nonenhancing, has no enhancing tumor volume, no necrotic component, is solitary, and lacks deep white matter or ependymal invasion. The reported total tumor volume is modest, and there is no tumor-associated ventricular asymmetry or reported midline shift, which argues against aggressive mass effect. Against a confident grade 2 call, there is involvement of eloquent brain and measurable mass effect-related shift metrics, and MRI metadata alone cannot reliably exclude a nonenhancing grade 3 glioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Asymmetrical Ventricles",
+      "midline_shift_present",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

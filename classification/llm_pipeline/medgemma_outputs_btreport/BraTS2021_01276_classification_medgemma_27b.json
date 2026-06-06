@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_01276",
+  "idh": {
+    "reasoning": "The patient is 46 years old. Age < 50 is associated with IDH-mutant gliomas, while age > 50 is associated with IDH-wildtype. The patient's age falls into the younger category, suggesting a higher likelihood of IDH mutation. However, age alone is not definitive. The tumor involves deep structures (thalamus, brainstem) and crosses the midline, which can be seen in both IDH-mutant and wildtype tumors, although midline crossing is more common in IDH-wildtype. The tumor volume (10.1 mL) is relatively large, which can be seen in both types but larger volumes are more common in IDH-wildtype. The presence of deep white matter invasion and marked enhancement are non-specific features. Given the patient's age as the primary indicator favoring IDH-mutant status, despite other features being non-specific or slightly favoring wildtype (midline crossing, larger volume), I predict IDH-mutant.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "Total tumor volume (mL)",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor involves multiple deep structures including the thalamus and brainstem and crosses the midline significantly ('CET Crosses midline': 'True', 'Edema crosses midline': 'True'). While 1p/19q co-deletion is typically associated with oligodendrogliomas (often IDH-mutant), it can occur in astrocytomas. However, extensive midline involvement and deep structure infiltration are less typical for classic 1p/19q co-deleted oligodendrogliomas, which often present more peripherally or focally. The available metadata lacks specific features strongly suggestive of co-deletion (e.g., calcification - which cannot be assessed here). Given the deep location and midline crossing without specific features pointing towards co-deletion, I predict non-codeleted.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The tumor demonstrates marked enhancement ('Enhancement Quality': 'Marked'), deep white matter invasion ('Deep WM invasion': 'Present'), and significant involvement of critical structures like the thalamus and brainstem ('Anatomical Overlap Regions'). It also crosses the midline ('CET Crosses midline': 'True', 'Edema crosses midline': 'True'). These features suggest aggressive behavior. While the patient's age (46) might suggest a lower grade initially, the combination of marked enhancement, deep invasion, and extensive involvement points towards a higher grade. Grade 4 (GBM) is characterized by necrosis and microvascular proliferation; while necrosis is present ('Proportion Necrosis': 17.59), microvascular proliferation cannot be assessed from this metadata. Grade 3 (anaplastic astrocytoma/oligodendroglioma) involves significant infiltration and enhancement but typically less necrosis than GBM. Grade 2 (diffuse astrocytoma/oligodendroglioma) usually has less enhancement and infiltration than observed here. Given the marked enhancement, deep invasion, and extensive involvement including crossing the midline, a Grade 4 diagnosis is most likely, although Grade 3 cannot be entirely excluded without histology or advanced imaging not provided.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "IDH mutant diffuse astrocytoma WHO grade unknown",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a middle aged male with a solitary tumor involving multiple deep structures including thalamus and brainstem crossing the midline with marked enhancement and deep white matter invasion suggesting high grade glioma likely IDH mutant given age."
+}

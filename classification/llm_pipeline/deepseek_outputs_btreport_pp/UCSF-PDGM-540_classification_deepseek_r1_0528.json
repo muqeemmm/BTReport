@@ -1,0 +1,43 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 70 years old, which is more typical for IDH-wildtype glioblastoma. There is no enhancement (Enhancement Quality: None), which is unusual for IDH-wildtype glioblastoma but can occur. The tumor involves eloquent motor cortex, which is common in glioblastomas. However, the absence of necrosis and enhancing components suggests a lower grade tumor, conflicting with IDH-wildtype expectation. Overall, age is the strongest predictor here.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe and cortex, which is typical for oligodendrogliomas (IDH-mutant and 1p/19q codeleted). However, IDH status is predicted as wildtype, and 1p/19q codeletion is extremely rare in IDH-wildtype tumors. Since IDH is wildtype, 1p/19q must be non-codeleted.",
+    "supporting_features": [
+      "idh_prediction"
+    ]
+  },
+  "overall_comment": "This tumor has features suggestive of glioblastoma (age, eloquent involvement) but lacks enhancement and necrosis. The IDH-wildtype prediction is based primarily on age, but confidence is low due to lack of typical enhancement. Grade 4 is assigned based on IDH-wildtype status and location in motor cortex.",
+  "subject_id": "UCSF-PDGM-540",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor is IDH-wildtype (predicted), which by definition is grade 4 if diffuse glioma. However, there is no enhancement or necrosis, which are hallmark features of grade 4 glioblastoma. The involvement of motor cortex suggests aggressive behavior. Despite atypical imaging features, molecular classification dictates grade 4 for IDH-wildtype diffuse astrocytoma.",
+    "supporting_features": [
+      "idh_prediction",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

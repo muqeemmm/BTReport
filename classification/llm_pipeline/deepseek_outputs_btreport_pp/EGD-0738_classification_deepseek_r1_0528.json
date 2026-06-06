@@ -1,0 +1,54 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 50 years old, which is older than typical IDH-mutant gliomas. The tumor is midline, solitary, and shows marked enhancement. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0), which is characteristic of IDH-wildtype glioblastomas. The proportion of necrosis is 9.91%, which is more consistent with wildtype tumors. However, the T2-FLAIR mismatch score and degree are non-zero, which might suggest some mismatch, but the absence flag overrides this.",
+    "supporting_features": [
+      "age_years",
+      "Side of Tumor Epicenter",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex and eloquent motor area, which is atypical for oligodendrogliomas. Oligodendrogliomas are often frontal and cortical, but IDH-mutant status is required for codeletion. Since IDH is wildtype, 1p/19q codeletion is unlikely. The tumor is midline, which is not typical for oligodendrogliomas.",
+    "supporting_features": [
+      "IDH prediction",
+      "Tumor Location",
+      "Cortical involvement",
+      "Eloquent Brain Involvement",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "The tumor characteristics are consistent with IDH-wildtype glioblastoma. The absence of T2-FLAIR mismatch, older age, midline location, and marked enhancement support this. 1p/19q codeletion is unlikely given IDH wildtype and cortical/eloquent involvement.",
+  "subject_id": "EGD-0738",
+  "who_grade": {
+    "confidence": 0.95,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows marked enhancement, necrosis (9.91%), and is large (58.927 mL). The presence of necrosis and enhancement are hallmarks of glioblastoma (grade 4). The proportion of necrosis is lower than typical, but still present. The tumor involves eloquent motor cortex, which is common in high-grade gliomas.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

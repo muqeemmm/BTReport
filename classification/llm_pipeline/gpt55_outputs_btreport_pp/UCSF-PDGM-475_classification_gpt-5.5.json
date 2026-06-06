@@ -1,0 +1,88 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Side of Tumor Epicenter",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Edema crosses midline",
+      "Total tumor volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI-demographic pattern favors an IDH-mutant diffuse glioma: the patient is young, the tumor is cortical/frontotemporal-insular, and it is entirely nonenhancing with no enhancing component, which is more typical of IDH-mutant lower-grade diffuse glioma than IDH-wildtype glioblastoma. Lack of ependymal invasion, lack of deep white matter invasion, and absence of meaningful midline shift also argue against a classic aggressive IDH-wildtype phenotype. Evidence against IDH-mutant status includes multifocality, midline epicenter/crossing, large total volume, edema crossing midline, and absence of a T2-FLAIR mismatch sign; these features can be seen with more aggressive or IDH-wildtype disease. Overall, the age and nonenhancing cortical hemispheric phenotype outweigh the aggressive-distribution features, so the conclusion is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Anatomical Overlap Regions",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Edema crosses midline",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently from the IDH call, the imaging pattern has several oligodendroglial clues: cortical involvement, a major frontal-lobe component, nonenhancement, and absence of T2-FLAIR mismatch. These features are compatible with a 1p/19q-codeleted tumor. However, the case is not classic because there is substantial temporal/insular and mesial temporal/deep gray overlap, multifocal disease, midline crossing, edema crossing midline, and a large tumor volume, all of which reduce specificity and may fit a non-codeleted diffuse astrocytic tumor or a more infiltrative process. Because the supportive features are present but not definitive, the conclusion is only weakly in favor of codeletion.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility-sensitive assessment. The complete absence of enhancement supports a lower-grade phenotype, but multifocality, midline crossing, large volume, and the reported nonenhancing/necrotic-core proportion make the grade and 1p/19q call uncertain. Histopathology and molecular testing remain required.",
+  "subject_id": "UCSF-PDGM-475",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "Grading based on MRI metadata alone most strongly favors CNS WHO grade 2 because the lesion is entirely nonenhancing, has no enhancing components, has no enhancing margin in practice, and shows no midline shift, ependymal invasion, or deep white matter invasion. These findings argue against grade 4 and reduce support for grade 3. Features arguing against grade 2 include multifocality, large total tumor volume, substantial edema proportion/volume, edema and tumor crossing midline, and the reported high proportion necrosis; however, the absence of enhancement makes true high-grade necrosis less secure from the provided metadata. Since nonenhancement is the dominant conventional MRI grading feature but the extensive multifocal infiltrative burden is concerning, the conclusion is grade 2 with limited confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

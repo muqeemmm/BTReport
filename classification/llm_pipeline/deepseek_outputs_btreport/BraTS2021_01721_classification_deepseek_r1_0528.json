@@ -1,0 +1,39 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "reasoning": "The patient is 39 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger patients. The tumor involves the parietal, cortex, and occipital lobes, which is consistent with oligodendroglioma or astrocytoma patterns. Enhancement is mild, which is more typical of lower-grade IDH-mutant tumors than wildtype glioblastomas that often show ring enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves parietal, cortex, and occipital lobes. Oligodendrogliomas (which are 1p/19q codeleted) typically occur in the frontal lobe and less commonly in parietal lobes. The absence of frontal lobe involvement argues against oligodendroglioma. However, the tumor is midline and involves cortex, which can be seen in both astrocytomas and oligodendrogliomas. Mild enhancement is non-specific.",
+    "supporting_features": [
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma. The grade is assigned as 4 due to necrosis proportion exceeding 10% and presence of enhancement, though confidence is lower for grade due to limited necrosis details.",
+  "subject_id": "BraTS2021_01721",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [],
+    "prediction": 4,
+    "reasoning": "The proportion of necrosis is 39.15%, which exceeds the 10% threshold for WHO grade 4 in IDH-mutant gliomas. Enhancement is present (mild) and the enhancing margin is >3mm thick, both features supporting higher grade. However, without mitotic count or molecular markers like CDKN2A/B, confidence is moderate.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ]
+  }
+}

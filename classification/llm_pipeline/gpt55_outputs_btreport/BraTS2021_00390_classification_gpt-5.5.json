@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The strongest independent imaging-clinical discriminator is the advanced age, which favors IDH-wildtype diffuse glioma over IDH-mutant astrocytoma or oligodendroglioma. Mild but definite enhancement, very high edema proportion, and measurable enhancing/non-core components also lean toward a more aggressive IDH-wildtype phenotype. Against IDH-wildtype, the lesion is small, cortically based in the temporal-cortex region, only mildly enhancing, with very small enhancing and non-core volumes and without deep white matter or ependymal invasion, which can be seen with lower-grade IDH-mutant tumors. Overall, the age and edema/enhancement pattern outweigh the lower-grade-appearing features, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the advanced age and temporal rather than classic frontal-predominant location favor a non-codeleted diffuse glioma. The metadata do not provide calcification, susceptibility, perfusion, or spectroscopy markers that would improve recognition of oligodendroglioma. Features arguing for possible codeletion include cortical involvement and only mild enhancement, which can be compatible with oligodendroglioma, and the tumor is in a cortical temporal region. However, the overall metadata are not strongly characteristic of 1p/19q-codeleted oligodendroglioma, so non-codeleted is favored with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or molecular testing. The imaging phenotype has mixed features: advanced age and edema/enhancement favor IDH-wildtype high-grade glioma, while small size, mild enhancement, cortical location, and minimal non-enhancing core reduce certainty. Tissue diagnosis and molecular profiling remain required.",
+  "subject_id": "BraTS2021_00390",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "WHO grade is assessed independently from molecular predictions. Imaging features supporting grade 4 include definite enhancement, a measurable non-core component, marked edema burden relative to total tumor volume, and edema crossing midline, which together suggest biologically aggressive disease. Features arguing against grade 4 are important: enhancement is mild and very small in volume, the non-core component is minimal, there is no midline shift, no deep white matter invasion, no ependymal invasion, and total lesion volume is small; these could fit grade 2 or grade 3 disease, especially if the enhancement is nonspecific. On balance, the combination of enhancement, non-core component, and disproportionate edema favors grade 4, but confidence is limited by the small enhancing/non-core burden and lack of advanced imaging.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "crosses_patient_midline",
+      "crosses_ideal_midline"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

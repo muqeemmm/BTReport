@@ -1,0 +1,56 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 62 years old, which is more typical for IDH-wildtype glioblastoma. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0, Score = 0.4, Degree = -0.468), which argues against IDH-mutant astrocytoma. However, no direct molecular evidence is available, and the tumor involves deep structures and cortex, which can occur in both types.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "rim_core_adjacency",
+      "boundary_sharpness"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor shows marked enhancement (Enhancement Quality = 'Marked'), high proportion of enhancing tissue (16.32%), thick enhancing margin (>3mm), and sharp boundaries (boundary_sharpness = 2.33), which are more characteristic of IDH-wildtype glioblastoma than oligodendroglioma. Oligodendrogliomas typically have less enhancement and more indistinct margins. However, without direct molecular testing, this is inferred.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "rim_core_adjacency",
+      "boundary_sharpness"
+    ]
+  },
+  "overall_comment": "Based on MRI features: elderly patient, solitary midline tumor in temporal-cortex region with ependymal invasion, deep white matter invasion, marked enhancement, absence of T2-FLAIR mismatch. Features suggest IDH-wildtype glioblastoma. Confidence is low due to lack of direct molecular data.",
+  "subject_id": "BraTS2021_00430",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has necrosis (Proportion Necrosis = 5.56%), which is a hallmark of glioblastoma (grade 4). Additionally, there is marked enhancement, ependymal invasion, and deep white matter invasion, all consistent with high-grade glioma. The proportion of necrosis is low but present.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "subject_id": "BraTS2021_01750",
+  "idh": {
+    "reasoning": "The tumor displays multiple aggressive features strongly associated with IDH-wildtype status. The most compelling feature is the massive necrotic core, with 'Proportion Necrosis' at 50.25%. Extensive necrosis is a hallmark of glioblastoma, which is overwhelmingly IDH-wildtype. Additional supporting features include the very large tumor volume ('Total tumor volume (mL)': 240.147), significant mass effect ('max_shift_mm': 10.0), extensive peritumoral edema ('ED Volume (mL)': 118.667), deep infiltrative nature ('Deep WM invasion', 'Ependymal (ventricular) Invasion'), and the presence of satellite lesions ('Multiple satellites present'). The tumor's bilateral and deep gray matter involvement also suggests a highly aggressive phenotype. The only feature somewhat contradictory is the 'Mild' enhancement quality and very small enhancing volume ('ET Volume (mL)': 0.812), as IDH-wildtype tumors often show more avid enhancement. However, the overwhelming evidence from the large necrotic component and other aggressive features strongly favors an IDH-wildtype prediction.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "crosses_ideal_midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly inconsistent with a 1p/19q co-deleted glioma (oligodendroglioma). The presence of a very large necrotic core ('Proportion Necrosis': 50.25%) is extremely rare in oligodendrogliomas. Furthermore, the extensive vasogenic edema ('ED Volume (mL)': 118.667), significant mass effect ('max_shift_mm': 10.0), and aggressive infiltrative features like 'Deep WM invasion', 'Ependymal (ventricular) Invasion', and 'Multiple satellites present' are all characteristic of astrocytic lineage tumors (non-codeleted) or glioblastoma, not oligodendroglioma. While the frontal lobe location is common for oligodendrogliomas, this is a non-specific finding. The combination of massive necrosis and infiltration strongly argues against co-deletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The prediction of CNS WHO grade 4 is made with very high confidence based on the definitive radiological evidence of necrosis. The 'Proportion Necrosis' is 50.25%, and the presence of a necrotic core is a defining feature of grade 4 gliomas (glioblastoma). The presence of contrast enhancement ('Enhancement Quality': 'Mild', 'ET Volume (mL)': 0.812), even if minimal, also supports a high grade (at least grade 3). All other features corroborate a high-grade, aggressive tumor: very large size ('Total tumor volume (mL)': 240.147), significant mass effect ('max_shift_mm': 10.0), extensive edema, deep infiltration ('Deep WM invasion', 'Ependymal (ventricular) Invasion'), and satellite lesions ('Multiple satellites present'). There is no imaging evidence to support a lower grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features, particularly the extensive central necrosis, are highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The tumor is large, infiltrative, crosses the midline, and causes significant mass effect. Minimal enhancement is a slightly atypical feature but does not change the overall diagnosis."
+}

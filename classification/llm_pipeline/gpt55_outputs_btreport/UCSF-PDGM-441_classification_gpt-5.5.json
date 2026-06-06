@@ -1,0 +1,78 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Edema crosses midline",
+      "Side of Tumor Epicenter",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma: the patient is young, the tumor is frontal/cortical, solitary, minimally enhancing, and lacks necrosis or substantial enhancing tumor burden. These features are more typical of IDH-mutant lower-grade diffuse glioma than IDH-wildtype glioblastoma. Against this, the edema/FLAIR abnormality crosses midline, the epicenter is reported as midline, and there is mild enhancement, which can be seen in more aggressive IDH-wildtype tumors; however, the absence of necrosis, essentially absent enhancement volume, absent deep white matter invasion, and no midline shift make IDH-wildtype less likely overall.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "age_years",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the strongest imaging support for co-deletion is the frontal cortical location, which is a common presentation pattern for oligodendroglioma, along with mild/minimal enhancement and absent deep white matter invasion. The lesion is solitary, also fitting a circumscribed diffuse glioma phenotype. Evidence against co-deletion includes the young age, because oligodendroglioma often presents somewhat later in adulthood, and the midline/crossing edema pattern, which is less specific and can also be seen with astrocytic glioma. No calcification-sensitive imaging or other strong discriminatory metadata is available, so this is only a modest best estimate toward codeletion.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/GRE. The IDH and grade estimates are relatively supported by young age, frontal cortical location, minimal enhancement, and absent necrosis. The 1p/19q call is the least certain because key discriminators such as calcification and molecular testing are not available.",
+  "subject_id": "UCSF-PDGM-441",
+  "who_grade": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Edema crosses midline",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The grade assessment favors CNS WHO grade 2 because there is essentially no enhancing tumor, no necrosis, only a very thin/mild enhancing component, and no midline shift or ventricular/ependymal invasion. These findings argue against grade 4, and the absence of substantial enhancement or necrosis also lowers suspicion for grade 3, though grade 3 cannot be excluded by these sequences alone. Features that raise some concern are mild enhancement, large T2/FLAIR abnormality, and crossing edema, but these are not sufficient to outweigh the predominantly nonenhancing, non-necrotic pattern. Overall, the metadata supports grade 2 as the best imaging estimate.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

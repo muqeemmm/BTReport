@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest metadata-supported discriminator is a positive T2-FLAIR mismatch pattern, which is classically associated with IDH-mutant astrocytoma rather than IDH-wildtype glioblastoma. The patient is relatively young, and the lesion is nonenhancing with no enhancing volume, also favoring an IDH-mutant diffuse glioma over an IDH-wildtype glioblastoma phenotype. Cortical/frontal/insular involvement is also compatible with an IDH-mutant diffuse glioma. Features arguing against a confident IDH-mutant call are the large FLAIR/edema volume and measurable midline shift, which can be seen with more aggressive tumors, including IDH-wildtype glioblastoma, although the absence of enhancement and necrosis makes that less likely. Overall, the imaging metadata supports IDH-mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Considering 1p/19q status independently from the IDH prediction, the positive T2-FLAIR mismatch pattern strongly favors an astrocytic genotype and argues against oligodendroglioma with 1p/19q co-deletion. Deep white-matter invasion and an infiltrative nonenhancing FLAIR-dominant lesion are also compatible with a non-codeleted astrocytic tumor. The main features that could support co-deletion are frontal cortical involvement and nonenhancement, which are common in oligodendroglioma as well; however, the T2-FLAIR mismatch pattern is a stronger counterweight against codeletion. Overall, the metadata supports non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Whole Tumor Volume (mL)"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured conventional MRI metadata. DWI/ADC, perfusion, spectroscopy, SWI/GRE, histology, and molecular testing are unavailable. The strong T2-FLAIR mismatch pattern drives the IDH-mutant astrocytoma impression, while the lack of enhancement or necrosis supports a lower-grade imaging phenotype. Large lesion volume and midline shift introduce some uncertainty regarding grade.",
+  "subject_id": "UCSF-PDGM-468",
+  "who_grade": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion"
+    ],
+    "prediction": 2,
+    "reasoning": "For grade estimation considered independently from molecular predictions, the lesion is entirely nonenhancing, has no enhancing component, no necrotic/nonenhancing core volume, and no imaging necrosis, which favors a lower-grade diffuse glioma imaging phenotype. A solitary lesion without satellite disease or ependymal invasion also argues against an overt high-grade glioma pattern. The main features arguing for a higher grade are the large FLAIR lesion volume, deep white-matter invasion, and measurable midline shift, which indicate substantial mass effect and infiltrative extent. However, in the available conventional MRI metadata, there is no enhancement or necrosis to support CNS WHO grade 4, and no reliable imaging marker here that specifically establishes grade 3. Overall, the metadata best supports CNS WHO grade 2, with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

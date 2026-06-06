@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_00834",
+  "idh": {
+    "reasoning": "The patient's age of 56 years is more typical for IDH-wildtype gliomas. The most compelling evidence is the tumor's multifocal nature ('Multifocal or Multicentric': 'Multifocal', 'Number of lesions': 3), which is a classic feature of IDH-wildtype glioblastoma and extremely rare in IDH-mutant tumors. Furthermore, the presence of marked, thick-rimmed enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm') and central necrosis ('NCR Volume (mL)': 4.544) are hallmark features of IDH-wildtype glioblastoma. The absence of a T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0) also argues against an IDH-mutant astrocytoma. There is no significant contradicting evidence; the sharp transition zone is a minor, atypical feature but does not outweigh the strong indicators for wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The imaging phenotype is highly uncharacteristic of an oligodendroglioma (the tumor defined by 1p/19q co-deletion). Key features arguing against co-deletion include the multifocal presentation ('Multifocal or Multicentric': 'Multifocal'), which is exceptionally rare in oligodendroglioma, and the presence of marked enhancement with central necrosis ('Enhancement Quality': 'Marked', 'NCR Volume (mL)': 4.544). These features are typical of high-grade astrocytic tumors. While oligodendrogliomas can have well-defined borders, and this tumor has a sharp transition zone ('Transition Zone Thickness (FLAIR)'), the aggressive features of multifocality and necrosis strongly favor a non-codeleted status.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of central necrosis, indicated by a non-zero 'NCR Volume (mL)' (4.544), is a key radiographic correlate of the histologic features defining CNS WHO grade 4. This is strongly supported by the presence of 'Marked' 'Enhancement Quality' and a thick enhancing margin ('>3mm'). Additionally, the multifocal nature of the tumor ('Multifocal or Multicentric': 'Multifocal') is a feature of glioblastoma, which is by definition a grade 4 tumor. There is no imaging evidence to support a lower grade; the presence of both enhancement and necrosis effectively rules out grade 2 and strongly points to grade 4 over grade 3.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (56), multifocality, marked ring enhancement, and central necrosis provides a classic imaging presentation for Glioblastoma, IDH-wildtype. The confidence in this diagnosis based on the provided MRI features is very high. The predicted molecular markers (IDH-wildtype, 1p/19q non-codeleted) and grade (4) are fully consistent with the WHO CNS5 classification for this entity."
+}

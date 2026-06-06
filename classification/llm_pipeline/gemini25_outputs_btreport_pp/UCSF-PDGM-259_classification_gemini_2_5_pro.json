@@ -1,0 +1,46 @@
+{
+  "subject_id": "UCSF-PDGM-259",
+  "idh": {
+    "reasoning": "The patient is a young adult (28 years old), which strongly favors an IDH-mutant glioma. The imaging phenotype of a large, entirely non-enhancing and non-necrotic tumor (ET Volume (mL) of 0.0, NCR Volume (mL) of 0.0) is classic for an IDH-mutant glioma. The main contradicting feature is the absence of the T2-FLAIR mismatch sign, which is specific for IDH-mutant astrocytomas; however, its sensitivity is not 100%, and its absence does not outweigh the compelling evidence from the patient's age and the tumor's non-enhancing nature.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the key task is to differentiate between an astrocytoma (non-codeleted) and an oligodendroglioma (codeleted). The tumor's involvement of the insula is a feature more commonly associated with astrocytomas. Conversely, the absence of a T2-FLAIR mismatch sign, while not definitive, is less common in low-grade astrocytomas and could be seen in oligodendrogliomas. Other features like the frontal lobe location and non-enhancing character can be seen in both subtypes. The evidence is not strong in either direction, but the insular involvement provides a slight preference for a non-codeleted status.",
+    "supporting_features": [
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of contrast enhancement (ET Volume (mL) is 0.0) and necrosis (NCR Volume (mL) is 0.0) makes a WHO grade 4 tumor highly unlikely. The choice is between grade 2 and 3. While both can be non-enhancing, the tumor is quite large (Total tumor volume (mL) of 78.18) and exerts significant mass effect, evidenced by a 9.0 mm midline shift. These features\u2014large size and substantial mass effect\u2014are more indicative of a higher cell proliferation and thus favor a WHO grade 3 over a grade 2 tumor.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a young adult with a large, solitary, non-enhancing tumor involving the right frontal lobe, insula, and deep gray matter, causing significant midline shift. This presentation is highly characteristic of an IDH-mutant glioma. The lack of enhancement suggests a lower grade (2 or 3), but the significant mass effect favors grade 3. The distinction between astrocytoma and oligodendroglioma is challenging on this imaging, but insular involvement slightly favors astrocytoma. The final integrated diagnosis is most likely an Astrocytoma, IDH-mutant, CNS WHO grade 3."
+}

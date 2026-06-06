@@ -1,0 +1,51 @@
+{
+  "id": "patient_0553",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (66 years) and the presence of a multifocal, mildly enhancing lesion with significant mass effect (midline shift of 3mm, edema crossing midline) are more typical of IDH wildtype glioblastoma. The absence of ependymal invasion and presence of cortical involvement also align with this diagnosis. While the enhancement quality is mild, the presence of necrosis (Proportion Necrosis: 1.5) and significant edema (Proportion of Oedema: 84.36) further support a high-grade glioma, which is more likely to be IDH wildtype in this age group.",
+      "supporting_features": [
+        "age_years",
+        "Multifocal or Multicentric",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "midline_shift_present",
+        "crosses_ideal_midline.ed",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of a multifocal, mildly enhancing lesion with significant mass effect and necrosis is less typical of 1p/19q codeleted tumors, which are more commonly associated with oligodendrogliomas that are typically IDH mutant. Given the prediction of IDH wildtype status, the likelihood of 1p/19q codeletion is low as these molecular features are strongly associated with IDH mutation.",
+      "supporting_features": [
+        "age_years",
+        "Multifocal or Multicentric",
+        "Proportion Necrosis",
+        "IDH mutation status prediction"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.9
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 1.5), significant edema (Proportion of Oedema: 84.36), and mass effect (midline shift of 3mm) are characteristic features of high-grade gliomas. The multifocal nature of the tumor and the presence of cortical involvement further support a diagnosis of glioblastoma, WHO grade 4. The predicted IDH wildtype status also aligns with this grade.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "midline_shift_present",
+        "Multifocal or Multicentric",
+        "Cortical involvement",
+        "IDH mutation status prediction"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_01027"
+}

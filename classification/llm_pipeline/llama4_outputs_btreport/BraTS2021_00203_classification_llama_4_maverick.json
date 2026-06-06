@@ -1,0 +1,48 @@
+{
+  "id": "patient_0737",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (67 years) and the presence of a large, enhancing tumor with necrosis (Proportion Necrosis: 19.41%) and significant mass effect (midline shift present, max shift 7mm) are more typical of glioblastoma, IDH-wildtype. The tumor's location in the temporal lobe, insula, and frontal lobe, with ependymal invasion and deep white matter invasion, also suggests an aggressive tumor. While the metadata does not directly assess IDH mutation status, the overall radiological features are more characteristic of IDH-wildtype glioblastoma.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "max_shift_mm",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect, along with the patient's age, is more typical of glioblastoma or an astrocytic tumor. 1p/19q co-deletion is typically associated with oligodendrogliomas, which are less common in older adults and less likely to present with such aggressive features. The absence of specific features typical of oligodendroglioma (e.g., calcifications, which are not assessed here) and the presence of necrosis and enhancement favor a non-codeleted status.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 19.41%), enhancement (Enhancement Quality: Marked), and mass effect (midline shift present). These characteristics are typical of high-grade gliomas. The presence of necrosis is particularly indicative of WHO grade 4. The tumor's large size, ependymal invasion, and deep white matter invasion further support a high-grade diagnosis.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00203"
+}

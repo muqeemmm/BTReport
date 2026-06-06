@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of a non-enhancing tumor with significant edema (ED Volume = 24.678 mL) and cortical involvement suggests a glioma. The lack of enhancement (Enhancement Quality = 'None', Proportion Enhancing = 0.0) and absence of necrosis (Proportion Necrosis = 0.0) are more typical of lower-grade gliomas, which are more likely to be IDH mutant. The tumor's location in the frontal lobe and cortical involvement are also consistent with IDH mutant gliomas.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "IDH mutant gliomas are more likely to have 1p/19q co-deletion if they are located in the frontal lobe and have cortical involvement. The presence of cortical involvement and frontal lobe location supports the possibility of 1p/19q co-deletion. However, the absence of enhancement and lack of significant necrosis or high-grade features make it less clear. Given the IDH mutation status is predicted as 'mutant', and considering the tumor's characteristics, a codeletion status of 'codeleted' is plausible.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The lack of enhancement (Enhancement Quality = 'None') and absence of necrosis (Proportion Necrosis = 0.0) are indicative of a lower-grade glioma. The significant edema and cortical involvement could suggest a higher grade, but the overall features lean towards a lower grade. Given the predicted IDH mutation status is 'mutant', a grade of 2 is more likely than grade 3 or 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.7
+  },
+  "subject_id": "UCSF-PDGM-540"
+}

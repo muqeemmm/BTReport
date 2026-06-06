@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The young age, predominantly temporal-cortical location, cortical involvement, solitary presentation, absent deep white-matter invasion, absent ependymal invasion, and essentially minimal measurable enhancement favor an IDH-mutant diffuse glioma rather than an IDH-wildtype glioblastoma pattern. Features arguing the other way include the reported necrotic/non-enhancing core burden, edema, and midline shift, which can be seen in aggressive IDH-wildtype tumors. Overall, the age and relatively limited enhancement/invasion pattern outweigh the high-grade-appearing edema/necrotic components, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "n_components_enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the strongest location clue is the overwhelmingly temporal distribution, which is less classic for oligodendroglioma than a frontal cortical-subcortical tumor. The absence of deep white-matter invasion is not specific but does not strongly push toward codeletion. Features that could argue for codeletion include cortical involvement, absent T2-FLAIR mismatch, and mild enhancement, but the provided metadata lacks key oligodendroglioma-supporting information such as calcification assessment. Because the available evidence is limited and mixed, the best estimate is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, or molecular testing. The main uncertainty is that the lesion shows very little measurable enhancement while also having a large reported necrotic/non-enhancing core and edema/mass effect; this discordance reduces confidence, especially for WHO grade and 1p/19q status.",
+  "subject_id": "EGD-0236",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For grade, the reported necrotic component, large necrotic/non-enhancing core volume, substantial edema fraction, and midline shift are concerning for a high-grade diffuse glioma, with necrosis in particular favoring CNS WHO grade 4 over grade 2 or 3. Against grade 4, the enhancing tumor volume is extremely small, no enhancing components are detected, enhancement is described as mild, and there is no multifocality, satellites, ependymal invasion, or deep white-matter invasion. Given the explicit necrosis-related metadata and mass-effect/edema despite minimal enhancement, the best estimate is grade 4, but confidence is only moderate because the enhancement findings are discordant.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Tumor Core Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "level_max_shift",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

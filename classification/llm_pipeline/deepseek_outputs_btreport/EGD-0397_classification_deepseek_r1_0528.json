@@ -1,0 +1,51 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 78 years old, which is advanced age favoring IDH-wildtype glioblastoma. However, the tumor is bilateral and multifocal, which can occur in both IDH-mutant and wildtype tumors. Enhancement is mild, which is more common in IDH-mutant tumors, but the proportion of necrosis is low (0.2) and edema is high (98.12%), which is atypical for IDH-wildtype GBM. The absence of strong enhancement and necrosis argues against classic GBM features.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves frontal lobes bilaterally and has cortical involvement, which is typical for oligodendrogliomas (IDH-mutant and 1p/19q codeleted). However, the patient is elderly (78 years), and oligodendrogliomas are rare in this age group. Additionally, there is ependymal invasion and deep white matter invasion, which are more common in astrocytomas. The multifocal nature is non-specific. Given the advanced age and ependymal invasion, astrocytoma lineage is more likely.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "The tumor characteristics suggest an IDH-wildtype glioblastoma given the advanced age, but with atypical features such as mild enhancement and high edema proportion. The 1p/19q status is likely non-codeleted due to age and ependymal invasion. Grade is assigned as 4 based on necrosis presence.",
+  "subject_id": "EGD-0397",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 0.2) is a hallmark of grade 4 glioblastoma. Enhancement is mild, which is less typical for GBM but does not preclude grade 4. The high edema proportion and ependymal invasion also support high-grade tumor. However, mild enhancement is unusual for GBM, which typically shows strong enhancement.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Proportion of Oedema"
+    ]
+  }
+}

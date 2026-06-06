@@ -1,0 +1,51 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 37 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger patients. The tumor is located in the frontal lobe, which is a common site for IDH-mutant gliomas. Enhancement is mild, which is more typical of lower-grade gliomas or IDH-mutant tumors. Proportion necrosis is high (60.27%), which is unusual for IDH-mutant tumors but not definitive. No deep white matter invasion or ependymal invasion, which are more common in IDH-wildtype tumors.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe, which is a common site for both oligodendrogliomas and astrocytomas. However, the tumor involves eloquent cortex (motor) and has cortical involvement, which is more typical of astrocytomas. Oligodendrogliomas often have calcifications, but calcifications are not assessed in this metadata. The T2-FLAIR mismatch sign is absent (score 0.332, degree -0.637), which argues against IDH-mutant astrocytoma and might suggest oligodendroglioma, but the score is not definitive. Mild enhancement is more common in oligodendrogliomas, but not specific. Overall, evidence is mixed but leans toward astrocytoma.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "The tumor is IDH-mutant, non-codeleted astrocytoma. Confidence in IDH status is moderate due to young age supporting mutant but high necrosis contradicting. Confidence in 1p/19q status is lower due to conflicting features.",
+  "subject_id": "EGD-0369",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor has a high proportion of necrosis (60.27%), which is atypical for grade 2 tumors and suggests higher grade. Enhancement is mild, which is more typical of grade 3 than grade 4. The tumor volume is moderate (33.9 mL), and it involves eloquent cortex (motor), which may indicate higher grade. No midline shift or ventricular invasion. The T2-FLAIR mismatch is absent, which is more common in grade 4 IDH-wildtype tumors but here IDH is mutant. Overall, features suggest grade 3.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Eloquent Brain Involvement",
+      "Tumor Volume",
+      "T2-FLAIR Mismatch Score"
+    ]
+  }
+}

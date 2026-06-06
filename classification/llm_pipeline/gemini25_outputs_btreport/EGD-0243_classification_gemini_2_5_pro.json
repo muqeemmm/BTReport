@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0243",
+  "idh": {
+    "reasoning": "The patient's age of 51 years is more typical for IDH-wildtype gliomas. The most compelling evidence for IDH-wildtype status is the presence of extensive central necrosis, with a `Proportion Necrosis` of 50.64% and a large `NCR Volume (mL)` of 51.18. These features are hallmarks of glioblastoma, which is prototypically IDH-wildtype. Significant mass effect (`midline_shift_present`) also supports a more aggressive, wildtype tumor. Conversely, the enhancement pattern is a strong contradictory feature; the `Enhancement Quality` is 'Mild' and the `ET Volume (mL)` is negligible, which is highly characteristic of IDH-mutant gliomas. Weighing these conflicting features, the extensive necrosis is a more powerful predictor of IDH-wildtype status than the lack of enhancement is for mutant status, leading to a prediction of wildtype, albeit with reduced confidence.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of non-codeletion is based primarily on features that are atypical for an oligodendroglioma (the codeleted entity). The presence of extensive necrosis (`Proportion Necrosis` of 50.64%) is highly uncharacteristic of oligodendroglioma. Furthermore, the tumor shows `Deep WM invasion` and involves deep gray matter structures (`Anatomical Overlap Regions` including caudate and putamen), which are classic features of an infiltrative astrocytoma (non-codeleted). There are no specific imaging features in the provided metadata to suggest an oligodendroglioma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is strongly supported by the presence of extensive central necrosis, a key criterion for this grade. The `Proportion Necrosis` is 50.64% and the `NCR Volume (mL)` is 51.18 mL, indicating a large necrotic core. Additional features supporting a high grade include the large `Total tumor volume (mL)` of 101.074 and significant mass effect (`midline_shift_present`). The primary contradictory evidence is the very minimal contrast enhancement (`ET Volume (mL)` of 0.027, `Enhancement Quality` of 'Mild'), as grade 4 gliomas typically show avid enhancement. However, necrosis is a more definitive radiological correlate of WHO grade 4 than enhancement, making grade 4 the most likely diagnosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents with conflicting imaging features. The extensive central necrosis and patient age strongly suggest a Glioblastoma, IDH-wildtype (WHO Grade 4). However, the contrast enhancement is unusually mild and minimal, a feature more typical of lower-grade or IDH-mutant gliomas. Despite this, necrosis is a powerful radiological marker for WHO Grade 4, making this the most probable diagnosis. The IDH status prediction carries lower confidence due to this atypical enhancement pattern."
+}

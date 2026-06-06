@@ -1,0 +1,39 @@
+{
+  "subject_id": "BraTS2021_00089",
+  "idh": {
+    "reasoning": "The patient is 72 years old. Older age (>60-65) is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it significantly increases the likelihood of IDH-wildtype status. No other features in the metadata strongly suggest IDH-mutant status (e.g., younger age, specific imaging patterns often seen in lower-grade IDH-mutant tumors). The tumor size (35 mL) and location (frontal lobe) are non-specific regarding IDH status. The presence of deep white matter invasion and cortical involvement are common in both IDH-mutant and wildtype tumors, though perhaps slightly more typical of higher-grade tumors which are more common in the wildtype group. Given the strong age association, IDH-wildtype is the more probable status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information directly related to 1p/19q co-deletion status. Features like tumor size, location, enhancement pattern, or patient age are not reliable predictors of 1p/19q co-deletion status on their own. 1p/19q co-deletion is typically associated with IDH-mutant oligodendrogliomas (WHO grade 2 or 3), but its absence doesn't rule out an IDH-mutant glioma, and its presence is rare in IDH-wildtype tumors. Without specific molecular or imaging markers (like DWI/perfusion which are unavailable), predicting co-deletion status is impossible based solely on this metadata.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (72) strongly suggests an IDH-wildtype tumor, which typically corresponds to WHO grade 4 (glioblastoma). The large tumor volume (35 mL), marked enhancement, deep white matter invasion, cortical involvement, and midline crossing edema are all features consistent with a high-grade glioma. The 'Thickness of enhancing margin' (>3mm) is also often seen in high-grade tumors. While the 'Proportion Enhancing' (53.74%) isn't extremely high for a glioblastoma, it's still substantial. The combination of advanced age and aggressive imaging features points strongly towards WHO grade 4.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Edema crosses midline",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH-wildtype, non-codeleted, WHO grade 4 diffuse astrocytic glioma.",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is elderly with imaging features suggestive of a high grade glioma likely glioblastoma given the age and aggressive features."
+}

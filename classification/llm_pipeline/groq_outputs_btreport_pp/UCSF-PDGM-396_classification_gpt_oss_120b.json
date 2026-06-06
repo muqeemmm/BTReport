@@ -1,0 +1,58 @@
+{
+  "subject_id": "UCSF-PDGM-396",
+  "idh": {
+    "reasoning": "The patient is young (age 36) and shows only mild contrast enhancement, low necrosis (0.3%) and a very small enhancing tumor volume (ET Volume (mL)=2.037), which are typical of IDH\u2011mutant gliomas. Cortical involvement and deep white\u2011matter invasion also favor an IDH\u2011mutant phenotype. However, the T2\u2011FLAIR mismatch is absent (T2-FLAIR Mismatch Present=0), edema is extensive (Proportion of Oedema=97.46%) and crosses the midline (Edema crosses midline=True), features more common in IDH\u2011wildtype tumors, and the total tumor volume is large (Total tumor volume (mL)=90.777). Balancing these opposing clues leads to a best estimate of IDH\u2011mutant with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Edema crosses midline",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.58
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Absence of T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present=0) and the presence of mild enhancement with low necrosis are more characteristic of IDH\u2011mutant astrocytomas, which are non\u2011codeleted for 1p/19q. No imaging evidence of calcifications or classic oligodendroglioma features is available, providing limited support for codeletion. Therefore the most likely status is non\u2011codeleted, though the data are insufficient for high certainty.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "Mild enhancement and low necrosis suggest a lower grade, but the extensive edema that crosses the midline, the large overall tumor volume, and the midline epicenter are more typical of a higher\u2011grade lesion (grade 3). The balance of these features points toward WHO grade 3 with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "Total tumor volume (mL)",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.57
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma, likely WHO grade 3. The lack of T2\u2011FLAIR mismatch and the very high edema proportion introduce uncertainty; additional molecular testing (e.g., IDH immunohistochemistry, 1p/19q FISH) would be valuable."
+}

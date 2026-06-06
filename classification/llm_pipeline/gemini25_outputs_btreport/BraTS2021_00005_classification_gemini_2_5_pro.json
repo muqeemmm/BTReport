@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_00005",
+  "idh": {
+    "reasoning": "The tumor displays multiple aggressive features that are highly characteristic of IDH-wildtype gliomas. Key indicators include the presence of a large necrotic core (NCR Volume (mL) of 24.171, Proportion Necrosis of 20.03%) and marked, thick-walled contrast enhancement (Enhancement Quality: \"Marked\", Thickness of enhancing margin: \">3mm\"). Additionally, the very large total tumor volume (120.679 mL), extensive vasogenic edema (ED Volume (mL) of 74.855), and significant mass effect (midline_shift_present: \"Yes\", max_shift_mm: 8.0) strongly favor an IDH-wildtype status. The deep location involving the thalamus is also more common in IDH-wildtype tumors. There are no features suggestive of an IDH-mutant glioma, which typically present with less aggressive features.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly against a 1p/19q co-deleted status (oligodendroglioma). Oligodendrogliomas typically lack significant necrosis and ring enhancement. This tumor, in contrast, has a large necrotic component (Proportion Necrosis: 20.03%) and marked, thick-walled enhancement (Enhancement Quality: \"Marked\", Thickness of enhancing margin: \">3mm\"). These features are hallmarks of astrocytic tumors, which are 1p/19q non-codeleted. The deep involvement of the thalamus and caudate also favors an astrocytoma over an oligodendroglioma. The minor involvement of the frontal lobe is insufficient to counteract the overwhelming evidence for a non-codeleted astrocytic lineage.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of imaging features corresponding to both necrosis and microvascular proliferation are definitive for a CNS WHO grade 4 tumor. The large non-enhancing core (NCR Volume (mL): 24.171) is a clear radiological sign of necrosis. The marked, thick, ring-like enhancement (Enhancement Quality: \"Marked\", Thickness of enhancing margin: \">3mm\") is the classic imaging correlate of microvascular proliferation. Additional features supporting a high-grade diagnosis include the significant mass effect (midline_shift_present: \"Yes\"), extensive edema, and ependymal invasion. There are no imaging findings to suggest a lower grade (2 or 3).",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features are classic for a glioblastoma. The large, centrally located mass in the left hemisphere shows extensive necrosis, marked and thick ring enhancement, significant surrounding edema, and substantial mass effect. These findings are highly indicative of an IDH-wildtype, 1p/19q non-codeleted, WHO grade 4 tumor."
+}

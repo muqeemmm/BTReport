@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (62 years) and the presence of a largely necrotic tumor with marked enhancement and significant necrosis proportion (49.49%) are more typical of glioblastoma, IDH-wildtype. The tumor's location in the temporal cortex and the absence of ependymal invasion are also noted, but the key factors here are age and tumor characteristics suggestive of high-grade glioma. IDH mutations are less common in older patients and typically associated with lower-grade gliomas or secondary glioblastomas.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH-wildtype status (predicted with high confidence) makes 1p/19q co-deletion less likely since co-deletion is typically associated with IDH-mutant gliomas. The tumor's characteristics (e.g., marked enhancement, significant necrosis) are not typical for 1p/19q co-deleted tumors, which are more commonly associated with oligodendrogliomas, often IDH-mutant and 1p/19q co-deleted.",
+    "supporting_features": [
+      "idh_status",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor's characteristics, such as marked enhancement, significant necrosis proportion (49.49%), and large size (Total tumor volume = 81.347 mL), are indicative of a high-grade glioma. The presence of multiple satellites and the involvement of eloquent brain areas further support this. The predicted IDH-wildtype status also aligns with glioblastoma, WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0132"
+}

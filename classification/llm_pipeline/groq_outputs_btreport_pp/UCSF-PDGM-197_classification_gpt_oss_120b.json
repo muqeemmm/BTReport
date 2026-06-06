@@ -1,0 +1,44 @@
+{
+  "subject_id": "UCSF-PDGM-197",
+  "idh": {
+    "reasoning": "The T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present = 1.0) with a high score (0.94), which is highly specific for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. The patient\u2019s age (43) also favors IDH mutation. However, marked contrast enhancement (Enhancement Quality = Marked) and a substantial necrotic component (Proportion Necrosis = 29.8%) are more typical of IDH\u2011wildtype glioblastoma, creating some conflict. Balancing the strong mismatch evidence against the contradictory enhancement/necrosis, the conclusion is IDH\u2011mutant with moderate\u2011high confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present = 1.0) is a radiographic surrogate for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma and argues strongly against 1p/19q codeletion, which is usually seen in oligodendrogliomas that often display calcifications and a different imaging phenotype. No imaging features suggest oligodendroglial morphology, and no contradictory data are present. Therefore the lesion is predicted to be 1p/19q non\u2011codeleted with high confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "Necrosis occupies ~30% of the tumor (Proportion Necrosis = 29.8%) and contrast enhancement is marked (Enhancement Quality = Marked) with a thick enhancing margin (>3mm). The total tumor volume is large (Total tumor volume (mL) = 99.432) and there is significant mass effect (midline_shift_present = Yes). These imaging characteristics are typical of high\u2011grade (grade\u202f4) glioma. Counterbalancing this, the presence of a T2\u2011FLAIR mismatch sign and a relatively modest enhancing proportion (Proportion Enhancing = 24.13%) are more characteristic of lower\u2011grade (grade\u202f2\u20113) IDH\u2011mutant astrocytoma. Considering the stronger high\u2011grade imaging signs, the prediction is WHO grade\u202f4 with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, but the marked enhancement and necrosis raise the possibility of a higher\u2011grade lesion. Molecular testing is required for definitive classification; histopathology will confirm grade and 1p/19q status."
+}

@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, the tumor is solitary and nonenhancing with no enhancing component, and it has cortical/fronto-insular-temporal involvement, a common presentation pattern for lower-grade IDH-mutant glioma. Features that could argue toward IDH-wildtype biology include deep white-matter invasion, large tumor volume, a reported high nonenhancing/necrosis proportion, midline epicenter labeling, and overlap with deep gray/ventricular-adjacent structures. However, the lack of enhancement and young age weigh more strongly toward IDH-mutant status than IDH-wildtype glioblastoma in the provided MRI metadata.",
+    "supporting_features": [
+      "age_years",
+      "Number of lesions",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the MRI evidence is mixed. Non-codeletion is supported by the very young age and the large infiltrative fronto-insular-temporal pattern with deep white-matter invasion, which can fit astrocytoma. Codeletion is also plausible because the lesion has cortical and frontal involvement, is nonenhancing, and lacks a definite T2-FLAIR mismatch, features that may be seen in oligodendroglioma. Because the available metadata does not provide a decisive oligodendroglial imaging marker and the age/location pattern is not classic enough to confidently call codeletion, the balance slightly favors non-codeleted status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The main uncertainty is 1p/19q status, because frontal cortical nonenhancing tumors can be codeleted, while the very young age and broad fronto-insular-temporal infiltrative pattern favor non-codeleted astrocytoma. The reported high Proportion Necrosis conflicts with the absence of enhancement and should be interpreted cautiously as a metadata-derived label rather than definitive histologic necrosis.",
+  "subject_id": "BraTS2021_01529",
+  "who_grade": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade, the strongest MRI evidence supports a lower-grade tumor: the lesion is nonenhancing, has zero enhancing tumor volume, no enhancing components, is solitary, does not cross the midline, has no ependymal invasion, and has no reported midline shift. Grade 3 remains possible because the tumor is large and infiltrative with deep white-matter invasion and edema. Grade 4 is less favored by the absence of enhancement, although the reported high Proportion Necrosis is a significant conflicting feature if it represents true necrosis. Overall, the nonenhancing solitary presentation without midline crossing or ependymal invasion favors CNS WHO grade 2 over grades 3 or 4, but with only moderate confidence because of size, edema, deep invasion, and the necrosis-related metadata field.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

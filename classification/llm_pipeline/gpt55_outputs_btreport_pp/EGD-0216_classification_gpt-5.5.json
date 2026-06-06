@@ -1,0 +1,71 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors IDH-wildtype because the patient is older, the lesion is markedly and substantially enhancing, and it is multifocal, all of which are more typical of IDH-wildtype diffuse glioma than IDH-mutant glioma. The thick enhancing margin and predominantly enhancing report also support a high-grade aggressive phenotype. The main counterpoint is a reported T2-FLAIR mismatch, which is a recognized imaging marker that can support IDH-mutant astrocytoma, so the evidence is not uniform. Overall, the age and aggressive enhancing multifocal pattern outweigh the mismatch feature, leading to IDH-wildtype as the best estimate.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Thickness of enhancing margin",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata favors non-codeleted status because the reported T2-FLAIR mismatch supports an astrocytic rather than oligodendroglial imaging phenotype, and the marked, substantial enhancement with multifocal disease is not a typical classic oligodendroglioma pattern. The tumor is temporal-parietal with cortical involvement rather than a clearly frontal-predominant lesion. Cortical involvement and cortical location can be seen with oligodendroglioma, so those features modestly argue against a non-codeleted prediction. Overall, the available MRI pattern is more supportive of non-codeleted than codeleted disease.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, or histomolecular data. The reported T2-FLAIR mismatch introduces uncertainty for IDH status because it can support IDH-mutant astrocytoma, but the advanced age and aggressive enhancing multifocal phenotype favor glioblastoma, IDH-wildtype.",
+  "subject_id": "EGD-0216",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "The metadata favors CNS WHO grade 4 because the lesion is markedly enhancing with a large enhancing component, thick enhancing margin, substantial edema, and multifocal disease, all suggesting an aggressive high-grade diffuse glioma. The text report describes the tumor as mostly enhancing and multifocal. Features arguing against the highest grade include minimal necrotic volume, very low necrosis proportion, absent midline shift, absent deep white matter invasion, and absent ependymal invasion. Despite limited necrosis, the enhancement burden and multifocal aggressive pattern make grade 4 the best estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

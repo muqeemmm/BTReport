@@ -1,0 +1,52 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (60 years) and the presence of a multifocal, bilateral tumor with significant edema and mass effect (as indicated by 'midline_shift_present': 'No' but 'Edema crosses midline': 'True', 'Asymmetrical Ventricles': 'Present', and 'Effaced Ventricle': 'Right') are more typical of glioblastoma, IDH-wildtype. The lack of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.4, T2-FLAIR Mismatch Degree: 0.04170779013230419) also argues against IDH-mutant astrocytoma. The presence of enhancement (Enhancement Quality: 'Mild', Proportion Enhancing: 1.28) and necrosis (Proportion Necrosis: 0.49) further supports a more aggressive tumor type, typically associated with IDH-wildtype glioblastoma.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Edema crosses midline",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a multifocal, bilateral tumor with significant edema and the absence of T2-FLAIR mismatch are not typical for 1p/19q codeleted tumors, which are more often associated with oligodendroglioma. The clinical and radiological features (e.g., age, enhancement, necrosis) are more suggestive of glioblastoma or astrocytoma. 1p/19q codeletion is more commonly seen in IDH-mutant tumors with a more favorable prognosis, which is not the case here.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Edema crosses midline",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_who_grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 0.49), enhancement (Enhancement Quality: 'Mild', Proportion Enhancing: 1.28), and significant edema (ED Volume: 172.573 mL, Proportion of Oedema: 98.23%) are characteristic features of glioblastoma, WHO grade 4. The patient's age (60 years) and the multifocal nature of the tumor also support a higher grade. The lack of T2-FLAIR mismatch further argues against a lower-grade IDH-mutant astrocytoma.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00432"
+}

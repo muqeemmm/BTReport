@@ -1,0 +1,50 @@
+{
+  "id": "patient_1050",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (52 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 13.67%) and significant edema (Proportion of Oedema: 76.56%) are more commonly associated with IDH wildtype glioblastoma, typically seen in older adults. The tumor's aggressive features, such as deep white matter invasion and cortical involvement, also align with a higher grade glioma, which is more likely to be IDH wildtype. While the location in the temporal lobe could be seen in IDH mutant gliomas, the overall profile leans towards IDH wildtype due to the patient's age and tumor characteristics.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "Enhancement Quality",
+        "Deep WM invasion",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [
+        "Tumor Location"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's characteristics, such as being mildly enhancing and having a significant proportion of necrosis, are not typical for 1p/19q co-deleted tumors, which are more commonly associated with oligodendrogliomas that typically show less aggressive features. The presence of necrosis and the overall tumor profile (e.g., significant edema, deep white matter invasion) are more suggestive of astrocytic lineage tumors, which are usually non-codeleted. The absence of features like calcifications (not assessed here) doesn't directly inform this prediction.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.75
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 13.67%), mild enhancement, and deep white matter invasion. These characteristics are typical of high-grade gliomas. The presence of necrosis is particularly indicative of WHO grade 4. The tumor's large size and significant edema also support a high-grade classification. While the enhancement quality is mild, the overall profile suggests a high-grade tumor.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "Deep WM invasion",
+        "Lesion Sizes APxTVxCC (cm)"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_01203"
+}

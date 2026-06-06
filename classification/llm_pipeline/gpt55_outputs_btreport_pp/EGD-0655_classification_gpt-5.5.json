@@ -1,0 +1,74 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI marker for IDH-mutant diffuse astrocytoma is the reported T2-FLAIR mismatch, with both T2-FLAIR Mismatch Present and a high T2-FLAIR Mismatch Score supporting IDH mutation. The lesion is largely nonenhancing by ET Volume (mL), Enhancement Quality, and n_components_enhancing, which is also more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. Cortical involvement and a temporal/insula component in Tumor Location are compatible with an IDH-mutant diffuse glioma. Against IDH mutation, age_years of 45 is not very young, and the large Total tumor volume (mL), midline_shift_present with max_shift_mm, Ependymal (ventricular) Invasion, Deep WM invasion, and high Proportion Necrosis are more aggressive features that can be seen in IDH-wildtype glioblastoma. Overall, the specific T2-FLAIR mismatch and minimal enhancement outweigh the aggressive but less specific features, so the conclusion is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "n_components_enhancing",
+      "Cortical involvement",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.79,
+    "contradicting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently from the IDH call, the reported T2-FLAIR Mismatch Present with high T2-FLAIR Mismatch Score is a strong imaging pattern favoring astrocytoma-type, 1p/19q-non-codeleted diffuse glioma rather than oligodendroglioma. The temporal and insular involvement in Tumor Location also fits better with non-codeleted astrocytoma than a classic frontal oligodendroglioma pattern. Minimal enhancement by ET Volume (mL), Enhancement Quality, and n_components_enhancing does not specifically favor codeletion. Arguing against non-codeletion, Region Proportions and Tumor Location include frontal_lobe and cortex, and Cortical involvement is present, which can be seen in oligodendroglioma. However, the T2-FLAIR mismatch is the most specific available imaging feature and supports a non-codeleted prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "n_components_enhancing"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or calcification assessment. T2-FLAIR mismatch strongly supports an IDH-mutant, 1p/19q-non-codeleted astrocytoma pattern, but grade is less certain because there is very little measurable enhancement despite a high reported necrosis/nonenhancing-core proportion and marked mass effect/invasion features.",
+  "subject_id": "EGD-0655",
+  "who_grade": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "n_components_enhancing",
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": 4,
+    "reasoning": "Grade is assessed independently from molecular predictions using only the MRI metadata. Features supporting grade 4 include high Proportion Necrosis, large NCR Volume (mL), large Total tumor volume (mL), substantial mass effect with midline_shift_present and max_shift_mm, Ependymal (ventricular) Invasion, Deep WM invasion, Edema crosses midline, and a large ED Volume (mL). These features indicate aggressive biology and infiltrative burden. Features arguing for lower grade include very small ET Volume (mL), Mild Enhancement Quality, n_components_enhancing showing no discrete enhancing components, T2-FLAIR Mismatch Present, and a thin Transition Zone Thickness (FLAIR), which can be associated with lower-grade IDH-mutant astrocytoma. The high reported necrosis/nonenhancing-core burden plus marked mass effect and ventricular/deep white matter invasion outweigh the minimal enhancement, so the best imaging-based estimate is CNS WHO grade 4, with only moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "ED Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

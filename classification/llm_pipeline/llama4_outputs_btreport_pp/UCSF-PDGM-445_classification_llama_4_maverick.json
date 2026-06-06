@@ -1,0 +1,46 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (48 years) and the tumor's characteristics (non-enhancing, large edema volume, and absence of necrosis or enhancement) are somewhat suggestive of an IDH mutant glioma, as IDH mutant gliomas are more common in younger adults and often present with non-enhancing features. However, the absence of a clear T2-FLAIR mismatch (T2-FLAIR Mismatch Score = 0.6832648302971038, which is not strongly indicative of mismatch) and the lack of specific molecular markers in the provided metadata make this prediction uncertain. The presence of cortical involvement and the tumor's location in the frontal lobe could be seen in both IDH mutant and wildtype gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "codeletion_status": {
+    "reasoning": "The absence of enhancement and the presence of a large non-enhancing tumor with significant edema are features that can be seen in IDH mutant gliomas, which are more likely to have 1p/19q codeletion if they are oligodendrogliomas. However, the provided metadata does not directly indicate 1p/19q codeletion status. The tumor's characteristics (e.g., frontal lobe location, cortical involvement) could be consistent with an oligodendroglioma, but without clear evidence of 1p/19q codeletion or specific histological features, this remains speculative.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.55
+  },
+  "grade": {
+    "reasoning": "The tumor's large size, significant edema, and involvement of the frontal lobe and cortex suggest a high-grade glioma. However, the absence of necrosis or enhancement is more typical of lower-grade gliomas. The presence of significant edema and mass effect (midline shift) could indicate a higher grade, but the lack of enhancement and necrosis is atypical for grade 4 gliomas. The features are somewhat conflicting, making the grade prediction challenging.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-445"
+}

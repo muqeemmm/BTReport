@@ -1,0 +1,55 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of a large, heterogeneous tumor with significant mass effect (midline shift, ventricular invasion) and the involvement of multiple deep structures (thalamus, brainstem) could be indicative of a more aggressive tumor type, often associated with IDH wildtype status in adult-type diffuse gliomas. The tumor's characteristics, such as its large size, necrosis proportion (9.54%), and the presence of enhancement, are more typical of glioblastomas, which are frequently IDH wildtype. However, without direct molecular information or specific imaging features pathognomonic for IDH mutation status, this assessment relies on the tumor's aggressive features.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "midline_shift_present",
+      "volumes_ideal_midline",
+      "crosses_ideal_midline",
+      "primary_side_ideal_midline",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor's involvement of deep structures and its aggressive features (large size, significant mass effect, necrosis, and enhancement) are not typical for 1p/19q codeleted tumors, which are more commonly associated with oligodendrogliomas. Oligodendrogliomas tend to be more frontal, often calcified, and less commonly involve deep structures like the thalamus and brainstem. The absence of specific features like calcification (not assessed here due to the lack of SWI/GRE sequences) and the presence of aggressive features lean towards a non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Anatomical Overlap Regions",
+      "volumes_ideal_midline",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "cns_grade": {
+    "reasoning": "The tumor exhibits aggressive features such as significant mass effect (midline shift), large size, necrosis (9.54% proportion), and enhancement (14.33% proportion), which are characteristic of high-grade gliomas. The presence of necrosis and significant enhancement are particularly indicative of a higher grade. Given these features, a CNS WHO grade of 4 is most likely, as it aligns with the characteristics of glioblastoma, which is a grade 4 tumor.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "UCSF-PDGM-318"
+}

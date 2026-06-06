@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 28 years old, which is younger than typical for IDH-wildtype gliomas that usually occur in older patients. IDH-mutant gliomas are more common in younger adults. The tumor is nonenhancing ('Enhancement Quality': 'None'), which is more typical of lower-grade gliomas often associated with IDH mutation. The tumor involves the temporal lobe and cortex ('Region Proportions'), which are common sites for IDH-mutant gliomas. However, the age is not extremely young, and there is no specific molecular marker provided.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the temporal lobe and cortex ('Region Proportions'), which is more typical of astrocytomas (non-codeleted) rather than oligodendrogliomas (codeleted). Oligodendrogliomas often involve frontal lobes and may show calcifications, but calcifications are not assessed here. The absence of enhancement ('Enhancement Quality': 'None') is non-specific. There is no direct evidence for 1p/19q status, so confidence is low.",
+    "supporting_features": [
+      "Region Proportions",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The absence of enhancement and young age support IDH mutation. The temporal-cortical location favors astrocytoma over oligodendroglioma. However, molecular testing is required for definitive classification.",
+  "subject_id": "UCSF-PDGM-256",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor is nonenhancing ('Enhancement Quality': 'None'), which is typical of WHO grade 2 gliomas. There is no necrosis ('Proportion Necrosis': 0.0) and no enhancing component, which are features of higher-grade tumors. The tumor volume is 60.248 mL, which is large but not definitive for grade. The absence of deep white matter invasion ('Deep WM invasion': 'Absent') and ependymal invasion ('Ependymal (ventricular) Invasion': 'Absent') also suggest lower grade. However, the large edema volume ('ED Volume (mL)': 60.248) could indicate higher grade, but edema alone is not diagnostic.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_00543",
+  "idh": {
+    "reasoning": "The patient's age of 33 years is a very strong predictor for an IDH-mutant glioma. This is further supported by the tumor's location involving the frontal lobe, the mild quality of enhancement, the low proportion of enhancement (8.11%), and the very small proportion of necrosis (1.36%). These features are classic for lower-grade, IDH-mutant gliomas. The primary contradicting feature is the absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0), which is a specific sign for IDH-mutant astrocytomas. However, its absence does not rule out an IDH-mutant status, particularly in oligodendrogliomas. The overwhelming evidence from the patient's young age and other imaging characteristics strongly favors an IDH-mutant prediction.",
+    "supporting_features": [
+      "age_years",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "In the context of a presumed IDH-mutant glioma, the most critical feature for differentiating 1p/19q co-deleted (oligodendroglioma) from non-codeleted (astrocytoma) status is the T2-FLAIR mismatch sign. The explicit absence of this sign ('T2-FLAIR Mismatch Present': 0.0) is strong evidence against an astrocytoma and, by extension, supports a codeleted status. This is further corroborated by the tumor's involvement of the frontal lobe and cortex, and the relatively sharp tumor margins suggested by the thin FLAIR transition zone (median 0.75 mm). The main contradicting feature is the involvement of the insula, which is a classic location for IDH-mutant astrocytomas. However, the lack of the T2-FLAIR mismatch sign is a more specific and powerful differentiator in this case, leading to a prediction of codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Region Proportions",
+      "Cortical involvement",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The presence of both contrast enhancement and necrosis are key indicators of a high-grade glioma, making a WHO grade 2 diagnosis highly unlikely. The metadata confirms a significant enhancing volume ('ET Volume (mL)': 9.759) and, crucially, a non-zero necrotic component ('NCR Volume (mL)': 1.637, 'Proportion Necrosis': 1.36). Additional features supporting a higher grade include the significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': 6.0), extensive surrounding edema ('ED Volume (mL)': 108.909), and ependymal invasion. While necrosis in an IDH-mutant astrocytoma would define it as grade 4, in an oligodendroglioma it is a feature of anaplasia consistent with grade 3. Given the presence of these high-grade features, the tumor is at least grade 3. There are no features that would definitively favor grade 4 over grade 3 without knowing the IDH/1p19q status, but grade 2 is effectively ruled out.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 33-year-old male with a large, solitary glioma centered in the left hemisphere with significant mass effect. The young age and imaging features (frontal involvement, mild enhancement, minimal necrosis) are highly suggestive of an IDH-mutant tumor. The absence of a T2-FLAIR mismatch sign strongly favors a 1p/19q-codeleted (oligodendroglioma) subtype over an astrocytoma. The presence of definite contrast enhancement and a small necrotic component indicates anaplastic features, consistent with a WHO grade 3 designation. The integrated diagnosis is therefore anaplastic oligodendroglioma, WHO grade 3."
+}

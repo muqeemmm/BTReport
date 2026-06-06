@@ -1,0 +1,69 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status considered independently, the strongest molecularly informative MRI metadata is the presence of a T2-FLAIR mismatch pattern, with a high mismatch score and degree, which supports an IDH-mutant diffuse glioma phenotype. Cortical involvement also fits an infiltrative lower-grade/IDH-mutant pattern. Against IDH mutation, the patient is older, the lesion is markedly and substantially enhancing, multifocal with two lesions, and has a large edema component, all of which are more typical of IDH-wildtype glioblastoma biology. Balancing these, the explicit T2-FLAIR mismatch metadata is a relatively specific IDH-mutant marker, but the aggressive enhancing multifocal phenotype lowers certainty; therefore the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the T2-FLAIR mismatch pattern supports an astrocytic, non-codeleted diffuse glioma rather than an oligodendroglioma. The metadata also lacks any provided calcification-sensitive sequence or calcification descriptor, so there is no positive imaging evidence for oligodendroglioma from the available fields. Features that could argue toward codeletion include cortical involvement, some frontal-lobe participation, and the patient's older adult age, which can be seen with oligodendroglioma, but these are nonspecific and weaker than the T2-FLAIR mismatch signal. Therefore the best estimate is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, or SWI/GRE. The major uncertainty is the discordance between a T2-FLAIR mismatch pattern, which supports IDH-mutant/non-codeleted astrocytoma, and the older age plus markedly enhancing multifocal edematous phenotype, which is more typical of aggressive IDH-wildtype glioblastoma. Histopathology and molecular testing remain required.",
+  "subject_id": "EGD-0593",
+  "who_grade": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently, the lesion has marked enhancement, a large enhancing tumor volume, thick enhancing margin, measurable necrotic/non-enhancing core volume, extensive edema, large total tumor volume, and multifocal disease with two enhancing components. These are strong MRI indicators of high-grade aggressive glioma and support CNS WHO grade 4 over grades 2 or 3. Against grade 4, there is no midline shift, no ventricular asymmetry, no ependymal invasion, no deep white matter invasion, and the necrotic proportion is relatively small; these reduce but do not outweigh the enhancing multifocal aggressive phenotype. Therefore the best estimate is CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "n_components_enhancing"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

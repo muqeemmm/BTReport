@@ -1,0 +1,54 @@
+{
+  "subject_id": "UCSF-PDGM-435",
+  "idh": {
+    "reasoning": "The patient is 73 years old, an age at which IDH-wildtype glioblastoma is far more common. Imaging shows marked contrast enhancement, necrosis (14.46% of tumor), and multifocal disease, all typical of IDH-wildtype high\u2011grade glioma. The T2\u2011FLAIR mismatch sign is absent (value 0.0), which argues against IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. While cortical involvement can be seen in both entities, the preponderance of high\u2011grade imaging features supports an IDH\u2011wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the predicted IDH\u2011wildtype status, the tumor cannot be 1p/19q\u2011codeleted, as codeletion occurs only with IDH\u2011mutant gliomas. Moreover, the presence of marked enhancement, necrosis, and lack of calcification (not reported) are more typical of non\u2011codeleted diffuse astrocytic tumors. No imaging feature specifically suggests codeletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "age_years",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement, necrosis, and a sizable enhancing tumor volume (18.324\u202fmL) are hallmarks of WHO grade\u202f4 glioblastoma. The patient\u2019s age and multifocal pattern further support a high\u2011grade lesion. Although the proportion of enhancing tumor is modest (34.71\u202f%) and the T2\u2011FLAIR mismatch sign is absent, these do not outweigh the necrosis and enhancement findings. Therefore the most likely grade is 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement"
+    ],
+    "prediction": 4,
+    "confidence": 0.78
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly favors an IDH\u2011wildtype glioblastoma (grade\u202f4, non\u2011codeleted). Molecular confirmation is required; lack of diffusion, perfusion, and spectroscopy limits certainty. The absence of the T2\u2011FLAIR mismatch sign and presence of necrosis are the key discriminators."
+}

@@ -1,0 +1,43 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is young (24 years), which favors IDH-mutant glioma. However, there is no enhancement (Enhancement Quality: None) and no necrosis (Proportion Necrosis: 0.0), which are more common in IDH-wildtype glioblastomas. The T2-FLAIR mismatch score is low (0.4), which argues against IDH-mutant astrocytoma. Overall, evidence is conflicting.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves cortex (Cortical involvement: Present) and insula, which is typical for astrocytomas (non-codeleted). Oligodendrogliomas often involve white matter but may spare cortex. Deep white matter invasion is absent, which is more common in oligodendrogliomas, but cortical involvement strongly suggests astrocytic lineage.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "Confidence is low due to conflicting evidence for IDH status and limited molecular features.",
+  "subject_id": "UCSF-PDGM-238",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has no enhancement or necrosis, which are features of high-grade gliomas. However, WHO grade 4 glioblastoma requires either microvascular proliferation or necrosis. Since necrosis is absent, grade 4 is less certain. But the tumor is large (16.885 mL) and involves eloquent areas (insula), suggesting aggressiveness. Given the absence of enhancement, grade 3 is possible, but the size and location favor grade 4.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

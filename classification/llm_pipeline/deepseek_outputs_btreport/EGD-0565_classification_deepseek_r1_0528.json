@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 35 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger patients. The tumor involves eloquent areas (Speech motor and Motor) and is midline, which is more common in IDH-mutant tumors. Enhancement is mild, which is more typical for IDH-mutant tumors than wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement",
+      "Enhancement Quality",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves frontal, parietal, cortex, and temporal lobes, which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas are more commonly frontal and cortical. The absence of deep white matter invasion is not typical for oligodendrogliomas, which often involve deep white matter.",
+    "supporting_features": [
+      "Region Proportions",
+      "Deep WM invasion",
+      "Tumor Location",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "The tumor is midline, involves eloquent areas, and has mild enhancement, suggesting IDH-mutant glioma. The location and absence of deep white matter invasion suggest astrocytoma rather than oligodendroglioma. The proportion of necrosis (14.37%) and enhancement (2.61%) suggest higher grade, but without diffusion/perfusion, grade 4 is less certain.",
+  "subject_id": "EGD-0565",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "The proportion of necrosis (14.37%) is high, which is typical for glioblastoma (grade 4). Enhancement is present but mild, which is less typical for grade 4. The tumor involves eloquent areas and is midline, which are features of higher grade tumors. However, without diffusion/perfusion, microvascular proliferation cannot be assessed, so confidence is moderate.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement",
+      "Side of Tumor Epicenter"
+    ]
+  }
+}

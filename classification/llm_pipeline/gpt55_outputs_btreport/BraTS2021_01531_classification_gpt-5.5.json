@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The imaging metadata favors an IDH-mutant diffuse glioma because the patient is young, the lesion has cortical involvement, is largely non-enhancing with only mild enhancement, has no measurable oedema, and produces only minimal midline shift despite a large tumor volume. These features are more typical of a slower-growing IDH-mutant glioma than an IDH-wildtype glioblastoma. Evidence against IDH mutation includes the metadata label of extensive necrosis, ependymal invasion, deep white-matter invasion, midline crossing by non-enhancing tumor, and very large size, which can be seen with biologically aggressive IDH-wildtype tumors. On balance, the age and low-oedema, predominantly non-enhancing phenotype support IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the lesion is less typical for oligodendroglioma because the dominant location is parietal-occipital with ventricular involvement rather than a classic frontal cortical-subcortical oligodendroglial pattern, and there is deep white-matter invasion, ependymal invasion, midline epicenter, and non-enhancing tumor crossing midline. These features lean toward a non-codeleted astrocytic diffuse glioma. Evidence favoring codeletion includes young age, cortical involvement, mild enhancement, and absence of oedema, all of which can be seen in oligodendroglioma but are not specific. Because no calcification-sensitive sequence is available and the location is not classic, the balance favors non-codeleted with only moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Side of Tumor Epicenter",
+      "crosses_patient_midline",
+      "crosses_ideal_midline"
+    ]
+  },
+  "overall_comment": "MRI-only molecular prediction is uncertain, especially for 1p/19q status. Lack of DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification assessment limits confidence. The large predominantly non-enhancing component with no oedema supports a slower-growing IDH-mutant glioma, but the metadata label of extensive necrosis and ependymal/deep invasion raises concern for high-grade biology.",
+  "subject_id": "BraTS2021_01531",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the strongest high-grade evidence is the metadata label of extensive necrosis, along with a measurable enhancing component, thick enhancing margin, deep white-matter invasion, ependymal invasion, midline crossing by non-enhancing tumor, and very large tumor volume. These findings support CNS WHO grade 4 over grades 2 or 3. Features arguing against grade 4 include only mild enhancement, small enhancing volume, no oedema, and minimal midline shift, which can be seen in lower-grade or less aggressive tumors. Given the explicit necrosis-related metadata and infiltrative extent, grade 4 is favored, though imaging-only grading remains imperfect.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_patient_midline",
+      "crosses_ideal_midline",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

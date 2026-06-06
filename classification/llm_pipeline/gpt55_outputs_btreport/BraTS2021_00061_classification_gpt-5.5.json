@@ -1,0 +1,67 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The MRI metadata favors IDH-wildtype because age_years is 61, and the lesion has aggressive high-grade features: Enhancement Quality is marked, ET Volume (mL) is substantial, Proportion Enhancing is high, Proportion Necrosis is present, Deep WM invasion is present, Multifocal or Multicentric is multifocal, and Number of lesions is 2. These features are more typical of IDH-wildtype glioblastoma than of IDH-mutant astrocytoma. Features that modestly argue against IDH-wildtype are Cortical involvement and a temporal-cortex Tumor Location with cortical Region Proportions, which can be seen in IDH-mutant diffuse gliomas. Overall, the aggressive enhancement/necrosis pattern and older age outweigh the cortical-temporal features, so the best prediction is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the metadata favors non-codeletion because Enhancement Quality is marked, ET Volume (mL) and Proportion Enhancing show a conspicuous enhancing component, Proportion Necrosis is present, Deep WM invasion is present, Multifocal or Multicentric is multifocal, and age_years is 61. These findings are less typical of classic oligodendroglioma, which more often presents as a cortical-subcortical mass with less overt necrotic aggressive enhancement. The main features arguing toward possible codeletion are Cortical involvement and temporal-cortex Tumor Location with cortical Region Proportions, since oligodendrogliomas can involve cortex. However, the marked enhancement, necrosis, deep invasion, and multifocality favor a non-codeleted tumor overall.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or calcification assessment. The aggressive enhancing and necrotic phenotype in an older adult strongly supports glioblastoma, but molecular confirmation remains required for definitive WHO CNS5 classification.",
+  "subject_id": "BraTS2021_00061",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 4,
+    "reasoning": "WHO grade assessment from MRI favors grade 4 because Enhancement Quality is marked, Proportion Enhancing is high, ET Volume (mL) is substantial, Proportion Necrosis is present, Thickness of enhancing margin is greater than 3 mm, Proportion of Oedema is high, Deep WM invasion is present, and Multifocal or Multicentric is multifocal. These are strong imaging surrogates of high-grade biologic behavior with necrosis and aggressive enhancement. Features that slightly temper the grade-4 call are Total tumor volume (mL) being not massive, midline_shift_present being absent, and Asymmetrical Ventricles being absent, indicating limited mass effect. Nonetheless, necrosis with marked enhancement and multifocal invasive disease most strongly supports CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

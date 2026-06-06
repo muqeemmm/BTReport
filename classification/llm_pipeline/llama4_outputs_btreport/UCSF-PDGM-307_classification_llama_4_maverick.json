@@ -1,0 +1,45 @@
+{
+  "id": "patient_0035",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is relatively young (31 years) with a non-enhancing glioma located in the frontal lobe with cortical involvement. The absence of enhancement and the presence of cortical involvement are features more commonly associated with IDH-mutant gliomas. The tumor is described as solitary and non-enhancing, which aligns with the typical presentation of IDH-mutant gliomas, particularly those that are 1p/19q non-codeleted (astrocytomas).",
+      "supporting_features": [
+        "age_years",
+        "Cortical involvement",
+        "Enhancement Quality",
+        "Tumor Location"
+      ],
+      "contradicting_features": [],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the frontal lobe and involves the cortex, which is consistent with both IDH-mutant astrocytomas and oligodendrogliomas. However, the lack of enhancement and the absence of specific features like calcifications (not assessed here) make it harder to definitively predict 1p/19q co-deletion status based solely on the provided metadata. Given the cortical involvement and frontal lobe location, which are more typical of oligodendrogliomas (often IDH-mutant and 1p/19q codeleted), there is a leaning towards codeletion, but it's not strongly supported.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": "codeleted",
+      "confidence": 0.6
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor is non-enhancing, has a relatively low total tumor volume (10.391 mL), and is described as having no necrosis or enhancement. These features are more typical of lower-grade gliomas. The presence of cortical involvement and the absence of necrosis or enhancement suggest a lower grade. However, the absence of specific molecular information and some radiological features limits the certainty.",
+      "supporting_features": [
+        "Total tumor volume (mL)",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Proportion Enhancing"
+      ],
+      "contradicting_features": [],
+      "prediction": 2,
+      "confidence": 0.7
+    }
+  ],
+  "subject_id": "UCSF-PDGM-307"
+}

@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0057",
+  "idh": {
+    "reasoning": "The tumor shows a high proportion of necrosis (67.42%) and absence of T2\u2011FLAIR mismatch, both features that are more typical of IDH\u2011wildtype diffuse gliomas. The patient\u2019s age (51) also aligns with the epidemiology of IDH\u2011wildtype glioblastoma. However, the lack of contrast enhancement, absence of midline crossing, and no deep white\u2011matter or ependymal invasion are more characteristic of IDH\u2011mutant lower\u2011grade gliomas, which argues against a wildtype classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.58
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The lesion is non\u2011enhancing, necrotic, and located in the frontal cortex, which can be seen in both oligodendroglioma (codeleted) and astrocytoma (non\u2011codeleted). The high necrosis proportion is atypical for classic oligodendroglioma, favoring a non\u2011codeleted status. Nonetheless, the cortical frontal location is a common feature of 1p/19q\u2011codeleted tumors, providing some contradictory evidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "Significant necrosis (67.42%) and patient age suggest a high\u2011grade lesion. According to WHO CNS5, necrosis in an IDH\u2011wildtype or IDH\u2011mutant astrocytoma upgrades the tumor to grade\u202f4. The absence of contrast enhancement and lack of midline crossing are atypical for grade\u202f4 glioblastoma but do not preclude a grade\u202f4 classification when necrosis is present.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Age_years",
+      "Total tumor volume"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Diffuse astrocytic tumor, IDH-wildtype, 1p/19q non-codeleted, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Predictions rely solely on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty, especially for distinguishing IDH status and 1p/19q codeletion. The non\u2011enhancing nature despite necrosis is atypical and introduces residual diagnostic uncertainty."
+}

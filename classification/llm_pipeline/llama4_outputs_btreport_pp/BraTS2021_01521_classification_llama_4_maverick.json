@@ -1,0 +1,39 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (74 years) and the presence of a large, heterogeneous tumor with significant necrosis (Proportion Necrosis: 39.38%) and mild enhancement (Enhancement Quality: Mild) are more typical of glioblastoma, IDH-wildtype. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) also argues against IDH-mutant astrocytoma. While the tumor's bilateral location and involvement of deep structures are notable, they do not directly inform IDH status. The presence of ependymal invasion and significant mass effect (midline shift present) are consistent with aggressive tumor behavior, more commonly seen in IDH-wildtype glioblastomas.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of IDH-wildtype status predicted above makes 1p/19q codeletion highly unlikely as it is typically associated with IDH-mutant oligodendrogliomas. The tumor's imaging characteristics (e.g., mild enhancement, significant necrosis, large size) are not typical for oligodendrogliomas, which often present with calcifications (not assessed here) and more homogeneous enhancement.",
+    "supporting_features": [
+      "age_years",
+      "idh_mutation_status",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "CNS_WHO_grade": {
+    "reasoning": "The tumor's large size, significant necrosis (Proportion Necrosis: 39.38%), mild enhancement, and mass effect (midline shift present) are characteristic of glioblastoma, WHO grade 4. The patient's age (74 years) also supports this diagnosis, as glioblastoma is more common in older adults. The absence of features typical for lower-grade gliomas (e.g., absence of T2-FLAIR mismatch) further supports a high-grade diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01521"
+}

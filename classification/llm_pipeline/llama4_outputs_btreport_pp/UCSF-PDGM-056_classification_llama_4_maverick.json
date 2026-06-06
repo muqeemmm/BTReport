@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (79 years) and the presence of a marked enhancement quality, along with a significant proportion of necrosis (14.62%) and a large enhancing tumor volume (19.008 mL), are indicative of a more aggressive tumor type, typically associated with IDH wildtype status in adult-type diffuse gliomas. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.610453616400148, T2-FLAIR Mismatch Degree: -0.1913368581762136) also argues against IDH mutant status, as T2-FLAIR mismatch is a characteristic feature of IDH-mutant astrocytomas. Therefore, based on the available metadata, the tumor is more likely to be IDH wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a significant enhancing component and necrosis, along with the absence of T2-FLAIR mismatch, suggests that the tumor is likely an IDH wildtype glioblastoma. 1p/19q codeletion is typically associated with IDH mutant oligodendrogliomas. Given the likely IDH wildtype status (as reasoned earlier), the probability of 1p/19q codeletion is low. Therefore, the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "idh_status",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as marked enhancement, significant necrosis (14.62%), and a large size (total tumor volume of 28.414 mL). These characteristics are typical of a high-grade glioma. Given the likely IDH wildtype status and the presence of necrosis, the tumor is most likely to be classified as CNS WHO grade 4.",
+    "supporting_features": [
+      "idh_status",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "UCSF-PDGM-056"
+}

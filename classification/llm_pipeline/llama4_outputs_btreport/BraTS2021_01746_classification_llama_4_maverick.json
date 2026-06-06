@@ -1,0 +1,52 @@
+{
+  "id": "patient_0114",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (58 years) and the presence of a large, enhancing tumor with significant mass effect (midline shift of 12mm, edema crossing midline, and ventricular asymmetry) are more typical of IDH wildtype glioblastoma. The tumor's characteristics, such as marked enhancement, necrosis (Proportion Necrosis: 23.92%), and large size (Total tumor volume: 243.565 mL), are also more commonly associated with IDH wildtype tumors. While the location (involving frontal lobe, cortex, insula, and ventricles) and presence of ependymal invasion could be seen in various glioma subtypes, the overall profile leans towards an IDH wildtype tumor due to the aggressive features.",
+      "supporting_features": [
+        "age_years",
+        "mean_shift_mm",
+        "max_shift_mm",
+        "Edema crosses midline",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Total tumor volume (mL)"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect, along with the patient's age, is less typical for 1p/19q codeleted tumors, which are more commonly associated with oligodendrogliomas that tend to be more frontal, often less aggressive, and more likely to be IDH mutant. The tumor's aggressive features (e.g., marked enhancement, necrosis, significant mass effect) suggest it is more likely to be an astrocytic or glioblastoma type tumor, which are typically non-codeleted. Thus, based on the available metadata, the tumor is likely non-codeleted.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "mean_shift_mm",
+        "max_shift_mm"
+      ],
+      "contradicting_features": [
+        "Tumor Location"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor exhibits aggressive features such as marked enhancement, significant necrosis (Proportion Necrosis: 23.92%), large size, and substantial mass effect (midline shift, edema crossing midline). These characteristics are hallmarks of a high-grade glioma. The presence of necrosis, in particular, is a criterion for glioblastoma, WHO grade 4. The tumor's overall profile is consistent with a glioblastoma, IDH wildtype, which is classified as CNS WHO grade 4.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "mean_shift_mm",
+        "max_shift_mm",
+        "Edema crosses midline"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_01746"
+}

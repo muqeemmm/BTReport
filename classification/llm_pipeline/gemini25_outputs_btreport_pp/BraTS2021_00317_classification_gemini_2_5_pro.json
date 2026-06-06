@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_00317",
+  "idh": {
+    "reasoning": "This case presents conflicting evidence. The patient's age (51), the tumor's deep location involving the thalamus and caudate, and especially the marked, thick-rim enhancement and presence of necrosis are all classic features of an IDH-wildtype glioma, specifically glioblastoma. However, the presence of a T2-FLAIR mismatch sign with a high score is a very strong and specific indicator for an IDH-mutant astrocytoma. Given that multiple aggressive features (enhancement, necrosis, deep invasion) point towards IDH-wildtype status, these are weighed more heavily than the single, albeit powerful, T2-FLAIR mismatch sign, which can be mimicked. Therefore, the prediction is IDH-wildtype, but with low confidence due to this significant contradictory finding.",
+    "supporting_features": [
+      "age_years",
+      "Anatomical Overlap Regions",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Features such as marked, thick-rim enhancement, central necrosis, and deep gray matter involvement (thalamus, caudate) are highly atypical for oligodendrogliomas and are characteristic of astrocytic lineage tumors. Additionally, the reported T2-FLAIR mismatch sign is specifically associated with IDH-mutant astrocytomas, which are by definition 1p/19q non-codeleted. The evidence from multiple domains converges on a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Anatomical Overlap Regions",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of both marked contrast enhancement and central necrosis are key imaging hallmarks of a WHO Grade 4 diffuse glioma in adults. The `NCR Volume (mL)` is greater than zero, indicating necrosis, and the `ET Volume (mL)` is substantial with `Enhancement Quality` described as 'Marked' and a thick margin. These features, particularly necrosis, are sufficient for an imaging diagnosis of a Grade 4 tumor, irrespective of the underlying molecular status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO CNS Grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are most consistent with a high-grade glioma. Features such as marked enhancement, necrosis, and deep location strongly suggest a Glioblastoma, IDH-wildtype, WHO Grade 4. However, a prominent T2-FLAIR mismatch sign introduces significant conflict, as this is a highly specific marker for IDH-mutant astrocytoma. The final prediction of IDH-wildtype is therefore made with low confidence. The predictions for non-codeletion and WHO Grade 4 are made with high confidence based on the aggressive imaging phenotype."
+}

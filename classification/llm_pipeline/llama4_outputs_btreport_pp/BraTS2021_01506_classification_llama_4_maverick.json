@@ -1,0 +1,43 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.8519016789347996) is highly suggestive of an IDH-mutant glioma. The tumor's characteristics, such as its location in the frontal lobe and involvement of the cortex, are also consistent with IDH-mutant gliomas. While the patient's age (43 years) is not particularly young, it is still within a plausible range for IDH-mutant glioma. The absence of features strongly indicative of IDH wildtype (such as high-grade features without necrosis or high enhancement) does not contradict this assessment. Therefore, based on the T2-FLAIR mismatch and other tumor characteristics, the prediction is IDH mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are more likely to have 1p/19q co-deletion. The tumor's characteristics, such as cortical involvement and frontal lobe location, are consistent with either IDH-mutant astrocytoma or oligodendroglioma. However, the lack of specific indicators for 1p/19q co-deletion (such as calcifications, which are not available in the metadata) and the presence of T2-FLAIR mismatch lean towards a non-codeleted status. Therefore, the prediction is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 30.96%) and has a large necrotic volume, which are indicators of high-grade glioma. The presence of ependymal invasion and multiple satellites also suggests aggressive tumor behavior. While the enhancement quality is mild, the thickness of the enhancing margin (>3mm) and the presence of enhancement crossing midline indicate a potentially high-grade tumor. The T2-FLAIR mismatch suggests IDH mutation, which typically correlates with lower grade (2 or 3) in the presence of IDH mutation. However, given the significant necrosis and aggressive features, a grade 3 is more likely than grade 2. The absence of very high confidence in grade 4 is due to the mild enhancement quality, but the presence of necrosis and aggressive features still supports a high-grade classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Thickness of enhancing margin",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "subject_id": "BraTS2021_01506"
+}

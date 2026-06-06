@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The T2-FLAIR mismatch score is 0.6852791085384411, which is below the typical threshold for a positive T2-FLAIR mismatch sign (usually considered around 0.9 or higher). The T2-FLAIR mismatch degree is -0.03727140245786131, indicating no significant mismatch. The absence of a clear T2-FLAIR mismatch suggests that the tumor is likely IDH wildtype, as IDH mutant gliomas, particularly those with an astrocytic component, often exhibit this feature. The presence of marked enhancement and necrosis (Proportion Necrosis = 0.58%) also points towards a more aggressive tumor, which is more commonly associated with IDH wildtype status in adult-type diffuse gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q codeletion status is challenging without direct molecular or histopathological information. However, the presence of marked enhancement and the tumor's location (frontal lobe, cortex, and midline) could suggest a higher likelihood of being an IDH mutant glioma. IDH mutant gliomas with 1p/19q codeletion (oligodendrogliomas) often present with a more favorable prognosis. Given the lack of specific MRI features that are strongly indicative of 1p/19q codeletion (such as calcifications, which are not available in the provided metadata), and considering the tumor's aggressive features (e.g., marked enhancement), it is less likely to be codeleted. Thus, a non-codeleted status is predicted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Tumor Location",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits marked enhancement and has a significant proportion of necrosis (0.58%), indicating a high level of aggressiveness. The presence of necrosis and marked enhancement are features more commonly associated with higher-grade gliomas. Additionally, the tumor's volume and the presence of deep white matter invasion further support a higher grade. Given these features, a WHO grade of 4 is more likely than grade 2 or 3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0486"
+}

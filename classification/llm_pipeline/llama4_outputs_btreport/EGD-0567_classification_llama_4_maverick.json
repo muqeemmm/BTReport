@@ -1,0 +1,46 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (34 years) and the tumor's characteristics, such as being located in deep structures (left thalamus, left caudate, left putamen, left pallidum) and having a significant necrotic volume (Proportion Necrosis: 56.23%), could initially suggest a glioblastoma, which is typically IDH wildtype. However, the age is relatively young for a glioblastoma, and the presence of a mildly enhancing tumor with significant necrosis is not uncommon in IDH mutant gliomas. The key factor here is the age and the presence of necrosis, which often correlates with IDH wildtype status in glioblastomas. Given the information and typical presentations, the likelihood of IDH mutation is considered against the backdrop of the patient's relatively young age and tumor characteristics.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 56.23%) and the tumor's characteristics (significant necrotic and edematous components) are more typical of glioblastoma or IDH wildtype tumors, which are less likely to have 1p/19q co-deletion. 1p/19q co-deletion is more commonly associated with oligodendrogliomas, which tend to have a more favorable prognosis and are typically IDH mutant. Given the likely IDH wildtype status and the aggressive features of the tumor, the likelihood of 1p/19q co-deletion is low.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "age_years",
+      "idh_status"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 56.23%) and a substantial necrotic volume, features that are characteristic of high-grade gliomas. The presence of necrosis is a hallmark of glioblastoma (WHO Grade 4). The tumor's aggressive features, including its size, involvement of multiple regions, and significant edema, further support a high-grade classification. The mild enhancement and lack of ependymal invasion are noted, but the overall profile is most consistent with a WHO Grade 4 tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0567"
+}

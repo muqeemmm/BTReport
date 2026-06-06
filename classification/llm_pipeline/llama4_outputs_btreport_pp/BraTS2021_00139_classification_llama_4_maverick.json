@@ -1,0 +1,38 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (44 years) and the presence of a large, enhancing, left-sided temporal lobe tumor with significant edema and mass effect (as indicated by the 'mean_shift_mm' of 1.9096774193548387 and 'max_shift_mm' of 5.0) are more typical of glioblastoma, which is often IDH wildtype. The 'T2-FLAIR Mismatch Score' is 0.666729375915455, and 'T2-FLAIR Mismatch Degree' is -0.016027396538200067, indicating the absence of T2-FLAIR mismatch, a feature associated with IDH mutant gliomas. The presence of marked enhancement and necrosis (Proportion Necrosis: 11.11%) also points towards a more aggressive tumor, typically IDH wildtype glioblastoma.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The absence of T2-FLAIR mismatch and the presence of marked enhancement are not typical for 1p/19q codeleted tumors, which are more commonly associated with IDH mutations and often show less aggressive features on imaging. The tumor's aggressive features (e.g., significant necrosis and enhancement) suggest it is more likely to be an IDH wildtype glioblastoma or an IDH mutant astrocytoma without codeletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as marked enhancement, significant necrosis (Proportion Necrosis: 11.11%), and a large size (Lesion Sizes APxTVxCC: 4.1 x 3.6 x 6.7 cm), which are characteristic of high-grade gliomas. The presence of necrosis is particularly indicative of glioblastoma, WHO grade 4. The patient's age and the tumor's imaging characteristics are consistent with glioblastoma, IDH wildtype.",
+    "supporting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00139"
+}

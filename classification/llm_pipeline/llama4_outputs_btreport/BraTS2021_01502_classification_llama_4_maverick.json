@@ -1,0 +1,49 @@
+{
+  "id": "patient_0077",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is relatively young (33 years) with a non-enhancing glioma (Enhancement Quality: None, Proportion Enhancing: 0.0) located in the parietal-cortex region. The tumor has a significant proportion of necrosis (Proportion Necrosis: 32.74%) and edema (Proportion of Oedema: 67.26%). Adult-type diffuse gliomas in younger patients with non-enhancing tumors are more likely to be IDH mutant. The presence of necrosis might suggest a higher grade, but IDH mutant gliomas can still have necrotic components. The lack of enhancement and the patient's age support the likelihood of an IDH mutant status.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "Proportion Necrosis",
+        "Proportion of Oedema"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the parietal-cortex region and involves the cortex (Cortical involvement: Present). IDH-mutant gliomas with cortical involvement are more likely to be 1p/19q co-deleted (oligodendrogliomas). Given the prediction of IDH mutant status and the cortical involvement, it is plausible that this tumor is 1p/19q co-deleted.",
+      "supporting_features": [
+        "Cortical involvement",
+        "Tumor Location"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor has a significant proportion of necrosis (Proportion Necrosis: 32.74%) and a large edema volume (ED Volume: 50.352 mL), indicating a high-grade tumor. The presence of midline shift (midline_shift_present: Yes, mean_shift_mm: 2.174193548387097) and the significant volume of the tumor (Total tumor volume: 74.863 mL) also suggest a high-grade glioma. Although the tumor is non-enhancing, the presence of necrosis and significant mass effect are indicative of a high-grade tumor, likely grade 4.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "midline_shift_present",
+        "mean_shift_mm",
+        "Total tumor volume (mL)"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_01502"
+}

@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00030",
+  "idh": {
+    "reasoning": "The patient is 48 years old. Age is a significant factor in IDH mutation status, with IDH-mutant gliomas typically occurring in younger adults (median age ~45) and IDH-wildtype gliomas in older adults (median age ~70). While 48 is close to the median for IDH-mutant, it's not definitively young. The tumor is large (Total tumor volume 117.543 mL), solitary, and located in the parietal cortex, crossing the midline with significant edema (Proportion of Oedema: 66.48). These features are more commonly associated with IDH-wildtype tumors, which tend to be larger, more infiltrative, and often present with significant mass effect and edema. The presence of deep white matter invasion and cortical involvement are seen in both types. The lack of information on specific imaging features strongly associated with IDH-mutant status (e.g., peritumoral T2/FLAIR hyperintensity, specific enhancement patterns) makes prediction difficult. However, the combination of age being closer to the IDH-wildtype range and the large size/midline crossing/high edema proportion slightly favors IDH-wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Edema crosses midline",
+      "Proportion of Oedema",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 48 years old. 1p/19q co-deletion is almost exclusively found in IDH-mutant astrocytomas, particularly oligodendrogliomas (WHO grade 2 or 3). Given that the prediction for IDH status is 'wildtype' (albeit with low confidence), the likelihood of 1p/19q co-deletion is extremely low. Even if the patient were IDH-mutant, co-deletion occurs in only about 50% of such cases. Therefore, based on the likely IDH status derived from age and tumor characteristics, predicting non-codeletion is the most reasonable conclusion.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The tumor is large (Total tumor volume: 117.543 mL), solitary, located in the parietal cortex, crosses the midline ('CET Crosses midline': 'True', 'Edema crosses midline': 'True'), and shows marked enhancement ('Enhancement Quality': 'Marked') with deep white matter invasion ('Deep WM invasion': 'Present'). The proportion of edema is high (66.48%). These features suggest aggressive behavior. While cortical involvement is present, there's no ependymal invasion ('Ependymal (ventricular) Invasion': 'Absent'). The combination of large size, midline crossing, marked enhancement, deep white matter invasion, and high edema proportion points towards a high-grade glioma (WHO grade 4). Although the patient's age (48) could be consistent with a lower grade IDH-mutant glioma if it were present, the overall imaging characteristics strongly favor a higher grade.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

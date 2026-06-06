@@ -1,0 +1,45 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (34 years) and the presence of deep white matter invasion, cortical involvement, and the tumor's location in multiple lobes (frontal, parietal, insula) are suggestive of a glioma. The T2-FLAIR mismatch score is 0.4, and the degree is 0.038, which is not indicative of a significant mismatch. The absence of a significant T2-FLAIR mismatch typically argues against an IDH mutant astrocytoma. The presence of multiple satellites and the tumor's aggressive features (e.g., large size, involvement of multiple structures) could be seen in both IDH mutant and wildtype gliomas. However, the lack of a clear T2-FLAIR mismatch leans towards an IDH wildtype status, which is often associated with more aggressive features and higher grade gliomas.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Multiple satellites present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of cortical involvement and deep white matter invasion, along with the tumor's location and multifocality, are features that can be seen in various molecular subtypes of gliomas. However, the 1p/19q co-deletion status is not directly inferable from the provided MRI metadata without specific molecular or genetic information. The absence of clear indicators for 1p/19q co-deletion (such as specific imaging features that are more commonly associated with oligodendrogliomas, like calcifications which are not available in this metadata) makes it challenging to predict the co-deletion status with high confidence. Given the information available, a default assumption leaning towards 'non-codeleted' is made due to the lack of specific features that strongly suggest co-deletion.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as large size (Total tumor volume = 145.263 mL), involvement of multiple lobes, presence of multiple satellites, and significant necrosis (Proportion Necrosis = 50.58%). The enhancement quality is mild, but there's a notable proportion of enhancing tumor (Proportion Enhancing = 5.58%). The presence of necrosis and significant tumor size are indicators of a higher grade glioma. The WHO grade is likely to be high (3 or 4) given these features. The presence of necrosis is more commonly associated with glioblastoma (WHO grade 4).",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "Multiple satellites present",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0066"
+}

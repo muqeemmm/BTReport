@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_01160",
+  "idh": {
+    "reasoning": "The patient is 65 years old. Older age (>60) is associated with IDH-wildtype gliomas. The tumor is large (Total tumor volume 126.056 mL), solitary, and located near the midline with significant mass effect (midline shift present, effaced right ventricle, enlarged left ventricle). These features are more typical of IDH-wildtype tumors, which tend to be larger, more infiltrative, and occur in older patients. While IDH-mutant tumors can occur in older adults, the combination of age and aggressive features (large size, midline shift, deep WM invasion, ependymal invasion) points towards IDH-wildtype. No features strongly suggest IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Number of lesions",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "Enlarged Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 65 years old. 1p/19q co-deletion is almost exclusively found in younger patients (<50 years) with IDH-mutant astrocytomas (Grade 2 or 3). Given the patient's age and the higher likelihood of an IDH-wildtype tumor (as reasoned above), the presence of 1p/19q co-deletion is highly unlikely. There are no features in the metadata that suggest co-deletion.",
+    "supporting_features": [
+      "age_years",
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient is 65 years old with a large tumor (126 mL) demonstrating significant mass effect (midline shift), deep white matter invasion, ependymal invasion, cortical involvement, and marked enhancement crossing the midline. The tumor involves eloquent brain regions (vision). These features strongly suggest a high-grade glioma. Given the likely IDH-wildtype status based on age and aggressive features, this would correspond to WHO Grade 4 (glioblastoma). Even if it were IDH-mutant (less likely), the extensive infiltration (deep WM, ependymal), cortical involvement, and marked enhancement would push it towards Grade 3 or potentially Grade 4 depending on mitotic activity and necrosis which cannot be assessed here. However, the combination of age >60 and aggressive features like deep WM/ependymal invasion strongly favors Grade 4.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "CET Crosses midline",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-wildtype, WHO grade",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult presenting with a large glioma demonstrating significant mass effect and aggressive features including deep white matter and ependymal invasion. The combination of age >60 years and these aggressive radiological characteristics strongly suggests an IDH-wildtype glioma classified as WHO grade IV glioblastoma."
+}

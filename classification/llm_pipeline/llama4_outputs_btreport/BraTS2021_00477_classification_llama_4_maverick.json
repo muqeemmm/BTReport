@@ -1,0 +1,47 @@
+{
+  "id": "patient_0373",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (72 years) and the presence of a multifocal lesion with marked enhancement and necrosis are more typical of IDH wildtype glioblastoma. The large tumor volume (192.968 mL) and significant mass effect (midline shift of 10mm) also support this classification. IDH mutant gliomas are less likely in this age group and typically present with less aggressive imaging features.",
+      "supporting_features": [
+        "age_years",
+        "Multifocal or Multicentric",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "max_shift_mm"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.95
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of multifocality, marked enhancement, and significant necrosis is more typical of IDH wildtype glioblastoma or IDH mutant astrocytoma rather than 1p/19q codeleted oligodendroglioma. The absence of calcification information (not assessed in the given sequences) doesn't directly influence the prediction, but the overall aggressive features argue against codeletion. Given the likely IDH wildtype status from the first prediction, codeletion is highly unlikely.",
+      "supporting_features": [
+        "Multifocal or Multicentric",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "age_years"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.9
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor exhibits aggressive features such as large size (192.968 mL), significant necrosis (6.38%), marked enhancement, multifocality, and substantial mass effect (max shift of 10mm). These characteristics are hallmarks of a high-grade glioma. Given the likely IDH wildtype status and absence of 1p/19q codeletion, the tumor is most likely a glioblastoma, WHO grade 4.",
+      "supporting_features": [
+        "Total tumor volume (mL)",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Multifocal or Multicentric",
+        "max_shift_mm"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.95
+    }
+  ],
+  "subject_id": "BraTS2021_00477"
+}

@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_01279",
+  "idh": {
+    "reasoning": "The patient's age of 57 years is a strong predictor for IDH-wildtype status, as the incidence of IDH-mutant gliomas decreases significantly in this age group. This is strongly corroborated by the imaging features of 'Marked' enhancement and a thick enhancing margin ('>3mm'), which are classic radiological hallmarks of glioblastoma, the archetypal IDH-wildtype tumor. The presence of even a small amount of necrosis also supports this prediction. While the absence of deep white matter invasion is more typical for IDH-mutant tumors, it is outweighed by the combination of advanced age and aggressive enhancement features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging features are highly inconsistent with a 1p/19q-codeleted tumor (oligodendroglioma). The 'Marked' enhancement, thick enhancing margin ('>3mm'), and the presence of necrosis ('NCR Volume (mL)' > 0) are all characteristic of non-codeleted tumors, such as astrocytomas or glioblastomas. Oligodendrogliomas typically exhibit minimal to no enhancement and rarely show necrosis. While the frontal lobe location is common for oligodendrogliomas, the aggressive enhancement pattern is a much stronger differentiating feature, strongly arguing against co-deletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis ('NCR Volume (mL)' of 0.085) is a key radiological finding that corresponds to a defining histopathological feature of WHO Grade 4 gliomas. This is further supported by other features of high-grade malignancy, including 'Marked' enhancement and a 'Thickness of enhancing margin' greater than 3mm. Although the tumor is relatively small ('Total tumor volume (mL)' of 15.414) and lacks significant mass effect ('midline_shift_present' is 'No'), the presence of necrosis is the most critical determinant for assigning the highest grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (57) and MRI findings of a solitary lesion with marked, thick-walled enhancement and central necrosis is highly characteristic of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predictions for IDH status, 1p/19q status, and WHO grade are internally consistent and point strongly to this diagnosis."
+}

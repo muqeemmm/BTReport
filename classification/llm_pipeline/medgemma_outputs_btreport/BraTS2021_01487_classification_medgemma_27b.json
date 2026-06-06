@@ -1,0 +1,38 @@
+{
+  "subject_id": "BraTS2021_01487",
+  "idh": {
+    "reasoning": "The patient is 40 years old. Younger age (<50) is associated with IDH-mutant gliomas, while older age (>65) is associated with IDH-wildtype. The age of 40 falls into the younger category, suggesting a higher likelihood of IDH mutation. However, age alone is not definitive. No other features like specific imaging patterns strongly suggestive of either IDH-mutant (e.g., cystic changes, prominent edema) or IDH-wildtype (e.g., large size, rapid progression markers) are present in the provided metadata. Given the patient's age, IDH-mutant status is more probable than wildtype.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information regarding 1p/19q co-deletion status. Features typically associated with co-deletion, such as specific tumor locations (frontal lobe), morphology (often smaller, well-circumscribed), or advanced imaging findings (like specific patterns on perfusion or DWI), are absent from the input data. Therefore, a prediction cannot be reliably made based on the available information.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor demonstrates cortical involvement and deep white matter invasion, which are features often seen in higher-grade gliomas (Grade 3 or 4). The presence of midline shift and edema crossing the midline suggests significant mass effect and infiltrative growth, also common in higher grades. The 'Eloquent Brain Involvement' indicates involvement of critical functional areas (speech motor and vision), which can occur in any grade but often correlates with larger or more infiltrative tumors. The 'Enhancement Quality' is described as 'Mild', and the 'Proportion Enhancing' is relatively low (7.81%), which might argue against a highly aggressive Grade 4 glioblastoma, although enhancement patterns can vary widely. The tumor size (Total volume 85.022 mL) is substantial but not exceptionally large for a Grade 4 glioma. Given the deep white matter invasion and significant mass effect (midline shift, edema crossing midline), a Grade 3 (anaplastic astrocytoma if IDH-mutant) or Grade 4 (glioblastoma if IDH-wildtype) is most likely. Without definitive molecular markers (IDH status) or more specific imaging features (e.g., necrosis extent beyond proportion given, perfusion characteristics), distinguishing between Grade 3 and Grade 4 based solely on this metadata is challenging. However, deep WM invasion points towards at least Grade 3.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Edema crosses midline",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-mutant, WHO grade ?",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a young adult presenting with a solitary glioma involving the temporal lobe cortex and deep white matter structures including the basal ganglia and thalamus bilaterally with significant mass effect including midline shift and edema crossing the midline. The tumor demonstrates cortical involvement and deep white matter invasion suggesting at least WHO grade III glioma. Given the patient's age of forty years old, an IDH mutation is likely but cannot be confirmed without molecular testing; however, this would classify the tumor as an anaplastic astrocytoma WHO grade III if confirmed by molecular testing or glioblastoma WHO grade IV if IDH wildtype."
+}

@@ -1,0 +1,57 @@
+{
+  "subject_id": "BraTS2021_01517",
+  "idh": {
+    "reasoning": "The patient's advanced age (62 years), multifocal nature of the tumor ('Multifocal or Multicentric': 'Multifocal', 'Number of lesions': 4), and extensive, bilateral infiltrative pattern involving deep gray matter structures ('Anatomical Overlap Regions', 'crosses_ideal_midline': true) are all strong indicators of an IDH-wildtype glioma. These features are classic for glioblastoma. However, there is very strong contradictory evidence: the complete lack of contrast enhancement ('ET Volume (mL)': 0.0) and the presence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.84), which is highly specific for IDH-mutant astrocytoma. The transition zone is also relatively sharp ('Transition Zone Thickness (FLAIR)' median 0.75mm), which is less typical for IDH-wildtype tumors. Weighing these conflicting features, the combination of advanced age and multifocality is very compelling for an IDH-wildtype status, as multifocal IDH-mutant gliomas are rare. The prediction is therefore IDH-wildtype, but with low confidence due to the potent contradictory evidence.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Anatomical Overlap Regions",
+      "crosses_ideal_midline",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction for 1p/19q status is performed independently of the IDH prediction. The strongest available feature is the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.84). This sign is highly specific for astrocytic lineage tumors, which are by definition 1p/19q non-codeleted. Furthermore, the tumor's morphology argues against an oligodendroglioma (which are codeleted). The multifocal presentation ('Multifocal or Multicentric': 'Multifocal') and extensive infiltration of deep gray matter structures ('Anatomical Overlap Regions') are uncharacteristic of oligodendroglioma. Therefore, the evidence strongly supports a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Multifocal or Multicentric",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The tumor displays numerous aggressive imaging features strongly indicative of a high grade. These include the patient's advanced age (62), the very large tumor volume ('Total tumor volume (mL)': 158.539), significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': 7.0), multifocality ('Multifocal or Multicentric': 'Multifocal'), and extensive infiltration across the midline with ependymal and deep white matter invasion ('crosses_ideal_midline': true, 'Ependymal (ventricular) Invasion': 'Present', 'Deep WM invasion': 'Present'). These features are incompatible with a grade 2 tumor and are most consistent with a grade 4 lesion. The primary contradictory feature is the complete absence of contrast enhancement ('ET Volume (mL)': 0.0), which is typically a hallmark of grade 4 glioblastoma. However, non-enhancing glioblastomas are a known entity, and the overwhelming burden of other high-grade features, particularly multifocality, makes grade 4 the most likely diagnosis over grade 3.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Multifocal or Multicentric",
+      "crosses_ideal_midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a challenging case with conflicting imaging features. The patient's age, multifocality, and aggressive bilateral growth pattern strongly suggest a Glioblastoma, IDH-wildtype, CNS WHO grade 4. However, the complete lack of enhancement and a prominent T2-FLAIR mismatch sign are highly atypical for this diagnosis and are classic for an IDH-mutant astrocytoma. The final prediction favors an IDH-wildtype diagnosis based on the combination of age and multifocality, which are powerful predictors, but confidence is low. The predicted diagnosis of Glioblastoma, IDH-wildtype, grade 4 is internally consistent according to WHO CNS5 criteria."
+}

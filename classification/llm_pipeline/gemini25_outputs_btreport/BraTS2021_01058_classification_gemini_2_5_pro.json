@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_01058",
+  "idh": {
+    "reasoning": "The patient's advanced age (68 years) is the strongest predictor for IDH-wildtype status. The imaging features strongly corroborate this, showing a highly aggressive phenotype classic for glioblastoma. These include marked, thick-walled enhancement, a large necrotic core, and multifocal presentation. There are no features, such as non-enhancement or a younger patient age, to suggest an IDH-mutant tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently, but the imaging phenotype is strongly indicative of an astrocytic lineage tumor, which is 1p/19q non-codeleted. The presence of marked enhancement, extensive necrosis, and multifocality are all features highly uncharacteristic of oligodendroglioma (the entity defined by 1p/19q co-deletion). Oligodendrogliomas typically present as less aggressive, often non-enhancing or minimally enhancing tumors without significant necrosis. Therefore, the evidence strongly supports a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of both marked contrast enhancement and a large necrotic core are the defining radiological features of a CNS WHO grade 4 glioma. The `NCR Volume (mL)` is substantial (26.258 mL), indicating widespread necrosis. The `Enhancement Quality` is 'Marked' with a `Thickness of enhancing margin` >3mm, which is the imaging correlate of microvascular proliferation. Additional aggressive features like multifocality, deep white matter invasion, and ependymal invasion further support a grade 4 classification. The presence of necrosis rules out grade 2 and makes grade 3 highly unlikely.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age (68) with MRI features of a large, multifocal tumor showing thick, marked enhancement and extensive central necrosis provides a classic presentation for Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predictions for IDH status, 1p/19q status, and WHO grade are all highly confident and internally consistent."
+}

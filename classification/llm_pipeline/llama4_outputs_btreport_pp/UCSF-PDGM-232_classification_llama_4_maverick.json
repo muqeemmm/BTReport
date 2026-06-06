@@ -1,0 +1,46 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (22 years) and the MRI characteristics of the tumor (non-enhancing, high proportion of edema, absence of necrosis and enhancement) are suggestive of a lower-grade glioma. The T2-FLAIR mismatch score is not indicative of a strong mismatch, which is often associated with IDH-mutant astrocytomas. However, the absence of enhancement and necrosis, along with the patient's young age, leans towards an IDH-mutant tumor. The presence of cortical involvement and the tumor's location in the frontal lobe also support this inclination, as IDH-mutant gliomas are more likely to occur in younger patients and have a more favorable prognosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The absence of enhancement and the presence of a non-enhancing tumor with a significant edema volume could be indicative of an IDH-mutant glioma. However, the codeletion status (1p/19q) cannot be directly inferred from the provided MRI metadata. Given the tumor's characteristics and the patient's age, if the tumor is IDH-mutant, it could either be an astrocytoma or an oligodendroglioma. The presence of cortical involvement and the frontal lobe location might slightly favor oligodendroglioma, which is more likely to have 1p/19q codeletion. However, without direct evidence or a clear indication of oligodendroglioma features, this remains speculative.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has a significant edema volume, and lacks necrosis. These features, along with the patient's young age, suggest a lower-grade glioma. The absence of enhancement is more commonly associated with grade 2 gliomas. While the presence of eloquent brain involvement might suggest a more aggressive tumor, the overall profile leans towards a lower grade.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.75
+  },
+  "subject_id": "UCSF-PDGM-232"
+}

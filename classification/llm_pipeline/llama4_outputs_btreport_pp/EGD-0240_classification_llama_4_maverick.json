@@ -1,0 +1,38 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8619962826794076, indicating a strong presence of this feature. This feature is commonly associated with IDH-mutant gliomas. Therefore, the evidence strongly supports the presence of an IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular information. However, the presence of T2-FLAIR mismatch is more commonly associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are typically 1p/19q co-deleted. Therefore, the likelihood of 1p/19q co-deletion is lower. The tumor's characteristics, such as being solitary and having a significant necrotic proportion (62.19%), are not typical for oligodendrogliomas, which further argues against co-deletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor has a significant necrotic proportion (62.19%) and a relatively large size (Total tumor volume = 65.99 mL), with mild enhancement and a thickness of enhancing margin >3mm. These features are indicative of a high-grade glioma. The presence of necrosis is particularly associated with higher grades. Given the IDH mutation status is predicted to be 'mutant', the presence of significant necrosis aligns more with a WHO grade 4 astrocytoma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0240"
+}

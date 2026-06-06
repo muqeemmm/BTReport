@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "age_years",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status considered independently, the strongest imaging discriminator is the reported T2-FLAIR mismatch, which is a classic marker favoring IDH-mutant diffuse astrocytoma when present with a largely nonenhancing tumor. The lesion is also frontal/cortical and nonenhancing, both compatible with an IDH-mutant diffuse glioma. Against IDH-mutant status, the patient is older, and the lesion shows ependymal invasion, deep white-matter invasion, extensive edema, and midline shift, which are more concerning for aggressive IDH-wildtype biology. Overall, the T2-FLAIR mismatch plus absent enhancement outweigh the age and invasive/mass-effect features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Tumor Location",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the key feature is the reported T2-FLAIR mismatch, which strongly favors an astrocytic, non-codeleted tumor rather than oligodendroglioma. Features that could point toward 1p/19q-codeleted oligodendroglioma include frontal cortical location and absent enhancement, which can be seen in oligodendroglioma, but these are nonspecific and are outweighed by the T2-FLAIR mismatch pattern. Therefore, the best estimate is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, susceptibility, or pathology. The molecular call is driven mainly by the reported T2-FLAIR mismatch, while the grade estimate is limited by the discordance between absent enhancement and reported necrosis-like nonenhancing core with substantial edema and mass effect.",
+  "subject_id": "EGD-0214",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Multiple satellites present",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently, the imaging metadata contain several high-grade features: a large tumor volume, large lesion dimensions, substantial edema proportion, midline shift, deep white-matter invasion, ependymal invasion, and a reported necrosis/nonenhancing-core component. These support a grade 4-level aggressive diffuse glioma. Against grade 4, there is essentially no enhancement, no enhancing components, negligible enhancing tumor volume, solitary disease, and no satellites; absent enhancement can be seen in lower-grade or grade 3 tumors and reduces certainty. Balancing these, the reported necrosis/nonenhancing core plus extensive edema, invasion, and mass effect make grade 4 the best estimate, but with only moderate confidence.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

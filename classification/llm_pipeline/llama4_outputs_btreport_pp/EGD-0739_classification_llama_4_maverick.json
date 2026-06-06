@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (37 years) and the tumor location (brainstem) are relevant. IDH mutations are more common in younger adults. However, the absence of enhancement and the location in the brainstem are not typical for IDH-mutant gliomas, which are more commonly found in the frontal lobe. The lack of specific MRI features such as T2-FLAIR mismatch, which is often associated with IDH-mutant astrocytomas, makes it difficult to confidently predict IDH status based solely on the provided metadata. However, given the age and the fact that brainstem gliomas in adults can be IDH-mutant, albeit rarely, we lean towards IDH mutant due to the patient's relatively young age.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "codeletion_status": {
+    "reasoning": "1p/19q co-deletion is typically associated with oligodendrogliomas, which are more likely to be IDH-mutant and have a better prognosis. The absence of enhancement and the brainstem location are not typical for oligodendrogliomas. Without specific information on the tumor's genetic status or more characteristic imaging features, predicting 1p/19q co-deletion status is challenging. However, given the unusual location for an oligodendroglioma and lack of enhancement, we lean towards non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "cns_grade": {
+    "reasoning": "The lack of enhancement, absence of necrosis, and zero volume for enhancing, non-enhancing, and necrotic components suggest a lower grade tumor. However, the tumor's location in the brainstem and the patient's age must be considered. Brainstem gliomas can be aggressive, but the provided metadata does not strongly support a high grade (3 or 4). The absence of significant mass effect or edema also suggests a potentially lower grade. Given these factors, a grade 2 is plausible, but the confidence is not high due to the unusual location and limited information.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": 2,
+    "confidence": 0.55
+  },
+  "subject_id": "EGD-0739"
+}

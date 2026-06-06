@@ -1,0 +1,43 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (60 years) and the presence of a multifocal tumor with mild enhancement and no ependymal invasion are more typical of IDH wildtype gliomas. The lack of T2-FLAIR mismatch (T2-FLAIR Mismatch Score = 0.5387268636931634, which is not indicative of a strong mismatch) also argues against IDH mutant glioma, as IDH mutant astrocytomas often show this feature. The tumor's location in the frontal lobe and cortex, along with its significant edema and mass effect (though midline shift is absent), are also consistent with a more aggressive tumor type, typically associated with IDH wildtype status in this age group.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "Given the prediction of IDH wildtype status, the likelihood of 1p/19q codeletion is low because codeletion is typically associated with IDH mutant gliomas. The clinical and radiological features do not directly inform codeletion status, but the absence of features typical for IDH mutant oligodendroglioma (e.g., T2-FLAIR mismatch) supports the assumption against codeletion.",
+    "supporting_features": [
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The presence of a multifocal tumor with mild enhancement, significant edema (ED Volume = 24.931 mL), and a relatively large necrotic core (NCR Volume = 2.726 mL) and proportion of necrosis (Proportion Necrosis = 9.83) are indicative of a high-grade glioma. The patient's age and the tumor's aggressive features (e.g., cortical involvement, multifocality) are consistent with a WHO grade 4 tumor, typically glioblastoma, IDH wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01737"
+}

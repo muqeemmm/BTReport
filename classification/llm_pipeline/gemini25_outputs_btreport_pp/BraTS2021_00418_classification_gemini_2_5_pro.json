@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_00418",
+  "idh": {
+    "reasoning": "The patient's advanced age (78 years) is a very strong predictor for IDH-wildtype status. The imaging phenotype strongly supports this, demonstrating hallmark features of glioblastoma: significant contrast enhancement (ET Volume (mL) of 25.99) and central necrosis (NCR Volume (mL) of 4.673). The tumor's deep location involving the thalamus and basal ganglia, midline epicenter, and sharp infiltrative margins (Transition Zone Thickness (FLAIR) median 0.75 mm) are also highly characteristic of IDH-wildtype gliomas. The main contradictory evidence is the presence of the T2-FLAIR mismatch sign, which is highly specific for IDH-mutant astrocytoma. However, given the overwhelming weight of the demographic and classic glioblastoma imaging features, the T2-FLAIR mismatch sign is likely an atypical finding in this context.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically exhibit indistinct margins. This tumor, however, has a very sharply defined border with the surrounding edema, as indicated by the thin 'Transition Zone Thickness (FLAIR)' (median 0.75 mm). Furthermore, the presence of extensive necrosis ('NCR Volume (mL)' > 0) and a thick enhancing rim ('Thickness of enhancing margin': '>3mm') are atypical for oligodendrogliomas. The T2-FLAIR mismatch sign, while typically associated with IDH-mutant tumors, points specifically to astrocytic lineage (non-codeleted). There are no specific imaging features to suggest co-deletion. Therefore, the evidence strongly points towards a non-codeleted status.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of central necrosis on imaging is a key radiological criterion for WHO grade 4. This tumor clearly demonstrates a necrotic core ('NCR Volume (mL)' of 4.673) surrounded by a significant volume of contrast enhancement ('ET Volume (mL)' of 25.99). Additional features supporting a high grade include the very large tumor volume, extensive peritumoral edema, significant mass effect ('midline_shift_present': 'Yes'), and invasion of deep structures including the ependyma ('Ependymal (ventricular) Invasion': 'Present'). While the 'Enhancement Quality' is described as 'Mild', the presence of necrosis is the definitive feature for grade 4. The T2-FLAIR mismatch sign is more common in lower-grade tumors but does not preclude a grade 4 diagnosis, especially in the face of definitive radiological evidence of necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an elderly male with a large, deeply located tumor exhibiting classic imaging features of glioblastoma, including central necrosis, significant enhancement, and sharp borders. The combination of advanced age and these radiological findings strongly indicates a Glioblastoma, IDH-wildtype, CNS WHO grade 4. A notable contradictory finding is the positive T2-FLAIR mismatch sign, which is highly unusual in this context but is outweighed by the multiple other features."
+}

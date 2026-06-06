@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_01045",
+  "idh": {
+    "reasoning": "The patient's age of 52 years is more typical for IDH-wildtype gliomas. The imaging features are classic for glioblastoma, which is the most common IDH-wildtype tumor. Specifically, the presence of marked, thick-rimmed enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm'), a substantial necrotic core ('NCR Volume (mL)': 19.148), and extensive infiltration across the corpus callosum ('CET Crosses midline': 'True') are all strong indicators of IDH-wildtype status. While there is a large non-enhancing component, this is best interpreted as extensive vasogenic edema in the context of such an aggressive tumor, rather than a feature suggesting an IDH-mutant glioma. The combination of these aggressive features overwhelmingly supports an IDH-wildtype prediction.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor's imaging phenotype is highly inconsistent with a 1p/19q co-deleted oligodendroglioma. Oligodendrogliomas typically lack significant necrosis and marked, thick-rimmed enhancement. This tumor has both ('NCR Volume (mL)': 19.148, 'Enhancement Quality': 'Marked'). Furthermore, the aggressive infiltrative pattern, particularly crossing the corpus callosum ('CET Crosses midline': 'True') and invading deep gray matter structures ('Anatomical Overlap Regions'), is characteristic of an astrocytic lineage tumor (non-codeleted), not an oligodendroglioma. The frontal lobe location is common in oligodendrogliomas but is non-specific. The overwhelming evidence points towards a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "CET Crosses midline",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of a significant necrotic core ('NCR Volume (mL)': 19.148) is a definitive radiological feature of a CNS WHO grade 4 glioma. This is strongly corroborated by the presence of marked, thick-rimmed contrast enhancement ('Enhancement Quality': 'Marked', 'ET Volume (mL)': 39.536). Additional features supporting a grade 4 diagnosis include the tumor's large size, significant mass effect ('max_shift_mm': 11.0), and aggressive infiltrative behavior, such as crossing the corpus callosum ('CET Crosses midline': 'True') and invading the ependyma ('Ependymal (ventricular) Invasion': 'Present'). There are no imaging features to suggest a lower grade (2 or 3).",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 52-year-old male with a large, solitary, midline-crossing tumor. The imaging findings, including marked ring-enhancement, central necrosis, and extensive infiltration across the corpus callosum, are pathognomonic for a Glioblastoma, IDH-wildtype, CNS WHO grade 4. All individual predictions (IDH-wildtype, 1p/19q non-codeleted, and WHO grade 4) are made with very high confidence and are mutually consistent."
+}

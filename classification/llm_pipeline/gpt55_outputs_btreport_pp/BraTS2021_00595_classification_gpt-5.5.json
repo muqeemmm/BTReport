@@ -1,0 +1,83 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status, the metadata contains several features that favor IDH-wildtype biology: older age, a markedly enhancing tumor with measurable necrotic/nonenhancing core, extensive edema, mass effect, deep white matter invasion, and ependymal involvement. These are more typical of an aggressive IDH-wildtype diffuse glioma in this age group. Against IDH-wildtype, the reported T2-FLAIR mismatch is a recognized imaging clue for IDH-mutant astrocytoma, and cortical/temporal involvement can be seen in IDH-mutant tumors. However, in this case the strong enhancement, necrosis, extensive edema, ventricular/ependymal involvement, and age weigh more heavily toward IDH-wildtype as the best estimate.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the imaging pattern favors a non-codeleted tumor. The lesion is centered in the ventricles-temporal region with deep white matter and ependymal invasion, marked enhancement, necrosis, extensive edema, and mass effect; this overall pattern is not typical for oligodendroglioma, IDH-mutant and 1p/19q-codeleted, which more often has a cortical-subcortical hemispheric pattern and is less commonly dominated by this degree of edema and aggressive enhancement. Cortical involvement provides some limited support for a possible oligodendroglial tumor, but the available metadata lacks stronger supportive oligodendroglioma features, and calcification assessment is not available. The best estimate is therefore non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without diffusion, perfusion, spectroscopy, or susceptibility/calcification assessment. The main uncertainty is the reported T2-FLAIR mismatch, which supports an IDH-mutant astrocytoma pattern, but the patient age and aggressive enhancing, necrotic, edematous phenotype favor glioblastoma, IDH-wildtype.",
+  "subject_id": "BraTS2021_00595",
+  "who_grade": {
+    "confidence": 0.92,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the imaging metadata strongly supports grade 4 behavior: marked enhancement, thick enhancing margin, measurable necrosis/nonenhancing core, very large edema component, mass effect with midline shift and ventricular effacement/asymmetry, deep white matter invasion, and ependymal invasion. These are high-grade features and are much more consistent with grade 4 than grade 2 or grade 3. The reported T2-FLAIR mismatch can be associated with lower-grade IDH-mutant astrocytoma and therefore argues against grade 4 to some extent, but the enhancement, necrosis, edema, and mass effect dominate the grading estimate. The best estimate is CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

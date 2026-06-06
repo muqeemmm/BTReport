@@ -1,0 +1,51 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is a strong predictor for IDH-mutant astrocytoma. Here, T2-FLAIR Mismatch Present is 0.0 (absent) which argues against IDH-mutant status. However, the T2-FLAIR Mismatch Score is 0.4 and Degree is -0.2388, indicating a partial mismatch. The Central Core T2 Mean (3.12) is higher than FLAIR Mean (2.72), suggesting T2 hyperintensity relative to FLAIR. The Peripheral Rim FLAIR Mean is 2.57, lower than core FLAIR. This pattern is atypical but may indicate IDH-mutant. Age 60 is older than typical for IDH-mutant gliomas, which usually present younger. But cortical involvement, deep WM invasion, and ependymal invasion are common in both. Enhancement is marked, which is more common in IDH-wildtype, but IDH-mutant can enhance. Given the partial mismatch evidence, I lean toward mutant despite age.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "1p/19q codeletion is characteristic of oligodendroglioma. Oligodendrogliomas typically have indistinct margins and minimal enhancement. Here, Enhancement Quality is 'Marked' and Thickness of enhancing margin is '>3mm', which are atypical for oligodendroglioma and more suggestive of astrocytoma. The tumor involves cortex and deep white matter, which can occur in both. Ependymal invasion is present, which is more common in astrocytoma. The tumor is solitary and midline, which is less common for oligodendroglioma. No features strongly suggest oligodendroglioma, so non-codeleted is more likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "This glioma shows features suggestive of IDH-mutant astrocytoma with grade 4 characteristics. The partial T2-FLAIR mismatch supports IDH-mutant, while marked enhancement and ependymal invasion argue against oligodendroglioma. Grade 4 is indicated by necrosis proportion (9.14%) and total tumor volume.",
+  "subject_id": "BraTS2021_00259",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "CNS WHO grade 4 glioblastoma is characterized by necrosis or microvascular proliferation. Here, Proportion Necrosis is 9.14%, which meets the threshold for necrosis. The tumor has marked enhancement with thick rim (>3mm), which is typical for glioblastoma. Total tumor volume is large (99.594 mL), and it involves eloquent areas (Vision). Ependymal invasion is present. The only contradicting feature is that necrosis proportion is borderline (some guidelines require >10%, but 9.14% is substantial). Given the other features, grade 4 is strongly supported.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

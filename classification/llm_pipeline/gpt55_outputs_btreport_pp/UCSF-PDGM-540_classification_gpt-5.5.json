@@ -1,0 +1,65 @@
+{
+  "consistency_check_passed": false,
+  "idh": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, age_years of 70 favors IDH-wildtype diffuse glioma. T2-FLAIR Mismatch Present is absent, which removes a relatively specific imaging pattern for IDH-mutant astrocytoma. Against IDH-wildtype, the lesion is nonenhancing with ET Volume (mL) 0.0, Proportion Enhancing 0.0, Proportion Necrosis 0.0, frontal_lobe-cortex location, cortical involvement, and absent deep white matter invasion, a pattern that can resemble lower-grade IDH-mutant glioma. Overall, the strong age effect and absent mismatch slightly outweigh the lower-grade-appearing morphology, leading to IDH-wildtype with moderate uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "No valid WHO-CNS5 adult-type integrated diagnosis from the independent predictions: IDH-wildtype, 1p/19q-non-codeleted, and imaging-predicted CNS WHO grade 2 are not mutually compatible as a final adult-type diffuse glioma diagnosis.",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, age_years of 70 and Side of Tumor Epicenter reported as midline are less typical for classic oligodendroglioma, which supports a non-codeleted estimate. Against non-codeletion, frontal_lobe-cortex location, cortical involvement, nonenhancement with ET Volume (mL) 0.0 and Proportion Enhancing 0.0, and absent T2-FLAIR mismatch can be compatible with oligodendroglial tumors. Because the available metadata lacks more specific discriminators and the evidence is mixed, the conclusion is non-codeleted with low confidence.",
+    "supporting_features": [
+      "age_years",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the provided structured MRI metadata. The lesion is entirely nonenhancing/FLAIR-defined with no necrosis or enhancing tumor core, which supports a low imaging grade but creates WHO-CNS5 incompatibility if the independent IDH prediction is wildtype. Histomolecular testing is required for definitive integrated diagnosis.",
+  "subject_id": "UCSF-PDGM-540",
+  "who_grade": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "age_years",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": 2,
+    "reasoning": "For CNS WHO grade considered independently from molecular status, the MRI metadata strongly favors a lower grade: Enhancement Quality is none, ET Volume (mL) is 0.0, Proportion Enhancing is 0.0, Proportion Necrosis is 0.0, NCR Volume (mL) is 0.0, Tumor Core Volume (mL) is 0.0, midline_shift_present is no, Deep WM invasion is absent, Ependymal (ventricular) Invasion is absent, and the tumor is solitary. Against grade 2, age_years of 70 and Edema crosses midline with a midline epicenter are concerning clinical/imaging features. Overall, absence of enhancement, necrosis, nonenhancing core, and mass effect is more consistent with CNS WHO grade 2 than grade 3 or 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Tumor Core Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

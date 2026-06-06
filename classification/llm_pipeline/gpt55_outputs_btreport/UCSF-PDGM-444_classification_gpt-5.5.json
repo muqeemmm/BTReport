@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "midline_shift_present",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young and the lesion is described as nonenhancing with no enhancing or necrotic component, in a temporal-cortical location with cortical involvement; these are common imaging-demographic associations for IDH-mutant lower-grade adult diffuse glioma. Evidence against IDH-mutant status includes substantial mass effect/midline shift, deep white matter invasion, ependymal invasion, and a midline epicenter, which can be seen in more aggressive or IDH-wildtype tumors. However, the absence of enhancement and necrosis in a 32-year-old makes IDH-wildtype glioblastoma less likely on imaging metadata alone, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the metadata leans toward non-codeleted because the lesion is temporal-cortical rather than the classic frontal-predominant cortical-subcortical pattern often associated with oligodendroglioma, and it shows deep white matter and ependymal involvement, which are less specific for oligodendroglioma. Features that could support codeletion include young age, cortical involvement, and lack of enhancement, but these are not specific and also fit IDH-mutant astrocytoma. Because calcification, susceptibility, perfusion, diffusion, and spectroscopy are not available, the distinction is uncertain; still, the balance favors non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Prediction is limited by absence of DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification assessment. Imaging strongly suggests a nonenhancing diffuse glioma in a young adult, but molecular status cannot be determined definitively from metadata alone. Large FLAIR abnormality and mass effect are atypical for a very indolent lesion and warrant caution.",
+  "subject_id": "UCSF-PDGM-444",
+  "who_grade": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade, the strongest imaging evidence favors grade 2 because the lesion is nonenhancing, has zero enhancing volume, and shows no necrosis; no multifocality or satellites are described. These findings argue against grade 4 imaging morphology and are less suggestive of grade 3 than an enhancing infiltrative tumor would be. Against grade 2, the tumor volume is large, there is midline shift, and deep white matter plus ependymal invasion are present, indicating substantial infiltrative burden and mass effect. Nevertheless, in the provided conventional MRI metadata, the absence of enhancement and necrosis is the dominant grading feature, so grade 2 is the best estimate with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

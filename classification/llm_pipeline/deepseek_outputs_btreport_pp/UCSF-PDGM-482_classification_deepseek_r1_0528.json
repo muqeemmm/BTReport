@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 45 years old, which is younger than typical for IDH-wildtype glioblastoma. However, the tumor shows no enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0), which is more common in IDH-mutant tumors. But IDH-wildtype gliomas can also be non-enhancing. The tumor involves eloquent areas ('Eloquent Brain Involvement': 'Speech motor and Motor') and shows ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), both features more associated with IDH-wildtype tumors. The T2-FLAIR mismatch score is 0.685, which is below the typical threshold for IDH-mutant astrocytoma. Overall, the evidence leans toward IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe ('Tumor Location': 'frontal_lobe-cortex region'), which is common in oligodendrogliomas (1p/19q codeleted). However, it involves eloquent areas ('Eloquent Brain Involvement': 'Speech motor and Motor') and shows ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), which are atypical for oligodendrogliomas. Oligodendrogliomas typically show calcifications and enhancement, but calcification data is unavailable and enhancement is absent here. The absence of enhancement does not rule out oligodendroglioma, but the eloquent involvement and ependymal invasion suggest astrocytic lineage.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "The tumor is non-enhancing with significant edema crossing midline. Ependymal invasion and eloquent involvement suggest aggressive behavior. Absence of necrosis or enhancing core limits grading precision.",
+  "subject_id": "UCSF-PDGM-482",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows ependymal invasion ('Ependymal (ventricular) Invasion': 'Present') and involves eloquent areas ('Eloquent Brain Involvement': 'Speech motor and Motor'), both features of high-grade gliomas. However, there is no necrosis ('Proportion Necrosis': 0.0, 'ET Volume (mL)': 0.0) or enhancement ('Enhancement Quality': 'None'), which are typical for grade 4 tumors. Despite this, the WHO CNS5 allows grade 4 designation for IDH-wildtype tumors with microvascular proliferation or necrosis, but here necrosis is absent. Given the aggressive features and IDH-wildtype prediction, grade 4 is assigned with moderate confidence.",
+    "supporting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

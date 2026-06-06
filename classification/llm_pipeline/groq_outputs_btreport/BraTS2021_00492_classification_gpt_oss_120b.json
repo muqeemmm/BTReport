@@ -1,0 +1,59 @@
+{
+  "subject_id": "BraTS2021_00492",
+  "idh": {
+    "reasoning": "Patient is 57 years old (age_years) which is above the typical age range for IDH\u2011mutant gliomas. The tumor shows marked contrast enhancement (Enhancement Quality) and a measurable necrotic component (Proportion Necrosis 14.56%), both imaging hallmarks of IDH\u2011wildtype high\u2011grade glioma. Extensive peritumoral edema (Proportion of Oedema 65.38%) and deep white\u2011matter and ependymal invasion (Deep WM invasion, Ependymal (ventricular) Invasion) further support a wildtype phenotype. The large total tumor volume (Total tumor volume (mL) 132.1) and presence of midline shift (midline_shift_present) are also more common in IDH\u2011wildtype disease. Conversely, cortical involvement (Cortical involvement) is more typical of IDH\u2011mutant tumors and the enhancing component does not cross the midline (CET Crosses midline), which slightly argue against wildtype. We therefore predict IDH\u2011wildtype with moderate\u2011high confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "CET Crosses midline"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Marked enhancement (Enhancement Quality) and necrosis (Proportion Necrosis) are uncommon in 1p/19q\u2011codeleted oligodendrogliomas, which usually show minimal enhancement. The tumor invades deep white matter (Deep WM invasion) and the ependymal surface (Ependymal (ventricular) Invasion), patterns more typical of astrocytic, non\u2011codeleted tumors. Its location in the temporal cortex (Tumor Location) and the high proportion of edema (Proportion of Oedema) also favor a non\u2011codeleted phenotype. The presence of cortical involvement (Cortical involvement) could be seen in oligodendroglioma, providing a mild counter\u2011argument. Overall, the imaging profile points toward 1p/19q non\u2011codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Tumor Location",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The lesion displays marked contrast enhancement (Enhancement Quality) with necrotic areas (Proportion Necrosis), extensive edema (Proportion of Oedema), and both deep white\u2011matter and ependymal invasion (Deep WM invasion, Ependymal (ventricular) Invasion), all imaging hallmarks of WHO grade\u202f4 glioblastoma. The large total volume (Total tumor volume (mL)) and the presence of a midline shift (midline_shift_present) further support a high\u2011grade lesion. While the proportion of enhancing tumor is modest (Proportion Enhancing 20\u202f%) and cortical involvement is present, these features are less decisive and do not outweigh the strong high\u2011grade signs. Therefore we assign WHO grade\u202f4 with high confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Cortical involvement"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Prediction relies solely on conventional MRI sequences; lack of diffusion, perfusion, and spectroscopy limits certainty. The imaging strongly suggests an IDH\u2011wildtype, 1p/19q non\u2011codeleted, WHO grade\u202f4 glioblastoma, but molecular confirmation is required."
+}

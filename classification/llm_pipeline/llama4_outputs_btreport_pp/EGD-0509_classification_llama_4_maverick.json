@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (50 years) and the tumor's characteristics, such as being located in the parietal, cortex, and temporal lobes with a midline epicenter, mildly enhancing, and having a significant proportion of necrosis (18.45%), are more typical of IDH wildtype gliomas. IDH mutant gliomas are more commonly associated with younger age and different imaging features. The presence of cortical involvement and the absence of deep white matter invasion or ependymal invasion are noted, but these are not strongly discriminative for IDH status. The tumor's mild enhancement and significant necrosis are more suggestive of a higher-grade glioma, which is more commonly IDH wildtype in older adults.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q codeletion status is challenging based on the provided metadata. However, the tumor's location and characteristics (e.g., involving the parietal, cortex, and temporal lobes, mildly enhancing) do not strongly suggest a typical profile for 1p/19q codeleted tumors, which are often associated with frontal lobe involvement and more homogeneous signal characteristics. The absence of specific features like significant calcification (not assessed here) or a more distinct frontal lobe involvement makes it harder to predict codeletion. Given the information, a non-codeleted status is more likely due to the lack of typical features associated with codeletion.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor's significant necrosis (18.45%), mild enhancement, and large size (Total tumor volume = 111.759 mL) are indicative of a high-grade glioma. The presence of necrosis is particularly suggestive of a WHO grade 4 tumor, as necrosis is a hallmark of glioblastoma, which is typically classified as grade 4. The patient's age (50 years) also aligns with the demographic more commonly associated with glioblastoma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0509"
+}

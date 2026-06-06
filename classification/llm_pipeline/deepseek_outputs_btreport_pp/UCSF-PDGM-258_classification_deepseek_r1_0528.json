@@ -1,0 +1,49 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (23 years old), which is more common in IDH-mutant gliomas. The tumor is nonenhancing ('Enhancement Quality': 'None'), which is typical for IDH-mutant tumors. However, the T2-FLAIR mismatch sign is absent ('T2-FLAIR Mismatch Present': 0.0), which is a strong indicator of IDH-mutant astrocytoma. The absence of enhancement and the young age support IDH-mutant status, while the lack of T2-FLAIR mismatch slightly contradicts but is not definitive.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex ('Eloquent Brain Involvement': 'Speech motor'), which is more common in astrocytomas (non-codeleted) than oligodendrogliomas. The frontal lobe location is non-specific. The absence of deep white matter invasion ('Deep WM invasion': 'Absent') is atypical for oligodendroglioma, which often involves subcortical white matter. However, the tumor is midline ('Side of Tumor Epicenter': 'Midline'), which is rare for oligodendrogliomas. These features support non-codeleted status, but the evidence is not strong.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "The tumor is a nonenhancing, solitary lesion in the frontal lobe with predominant edema and minimal tumor core. The young age and nonenhancing nature suggest a lower-grade glioma. The absence of T2-FLAIR mismatch and eloquent involvement point towards IDH-mutant astrocytoma. Grade 2 is assigned due to absence of necrosis and enhancement.",
+  "subject_id": "UCSF-PDGM-258",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 2,
+    "reasoning": "There is no necrosis ('Proportion Necrosis': 0.0) and no enhancement ('Enhancement Quality': 'None'), which are hallmarks of WHO grade 4 glioblastoma. The tumor core volume is minimal (0.002 mL), and the lesion is solitary with no satellites. These features are consistent with WHO grade 2. However, the extensive edema and eloquent involvement might suggest higher grade, but without necrosis or enhancement, grade 2 is more likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Tumor Core Volume (mL)",
+      "Number of lesions",
+      "Multiple satellites present"
+    ]
+  }
+}

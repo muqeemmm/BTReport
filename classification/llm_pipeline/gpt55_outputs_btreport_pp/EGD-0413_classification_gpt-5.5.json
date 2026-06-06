@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Multiple satellites present",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest metadata favoring IDH-mutant status is the reported T2-FLAIR mismatch, which is a relatively specific imaging pattern for IDH-mutant astrocytic glioma when present. The patient's age of 40 years and cortical temporal/insular/frontal involvement also fit the usual adult IDH-mutant diffuse glioma demographic and distribution. Against IDH-mutant status, the large nonenhancing/necrotic component, substantial edema, satellite lesions, midline shift, and deep white matter invasion are aggressive features that can be seen in IDH-wildtype glioblastoma. However, these aggressive features do not exclude an IDH-mutant high-grade astrocytoma, while the T2-FLAIR mismatch weighs strongly toward IDH mutation. Therefore the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the T2-FLAIR mismatch pattern strongly supports a non-codeleted astrocytic genotype rather than oligodendroglioma. The dominant temporal/insular component is also less typical for a classic 1p/19q-codeleted oligodendroglioma than a frontal-predominant lesion. Features that could still fit oligodendroglioma include adult age, cortical involvement, and some frontal-lobe participation, but these are nonspecific and are outweighed by the mismatch pattern. Therefore the best estimate is 1p/19q non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The imaging metadata most strongly suggest an IDH-mutant, 1p/19q-non-codeleted astrocytic glioma with high-grade behavior. Grade is less certain because enhancement descriptors are internally mixed: ET Volume is small and n_components_enhancing reports no enhancing components, while necrosis/nonenhancing core burden, edema, thick enhancing margin, satellites, and mass effect are aggressive. Molecular confirmation remains required for definitive WHO CNS5 classification.",
+  "subject_id": "EGD-0413",
+  "who_grade": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "Ependymal (ventricular) Invasion",
+      "crosses_patient_midline",
+      "CET Crosses midline"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the metadata show several high-grade imaging features: a very large lesion volume, large nonenhancing/necrotic component, high reported necrosis proportion, substantial edema, thick enhancing margin, multiple satellites, midline shift, and deep white matter invasion. These features favor grade 4 over grade 2 or grade 3. Against grade 4, enhancement is described as mild, the enhancing tumor volume is small, no enhancing components are reported in one segmentation field, there is no ependymal invasion, and the lesion does not cross midline. Despite these contradictions, the necrotic/nonenhancing burden with mass effect, edema, satellites, and thick margin makes grade 4 the best imaging-based estimate.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin",
+      "Multiple satellites present",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

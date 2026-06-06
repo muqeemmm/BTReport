@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0022",
+  "idh": {
+    "reasoning": "The tumor is non-enhancing, located in the temporal lobe, and demonstrates an infiltrative pattern with a very high proportion of T2/FLAIR signal abnormality (labeled as 'edema') and minimal mass effect (no midline shift). These features are highly characteristic of an IDH-mutant glioma. The primary contradicting feature is the presence of a small necrotic component, which is more typical of IDH-wildtype tumors. However, the volume of necrosis is minuscule (0.064 mL) and is outweighed by the strong evidence from the lack of enhancement and overall tumor morphology.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor's location in the temporal lobe is more common for astrocytomas (non-codeleted) than for oligodendrogliomas (codeleted), which typically favor the frontal lobes. The imaging phenotype, characterized by a very high proportion of T2/FLAIR hyperintense signal abnormality (99.63% 'edema'), suggests indistinct tumor margins, a feature more associated with the infiltrative nature of astrocytomas. While non-enhancement can be seen in both, the combination of location and infiltrative appearance strongly favors a non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The WHO CNS5 classification defines grade based on specific histological and molecular features. For both IDH-mutant and IDH-wildtype diffuse gliomas, the presence of necrosis is a criterion for WHO grade 4. The provided metadata explicitly reports a non-zero volume of necrosis ('NCR Volume (mL)': 0.064). Despite features that suggest a lower grade, such as the complete lack of contrast enhancement and minimal mass effect, the presence of necrosis, by definition, elevates the grade to 4. The confidence is moderated because the prediction hinges entirely on a very small volume of reported necrosis, which could potentially be an imaging artifact, but must be taken at face value from the provided data.",
+    "supporting_features": [
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are predominantly those of a non-enhancing, infiltrative glioma, highly suggestive of an IDH-mutant astrocytoma. The critical feature for grading is the reported presence of a very small necrotic component (0.064 mL). Per WHO CNS5 criteria, necrosis in an IDH-mutant astrocytoma defines it as grade 4. The main diagnostic uncertainty is whether this tiny focus represents true necrosis. A discrepancy was noted regarding tumor laterality between volumetric data (left) and text fields (right); the volumetric data was prioritized."
+}

@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_00240",
+  "idh": {
+    "reasoning": "The patient is 50 years old. Age > 50 is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in older adults. The tumor is large (Total tumor volume 143.553 mL), solitary, and located in the frontal lobe cortex with deep white matter invasion, cortical involvement, and ependymal invasion. These features are common in both IDH-mutant and IDH-wildtype tumors. The presence of multiple satellites is more common in IDH-mutant tumors but can be seen in IDH-wildtype. The high proportion of edema (74.37) and marked enhancement are non-specific. Without molecular data or imaging features like diffusion restriction or perfusion characteristics (which are unavailable), predicting IDH status based solely on these structural MRI features is challenging. Given the age and aggressive features (deep WM invasion, ependymal invasion, midline shift, ventricular effacement), IDH-wildtype is a strong possibility, but IDH-mutant cannot be ruled out. However, the available data does not strongly favor one over the other.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Effaced Ventricle"
+    ],
+    "contradicting_features": [
+      "Multiple satellites present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor is large (Total tumor volume 143.553 mL), solitary, located in the frontal lobe cortex with deep white matter invasion, cortical involvement, and ependymal invasion. It crosses the midline significantly ('CET Crosses midline': 'True', 'Edema crosses midline': 'True', 'crosses_ideal_midline': true for ncr, ed, et). The patient's age is 50 years old. 1p/19q co-deletion is typically associated with oligodendrogliomas (WHO grade 2 or 3) which are IDH-mutant and often occur in younger patients (<50). While possible in older patients, the aggressive features like deep white matter invasion and ependymal invasion are less typical for classic oligodendrogliomas with co-deletion, although they can occur in anaplastic oligodendrogliomas (grade 3). The large size and significant mass effect also lean away from a typical co-deleted tumor. Given the lack of specific features strongly suggesting co-deletion and the presence of features more common in other glioma types (including potentially IDH-wildtype glioblastoma), predicting co-deletion is difficult.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several high-grade features: significant mass effect ('midline_shift_present': 'Yes', 'Effaced Ventricle': 'Right'), crossing the midline ('CET Crosses midline': 'True', 'Edema crosses midline': 'True'), deep white matter invasion ('Deep WM invasion': 'Present'), cortical involvement ('Cortical involvement': 'Present'), ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), marked enhancement ('Enhancement Quality': 'Marked'), multiple satellites ('Multiple satellites present': 'Present'), and a large size (Total tumor volume 143.553 mL). These features strongly suggest a high grade glioma. While some features like multiple satellites can be seen in lower grades, the combination of extensive infiltration (deep WM, cortical, ependymal), significant mass effect, and marked enhancement points towards Grade 4 glioma (glioblastoma). Grade 2 is unlikely given these aggressive features. Grade 3 (anaplastic astrocytoma or anaplastic oligodendroglioma) is possible but less likely than Grade 4 given the constellation of findings.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Enhancement Quality",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_01510",
+  "idh": {
+    "reasoning": "The most compelling evidence for an IDH-mutant status is the definitive presence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.856), which is a highly specific imaging biomarker for IDH-mutant astrocytomas. The complete absence of contrast enhancement ('Enhancement Quality': 'None') further supports this prediction, as IDH-mutant tumors are more frequently non-enhancing than their wildtype counterparts. However, several features argue for an IDH-wildtype status, including the patient's age of 51 years, the very large tumor volume ('Total tumor volume (mL)': 125.417), and its aggressive infiltrative features such as crossing the midline, deep white matter invasion, and ependymal invasion. Despite these conflicting points, the high specificity of the T2-FLAIR mismatch sign is considered the dominant feature, leading to a prediction of IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "crosses_ideal_midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q non-codeletion is primarily driven by the strong T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0). This feature is characteristic of IDH-mutant astrocytomas (which are non-codeleted) and is typically absent in oligodendrogliomas (which are codeleted). The tumor's infiltrative nature, suggested by the presence of a measurable 'Transition Zone Thickness' and deep white matter invasion, also aligns better with an astrocytic lineage rather than the typically more circumscribed oligodendroglioma. While the frontal lobe location is common for oligodendrogliomas, it is not specific and does not outweigh the strong evidence from the T2-FLAIR mismatch sign.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Deep WM invasion",
+      "Transition Zone Thickness"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "Grading this tumor is challenging due to conflicting features. Evidence for a high grade (specifically grade 4) includes the patient's age (51), the exceptionally large tumor volume ('Total tumor volume (mL)': 125.417), and extensive local invasion, including crossing the midline, deep white matter invasion ('Deep WM invasion': 'Present'), and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'). These features indicate aggressive biological behavior. Conversely, the complete absence of contrast enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0) is a strong argument against a grade 4 diagnosis, as enhancement is a key feature of high-grade gliomas. A grade 2 diagnosis is unlikely given the massive size and infiltration. The tumor's imaging phenotype represents a high-grade, non-enhancing glioma. In the context of an IDH-mutant astrocytoma, grade 4 can be determined by molecular features (CDKN2A/B deletion) not visible on imaging. Given the aggressive imaging features apart from enhancement, a grade 4 prediction is made, but with low confidence due to the lack of enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "crosses_ideal_midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a large, midline-crossing, non-enhancing frontal glioma with a prominent T2-FLAIR mismatch sign, strongly suggesting an IDH-mutant astrocytoma. The grading is ambiguous; the lack of enhancement is atypical for grade 4, but the massive tumor burden and extensive infiltration are highly suggestive of aggressive, high-grade biology. The final integrated diagnosis reflects the balance of these features, favoring a high-grade astrocytoma despite the absence of enhancement."
+}

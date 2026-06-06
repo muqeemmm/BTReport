@@ -1,0 +1,44 @@
+{
+  "subject_id": "EGD-0622",
+  "idh": {
+    "reasoning": "The tumor displays multiple aggressive features that are highly characteristic of IDH-wildtype gliomas. Specifically, the enhancement is described as 'Marked' with a high 'Proportion Enhancing' (49.46%) and a thick margin ('>3mm'). Most importantly, there is a substantial necrotic core, with 'Proportion Necrosis' at 25.22%. This combination of avid, thick-rimmed enhancement and central necrosis is a classic presentation for glioblastoma, which is the most common IDH-wildtype tumor. Features that might be seen in IDH-mutant tumors, such as well-defined borders or lack of significant edema, are not present. The evidence strongly favors an IDH-wildtype status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically show less aggressive features, often being cortically based with minimal or no enhancement and rarely exhibiting necrosis. This tumor, in contrast, has 'Marked' enhancement, a high 'Proportion Enhancing' (49.46%), and a significant 'Proportion Necrosis' (25.22%). These features are hallmarks of high-grade astrocytic lineage tumors (either IDH-mutant astrocytoma or IDH-wildtype glioblastoma), which are non-codeleted. There are no features, such as calcification (not assessed) or well-defined cortical margins, to suggest a co-deleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.92
+  },
+  "who_grade": {
+    "reasoning": "The WHO CNS5 classification defines grade based on histological features, which have radiological correlates. The presence of necrosis is a defining feature of a CNS WHO Grade 4 glioma. The metadata explicitly quantifies a large necrotic component ('Proportion Necrosis' of 25.22%). Additionally, the presence of marked, avid contrast enhancement ('Enhancement Quality': 'Marked', 'Proportion Enhancing': 49.46%) is indicative of microvascular proliferation, another feature of high-grade gliomas. Grade 2 tumors are non-enhancing, and Grade 3 tumors, while enhancing, typically lack the extensive necrosis seen here. Therefore, the evidence for Grade 4 is definitive based on the provided radiological features.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO Grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI metadata describes a large, solitary frontoparietal mass with features highly indicative of a high-grade glioma. The marked, thick-rimmed enhancement and substantial central necrosis are classic radiological hallmarks of Glioblastoma, IDH-wildtype, CNS WHO Grade 4. The independent predictions for IDH status (wildtype), 1p/19q status (non-codeleted), and WHO grade (4) are all consistent with this integrated diagnosis and are made with high confidence."
+}

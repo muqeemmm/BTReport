@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_01078",
+  "idh": {
+    "reasoning": "The tumor shows absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present=0.0) and a high necrosis proportion (Proportion Necrosis=31.24%), both typical of IDH-wildtype glioblastoma. Aggressive imaging features such as ependymal invasion, deep white\u2011matter invasion, midline crossing of the enhancing component (CET Crosses midline=True) and midline shift further support a wildtype phenotype. Younger age (49\u202fy) and mild enhancement could argue for IDH\u2011mutant, but the strong necrotic and invasive characteristics outweigh these, leading to a wildtype prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Midline_shift_present",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "IDH-wildtype status makes 1p/19q codeletion highly unlikely, as codeletion occurs only with IDH\u2011mutant tumors. The lack of T2-FLAIR mismatch and presence of necrosis further argue against an oligodendroglioma phenotype. No imaging features specifically suggest codeletion, so the best estimate is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "IDH prediction (wildtype)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.81
+  },
+  "who_grade": {
+    "reasoning": "The lesion exhibits necrosis (Proportion Necrosis=31.24%), ependymal invasion, deep white\u2011matter invasion, and crossing of the midline, all criteria that upgrade an IDH\u2011wildtype diffuse astrocytic tumor to WHO grade\u202f4. Although enhancement is mild (Enhancement Quality=Mild) and the enhancing proportion is modest, necrosis alone is sufficient for grade\u202f4 in the wildtype setting. Thus grade\u202f4 is the most appropriate assignment.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Predictions rely solely on conventional MRI features; lack of molecular testing and advanced imaging (e.g., perfusion, spectroscopy) introduces some uncertainty, but the imaging profile strongly favors an IDH\u2011wildtype glioblastoma (grade\u202f4) without 1p/19q codeletion."
+}

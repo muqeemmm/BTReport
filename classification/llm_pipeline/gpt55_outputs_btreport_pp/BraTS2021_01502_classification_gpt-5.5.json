@@ -1,0 +1,83 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest molecular-imaging clue is a marked T2-FLAIR mismatch, with T2-FLAIR Mismatch Present positive and high T2-FLAIR Mismatch Score, which is classically associated with IDH-mutant diffuse astrocytic glioma. The patient is a young adult by age_years, also favoring IDH mutation over IDH-wildtype glioblastoma. The lesion is nonenhancing by Enhancement Quality, ET Volume (mL), and Proportion Enhancing, which further argues away from the typical enhancing IDH-wildtype phenotype. Against IDH mutation, the metadata show substantial edema/mass effect and infiltrative burden through ED Volume (mL), Proportion of Oedema, midline_shift_present, max_shift_mm, and Deep WM invasion, and Proportion Necrosis could suggest more aggressive biology. Overall, the T2-FLAIR mismatch and nonenhancing phenotype in a young adult outweigh the aggressive mass-effect features, so the conclusion is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean",
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the key raw MRI feature is the positive, high-degree T2-FLAIR mismatch, which favors an astrocytic, non-codeleted diffuse glioma rather than an oligodendroglioma. The lesion location is parietal-cortex region rather than a clearly frontal-predominant pattern, which also does not specifically support codeletion. Features that keep codeletion in the differential include Cortical involvement, nonenhancement by Enhancement Quality, ET Volume (mL), and Proportion Enhancing, and young adult age_years, since oligodendrogliomas can be cortical/subcortical, slow-growing, and nonenhancing. Overall, the T2-FLAIR mismatch is the most discriminating available MRI marker and favors non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "This is an MRI-metadata-only estimate without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histopathology. The T2-FLAIR mismatch strongly supports an IDH-mutant, 1p/19q-non-codeleted astrocytic tumor. Grade is less certain because the lesion is nonenhancing but has large edema/mass effect and a reported necrotic/nonenhancing core component; tissue diagnosis remains required.",
+  "subject_id": "BraTS2021_01502",
+  "who_grade": {
+    "confidence": 0.59,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade, the absence of enhancement is the main low-grade imaging feature: Enhancement Quality is none, ET Volume (mL) is 0, Proportion Enhancing is 0, and n_components_enhancing shows no enhancing components. A solitary, nonenhancing lesion without ependymal invasion or satellites also supports a lower-grade diffuse glioma. The positive T2-FLAIR mismatch further fits a lower-grade-appearing diffuse glioma pattern. However, there are important higher-grade warning features: Proportion Necrosis and NCR Volume (mL) indicate a substantial nonenhancing core component, and ED Volume (mL), Proportion of Oedema, Total tumor volume (mL), Whole Tumor Volume (mL), midline_shift_present, max_shift_mm, and Deep WM invasion show sizable tumor burden, edema, and mass effect. Because the nonenhancing phenotype argues strongly against grade 4 by imaging but the mass effect and reported necrotic/nonenhancing component prevent high certainty, the best MRI-based estimate is CNS WHO grade 2 with limited confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

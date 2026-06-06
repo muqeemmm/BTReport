@@ -1,0 +1,41 @@
+{
+  "subject_id": "BraTS2021_00140",
+  "idh": {
+    "reasoning": "The patient is 46 years old. Age is a significant factor in IDH mutation status, with IDH-mutant gliomas typically occurring in younger adults (median age ~45) and IDH-wildtype gliomas in older adults (median age ~70). This patient's age falls near the typical cutoff for IDH-mutant tumors. However, the MRI metadata provides no other features strongly suggestive of either IDH-mutant (e.g., focal lesions, minimal edema) or IDH-wildtype (e.g., large size, extensive edema, deep white matter invasion). The tumor is solitary, has cortical involvement, and marked enhancement with necrosis. While the age is suggestive of IDH-mutant, the lack of other distinguishing features makes a definitive prediction difficult based solely on this metadata. Given the age is closer to the typical IDH-mutant range than the wildtype range, I lean towards mutant but acknowledge the uncertainty.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata lacks any features typically associated with 1p/19q co-deletion, such as being IDH-mutant and having a relatively small size or minimal edema. While 1p/19q co-deletion is strongly associated with IDH mutation, its presence cannot be inferred solely from the available MRI features. The tumor has marked enhancement and necrosis, which are not specific to either codeleted or non-codeleted status within the IDH-mutant group. Therefore, predicting co-deletion status based on this limited information is not possible.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 46 years old with a solitary tumor located in the parietal cortex. The tumor demonstrates cortical involvement ('Cortical involvement': 'Present'), marked enhancement ('Enhancement Quality': 'Marked'), necrosis ('Proportion Necrosis': 0.36), and significant edema ('Proportion of Oedema': 83.87). There is no deep white matter invasion ('Deep WM invasion': 'Absent') or ependymal invasion ('Ependymal (ventricular) Invasion': 'Absent'). The tumor does not cross the midline ('CET Crosses midline': 'False', 'Edema crosses midline': 'False'). The total tumor volume is 16.748 mL ('Total tumor volume (mL)'). Based on WHO CNS5 criteria: Grade 2 gliomas are typically IDH-mutant and 1p/19q codeleted without significant necrosis or deep invasion; Grade 3 gliomas are typically IDH-mutant without 1p/19q co-deletion or with deep invasion; Grade 4 gliomas are typically IDH-wildtype or IDH-mutant with significant necrosis and/or deep invasion. Given the marked enhancement and presence of necrosis (proportion 0.36), along with cortical involvement and significant edema in a middle-aged adult, this tumor is likely at least Grade 3. The absence of deep white matter invasion argues against a definitive Grade 4 diagnosis based solely on these criteria, although significant necrosis can also contribute to Grade 4 classification if it were IDH wildtype (which we predicted as mutant). However, given the marked enhancement and necrosis in an adult glioma, Grade 4 remains a strong possibility even if it's IDH mutant.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-mutant",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a middle aged male presenting with a solitary enhancing lesion in the parietal cortex with significant edema and necrosis but no deep white matter or ependymal invasion. Based on WHO CNS5 criteria and available metadata: Age suggests potential for IDH mutation; Marked enhancement and necrosis suggest higher grade; Absence of deep invasion argues against Grade 4 based on morphology alone but doesn't exclude it given necrosis; Overall features are most consistent with an IDH mutant glioma likely grade 3 or potentially grade 4 depending on specific molecular findings."
+}

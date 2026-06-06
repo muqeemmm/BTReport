@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status, the strongest MRI-derived evidence favors an IDH-mutant diffuse glioma: age_years is 26, and a young adult presentation is more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. Tumor Location and Cortical involvement show a frontal_lobe-cortex lesion, a common location/pattern for IDH-mutant diffuse glioma. Enhancement Quality, ET Volume (mL), Proportion Enhancing, NCR Volume (mL), and Proportion Necrosis show no enhancement, no enhancing tumor, no necrotic/non-enhancing core, and no necrosis, which argues against the more typical aggressive IDH-wildtype glioblastoma imaging phenotype. Deep WM invasion is absent, also less suggestive of an infiltrative high-grade IDH-wildtype pattern. Evidence against this conclusion is that T2-FLAIR Mismatch Present is 0.0 with only a T2-FLAIR Mismatch Score of 0.4, so a specific imaging sign associated with IDH-mutant astrocytoma is not present; Side of Tumor Epicenter is listed as Midline, which is less classic for a lateral frontal IDH-mutant diffuse glioma. Overall, the young age and nonenhancing frontal cortical phenotype outweigh these limitations, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "age_years",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status, the MRI metadata modestly favors co-deletion. Tumor Location and Region Proportions place the lesion predominantly in the frontal_lobe and cortex, and Cortical involvement is present; a frontal cortical/cortical-subcortical tumor pattern is compatible with oligodendroglioma. Enhancement Quality, ET Volume (mL), Proportion Enhancing, NCR Volume (mL), and Proportion Necrosis show a nonenhancing lesion without necrotic or enhancing core, compatible with a lower-grade oligodendroglioma phenotype. T2-FLAIR Mismatch Present is 0.0 with a T2-FLAIR Mismatch Score of 0.4, which does not support the more specific T2-FLAIR mismatch pattern associated with IDH-mutant astrocytoma and therefore weakly favors a non-astrocytic IDH-mutant subtype. Evidence against co-deletion is that age_years is 26, somewhat younger than the usual adult oligodendroglioma peak, and Side of Tumor Epicenter is Midline rather than a clearly lateralized frontal hemispheric epicenter. Because key discriminators such as calcification, diffusion, perfusion, and spectroscopy are not available, the evidence is limited; the best estimate is 1p/19q-codeleted with only moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. The lesion is small, frontal cortical, solitary, and entirely nonenhancing by the provided segmentation, favoring a lower-grade adult-type diffuse glioma. Molecular prediction is inherently uncertain without histology; absence of diffusion, perfusion, spectroscopy, SWI/GRE, and calcification assessment particularly limits 1p/19q inference.",
+  "subject_id": "UCSF-PDGM-247",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "reasoning": "For CNS WHO grade, the MRI metadata favors grade 2. Enhancement Quality is None, ET Volume (mL) is 0.0, and Proportion Enhancing is 0.0, arguing against a high-grade enhancing component. NCR Volume (mL) is 0.0 and Proportion Necrosis is 0.0, arguing against grade 4-type necrotic imaging morphology. Total tumor volume (mL) and Whole Tumor Volume (mL) are 11.055, indicating a relatively small lesion. midline_shift_present is No, Asymmetrical Ventricles is Absent, Ependymal (ventricular) Invasion is Absent, Deep WM invasion is Absent, Multifocal or Multicentric is Solitary, and Multiple satellites present is Absent, all supporting a less aggressive imaging phenotype. Evidence against a low-grade call is limited: Eloquent Brain Involvement is Motor, but eloquent location reflects functional risk rather than histologic grade and does not by itself establish high grade. Overall, the absence of enhancement, necrosis, mass effect, multifocality, ependymal invasion, or deep white matter invasion supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,56 @@
+{
+  "subject_id": "UCSF-PDGM-356",
+  "idh": {
+    "reasoning": "The tumor shows marked contrast enhancement, necrosis, extensive edema, lack of T2\u2011FLAIR mismatch, and occurs in a 61\u2011year\u2011old patient, all features that favor IDH\u2011wildtype glioblastoma. Absence of T2\u2011FLAIR mismatch and presence of necrosis argue against IDH\u2011mutant status. Therefore predict wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "age_years",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.88
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the IDH\u2011wildtype prediction and absence of T2\u2011FLAIR mismatch, the tumor is unlikely to be 1p/19q\u2011codeleted, which is almost always associated with IDH\u2011mutant status. Thus the lesion is predicted to be non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, necrosis, thick enhancing margin (>3\u202fmm), extensive edema crossing the midline, ependymal invasion, large tumor volume, and patient age >60 are typical of WHO grade\u202f4 glioblastoma. Lower grades would lack necrosis and have less aggressive imaging features. Hence grade\u202f4 is most likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "ET Volume (mL)",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests IDH\u2011wildtype glioblastoma (grade\u202f4) with non\u2011codeleted 1p/19q. Lack of advanced sequences (DWI, perfusion, spectroscopy) limits definitive molecular confirmation; confidence is high but molecular testing remains required."
+}

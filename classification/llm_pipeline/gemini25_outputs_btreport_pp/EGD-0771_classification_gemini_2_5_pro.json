@@ -1,0 +1,55 @@
+{
+  "subject_id": "EGD-0771",
+  "idh": {
+    "reasoning": "The prediction of IDH-mutant status is primarily driven by the definitive presence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0), which is a highly specific imaging biomarker for IDH-mutant astrocytomas. The patient's age of 38 is also more typical for IDH-mutant gliomas. These factors are weighed against several features suggestive of IDH-wildtype status, such as the tumor's large size, extensive infiltration of deep gray matter structures, and crossing of the midline ('crosses_ideal_midline': true). However, the high specificity of the T2-FLAIR mismatch sign is considered to outweigh these less specific, albeit aggressive, morphological features.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "crosses_ideal_midline",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of a non-codeleted status is strongly supported by the presence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0). This feature is characteristic of IDH-mutant astrocytomas (which are 1p/19q non-codeleted) and is typically absent in oligodendrogliomas (which are 1p/19q codeleted). The tumor's highly infiltrative nature, with deep white matter invasion and midline crossing, is also more consistent with an astrocytic lineage. The main contradictory evidence is the sharp tumor margin suggested by a low median 'Transition Zone Thickness (FLAIR)' of 0.75 mm, a feature more commonly associated with oligodendrogliomas. However, the T2-FLAIR mismatch sign is a more robust predictor of the underlying genotype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Deep WM invasion",
+      "crosses_ideal_midline"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits multiple features of high-grade malignancy, strongly suggesting a WHO grade 4. These include its extremely large volume ('Total tumor volume (mL)': 335.8), significant mass effect ('midline_shift_present': 'Yes'), and aggressive infiltration, evidenced by midline crossing ('crosses_ideal_midline'), deep white matter invasion, and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'). The reported 'Proportion Necrosis' of 31.75 is also a strong indicator of high-grade disease. The primary feature arguing against a high grade is the very minimal contrast enhancement ('Proportion Enhancing': 0.01, 'ET Volume (mL)': 0.045). However, non-enhancing or minimally enhancing high-grade astrocytomas, particularly IDH-mutant ones, are well-documented. The overwhelming evidence of aggressive morphology supports a grade 4 prediction.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "crosses_ideal_midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents conflicting imaging features. The T2-FLAIR mismatch sign strongly indicates an IDH-mutant astrocytoma. However, the tumor's massive size and midline-crossing 'butterfly' morphology are classic for IDH-wildtype glioblastoma. The prediction favors the more specific molecular imaging marker, leading to a diagnosis of a high-grade IDH-mutant astrocytoma. The minimal enhancement is atypical but possible for this entity."
+}

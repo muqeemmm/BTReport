@@ -1,0 +1,54 @@
+{
+  "id": "patient_0087",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (33 years) and the presence of a large, necrotic tumor with significant edema and mass effect (midline shift, asymmetrical ventricles, effaced ventricle) could suggest a high-grade glioma. However, the presence of necrosis and the large size are not specific to IDH status. The tumor's location in the frontal lobe and involvement of deep white matter and cortex are common in both IDH-mutant and IDH-wildtype gliomas. Given the age and the absence of specific indicators for IDH mutation (such as non-enhancement or lesser necrosis), but considering that IDH-mutant gliomas are more common in younger adults, we lean towards IDH mutant due to the patient's relatively young age.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis",
+        "n_slices_with_shift",
+        "midline_shift_present"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.6
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's location in the frontal lobe and cortical involvement are consistent with features often seen in 1p/19q co-deleted gliomas. However, the presence of significant necrosis and high proportion of necrosis are less typical for 1p/19q co-deleted tumors, which are more commonly associated with oligodendrogliomas that tend to have a more favorable prognosis and less necrosis. The presence of ependymal invasion and significant mass effect also doesn't strongly point towards co-deletion. Given the uncertainty and mixed features, we lean towards non-codeleted due to the presence of necrosis and the tumor's aggressive features.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Ependymal (ventricular) Invasion",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Region Proportions"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.65
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 48.33%), a large size (Total tumor volume: 171.033 mL), and considerable mass effect (midline shift present, asymmetrical ventricles). These features are characteristic of high-grade gliomas. The presence of necrosis is particularly indicative of a higher grade. The tumor's enhancement quality is mild, but the thickness of the enhancing margin is >3mm, and there's significant edema and ependymal invasion. These features collectively suggest a high-grade tumor, likely grade 4.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "n_slices_with_shift",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_01518"
+}

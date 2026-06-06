@@ -1,0 +1,85 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant adult diffuse glioma because the patient is a mid-adult rather than elderly, and the lesion is predominantly frontal/cortical, solitary, with absent deep white-matter and ependymal invasion. The enhancing burden is extremely small and described as mild, with no discrete enhancing components, which is more typical of an IDH-mutant diffuse glioma than an IDH-wildtype glioblastoma pattern. Features arguing against this include absence of a definite T2-FLAIR mismatch and the substantial edema/non-enhancing core metrics, which could be seen with more aggressive biology. Overall, the frontal cortical location, limited enhancement, and lack of deep/ependymal invasive features support IDH-mutant status more strongly than IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "The metadata modestly favors 1p/19q co-deletion because the tumor is frontal and strongly cortical, with a solitary superficial pattern and absent deep white-matter or ependymal invasion. Absence of a definite T2-FLAIR mismatch also does not point strongly toward the classic IDH-mutant astrocytoma imaging phenotype. Mild enhancement can be compatible with oligodendroglioma. Features arguing against co-deletion include substantial edema and a high non-enhancing/necrosis proportion, which are less specific and may suggest higher-grade non-codeleted tumor; the epicenter being labeled midline is also not a classic lateral frontal oligodendroglioma descriptor. Overall, the frontal cortical location and absent T2-FLAIR mismatch favor codeletion, but the evidence is only moderate.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "These are imaging-based estimates from structured conventional MRI metadata only. The main uncertainty is the conflict between very small/mild measurable enhancement and the high reported non-enhancing/necrosis proportion; this makes grade assignment less secure than the broad IDH-mutant impression.",
+  "subject_id": "EGD-0656",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, the lesion has features that argue above grade 2: it is moderately large, has substantial edema, mild enhancement with a thick enhancing margin descriptor, and a high reported non-enhancing/necrosis proportion. These findings support an anaplastic-grade tumor more than a purely low-grade lesion. Against grade 4, the enhancing volume is extremely small, the proportion enhancing is minimal, no enhancing components are detected, midline shift is minimal, and there is no midline crossing, satellite disease, ependymal invasion, or deep white-matter invasion. Because the high-grade indicators are present but the classic aggressive grade-4 enhancement/invasion pattern is not, CNS WHO grade 3 is the best imaging-based estimate, with limited confidence.",
+    "supporting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

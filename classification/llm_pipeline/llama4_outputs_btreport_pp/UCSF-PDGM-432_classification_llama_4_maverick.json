@@ -1,0 +1,39 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8712892237364299, indicating a high likelihood of IDH mutation. The patient's age (19 years) also supports this prediction as IDH-mutant gliomas are more common in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of IDH mutation is established, but 1p/19q co-deletion status cannot be directly inferred from the given metadata. However, the presence of 'T2-FLAIR Mismatch' typically associates with IDH-mutant astrocytomas, which are more likely to be non-codeleted. The multifocal nature and other features do not directly inform 1p/19q status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS_WHO_grade": {
+    "reasoning": "The tumor shows significant edema (ED Volume: 132.276 mL), has a large enhancing component (ET Volume: 18.409 mL), and is multifocal. The presence of ependymal invasion and deep white matter invasion suggests aggressive behavior. These features are more typical of higher-grade gliomas. The proportion of necrosis (2.78%) and the presence of enhancement also support a higher grade. Given the IDH mutation status is likely 'mutant', a grade of 3 or 4 is possible. However, the relatively low proportion of necrosis and the absence of very high-grade features like very large necrotic areas or very high enhancement quality might argue against grade 4. Yet, the overall aggressive features and large size lean towards a high grade.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "UCSF-PDGM-432"
+}

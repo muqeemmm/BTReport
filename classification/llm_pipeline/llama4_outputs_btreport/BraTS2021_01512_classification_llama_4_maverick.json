@@ -1,0 +1,40 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (69 years) and the presence of a large, necrotic tumor with significant mass effect (n_slices_with_shift = 88, mean_shift_mm = -2.2129032258064516, midline_shift_present = 'Yes') are more typical of glioblastoma, IDH-wildtype. The tumor's location in the right hemisphere with involvement of multiple lobes (temporal, insula, frontal_lobe) and deep structures, along with the presence of necrosis (Proportion Necrosis = 63.72%) and mild enhancement, also supports this. IDH-mutant gliomas are less likely to present with such aggressive features at this age.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "midline_shift_present",
+      "Proportion Necrosis",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "Given the prediction of IDH-wildtype status, the likelihood of 1p/19q co-deletion is low because 1p/19q co-deletion is typically associated with IDH-mutant gliomas, particularly oligodendrogliomas. The tumor's aggressive features and lack of characteristics typical of oligodendrogliomas (e.g., calcifications, which are not available but often associated with this subtype) further support this prediction.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "IDH mutation status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor's large size (Lesion Sizes APxTVxCC = 7.0 x 6.0 x 8.0 cm), significant necrosis (Proportion Necrosis = 63.72%), and substantial mass effect (midline_shift_present = 'Yes', mean_shift_mm = -2.2129032258064516) are characteristic of a high-grade glioma. The presence of necrosis is particularly indicative of glioblastoma, WHO grade 4. The patient's age and the tumor's aggressive features further support this grading.",
+    "supporting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "mean_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "subject_id": "BraTS2021_01512"
+}

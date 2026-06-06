@@ -1,0 +1,40 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (69 years) and the presence of a marked enhancement quality, along with a significant proportion of the tumor being enhancing (63.61%), suggest a more aggressive tumor type. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0, T2-FLAIR Mismatch Score: 0.6846791751325944, T2-FLAIR Mismatch Degree: -0.22016668673463502) argues against an IDH mutant, 1p/19q non-codeleted glioma, which often shows this feature. The presence of a large enhancing component and necrosis (Proportion Necrosis: 0.6%) is more typical of glioblastoma, which is usually IDH wildtype in older adults. Therefore, based on the age, enhancement characteristics, and absence of T2-FLAIR mismatch, the tumor is likely IDH wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) is a strong indicator against an IDH mutant glioma with 1p/19q non-codeletion. However, it does not directly predict 1p/19q codeletion status. Given the tumor is likely IDH wildtype based on the previous prediction, the 1p/19q codeletion status is less relevant as IDH wildtype gliomas are not typically associated with 1p/19q codeletion. The presence of a significant enhancing component and necrosis further supports the likelihood of a glioblastoma, which is typically IDH wildtype and non-codeleted. Therefore, it is reasonable to infer that the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "idh_mutation_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_who_grade": {
+    "reasoning": "The presence of a marked enhancement quality, significant proportion of the tumor being enhancing (63.61%), and presence of necrosis (Proportion Necrosis: 0.6%) are characteristic features of glioblastoma, which is classified as CNS WHO grade 4. The patient's age (69 years) also supports this diagnosis as glioblastoma is more common in older adults. The tumor's aggressive features, such as significant enhancement and necrosis, along with the absence of features typical for lower-grade gliomas (e.g., T2-FLAIR mismatch), support a grade 4 classification.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00213"
+}

@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The MRI metadata favors IDH-mutant diffuse glioma: age_years of 40, Tumor Location and Region Proportions indicating a frontal-lobe cortical lesion with Cortical involvement, and predominantly nonenhancing behavior reflected by Enhancement Quality, ET Volume, Proportion Enhancing, and n_components_enhancing are more typical of IDH-mutant glioma than IDH-wildtype glioblastoma. Deep WM invasion and Ependymal (ventricular) Invasion are absent, which also weighs away from a more infiltrative IDH-wildtype pattern. The main counterpoint is that T2-FLAIR Mismatch Present is absent with only intermediate T2-FLAIR mismatch metrics, removing a specific supportive sign for IDH-mutant astrocytoma; however, absence of mismatch is nonspecific and does not outweigh the age, location, and minimal-enhancement pattern. Therefore the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Proportion Necrosis"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "For 1p/19q status considered independently, Tumor Location and Region Proportions show a frontal-lobe cortical lesion with Cortical involvement, a pattern that supports a codeleted oligodendroglial phenotype. T2-FLAIR Mismatch Present being absent also does not support the classic non-codeleted IDH-mutant astrocytoma mismatch pattern. Mild/minimal enhancement by Enhancement Quality, ET Volume, Proportion Enhancing, and n_components_enhancing is compatible with a codeleted tumor. Against codeletion, Side of Tumor Epicenter is listed as midline rather than a clearly lateral lobar cortical epicenter, and Proportion Necrosis is high if interpreted as true necrosis, which is less typical for a lower-grade codeleted tumor. Overall, the frontal cortical location and absent mismatch pattern slightly favor 1p/19q codeletion, but the evidence is not definitive from MRI metadata alone.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "ET Volume",
+      "Proportion Enhancing",
+      "n_components_enhancing"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, MR spectroscopy, SWI/GRE, or calcification assessment. The high Proportion Necrosis field is discordant with the negligible ET Volume and n_components_enhancing, so grade assessment is uncertain and histomolecular confirmation is required.",
+  "subject_id": "EGD-0122",
+  "who_grade": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Enhancement Quality"
+    ],
+    "prediction": 2,
+    "reasoning": "For CNS WHO grade considered independently, the imaging pattern leans lower grade: Enhancement Quality is mild, ET Volume and Proportion Enhancing are extremely small, n_components_enhancing shows no enhancing components, midline_shift_present is absent, Asymmetrical Ventricles are absent, Deep WM invasion is absent, Ependymal (ventricular) Invasion is absent, and the lesion is Solitary by Multifocal or Multicentric and Number of lesions. These features argue against a frankly high-grade aggressive phenotype. The main opposing evidence is Proportion Necrosis and NCR Volume, which could indicate high-grade biology if representing true necrosis, plus ED Volume (mL) and Proportion of Oedema showing substantial surrounding abnormality and Enhancement Quality showing at least mild enhancement. Because grade 3 can be nonenhancing and grade 4 may be molecularly defined, MRI alone is limited; nonetheless the minimal enhancement and lack of mass-effect/invasive features make grade 2 the best imaging estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

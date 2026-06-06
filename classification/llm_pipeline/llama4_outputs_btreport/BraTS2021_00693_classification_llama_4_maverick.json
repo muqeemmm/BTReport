@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (54 years) and the presence of a large, mildly enhancing tumor with significant edema and mass effect (as indicated by the 'mean_shift_mm' of 1.69 and 'max_shift_mm' of 5.0) are more typical of IDH wildtype gliomas, which are more common in older adults. The tumor's aggressive features, such as ependymal invasion and deep white matter invasion, also support this prediction. While the metadata does not directly indicate IDH status, the overall clinical and radiological picture is more suggestive of an IDH wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of ependymal invasion and the tumor's location involving multiple structures including the ventricles might suggest a more aggressive tumor. IDH-mutant gliomas with 1p/19q codeletion often have a more favorable prognosis and distinct radiological features. However, the given metadata does not directly support or refute 1p/19q codeletion. Given the likely IDH wildtype status (from the first prediction), the probability of 1p/19q codeletion is low because codeletion is typically associated with IDH-mutant gliomas. Thus, a 'non-codeleted' status is predicted.",
+    "supporting_features": [
+      "Ependymal (ventricular) Invasion",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as significant mass effect (mean shift of 1.69 mm, max shift of 5.0 mm), ependymal invasion, deep white matter invasion, and a large enhancing component (ET Volume of 13.541 mL). These characteristics are more typical of higher-grade gliomas. The presence of necrosis (Proportion Necrosis: 1.17%) and the enhancement quality being 'Mild' but with a 'Thickness of enhancing margin >3mm' also support a higher grade. Given the likely IDH wildtype status and the absence of 1p/19q codeletion, a grade of 4 is most likely according to the WHO CNS5 classification.",
+    "supporting_features": [
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_00693"
+}

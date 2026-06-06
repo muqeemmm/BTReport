@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 60 years old, which is more typical for IDH-wildtype gliomas. Enhancement is mild, which is less characteristic of IDH-mutant tumors that often show minimal enhancement. However, the tumor is located in the frontal lobe, which is more common in IDH-mutant tumors, and there is no deep white matter invasion, which is more typical of IDH-mutant tumors. The evidence is conflicting.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe, which is common in oligodendrogliomas that are 1p/19q codeleted. However, the patient is older (60 years), and there is cortical involvement and eloquent brain involvement (motor), which are more typical of astrocytomas. The evidence is limited and conflicting.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "The prediction is uncertain due to conflicting features. IDH-wildtype is predicted with low confidence based on age and enhancement pattern, but frontal location argues against it. 1p/19q non-codeleted is predicted with low confidence based on age and eloquent involvement, but frontal location argues for codeletion. Grade 4 is predicted based on necrosis and enhancement, but volume is small.",
+  "subject_id": "EGD-0312",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "There is necrosis present (Proportion Necrosis: 0.02) and enhancement (Enhancement Quality: Mild), which are features of grade 4 gliomas. However, the enhancing tumor volume is very small (0.021 mL) and total tumor volume is 29.071 mL with high proportion of edema, which is unusual for glioblastoma. The small size of the enhancing component argues against grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0340",
+  "idh": {
+    "reasoning": "The presence of a definite T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.8) is a highly specific imaging biomarker for IDH-mutant astrocytomas. This finding is strongly supported by the tumor's composition, which is overwhelmingly non-enhancing ('Proportion Enhancing': 0.09) with negligible necrosis ('Proportion Necrosis': 0.03). The patient's age of 52 is somewhat older than the typical peak for IDH-mutant gliomas, which slightly favors IDH-wildtype, but the imaging signature is overwhelmingly characteristic of an IDH-mutant tumor. The powerful specificity of the T2-FLAIR mismatch sign outweighs the non-specific age factor.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0) is strongly associated with the astrocytic lineage (1p/19q non-codeleted) and is rarely, if ever, seen in oligodendrogliomas (1p/19q codeleted). Additionally, the tumor's location in the temporal lobe ('Tumor Location': 'temporal') is more common for astrocytomas. The high boundary sharpness ('boundary_sharpness': 0.973) also favors an astrocytoma over an oligodendroglioma, which often has more indistinct margins. There are no features suggesting a 1p/19q co-deletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location",
+      "boundary_sharpness"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The classification is between WHO grade 2 and 3, as an IDH-mutant astrocytoma is designated grade 4 based on molecular features (CDKN2A/B homozygous deletion) not visible on MRI, and typically presents with more aggressive imaging features. The tumor is overwhelmingly non-enhancing ('Proportion of Oedema': 99.89%, 'ET Volume (mL)': 0.021), which strongly favors a lower grade. The presence of the T2-FLAIR mismatch sign is also classic for a grade 2 astrocytoma. However, the patient's age of 52 and the presence of any enhancement ('Enhancement Quality': 'Mild'), however minimal, raise the possibility of a grade 3 tumor. Given the dominance of non-enhancing features, a grade 2 is more likely, but the conflicting evidence reduces confidence.",
+    "supporting_features": [
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": 2,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging phenotype is dominated by a classic T2-FLAIR mismatch sign, providing high confidence in the prediction of an IDH-mutant, 1p/19q non-codeleted astrocytoma. The grading is less certain; the lesion is almost entirely non-enhancing, favoring grade 2, but the patient's age and the presence of mild enhancement introduce ambiguity and the possibility of a grade 3 tumor cannot be excluded on imaging alone."
+}

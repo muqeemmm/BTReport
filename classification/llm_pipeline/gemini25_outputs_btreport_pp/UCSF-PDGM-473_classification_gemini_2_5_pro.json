@@ -1,0 +1,47 @@
+{
+  "subject_id": "UCSF-PDGM-473",
+  "idh": {
+    "reasoning": "The patient's young age (34 years) is a strong predictor for an IDH-mutant glioma. The complete absence of contrast enhancement is also highly characteristic of IDH-mutant tumors, particularly lower-grade ones. A significant contradicting feature is the absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0), which is a specific sign for IDH-mutant astrocytomas. However, this sign is not present in all IDH-mutant gliomas (e.g., oligodendrogliomas), and its absence does not rule out an IDH mutation. Given the strong demographic and imaging features (age, no enhancement), the evidence overall favors an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the key differentiator is between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). The most compelling piece of evidence is the absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0). This sign is highly specific for IDH-mutant astrocytomas, so its absence strongly argues against a non-codeleted status and, by inference, supports a codeleted status. Additionally, the tumor involves deep gray matter structures ('Anatomical Overlap Regions' including putamen and pallidum), which is more commonly associated with oligodendrogliomas. While the temporal location is not the most classic site for oligodendroglioma (which favors frontal lobes), it is still a common location. The balance of evidence, particularly the lack of T2-FLAIR mismatch, points towards a codeleted tumor.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Anatomical Overlap Regions",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The tumor lacks the cardinal imaging features of a WHO grade 4 glioma: there is no contrast enhancement ('Enhancement Quality': 'None') and no necrosis ('NCR Volume (mL)': 0.0). This effectively rules out grade 4 based on imaging surrogates. The distinction between grade 2 and 3 is more challenging. The absence of enhancement favors a lower grade. However, the tumor is very large ('Total tumor volume (mL)': 142.151) and exerts significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': 9.0). Such a large tumor burden and its physiological impact are more suggestive of the increased proliferative activity characteristic of a grade 3 lesion compared to a more indolent grade 2 tumor. Therefore, despite the lack of enhancement, the high tumor burden points towards a grade 3 classification.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "A young patient with a large, non-enhancing left temporal tumor involving deep gray matter. The young age and lack of enhancement strongly suggest IDH-mutant status. The absence of the T2-FLAIR mismatch sign is a key feature, strongly favoring a 1p/19q-codeleted (oligodendroglioma) genotype. While non-enhancing, the tumor's very large size and significant mass effect are more consistent with a WHO grade 3 than a grade 2 lesion. The integrated radiological diagnosis is an Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3."
+}

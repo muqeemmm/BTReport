@@ -1,0 +1,33 @@
+{
+  "subject_id": "BraTS2021_00085",
+  "idh": {
+    "reasoning": "The available metadata provides limited information to directly infer IDH mutation status. Features like tumor size (77.385 mL), deep white matter invasion, cortical involvement, and midline crossing edema are common in both IDH-mutant and IDH-wildtype gliomas, particularly high-grade ones. The 'mild' enhancement quality and thick enhancing margin (>3mm) are non-specific. The absence of specific features strongly associated with IDH-wildtype tumors (e.g., large size >10cm, significant necrosis, rapid progression inferred from imaging) or IDH-mutant tumors (e.g., smaller size, cystic components, slow growth) makes a definitive prediction difficult based solely on these structural MRI features. Given the lack of distinguishing features, I will default to the more common status in adult diffuse gliomas, which is IDH-mutant.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata lacks any features typically associated with 1p/19q co-deletion, such as oligodendroglial morphology (not assessable from MRI alone), specific location (frontal lobe preference), or calcifications (not assessed). The tumor is described as solitary, midline, with deep white matter invasion and cortical involvement. These features are not specific to either codeleted or non-codeleted status. Without features like morphology or calcifications, predicting co-deletion status based on structural MRI alone is highly unreliable. Therefore, I will predict non-codeleted as the more frequent status in diffuse gliomas overall.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features indicative of a high grade: deep white matter invasion ('Deep WM invasion': 'Present'), cortical involvement ('Cortical involvement': 'Present'), and edema crossing the midline ('Edema crosses midline': 'True'). The total tumor volume is substantial (77.385 mL). While the enhancement is described as 'Mild' and the margin thickness is '>3mm', these are not definitive grade indicators alone. The presence of deep white matter invasion and midline crossing edema strongly suggests at least WHO Grade 3 or 4. Given these aggressive features, WHO Grade 4 is the most likely diagnosis.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

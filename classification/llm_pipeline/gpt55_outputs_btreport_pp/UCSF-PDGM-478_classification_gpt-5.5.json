@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Edema crosses midline",
+      "crosses_ideal_midline",
+      "crosses_patient_midline"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors IDH-mutant diffuse glioma: age_years is 37, and a frontal_lobe-cortex region nonenhancing lesion with T2-FLAIR Mismatch Present and a high T2-FLAIR Mismatch Score is a classic imaging pattern for IDH-mutant astrocytic glioma. Enhancement Quality, ET Volume (mL), Proportion Enhancing, NCR Volume (mL), and Proportion Necrosis show no enhancement, enhancing tumor, necrosis, or nonenhancing core, which is less typical for IDH-wildtype glioblastoma. Features that weaken but do not overturn this are Side of Tumor Epicenter reported as Midline and Edema crosses midline / crosses_ideal_midline / crosses_patient_midline indicating FLAIR abnormality crossing midline, which can be seen in more infiltrative/aggressive tumors. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Text Report",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The strongest independent discriminator here is T2-FLAIR Mismatch Present with a high T2-FLAIR Mismatch Score, which supports a non-codeleted astrocytoma rather than an oligodendroglioma. There is no enhancing tumor by Enhancement Quality, ET Volume (mL), and Proportion Enhancing, which does not specifically favor codeletion. Contradicting this, Tumor Location and Region Proportions show a frontal_lobe-cortex lesion with Cortical involvement, and age_years is 37; these can be compatible with oligodendroglioma, including codeleted tumors. Nonenhancement can also occur in oligodendroglioma. Despite those overlapping features, the T2-FLAIR mismatch pattern weighs the prediction toward non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured MRI metadata. The lesion is a solitary, nonenhancing frontal-cortical FLAIR/T2 abnormality with T2-FLAIR mismatch and no necrosis, favoring an IDH-mutant, non-codeleted low-grade astrocytoma. Definitive integrated diagnosis still requires tissue and molecular testing, especially because imaging cannot assess molecular grade-defining alterations.",
+  "subject_id": "UCSF-PDGM-478",
+  "who_grade": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Edema crosses midline",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade assessed independently from MRI metadata, the lesion appears low grade: Enhancement Quality is None, ET Volume (mL) is 0.0, Proportion Enhancing is 0.0, NCR Volume (mL) is 0.0, and Proportion Necrosis is 0.0, arguing against imaging features typical of grade 4 and against many grade 3 tumors. midline_shift_present is No, Asymmetrical Ventricles is Absent, Deep WM invasion is Absent, Ependymal (ventricular) Invasion is Absent, Multifocal or Multicentric is Solitary, and Multiple satellites present is Absent, supporting a less aggressive imaging phenotype. Contradicting this low-grade impression, Side of Tumor Epicenter is Midline, Edema crosses midline / crosses_ideal_midline / crosses_patient_midline are true for edema, and ED Volume (mL) / Total tumor volume (mL) show a moderate FLAIR abnormality, which can reflect infiltrative extent. On balance, absence of enhancement, necrosis, multifocality, and mass-effect markers favors CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

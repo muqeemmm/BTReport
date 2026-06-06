@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_00284",
+  "idh": {
+    "reasoning": "The patient is 55 years old. Age > 50 is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in older adults. The tumor is multifocal with multiple satellites, involves the cortex and deep white matter, and shows ependymal invasion. These features are more common in IDH-wildtype tumors, particularly glioblastoma (WHO grade 4). However, the enhancement quality is described as 'Mild' and the proportion enhancing is relatively low (7.37%), which might suggest a lower grade or IDH-mutant tumor. The presence of cortical involvement and deep white matter invasion are seen in both IDH-mutant and wildtype tumors. Given the age, multifocal nature, satellite lesions, and ependymal invasion, IDH-wildtype is more likely, but the mild enhancement and low proportion enhancing introduce uncertainty. Without molecular testing or advanced imaging (DWI/perfusion), a definitive prediction is difficult. Based on the balance of features favoring IDH-wildtype (age, multifocal/satellite nature, ependymal invasion) versus those that could be seen in either or favor mutant (mild enhancement), I lean towards wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q co-deletion is strongly associated with IDH-mutant oligodendrogliomas (WHO grade 2 or 3). Given the prediction of IDH-wildtype status based on age and tumor characteristics (multifocal, satellite lesions, ependymal invasion), 1p/19q co-deletion is highly unlikely. While IDH-mutant astrocytomas can occur at this age, they typically do not show 1p/19q co-deletion. The features suggesting IDH-wildtype status make co-deletion improbable.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (55) increases the likelihood of a higher grade glioma. The tumor exhibits multifocal growth with satellite lesions ('Multifocal or Multicentric', 'Multiple satellites present'), deep white matter invasion ('Deep WM invasion'), cortical involvement ('Cortical involvement'), and ependymal invasion ('Ependymal (ventricular) Invasion'). These features are characteristic of high-grade gliomas (WHO grade 3 or 4). The crossing of the midline by edema ('Edema crosses midline') and enhancement ('CET Crosses midline') also suggests aggressive behavior often seen in higher grades. While the enhancement quality is 'Mild' and proportion enhancing is low (7.37%), which might argue against a typical glioblastoma (Grade 4), the combination of multifocality, satellite lesions, deep WM invasion, cortical involvement, and ependymal invasion strongly points towards at least Grade 3. Given the overall aggressive features including ependymal invasion and multifocality in an older adult, Grade 4 (glioblastoma) is a strong possibility even with mild enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Diffuse astrocytic tumor",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient has a diffuse glioma with features suggestive of high grade based on age and imaging characteristics including multifocality, satellite lesions, deep white matter invasion, cortical involvement and ependymal invasion."
+}

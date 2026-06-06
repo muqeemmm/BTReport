@@ -1,0 +1,54 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (22 years old), which is more common in IDH-mutant gliomas. The tumor is non-enhancing ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) and lacks necrosis ('Proportion Necrosis': 0.0, 'NCR Volume (mL)': 0.0), which are features more typical of lower-grade gliomas often associated with IDH mutation. However, the absence of enhancement and necrosis could also be seen in some wildtype tumors, and the tumor core volume is zero ('Tumor Core Volume (mL)': 0.0, 'ET Volume (mL)': 0.0), which is unusual and limits assessment.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex ('Eloquent Brain Involvement': 'Speech motor') and is located in frontal lobe, insula, and cortex lobes ('Tumor Location'). Frontal lobe involvement is common in oligodendrogliomas (which are codeleted), but insula and cortex involvement is less typical. Oligodendrogliomas often show cortical involvement and may involve eloquent areas, but the absence of deep white matter invasion ('Deep WM invasion': 'Absent') is atypical for oligodendroglioma. The evidence is conflicting and weak.",
+    "supporting_features": [
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor appears to be a diffuse glioma with no enhancement or necrosis, suggesting a lower grade. The young age favors IDH-mutant status. The location and eloquent involvement provide weak evidence against 1p/19q codeletion. The absence of tumor core limits assessment of some features.",
+  "subject_id": "UCSF-PDGM-476",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) and no necrosis ('Proportion Necrosis': 0.0, 'NCR Volume (mL)': 0.0), which are features of WHO grade 2 gliomas. However, the tumor involves eloquent cortex ('Eloquent Brain Involvement': 'Speech motor'), which can be associated with higher grades, but without enhancement or necrosis, grade 2 is more likely. The absence of tumor core volume limits assessment.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  }
+}

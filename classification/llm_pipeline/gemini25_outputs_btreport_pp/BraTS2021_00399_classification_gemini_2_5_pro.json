@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_00399",
+  "idh": {
+    "reasoning": "The patient's advanced age (71 years) is a very strong predictor for IDH-wildtype status, as IDH-mutant gliomas typically occur in younger patients. The imaging features strongly corroborate this. The tumor exhibits marked contrast enhancement ('Enhancement Quality': 'Marked', 'ET Volume (mL)': 22.274) and extensive central necrosis ('Proportion Necrosis': 27.13%), both hallmarks of IDH-wildtype glioblastoma. Furthermore, the tumor has relatively sharp margins ('Transition Zone Thickness (FLAIR)' median of 0.75 mm) and lacks a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0), which argues against an IDH-mutant astrocytoma. The deep location involving the thalamus and brainstem is also more typical for IDH-wildtype tumors. There are no contradicting features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH prediction. The imaging phenotype is highly inconsistent with an oligodendroglioma (which are 1p/19q co-deleted). Oligodendrogliomas, even higher-grade ones, typically do not present with such extensive necrosis ('Proportion Necrosis': 27.13%) and marked, thick-rim enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm'). These features are characteristic of high-grade astrocytic tumors. Additionally, the deep location involving the thalamus, basal ganglia, and brainstem is less common for oligodendrogliomas, which often have a cortical epicenter. The absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0) argues against an IDH-mutant astrocytoma, but the overall aggressive features strongly argue against an oligodendroglioma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive central necrosis is a defining feature of CNS WHO grade 4 gliomas. The metadata clearly indicates a large necrotic core ('NCR Volume (mL)': 17.692, 'Proportion Necrosis': 27.13%). This is strongly supported by the presence of marked, thick-rim contrast enhancement ('Enhancement Quality': 'Marked', 'Thickness of enhancing margin': '>3mm'). Additional features consistent with a high-grade, aggressive tumor include significant mass effect ('midline_shift_present': 'Yes', 'Effaced Ventricle': 'Right') and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'). There is no imaging evidence to suggest a lower grade (2 or 3), which would lack necrosis and typically show less intense or no enhancement.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 71-year-old female with a large, solitary, deep right-sided lesion with significant mass effect. The imaging findings of marked ring enhancement and a large necrotic core are classic for a high-grade glioma. The advanced age, sharp tumor margins, and absence of a T2-FLAIR mismatch are highly suggestive of IDH-wildtype status. The combination of these features is pathognomonic for Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

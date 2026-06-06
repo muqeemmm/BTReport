@@ -1,0 +1,39 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (31 years) and the tumor's characteristics (non-enhancing, large edema volume, involvement of cortex and deep white matter, absence of ependymal invasion) are more typical of IDH-mutant gliomas, which are more common in younger adults. The lack of enhancement and necrosis also aligns with a lower-grade glioma, often associated with IDH mutation.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor involves the frontal lobe and insula, and has a significant edema volume without enhancement or necrosis. IDH-mutant gliomas with 1p/19q codeletion often involve the frontal lobe. However, the absence of specific features like cortical involvement being more typical for non-codeleted tumors, and the presence of insular involvement which can be seen in both, makes the prediction less certain. Still, given the IDH mutation status prediction and frontal lobe involvement, codeletion is plausible.",
+    "supporting_features": [
+      "Region Proportions",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has a significant proportion of edema, and lacks necrosis or ependymal invasion. These features are more typical of lower-grade gliomas. Given the predicted IDH mutation status, a grade 2 or 3 is likely. The absence of high-grade features like necrosis or significant enhancement favors grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.7
+  },
+  "subject_id": "UCSF-PDGM-233"
+}

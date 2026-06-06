@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 43 years old, which is younger than typical for IDH-wildtype glioblastoma but older than typical for IDH-mutant gliomas. The tumor is solitary, located in the temporal-cortex region, and shows mild enhancement. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0), which is more common in IDH-mutant astrocytomas. However, the T2-FLAIR Mismatch Score is 0.4 and Degree is -0.866, which do not strongly indicate mismatch. The proportion of edema is very high (99.97%), which is more typical of IDH-wildtype tumors. Enhancement is mild, which can occur in both types. Given the absence of strong indicators for IDH-mutant status and the high edema proportion, IDH-wildtype is more likely, but confidence is low due to conflicting evidence.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion of Oedema"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region and involves the cortex, which is more typical of astrocytic tumors (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often involve white matter and may have frontal lobe predilection. The absence of deep white matter invasion (Deep WM invasion = Absent) and cortical involvement (Cortical involvement = Present) support an astrocytic origin. However, there is no specific feature strongly indicating 1p/19q status. Given the lack of definitive evidence, the prediction is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "The tumor is a solitary lesion in the temporal-cortex region with mild enhancement and extensive edema. No midline shift or ependymal invasion. The absence of T2-FLAIR mismatch and cortical involvement suggest IDH-wildtype astrocytoma, but confidence is low due to limited molecular surrogate markers.",
+  "subject_id": "EGD-0355",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows mild enhancement (Enhancement Quality = Mild), which is atypical for grade 4 glioblastoma that usually has prominent enhancement. However, the proportion of necrosis is 0.0, which is also unusual for grade 4. The tumor volume is large (14.763 mL) and edema is extensive (99.97%), which are features of high-grade gliomas. The absence of necrosis and mild enhancement might suggest lower grade, but the large size and edema are concerning. Given the conflicting features, grade 4 is predicted with moderate confidence.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)"
+    ]
+  }
+}

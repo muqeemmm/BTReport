@@ -1,0 +1,51 @@
+{
+  "id": "patient_0061",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (34 years) and the presence of a multifocal tumor with significant edema and mass effect (midline shift present, edema crosses midline) could suggest a high-grade glioma. However, the IDH mutation status cannot be directly inferred from these features. Generally, IDH mutant gliomas are more common in younger adults. The presence of ependymal invasion and the tumor's multifocal nature might lean towards a more aggressive tumor, which is often associated with IDH wildtype status in adult-type diffuse gliomas. However, without direct evidence or specific MRI features strongly indicative of IDH mutation status, this remains a probabilistic inference based on age and tumor behavior.",
+      "supporting_features": [
+        "age_years",
+        "Multifocal or Multicentric",
+        "Edema crosses midline",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "mutant",
+      "confidence": 0.6
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's involvement of multiple regions including the ventricles, parietal lobe, cortex, and thalamus, along with its multifocal nature and ependymal invasion, suggests an aggressive tumor. 1p/19q co-deletion is typically associated with oligodendrogliomas, which are more likely to be IDH mutant and have a better prognosis. The presence of cortical involvement and the tumor's location could be consistent with an oligodendroglioma, but the multifocality and significant mass effect might argue against it. Without more specific indicators like calcification or a more homogeneous enhancement pattern, predicting 1p/19q co-deletion status is challenging.",
+      "supporting_features": [
+        "Cortical involvement",
+        "Tumor Location",
+        "Multifocal or Multicentric"
+      ],
+      "contradicting_features": [
+        "Ependymal (ventricular) Invasion",
+        "midline_shift_present"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.55
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits significant mass effect (midline shift of 3-10 mm), is multifocal, has a large edema volume (182.62 mL), and shows ependymal invasion. These features are indicative of a high-grade glioma. The presence of cortical involvement and deep white matter invasion further supports the aggressive nature of the tumor. While the enhancement quality is described as 'Mild', the overall tumor behavior suggests a high-grade lesion. Given these characteristics, a CNS WHO grade of 4 is more likely than grade 2 or 3.",
+      "supporting_features": [
+        "midline_shift_present",
+        "Multifocal or Multicentric",
+        "ED Volume (mL)",
+        "Ependymal (ventricular) Invasion",
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.8
+    }
+  ],
+  "subject_id": "UCSF-PDGM-530"
+}

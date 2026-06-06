@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (38 years) and the MRI characteristics of the tumor (non-enhancing, no necrosis, high proportion of edema) are more typical of IDH-mutant gliomas, which are more common in younger adults. The T2-FLAIR mismatch score is 0.57, which is not strongly indicative of IDH mutation (typically, a score >0.7 is considered suggestive). However, the absence of enhancement and necrosis, along with the presence of cortical involvement, are features that can be seen in IDH-mutant gliomas. The evidence is not overwhelming but leans towards IDH mutant due to the patient's age and tumor characteristics.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is non-enhancing and involves the cortex, features that can be seen in both codeleted and non-codeleted tumors. However, the absence of 1p/19q co-deletion is more common in IDH-mutant astrocytomas. Given the IDH mutation status is predicted to be mutant, and without strong evidence for codeletion (such as specific imaging features that are more typical of oligodendrogliomas like calcifications, which are not available), it is more likely to be non-codeleted.",
+    "supporting_features": [
+      "idh_status.prediction",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has no necrosis, and is relatively well-defined, which are characteristics more typical of lower-grade gliomas. The presence of cortical involvement and the absence of significant mass effect (e.g., no midline shift) also support a lower grade. However, the size of the tumor (ED Volume = 16.555 mL) and the patient's symptoms are not directly provided. Given the IDH mutant status and the non-codeleted prediction, the tumor is likely an astrocytoma. The lack of enhancement and necrosis suggests a lower grade, likely grade 2.",
+    "supporting_features": [
+      "idh_status.prediction",
+      "codeletion_status.prediction",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.75
+  },
+  "subject_id": "UCSF-PDGM-439"
+}

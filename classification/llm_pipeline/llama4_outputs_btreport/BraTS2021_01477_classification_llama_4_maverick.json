@@ -1,0 +1,39 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (50 years) and the presence of a large, non-enhancing tumor with significant necrosis (Proportion Necrosis: 39.91%) and edema (Proportion of Oedema: 60.09%) suggest a high-grade glioma. The absence of enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) is more typical of IDH-mutant gliomas, which often lack significant enhancement. However, the presence of necrosis and the patient's age are more commonly associated with IDH-wildtype glioblastomas. Given these conflicting features, the prediction leans towards IDH wildtype due to the high proportion of necrosis and the patient's age.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion of Oedema"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, non-enhancing tumor with significant necrosis and the absence of 1p/19q co-deletion typical features (such as calcifications, which are not available in the metadata) make it difficult to predict co-deletion status directly. However, IDH-mutant gliomas with 1p/19q co-deletion often present with different characteristics than those without. Given the predicted IDH wildtype status, the likelihood of 1p/19q co-deletion is low because co-deletion is typically associated with IDH-mutant gliomas. Thus, the prediction is non-codeleted.",
+    "supporting_features": [
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The presence of significant necrosis (Proportion Necrosis: 39.91%), a large tumor size (Total tumor volume: 195.406 mL), and the patient's age (50 years) are indicative of a high-grade glioma. The absence of enhancement does not rule out high grade as some high-grade gliomas, particularly IDH-mutant ones, may not enhance. However, the overall features, including the significant necrosis and large size, are more characteristic of WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01477"
+}

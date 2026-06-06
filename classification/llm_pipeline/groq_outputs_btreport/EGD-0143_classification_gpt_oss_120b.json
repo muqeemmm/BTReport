@@ -1,0 +1,55 @@
+{
+  "subject_id": "EGD-0143",
+  "idh": {
+    "reasoning": "IDH-wildtype glioblastoma typically shows extensive necrosis, high edema, crossing midline, ependymal invasion, and deep white matter infiltration. In this case, Proportion Necrosis (32.19) is high, Proportion of Oedema (66.8) is high, CET Crosses midline (True), Ependymal (ventricular) Invasion (Present), Deep WM invasion (Present). These support IDH-wildtype. Conversely, the lesion has only mild enhancement (Enhancement Quality: Mild, Proportion Enhancing: 1.02) and is located in the frontal lobe with cortical involvement, features more common in IDH-mutant lower\u2011grade gliomas. The balance of strong high\u2011grade necrotic features outweighs the mild enhancement, leading to a prediction of IDH-wildtype.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeleted oligodendrogliomas usually present with frontal lobe location, cortical involvement, calcifications, and relatively low necrosis/edema. Here, while the tumor is frontal and cortical, it shows high necrosis (32.19) and edema (66.8), as well as ependymal invasion and crossing midline, which are atypical for oligodendroglioma and favor a non\u2011codeleted astrocytic tumor. Therefore predict non\u2011codeleted.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "High necrosis (32.19%), high edema (66.8%), crossing midline, ependymal invasion, deep WM invasion, and presence of necrotic core are hallmarks of WHO grade 4 glioblastoma. The only counterpoint is the mild and low volume enhancement (Enhancement Quality: Mild, Proportion Enhancing: 1.02), which is more typical of lower grade tumors, but the necrotic and infiltrative features dominate, supporting grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks diffusion, perfusion, and spectroscopy which could refine molecular inference. Imaging strongly suggests a high\u2011grade IDH-wildtype astrocytic tumor, but mild enhancement introduces modest uncertainty; confidence reflects this limitation."
+}

@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_01526",
+  "idh": {
+    "reasoning": "The patient's young age (28 years) is a very strong predictor for IDH-mutant status. This is further supported by the complete absence of contrast enhancement (`ET Volume (mL)` is 0.0), a hallmark of lower-grade, IDH-mutant gliomas. The lack of significant mass effect (`midline_shift_present`: 'No') despite the large tumor volume also suggests an indolent growth pattern typical of IDH-mutant tumors. The primary feature that could be seen as contradictory is the absence of a T2-FLAIR mismatch (`T2-FLAIR Mismatch Present`: 0.0), which argues against an astrocytoma subtype but is expected for an oligodendroglioma, another IDH-mutant tumor. Therefore, the evidence overwhelmingly favors an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the key differentiators point towards 1p/19q co-deletion. The tumor exhibits a very sharp boundary with the surrounding brain, as quantified by a very low median `Transition Zone Thickness (FLAIR)` of 0.75 mm. This feature is highly characteristic of oligodendroglioma (codeleted). Furthermore, the absence of the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 0.0) argues against an IDH-mutant astrocytoma (non-codeleted) and is typical for an oligodendroglioma. The frontal lobe location is also common for this subtype. There are no strong features to suggest a non-codeleted (astrocytic) tumor.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of contrast enhancement (`ET Volume (mL)` is 0.0) is the strongest indicator for a lower grade, making WHO grade 4 highly unlikely. This feature strongly favors grade 2 over grade 3, particularly in the context of a suspected oligodendroglioma where enhancement is more common in grade 3. The lack of significant midline shift despite a large tumor also suggests a lower-grade process. Features arguing for a potentially higher grade (e.g., grade 3) include the large tumor volume (`Total tumor volume (mL)` of 61.032) and substantial edema (`ED Volume (mL)` of 32.801). However, since grading for oligodendrogliomas is primarily histological, and the imaging lacks clear signs of high-grade transformation like enhancement, a grade 2 prediction is most appropriate, albeit with moderate confidence.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a young adult with a large, non-enhancing, predominantly frontal lobe mass. The combination of young age, lack of enhancement, sharp tumor borders (thin FLAIR transition zone), and absence of a T2-FLAIR mismatch sign provides a classic imaging profile for an Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2."
+}

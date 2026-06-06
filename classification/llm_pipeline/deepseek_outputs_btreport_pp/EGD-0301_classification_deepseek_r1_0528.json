@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 36 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor is located in the frontal lobe, which is a common site for IDH-mutant gliomas. Enhancement is mild, which is more typical of lower-grade gliomas or IDH-mutant tumors. Proportion enhancing is low at 0.17, supporting a lower-grade or IDH-mutant tumor. However, mild enhancement and low proportion enhancing argue against a high-grade IDH-wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe, which is a common site for both astrocytomas and oligodendrogliomas. However, oligodendrogliomas (which are 1p/19q codeleted) often involve the cortex more extensively and may have a different enhancement pattern. The tumor has cortical involvement and is solitary, but without specific features like calcifications (not assessed) or more prominent enhancement, the evidence for oligodendroglioma is weak. The frontal location alone is not sufficient to strongly predict codeletion status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The frontal location and young age support IDH mutation. The absence of deep white matter invasion and ependymal invasion, along with mild enhancement, suggest a lower grade, but the proportion necrosis of 0.6 indicates necrosis, which is atypical for grade 2 or 3 and suggests grade 4. However, the ET volume is very small (0.054 mL), which is inconsistent with typical glioblastoma. This contradiction lowers confidence in grade assignment. The tumor crosses the midline via edema but not the enhancing portion, and eloquent involvement (motor) may suggest higher grade. Given the necrosis and eloquent involvement, CNS WHO grade 4 is assigned with moderate confidence.",
+  "subject_id": "EGD-0301",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The presence of necrosis (Proportion Necrosis = 0.6) is a hallmark of glioblastoma (CNS WHO grade 4). The tumor involves eloquent brain (motor cortex), which is also suggestive of higher grade. However, the enhancing tumor volume is very small (0.054 mL), which is unusually low for a grade 4 tumor. Typically, grade 4 tumors have larger enhancing components. The edema volume is large (31.178 mL), but this alone does not indicate grade. The mild enhancement and low proportion enhancing (0.17) are more typical of lower grades. The contradiction between necrosis and small ET volume creates uncertainty.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The available MRI metadata favors an IDH-mutant diffuse glioma because the patient is relatively young for glioblastoma-type disease (age_years), the tumor is frontal/cortical (Tumor Location, Region Proportions, Cortical involvement), solitary (Multifocal or Multicentric), and lacks enhancement, necrosis, and enhancing tumor volume (Enhancement Quality, ET Volume (mL), Proportion Enhancing, NCR Volume (mL), Proportion Necrosis). These features argue against an IDH-wildtype glioblastoma phenotype. Features that temper this include ventricular/ependymal and deep white-matter invasion with midline-crossing edema and mass effect (Ependymal (ventricular) Invasion, Deep WM invasion, Edema crosses midline, midline_shift_present, max_shift_mm), which can be seen in more aggressive IDH-wildtype tumors. Overall, the nonenhancing frontal cortical pattern in a 42-year-old supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the strongest support for a non-codeleted astrocytic pattern is the extensive infiltrative behavior with deep white-matter involvement, ependymal/ventricular invasion, midline epicenter, and edema crossing midline (Deep WM invasion, Ependymal (ventricular) Invasion, Side of Tumor Epicenter, Edema crosses midline, crosses_patient_midline). These features are less typical of a classic circumscribed frontal oligodendroglioma pattern. Evidence arguing toward codeletion is present: frontal cortical location and nonenhancement (Tumor Location, Region Proportions, Cortical involvement, Enhancement Quality, ET Volume (mL), Proportion Enhancing) are common in oligodendroglioma. Because calcification-sensitive imaging is unavailable and the metadata is mixed, the conclusion is only modestly in favor of non-codeleted status.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Side of Tumor Epicenter",
+      "Edema crosses midline",
+      "crosses_patient_midline"
+    ]
+  },
+  "overall_comment": "Prediction is limited by lack of DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification-sensitive imaging. The lesion is described entirely as nonenhancing FLAIR/T2 abnormality with no enhancing or necrotic component, favoring lower grade, but the large volume, mass effect, deep white-matter invasion, ventricular involvement, and midline-crossing edema increase uncertainty.",
+  "subject_id": "UCSF-PDGM-489",
+  "who_grade": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline"
+    ],
+    "prediction": 2,
+    "reasoning": "For WHO grade, the dominant MRI evidence supports a lower-grade tumor: there is no enhancement, no enhancing tumor volume, no necrosis, and the enhancing proportion is zero (Enhancement Quality, ET Volume (mL), Proportion Enhancing, NCR Volume (mL), Proportion Necrosis). These findings argue against grade 4 and make grade 3 less likely on imaging alone. Features that argue against grade 2 include the very large tumor volume, marked FLAIR/T2 abnormality, midline shift, deep white-matter invasion, ependymal invasion, and edema crossing midline (Total tumor volume (mL), ED Volume (mL), midline_shift_present, max_shift_mm, Deep WM invasion, Ependymal (ventricular) Invasion, Edema crosses midline), which may reflect biologically more aggressive disease despite absent enhancement. Overall, absent enhancement and necrosis favor CNS WHO grade 2, with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

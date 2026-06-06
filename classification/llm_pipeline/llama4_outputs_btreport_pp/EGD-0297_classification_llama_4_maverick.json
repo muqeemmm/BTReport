@@ -1,0 +1,37 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0 and 'T2-FLAIR Mismatch Score' is 0.726, indicating a strong likelihood of T2-FLAIR mismatch. This feature is strongly associated with IDH-mutant gliomas, particularly in the context of the WHO CNS5 classification. The patient's age (21 years) also aligns with a higher likelihood of IDH mutation, as IDH-mutant gliomas are more common in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, the presence of T2-FLAIR mismatch is more commonly associated with IDH-mutant astrocytomas, which are typically non-codeleted. The tumor's characteristics, such as being non-enhancing and having a significant proportion of edema, do not strongly suggest a codeleted tumor, which often presents with more distinct features like well-defined borders and frequent enhancement. Thus, based on the available information and the association of T2-FLAIR mismatch with IDH-mutant astrocytomas, the likelihood of codeletion is lower.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has a significant edema volume, and is located in the frontal lobe with cortical involvement. The absence of enhancement and necrosis suggests a lower grade. The presence of T2-FLAIR mismatch further supports the likelihood of an IDH-mutant astrocytoma, which can be grade 2 or 3. Given the patient's young age and the tumor's characteristics, a lower grade is more likely. However, the absence of specific features like high cellularity or mitotic activity (not assessable from the provided MRI metadata) makes it challenging to definitively distinguish between grade 2 and 3. The overall features lean towards a lower grade, making grade 2 more plausible.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.75
+  },
+  "subject_id": "EGD-0297"
+}

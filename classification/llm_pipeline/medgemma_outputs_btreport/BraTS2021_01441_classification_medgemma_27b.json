@@ -1,0 +1,35 @@
+{
+  "subject_id": "BraTS2021_01441",
+  "idh": {
+    "reasoning": "The patient is 34 years old. Younger age (<50) is strongly associated with IDH-mutant gliomas. The tumor is solitary, which is more common in IDH-mutant tumors, although not exclusive. The tumor involves the cortex and deep white matter, and shows ependymal invasion. While these features can be seen in both IDH-mutant and wildtype tumors, the young age is the most significant factor pointing towards an IDH-mutant status in the absence of other information like perfusion or spectroscopy.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 34 years old, which is typical for IDH-mutant gliomas. However, 1p/19q co-deletion is specifically associated with oligodendrogliomas, a subtype of IDH-mutant glioma. While the patient's age makes an IDH-mutant tumor likely, there are no specific features in the provided metadata (like morphology or location) that strongly suggest an oligodendroglioma phenotype over other IDH-mutant types (like astrocytoma). Without further molecular or imaging data (e.g., DWI/ADC suggesting low grade), predicting co-deletion is highly uncertain. Given the lack of specific supporting features and the fact that co-deletion occurs only in a subset of IDH-mutant tumors, I predict non-codeleted but with low confidence.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The patient is 34 years old with a solitary tumor involving the cortex, deep white matter, and showing ependymal invasion. The tumor has marked enhancement and a thick enhancing margin (>3mm). It crosses the midline with edema ('Edema crosses midline': 'True'). The total tumor volume is 129.587 mL. These features suggest a high-grade glioma (Grade 4). The presence of deep white matter invasion and ependymal invasion are features often seen in higher grades. Marked enhancement and thick margins also point towards higher grade malignancy. While young age often correlates with lower grade, the aggressive features described (midline crossing edema, ependymal invasion, marked enhancement) outweigh this factor for grading purposes based solely on MRI metadata.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "IDH-mutant, non-codeleted, WHO Grade 4 diffuse astrocytoma."
+}

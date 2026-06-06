@@ -1,0 +1,38 @@
+{
+  "subject_id": "BraTS2021_00654",
+  "idh": {
+    "reasoning": "The patient is 82 years old. Older age (>65-70) is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it significantly increases the likelihood of IDH-wildtype status. No other features in the metadata strongly suggest IDH-mutant status (e.g., younger age, specific location patterns often seen in IDH-mutant tumors). The tumor characteristics (multifocal, deep WM invasion, ependymal invasion, large size) are more commonly seen in IDH-wildtype tumors, particularly glioblastoma. Therefore, based primarily on the advanced age, the prediction leans towards IDH-wildtype.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information directly related to 1p/19q co-deletion status. Features like tumor location (e.g., frontal lobe), morphology (e.g., enhancing margin thickness), or molecular markers (which are absent) are typically used to infer this status. Without specific genetic or imaging features suggestive of co-deletion (which are often associated with IDH-mutant oligodendrogliomas), it is impossible to make a reliable prediction based solely on the given MRI metadata. The default assumption in the absence of evidence is non-codeleted, but this is a weak inference.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (82 years) strongly suggests an IDH-wildtype glioma, which are typically high-grade (WHO Grade 4). The tumor exhibits several features associated with high grade: large size (Total tumor volume 97.297 mL), multifocal nature ('Multifocal or Multicentric': 'Multifocal'), deep white matter invasion ('Deep WM invasion': 'Present'), ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), cortical involvement ('Cortical involvement': 'Present'), marked enhancement ('Enhancement Quality': 'Marked'), and edema crossing the midline ('Edema crosses midline': 'True'). The presence of necrosis ('Proportion Necrosis': 21.18) and a thick enhancing margin ('Thickness of enhancing margin': '>3mm') further support a high grade. While eloquent brain involvement is noted, it doesn't change the grade itself but indicates surgical complexity. Given these features, particularly in an elderly patient where IDH-wildtype status is highly probable, a WHO Grade 4 diagnosis is the most likely.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Edema crosses midline",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true
+}

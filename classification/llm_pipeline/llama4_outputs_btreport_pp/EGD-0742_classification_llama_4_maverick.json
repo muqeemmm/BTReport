@@ -1,0 +1,39 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8910059740711544, indicating a strong presence of this feature. This is a characteristic imaging feature associated with IDH-mutant gliomas. The patient's age (62 years) is not typical for IDH-mutant gliomas, which are more common in younger patients, but the imaging evidence strongly supports IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is more commonly associated with IDH-mutant, non-codeleted gliomas. The strong evidence for IDH mutation from the T2-FLAIR mismatch suggests that the tumor is likely IDH-mutant. Given this, and without specific features that directly indicate 1p/19q co-deletion, it is more likely that the tumor is non-codeleted. The '1p/19q co-deletion status' is not directly assessable from the given metadata, but the presence of T2-FLAIR mismatch leans towards non-codeletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor shows significant necrosis (Proportion Necrosis: 36.98%) and enhancement (Proportion Enhancing: 29.48%), with a large size (Total tumor volume: 230.636 mL). The presence of necrosis and significant enhancement are features more commonly associated with higher-grade gliomas. The age of the patient (62 years) also aligns with a higher likelihood of a higher-grade tumor. While the T2-FLAIR mismatch suggests IDH mutation, IDH-mutant glioblastomas (Grade 4) are not uncommon. Therefore, the overall features support a high-grade tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0742"
+}

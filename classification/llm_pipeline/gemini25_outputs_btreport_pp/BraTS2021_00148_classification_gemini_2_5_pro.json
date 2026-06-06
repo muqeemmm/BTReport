@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00148",
+  "idh": {
+    "reasoning": "The patient's age of 57 years is more typical for IDH-wildtype gliomas. The imaging features are highly characteristic of an IDH-wildtype tumor (glioblastoma), including marked, thick-rim enhancement, a large enhancing volume, and central necrosis. The tumor involves deep gray matter structures such as the putamen and hippocampus, which is also more common in IDH-wildtype gliomas. Furthermore, the absence of a T2-FLAIR mismatch sign is a strong negative predictor for an IDH-mutant astrocytoma. There is minimal evidence to support an IDH-mutant diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "Anatomical Overlap Regions",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The presence of marked, thick-rim enhancement and central necrosis are strong arguments against a 1p/19q co-deleted tumor (oligodendroglioma), which typically shows less aggressive features. While cortical involvement is common in oligodendrogliomas, it is not specific. The overall imaging phenotype is that of a high-grade astrocytic tumor, making a non-codeleted status highly probable. The features are inconsistent with the typical appearance of an oligodendroglioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of central necrosis is a hallmark of WHO grade 4 gliomas. The metadata confirms a necrotic component ('Proportion Necrosis': 2.71%). This finding, in combination with other high-grade features such as 'Marked' 'Enhancement Quality' and a thick enhancing margin ('>3mm'), provides definitive evidence for a WHO grade 4 tumor. The presence of enhancement rules out grade 2, and the presence of necrosis strongly favors grade 4 over grade 3.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (57), marked thick-rim enhancement, central necrosis, and deep gray matter involvement provides a classic imaging presentation for a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predictions for each molecular marker are consistent and made with high confidence."
+}

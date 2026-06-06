@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young adult and the lesion is frontal/cortical, solitary, nonenhancing, and lacks necrosis, which is a typical lower-grade adult diffuse glioma imaging phenotype. Evidence against IDH mutation is that deep white matter invasion, midline epicenter, and edema crossing midline can be seen with more infiltrative or aggressive tumors, including IDH-wildtype glioblastoma, but the absence of enhancement and necrosis and the age make IDH-wildtype less likely on the provided MRI metadata. Overall, the balance supports IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The frontal cortical location and nonenhancing solitary appearance provide some support for a 1p/19q-codeleted oligodendroglioma-like phenotype. However, using this task independently from the IDH call, the available metadata lack key oligodendroglioma-supporting features such as calcification or characteristic susceptibility information, which are not assessed here. Deep white matter invasion, midline epicenter, edema crossing midline, and overlap with deep structures are somewhat more supportive of a diffuse astrocytic infiltrative pattern than classic circumscribed cortical-subcortical oligodendroglioma. Because the evidence is limited and partly conflicting, the best estimate is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "MRI metadata suggest a nonenhancing, non-necrotic diffuse glioma in a young adult, favoring an IDH-mutant lower-grade tumor. The 1p/19q prediction is the least secure because calcification/SWI, perfusion, diffusion, and spectroscopy are unavailable, and the frontal cortical nonenhancing phenotype overlaps between oligodendroglioma and astrocytoma. Molecular testing is required for definitive WHO CNS5 classification.",
+  "subject_id": "UCSF-PDGM-234",
+  "who_grade": {
+    "confidence": 0.87,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The grade assessment from MRI metadata favors CNS WHO grade 2 because there is no contrast enhancement, no enhancing tumor volume, no necrotic component, and no necrosis proportion, which argues against grade 4 and against a more aggressive enhancing grade 3 phenotype. The lesion is solitary and lacks ventricular invasion. Features arguing for a higher grade include deep white matter invasion, midline-crossing edema, and a moderate overall T2/FLAIR abnormality volume, but without enhancement or necrosis these are not sufficient to outweigh the low-grade imaging phenotype. Overall, grade 2 is most supported by the available MRI metadata.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

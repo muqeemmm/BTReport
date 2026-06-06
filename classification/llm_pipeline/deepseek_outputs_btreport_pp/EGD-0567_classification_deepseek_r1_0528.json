@@ -1,0 +1,49 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 34 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor shows T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 1.0) with a high mismatch score (0.8085), which is strongly associated with IDH-mutant astrocytoma. Additionally, the enhancement is mild (Enhancement Quality: 'Mild') and proportion of necrosis is low (Proportion Necrosis: 56.23% of tumor volume, but note that ET volume is very small at 0.012mL, so necrosis is actually minimal). The tumor involves eloquent areas (Speech motor and Motor) which is non-specific but more common in lower grade tumors. However, the age is borderline as IDH-mutant gliomas can occur in younger adults but IDH-wildtype are rare under 40.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in frontal lobe, cortex, insula and parietal lobes, which is typical for oligodendrogliomas. However, the T2-FLAIR mismatch sign is present, which is highly specific for IDH-mutant astrocytomas and argues against 1p/19q codeletion. Additionally, the tumor involves eloquent areas (Speech motor and Motor) which is more common in astrocytomas. The enhancement pattern is mild, which is non-specific. Given the strong evidence for astrocytic lineage from T2-FLAIR mismatch, 1p/19q is likely non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "overall_comment": "The tumor shows classic T2-FLAIR mismatch sign supporting IDH-mutant astrocytoma. Grade is estimated as 3 due to mild enhancement and minimal necrosis, but confidence is lower due to lack of mitotic or molecular markers.",
+  "subject_id": "EGD-0567",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor has minimal enhancement (Enhancement Quality: 'Mild', Proportion Enhancing: 0.01) and very small enhancing volume (ET Volume: 0.012mL), which suggests lower grade. However, there is significant necrosis proportion (56.23% of tumor volume) but note that the ET volume is tiny, so necrosis is likely referring to the non-enhancing core. The WHO CNS5 grading for IDH-mutant astrocytomas relies on histological features not available here. Based on imaging: absence of ring enhancement, mild enhancement, and T2-FLAIR mismatch suggest grade 2 or 3. The involvement of eloquent areas and deep white matter invasion may indicate higher grade, but confidence is moderate due to lack of perfusion or diffusion data.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Deep WM invasion"
+    ]
+  }
+}

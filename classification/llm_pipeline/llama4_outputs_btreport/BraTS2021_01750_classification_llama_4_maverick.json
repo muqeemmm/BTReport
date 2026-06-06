@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of a large tumor with significant mass effect (midline shift of 1.0 mm median and 10.0 mm maximum) and the involvement of multiple deep structures (thalamus, caudate, putamen, accumbens area, and ventricles) suggests a highly aggressive tumor. The high proportion of necrosis (50.25%) and the presence of ependymal invasion also point towards a more malignant phenotype, which is typically associated with IDH wildtype status in adult-type diffuse gliomas. Furthermore, the tumor's bilateral location and the presence of multiple satellites are also more commonly seen in IDH wildtype glioblastomas.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, aggressive tumor with significant necrosis and ependymal invasion, along with the absence of specific features typically associated with 1p/19q co-deletion (such as calcifications, which are not available but often considered in the context of oligodendrogliomas), makes 1p/19q co-deletion less likely. IDH-mutant tumors with 1p/19q co-deletion tend to have a more favorable prognosis and are less likely to present with the aggressive features seen in this case. Given the likely IDH wildtype status and the aggressive features, 1p/19q co-deletion is unlikely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_grade": {
+    "reasoning": "The tumor exhibits significant necrosis (50.25%), a large size (Total tumor volume of 240.147 mL), and significant mass effect (midline shift), all of which are characteristic of high-grade gliomas. The presence of ependymal invasion and multiple satellites further supports a high-grade diagnosis. Given these aggressive features, a CNS WHO grade of 4 is most likely, as it aligns with the diagnosis of glioblastoma, IDH wildtype.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01750"
+}

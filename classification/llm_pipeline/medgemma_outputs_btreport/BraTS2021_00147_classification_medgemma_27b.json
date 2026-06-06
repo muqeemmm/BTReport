@@ -1,0 +1,47 @@
+{
+  "subject_id": "BraTS2021_00147",
+  "idh": {
+    "reasoning": "The patient is 62 years old. Older age (>55) is associated with IDH-wildtype gliomas, while younger age is associated with IDH-mutant gliomas. The tumor is large (Total tumor volume 175.293 mL), solitary, and located near the midline ('Side of Tumor Epicenter': 'Midline'). These features are more common in IDH-wildtype tumors. The 'Text Report' mentions 'deep white matter invasion present' and 'ependymal invasion present', which can be seen in both IDH-mutant and IDH-wildtype tumors, but are perhaps slightly more characteristic of higher-grade, potentially IDH-wildtype tumors given the age and size. The lack of DWI/ADC or MRS (2HG) data prevents definitive assessment. Given the patient's age and tumor characteristics (large size, midline location), IDH-wildtype is more likely.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not provide any direct information regarding 1p/19q co-deletion status. Features like age, tumor size, location, or enhancement pattern are not specific enough to predict co-deletion status reliably without molecular testing. Co-deletion is strongly associated with IDH-mutant oligodendrogliomas (Grade 2 or 3), but this patient's features lean towards IDH-wildtype (see IDH reasoning). Even if it were IDH-mutant, co-deletion status cannot be determined from MRI alone. Therefore, the prediction is based on the lack of evidence for co-deletion.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 62 years old with a large tumor (175.293 mL). The tumor shows 'Cortical involvement', 'Deep WM invasion', and 'Ependymal (ventricular) Invasion'. It has 'Marked' enhancement and a thick enhancing margin (>3mm). The edema crosses the midline ('Edema crosses midline': 'True'), and there is ventricular effacement ('Effaced Ventricle': 'Left') and asymmetry ('Asymmetrical Ventricles': 'Present'). Involvement of eloquent brain regions ('Eloquent Brain Involvement': 'Motor and Vision') is noted. These features collectively point towards a high-grade glioma. While some features like deep WM invasion and ependymal invasion can be seen in Grade 3 gliomas, the combination of marked enhancement, thick margin, large size, edema crossing midline, ventricular effacement/asymmetry, cortical involvement, deep WM invasion, ependymal invasion, and eloquent brain involvement in an older adult strongly suggests a WHO Grade 4 glioma (Glioblastoma). The proportion of enhancing tissue (20.68%) is relatively low for a typical GBM but doesn't exclude it given the other aggressive features.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Edema crosses midline",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Diffuse astrocytic tumor, IDH wildtype",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult with a large tumor showing aggressive features including cortical involvement, deep white matter invasion, ependymal invasion, marked enhancement with thick margins, edema crossing midline and ventricular effacement/asymmetry."
+}

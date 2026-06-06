@@ -1,0 +1,57 @@
+{
+  "subject_id": "BraTS2021_01535",
+  "idh": {
+    "reasoning": "The patient is 44 years old, which is typical for IDH\u2011mutant gliomas. The tumor shows no contrast enhancement (Enhancement Quality: \"None\", Proportion Enhancing: 0.0) and is cortically based (Cortical involvement: \"Present\") without deep white\u2011matter invasion (Deep WM invasion: \"Absent\") or ependymal invasion (Ependymal (ventricular) Invasion: \"Absent\"). It is solitary (Multifocal or Multicentric: \"Solitary\") and does not cross the midline (CET Crosses midline: \"False\"). These features collectively favor an IDH\u2011mutant phenotype. However, the high necrotic proportion (Proportion Necrosis: 61.02) and relatively large tumor volume (Total tumor volume (mL): 53.625) are more typical of IDH\u2011wildtype glioblastoma, providing some contradictory evidence. Balancing the stronger supportive signs against the necrosis, the conclusion is IDH\u2011mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Lack of enhancement, cortical location, younger age and solitary presentation are features commonly seen in 1p/19q\u2011codeleted oligodendrogliomas. The tumor also involves frontal cortex (Region Proportions includes frontal_lobe) which is typical for oligodendroglioma. Conversely, the high necrotic proportion (Proportion Necrosis: 61.02) and prominent involvement of temporal and insular regions (Region Proportions includes temporal and insula) are less characteristic of oligodendroglioma and argue against codeletion. Considering the overall pattern, the evidence leans toward a non\u2011codeleted status.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "age_years",
+      "Region Proportions",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive necrosis (Proportion Necrosis: 61.02) and a sizable tumor volume (Total tumor volume (mL): 53.625) are hallmarks of high\u2011grade glioma. Additionally, there is a substantial edema component (Proportion of Oedema: 38.98) and involvement of eloquent visual cortex (Eloquent Brain Involvement: \"Vision\"), supporting an aggressive lesion. The main counterpoint is the absence of contrast enhancement (Enhancement Quality: \"None\", Proportion Enhancing: 0.0), which is atypical for WHO grade\u202f4 glioblastoma but does not preclude a grade\u202f4 IDH\u2011mutant astrocytoma. We therefore assign WHO grade\u202f4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "Eloquent Brain Involvement",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI suggests an IDH\u2011mutant, non\u2011codeleted astrocytoma of WHO grade\u202f4. The lack of enhancement despite marked necrosis is atypical and advanced imaging (perfusion, spectroscopy) would be valuable for confirmation. Histopathologic and molecular testing remain essential for definitive classification."
+}

@@ -1,0 +1,43 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "reasoning": "The patient is 32 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor is located in the frontal lobe cortex, which is common in IDH-mutant gliomas. Enhancement is mild, and necrosis proportion is low (0.77%), both more characteristic of IDH-mutant tumors.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent motor cortex, which is more common in astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas typically present with frontal lobe involvement but are less likely to involve eloquent areas. However, the frontal location provides some support for oligodendroglioma.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is classified as Astrocytoma, IDH-mutant, CNS WHO grade 4. Confidence in IDH mutation status is high due to age and imaging features. 1p/19q co-deletion status prediction has moderate confidence due to conflicting evidence regarding eloquent involvement versus frontal location. Grade 4 assignment is based on necrosis presence despite low proportion.",
+  "subject_id": "BraTS2021_01663",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The presence of any necrosis (0.77%) indicates CNS WHO grade 4 for IDH-mutant astrocytomas. Enhancement is mild but present, and tumor volume is substantial (56.445 mL). However, the low proportion of necrosis reduces confidence slightly.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

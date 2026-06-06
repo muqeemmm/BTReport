@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the metadata favors an IDH-wildtype diffuse glioma because age_years is in an older adult range, the tumor is Multifocal or Multicentric, has Ependymal (ventricular) Invasion and Deep WM invasion, crosses the midline by CET Crosses midline and Edema crosses midline, and has enhancing tumor by ET Volume (mL) and Proportion Enhancing with extensive ED Volume (mL). These are more typical of aggressive IDH-wildtype glioma. Features that argue against this include Tumor Location and Cortical involvement with frontal/cortical involvement, which can be seen in IDH-mutant glioma, and T2-FLAIR Mismatch Present is absent, which does not support the classic IDH-mutant astrocytoma mismatch sign but also is not specific for wildtype. Overall the aggressive infiltrative, multifocal, ependymal/midline-crossing enhancing pattern outweighs the frontal/cortical component, so the best prediction is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the imaging pattern favors non-codeleted disease. The strongest features against oligodendroglioma-type codeletion are Multifocal or Multicentric disease, Ependymal (ventricular) Invasion, Deep WM invasion, Side of Tumor Epicenter being midline, Tumor Location including ventricles and thalamus, CET Crosses midline, Edema crosses midline, and large ED Volume (mL), all of which are less typical for a circumscribed frontal oligodendroglioma phenotype. Features that could support codeletion include Tumor Location with frontal_lobe involvement, Cortical involvement, and Enhancement Quality described as mild, since oligodendrogliomas often have cortical/frontal components and may enhance. However, the multifocal, midline/deep, ventricular and thalamic involvement outweighs those codeletion-supporting features, so the best prediction is non-codeleted.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter",
+      "Tumor Location",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "ED Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. Imaging strongly suggests an aggressive adult-type diffuse glioma, but molecular status cannot be determined definitively from these fields alone. The integrated diagnosis follows WHO CNS5 compatibility using the predicted IDH-wildtype and grade 4 pattern.",
+  "subject_id": "BraTS2021_00047",
+  "who_grade": {
+    "confidence": 0.84,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently, the metadata favors grade 4 because there is measurable enhancing tumor by ET Volume (mL) and Proportion Enhancing, necrotic/non-enhancing core by NCR Volume (mL) and Proportion Necrosis, thick enhancement by Thickness of enhancing margin, extensive edema by ED Volume (mL) and Proportion of Oedema, Multifocal or Multicentric disease, Ependymal (ventricular) Invasion, Deep WM invasion, and crossing of midline by CET Crosses midline and Edema crosses midline. These features are much more consistent with high-grade diffuse glioma than grade 2 or 3. Features that temper certainty are Enhancement Quality being mild, Proportion Necrosis being low, and midline_shift_present being absent despite large edema, which could reduce confidence in a purely imaging-based grade 4 call. Nevertheless, the presence of enhancement, necrotic component, extensive edema, multifocality, and ventricular/deep invasion makes grade 4 the best estimate.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

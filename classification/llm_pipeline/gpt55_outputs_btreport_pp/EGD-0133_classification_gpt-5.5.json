@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI marker is the reported T2-FLAIR mismatch, with a high mismatch score and measurable mismatch degree; this pattern is classically associated with IDH-mutant astrocytoma rather than IDH-wildtype glioblastoma. The temporal/cortical tumor location is compatible with a diffuse glioma and does not argue strongly against IDH mutation. Evidence arguing toward IDH-wildtype includes age 50, very large edema burden, non-enhancing core/necrosis metrics, ependymal and deep white matter invasion, and midline shift, all of which can be seen in more aggressive IDH-wildtype tumors. Overall, the specific T2-FLAIR mismatch signal outweighs the aggressive mass-effect features, so the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean",
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the T2-FLAIR mismatch finding is the key discriminator and supports a non-codeleted astrocytic genotype rather than oligodendroglioma. The tumor is predominantly temporal with cortical involvement, which is not the classic frontal oligodendroglioma pattern; however, cortical involvement can occur in oligodendroglioma and is therefore a mild counterpoint. No calcification-sensitive sequence is available, and calcification cannot be assessed. Given the strong mismatch pattern and absence of metadata favoring oligodendroglioma, the best estimate is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The predictions are MRI-based only. T2-FLAIR mismatch strongly supports an IDH-mutant, non-codeleted astrocytic tumor, but the large edema burden, necrosis/non-enhancing core metrics, ependymal/deep white matter invasion, and mass effect are aggressive features. DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification assessment were not available and were not used.",
+  "subject_id": "EGD-0133",
+  "who_grade": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "reasoning": "For grade assessment, the metadata show several aggressive imaging features: a large total tumor volume, very large edema volume and high edema proportion, midline shift, non-enhancing core/necrosis metrics, ependymal invasion, deep white matter invasion, and a thick enhancing margin. These findings favor a high-grade diffuse glioma and are most concerning for CNS WHO grade 4 when necrosis is present. Features arguing against grade 4 include only mild enhancement, very small enhancing volume, low enhancing proportion, and T2-FLAIR mismatch, which is often associated with lower-grade IDH-mutant astrocytoma. On balance, the necrosis/non-enhancing core and substantial mass-effect/infiltrative features outweigh the limited enhancement, so grade 4 is the best estimate.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Thickness of enhancing margin",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

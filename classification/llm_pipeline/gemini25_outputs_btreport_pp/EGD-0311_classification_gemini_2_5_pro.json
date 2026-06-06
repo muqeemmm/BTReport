@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0311",
+  "idh": {
+    "reasoning": "The patient's advanced age of 75 is a very strong predictor for IDH-wildtype status. The imaging phenotype strongly supports this, demonstrating features classic for glioblastoma: a large tumor with marked, thick-walled enhancement, central necrosis, and extensive vasogenic edema. The presence of deep white matter and ependymal invasion further indicates an aggressive, high-grade tumor. The sharp tumor-edema boundary, evidenced by a very thin median FLAIR transition zone of 0.75 mm, is also more characteristic of IDH-wildtype gliomas than the diffusely infiltrative IDH-mutant astrocytomas. The primary contradictory feature is the 'T2-FLAIR Mismatch Present' flag being positive, a sign typically associated with IDH-mutant astrocytoma. However, given the overwhelming weight of the clinical context (age) and aggressive imaging features, this single finding is considered less likely to be representative of the underlying biology.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is performed independently of the IDH prediction. 1p/19q co-deletion is the defining feature of oligodendrogliomas, which typically present with less aggressive features than seen here. This tumor exhibits marked enhancement, significant necrosis, and a very large volume of vasogenic edema, all of which are highly uncharacteristic of oligodendrogliomas. Furthermore, oligodendrogliomas often have indistinct margins, whereas this lesion has a relatively sharp boundary based on the thin FLAIR transition zone. The feature 'T2-FLAIR Mismatch Present', while contradictory for an IDH-wildtype prediction, is a strong sign of an astrocytoma lineage, which is by definition non-codeleted. Therefore, all key imaging features argue against a 1p/19q co-deletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of contrast enhancement and/or necrosis in an adult-type diffuse astrocytic glioma are hallmark features of high-grade disease, specifically CNS WHO grade 4. This tumor demonstrates both features unequivocally and extensively. There is a large volume of enhancing tissue ('ET Volume (mL)' of 34.063) with 'Marked' enhancement quality, and a significant necrotic core ('NCR Volume (mL)' of 8.305). Additional features supporting a grade 4 diagnosis include the very large total tumor volume, significant mass effect with midline shift, and deep infiltration. There are no imaging features to suggest a lower grade (2 or 3).",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 1.0
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's advanced age (75 years) and the MRI features of a large, solitary, deeply invasive mass with marked, thick-walled enhancement, central necrosis, and extensive vasogenic edema are all classic indicators of a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The only conflicting feature is a quantitative T2-FLAIR mismatch sign, which is strongly outweighed by the overwhelming clinical and radiological evidence for a high-grade, IDH-wildtype tumor. The predictions are internally consistent and represent the most probable diagnosis."
+}

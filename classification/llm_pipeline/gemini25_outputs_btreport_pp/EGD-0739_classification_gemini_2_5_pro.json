@@ -1,0 +1,44 @@
+{
+  "subject_id": "EGD-0739",
+  "idh": {
+    "reasoning": "The tumor is located in the brainstem and its epicenter is midline. In an adult patient, a diffuse glioma in a midline location like the brainstem is highly characteristic of a Diffuse Midline Glioma (DMG). By WHO CNS5 definition, DMGs are IDH-wildtype entities. While the patient's age of 37 could be consistent with either IDH-mutant or wildtype status, and the lack of enhancement is more typical for IDH-mutant tumors, the specific anatomical location is a very strong predictor that outweighs these other, less specific features. Therefore, an IDH-wildtype status is the most likely prediction.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This task is performed independently of the IDH status prediction. 1p/19q co-deleted tumors (oligodendrogliomas) are almost exclusively supratentorial and frequently involve the cortex. This tumor's location in the brainstem is an extremely rare site for an oligodendroglioma. The midline epicenter and lack of cortical involvement further argue against this diagnosis. The imaging features are therefore highly suggestive of a non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The defining feature for grading in this case is the tumor's location. The lesion is a diffuse glioma in the brainstem, a midline structure. According to the WHO CNS5 classification, diffuse midline gliomas with H3 K27 alteration are designated as WHO Grade 4, regardless of histological features. While the absence of contrast enhancement, necrosis, and edema are typically associated with lower-grade tumors, the midline location in an adult is the most critical factor and strongly indicates a high-grade (Grade 4) entity.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Diffuse midline glioma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of a midline brainstem location in a 37-year-old patient is highly suggestive of a Diffuse Midline Glioma. This diagnosis dictates the predictions: IDH-wildtype and WHO Grade 4 by definition. The lack of enhancement and necrosis, while atypical for high-grade gliomas in general, does not preclude this specific diagnosis. All quantitative volume metrics were zero, indicating the classification relies on the qualitative location data provided in the 'Tumor Location' and 'Text Report' fields."
+}

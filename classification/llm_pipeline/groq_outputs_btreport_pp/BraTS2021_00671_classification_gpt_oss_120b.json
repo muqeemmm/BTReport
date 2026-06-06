@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_00671",
+  "idh": {
+    "reasoning": "The T2-FLAIR mismatch is absent (\"T2-FLAIR Mismatch Present\":0.0) which is a strong imaging surrogate for IDH-wildtype status. Marked contrast enhancement (\"Enhancement Quality\":\"Marked\") and the presence of necrosis (\"Proportion Necrosis\":1.91) are more typical of IDH-wildtype glioblastoma than IDH\u2011mutant astrocytoma, which usually shows less necrosis and less aggressive enhancement. The patient\u2019s age (53) also favors IDH\u2011wildtype. While cortical involvement and a modest T2\u2011FLAIR mismatch score could suggest IDH\u2011mutant disease, these are outweighed by the lack of mismatch and the aggressive imaging features. Hence the prediction is IDH\u2011wildtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion is most commonly associated with oligodendroglioma, which typically shows minimal or no contrast enhancement and often presents with calcifications\u2014features not seen here. The tumor shows marked enhancement (\"Enhancement Quality\":\"Marked\") and necrosis, both arguing against a classic oligodendroglioma. Absence of T2\u2011FLAIR mismatch further reduces the likelihood of a codeleted tumor. While cortical location could be seen in oligodendroglioma, the overall imaging profile supports a non\u2011codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement (\"Enhancement Quality\":\"Marked\"), measurable necrosis (\"Proportion Necrosis\":1.91), sizable enhancing tumor volume (\"ET Volume (mL)\":20.671) and involvement of eloquent cortex (\"Eloquent Brain Involvement\":\"Speech motor and Vision\") are imaging hallmarks of WHO grade 4 glioblastoma. Although necrosis proportion is modest, any necrosis in an IDH\u2011wildtype tumor is sufficient to assign grade 4 under WHO CNS5. The lack of microvascular proliferation cannot be assessed, but the aggressive radiologic features outweigh the relatively low necrosis fraction, leading to a grade 4 prediction.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Eloquent Brain Involvement",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of advanced sequences (DWI, perfusion, spectroscopy) limits certainty, especially for distinguishing IDH\u2011mutant astrocytoma from IDH\u2011wildtype glioblastoma. Nonetheless, the imaging profile strongly favors an IDH\u2011wildtype, non\u2011codeleted, WHO grade 4 tumor."
+}

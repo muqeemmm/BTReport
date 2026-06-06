@@ -1,0 +1,54 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is strongly present (T2-FLAIR Mismatch Present=1.0, Score=0.95, Degree=0.93), which is highly specific for IDH-mutant astrocytoma. The tumor location in parietal-cortex region and midline epicenter are consistent with IDH-mutant tumors. However, the patient's age (71 years) is older than typical for IDH-mutant gliomas, and mild enhancement is less common in IDH-mutant tumors.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "IDH-mutant tumors without 1p/19q co-deletion are astrocytomas. The strong T2-FLAIR mismatch supports IDH-mutant astrocytoma. Oligodendrogliomas (IDH-mutant and 1p/19q-codeleted) typically show frontal lobe preference and more homogeneous enhancement, neither of which is present here. The tumor involves eloquent areas (speech motor, motor, vision) which is more common in astrocytomas. Mild enhancement is atypical for oligodendroglioma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Prediction based on WHO CNS5 classification using available MRI metadata. Confidence reflects the strength of T2-FLAIR mismatch sign against conflicting age and enhancement pattern.",
+  "subject_id": "EGD-0665",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows mild enhancement (Enhancement Quality=Mild) with a proportion enhancing of 14.92%, which is lower than typical for grade 4 glioblastoma. However, the presence of necrosis (Proportion Necrosis=9.14%) and ependymal invasion support grade 4. The tumor volume is large (228 mL) and involves eloquent areas, which are features of high-grade tumors. The transition zone thickness on FLAIR is thin (mean 1.66mm), suggesting infiltrative growth.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement",
+      "Transition Zone Thickness (FLAIR).mean_mm"
+    ]
+  }
+}

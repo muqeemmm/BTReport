@@ -1,0 +1,38 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8920728867317714, indicating a high likelihood of T2-FLAIR mismatch. This feature is strongly associated with IDH mutant gliomas. Therefore, the evidence supports the prediction of 'mutant' for IDH mutation status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH mutant gliomas that are not 1p/19q co-deleted. The high 'T2-FLAIR Mismatch Score' supports the presence of T2-FLAIR mismatch, which is more commonly seen in astrocytomas rather than oligodendrogliomas (which are typically 1p/19q co-deleted). Therefore, the evidence suggests 'non-codeleted' for 1p/19q co-deletion status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows marked enhancement and has a significant proportion of necrosis (1.36%), suggesting a higher grade. The presence of IDH mutation (predicted above) typically associates with lower grades (2 or 3) in adult-type diffuse gliomas. However, the presence of necrosis and marked enhancement may indicate a higher grade. Given the IDH mutant status, a grade of 4 is less likely unless it's a glioblastoma, IDH-mutant. The 'Proportion of Oedema' is high (83.57%), and there's significant tumor volume (29.898 mL), indicating aggressive features. However, the absence of ependymal invasion and deep white matter invasion might argue against the highest grade. Considering these factors, a grade of 3 is plausible.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "subject_id": "EGD-0627"
+}

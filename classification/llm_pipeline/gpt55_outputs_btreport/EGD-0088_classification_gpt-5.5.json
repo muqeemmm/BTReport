@@ -1,0 +1,91 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Cortical involvement",
+      "Tumor Location",
+      "crosses_patient_midline",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "Considering IDH status independently, the strongest available discriminator is advanced age, which favors IDH-wildtype diffuse glioma over IDH-mutant glioma. The presence of enhancing tumor and a large edema-predominant component also leans toward an IDH-wildtype high-grade phenotype rather than a classic nonenhancing lower-grade IDH-mutant phenotype. Evidence against IDH-wildtype is that the lesion is small, solitary, cortically/temporally located, only mildly enhancing, has very low necrotic/nonenhancing-core volume, does not cross midline, lacks deep white-matter or ependymal invasion, and has no midline shift; these less aggressive features can be seen with IDH-mutant tumors. On balance, the age and enhancement/edema phenotype favor IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Considering 1p/19q status independently, the patient's advanced age and temporal rather than clearly frontal predominance favor a non-codeleted diffuse glioma over a typical 1p/19q-codeleted oligodendroglioma pattern. Measurable enhancement and prominent edema also lean away from a classic codeleted oligodendroglioma imaging phenotype, although they are not specific. Evidence supporting possible codeletion includes cortical involvement, a cortically based temporal lesion, mild rather than marked enhancement, small size, and solitary presentation, all of which can overlap with oligodendroglioma. Because key discriminators are not available in the structured metadata, the best estimate remains non-codeleted with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata and are not definitive substitutes for tissue-based molecular testing. The main uncertainty is that the lesion is small with only mild enhancement and minimal necrotic/nonenhancing-core volume, which lowers confidence for imaging-based grade assignment despite the advanced age and edema-predominant enhancing phenotype.",
+  "subject_id": "EGD-0088",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "Considering CNS WHO grade independently, the presence of contrast-enhancing tumor, a thick enhancing margin, extensive edema, a small necrotic/nonenhancing-core component, and advanced age support a high-grade lesion, with grade 4 favored over grade 2. Grade 3 remains a meaningful alternative because the enhancement is described as mild, the enhancing volume and enhancing proportion are limited, necrosis is minimal, total tumor volume is modest, there is no midline shift or ventricular asymmetry, and there is no midline crossing, deep white-matter invasion, or ependymal invasion. Overall, the enhancement-plus-edema phenotype with any necrotic component in an elderly patient favors CNS WHO grade 4, but the small size and mild enhancement keep confidence only moderate.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

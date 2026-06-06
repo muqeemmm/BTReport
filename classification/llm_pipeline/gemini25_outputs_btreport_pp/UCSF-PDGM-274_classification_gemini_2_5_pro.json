@@ -1,0 +1,44 @@
+{
+  "subject_id": "UCSF-PDGM-274",
+  "idh": {
+    "reasoning": "The tumor's location is the most decisive factor. It is a midline brainstem glioma ('Tumor Location': 'brainstem', 'Side of Tumor Epicenter': 'Midline'). This location in an adult is highly suspicious for a diffuse midline glioma, which is an IDH-wildtype entity. The absence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 0.0) also argues against an IDH-mutant astrocytoma. These factors outweigh the evidence favoring an IDH-mutant tumor, which includes the patient's young age ('age_years': 35) and the complete lack of enhancement ('ET Volume (mL)': 0.0).",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor is located in the brainstem ('Tumor Location': 'brainstem'). Oligodendrogliomas, which are defined by 1p/19q co-deletion, are exceptionally rare in this location; they are typically supratentorial and cortically based. The provided metadata confirms 'Cortical involvement' is 'Absent'. The combination of a brainstem location and lack of cortical involvement makes a 1p/19q co-deleted tumor extremely unlikely. There are no features that support co-deletion.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "There is conflicting evidence for the WHO grade. The absence of enhancement ('ET Volume (mL)': 0.0, 'Proportion Enhancing': 0.0) and necrosis ('Proportion Necrosis': 0.0) are classic imaging features of a lower-grade glioma (WHO grade 2 or 3). However, the tumor's location in the brainstem ('Tumor Location': 'brainstem') is a powerful indicator of a specific molecularly-defined entity: Diffuse Midline Glioma, H3 K27-altered. According to WHO CNS5 criteria, this entity is designated as WHO grade 4 by definition, regardless of histological or radiological features like enhancement. The molecular implication of the location is considered to be the overriding factor for grading.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Diffuse midline glioma, H3 K27-altered, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a non-enhancing, midline brainstem glioma. While the lack of enhancement and young age are suggestive of a lower-grade tumor, the brainstem location is a very strong predictor for a Diffuse Midline Glioma, H3 K27-altered. This molecular diagnosis is IDH-wildtype and defined as WHO grade 4, irrespective of conventional imaging features. The predictions are therefore consistent with this specific entity."
+}

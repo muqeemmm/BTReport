@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_01450",
+  "idh": {
+    "reasoning": "The patient's age of 46 is within the range for both IDH-mutant and wildtype gliomas, but trends towards the latter. The presence of both contrast enhancement (ET Volume (mL) of 9.371) and, critically, central necrosis (NCR Volume (mL) of 3.94) are strong indicators of an IDH-wildtype tumor, specifically glioblastoma. Furthermore, the tumor is multifocal ('Multifocal or Multicentric': 'Multifocal'), involves deep gray matter structures ('Anatomical Overlap Regions' including thalamus, caudate, putamen), and exerts significant mass effect ('max_shift_mm': 7.0), all of which are classic features of IDH-wildtype high-grade gliomas. While insular involvement can be seen in IDH-mutant tumors, the overwhelming evidence points towards an IDH-wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "Anatomical Overlap Regions",
+      "midline_shift_present",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. The tumor's imaging phenotype is highly suggestive of an astrocytic lineage (non-codeleted). Key features include deep white matter and deep gray matter infiltration ('Deep WM invasion': 'Present', 'Anatomical Overlap Regions' including thalamus, caudate, putamen), which indicates poorly defined, infiltrative margins rather than the more circumscribed appearance often associated with oligodendrogliomas (codeleted). The presence of necrosis ('NCR Volume (mL)': 3.94) and a thick enhancing margin ('>3mm') are also more characteristic of high-grade astrocytomas. There are no specific features, such as a classic 'bubbly' appearance or calcification (not assessed), to suggest a codeleted oligodendroglioma.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is based on the unambiguous presence of imaging features corresponding to microvascular proliferation and necrosis. The tumor demonstrates significant contrast enhancement ('ET Volume (mL)': 9.371) with a thick margin ('>3mm'), and most importantly, has a necrotic core ('NCR Volume (mL)': 3.94, 'Proportion Necrosis': 4.4). The presence of radiologically evident necrosis is the hallmark feature that defines a WHO grade 4 glioma. This is further supported by other aggressive features such as multifocality ('Multifocal or Multicentric': 'Multifocal') and significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': 7.0). The 'Mild' enhancement quality is noted but is strongly outweighed by the definitive presence of necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 46-year-old male with a large, multifocal, left-sided infiltrative tumor involving cortical, insular, and deep gray matter structures. The key imaging findings of contrast enhancement, central necrosis, and significant mass effect are highly characteristic of a high-grade glioma. The combination of these features strongly supports a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

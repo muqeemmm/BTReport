@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0426",
+  "idh": {
+    "reasoning": "The presence of multiple aggressive features strongly suggests an IDH-wildtype status. Multifocality ('Multifocal or Multicentric': \"Multifocal\", 'Number of lesions': 2) is a classic hallmark of IDH-wildtype glioblastoma. Furthermore, the presence of both necrosis ('NCR Volume (mL)': 0.193) and contrast enhancement ('ET Volume (mL)': 0.361) are characteristic of high-grade, IDH-wildtype tumors. The invasive nature of the tumor, evidenced by deep white matter invasion, ependymal invasion, and involvement of deep grey matter structures ('Anatomical Overlap Regions'), also aligns with this diagnosis. There are no significant features to suggest an IDH-mutant glioma, which typically presents as a single, non-enhancing, well-circumscribed lesion.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically have better-defined margins and rarely exhibit necrosis, especially not in combination with multifocality. This tumor is multifocal ('Multifocal or Multicentric': \"Multifocal\"), shows clear evidence of necrosis ('NCR Volume (mL)': 0.193), and is highly infiltrative ('Deep WM invasion': \"Present\"). These features are characteristic of high-grade astrocytic tumors (non-codeleted). While frontal lobe involvement is common in oligodendroglioma, this is a non-specific finding that is overwhelmingly outweighed by the aggressive features present.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis is a key criterion for assigning WHO Grade 4. The metadata explicitly indicates a necrotic component ('NCR Volume (mL)': 0.193, 'Proportion Necrosis': 0.19). In the context of a diffuse astrocytic glioma in an adult, this finding is sufficient for a Grade 4 designation. This is further supported by other features of high-grade malignancy, including contrast enhancement ('ET Volume (mL)': 0.361), multifocality ('Multifocal or Multicentric': \"Multifocal\"), and extensive invasion of deep white matter and ependyma. There is no evidence supporting a lower grade; Grade 2 and 3 tumors typically lack necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are classic for a multifocal glioblastoma, IDH-wildtype. The presence of both contrast enhancement and necrosis, along with the invasive and multifocal nature of the disease, strongly supports a WHO Grade 4 diagnosis. The combination of IDH-wildtype and non-codeleted status is consistent with this entity."
+}

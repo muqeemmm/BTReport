@@ -13,7 +13,7 @@ export SYNTHSEG_SIF="/media/ist/data/Muqeem/Projects/Brain_Project/Classificatio
 # export OLLAMA_SIF=/pscratch/sd/j/jehr/ollama/ollama.sif
 
 export SUBJECTS_DIR="/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/Dataset_AKU_WHO/Astrocytoma_IDH-mutant" # Relative directory from which subject files are referenced inside containers. Usually I set this to the root of my scratch space.
-export SF="/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/dataset/BraTS2021_00045" # Absolute path to the same directory on the host system. This is used for bind-mounting into the containers.
+# export SF="/media/ist/data/Muqeem/Projects/Brain_Project/Classification Code/BTReport/data/dataset/BraTS2021_00045" # Absolute path to the same directory on the host system. This is used for bind-mounting into the containers.
 
 # Ollama model storage (should be on large-capacity storage)
 # export OLLAMA_MODELS=/pscratch/sd/j/jehr/ollama/ollama_models
@@ -52,5 +52,5 @@ echo "  SYNTHSEG_SIF  : $SYNTHSEG_SIF"
 # echo "  OLLAMA_SIF    : $OLLAMA_SIF"
 # echo "  OLLAMA_MODELS : $OLLAMA_MODELS"
 echo "  SUBJECTS_DIR  : $SUBJECTS_DIR"
-echo "  SF            : $SF"
+# echo "  SF            : $SF"
 # echo "  OLLAMA_HOST   : $OLLAMA_HOST"

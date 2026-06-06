@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect (as indicated by the 'mean_shift_mm' and 'max_shift_mm' values) suggests a high-grade glioma. The tumor's location in the temporal lobe, involvement of the cortex and insula, and presence of deep white matter invasion are consistent with a glioblastoma, which is typically IDH wildtype. The 'Enhancement Quality' being 'Marked' and 'Proportion Enhancing' being 39.4 also support this, as glioblastomas are known for their heterogeneous enhancement patterns. While there's no direct evidence from the metadata that conclusively determines IDH status, the features suggest a high-grade tumor, which is more likely to be IDH wildtype.",
+    "supporting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor's characteristics, such as significant enhancement, necrosis, and large size, are not typical for 1p/19q co-deleted tumors, which are more commonly associated with oligodendrogliomas. Oligodendrogliomas tend to have a more indolent course and are less likely to present with such aggressive features. The presence of marked enhancement and necrosis suggests a more aggressive tumor type, which is less likely to be associated with 1p/19q co-deletion. Therefore, based on the available metadata, it is more likely that the tumor is non-codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 37.49), marked enhancement, and large size (Lesion Sizes APxTVxCC: 4.2x4.4x5.6 cm), which are characteristic of high-grade gliomas. The presence of deep white matter invasion and significant mass effect (mean_shift_mm: 1.174, max_shift_mm: 4.0) further supports a high-grade diagnosis. These features are most consistent with a WHO Grade 4 tumor, likely glioblastoma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Deep WM invasion",
+      "mean_shift_mm",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00306"
+}

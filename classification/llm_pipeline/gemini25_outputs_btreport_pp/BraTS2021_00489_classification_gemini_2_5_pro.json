@@ -1,0 +1,48 @@
+{
+  "subject_id": "BraTS2021_00489",
+  "idh": {
+    "reasoning": "The most compelling evidence for an IDH-mutant status is the definitive presence of the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0, `T2-FLAIR Mismatch Score`: 0.77), which is a highly specific imaging biomarker for IDH-mutant astrocytomas. The tumor's involvement of the insula also favors an IDH-mutant genotype. However, there is significant contradicting evidence. The patient's age of 51, the presence of necrosis (`Proportion Necrosis`: 5.15), significant contrast enhancement (`ET Volume (mL)`: 19.06), and extensive edema (`ED Volume (mL)`: 129.186) are all features more classically associated with IDH-wildtype glioblastoma. Despite these high-grade features, the high specificity of the T2-FLAIR mismatch sign outweighs them, as IDH-mutant tumors can progress to develop these aggressive characteristics. Therefore, the prediction is IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is primarily driven by the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0). This feature is strongly associated with the astrocytic lineage, which is defined by a 1p/19q non-codeleted status. Further supporting this is the involvement of deep gray matter structures like the thalamus and basal ganglia (`Anatomical Overlap Regions`), which is more typical for astrocytomas. The main contradicting feature is the very sharp tumor border, indicated by a low median `Transition Zone Thickness (FLAIR)` of 0.75 mm, a classic finding in 1p/19q co-deleted oligodendrogliomas. However, the T2-FLAIR mismatch sign is considered a more specific biomarker for molecular subtype than tumor border morphology. Therefore, the evidence strongly favors a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is straightforward in this case. The presence of necrosis is a defining feature of a WHO grade 4 astrocytoma, IDH-mutant, according to the WHO CNS5 classification. The metadata explicitly quantifies necrosis (`Proportion Necrosis`: 5.15, `NCR Volume (mL)`: 8.056), confirming its presence. This finding is strongly corroborated by other features of high-grade malignancy, including significant contrast enhancement (`ET Volume (mL)`: 19.06, `Thickness of enhancing margin`: \">3mm\"), extensive vasogenic edema (`ED Volume (mL)`: 129.186), and substantial mass effect (`max_shift_mm`: 13.0). There are no features that contradict a grade 4 diagnosis; while the T2-FLAIR mismatch sign is more common in lower-grade tumors, its presence does not preclude progression to grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents with imaging features that are highly suggestive of an IDH-mutant astrocytoma that has undergone high-grade transformation. The strong T2-FLAIR mismatch sign points towards the IDH-mutant astrocytic lineage, while the definitive presence of necrosis, along with significant enhancement and edema, establishes the CNS WHO grade 4 status. The sharp tumor margin is an atypical feature for an astrocytoma but is outweighed by the more specific molecular imaging marker."
+}

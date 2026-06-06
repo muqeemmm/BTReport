@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_01266",
+  "idh": {
+    "reasoning": "The presence of multiple strong radiological features of high-grade glioma points towards an IDH-wildtype status. Specifically, the tumor is multifocal, which is much more common in IDH-wildtype gliomas. Furthermore, there is significant contrast enhancement (ET Volume (mL) of 12.905) and central necrosis (NCR Volume (mL) of 4.739). This combination of enhancement and necrosis is a classic hallmark of glioblastoma, IDH-wildtype. The aggressive biological behavior, evidenced by extensive vasogenic edema, significant midline shift, and ependymal invasion, further supports this prediction. The only feature weakly favoring IDH-mutant is the frontal lobe location, but this is non-specific. The overwhelming evidence points to IDH-wildtype.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically present as T2/FLAIR hyperintense masses with indistinct margins and are less likely to exhibit the aggressive features seen here. This tumor demonstrates significant necrosis (NCR Volume (mL) > 0) and thick enhancement (Thickness of enhancing margin: \">3mm\"), both of which are rare in oligodendrogliomas and strongly favor an astrocytic lineage (non-codeleted). Additionally, the multifocal nature and ependymal invasion are characteristic of high-grade astrocytomas, not oligodendrogliomas. While the frontal lobe location is common for both, the aggressive features overwhelmingly suggest a non-codeleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is made with high confidence based on the definitive presence of imaging features corresponding to necrosis. The metadata reports a non-zero Necrosis/Non-enhancing Core volume (NCR Volume (mL) of 4.739). In the context of a diffuse glioma, radiologically evident necrosis is a key criterion for a grade 4 designation. This is strongly corroborated by other high-grade features, including significant contrast enhancement (ET Volume (mL) of 12.905), a multifocal presentation, extensive vasogenic edema (ED Volume (mL) of 126.02), and substantial mass effect (max_shift_mm of 10.0). There is no imaging evidence to support a lower grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Multifocal or Multicentric",
+      "ED Volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are highly characteristic of a glioblastoma. The presence of a large, multifocal, frontally-located mass with significant necrosis, contrast enhancement, extensive edema, and mass effect strongly indicates a WHO grade 4, IDH-wildtype astrocytoma. The aggressive features, including deep white matter and ependymal invasion, are consistent with this diagnosis."
+}

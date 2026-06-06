@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 38 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor shows T2-FLAIR mismatch sign present with a high score (0.7976), which is highly specific for IDH-mutant astrocytoma. Enhancement is absent ('Enhancement Quality': 'None'), which is more common in IDH-mutant tumors. However, the absence of enhancement could also be seen in some wildtype tumors.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "IDH-mutant gliomas without 1p/19q co-deletion are astrocytomas. The tumor involves eloquent cortex ('Eloquent Brain Involvement': 'Speech motor') and is located in frontal lobe, cortex, and insula, which are typical for astrocytomas. Oligodendrogliomas often involve frontal lobes but typically spare eloquent cortex. However, the absence of deep white matter invasion ('Deep WM invasion': 'Absent') is atypical for astrocytomas, which often invade white matter.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma. The T2-FLAIR mismatch sign strongly supports IDH mutation. The absence of enhancement and young age further support this. The tumor involves eloquent cortex and lacks deep white matter invasion, which is more consistent with astrocytoma than oligodendroglioma. However, the lack of deep white matter invasion is atypical and reduces confidence in the 1p/19q prediction.",
+  "subject_id": "UCSF-PDGM-438",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement ('Enhancement Quality': 'None') and no necrosis ('Proportion Necrosis': 0.0), which are features of lower-grade gliomas (grade 2). However, the tumor volume is large (17.351 mL) and involves eloquent cortex, which may suggest higher grade. The absence of mitotic figures or microvascular proliferation cannot be assessed from MRI alone.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

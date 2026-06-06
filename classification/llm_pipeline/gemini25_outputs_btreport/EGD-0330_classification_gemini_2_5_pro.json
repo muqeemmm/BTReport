@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0330",
+  "idh": {
+    "reasoning": "The tumor is completely non-enhancing, as indicated by an 'Enhancement Quality' of 'None' and an 'ET Volume (mL)' of 0.0. This is a very strong predictor of IDH-mutant status. The frontal lobe location ('Tumor Location': 'frontal_lobe-cortex region') and relatively low amount of peritumoral edema ('ED Volume (mL)': 3.464 mL for a 17.463 mL tumor) further support this prediction. The absence of significant mass effect ('midline_shift_present': 'No') and lack of deep white matter invasion also point towards a less aggressive, IDH-mutant phenotype. The high 'Proportion Necrosis' is considered a contradicting feature, but in the context of a completely non-enhancing lesion, it is interpreted as non-enhancing tumor core or cystic change rather than the true necrosis characteristic of IDH-wildtype glioblastoma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The differentiation between 1p/19q codeleted (oligodendroglioma) and non-codeleted (astrocytoma) is challenging with the available data. The tumor's location in the frontal lobe with cortical involvement ('Tumor Location': 'frontal_lobe-cortex region', 'Cortical involvement': 'Present') is common for both subtypes. However, the absence of 'Deep WM invasion' is a subtle feature that can favor an oligodendroglioma, which is often more cortically-based compared to the more deeply infiltrative nature of astrocytomas. There are no definitive features to make a high-confidence prediction, as key discriminators like calcification or T2-FLAIR mismatch are not available. The evidence slightly favors a codeleted status based on the growth pattern, but this is a low-confidence assessment.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of contrast enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0) is the strongest feature against a WHO grade 4 diagnosis. While 'Proportion Necrosis' is high (80.16%), this cannot be interpreted as true WHO-defining necrosis in the absence of enhancement and is likely artifactual or represents cystic change. The distinction between grade 2 and 3 is based on mitotic activity, which is not an imaging feature. However, the overall indolent appearance, including no significant mass effect ('midline_shift_present': 'No') and lack of 'Deep WM invasion', strongly favors a lower grade. Between the two, the features are most consistent with a WHO grade 2 tumor.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging metadata strongly suggests a low-grade, non-enhancing glioma. The combination of features (frontal location, non-enhancing, limited edema) is highly characteristic of an IDH-mutant tumor. The prediction of 1p/19q co-deletion is made with low confidence due to non-specific features, but the cortically-based growth pattern without deep white matter invasion slightly favors this possibility. The final integrated diagnosis is consistent with the classic presentation of a grade 2 oligodendroglioma. A discrepancy regarding tumor laterality was noted and resolved in favor of the quantitative volumetric data (left-sided)."
+}

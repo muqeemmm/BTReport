@@ -1,0 +1,61 @@
+{
+  "subject_id": "EGD-0146",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (field \"T2-FLAIR Mismatch Present\") is a strong imaging surrogate for IDH\u2011mutant diffuse glioma. The tumor shows only mild contrast enhancement (field \"Enhancement Quality\"), a low proportion of enhancing tissue (field \"Proportion Enhancing\") and minimal necrosis (field \"Proportion Necrosis\"), all of which are more typical of IDH\u2011mutant than IDH\u2011wildtype tumours. However, the patient is elderly (field \"age_years\"), the disease is multifocal and bilateral (fields \"Multifocal or Multicentric\" and \"Side of Tumor Epicenter\"), and there is extensive edema crossing the midline (field \"Edema crosses midline\") with ependymal and deep white\u2011matter invasion (fields \"Ependymal (ventricular) Invasion\" and \"Deep WM invasion\"), features that are more common in IDH\u2011wildtype glioblastoma. Balancing the strong T2\u2011FLAIR mismatch against these contradictory age and spread features leads to a prediction of IDH\u2011mutant with moderate confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is characteristic of IDH\u2011mutant astrocytoma, which by definition lacks 1p/19q codeletion. The tumour\u2019s multifocal, bilateral pattern (fields \"Multifocal or Multicentric\" and \"Side of Tumor Epicenter\") and deep white\u2011matter invasion (field \"Deep WM invasion\") are more typical of astrocytic rather than oligodendroglial tumours, further supporting a non\u2011codeleted status. No imaging evidence such as calcifications or a homogeneous cortical lesion that would favour a codeleted oligodendroglioma is present. Therefore the best estimate is 1p/19q non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The tumour shows mild contrast enhancement (field \"Enhancement Quality\"), a low enhancing proportion (field \"Proportion Enhancing\"), and minimal necrosis (field \"Proportion Necrosis\"), which argue against WHO grade\u202f4. Conversely, the lesion is multifocal, bilateral, invades ependyma (field \"Ependymal (ventricular) Invasion\"), deep white matter (field \"Deep WM invasion\"), and involves eloquent cortex (field \"Eloquent Brain Involvement\"), with edema crossing the midline (field \"Edema crosses midline\"). These invasive and disseminated features are more consistent with WHO grade\u202f3 than grade\u202f2, which typically presents as a solitary, non\u2011enhancing, less invasive tumour. Hence the most likely grade is 3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Edema crosses midline",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies heavily on the T2\u2011FLAIR mismatch, which is a robust surrogate for IDH mutation and non\u2011codeleted status, but the patient\u2019s advanced age and highly multifocal, bilateral disease introduce uncertainty. Absence of advanced imaging (perfusion, spectroscopy) limits confidence in grading; histopathology remains essential for definitive classification."
+}

@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_01722",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present = 1.0) is a strong imaging surrogate for IDH\u2011mutant diffuse glioma, especially in a 48\u2011year\u2011old patient, which favors IDH\u2011mutant status. Supporting this, the tumor is cortically based with deep white\u2011matter invasion, typical of lower\u2011grade IDH\u2011mutant lesions. However, the lesion shows a high necrotic proportion (Proportion Necrosis = 57.89) and mild contrast enhancement (Enhancement Quality = Mild, Proportion Enhancing = 1.5, ET Volume (mL) = 0.862), features more common in IDH\u2011wildtype glioblastoma. Balancing these opposing cues, the mismatch and younger age outweigh the necrosis, leading to a prediction of IDH\u2011mutant with moderate confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "age_years",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.72
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is also associated with 1p/19q non\u2011codeleted astrocytomas, whereas 1p/19q\u2011codeleted oligodendrogliomas typically lack this mismatch and often show more homogeneous T2 signal. The mild enhancement and high necrosis do not specifically support codeletion. No imaging features in the provided data (e.g., calcifications) point toward codeletion. Therefore, the evidence favors a non\u2011codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.78
+  },
+  "who_grade": {
+    "reasoning": "The lesion exhibits substantial necrosis (Proportion Necrosis = 57.89) and contrast enhancement (Enhancement Quality = Mild, ET Volume (mL) = 0.862), both hallmarks of WHO grade\u202f4 glioma. The total tumor volume (57.594\u202fmL) and edema crossing the midline further suggest aggressive behavior. Counterbalancing this, the enhancement is only mild and the proportion of enhancing tissue is low (1.5\u202f%), which can be seen in lower grades, and the T2\u2011FLAIR mismatch points toward a less aggressive IDH\u2011mutant astrocytoma. Overall, necrosis and enhancement dominate, leading to a grade\u202f4 prediction with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging suggests an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma with features of high grade (necrosis, enhancement). The T2\u2011FLAIR mismatch supports IDH mutation and non\u2011codeletion, but the pronounced necrosis introduces some uncertainty. Advanced sequences (perfusion, spectroscopy) are unavailable, which limits definitive grading."
+}

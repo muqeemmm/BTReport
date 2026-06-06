@@ -1,0 +1,45 @@
+{
+  "subject_id": "UCSF-PDGM-441",
+  "idh": {
+    "reasoning": "The patient is very young (26 years old), which is the strongest predictor for IDH-mutant status. The imaging phenotype strongly supports this, showing a large, predominantly non-enhancing tumor (Proportion Enhancing: 0.01) with no evidence of necrosis (NCR Volume (mL): 0.0). This combination of young age and lack of aggressive features is classic for an IDH-mutant glioma. There is no imaging evidence to suggest an IDH-wildtype tumor, which typically presents in older patients with ring enhancement and necrosis.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the high likelihood of an IDH-mutant tumor, the differential is between an astrocytoma (non-codeleted) and an oligodendroglioma (codeleted). The tumor's location in the frontal lobe with significant cortical involvement ('Tumor Location': 'frontal_lobe-cortex region', 'Cortical involvement': 'Present') is highly characteristic of an oligodendroglioma. While specific features like well-defined margins or calcifications are not available in the metadata, the classic location provides moderate evidence favoring a 1p/19q-codeleted status. There are no strong features pointing specifically to an astrocytoma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The tumor lacks the key imaging hallmarks of high-grade glioma. There is virtually no enhancement ('ET Volume (mL)': 0.005, 'Proportion Enhancing': 0.01) and a complete absence of central necrosis ('NCR Volume (mL)': 0.0). This imaging pattern is the defining characteristic of a low-grade (WHO grade 2) diffuse glioma. While the tumor is large ('Total tumor volume (mL)': 70.143), this is not a reliable indicator of grade in the absence of enhancement or necrosis, as low-grade tumors can grow to a large size before becoming symptomatic. There is no evidence to support a grade 3 or 4 diagnosis based on the provided MRI features.",
+    "supporting_features": [
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 26-year-old female with a large, solitary, non-necrotic, and minimally enhancing tumor in the frontal lobe with cortical involvement. The young age and classic low-grade imaging features (lack of enhancement and necrosis) make an IDH-mutant, WHO grade 2 glioma highly likely. The frontal-cortical location is most suggestive of an oligodendroglioma (1p/19q-codeleted), though this prediction carries less certainty than the IDH and grade assessments."
+}

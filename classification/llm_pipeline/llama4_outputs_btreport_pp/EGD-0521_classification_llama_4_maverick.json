@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (39 years) and the presence of a multifocal, mildly enhancing tumor in the frontal lobe with cortical involvement suggest a possible IDH mutant status. The T2-FLAIR mismatch score is 0.623792178275937, which is not strongly indicative of an IDH mutant status as it would be with a score closer to 1. However, the absence of a high T2-FLAIR mismatch does not rule out IDH mutation. The presence of cortical involvement and the tumor's location in the frontal lobe are features that can be seen in IDH mutant gliomas. Given the age and some imaging features, IDH mutant is considered more likely than wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a multifocal, mildly enhancing tumor with cortical involvement in the frontal lobe and the absence of ependymal invasion or deep white matter invasion are noted. However, the key predictor for 1p/19q codeletion is not directly available in the provided metadata. IDH mutant gliomas can be either codeleted or non-codeleted. Given the prediction of IDH mutant status, we consider the likelihood of codeletion. The lack of specific features strongly indicative of codeletion (such as a classic 'salt and pepper' appearance on MRI, which is not directly assessable from the metadata) makes it challenging to predict codeletion with high confidence. However, IDH mutant gliomas with cortical involvement are more likely to be non-codeleted.",
+    "supporting_features": [
+      "Cortical involvement",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is multifocal, mildly enhancing, and involves the cortex, with a significant edema volume (45.665 mL) compared to the enhancing tumor volume (2.429 mL). The presence of enhancement and the multifocal nature could suggest a higher grade. However, the absence of necrosis or significant ependymal invasion and the mild enhancement quality are also noted. Given the IDH mutant prediction and the presence of significant edema and multifocality, a higher grade (3 or 4) is considered. The distinction between grade 3 and 4 is challenging without clear indicators of necrosis or higher-grade features beyond mild enhancement. However, the proportion of necrosis is relatively low (0.84%), which might argue against a grade 4. Thus, a grade 3 is considered plausible.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "idh_status"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "EGD-0521"
+}

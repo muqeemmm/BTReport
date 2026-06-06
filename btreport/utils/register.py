@@ -35,6 +35,10 @@ def run_registration(moving, fixed, moved, transform, wrapper=WRAPPER, subjects_
     logger.info(f"========================================")
 
     cmd = [wrapper, "register", "-g", "-o", moved, "-t", transform, moving, fixed]
+    # cmd = ["apptainer", "run", "--nv", wrapper,
+    #        "register", "-g", "-o", moved, "-t", transform,
+    #        moving, fixed]
+
     subprocess.run(cmd, check=True, env=env)
 
 
@@ -48,6 +52,7 @@ def run_apply(transform, moving, moved, wrapper, subjects_dir, is_seg=False):
     logger.info(f"  Transform : {os.path.join(subjects_dir,transform)}")
     logger.info(f"========================================")
     cmd = [wrapper, "apply"]
+    # cmd = ["apptainer", "run", "--nv", wrapper, "apply"]
     if is_seg:
         cmd += ["-m", "nearest"]
     cmd += [transform, moving, moved]

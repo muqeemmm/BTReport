@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_01277",
+  "idh": {
+    "reasoning": "The patient's age of 55 years is more typical for IDH-wildtype gliomas. The tumor's location is a very strong indicator, with a midline epicenter and extensive involvement of deep gray matter structures including the thalamus and basal ganglia, which is highly characteristic of IDH-wildtype tumors. Furthermore, the presence of necrosis, a thick enhancing margin, and ependymal invasion are all features strongly associated with IDH-wildtype glioblastoma. Contradictory evidence is weaker and includes the 'Mild' enhancement quality and a relatively low proportion of enhancement, which can sometimes be seen in IDH-mutant tumors, but these features are less specific than the compelling combination of age and deep midline location.",
+    "supporting_features": [
+      "age_years",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The reasoning for this prediction is performed independently of the IDH status prediction. The tumor's location provides strong evidence against 1p/19q co-deletion. Oligodendrogliomas (which are 1p/19q-codeleted) are typically cortically-based. This tumor, however, is deeply situated, extensively involving the thalamus and basal ganglia, a pattern highly characteristic of astrocytic lineage tumors (non-codeleted). The presence of deep white matter invasion and necrosis further argues against an oligodendroglioma morphology. There are no imaging features in the provided metadata to suggest a 1p/19q co-deleted tumor.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The most definitive imaging feature supporting a WHO grade 4 classification is the presence of necrosis, indicated by a non-zero 'NCR Volume (mL)' and 'Proportion Necrosis'. Necrosis is a hallmark of grade 4 gliomas (glioblastoma). This is further supported by the presence of a thick enhancing margin ('>3mm') and the patient's age (55 years), both of which are associated with higher-grade tumors. While the 'Enhancement Quality' is described as 'Mild' and the 'Proportion Enhancing' is relatively low, which could be seen in grade 3 tumors, the unequivocal presence of necrosis strongly outweighs these less specific features and points directly to a WHO grade 4 diagnosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "age_years",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (>50), deep midline location involving the thalamus and basal ganglia, and the presence of necrosis with a thick enhancing margin provides a cohesive and high-confidence imaging diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The features are highly characteristic and internally consistent."
+}

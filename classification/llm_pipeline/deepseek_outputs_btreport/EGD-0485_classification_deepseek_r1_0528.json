@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "IDH-mutant gliomas are more common in younger patients, but this patient is 56 years old which is older than typical for IDH-mutant tumors. However, the tumor is midline and involves cortex, which are features more associated with IDH-mutant gliomas. Enhancement is mild and proportion necrosis is low (14.31%), which also supports IDH-mutant status. Since no direct molecular data is available, confidence is low.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "1p/19q codeletion is associated with oligodendrogliomas which typically occur in frontal lobes and have cortical involvement. This tumor is located in parietal, cortex and temporal lobes, which is less typical for oligodendroglioma. Additionally, midline location is uncommon for oligodendrogliomas. Enhancement quality is mild, which can be seen in both astrocytomas and oligodendrogliomas. No deep white matter invasion is noted, which is more common in astrocytomas. Confidence is moderate due to lack of frontal lobe involvement.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. However, confidence in IDH status is low due to patient age contradicting typical presentation. The location and midline involvement suggest non-codeleted status. Grade prediction is not possible due to insufficient features.",
+  "subject_id": "EGD-0485",
+  "who_grade": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": 2,
+    "reasoning": "Grade prediction requires features like necrosis or enhancement pattern. Proportion necrosis is 14.31% which is low, and enhancement is mild with thick margin (>3mm), suggesting lower grade. However, no microvascular proliferation or necrosis pattern is described. Total tumor volume is 33.364 mL which is large, but size alone is not definitive. Without key grade-defining features, confidence is very low.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ]
+  }
+}

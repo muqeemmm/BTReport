@@ -1,0 +1,36 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8722857061276534, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in gliomas according to the WHO CNS5 classification.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of IDH mutation is established, but the codeletion status of 1p/19q is not directly inferable from the given metadata. However, the 'T2-FLAIR Mismatch' is more commonly associated with IDH-mutant astrocytomas which are typically non-codeleted. The tumor's multifocal nature and other characteristics do not directly indicate codeletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS_WHO_grade": {
+    "reasoning": "The tumor is IDH-mutant and likely non-codeleted, suggesting it is an astrocytoma. The presence of significant edema (ED Volume = 116.633 mL), ependymal invasion, and deep white matter invasion indicate a more aggressive tumor. The mild enhancement and absence of necrosis suggest it is not grade 4. The multifocal nature and involvement of critical structures also suggest a higher grade. Given these features, a grade 3 is plausible.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.85
+  },
+  "subject_id": "UCSF-PDGM-308"
+}

@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 43 years old, which is typical for IDH-mutant gliomas. The tumor is nonenhancing ('Enhancement Quality': 'None'), which is more common in IDH-mutant tumors. However, the T2-FLAIR mismatch sign is absent ('T2-FLAIR Mismatch Present': 0.0, 'T2-FLAIR Mismatch Score': 0.4, 'T2-FLAIR Mismatch Degree': 0.026), which argues against IDH-mutant astrocytoma. The tumor location in frontal lobe cortex is common for both IDH-mutant and wildtype gliomas. Given the mixed evidence, IDH-mutant is slightly favored due to age and nonenhancement, but confidence is low.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent motor cortex ('Eloquent Brain Involvement': 'Motor'), which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often present with frontal lobe involvement but are less likely to involve motor cortex. However, there is no direct evidence for or against 1p/19q co-deletion. Given the lack of specific features, non-codeleted is predicted with low confidence.",
+    "supporting_features": [
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "",
+  "subject_id": "BraTS2021_01747",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor is nonenhancing ('Enhancement Quality': 'None') and has no necrosis ('Proportion Necrosis': 0.0), which are features of lower-grade gliomas (grade 2). However, the tumor volume is large (24.46 mL), which can be seen in both grade 2 and grade 3 tumors. The absence of enhancement and necrosis suggests grade 2, but the size introduces uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

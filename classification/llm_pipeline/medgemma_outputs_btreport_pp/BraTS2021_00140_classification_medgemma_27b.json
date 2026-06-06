@@ -1,0 +1,37 @@
+{
+  "subject_id": "BraTS2021_00140",
+  "idh": {
+    "reasoning": "The patient is 46 years old. Age is a significant factor in IDH mutation status, with IDH-mutant gliomas typically occurring in younger adults (median age ~45) and IDH-wildtype gliomas in older adults (median age ~70). This patient's age falls squarely within the typical range for IDH-mutant gliomas. While age alone is not definitive, it strongly suggests an IDH-mutant status. No other features in the provided metadata contradict this likelihood.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata lacks features typically associated with 1p/19q co-deletion, such as specific imaging patterns (e.g., calcification, cystic changes, location) or advanced imaging modalities (DWI, perfusion). The tumor is solitary, enhancing, and located in the cortex, which can be seen in both codeleted and non-codeleted tumors. The relatively well-defined enhancing margin ('Thickness of enhancing margin': '>3mm') and lack of deep white matter invasion might slightly favor non-codeletion, but this is weak evidence. Given the absence of supporting or strongly contradicting features based on the available MRI metadata alone, predicting co-deletion status is highly uncertain.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The patient is 46 years old with a solitary enhancing lesion in the parietal cortex. The tumor shows cortical involvement and has a total volume of 16.7 mL with an enhancing component of 2.6 mL (Proportion Enhancing: 15.77%). There is significant edema (Proportion of Oedema: 83.87%). The presence of cortical involvement and enhancement points towards at least a Grade 2 or 3 glioma. The relatively well-defined margin ('Thickness of enhancing margin': '>3mm') and lack of deep white matter invasion argue against a high-grade (Grade 4) glioma like glioblastoma, which typically shows infiltrative growth and poorly defined margins. Given the age and imaging features suggesting a diffuse glioma with enhancement but without clear signs of high-grade malignancy like deep invasion or very poor margins, Grade 3 (Anaplastic Astrocytoma if IDH-mutant) or Grade 2 (Astrocytoma if IDH-mutant) are most likely possibilities based on WHO CNS5 criteria assuming IDH mutation as predicted above.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

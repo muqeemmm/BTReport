@@ -1,0 +1,43 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 45 years old, which is within the typical age range for both IDH-mutant and IDH-wildtype gliomas. The tumor location in the temporal-cortex region and midline epicenter are non-specific. Enhancement is mild, which is more common in IDH-mutant tumors, but the proportion of necrosis is high (2.08%) which is more typical of IDH-wildtype glioblastomas. However, without diffusion/perfusion data to assess cellularity or angiogenesis, the evidence is conflicting and insufficient for a confident prediction.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region and involves eloquent vision areas, which is atypical for oligodendrogliomas (which are usually frontal and not typically involving vision pathways). The midline epicenter and multifocality are also more suggestive of astrocytic tumors. However, without molecular testing, prediction relies solely on imaging features which are not definitive.",
+    "supporting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Side of Tumor Epicenter",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is classified as Glioblastoma, IDH-wildtype with low confidence due to insufficient molecular data. The presence of necrosis and midline location suggest high-grade glioma, but grade assignment is uncertain without histopathology.",
+  "subject_id": "EGD-0306",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis 2.08%) which is a hallmark of glioblastoma (WHO grade 4). Mild enhancement is less typical for grade 4 tumors which often show ring enhancement, but necrosis is a stronger indicator. The absence of deep white matter invasion and ependymal involvement argues against grade 4, but necrosis is a key feature.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "subject_id": "BraTS2021_01247",
+  "idh": {
+    "reasoning": "The patient is 52 years old. While IDH-mutant gliomas can occur in older adults, they are more common in younger patients (typically < 50). IDH-wildtype gliomas are more common in older adults (> 60). The age of 52 is somewhat intermediate, making it difficult to definitively predict IDH status based solely on age. However, the tumor is solitary, located in the cortex, and shows deep white matter invasion. These features are not strongly indicative of either IDH-mutant or IDH-wildtype status. Without additional information like DWI or perfusion, predicting IDH status based on morphology alone is challenging. Given the intermediate age and lack of strongly discriminating features, I will predict mutant as it's statistically more common overall in diffuse gliomas, but with low confidence.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 52 years old. 1p/19q co-deletion is almost exclusively found in IDH-mutant astrocytomas, particularly oligodendrogliomas (WHO grade 2 or 3). Given the prediction of IDH-mutant status (albeit with low confidence), there is a possibility of co-deletion. However, the tumor morphology (cortical location, deep WM invasion) doesn't strongly point towards oligodendroglioma features typically associated with co-deletion (e.g., calcification - not assessed here). The lack of specific features favoring oligodendroglioma makes predicting co-deletion difficult. I will predict non-codeleted as the default state for most diffuse gliomas.",
+    "supporting_features": [
+      "id"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The patient is 52 years old with a solitary cortical glioma showing deep white matter invasion ('Deep WM invasion': 'Present'). The tumor volume is 25.9 mL ('Total tumor volume (mL)' = 25.918). Enhancement is mild ('Enhancement Quality': 'Mild') and the enhancing margin is thick (>3mm) ('Thickness of enhancing margin': '>3mm'). There is significant edema ('Proportion of Oedema': 92.0), but it does not cross the midline ('Edema crosses midline': 'False'). Cortical involvement is present ('Cortical involvement': 'Present'). Ependymal invasion is absent ('Ependymal (ventricular) Invasion': 'Absent'). The tumor epicenter is midline ('Side of Tumor Epicenter': 'Midline'), but it does not cross the midline ('crosses_ideal_midline': false). The presence of deep white matter invasion and cortical involvement suggests at least a Grade 3 glioma according to WHO CNS5 criteria for astrocytomas. The mild enhancement and thick margin might argue against Grade 4 (glioblastoma), which typically shows prominent enhancement and often necrosis (though necrosis proportion here is only 3.48%). However, deep WM invasion itself can be a feature of Grade 4 astrocytoma if other criteria are met (e.g., pseudopalisading necrosis - not assessable here). Given the deep WM invasion and cortical involvement without clear signs of glioblastoma (like prominent necrosis or significant enhancement), Grade 3 seems most likely.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

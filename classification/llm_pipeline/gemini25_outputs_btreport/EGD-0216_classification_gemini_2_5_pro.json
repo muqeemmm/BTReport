@@ -1,0 +1,46 @@
+{
+  "subject_id": "EGD-0216",
+  "idh": {
+    "reasoning": "The patient's advanced age (72 years) is the strongest predictor for IDH-wildtype status, as IDH-mutant gliomas typically occur in younger patients. The imaging features strongly corroborate this prediction. The presence of multifocal disease, marked contrast enhancement with a thick margin, and central necrosis are all classic hallmarks of IDH-wildtype glioblastoma. There are no significant features suggesting an IDH-mutant tumor, which would typically be non-enhancing and have more circumscribed margins.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically have indistinct margins and are less likely to show the aggressive features seen here. The presence of marked, thick-walled enhancement, multifocality, and necrosis are all highly characteristic of astrocytic lineage tumors or glioblastoma, which are by definition 1p/19q non-codeleted. There are no imaging features in the provided metadata to suggest an oligodendroglioma.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The radiological hallmarks of a CNS WHO grade 4 glioma are present. Specifically, the presence of central necrosis (indicated by `Proportion Necrosis` and `NCR Volume (mL)`) is a defining feature of grade 4 tumors. This is strongly supported by other features of high-grade malignancy, including 'Marked' `Enhancement Quality`, a `Thickness of enhancing margin` >3mm, and the `Multifocal` nature of the disease. The combination of these features makes a lower grade (2 or 3) diagnosis exceptionally unlikely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age and aggressive imaging features (multifocality, marked enhancement, necrosis) provides a highly confident diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. All individual predictions are consistent with this final integrated diagnosis."
+}

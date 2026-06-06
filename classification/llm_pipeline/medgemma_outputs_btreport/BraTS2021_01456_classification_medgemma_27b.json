@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_01456",
+  "idh": {
+    "reasoning": "The patient is 30 years old. Younger age (<50) is strongly associated with IDH-mutant gliomas. The tumor is solitary, which is more common in IDH-mutant tumors, although not exclusive. The tumor involves deep white matter and shows ependymal invasion, features seen in both IDH-mutant and wildtype tumors. The presence of multiple satellites is more common in IDH-mutant tumors. The tumor is located in the temporal-cortex region, which can be seen in both types. Given the young age and solitary nature with satellites, IDH-mutant status is more likely.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is young (30 years old), which makes IDH-mutant status likely. 1p/19q co-deletion is almost exclusively found in IDH-mutant astrocytomas, particularly those classified as WHO grade 2 or 3. While the provided metadata doesn't definitively confirm an astrocytoma subtype or grade, the strong association between young age, likely IDH mutation, and 1p/19q co-deletion points towards this possibility. However, without definitive histological or molecular confirmation of astrocytoma subtype (e.g., ruling out oligodendroglioma), and lacking specific imaging features strongly predictive of co-deletion (like minimal edema relative to tumor size, which isn't clearly the case here with significant edema), certainty is limited.",
+    "supporting_features": [
+      "age_years",
+      "idh"
+    ],
+    "contradicting_features": [
+      "Proportion of Oedema"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The patient is young (30 years old). The tumor involves deep white matter ('Deep WM invasion'), shows ependymal invasion ('Ependymal (ventricular) Invasion'), has cortical involvement ('Cortical involvement'), and demonstrates marked enhancement ('Enhancement Quality') with a thick enhancing margin ('Thickness of enhancing margin'). These features suggest aggressive behavior. The large tumor volume (110 mL) and significant edema (69% proportion) also point towards a higher grade. While young age often correlates with lower grades (IDH-mutant grade 2/3), the combination of deep invasion, ependymal spread, cortical involvement, marked enhancement, and large size strongly suggests a WHO grade 4 glioma (glioblastoma). Although IDH mutation is predicted as likely, high-grade gliomas can occur in younger patients.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Diffuse Astrocytoma, IDH-mutant",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's age and tumor characteristics are consistent with an IDH-mutant diffuse glioma."
+}

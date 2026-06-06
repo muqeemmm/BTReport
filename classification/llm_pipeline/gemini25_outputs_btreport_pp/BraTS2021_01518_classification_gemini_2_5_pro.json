@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_01518",
+  "idh": {
+    "reasoning": "The patient is young (33 years), which favors an IDH-mutant glioma. The most compelling evidence is the strong and definite T2-FLAIR mismatch signal ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.7486), a highly specific imaging biomarker for IDH-mutant astrocytomas. However, there is significant contradictory evidence. The tumor exhibits numerous features more typical of an IDH-wildtype glioblastoma, including very large size ('Total tumor volume (mL)': 171.033), extensive midline crossing ('crosses_ideal_midline'), deep gray matter and ependymal invasion ('Anatomical Overlap Regions', 'Ependymal (ventricular) Invasion'), and a very sharp tumor-edema interface ('Transition Zone Thickness (FLAIR)' median_mm: 0.75). Despite these aggressive features, the high specificity of the T2-FLAIR mismatch sign makes an IDH-mutant status the most probable diagnosis, likely a high-grade variant.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "crosses_ideal_midline",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is strongly guided by features that differentiate astrocytic from oligodendroglial lineages. The presence of a definite T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 1.0) is a key marker for IDH-mutant astrocytomas, which are by definition 1p/19q non-codeleted. Furthermore, oligodendrogliomas (1p/19q co-deleted) typically exhibit indistinct margins, whereas this tumor has a very sharply defined border ('Transition Zone Thickness (FLAIR)' median_mm: 0.75). The involvement of deep gray matter structures ('Anatomical Overlap Regions') is also more characteristic of astrocytomas. There is no significant imaging evidence to suggest an oligodendroglioma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The tumor displays multiple features indicative of high-grade malignancy, strongly suggesting WHO grade 4. The most definitive feature is the presence of a very large necrotic component ('NCR Volume (mL)': 82.655, 'Proportion Necrosis': 48.33%), which is a histological hallmark of grade 4 tumors. Other supporting features include the massive overall tumor volume ('Total tumor volume (mL)': 171.033), significant mass effect ('midline_shift_present': 'Yes'), deep white matter invasion ('Deep WM invasion': 'Present'), and ependymal spread ('Ependymal (ventricular) Invasion': 'Present'). While the amount of contrast enhancement is minimal ('ET Volume (mL)': 0.957), the presence of extensive necrosis is sufficient on its own to warrant a grade 4 classification.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_ideal_midline"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents a significant conflict between a highly specific molecular imaging marker and general tumor morphology. The definite T2-FLAIR mismatch strongly indicates an IDH-mutant astrocytoma. However, the tumor's large size, extensive necrosis, and aggressive infiltration pattern are more characteristic of an IDH-wildtype glioblastoma. The integrated diagnosis of 'Astrocytoma, IDH-mutant, CNS WHO grade 4' reconciles these findings, representing a high-grade manifestation of an IDH-mutant tumor. The confidence in IDH status is moderated by this conflict."
+}

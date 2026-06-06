@@ -1,0 +1,53 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.95,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high mismatch score (0.776) and degree (0.318), which is highly specific for IDH-mutant astrocytomas. Additionally, the tumor is non-enhancing (Enhancement Quality: None) and has a low proportion of necrosis (18.95%), both features more common in IDH-mutant gliomas. The patient's age (61 years) is older than typical for IDH-mutant tumors, which is contradictory evidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "IDH-mutant astrocytomas are typically non-codeleted, while oligodendrogliomas (which are codeleted) are more likely to involve cortical regions and have less eloquent involvement. This tumor involves eloquent speech motor and motor areas (Eloquent Brain Involvement: Speech motor and Motor) and is located in the frontal lobe cortex (Tumor Location: frontal_lobe-cortex region), which is atypical for oligodendrogliomas. The T2-FLAIR mismatch sign also strongly favors astrocytic lineage over oligodendroglial.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor exhibits classic features of IDH-mutant astrocytoma including T2-FLAIR mismatch, non-enhancement, and frontal location. The older age (61) is atypical but not exclusionary. Ependymal invasion and deep white matter invasion are present but do not alter molecular classification. Grade assignment is challenging without necrosis or enhancement; grade 3 is most likely given the absence of microvascular proliferation or necrosis on available sequences.",
+  "subject_id": "EGD-0214",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None) and minimal necrosis (Proportion Necrosis: 18.95%, but ET Volume is only 0.003mL suggesting very limited necrosis). WHO grade 4 requires microvascular proliferation and/or necrosis, which are not clearly present here. However, the tumor has ependymal invasion (Ependymal (ventricular) Invasion: Present) and deep white matter invasion (Deep WM invasion: Present), which are features of higher grade. The large edema volume (ED Volume: 155.709mL) and midline shift also suggest aggressiveness. Given the absence of definite grade 4 features but presence of invasive features, grade 3 is most appropriate.",
+    "supporting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "mean_shift_mm"
+    ]
+  }
+}

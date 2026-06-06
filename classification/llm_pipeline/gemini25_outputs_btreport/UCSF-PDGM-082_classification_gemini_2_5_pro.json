@@ -1,0 +1,49 @@
+{
+  "subject_id": "UCSF-PDGM-082",
+  "idh": {
+    "reasoning": "The tumor displays multiple features highly characteristic of an IDH-wildtype glioma. The most compelling evidence is the presence of marked, thick-walled enhancement ('Enhancement Quality': \"Marked\", 'Thickness of enhancing margin': \">3mm\") and a substantial necrotic core ('Proportion Necrosis': 17.19). These features are hallmarks of glioblastoma, the archetypal IDH-wildtype tumor. The large tumor volume and deep white matter and deep gray matter ('Anatomical Overlap Regions': [\"left caudate\", \"left putamen\"]) involvement further support this conclusion. There are no significant imaging features to suggest an IDH-mutant status, which typically presents with less aggressive features like non-enhancement or faint, thin enhancement and an absence of necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. The imaging phenotype strongly argues against a 1p/19q co-deletion. Tumors with co-deletion (oligodendrogliomas) typically lack the aggressive features seen here. This tumor exhibits marked enhancement ('Enhancement Quality': \"Marked\") and a large necrotic component ('Proportion Necrosis': 17.19), both of which are classic features of high-grade astrocytomas (which are non-codeleted). While the tumor involves the cortex ('Cortical involvement': \"Present\"), a feature common in oligodendrogliomas, this is non-specific and is overwhelmingly contradicted by the presence of necrosis and the quality of enhancement.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "This classification is performed independently of molecular predictions. The presence of a significant necrotic component ('Proportion Necrosis': 17.19, 'NCR Volume (mL)': 21.843) is a key radiological feature that corresponds to CNS WHO grade 4. Furthermore, the tumor shows marked, thick-rim enhancement ('Enhancement Quality': \"Marked\", 'Thickness of enhancing margin': \">3mm\"), which is also indicative of a high-grade glioma. There is no imaging evidence to support a lower grade; grade 2 tumors are non-enhancing, and while grade 3 tumors can enhance, the presence of necrosis elevates the radiological grade to 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are highly characteristic of a glioblastoma. The large, solitary lesion in the left hemisphere demonstrates marked, thick-rim enhancement and a significant necrotic core, which are classic radiological hallmarks of a CNS WHO grade 4 tumor. These features strongly predict an IDH-wildtype and 1p/19q non-codeleted molecular profile. All individual predictions are consistent with the integrated diagnosis of Glioblastoma, IDH-wildtype."
+}

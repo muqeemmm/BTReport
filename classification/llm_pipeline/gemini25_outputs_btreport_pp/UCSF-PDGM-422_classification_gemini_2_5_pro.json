@@ -1,0 +1,41 @@
+{
+  "subject_id": "UCSF-PDGM-422",
+  "idh": {
+    "reasoning": "The patient's advanced age (78 years) is the single most significant predictor for an IDH-wildtype glioma. This is further supported by the sharp tumor border, indicated by a very thin `Transition Zone Thickness (FLAIR)` (median 0.75 mm), and a thick enhancing margin (>3mm), both characteristic features of glioblastoma (IDH-wildtype). However, there is strong contradictory evidence from the `T2-FLAIR Mismatch Present` feature being 1.0, which is a highly specific sign for an IDH-mutant astrocytoma. In this case of conflicting signals, the extremely high age is considered the dominant factor, as the T2-FLAIR mismatch sign can be fallible, especially in elderly patients or with atypical presentations. Therefore, IDH-wildtype is the more probable diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Transition Zone Thickness (FLAIR)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of non-codeletion is supported by multiple lines of evidence. Firstly, if the tumor is IDH-wildtype as predicted, it must be non-codeleted by definition according to the WHO CNS5 classification. Secondly, even if it were IDH-mutant, the strong `T2-FLAIR Mismatch Present` sign is a classic feature of astrocytomas, which are non-codeleted, and argues strongly against oligodendroglioma (which are co-deleted). Thirdly, the sharp tumor border (`Transition Zone Thickness (FLAIR)`) is atypical for oligodendrogliomas, which usually present with ill-defined, infiltrative margins. There is no significant evidence to support co-deletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis, even in a small volume (`NCR Volume (mL)`: 0.095), is a key histopathological criterion for WHO grade 4 in an adult-type diffuse astrocytic glioma. This is strongly supported by the patient's advanced age (`age_years`: 78), which is typical for glioblastoma. The presence of contrast enhancement (`ET Volume (mL)`: 1.726) and a thick enhancing margin (`Thickness of enhancing margin`: '>3mm') further corroborate a high-grade diagnosis. While the proportion of enhancement and necrosis is low, their presence is sufficient for a grade 4 designation in this clinical context.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "age_years",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents with conflicting features. The patient's advanced age (78) and the presence of necrosis strongly suggest a Glioblastoma, IDH-wildtype, CNS WHO grade 4. However, a strong T2-FLAIR mismatch sign was detected, which is a classic feature of IDH-mutant astrocytoma. Given the statistical weight of the patient's age, the IDH-wildtype diagnosis is favored, but with reduced confidence due to this specific imaging sign."
+}

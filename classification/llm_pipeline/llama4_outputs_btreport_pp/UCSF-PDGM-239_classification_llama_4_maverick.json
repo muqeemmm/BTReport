@@ -1,0 +1,47 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (57 years) and the absence of enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0, 'Proportion Enhancing': 0.0) are more typical of IDH-mutant gliomas. However, the lack of T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0, 'T2-FLAIR Mismatch Score': 0.4) argues against IDH-mutant astrocytoma. The tumor's location in the frontal lobe and cortex ('Tumor Location': 'frontal_lobe-cortex region', 'Region Proportions': [['frontal_lobe', 0.48591203880320455], ['cortex', 0.30464875470052866]]) is non-specific but can be seen in various glioma subtypes. Given these features, the likelihood of IDH mutation is considered based on the age and non-enhancing nature of the tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The absence of enhancement and the tumor's characteristics do not strongly suggest 1p/19q co-deletion. The presence of cortical involvement ('Cortical involvement': 'Present') and the tumor being non-enhancing could be seen in IDH-mutant astrocytomas, which are typically non-codeleted. The lack of specific features like a 'T2-FLAIR mismatch' makes it harder to confidently predict codeletion status, but the overall profile leans towards a non-codeleted status.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor is non-enhancing ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0), which is more typical of lower-grade gliomas. The absence of necrosis ('Proportion Necrosis': 0.0) and the lack of significant mass effect ('midline_shift_present': 'No') also support a lower grade. However, the patient's age (57 years) is somewhat atypical for grade 2 gliomas, as they are more commonly diagnosed at younger ages. The tumor's characteristics are most consistent with a grade 2 glioma, given the non-enhancing nature and lack of necrosis or significant mass effect.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 2,
+    "confidence": 0.75
+  },
+  "subject_id": "UCSF-PDGM-239"
+}

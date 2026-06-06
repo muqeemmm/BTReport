@@ -1,0 +1,43 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0 and 'T2-FLAIR Mismatch Score' is 0.7976461576776885, indicating a strong likelihood of T2-FLAIR mismatch. This feature is strongly associated with IDH mutant gliomas. The absence of enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0, 'Proportion Enhancing': 0.0) also aligns with the typical imaging characteristics of IDH mutant gliomas, which are often non-enhancing. The tumor's location in the frontal lobe, cortex, and insula, and its non-enhancing nature, are consistent with the profile of an IDH mutant glioma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q codeletion status is challenging without direct molecular information. However, the presence of T2-FLAIR mismatch is more commonly associated with IDH mutant astrocytomas rather than oligodendrogliomas, which are typically 1p/19q codeleted. The tumor's involvement of the frontal lobe, cortex, and insula, and its non-enhancing nature, could be seen in both IDH mutant astrocytomas and oligodendrogliomas. Given the strong indication of IDH mutation and the lack of specific features that strongly suggest oligodendroglioma (such as calcifications, which are not available in the metadata), it is reasonable to lean towards a non-codeleted status, which is more likely in IDH mutant astrocytomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The grading of gliomas based on the provided metadata involves assessing features that are indicative of higher or lower grade. The absence of enhancement ('Enhancement Quality': 'None') and the lack of necrosis ('Proportion Necrosis': 0.0) might suggest a lower grade. However, the presence of significant edema ('ED Volume (mL)': 17.351, 'Proportion of Oedema': 100.0) and the involvement of eloquent areas ('Eloquent Brain Involvement': 'Speech motor') could indicate a more aggressive tumor. The patient's age (38 years) is relatively young for a high-grade glioma but is within the range for both lower and higher-grade gliomas. Given the IDH mutant status predicted with high confidence, and considering the typical characteristics of IDH mutant gliomas, a grade 2 or 3 is plausible. The absence of necrosis and enhancement leans towards a lower grade, but the significant edema and eloquent area involvement might suggest a higher grade within the IDH mutant category. Thus, a grade 3 is a reasonable prediction, balancing between the indicators of aggressiveness and the lack of enhancement or necrosis.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Eloquent Brain Involvement",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "subject_id": "UCSF-PDGM-438"
+}

@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_01735",
+  "idh": {
+    "reasoning": "The presence of a clear T2\u2011FLAIR mismatch (field \"T2-FLAIR Mismatch Present\":1.0) is a strong imaging surrogate for IDH\u2011mutant astrocytoma in adults. The patient is young (33\u202fy, field \"age_years\":33), which also favors IDH mutation. Mild contrast enhancement (field \"Enhancement Quality\":\"Mild\") is more typical of IDH\u2011mutant tumors than the robust, ring\u2011enhancing pattern of IDH\u2011wildtype GBM. However, a notable necrotic component (field \"Proportion Necrosis\":25.0) and a high proportion of enhancing tissue (field \"Proportion Enhancing\":0.91) are features that can be seen in IDH\u2011wildtype disease, creating some uncertainty. Balancing the strong mismatch signal against these contradictory signs leads to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is characteristic of IDH\u2011mutant astrocytoma, which by definition lacks 1p/19q codeletion. No imaging features such as calcified, homogeneous T2 signal or classic oligodendroglial appearance are present to suggest a codeleted tumor. Therefore the evidence supports a non\u2011codeleted status. No clear contradictory imaging markers are available.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Region Proportions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The lesion shows moderate necrosis (field \"Proportion Necrosis\":25.0) and a high proportion of enhancing tissue (field \"Proportion Enhancing\":0.91), both of which are more typical of higher\u2011grade (grade\u202f3) astrocytoma. Additional adverse features include ependymal invasion (field \"Ependymal (ventricular) Invasion\":\"Present\"), multiple satellite nodules (field \"Multiple satellites present\":\"Present\"), and edema crossing the midline (field \"Edema crosses midline\":\"True\"). Conversely, the enhancement is described as mild (field \"Enhancement Quality\":\"Mild\") and the enhancing margin thickness is >3\u202fmm but not thick ring enhancement, which are less typical of grade\u202f4 glioblastoma. The balance of these findings favors WHO grade\u202f3 with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Multiple satellites present",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma, most consistent with WHO grade\u202f3. Molecular testing (IDH1/2 sequencing and 1p/19q FISH) is recommended to confirm the genotype, as imaging alone cannot definitively exclude IDH\u2011wildtype disease, especially given the necrotic component and high enhancing fraction."
+}

@@ -1,0 +1,46 @@
+{
+  "id": "patient_0092",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (28 years) and the presence of a large, heterogeneous tumor with necrosis (Proportion Necrosis: 42.12%) and edema (Proportion of Oedema: 55.82%) could suggest a high-grade glioma. However, IDH mutation status is more commonly associated with younger age and is often seen in lower-grade gliomas. The presence of necrosis and the large size of the tumor might lean towards a wildtype IDH status, as IDH-mutant gliomas tend to have a better prognosis and are less likely to present with such aggressive features at a young age. However, the age is still relatively young, which is a factor often associated with IDH mutation.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Proportion of Oedema"
+      ],
+      "contradicting_features": [
+        "age_years"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.6
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's location and characteristics (e.g., involvement of temporal, cortex, and parietal lobes, ependymal invasion) do not strongly suggest a specific 1p/19q co-deletion status based on the provided metadata. IDH-mutant gliomas can be either 1p/19q codeleted (oligodendrogliomas) or non-codeleted (astrocytomas). Given the uncertainty around IDH status and the lack of specific indicators for 1p/19q co-deletion in the metadata, a prediction leans towards non-codeleted due to the more aggressive features (e.g., necrosis, large size), which are less typical for codeleted tumors.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Lesion Sizes APxTVxCC (cm)",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.55
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 42.12%), a large tumor size (Lesion Sizes APxTVxCC: 5.7 x 4.7 x 9.2 cm), and significant edema (Proportion of Oedema: 55.82%) are indicative of a high-grade glioma. The tumor also shows ependymal invasion and multiple satellites, further suggesting an aggressive nature. These features are most consistent with a WHO grade 4 tumor.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Lesion Sizes APxTVxCC (cm)",
+        "Proportion of Oedema",
+        "Ependymal (ventricular) Invasion",
+        "Multiple satellites present"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_01528"
+}

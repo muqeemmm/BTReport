@@ -1,0 +1,44 @@
+{
+  "subject_id": "BraTS2021_00369",
+  "idh": {
+    "reasoning": "The patient's advanced age of 72 years is a very strong predictor for IDH-wildtype status. The imaging features strongly support this prediction. The presence of a necrotic core (`NCR Volume (mL)` > 0) and contrast enhancement (`ET Volume (mL)` > 0) are classic features of glioblastoma, which is overwhelmingly IDH-wildtype. The tumor's involvement of deep gray matter structures (`Anatomical Overlap Regions` including thalamus and basal ganglia) is also more typical for IDH-wildtype gliomas. Furthermore, the absence of a T2-FLAIR mismatch (`T2-FLAIR Mismatch Present` is 0.0) argues against an IDH-mutant astrocytoma. The combination of these features provides very strong evidence for an IDH-wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Anatomical Overlap Regions",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly inconsistent with a 1p/19q-codeleted oligodendroglioma. The tumor demonstrates significant aggressive features, including a large necrotic core (`NCR Volume (mL)` of 5.88) and extensive vasogenic edema (`ED Volume (mL)` of 177.682). Oligodendrogliomas typically lack necrosis and have comparatively less edema. The significant mass effect (`midline_shift_present`: \"Yes\") is also more characteristic of a high-grade astrocytoma. The relatively sharp tumor-edema boundary, suggested by the low median `Transition Zone Thickness (FLAIR)` of 0.75 mm, is more typical of glioblastoma than the diffusely infiltrative margins often seen in oligodendroglioma. Therefore, a non-codeleted status is strongly favored.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of central necrosis is a defining feature of WHO grade 4 in adult-type diffuse gliomas. The metadata provides clear, quantitative evidence of a necrotic component (`NCR Volume (mL)` of 5.88). This single feature is sufficient for a grade 4 designation. This is strongly corroborated by other features of high-grade malignancy, including the presence of contrast enhancement (`ET Volume (mL)` of 13.794), significant mass effect (`max_shift_mm` of 7.0), extensive surrounding edema (`ED Volume (mL)` of 177.682), and ependymal invasion (`Ependymal (ventricular) Invasion`: \"Present\"). There is no imaging evidence to suggest a lower grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age (72) and MRI findings of a large, enhancing, and necrotic tumor with extensive edema and mass effect is classic for Glioblastoma, IDH-wildtype, CNS WHO grade 4. All individual predictions (IDH-wildtype, 1p/19q non-codeleted, WHO grade 4) are highly confident and mutually consistent."
+}

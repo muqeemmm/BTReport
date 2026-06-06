@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "midline_shift_present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "Features favoring IDH-wildtype include a multifocal pattern, deep white-matter invasion, measurable enhancing tumor, and a large edema-dominant tumor burden; these are more typical of aggressive adult diffuse glioma biology than of a lower-grade IDH-mutant astrocytoma. Features arguing against IDH-wildtype include cortical involvement and a temporal-cortex location, which can be seen in IDH-mutant diffuse gliomas, plus only mild enhancement and very small necrotic proportion with no midline shift. Overall, the multifocality, enhancement, deep invasion, and extensive edema outweigh the lower-grade-leaning features, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.69,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Features favoring non-codeleted status include multifocal disease, deep white-matter invasion, substantial edema, and measurable enhancement, which are less characteristic of classic oligodendroglioma imaging and more typical of astrocytic or glioblastoma-type diffuse glioma. Features that could support codeletion are cortical involvement and a temporal-cortex location, since oligodendrogliomas often involve cortex/subcortical regions, and mild enhancement does not exclude codeletion. However, the absence of a frontal-predominant pattern in the provided location data, together with multifocality, deep invasion, and extensive edema, favors non-codeleted status.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structural MRI metadata. No DWI/ADC, perfusion, spectroscopy, or SWI/GRE data are available. There is internal inconsistency between ET Volume (mL)/Proportion Enhancing and the et entries in volumes_ideal_midline/volumes_patient_midline, so enhancement-based grading confidence is moderated.",
+  "subject_id": "EGD-0596",
+  "who_grade": {
+    "confidence": 0.73,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "reasoning": "For grading, the strongest high-grade indicators are multifocal disease, measurable enhancing tumor, a thick enhancing margin, deep white-matter invasion, and very large edema proportion/volume, all of which favor grade 4 over grade 2 and also weigh against a purely grade 3-appearing lesion. Grade 2 is disfavored by the presence of enhancement and multifocal extensive edema. Features arguing against grade 4 include only mild enhancement, very small necrotic component, no midline shift, and absent ependymal invasion. Despite limited necrosis, the combination of multifocality, enhancement, thick margin, deep invasion, and extensive edema makes CNS WHO grade 4 the best imaging-based estimate.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

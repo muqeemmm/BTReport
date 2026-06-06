@@ -1,0 +1,42 @@
+{
+  "subject_id": "BraTS2021_01500",
+  "idh": {
+    "reasoning": "The patient is 53 years old. Age over 50 is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in older adults. The tumor is solitary, located in the frontal lobe cortex, and has a total volume of 25.293 mL. The proportion of necrosis is 40.52%, and the proportion of edema is 57.43%. The enhancement quality is mild, and the enhancing margin thickness is >3mm. There are multiple satellites present. While some features like age and high necrosis/edema proportion might lean towards IDH-wildtype, the presence of satellites and cortical location are more commonly seen in IDH-mutant tumors (especially lower grade). Without definitive molecular markers like 1p/19q status or imaging features like diffusion restriction or perfusion characteristics (which are unavailable), predicting IDH status based solely on these structural MRI features is challenging. Given the age and high necrosis/edema, IDH-wildtype is a strong possibility, but the presence of satellites slightly favors IDH-mutant. Due to conflicting signals and lack of definitive features, I will predict wildtype based on age and necrosis/edema proportion being stronger indicators for higher grade tumors which are more often IDH-wildtype in this age group.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Multiple satellites present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q co-deletion is strongly associated with oligodendrogliomas, which are typically IDH-mutant and WHO grade 2 or 3. The patient's age (53) makes an oligodendroglioma less likely than other glioma types, but not impossible. The tumor morphology (solitary, cortical location) could be consistent with an oligodendroglioma. However, the high proportion of necrosis (40.52%) and edema (57.43%) are less typical for classic oligodendrogliomas, which often have lower necrosis rates unless they are higher grade or anaplastic. The presence of multiple satellites could be seen in both codeleted and non-codeleted tumors. Without specific imaging features strongly suggestive of oligodendroglioma (e.g., calcification - not assessed here) or molecular data, predicting co-deletion status is difficult based solely on these structural MRI features.",
+    "supporting_features": [],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The patient is 53 years old with a solitary tumor in the frontal lobe cortex measuring approximately 3.3x3.5x3.4 cm with a total volume of 25.293 mL. Key features include cortical involvement ('Cortical involvement': 'Present'), absence of deep white matter invasion ('Deep WM invasion': 'Absent'), absence of ependymal invasion ('Ependymal (ventricular) Invasion': 'Absent'), mild enhancement ('Enhancement Quality': 'Mild'), a thick enhancing margin (>3mm), high proportions of necrosis (40.52%) and edema (57.43%), and the presence of multiple satellites ('Multiple satellites present': 'Present'). The tumor does not cross the midline ('crosses_ideal_midline': false for all regions). Eloquent brain involvement ('Eloquent Brain Involvement': 'Motor') suggests potential functional impact but doesn't directly determine grade based on WHO CNS5 criteria alone using these features. The combination of cortical involvement, significant necrosis (>10%), substantial edema (>10%), thick enhancing margin (>3mm), and presence of satellites points towards a higher grade glioma according to WHO CNS5 criteria which incorporate these radiological features alongside molecular markers for grading.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion: Absent",
+      "Ependymal (ventricular) Invasion: Absent"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  }
+}

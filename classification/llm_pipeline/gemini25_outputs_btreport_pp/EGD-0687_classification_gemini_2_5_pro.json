@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0687",
+  "idh": {
+    "reasoning": "The patient's age of 62 years is a strong demographic predictor for IDH-wildtype status. The imaging findings are overwhelmingly consistent with this prediction. The tumor exhibits features classic for glioblastoma, including a large enhancing volume (`ET Volume (mL)`: 67.449), a significant necrotic core (`NCR Volume (mL)`: 24.123), and 'Marked' `Enhancement Quality`. Two key imaging biomarkers provide strong evidence: the absence of the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 0.0), which argues against an IDH-mutant astrocytoma, and a very sharp tumor-to-edema interface (`Transition Zone Thickness (FLAIR)` median of 0.75 mm), which is characteristic of IDH-wildtype tumors. Ependymal invasion is also present, which is more common in IDH-wildtype gliomas. There are no contradicting features to suggest an IDH-mutant tumor.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "Transition Zone Thickness (FLAIR)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is the antithesis of a typical 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas are typically non-enhancing or have minimal enhancement and ill-defined borders. This tumor, in contrast, shows 'Marked' `Enhancement Quality`, a large volume of both enhancement (`ET Volume (mL)`: 67.449) and necrosis (`NCR Volume (mL)`: 24.123). Furthermore, the tumor boundary is very sharp, as indicated by the thin `Transition Zone Thickness (FLAIR)` (median 0.75 mm), which is contrary to the infiltrative margins expected in oligodendroglioma. The multi-lobar involvement (parietal, temporal, occipital) is also less typical than a frontal lobe location. These features strongly argue against a 1p/19q co-deleted genotype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Transition Zone Thickness (FLAIR)",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of extensive central necrosis (`NCR Volume (mL)`: 24.123) is a definitive imaging correlate of a high-grade glioma, and in the context of an adult-type diffuse astrocytoma, it corresponds to CNS WHO grade 4. This is strongly supported by the large volume of avid, thick-rim enhancement (`ET Volume (mL)`: 67.449, `Enhancement Quality`: 'Marked', `Thickness of enhancing margin`: '>3mm'). Additional features confirming high-grade and aggressive behavior include significant mass effect (`max_shift_mm`: 11.0), deep white matter invasion (`Deep WM invasion`: 'Present'), and ventricular involvement (`Ependymal (ventricular) Invasion`: 'Present'). There are no imaging features to suggest a lower grade (2 or 3) tumor.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "max_shift_mm",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (62) and MRI features\u2014a large, solitary, multi-lobar mass with marked ring enhancement, central necrosis, a sharp tumor-edema boundary, and ependymal invasion\u2014is pathognomonic for Glioblastoma, IDH-wildtype, CNS WHO grade 4. The absence of a T2-FLAIR mismatch sign provides strong corroborating evidence against an IDH-mutant astrocytoma. The confidence in this diagnosis based on imaging is very high."
+}

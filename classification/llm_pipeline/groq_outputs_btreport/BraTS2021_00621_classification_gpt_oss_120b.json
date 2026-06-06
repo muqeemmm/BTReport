@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_00621",
+  "idh": {
+    "reasoning": "Imaging shows mild contrast enhancement (Enhancement Quality: Mild, Proportion Enhancing: 14.12) and absence of necrosis (Proportion Necrosis: 0.0), which are typical of IDH\u2011mutant lower\u2011grade gliomas, while strong enhancement and necrosis are hallmarks of IDH\u2011wildtype GBM. The lesion is cortical and involves deep white matter (Cortical involvement: Present, Deep WM invasion: Present) and is solitary without crossing the midline (CET Crosses midline: False, Edema crosses midline: False), also favoring IDH\u2011mutant. However, the patient is elderly (age_years: 71) and the edema proportion is high (Proportion of Oedema: 85.88), which are more common in IDH\u2011wildtype tumors. Balancing these, the imaging leans toward IDH\u2011mutant, but age introduces uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.66
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor involves both temporal and frontal lobes, with a substantial proportion in the temporal lobe (Region Proportions: temporal 0.685...), whereas 1p/19q\u2011codeleted oligodendrogliomas are classically frontal\u2011dominant. The presence of deep white\u2011matter invasion (Deep WM invasion: Present) and lack of reported calcifications also argue against classic oligodendroglioma, supporting a non\u2011codeleted status.",
+    "supporting_features": [
+      "Region Proportions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.68
+  },
+  "who_grade": {
+    "reasoning": "Mild enhancement (Enhancement Quality: Mild) indicates the tumor is not a classic non\u2011enhancing grade\u20112 lesion, while the presence of any enhancement and a high edema proportion (Proportion of Oedema: 85.88) suggest a higher grade than pure grade\u20112. Absence of necrosis (Proportion Necrosis: 0.0) and modest total volume (Total tumor volume (mL): 26.832) argue against grade\u20114 GBM. The balance of these features points to WHO grade\u202f3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.62
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Age and high edema proportion introduce some uncertainty; advanced imaging (e.g., perfusion, spectroscopy) would help refine grade and molecular status."
+}

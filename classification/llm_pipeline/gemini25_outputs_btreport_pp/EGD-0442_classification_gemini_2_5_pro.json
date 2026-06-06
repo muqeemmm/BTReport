@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0442",
+  "idh": {
+    "reasoning": "The patient's age of 56 is more typical for IDH-wildtype gliomas. The imaging findings are classic for a high-grade, aggressive tumor, strongly favoring an IDH-wildtype status. Key features include a large necrotic core (NCR Volume (mL) of 50.207) and significant contrast enhancement (ET Volume (mL) of 25.795) with a thick margin. The presence of satellite lesions ('Multiple satellites present': \"Present\"), extensive vasogenic edema, significant mass effect ('midline_shift_present': \"Yes\"), and deep infiltration ('Deep WM invasion': \"Present\", 'Ependymal (ventricular) Invasion': \"Present\") are all hallmarks of IDH-wildtype glioblastoma. Critically, the absence of a T2-FLAIR mismatch ('T2-FLAIR Mismatch Present': 0.0) is a strong negative predictor for IDH-mutant astrocytoma. There is minimal evidence to support an IDH-mutant diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Multiple satellites present",
+      "midline_shift_present",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly indicative of a non-codeleted tumor. The presence of a large necrotic core (NCR Volume (mL) > 50) and thick, irregular enhancement ('Thickness of enhancing margin': \">3mm\") are characteristic features of high-grade astrocytic tumors (which are non-codeleted) and are extremely atypical for oligodendrogliomas (which are codeleted). The deep infiltration into the thalamus and basal ganglia ('Anatomical Overlap Regions') also favors an astrocytic lineage. While the sharp tumor margin ('Transition Zone Thickness (FLAIR)' median 0.75mm) can be seen in oligodendrogliomas, this single feature is overwhelmingly contradicted by the strong evidence of an aggressive, necrotic, and enhancing astrocytoma/glioblastoma.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic core is a defining radiological feature of a CNS WHO grade 4 glioma. The metadata explicitly quantifies this with an 'NCR Volume (mL)' of 50.207 and a 'Proportion Necrosis' of 25.91%. In addition to necrosis, there is significant contrast enhancement ('ET Volume (mL)': 25.795). Further supporting a grade 4 classification are numerous features of high-grade biological activity, including substantial mass effect ('midline_shift_present': \"Yes\"), ependymal invasion ('Ependymal (ventricular) Invasion': \"Present\"), deep white matter invasion, and the presence of satellite lesions ('Multiple satellites present': \"Present\"). There is no imaging evidence to support a lower grade of 2 or 3, as these typically lack extensive necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features are highly characteristic of a Glioblastoma, IDH-wildtype. The patient's age (56), the tumor's location with deep infiltration, and especially the presence of extensive necrosis and contrast enhancement with satellite lesions strongly support this diagnosis. The absence of a T2-FLAIR mismatch sign further corroborates the IDH-wildtype prediction. The combination of IDH-wildtype status and necrosis defines a CNS WHO grade 4 tumor."
+}

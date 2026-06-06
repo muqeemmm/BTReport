@@ -1,0 +1,47 @@
+{
+  "subject_id": "BraTS2021_01505",
+  "idh": {
+    "reasoning": "The strongest indicator for an IDH-mutant status is the definitive presence of the T2-FLAIR mismatch sign, which is highly specific for IDH-mutant astrocytomas. This is supported by a high mismatch score (`T2-FLAIR Mismatch Score`: 0.888). The tumor is also predominantly non-enhancing (`Proportion Enhancing`: 1.14%) and located in the frontal lobe, both features commonly associated with IDH-mutant gliomas. The patient's age of 48 is within the typical range. While features like large tumor volume and ependymal invasion can be seen in IDH-wildtype tumors, they are non-specific and are clearly outweighed by the highly specific T2-FLAIR mismatch sign.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Enhancing",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is heavily influenced by the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 1.0). This sign is a strong marker for the astrocytic lineage (1p/19q non-codeleted) among IDH-mutant gliomas and is typically absent in oligodendrogliomas (1p/19q codeleted). The tumor's characteristics, such as having somewhat indistinct borders suggested by a measurable transition zone (`Transition Zone Thickness`), also align more with an astrocytoma than a classic, sharply demarcated oligodendroglioma. There are no specific imaging features in the provided metadata that would suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Transition Zone Thickness"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The grading is challenging due to conflicting features. The presence of any contrast enhancement (`ET Volume (mL)`: 1.072), even if mild, and ependymal invasion (`Ependymal (ventricular) Invasion`: \"Present\") are features of high-grade gliomas and generally preclude a WHO grade 2 diagnosis. However, the enhancement is minimal (`Proportion Enhancing`: 1.14%) and not described as the avid, ring-like enhancement typical of a WHO grade 4 astrocytoma. The patient's age (48) and the large tumor volume also favor a higher grade over grade 2. Balancing these findings, the tumor exhibits high-grade features (enhancement, invasion) but lacks the classic radiological hallmarks of a grade 4 tumor, making WHO grade 3 the most likely diagnosis.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "age_years",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a large, midline-crossing frontal lobe tumor. The imaging findings, particularly the strong T2-FLAIR mismatch sign, are highly suggestive of an Astrocytoma, IDH-mutant. The presence of minimal contrast enhancement and ependymal invasion points towards a higher grade, most consistent with CNS WHO grade 3. The lack of significant necrosis or ring enhancement makes a grade 4 diagnosis less probable."
+}

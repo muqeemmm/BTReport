@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young for adult-type diffuse glioma, and the lesion is described as nonenhancing with no enhancing tumor volume, no necrosis, solitary morphology, cortical involvement, and temporal-cortical location. These features fit better with a lower-grade IDH-mutant diffuse glioma than with an IDH-wildtype glioblastoma phenotype, which more often shows enhancement, necrosis, and more aggressive infiltrative behavior. Features arguing against a confident IDH-mutant call are the relatively large FLAIR/T2 abnormality and tumor-side ventricular effect/asymmetry, which can be seen with higher-grade or more aggressive tumors, but the absence of enhancement and necrosis remains the stronger signal. Therefore the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the temporal-cortical epicenter and involvement of mesial temporal/deep gray-adjacent structures favor a non-codeleted astrocytic-type pattern over the classic oligodendroglioma pattern. The available metadata does not include calcification-sensitive imaging or other stronger oligodendroglioma markers. Nonenhancement and cortical involvement can be compatible with 1p/19q-codeleted oligodendroglioma, so they argue against a strong non-codeleted call. Overall, using only the provided MRI metadata, the location pattern modestly favors non-codeleted status, but confidence is limited.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Anatomical Overlap Regions",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histopathology. The lesion is entirely nonenhancing with no necrosis in the metadata, which supports a lower-grade diffuse glioma phenotype, but molecular status cannot be determined definitively from these fields alone.",
+  "subject_id": "UCSF-PDGM-251",
+  "who_grade": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 2,
+    "reasoning": "The grade assessment favors CNS WHO grade 2 because the lesion is nonenhancing, has no enhancing tumor volume, no necrosis, no reported enhancing margin of substance, is solitary, does not cross midline, has no ependymal invasion, and has no deep white matter invasion. These imaging features argue against grade 4 and make grade 3 less likely on MRI metadata alone. The main features that reduce confidence are the moderate lesion volume and associated ventricular effacement/asymmetry, which indicate mass effect and do not exclude higher grade. However, in the absence of enhancement or necrosis, the best imaging-based estimate is grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "crosses_ideal_midline",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "CET Crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

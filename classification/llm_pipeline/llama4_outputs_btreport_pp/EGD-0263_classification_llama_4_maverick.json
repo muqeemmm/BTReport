@@ -1,0 +1,43 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (77 years) and the presence of a large, enhancing, and necrotic tumor with significant mass effect (midline shift, ventricular asymmetry) are more typical of IDH-wildtype glioblastoma. The T2-FLAIR mismatch score is 0.8803788766129814, which is high, but the presence of marked enhancement and necrosis is more characteristic of IDH-wildtype tumors. The tumor's aggressive features (large size, significant mass effect, ependymal invasion) also support IDH-wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH-wildtype status (predicted above) makes 1p/19q co-deletion highly unlikely as these are generally mutually exclusive in adult-type diffuse gliomas. The tumor's imaging features (large, enhancing, necrotic) are not typical of 1p/19q co-deleted tumors, which are more commonly associated with IDH-mutant, lower-grade gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor exhibits aggressive features: large size, significant necrosis (9.6%), marked enhancement, ependymal invasion, and substantial mass effect. These characteristics are typical of glioblastoma, WHO grade 4. The presence of necrosis and marked enhancement are particularly indicative of high-grade tumors.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "n_slices_with_shift"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "subject_id": "EGD-0263"
+}

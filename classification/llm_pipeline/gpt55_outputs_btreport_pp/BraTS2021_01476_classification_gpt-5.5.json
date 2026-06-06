@@ -1,0 +1,69 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The IDH assessment is made from the MRI phenotype alone. Features favoring IDH-mutant disease include age_years of 44, a lobar/cortical-insular distribution described by Tumor Location and Region Proportions, Cortical involvement, and a predominantly nonenhancing appearance with Enhancement Quality reported as mild, very small ET Volume (mL), and n_components_enhancing showing no discrete enhancing components. These are more typical of an IDH-mutant diffuse glioma than of classic older-age IDH-wildtype glioblastoma. Features arguing toward IDH-wildtype include Deep WM invasion, substantial Proportion of Oedema, reported Proportion Necrosis, and Thickness of enhancing margin >3mm, which raise concern for more aggressive biology. On balance, the age and largely nonenhancing cortical/insular phenotype favor IDH mutation despite some aggressive features.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "n_components_enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "Proportion of Oedema",
+      "Proportion Necrosis"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "The 1p/19q assessment is limited because MRI metadata alone is not definitive. Features supporting codeletion include age_years of 44, Cortical involvement, Tumor Location and Region Proportions showing insular/cortical involvement with some frontal_lobe component, and T2-FLAIR Mismatch Present being absent; absence of a T2-FLAIR mismatch is more compatible with oligodendroglial phenotype than with the classic mismatch-positive astrocytoma pattern. Mild Enhancement Quality can also be seen in oligodendroglioma. Features against codeletion include the broad non-frontal distribution in Tumor Location and Region Proportions, Deep WM invasion, deep structure proximity in Anatomical Overlap Regions, and substantial Proportion of Oedema and Proportion Necrosis, which are not specific for oligodendroglioma and may fit non-codeleted aggressive diffuse glioma. Overall, the cortical/insular, partly frontal, mismatch-negative pattern slightly favors codeletion, but confidence is low because the discriminating MRI features are incomplete and mixed.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without diffusion, perfusion, spectroscopy, or susceptibility-sensitive sequences. The molecular calls, especially 1p/19q status, remain uncertain from imaging alone. The grade estimate is also limited by conflicting metadata: reported necrosis and thick enhancing margin suggest higher grade, while enhancement volume is extremely small and no discrete enhancing components are detected.",
+  "subject_id": "BraTS2021_01476",
+  "who_grade": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "n_components_enhancing",
+      "midline_shift_present",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": 3,
+    "reasoning": "The WHO grade assessment is estimated independently from the imaging aggressiveness. Grade 2 is supported by limited enhancement, specifically Enhancement Quality being mild and ET Volume (mL) being very small, but grade 2 is weakened by substantial ED Volume (mL), high Proportion of Oedema, Deep WM invasion, and a relatively large Lesion Sizes APxTVxCC (cm) and Total tumor volume (mL). Grade 4 is suggested by reported Proportion Necrosis and Thickness of enhancing margin >3mm, but this is contradicted by ET Volume (mL) of only 0.224, n_components_enhancing showing no discrete enhancing component, Enhancement Quality being mild, and midline_shift_present being No. The overall pattern is more aggressive than a typical grade 2 lesion but lacks robust conventional MRI evidence for grade 4, so grade 3 is the best estimate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

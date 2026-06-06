@@ -1,0 +1,44 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (48 years) and the presence of a large, predominantly non-enhancing tumor with significant necrosis (Proportion Necrosis: 37.64%) and edema (Proportion of Oedema: 61.95%) suggest a high-grade glioma. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.6476463617096769, T2-FLAIR Mismatch Degree: 0.9828057028244852, but T2-FLAIR Mismatch Present: 0.0) argues against an IDH-mutant, 1p/19q non-codeleted glioma. The tumor's aggressive features (e.g., midline shift, cortical involvement, deep white matter invasion) are more typical of IDH-wildtype glioblastoma. Therefore, the IDH mutation status is likely wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) and the presence of a large, necrotic tumor with significant edema are not typical for 1p/19q codeleted gliomas, which are more commonly associated with IDH mutations and a better prognosis. The tumor's aggressive features and lack of characteristic imaging features for 1p/19q codeletion (e.g., heterogeneous enhancement, calcifications - though calcifications are not assessed here) suggest a non-codeleted status. Therefore, the 1p/19q co-deletion status is likely non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 37.64%), large size, and mass effect (midline shift present). The presence of necrosis and the tumor's overall appearance are characteristic of a high-grade glioma. Given the likely IDH-wildtype status and the presence of necrosis, the tumor is most likely a glioblastoma, WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0029"
+}

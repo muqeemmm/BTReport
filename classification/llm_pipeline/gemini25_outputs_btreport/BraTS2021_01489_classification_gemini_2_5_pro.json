@@ -1,0 +1,58 @@
+{
+  "subject_id": "BraTS2021_01489",
+  "idh": {
+    "reasoning": "The patient's age of 49 is in an ambiguous range, but the MRI features are strongly suggestive of an IDH-wildtype glioma. The tumor is exceptionally large, with a massive necrotic core, indicated by a `Proportion Necrosis` of 70.02% and a large `NCR Volume (mL)`. Aggressive infiltrative features, which are hallmarks of IDH-wildtype glioblastoma, are abundant: the tumor crosses the midline with all its components (`crosses_ideal_midline`, `CET Crosses midline`), invades deep white matter (`Deep WM invasion`), spreads into the ventricles (`Ependymal (ventricular) Invasion`), involves deep gray matter structures bilaterally (`Anatomical Overlap Regions`), and has satellite lesions (`Multiple satellites present`). While the enhancement is described as 'Mild', the presence of a thick enhancing margin and the overwhelming evidence of necrosis and infiltration strongly favor an IDH-wildtype status over an IDH-mutant astrocytoma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "crosses_ideal_midline",
+      "CET Crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Anatomical Overlap Regions",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. The tumor's location in the `frontal_lobe-cortex region` is consistent with the typical location for 1p/19q co-deleted oligodendrogliomas. However, all other features strongly argue against this diagnosis. Oligodendrogliomas are typically more circumscribed and less necrotic. This tumor shows extensive, aggressive infiltration, evidenced by midline crossing (`crosses_ideal_midline`), deep white matter and ependymal invasion (`Deep WM invasion`, `Ependymal (ventricular) Invasion`), and involvement of numerous deep gray matter structures. Most significantly, the massive proportion of necrosis (`Proportion Necrosis` of 70.02%) and presence of contrast enhancement are highly atypical for a 1p/19q co-deleted tumor. Therefore, a non-codeleted status is strongly favored.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "crosses_ideal_midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is based on the most aggressive radiological features present. The presence of extensive central necrosis (`Proportion Necrosis` of 70.02%) is a definitive radiological marker for a CNS WHO grade 4 glioma. This is further supported by the presence of contrast enhancement (`ET Volume (mL)` of 3.562). Additional features confirming high-grade biology include the tumor's very large size (`Total tumor volume (mL)` of 193.486), significant mass effect (`midline_shift_present`), widespread infiltration across the midline (`CET Crosses midline`), and invasion of deep structures (`Deep WM invasion`, `Ependymal (ventricular) Invasion`). There are no features to suggest a lower grade (2 or 3).",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "CET Crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of a very large, midline-crossing, deeply infiltrative mass with extensive central necrosis provides overwhelming and classic radiological evidence for a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predictions for IDH status, 1p/19q status, and WHO grade are highly confident and internally consistent."
+}

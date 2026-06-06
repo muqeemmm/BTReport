@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0203",
+  "idh": {
+    "reasoning": "The patient's young age (35) is a strong predictor for an IDH-mutant glioma. This is further supported by the tumor's imaging characteristics, specifically the near-complete absence of contrast enhancement (very low ET Volume and Proportion Enhancing) and the lack of deep white matter invasion. These features are classic for IDH-mutant astrocytomas. A significant contradicting feature is the very high reported proportion of necrosis, which is more typical of IDH-wildtype glioblastoma. However, given the overwhelming lack of enhancement, this necrosis is likely cystic/necrotic change within a high-grade IDH-mutant tumor rather than the typical ring-enhancing necrosis of a glioblastoma. The balance of evidence, particularly the patient's age, strongly favors an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "crosses_patient_midline"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "There are no definitive imaging features to determine 1p/19q status. The frontal lobe location is common for both astrocytomas and oligodendrogliomas. However, the large size, midline crossing, and especially the high proportion of necrosis are more characteristic of the astrocytic lineage (non-codeleted) than the oligodendroglial lineage (codeleted). Oligodendrogliomas tend to be more well-defined and less frequently exhibit extensive necrosis. Therefore, the evidence, though weak, leans towards a non-codeleted status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "crosses_patient_midline",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The most decisive feature for grading is the extremely high reported proportion of necrosis (69.86%). According to WHO CNS5 criteria, the presence of necrosis in an IDH-mutant diffuse astrocytic glioma is sufficient for a CNS WHO grade 4 diagnosis, regardless of other features. While the minimal contrast enhancement and young patient age could be interpreted as signs of a lower-grade tumor, the presence of necrosis is a definitive high-grade feature that overrides these considerations. Therefore, a prediction of grade 4 is made with high confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging features are most consistent with a high-grade, IDH-mutant astrocytoma. The patient's young age and the predominantly non-enhancing nature of the tumor strongly suggest an IDH-mutant status. The high proportion of reported necrosis is the key feature that defines the tumor as CNS WHO grade 4. The combination of these findings points to an Astrocytoma, IDH-mutant, CNS WHO grade 4."
+}

@@ -1,0 +1,38 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.9017260252035175) is highly suggestive of an IDH mutant glioma. The patient's age (62 years) is somewhat atypical for IDH mutant gliomas, which are more common in younger patients, but the imaging feature is a strong indicator. There are no direct indicators in the metadata that argue against IDH mutation status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is more commonly associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are typically 1p/19q co-deleted. The lack of enhancement and the presence of a non-enhancing tumor also lean towards an astrocytic lineage. However, the definitive determination of 1p/19q co-deletion status is molecular and not directly inferable from the provided MRI metadata with high confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows a high proportion of necrosis (88.1%) and a relatively large size (NCR Volume: 21.003 mL, Total tumor volume: 23.84 mL), suggesting a high-grade tumor. The absence of enhancement (Enhancement Quality: 'None', Proportion Enhancing: 0.0) might be atypical for a high-grade glioma, but IDH-mutant glioblastomas can sometimes present with minimal or no enhancement. Given the age of the patient and the presence of necrosis, a higher grade is likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01491"
+}

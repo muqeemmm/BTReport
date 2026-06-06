@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_01210",
+  "idh": {
+    "reasoning": "The patient's age of 49 is at the upper end for IDH-mutant gliomas and more typical for IDH-wildtype tumors. The presence of both contrast enhancement and necrosis are strong indicators of an IDH-wildtype glioma, specifically glioblastoma. The involvement of deep gray matter structures, including the thalamus and caudate, also favors an IDH-wildtype diagnosis. While the absence of deep white matter invasion and the 'Mild' enhancement quality are less typical for IDH-wildtype tumors, they are outweighed by the presence of necrosis, thick enhancement, and deep gray matter involvement.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly suggestive of an astrocytic lineage (non-codeleted) rather than an oligodendroglial lineage (codeleted). The presence of necrosis and a thick enhancing margin are hallmark features of astrocytomas and are very rare in 1p/19q co-deleted oligodendrogliomas. The extensive surrounding edema also supports a non-codeleted status. While cortical involvement and lack of deep white matter invasion can be seen in oligodendrogliomas, these features are not specific and are less compelling than the clear evidence of high-grade features like necrosis and thick enhancement, which point towards a non-codeleted tumor.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of a necrotic component, evidenced by a non-zero 'NCR Volume (mL)', is the most definitive radiological feature corresponding to CNS WHO grade 4. The presence of contrast enhancement ('ET Volume (mL)' > 0) and a thick enhancing margin ('>3mm') further support a high-grade diagnosis. The significant mass effect and extensive edema are also consistent with a high-grade tumor. Although the enhancement quality is described as 'Mild' and deep white matter invasion is absent, these features do not override the presence of necrosis, which is a key criterion for grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 49-year-old with a solitary right-sided tumor involving cortical and deep gray matter structures. The key imaging findings are the presence of both contrast enhancement and a necrotic core. These features are highly indicative of a high-grade glioma. The combination of patient age, deep location, and radiological evidence of necrosis strongly supports a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}

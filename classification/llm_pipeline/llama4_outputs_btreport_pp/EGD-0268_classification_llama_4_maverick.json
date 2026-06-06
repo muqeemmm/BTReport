@@ -1,0 +1,37 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.9306669254523777, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in gliomas according to recent studies. The patient's age (34 years) also aligns with the demographic more likely to have IDH mutant gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH mutant astrocytomas rather than oligodendrogliomas, which are more likely to be 1p/19q co-deleted. Given the strong T2-FLAIR mismatch, it is less likely that this tumor is 1p/19q co-deleted. Additionally, the clinical and radiological features do not strongly suggest an oligodendroglioma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor has a significant necrotic component (Proportion Necrosis: 60.71%) and a relatively large size (Total tumor volume: 59.11 mL), with mild enhancement and a 'rim_core_adjacency' indicating the rim touches the core. These features are more typical of higher-grade gliomas. The presence of necrosis is particularly indicative of a higher grade. Given the IDH mutant status predicted, the presence of necrosis aligns more with a WHO grade 4 (glioblastoma, IDH-mutant).",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "rim_core_adjacency"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0268"
+}

@@ -1,0 +1,42 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The patient's age (73 years) and the presence of a large edema volume (119.362 mL) with minimal necrosis (0.005 mL) and a mildly enhancing tumor (Enhancement Quality: 'Mild') are more typical of glioblastoma, IDH-wildtype, which is common in older adults. The tumor's location in the temporal and frontal lobes with deep white matter invasion and ependymal invasion also suggests an aggressive tumor. IDH mutant gliomas are less likely given the patient's age and the aggressive features of the tumor.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "IDH mutant gliomas are more likely to have 1p/19q co-deletion, but given the prediction of IDH wildtype status with high confidence, the likelihood of 1p/19q co-deletion is low. The tumor's aggressive features and the patient's age further support this, as 1p/19q co-deleted tumors are typically IDH mutant and occur in a different demographic.",
+    "supporting_features": [
+      "age_years",
+      "IDH Mutation Status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The presence of a large edema volume, mild enhancement, deep white matter invasion, and ependymal invasion, along with the patient's age, are characteristic of a high-grade glioma. The minimal necrosis and the absence of significant necrosis or high enhancement quality might suggest a grade 3 tumor, but the overall clinical and radiological picture, including the patient's age and the tumor's aggressive features, is more consistent with glioblastoma, WHO grade 4.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0299"
+}

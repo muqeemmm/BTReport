@@ -1,0 +1,45 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 60 years old, which is more typical for IDH-wildtype gliomas. However, the tumor involves eloquent brain regions (Vision) and has ependymal invasion, which are features that can occur in both IDH-mutant and wildtype tumors. The enhancement quality is marked, which is more common in IDH-wildtype, but without diffusion/perfusion data, the evidence is insufficient to confidently predict IDH status. Since confidence must be >=0.5 for binary tasks, I predict mutant as a best estimate with low confidence.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves midline structures including ventricles, parietal, occipital, temporal and cortex lobes, and involves eloquent brain regions (Vision). These features are more typical of astrocytomas (non-codeleted) than oligodendrogliomas. However, without specific molecular testing, the evidence is insufficient. Confidence is low.",
+    "supporting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is solitary, involves eloquent regions (Vision), shows ependymal invasion, deep white matter invasion, and cortical involvement. The enhancement is marked with thick margins. The age of 60 years is more typical for IDH-wildtype glioblastoma, but without diffusion/perfusion or molecular data, the prediction is uncertain. The tumor volume is large (47.5 mL) with significant necrosis (30.04%) and edema (34.49%), suggesting high-grade features. The midline location and ventricular involvement are notable. Given the constraints, the best estimate is IDH-mutant astrocytoma WHO grade 4 with low confidence.",
+  "subject_id": "BraTS2021_00194",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [],
+    "prediction": 4,
+    "reasoning": "The tumor shows marked enhancement with thick margins (>3mm), significant necrosis (30.04%), and a large total volume (47.5 mL). These features are characteristic of high-grade gliomas (WHO grade 4). The presence of ependymal invasion and deep white matter invasion also support high grade. The proportion of necrosis exceeds 10%, which is a key feature for glioblastoma. No features contradict a high-grade assignment.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  }
+}

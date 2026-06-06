@@ -1,0 +1,42 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (31 years) and the presence of a non-enhancing tumor with significant edema (ED Volume = 76.226 mL, Proportion of Oedema = 100%) are suggestive of a lower-grade glioma, which is more likely to be IDH mutant. The absence of enhancement (Enhancement Quality = 'None', ET Volume = 0.0 mL) and the presence of cortical involvement and deep white matter invasion are also consistent with this interpretation. The T2-FLAIR Mismatch Score is 0.4, which is not strongly indicative of IDH mutation (typically, a score > 0.7 is considered suggestive). However, given the age and imaging characteristics, IDH mutation is more likely than not.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The tumor's location in the frontal lobe with cortical involvement and the absence of ependymal invasion or enhancement are features that can be seen in both IDH-mutant astrocytomas and oligodendrogliomas. However, the lack of clear indicators such as calcifications (not assessed here) or specific MRI features that are strongly associated with 1p/19q co-deletion makes it challenging to predict co-deletion status directly from the provided metadata. Given the tumor is likely IDH mutant, if it were an oligodendroglioma (IDH mutant and 1p/19q co-deleted), we might expect some characteristic features, but these are not strongly present or absent here.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor is non-enhancing, has a significant edema volume, and involves the cortex and deep white matter, suggesting a diffuse glioma. The absence of enhancement and necrosis, along with the patient's relatively young age, suggests a lower grade. However, the presence of significant edema and deep white matter invasion could indicate a higher grade within the lower-grade gliomas. Given the likely IDH mutation status and the absence of features typical of glioblastoma (e.g., enhancement, necrosis), a grade of 2 or 3 is plausible. The presence of significant edema and the tumor's impact on surrounding structures might lean towards a grade 3.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-266"
+}

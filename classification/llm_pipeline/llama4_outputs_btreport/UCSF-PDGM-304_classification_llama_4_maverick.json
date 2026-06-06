@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (52 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 0.24%) and a significant edema volume (ED Volume: 9.734 mL) are more typical of IDH wildtype gliomas, which are more common in older adults and often present with more aggressive features. The absence of features like deep white matter invasion and ependymal invasion does not strongly support or refute IDH mutation status directly. However, the presence of cortical involvement and a mildly enhancing tumor could be seen in both IDH mutant and wildtype gliomas. Given the age and some aggressive features like necrosis, the evidence leans slightly towards IDH wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a mildly enhancing tumor with a significant proportion of edema and necrosis might suggest a higher grade glioma, which is more commonly associated with IDH wildtype status. 1p/19q co-deletion is typically associated with IDH mutant gliomas, particularly oligodendrogliomas. Given the likely IDH wildtype status from the previous prediction, the likelihood of 1p/19q co-deletion is lower. The absence of specific features that are strongly indicative of oligodendroglioma (e.g., calcifications, which are not available in the metadata) makes it harder to predict co-deletion status directly. However, the clinical and radiological features do not strongly support a diagnosis that typically associates with 1p/19q co-deletion.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 0.24%) and a mildly enhancing tumor with a significant edema volume (ED Volume: 9.734 mL) are features often associated with higher-grade gliomas. The tumor's size and the presence of cortical involvement also suggest a more aggressive tumor. While the enhancement quality is mild, the overall features lean towards a higher grade. Given the likely IDH wildtype status and the presence of necrosis, a grade of 4 is plausible. However, the proportion of necrosis is relatively low, and the enhancement is mild, which might argue against the highest grade. Thus, a grade 3 or 4 is possible, but grade 4 is more likely given the necrosis and significant edema.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Thickness of enhancing margin"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "UCSF-PDGM-304"
+}

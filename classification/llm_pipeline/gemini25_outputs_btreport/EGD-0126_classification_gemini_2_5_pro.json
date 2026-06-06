@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0126",
+  "idh": {
+    "reasoning": "The patient's advanced age of 69 is the strongest predictor for an IDH-wildtype glioma, as the incidence of IDH-mutant gliomas decreases sharply after age 55. The imaging features strongly corroborate this prediction. The presence of marked, thick-walled enhancement (Enhancement Quality: 'Marked', Thickness of enhancing margin: '>3mm') and central necrosis (Proportion Necrosis: 4.53%) are classic hallmarks of glioblastoma, the most common IDH-wildtype tumor. Furthermore, aggressive features such as ependymal invasion and deep white matter invasion are also more characteristic of IDH-wildtype gliomas. There are no contradicting features in the provided metadata.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly suggestive of a non-codeleted tumor. Tumors with 1p/19q co-deletion (oligodendrogliomas) typically show less aggressive features. In this case, the presence of marked enhancement, central necrosis, and significant surrounding edema (ED Volume (mL): 74.407) are all features more commonly associated with astrocytic lineage tumors, which are non-codeleted. Additionally, aggressive features like deep white matter and ependymal invasion argue against an oligodendroglioma. While the tumor involves the frontal lobe, a common location for oligodendrogliomas, this feature is non-specific and is overwhelmingly outweighed by the features suggesting a high-grade, non-codeleted astrocytoma (glioblastoma).",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The prediction of CNS WHO grade 4 is made with very high confidence based on definitive radiological markers of high-grade malignancy. The presence of central tumor necrosis (Proportion Necrosis: 4.53%) is a key imaging feature that corresponds to the histopathological criterion for grade 4. This is strongly supported by the presence of marked, thick-walled contrast enhancement (Enhancement Quality: 'Marked', Thickness of enhancing margin: '>3mm'). Additional features indicating high-grade biology include significant mass effect (midline_shift_present: 'Yes') and ependymal invasion. There are no imaging features to suggest a lower grade (2 or 3).",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age (69) and MRI findings of a large, necrotic, and avidly enhancing mass with significant mass effect and ependymal invasion provides a classic presentation for a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The individual predictions for IDH status, 1p/19q status, and WHO grade are highly confident and internally consistent."
+}

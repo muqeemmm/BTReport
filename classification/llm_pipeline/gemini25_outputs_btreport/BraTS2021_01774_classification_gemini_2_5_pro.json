@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_01774",
+  "idh": {
+    "reasoning": "The patient's age of 49 is on the older end for IDH-mutant gliomas. The presence of a significant necrotic component (Proportion Necrosis: 15.83%) is a very strong indicator of IDH-wildtype status, as necrosis is a hallmark of glioblastoma. Furthermore, involvement of deep gray matter structures (left caudate, left putamen) and ependymal invasion are more characteristic of IDH-wildtype tumors. The primary contradicting feature is the very low proportion of contrast enhancement (Proportion Enhancing: 0.02), which is more typical of IDH-mutant gliomas. However, the strong evidence of necrosis and deep infiltration outweighs the lack of enhancement, making an IDH-wildtype prediction more likely.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is highly uncharacteristic of a 1p/19q co-deleted tumor (oligodendroglioma). The presence of a large necrotic core (Proportion Necrosis: 15.83%), extensive vasogenic edema (ED Volume (mL): 114.122), and invasion of deep gray matter structures (caudate, putamen) are all strong features of an astrocytic lineage tumor. Oligodendrogliomas typically lack significant necrosis and edema. While the frontal lobe location and minimal enhancement could be seen in oligodendrogliomas, the aggressive features of necrosis and deep invasion argue strongly against this diagnosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of a significant necrotic component (Proportion Necrosis: 15.83%) is a key radiographic feature corresponding to the histopathological criterion for WHO Grade 4. Additionally, the tumor is very large (Total tumor volume (mL): 135.619), causes significant mass effect (max_shift_mm: 6.0), and is associated with massive vasogenic edema (ED Volume (mL): 114.122). These are all hallmarks of a high-grade glioma. The only feature arguing against a high grade is the minimal contrast enhancement (Proportion Enhancing: 0.02). However, necrosis alone is sufficient for a Grade 4 diagnosis in astrocytomas, even in the absence of prominent enhancement. Therefore, the evidence for Grade 4 is compelling.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "max_shift_mm",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a large, midline-crossing frontal lobe mass with features highly suggestive of a high-grade glioma. The presence of a significant necrotic component, massive edema, and deep structural invasion strongly supports a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The minimal contrast enhancement is an atypical feature but does not preclude this diagnosis, as necrosis is a sufficient criterion for grade 4."
+}

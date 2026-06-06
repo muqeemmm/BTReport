@@ -1,0 +1,37 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8745450424496126, indicating a strong likelihood of IDH mutation. The age of the patient (53 years) and the presence of a large, enhancing tumor with necrosis and significant mass effect are also consistent with a high-grade glioma, which is often associated with IDH mutation in the context of adult-type diffuse gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH mutation is likely based on the T2-FLAIR mismatch. However, 1p/19q co-deletion status cannot be directly inferred from the provided MRI metadata. The tumor's imaging characteristics, such as significant enhancement and large size, are not specific to codeletion status. The absence of calcifications (not assessable from the given data) and other specific features makes it difficult to predict codeletion status with certainty. However, IDH-mutant gliomas with 1p/19q codeletion often present with certain characteristics, such as frontal lobe involvement, which is present here. Thus, a prediction can be made with moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as large size (Total tumor volume = 184.852 mL), significant enhancement (Enhancement Quality = 'Marked'), necrosis (Proportion Necrosis = 48.31%), and mass effect (midline shift present). These characteristics are typical of high-grade gliomas. The presence of IDH mutation (predicted) often associates with lower grade gliomas, but the presence of necrosis and significant enhancement suggests a higher grade. The WHO grade is likely to be 4 given the aggressive imaging features.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01479"
+}

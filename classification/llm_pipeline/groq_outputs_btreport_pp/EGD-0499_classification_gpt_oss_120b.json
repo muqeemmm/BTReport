@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0499",
+  "idh": {
+    "reasoning": "The tumor shows absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present = 0.0), which is a strong imaging surrogate for IDH-wildtype status. Additionally, there is measurable necrosis (Proportion Necrosis = 10.87%) and multifocal disease, both more typical of IDH-wildtype glioblastoma. While the patient is young (age_years = 34) and the lesion is cortically based, these features are more characteristic of IDH\u2011mutant gliomas and therefore argue against the wildtype prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging lacks features typical of 1p/19q-codeleted oligodendroglioma such as a single, well\u2011circumscribed, non\u2011enhancing lesion with calcifications (not assessed) and a strong T2-FLAIR mismatch. Instead, the tumor is multifocal, mildly enhancing, and shows necrosis, which are more consistent with a non\u2011codeleted astrocytic tumor. Hence the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis = 10.87%), mild but definite enhancement (Enhancement Quality = Mild, Proportion Enhancing = 0.17), and multifocal spread are imaging hallmarks of WHO grade 4 glioblastoma. Although the enhancing tumor volume is low (ET Volume (mL) = 0.133) and the patient is relatively young, these factors are outweighed by necrosis and multifocality, supporting a grade 4 assignment.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, non-codeleted, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Advanced imaging (diffusion, perfusion, spectroscopy) is unavailable, limiting certainty. The lack of T2-FLAIR mismatch and presence of necrosis and multifocal disease favor IDH-wildtype glioblastoma, but the young age and low enhancing volume introduce some uncertainty."
+}

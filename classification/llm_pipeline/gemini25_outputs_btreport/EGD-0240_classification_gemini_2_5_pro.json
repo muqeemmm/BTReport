@@ -1,0 +1,46 @@
+{
+  "subject_id": "EGD-0240",
+  "idh": {
+    "reasoning": "The patient's age of 41 is indeterminate, but the presence of a very large non-enhancing/necrotic core (NCR Volume (mL): 41.042, Proportion Necrosis: 62.19) is a strong indicator of high-grade biology, most commonly associated with IDH-wildtype gliomas (glioblastoma). The thick enhancing margin (>3mm) also supports this. These features outweigh the counter-evidence, which includes the patient's relatively young age and the very small volume of enhancement (ET Volume (mL): 0.12), features more typical of IDH-mutant tumors. The evidence for necrosis is a more specific marker for the IDH-wildtype phenotype.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor is located in the temporal lobe ('Tumor Location': 'temporal-cortex region'). 1p/19q co-deleted oligodendrogliomas have a strong predilection for the frontal lobes, making a temporal location less likely. Furthermore, the presence of extensive necrosis ('Proportion Necrosis': 62.19) is characteristic of an astrocytic lineage tumor (either IDH-mutant astrocytoma or IDH-wildtype glioblastoma), not an oligodendroglioma. There are no features specifically suggesting an oligodendroglioma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The most compelling evidence for a high grade is the large proportion of necrosis ('Proportion Necrosis': 62.19), which is a radiological hallmark of WHO grade 4 gliomas. The presence of a thick enhancing margin ('Thickness of enhancing margin': '>3mm') further supports a high-grade designation. While the total volume of enhancement is minimal ('ET Volume (mL)': 0.12), which is atypical for a grade 4 tumor, the definitive evidence of necrosis is the overriding factor in determining the grade based on imaging.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are most consistent with a high-grade glioma. The large necrotic core is a strong indicator of WHO grade 4, and in a 41-year-old patient, this points towards a diagnosis of Glioblastoma, IDH-wildtype. The very low volume of contrast enhancement is an atypical feature but does not outweigh the evidence of necrosis. A significant inconsistency exists in the provided metadata regarding tumor laterality ('Anatomical Overlap Regions' vs. volumetric data), but this does not alter the molecular prediction."
+}

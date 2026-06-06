@@ -1,0 +1,50 @@
+{
+  "id": "patient_0046",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is 48 years old, which is relatively old for an IDH mutant glioma. The tumor is located in the frontal lobe and involves the cortex, which is more typical of IDH wildtype gliomas in older adults. The tumor is non-enhancing and has a large edema volume, which could be seen in either IDH mutant or wildtype gliomas. However, the lack of enhancement and the presence of significant edema are more commonly associated with IDH mutant gliomas. The tumor's location and the patient's age together suggest a higher likelihood of IDH wildtype status, but the absence of enhancement is a characteristic often seen in IDH mutant gliomas. Overall, the evidence is mixed, but the age and location slightly favor IDH wildtype.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality",
+        "Proportion Enhancing"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.6
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the frontal lobe and involves the cortex. IDH mutant gliomas with 1p/19q co-deletion often present in a similar manner, typically being frontal and involving the cortex. However, the lack of enhancement and the significant edema are also consistent with this subtype. Given the likely IDH mutant status is not strongly supported, and the tumor's characteristics could align with either codeleted or non-codeleted status, the prediction leans towards non-codeleted due to the overall profile being less typical for oligodendroglioma.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.55
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor has a significant edema volume and crosses the midline, indicating a potentially aggressive nature. However, it lacks enhancement, which is often associated with lower grade gliomas. The presence of significant edema and the tumor's large volume suggest a higher grade. The absence of necrosis and enhancement suggests it might not be grade 4. The overall profile suggests a grade 3 glioma, as it shows some aggressive features like significant edema and midline crossing but lacks definitive signs of high-grade glioma like enhancement or necrosis.",
+      "supporting_features": [
+        "ED Volume (mL)",
+        "Edema crosses midline",
+        "Enhancement Quality",
+        "Proportion of Oedema"
+      ],
+      "contradicting_features": [
+        "Proportion Enhancing",
+        "NCR Volume (mL)"
+      ],
+      "prediction": 3,
+      "confidence": 0.65
+    }
+  ],
+  "subject_id": "UCSF-PDGM-445"
+}

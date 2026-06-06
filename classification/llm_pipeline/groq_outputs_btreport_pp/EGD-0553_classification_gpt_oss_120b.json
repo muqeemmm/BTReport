@@ -1,0 +1,47 @@
+{
+  "subject_id": "EGD-0553",
+  "idh": {
+    "reasoning": "The patient is young (age_years=32) and the tumor shows mild contrast enhancement (Enhancement Quality=\"Mild\") and cortical involvement (Cortical involvement=\"Present\"), which are features that often favor IDH\u2011mutant gliomas. However, there is a substantial necrotic component (Proportion Necrosis=22.65), extensive edema that crosses the midline (Edema crosses midline=\"True\"), and multiple satellite lesions (Multiple satellites present=\"Present\"). Moreover, the T2\u2011FLAIR mismatch is absent (T2-FLAIR Mismatch Present=0.0), a finding that argues against IDH\u2011mutant astrocytoma. Balancing these opposing clues, the necrosis, crossing edema and lack of mismatch tip the balance toward an IDH\u2011wildtype status, albeit with moderate certainty due to the conflicting age and mild enhancement.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "Multiple satellites present",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.58
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion occurs only in IDH\u2011mutant oligodendrogliomas. Since the IDH status is predicted to be wildtype, the tumor cannot be 1p/19q\u2011codeleted. The lack of T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present=0.0) and the presence of necrosis further argue against an oligodendroglial phenotype, supporting a non\u2011codeleted status.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The lesion shows a notable necrotic fraction (Proportion Necrosis=22.65) and a large edema component (Proportion of Oedema=76.95) with crossing midline edema (Edema crosses midline=\"True\"), features typical of high\u2011grade glioma. Although the contrast enhancement is only mild (Enhancement Quality=\"Mild\") and the patient is young, the presence of necrosis fulfills the histologic criterion for WHO grade\u202f4 in an IDH\u2011wildtype diffuse astrocytic tumor. Thus, grade\u202f4 is the most likely grade, with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Edema crosses midline",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Predictions rely solely on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty. Absence of T2\u2011FLAIR mismatch and presence of necrosis favor IDH\u2011wildtype glioblastoma, but the young age and mild enhancement introduce some ambiguity. Molecular testing is recommended for definitive classification."
+}

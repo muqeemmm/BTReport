@@ -1,0 +1,39 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Score' is 0.7575551498969071, and 'T2-FLAIR Mismatch Present' is 1.0, indicating a strong likelihood of IDH mutation. The tumor also shows characteristics such as being solitary and having a significant proportion of edema, but the key factor here is the T2-FLAIR mismatch.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, the presence of IDH mutation (predicted with high confidence) and certain MRI features can guide the prediction. The tumor's location and characteristics (e.g., frontal lobe involvement, cortical involvement) are more typical of IDH-mutant gliomas. The presence of ependymal invasion and the tumor being solitary with marked enhancement might lean towards astrocytoma or oligodendroglioma. However, without specific features like calcifications or more detailed molecular information, the prediction relies heavily on the likelihood of co-deletion in IDH-mutant tumors. Typically, IDH-mutant oligodendrogliomas are more likely to be codeleted. Given the tumor's characteristics and the high confidence in IDH mutation, we can infer a potential likelihood of codeletion, but it's not a direct inference.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor shows significant mass effect with midline shift, ependymal invasion, and marked enhancement, suggesting a high-grade lesion. The presence of necrosis (Proportion Necrosis: 18.52%) and the overall tumor volume (Total tumor volume: 100.819 mL) also support a higher grade. The 'Thickness of enhancing margin' is '>3mm', and there's a significant proportion of necrosis and edema, all pointing towards a more aggressive tumor. Given these features, a grade 4 tumor is likely. The confidence is high due to multiple aggressive features.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "midline_shift_present",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "UCSF-PDGM-166"
+}

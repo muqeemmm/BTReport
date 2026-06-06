@@ -1,0 +1,49 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (38 years) and the presence of a large, necrotic tumor with significant edema and mass effect (midline shift, asymmetrical ventricles, effaced ventricle) could suggest a high-grade glioma. However, the presence of necrosis and the large size of the tumor are more commonly associated with IDH wildtype glioblastomas. The mild enhancement quality and the relatively low proportion of enhancement (0.01) are not typical for IDH mutant gliomas, which often show less or no enhancement. The tumor's location in the frontal lobe and involvement of deep white matter and ependymal invasion are seen in both IDH mutant and wildtype gliomas. Given the age and the aggressive features (large size, necrosis, significant mass effect), IDH wildtype is more likely than IDH mutant.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "gender"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor is located in the frontal lobe, which is a common location for 1p/19q codeleted oligodendrogliomas. However, the presence of significant necrosis (Proportion Necrosis: 31.75) and the large size of the tumor are less typical for codeleted tumors, which are generally associated with a more favorable prognosis and lower grade. The mild enhancement and ependymal invasion are non-specific features. Given the aggressive features (necrosis, large size, significant mass effect), non-codeleted is more likely than codeleted.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC (cm)",
+      "n_slices_with_shift",
+      "mean_shift_mm"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 31.75), large size (Lesion Sizes APxTVxCC: 5.8 x 6.5 x 6.1 cm), and substantial mass effect (midline shift, asymmetrical ventricles). These characteristics are typical of high-grade gliomas. The presence of necrosis is particularly indicative of grade 4. While the proportion of enhancement is low (0.01), the overall tumor behavior suggests a high-grade lesion. Therefore, the most likely grade is 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC (cm)",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0771"
+}

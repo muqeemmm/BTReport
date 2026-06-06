@@ -1,0 +1,43 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (22 years) and the presence of a non-enhancing tumor with significant necrosis (Proportion Necrosis: 82.61) and edema (Proportion of Oedema: 17.39) could suggest a high-grade glioma. However, the absence of enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) and the presence of ependymal invasion are notable. IDH mutant gliomas are more common in younger adults and can present with necrosis, especially in higher grades. The presence of significant necrosis and the patient's age lean towards an IDH mutant status, as IDH wildtype gliomas are more commonly associated with older age and more aggressive features like enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "1p/19q co-deletion is typically associated with oligodendrogliomas, which often present with calcifications (not available in the metadata), are more commonly found in the frontal lobe (this tumor is parietal, cortex, and occipital), and typically show a more indolent course. The presence of significant necrosis and the tumor's location argue against a typical oligodendroglioma profile. Thus, without specific indicators for 1p/19q co-deletion, it is less likely.",
+    "supporting_features": [
+      "Tumor Location",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The presence of significant necrosis (Proportion Necrosis: 82.61), a large tumor size (Lesion Sizes APxTVxCC: 6.5 x 6.3 x 7.7 cm), and midline shift (midline_shift_present: Yes) indicate a high-grade tumor. The absence of enhancement does not rule out high grade as IDH mutant glioblastomas can be non-enhancing. The patient's age and the tumor's aggressive features (e.g., ependymal invasion, significant necrosis) support a high-grade classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01484"
+}

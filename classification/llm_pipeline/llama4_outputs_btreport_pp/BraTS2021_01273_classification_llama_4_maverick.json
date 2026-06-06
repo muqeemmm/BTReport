@@ -1,0 +1,37 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (66 years) and the presence of a marked enhancement quality on MRI are more commonly associated with IDH wildtype gliomas. Additionally, the absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present = 0.0) is a feature often seen in IDH wildtype tumors. IDH mutant gliomas are more likely to show T2-FLAIR mismatch. The tumor's location in the frontal lobe and the presence of cortical involvement also align more with IDH wildtype characteristics, as IDH mutant tumors are more commonly found in the frontal lobe but often have different enhancement patterns.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH wildtype status (predicted above) makes 1p/19q co-deletion less likely since co-deletion is typically associated with IDH mutant gliomas. The clinical and radiological features do not directly predict co-deletion status, but the likelihood of co-deletion is lower in IDH wildtype tumors.",
+    "supporting_features": [
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis = 30.5%) and marked enhancement quality are features associated with higher-grade gliomas. The tumor's volume and the presence of cortical involvement also suggest an aggressive tumor. Given the IDH wildtype status, these features are highly suggestive of a WHO grade 4 glioma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01273"
+}

@@ -1,0 +1,50 @@
+{
+  "subject_id": "EGD-0561",
+  "idh": {
+    "reasoning": "The presence of both central necrosis (non-zero 'NCR Volume (mL)') and contrast enhancement (non-zero 'ET Volume (mL)') are strong indicators of an IDH-wildtype glioma. Specifically, the 'Thickness of enhancing margin' being '>3mm' is a classic feature of glioblastoma, which is the most common IDH-wildtype tumor. While the frontal lobe location ('Tumor Location') is common for IDH-mutant tumors, the aggressive imaging features of enhancement and necrosis are more specific and heavily favor an IDH-wildtype status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The reasoning for this prediction must be independent of the IDH status prediction. The presence of necrosis ('NCR Volume (mL)' > 0) and a thick enhancing margin ('Thickness of enhancing margin': '>3mm') are highly atypical for 1p/19q co-deleted oligodendrogliomas. These features are characteristic of astrocytic lineage tumors (non-codeleted) or IDH-wildtype gliomas. Although the tumor has cortical involvement ('Cortical involvement': 'Present') and a frontal location ('Tumor Location'), which can be seen in oligodendrogliomas, the features suggesting aggressive biology (necrosis, enhancement) strongly argue against co-deletion.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The key radiological features for determining grade are necrosis and enhancement. This tumor demonstrates both, with a non-zero 'NCR Volume (mL)' and a non-zero 'ET Volume (mL)'. The presence of necrosis on imaging is a strong surrogate for histologic necrosis, which automatically qualifies a diffuse glioma for WHO Grade 4. Furthermore, the 'Thickness of enhancing margin' being '>3mm' is a hallmark of glioblastoma (Grade 4). While the tumor is very small ('Total tumor volume (mL)': 4.445) and lacks significant mass effect ('midline_shift_present': 'No'), these features reflect its current size rather than its biological grade. The presence of necrosis is the overriding factor pointing to Grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO CNS grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are of a very small, cortically-based left frontal lobe lesion. Despite its small size and lack of significant mass effect, the presence of central necrosis and a thick enhancing margin are highly suggestive of a high-grade glioma. The combination of these features strongly supports a diagnosis of Glioblastoma, IDH-wildtype, WHO CNS grade 4. Note: There is a data inconsistency regarding tumor laterality between the volume calculations (right) and the epicenter/text report (left); this assessment is based on the reported imaging features."
+}

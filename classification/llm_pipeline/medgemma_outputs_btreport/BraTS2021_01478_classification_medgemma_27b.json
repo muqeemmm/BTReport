@@ -1,0 +1,39 @@
+{
+  "subject_id": "BraTS2021_01478",
+  "idh": {
+    "reasoning": "The patient is 39 years old. Younger age (<50) is strongly associated with IDH-mutant gliomas. The tumor is solitary and involves deep white matter, thalamus, caudate, putamen, pallidum, hippocampus, amygdala, accumbens area, ventral DC, and brainstem. While deep white matter involvement can be seen in both IDH-mutant and wildtype tumors, the young age is a significant factor favoring IDH mutation. There are no features strongly suggesting IDH wildtype status (e.g., older age, hypercalcification on CT - not available here). Therefore, based primarily on the young age, the prediction is IDH mutant.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 39 years old and the tumor is predicted to be IDH mutant. 1p/19q co-deletion is almost exclusively found in IDH-mutant astrocytomas (specifically diffuse astrocytomas, IDH-mutant). While the provided metadata does not include specific features strongly indicative of co-deletion (like absence of necrosis or specific enhancement patterns), the young age and likely IDH-mutant status make co-deletion a possibility within the astrocytoma spectrum. However, without more specific imaging features or molecular data confirming it (which we don't have), predicting co-deletion definitively is difficult. Given the lack of strong supporting features in the MRI metadata alone for co-deletion versus non-co-deletion within the IDH-mutant group, I will predict non-codeleted as the more common scenario for IDH-mutant gliomas overall.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The patient is 39 years old with a solitary tumor involving deep structures (thalamus, caudate, putamen, pallidum) and showing cortical involvement, deep white matter invasion, and ependymal invasion. The tumor has significant edema crossing the midline ('Edema crosses midline': 'True') and causes midline shift ('midline_shift_present': 'Yes'). The enhancement quality is described as 'Mild' with a proportion enhancing of 0.55 and a thick enhancing margin (>3mm). There is also significant necrosis (Proportion Necrosis: 47.99%). The combination of young age (suggesting IDH mutant), deep white matter invasion, ependymal invasion, significant edema with midline shift points towards a higher grade glioma. While necrosis can be seen in Grade 2/3 gliomas, its presence alongside deep invasion and significant edema often correlates with Grade 4. Given the predicted IDH mutation status and these aggressive features (deep invasion including ependymal involvement, significant edema causing midline shift), a WHO Grade 4 diagnosis (glioblastoma) is most likely.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Diffuse Astrocytoma",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's age (39) strongly suggests an IDH-mutant glioma. The tumor exhibits features consistent with a higher grade glioma including deep white matter invasion and ependymal involvement. The presence of significant edema crossing the midline further supports a higher grade diagnosis. Based on these findings within the context of WHO CNS5 classification for adult diffuse gliomas: IDH mutation status is predicted as mutant due to young age; Co-deletion status is predicted as non-codeleted as it's more common in IDH mutant gliomas overall without specific supporting features; WHO grade is predicted as Grade IV due to aggressive features like deep invasion and significant edema causing midline shift."
+}

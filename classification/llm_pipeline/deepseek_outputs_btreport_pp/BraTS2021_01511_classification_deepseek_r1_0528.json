@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.95,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (29 years old), which strongly favors IDH-mutant glioma. The tumor is non-enhancing (Enhancement Quality: None), which is common in IDH-mutant tumors. The T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high score (0.867), which is highly specific for IDH-mutant astrocytoma. The proportion of necrosis is high (53.6%), which can occur in both mutant and wildtype but is more common in wildtype; however, the T2-FLAIR mismatch outweighs this. Deep white matter invasion and ependymal invasion are present, which are non-specific.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the frontal lobe cortex, which is typical for oligodendrogliomas (codeleted), but the T2-FLAIR mismatch sign is strongly indicative of astrocytoma (non-codeleted). Additionally, the tumor is midline and multifocal, which are more common in astrocytomas. Ependymal invasion is present, which is rare in oligodendrogliomas. The absence of enhancement also argues against oligodendroglioma, which often shows patchy enhancement.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Based on the MRI metadata, this is likely an IDH-mutant astrocytoma with CNS WHO grade 4. The high proportion of necrosis (53.6%) and the presence of ependymal invasion suggest grade 4, despite the young age. The T2-FLAIR mismatch sign strongly supports IDH-mutant status and astrocytic lineage.",
+  "subject_id": "BraTS2021_01511",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows a high proportion of necrosis (53.6%), which is a feature of glioblastoma (grade 4). Ependymal invasion is present, which is also associated with higher grade. However, the tumor is non-enhancing, which is unusual for grade 4 glioblastoma but can occur in IDH-mutant glioblastomas. The young age (29) is atypical for grade 4, but IDH-mutant glioblastomas can occur in younger patients. The absence of enhancement lowers confidence slightly.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

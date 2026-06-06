@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest imaging pattern favors an IDH-mutant diffuse glioma: the patient is young, the lesion is nonenhancing with no enhancing component, no necrosis, cortical involvement, and a temporal/insular location. These features are more typical of lower-grade IDH-mutant glioma than IDH-wildtype glioblastoma. Features arguing against a confident IDH-mutant call are the reported midline epicenter/deep anatomical overlap and absent T2-FLAIR mismatch, which remove a highly specific astrocytoma imaging clue. Overall, the nonenhancing lower-grade phenotype in a 32-year-old supports IDH mutation.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the temporal and insular distribution favors a non-codeleted astrocytic glioma more than classic oligodendroglioma, which is more often frontal. Nonenhancement and cortical involvement are not specific and can be seen in either candidate. The absent T2-FLAIR mismatch argues against a confident non-codeleted astrocytoma call, because a positive mismatch would have been a stronger astrocytic marker; cortical involvement can also be compatible with oligodendroglioma. Overall, the location provides only weak support for non-codeletion, so the prediction is low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "This is an imaging-only estimate from structured MRI metadata. The absence of enhancement, necrosis, and mass effect supports a lower-grade diffuse glioma phenotype, but definitive integrated diagnosis requires tissue-based molecular testing. The 1p/19q prediction is the least certain because the available metadata lacks highly specific imaging discriminators.",
+  "subject_id": "UCSF-PDGM-257",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Whole Tumor Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The grade assessment favors CNS WHO grade 2 because the lesion is nonenhancing, has no enhancing tumor volume, no necrosis, no midline shift, no ependymal invasion, no deep white-matter invasion, and no multifocality or satellites. These features argue against grade 4 and make grade 3 less likely on imaging. The main caution is that the total FLAIR-abnormal volume is moderate, and imaging alone cannot exclude an anaplastic component. Overall, the lack of enhancement, necrosis, and aggressive spread supports grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

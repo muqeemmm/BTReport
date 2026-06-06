@@ -1,0 +1,38 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7365434522268068, indicating a significant mismatch. This feature is strongly associated with IDH-mutant gliomas. The patient's age (37 years) also supports the likelihood of an IDH mutation, as IDH-mutant gliomas are more common in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutation, but it does not directly indicate 1p/19q co-deletion status. However, the absence of features typically associated with 1p/19q co-deleted tumors (such as oligodendroglioma characteristics) and the presence of a significant non-enhancing component might lean towards non-codeleted status. The 'rim_core_adjacency' and significant necrosis ('Proportion Necrosis': 46.15) could be more indicative of an astrocytic tumor, which is typically non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "rim_core_adjacency"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor exhibits significant necrosis ('Proportion Necrosis': 46.15), a marked enhancement ('Enhancement Quality': 'Marked'), and a large size ('Total tumor volume (mL)': 222.373), which are features commonly associated with higher-grade gliomas. The presence of ependymal invasion and significant mass effect ('midline_shift_present': 'Yes') also supports a higher grade. Given the IDH mutation status is predicted as 'mutant', and considering the aggressive features, the most likely grade is 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0729"
+}

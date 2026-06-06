@@ -1,0 +1,44 @@
+{
+  "subject_id": "UCSF-PDGM-252",
+  "idh": {
+    "reasoning": "The patient's young age (35 years) is a strong predictor for IDH-mutant status. The imaging phenotype, characterized by a complete absence of contrast enhancement and necrosis, further supports this prediction. IDH-wildtype gliomas typically occur in older patients and present with enhancement and/or necrosis. The provided metadata lacks any features suggestive of an IDH-wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the prediction of an IDH-mutant glioma, the differential is between astrocytoma (non-codeleted) and oligodendroglioma (codeleted). The tumor's location in the occipital and parietal lobes is more typical for an astrocytoma, as oligodendrogliomas have a strong predilection for the frontal lobes. While the non-enhancing nature and cortical involvement can be seen in both, the location is the primary differentiating feature available in the metadata. In the absence of features classic for oligodendroglioma (e.g., frontal location, calcification - which cannot be assessed), an astrocytoma is more likely.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The WHO grading of adult-type diffuse gliomas is heavily influenced by imaging features of aggressiveness. This tumor shows a complete lack of contrast enhancement (`ET Volume (mL)` is 0.0) and no evidence of necrosis (`NCR Volume (mL)` is 0.0). These findings are the hallmark of a low-grade glioma. There is also minimal mass effect, with no midline shift reported. Without any radiological signs of high-grade transformation, a WHO grade 2 is the most appropriate prediction. A grade 3 or 4 designation would typically be associated with enhancement and/or necrosis.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a young adult with a solitary, non-enhancing, non-necrotic glioma involving the occipital and parietal lobes. The combination of young age and classic low-grade imaging features strongly suggests an IDH-mutant glioma. The posterior location favors an astrocytoma over an oligodendroglioma. The absence of any aggressive features (enhancement, necrosis) makes a WHO grade 2 diagnosis most likely. The integrated diagnosis is therefore Astrocytoma, IDH-mutant, CNS WHO grade 2."
+}

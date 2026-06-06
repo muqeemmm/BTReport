@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.8350227311506776) is highly suggestive of an IDH mutant glioma. This feature is strongly associated with IDH mutation status in adult-type diffuse gliomas. The patient's age (31 years) also aligns with the demographic more commonly associated with IDH mutant gliomas, which tend to occur in younger adults. The absence of enhancement (Enhancement Quality: 'None', Proportion Enhancing: 0.0) further supports the likelihood of an IDH mutant tumor, as these are less likely to show significant enhancement compared to IDH wildtype gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of an IDH mutant glioma, which is more likely to be associated with 1p/19q co-deletion if it were an oligodendroglioma. However, the absence of enhancement and the presence of ependymal invasion could be seen in either codeleted or non-codeleted tumors. The key determining factor for codeletion status is not directly available from the provided metadata. Given the IDH mutant status predicted, and considering the typical characteristics of oligodendrogliomas (which are codeleted), the presence of cortical involvement and the tumor's location could be seen in both codeleted and non-codeleted tumors. Without more specific information directly indicating codeletion (like calcifications, which are not available), we lean towards the more common IDH mutant astrocytoma profile, which is typically non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor shows a significant proportion of necrosis (Proportion Necrosis: 72.74) and a large size (Total tumor volume: 62.931 mL, NCR Volume: 45.779 mL), which are features more commonly associated with higher-grade gliomas. The presence of ependymal invasion and deep white matter invasion also suggests an aggressive tumor. Given the IDH mutant status, these features are more indicative of a grade 4 astrocytoma rather than a lower grade. The absence of enhancement does not necessarily argue against a high grade, as IDH mutant glioblastomas often show minimal or no enhancement.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01534"
+}

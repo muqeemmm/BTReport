@@ -1,0 +1,47 @@
+{
+  "subject_id": "BraTS2021_00582",
+  "idh": {
+    "reasoning": "The tumor shows marked enhancement (Enhancement Quality), a relatively high proportion of enhancing tissue (Proportion Enhancing) and absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present), all features that favor an IDH-wildtype glioma. The patient is young (Age_years) and the total tumor volume is modest (Total tumor volume (mL)), which are more typical of IDH\u2011mutant tumors and therefore argue against IDH\u2011wildtype. Balancing these opposing cues, the evidence leans toward IDH\u2011wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Age_years",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.62
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Marked enhancement and lack of T2-FLAIR mismatch are characteristic of non\u2011codeleted diffuse gliomas, supporting a 1p/19q non\u2011codeleted status. The strong cortical involvement (Cortical involvement) is sometimes seen in oligodendrogliomas but without the typical imaging hallmarks (e.g., calcifications, minimal enhancement), it does not strongly support codeletion. Hence the balance favors non\u2011codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement (Enhancement Quality) and a high edema proportion (Proportion of Oedema) are typical of high\u2011grade (grade\u202f4) gliomas. However, the necrosis proportion is low (Proportion Necrosis) and the overall tumor volume is modest (Total tumor volume (mL)), which are more compatible with a lower grade (grade\u202f3). Considering the predominance of high\u2011grade imaging signs, grade\u202f4 is the more likely classification.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.63
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI data lack diffusion, perfusion and spectroscopy, and no molecular testing is available. The prediction relies on conventional imaging features, which introduces uncertainty, especially regarding IDH status and exact WHO grade. Additional molecular work\u2011up would be required for definitive classification."
+}

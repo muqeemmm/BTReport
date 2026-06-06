@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 43 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor is located in the frontal lobe, a common site for IDH-mutant gliomas. Enhancement is mild, which is more common in IDH-mutant tumors. The T2-FLAIR mismatch sign is absent (score 0.4 < 0.5), which supports IDH-mutant status. However, mild enhancement argues against IDH-mutant astrocytoma, which typically shows no or minimal enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex (speech motor area), which is more common in astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas typically present with frontal lobe involvement but less commonly involve eloquent areas. The absence of deep white matter invasion argues against oligodendroglioma, which often infiltrates white matter. However, frontal lobe location is common in both.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is classified as Astrocytoma, IDH-mutant, CNS WHO grade 4. Note that grade 4 is assigned due to necrosis or microvascular proliferation, but necrosis proportion is 0.0. Enhancement is mild, which may not meet criteria for grade 4. Confidence in grade is moderate due to conflicting features.",
+  "subject_id": "UCSF-PDGM-244",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows mild enhancement, which is atypical for grade 4 IDH-mutant astrocytoma that usually requires microvascular proliferation or necrosis. Proportion necrosis is 0.0, and necrosis volume is 0 mL. However, the tumor involves eloquent cortex (speech motor), which may indicate higher grade. Total tumor volume is large (27.6 mL), but mostly edema. The enhancing tumor volume is very small (0.084 mL). Without necrosis or strong enhancement, grade 4 is less likely.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

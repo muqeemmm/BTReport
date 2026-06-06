@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (28 years old), which is more common in IDH-mutant gliomas. The tumor is nonenhancing (Enhancement Quality: None, Proportion Enhancing: 0.0), which is typical for IDH-mutant gliomas. However, the absence of deep white matter invasion (Deep WM invasion: Absent) and cortical involvement (Cortical involvement: Absent) are less common in IDH-mutant gliomas, which often involve white matter.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region, which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas (codeleted). Oligodendrogliomas often involve frontal lobes and may show calcifications, but calcifications are not assessed here. The absence of enhancement also slightly favors astrocytoma over oligodendroglioma, though both can be nonenhancing.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is nonenhancing and located in the temporal-cortex region in a young patient, suggesting an IDH-mutant astrocytoma. However, the absence of deep white matter invasion and cortical involvement is atypical for IDH-mutant gliomas, reducing confidence. The temporal location argues against 1p/19q codeletion. The absence of necrosis and enhancement suggests CNS WHO grade 2.",
+  "subject_id": "EGD-0378",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) and no necrosis (NCR Volume: 0.0, Proportion Necrosis: 0.0), which are features of lower-grade gliomas (grade 2). However, the presence of edema (ED Volume: 0.898 mL) and midline shift (midline_shift_present: Minimal) can occur in both low and high grades, but are not specific for grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "NCR Volume",
+      "Proportion Necrosis"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "patient_0125",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is relatively young (26 years) with a glioma in the frontal lobe, which is a common location for IDH-mutant gliomas. The tumor is described as mildly enhancing and solitary, with no ependymal invasion or deep white matter invasion. These features are consistent with an IDH-mutant glioma. The presence of cortical involvement also supports this, as IDH-mutant gliomas often involve the cortex. While the enhancement quality is mild, the presence of any enhancement suggests some degree of neoangiogenesis, but this is not strongly indicative of IDH status on its own.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Proportion Enhancing",
+        "Thickness of enhancing margin"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the frontal lobe and involves the cortex, which is typical for 1p/19q co-deleted oligodendrogliomas. The patient's age and the tumor's mild enhancement quality are also consistent with this subtype. The absence of deep white matter invasion and ependymal invasion further supports this prediction. While the proportion of enhancement is relatively low, the presence of enhancement and the tumor's cortical involvement are characteristic of 1p/19q co-deleted tumors.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality",
+        "Deep WM invasion",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Proportion Enhancing"
+      ],
+      "prediction": "codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor has a significant necrotic component (Proportion Necrosis = 68.91%), which is typically associated with higher-grade gliomas. However, the enhancement is described as mild, and the tumor does not cross the midline or show significant mass effect (minimal midline shift). The presence of necrosis and the relatively large tumor size (Total tumor volume = 40.433 mL) suggest a high-grade tumor. The age of the patient and the tumor's location are not strongly indicative of grade on their own, but the presence of necrosis is a key feature of glioblastoma (WHO grade 4).",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "n_slices_with_shift",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "EGD-0090"
+}

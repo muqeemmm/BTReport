@@ -1,0 +1,46 @@
+{
+  "id": "patient_1026",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (58 years) and the presence of a large, enhancing tumor with necrosis (Proportion Necrosis: 18.67%) and significant involvement of deep structures (ventricles, thalamus, corpus callosum) are more typical of IDH wildtype glioblastoma. The tumor's aggressive features, such as ependymal invasion and crossing midline, also support this classification. IDH mutant gliomas are more commonly associated with younger age and less aggressive features.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Region Proportions",
+        "Ependymal (ventricular) Invasion",
+        "CET Crosses midline"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The tumor's location (involving ventricles, thalamus, and corpus callosum) and its aggressive features (large size, necrosis, ependymal invasion) are not typical for 1p/19q codeleted gliomas, which are more commonly found in the frontal lobe. The presence of necrosis and the high-grade features also argue against 1p/19q codeletion, as codeleted tumors tend to be more oligodendroglial in nature and less likely to show necrosis. Thus, non-codeleted is more likely.",
+      "supporting_features": [
+        "Region Proportions",
+        "Proportion Necrosis",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 18.67%), marked enhancement, and significant tumor volume (Total tumor volume: 43.553 mL) with ependymal invasion and deep white matter invasion are characteristic of high-grade gliomas. The tumor's aggressive features, such as crossing midline and involvement of multiple deep structures, further support a high-grade classification. These features are most consistent with a WHO grade 4 tumor.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "Ependymal (ventricular) Invasion",
+        "CET Crosses midline",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_01124"
+}

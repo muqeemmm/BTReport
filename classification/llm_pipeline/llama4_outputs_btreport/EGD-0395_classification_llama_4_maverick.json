@@ -1,0 +1,47 @@
+{
+  "id": "patient_1309",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (70 years) and the presence of a large, enhancing tumor with necrosis and significant mass effect (midline shift, ventricular asymmetry) are more typical of IDH wildtype glioblastoma, which is common in older adults. The tumor's aggressive features, such as ependymal invasion, deep white matter invasion, and marked enhancement, also support this prediction. IDH mutant gliomas are more commonly associated with younger patients and often have a more favorable prognosis.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.95
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect, along with the patient's age, is more typical of IDH wildtype glioblastoma, which is not associated with 1p/19q codeletion. IDH mutant gliomas with 1p/19q codeletion (oligodendrogliomas) are more likely to present in younger patients and have a more indolent course. The tumor's aggressive features and lack of characteristics typical of oligodendrogliomas (e.g., calcifications, which are not assessed here due to data constraints) argue against codeletion.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.9
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor exhibits aggressive features such as marked enhancement, necrosis, significant mass effect (midline shift, ventricular asymmetry), ependymal invasion, and deep white matter invasion. These characteristics are typical of high-grade gliomas. The presence of necrosis and marked enhancement are particularly indicative of glioblastoma, which is WHO grade 4. The tumor's large size and significant mass effect also support a high-grade classification.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.98
+    }
+  ],
+  "subject_id": "EGD-0395"
+}

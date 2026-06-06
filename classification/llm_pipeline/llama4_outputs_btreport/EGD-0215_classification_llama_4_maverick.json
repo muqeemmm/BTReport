@@ -1,0 +1,46 @@
+{
+  "id": "patient_1233",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (61 years) and the absence of enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) are more commonly associated with IDH wildtype gliomas, as IDH mutant gliomas are more frequently seen in younger patients and sometimes show different enhancement patterns. The tumor's characteristics, such as being non-enhancing and having a significant edema volume, are consistent with a glioblastoma, IDH wildtype, which is more common in older adults.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Enhancing"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The absence of enhancement and the presence of significant edema without necrosis or enhancement ('NCR Volume (mL)': 0.0, 'ET Volume (mL)': 0.0, 'ED Volume (mL)': 33.269) are not typical for 1p/19q codeleted tumors, which are more likely to be oligodendrogliomas and often show calcifications or heterogeneous enhancement. The lack of specific features associated with 1p/19q codeletion (e.g., calcifications, which are not available but often inferred from other sequences) and the clinical presentation lean towards a non-codeleted status.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "NCR Volume (mL)",
+        "ET Volume (mL)",
+        "ED Volume (mL)"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The significant edema volume (33.269 mL) and the patient's age (61 years) are indicative of a high-grade glioma. The absence of enhancement ('Enhancement Quality': 'None') might initially suggest a lower grade, but the presence of significant edema and the age of the patient are more aligned with a WHO grade 4 tumor, likely glioblastoma, IDH wildtype. The lack of necrosis or enhancement does not rule out glioblastoma as some glioblastomas may have minimal or no enhancement.",
+      "supporting_features": [
+        "age_years",
+        "ED Volume (mL)",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "ET Volume (mL)",
+        "NCR Volume (mL)"
+      ],
+      "prediction": 4,
+      "confidence": 0.75
+    }
+  ],
+  "subject_id": "EGD-0215"
+}

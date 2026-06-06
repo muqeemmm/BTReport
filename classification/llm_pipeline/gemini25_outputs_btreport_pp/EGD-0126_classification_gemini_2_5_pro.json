@@ -1,0 +1,49 @@
+{
+  "subject_id": "EGD-0126",
+  "idh": {
+    "reasoning": "The patient's advanced age (69 years) is a very strong predictor for IDH-wildtype status. The imaging phenotype overwhelmingly supports this, with features classic for glioblastoma: marked, thick-rimmed enhancement, central necrosis, significant mass effect, and deep gray matter and ependymal invasion. A single, powerful contradictory feature is the reported T2-FLAIR mismatch, which is highly specific for IDH-mutant astrocytoma. However, this sign can be mimicked by central necrosis. Given the overwhelming weight of demographic and multiple imaging features pointing to a high-grade, aggressive tumor, an IDH-wildtype glioma is the most probable diagnosis, despite the conflicting T2-FLAIR mismatch finding.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is performed independently. The imaging features are highly inconsistent with an oligodendroglioma (the only 1p/19q co-deleted entity). Specifically, the presence of marked, thick-rimmed enhancement and central necrosis are hallmarks of high-grade astrocytic tumors and are atypical for oligodendroglioma. Furthermore, the reported T2-FLAIR mismatch sign, while typically associated with IDH-mutant tumors, is specific to the astrocytic lineage, thereby arguing strongly against a 1p/19q co-deleted (oligodendroglial) tumor. There are no specific imaging features to suggest a co-deleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The WHO grade is assessed independently based on imaging correlates of histologic features. The presence of marked contrast enhancement and, critically, central necrosis (`Proportion Necrosis` of 4.53%, `NCR Volume (mL)` of 6.922) are strong radiological surrogates for microvascular proliferation and necrosis, which define a WHO grade 4 glioma. Supporting features of high-grade biology include the large tumor volume, significant mass effect (`midline_shift_present`), and ependymal invasion. There are no imaging features to suggest a lower grade (2 or 3). The findings are classic for a grade 4 tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult with a large, necrotic, ring-enhancing mass, classic for Glioblastoma, IDH-wildtype, CNS WHO grade 4. A reported T2-FLAIR mismatch sign is a significant contradictory finding for IDH-wildtype status, but given the strength of all other clinical and imaging features, it is considered less likely to be a true indicator of IDH mutation in this specific context."
+}

@@ -1,0 +1,50 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 81 years old, which is atypical for IDH-mutant gliomas that are more common in younger patients. However, the tumor location involves temporal, cortex, insula, and frontal lobes, which is common in IDH-mutant tumors. Additionally, the T2-FLAIR mismatch score is 0.6478, which is above 0.5, suggesting a possible T2-FLAIR mismatch sign, which is highly specific for IDH-mutant, 1p/19q non-codeleted gliomas. The tumor is solitary with ependymal invasion present, which can occur in both mutant and wildtype. The proportion necrosis is low (6.75%), which is more common in IDH-mutant tumors. The enhancement quality is marked, which is more typical for wildtype, but the thick enhancing margin (>3mm) and rim-core adjacency fraction high (0.98) suggest a well-defined tumor border, which is more common in mutant tumors. Overall, the evidence for mutant is stronger despite the advanced age.",
+    "supporting_features": [
+      "Tumor Location",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "rim_core_adjacency"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves temporal, cortex, insula, and frontal lobes, which is more typical for astrocytomas (non-codeleted) rather than oligodendrogliomas (codeleted). Oligodendrogliomas are more commonly frontal and less likely to involve temporal lobes or cortex extensively. The T2-FLAIR mismatch score is 0.6478, which is above 0.5, indicating a possible T2-FLAIR mismatch sign, which is highly specific for IDH-mutant astrocytomas (non-codeleted). The tumor has ependymal invasion and deep white matter invasion, which can occur in both but are not specific. The proportion necrosis is low, which is more common in astrocytomas. No features strongly suggest oligodendroglioma, such as calcifications (not assessed) or frontal predominance. Therefore, non-codeleted is more likely.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "The tumor is large (129.84 mL) with significant edema (70.998 mL) and midline shift (max 7mm). The patient is elderly (81 years), which is unusual for IDH-mutant tumors but the imaging features suggest IDH-mutant astrocytoma. Confidence is moderate due to conflicting age and some enhancement features.",
+  "subject_id": "BraTS2021_00132",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows marked enhancement and necrosis (6.75%), which are features of high-grade glioma. The proportion enhancing is 38.57%, which is substantial. The tumor has ependymal invasion, deep white matter invasion, and involves eloquent areas (speech motor and vision), which are associated with higher grade. The WHO grade 4 glioblastomas typically have necrosis and enhancement, but the proportion necrosis here is relatively low (6.75%), which might suggest grade 3. However, the presence of necrosis, even if small, and marked enhancement support grade 4. The tumor volume is large (129.84 mL), which is more typical for grade 4. The transition zone thickness is thin (mean ~0.86mm on FLAIR), which is associated with higher grade tumors. Therefore, grade 4 is predicted, but confidence is moderate due to low necrosis proportion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Eloquent Brain Involvement",
+      "Total tumor volume (mL)",
+      "Transition Zone Thickness (FLAIR)"
+    ]
+  }
+}

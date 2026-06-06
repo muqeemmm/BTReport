@@ -1,0 +1,81 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata favors IDH-wildtype because the patient is older, and the lesion shows aggressive MRI morphology with marked enhancement, a thick enhancing margin, a large enhancing component, necrotic/non-enhancing tumor component, edema, and deep white-matter invasion. These features are more typical of IDH-wildtype glioblastoma-spectrum tumors than lower-grade IDH-mutant astrocytoma. Evidence against IDH-wildtype includes the insular/frontal/cortical location and cortical involvement, which can be seen with IDH-mutant diffuse gliomas, and the lesion is solitary. Overall, the age and enhancing/necrotic phenotype outweigh the location-based counterevidence, so the best prediction is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest MRI evidence favors non-codeletion because the tumor has marked, thick enhancement with a large enhancing fraction, necrotic/non-enhancing component, edema, and deep white-matter invasion, which are less characteristic of classic oligodendroglioma morphology. Evidence supporting possible codeletion is the frontal/insular/cortical involvement, since oligodendrogliomas commonly involve frontal cortex/subcortical regions. However, without calcification-sensitive imaging or molecular data, the enhancing necrotic invasive phenotype weighs more toward a non-codeleted diffuse glioma. Therefore, the best prediction is non-codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "age_years"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured T1/T2/FLAIR/T1-Gd metadata. Absence of DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification assessment limits molecular inference, especially for 1p/19q status. Imaging phenotype is most consistent with an enhancing necrotic high-grade adult-type diffuse glioma.",
+  "subject_id": "BraTS2021_00737",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "midline_shift_present",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "The WHO grade assessment from MRI strongly favors grade 4 because the lesion is mostly enhancing with marked enhancement, a thick enhancing margin, substantial enhancing volume, a necrotic/non-enhancing component, surrounding edema, and deep white-matter invasion. These are classic imaging markers of high-grade aggressive glioma and are more compatible with grade 4 than grade 2 or grade 3. Features arguing against the most aggressive pattern include no midline crossing of enhancement or edema, absent ependymal invasion, solitary disease, absent satellites, and no midline shift, but these do not exclude grade 4. Overall, the enhancing necrotic phenotype supports CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

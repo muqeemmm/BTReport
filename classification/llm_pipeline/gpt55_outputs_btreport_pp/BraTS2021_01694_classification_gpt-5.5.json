@@ -1,0 +1,89 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "volumes_ideal_midline",
+      "volumes_patient_midline"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The MRI phenotype favors IDH-wildtype disease: the patient is older, and the tumor shows aggressive high-grade features including marked enhancement, a thick enhancing margin, a substantial enhancing component, necrosis, extensive edema, multifocality, ependymal invasion, deep white matter invasion, and large total tumor volume. Absence of a T2-FLAIR mismatch also does not provide the classic imaging support for IDH-mutant astrocytoma. Features that argue against a confident wildtype call are cortical involvement, which can be seen in IDH-mutant diffuse gliomas, and an internal inconsistency in the enhancement metadata where some midline-volume fields list enhancing tumor volume as zero despite the dedicated enhancing-volume fields showing a large enhancing component. Overall, the balance of metadata supports IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, 1p/19q-non-codeleted, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "NCR Volume (mL)",
+      "n_components_nonenhancing"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessed independently, the imaging phenotype is more suggestive of a non-codeleted diffuse glioma than an oligodendroglioma: the lesion is in an older patient and is parietal-occipital rather than showing a classic frontal predominance, with marked enhancement, thick enhancing margin, necrosis, extensive edema, multifocality, ependymal invasion, and deep white matter invasion. These features are less typical for a 1p/19q-codeleted oligodendroglioma. Features that temper confidence are cortical involvement and a nonenhancing component, because oligodendrogliomas can be cortical-subcortical and may have substantial nonenhancing tumor. Overall, the metadata favors non-codeleted status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The predictions are based only on conventional MRI metadata without diffusion, perfusion, spectroscopy, SWI/GRE, or histologic/genomic data. There is a notable inconsistency between dedicated enhancement fields showing substantial enhancement and some midline-volume fields reporting zero enhancing tumor; this slightly lowers confidence but does not change the overall aggressive imaging impression.",
+  "subject_id": "BraTS2021_01694",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "volumes_ideal_midline",
+      "volumes_patient_midline"
+    ],
+    "prediction": 4,
+    "reasoning": "Assessed independently for grade, the MRI strongly supports CNS WHO grade 4 behavior: there is marked contrast enhancement, a thick enhancing margin, a large enhancing tumor volume, necrosis, extensive edema, multifocal disease, ependymal invasion, deep white matter invasion, and a large overall tumor volume. These are far more compatible with grade 4 than grade 2 or grade 3. Features that modestly argue against or reduce certainty are absence of reported midline shift, absence of ventricular asymmetry, no crossing of enhancing tumor or edema across midline, and conflicting midline-volume fields that list enhancing tumor volume as zero despite other fields showing a substantial enhancing component. Overall, the metadata supports grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Tumor Core Volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,71 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "For IDH status considered independently, the metadata has several features that are more typical of an IDH-mutant diffuse glioma: age_years is 45 rather than elderly, Cortical involvement is present, the Region Proportions and Tumor Location emphasize frontal_lobe, temporal, insula and cortex involvement, and enhancement is described as mild with a very small ET Volume (mL). These support an infiltrative lower-enhancing adult diffuse glioma phenotype. Against IDH-mutant status, there are aggressive features that can be seen in IDH-wildtype glioblastoma, including midline_shift_present, large max_shift_mm, Deep WM invasion, Ependymal (ventricular) Invasion, Edema crosses midline, high Proportion Necrosis, and large Total tumor volume (mL). Overall the age and cortico-fronto-insular, mildly enhancing pattern slightly outweigh the aggressive features, so the best estimate is IDH-mutant, but with limited confidence.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the strongest metadata support a non-codeleted diffuse glioma pattern: the lesion has substantial insula and temporal involvement in Region Proportions and Tumor Location, Deep WM invasion is present, Ependymal (ventricular) Invasion is present, Edema crosses midline, Proportion Necrosis is high, and the tumor is very large by Total tumor volume (mL). These features favor an infiltrative astrocytic phenotype over a classic oligodendroglioma pattern. Features that argue toward possible codeletion include age_years of 45, Cortical involvement, mild Enhancement Quality, and frontal_lobe involvement within Region Proportions. However, the invasive deep/ependymal pattern and necrotic burden weigh more strongly toward non-codeleted.",
+    "supporting_features": [
+      "Region Proportions",
+      "Tumor Location",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histomolecular data. The IDH call is the most uncertain because age and mild enhancement favor IDH-mutant disease, while necrosis, edema, mass effect, and ependymal/deep invasion are aggressive features. Tissue diagnosis with IDH testing, ATRX/p53, TERT, 1p/19q, and CDKN2A/B status remains required.",
+  "subject_id": "EGD-0655",
+  "who_grade": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently, the MRI metadata strongly suggest a high-grade tumor, most consistent with grade 4: Proportion Necrosis is high, Thickness of enhancing margin is greater than 3 mm, Total tumor volume (mL) is large, ED Volume (mL) is substantial, midline_shift_present is present with max_shift_mm up to 8 mm, Deep WM invasion is present, Ependymal (ventricular) Invasion is present, and Edema crosses midline. These are aggressive imaging features. Findings arguing against grade 4 include mild Enhancement Quality, very small ET Volume (mL), and low Proportion Enhancing, which make the enhancing component less classic for a bulky ring-enhancing glioblastoma. Despite this, the necrotic burden, mass effect, edema, and invasive pattern support grade 4 over grade 2 or 3.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

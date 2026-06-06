@@ -1,0 +1,81 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata contains several imaging features that favor an IDH-wildtype diffuse glioma phenotype: substantial nonenhancing/necrotic burden, marked edema, mass effect with midline shift, ependymal invasion, deep white-matter invasion, and satellite disease. These are more typical of biologically aggressive glioma than of a lower-grade IDH-mutant tumor. Features arguing against IDH-wildtype include frontal cortical involvement and only mild, very small-volume enhancement, which can be seen in IDH-mutant astrocytoma or oligodendroglioma. On balance, the aggressive infiltrative and mass-effect features outweigh the frontal cortical/mild-enhancement features, so the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.63,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the frontal cortical location and mild, small-volume enhancement are features that can support an oligodendroglioma-like, 1p/19q-codeleted pattern. However, the extensive edema, sizable nonenhancing/necrotic component, deep white-matter invasion, ependymal invasion, midline-crossing edema/nonenhancing tumor, and satellite disease are less typical for classic 1p/19q-codeleted oligodendroglioma and instead favor a non-codeleted diffuse glioma. Because there are meaningful oligodendroglioma-like location features but multiple aggressive/infiltrative features against codeletion, the best estimate is non-codeleted with moderate confidence.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_patient_midline",
+      "Edema crosses midline",
+      "Multiple satellites present",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional MRI metadata without diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, age, or histology. The frontal cortical location and mild enhancement introduce some uncertainty, particularly for IDH-mutant/1p19q-codeleted tumor, but the necrotic, edematous, invasive, satellite, and mass-effect features favor an aggressive IDH-wildtype non-codeleted grade 4 diagnosis. There is also laterality inconsistency between segmentation-derived left-sided volume predominance and the text/epicenter fields reporting a right frontal lesion.",
+  "subject_id": "EGD-0495",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade considered independently, the strongest features indicate high-grade behavior: a large tumor volume, substantial nonenhancing/necrotic component, marked edema, midline shift, ependymal invasion, deep white-matter invasion, and satellite disease. These findings argue much more strongly for grade 4 than grade 2 or grade 3. Features arguing against grade 4 are the mild enhancement, very small enhancing volume, and low enhancing proportion, which could be seen in lower-grade or less avidly enhancing tumors. However, the necrotic/infiltrative burden and mass-effect features outweigh the limited enhancement, so the best estimate is CNS WHO grade 4.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

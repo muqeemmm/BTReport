@@ -1,0 +1,35 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.847, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in adult-type diffuse gliomas according to the WHO CNS5 classification. Other features like age and tumor location are not as strongly indicative of IDH status in this case.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutant status, which is often associated with either 1p/19q codeletion or non-codeletion. However, T2-FLAIR mismatch is more commonly seen in astrocytomas (non-codeleted). The absence of features like ependymal invasion or significant deep white matter invasion doesn't strongly support or refute codeletion. Given the IDH mutant status predicted, and without strong evidence for codeletion (like specific morphological features or genetic data), the default assumption leans towards non-codeleted based on the presence of T2-FLAIR mismatch.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows a significant necrotic component (Proportion Necrosis: 66.46%) and a relatively mild enhancement quality. The presence of necrosis typically indicates a higher grade. The tumor's large size and involvement of the frontal lobe are also noted. While the enhancement quality is mild, the presence of necrosis and the overall tumor volume are more indicative of a higher grade. Given these features, a grade 4 is likely due to the high proportion of necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01508"
+}

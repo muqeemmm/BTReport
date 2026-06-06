@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (71 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 0.55%) and a relatively large edema volume (ED Volume: 15.368 mL) are more typical of glioblastoma, which is commonly IDH wildtype. The T2-FLAIR mismatch score is 0.745041628929494, which is not strongly indicative of an IDH mutant astrocytoma as scores closer to 1 are more suggestive. The presence of cortical involvement and the tumor's location in the temporal cortex region also provide context, but are not definitive for IDH status. Overall, the evidence leans towards IDH wildtype due to the patient's age and tumor characteristics.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "T2-FLAIR Mismatch Score",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a T2-FLAIR mismatch is more commonly associated with IDH-mutant astrocytomas, which are typically 1p/19q non-codeleted. Given the likely IDH wildtype status from the first prediction, the 1p/19q codeletion status becomes less relevant as glioblastomas (IDH wildtype) are generally non-codeleted. The tumor's characteristics and the patient's age support a glioblastoma diagnosis, which is typically non-codeleted.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "grade": {
+    "reasoning": "The patient's age, the presence of necrosis (Proportion Necrosis: 0.55%), and the tumor's enhancement characteristics (Mild Enhancement Quality, Thickness of enhancing margin >3mm) are indicative of a high-grade glioma. The large edema volume (ED Volume: 15.368 mL) and the significant tumor volume (Total tumor volume: 16.843 mL) further support a diagnosis of glioblastoma, WHO grade 4. The absence of features like ependymal invasion or deep white matter invasion does not contradict this, as glioblastoma can present variably.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0088"
+}

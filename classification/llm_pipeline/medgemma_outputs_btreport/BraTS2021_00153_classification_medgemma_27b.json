@@ -1,0 +1,41 @@
+{
+  "subject_id": "BraTS2021_00153",
+  "idh": {
+    "reasoning": "The patient is 62 years old. Older age (>55) is associated with IDH-wildtype gliomas, while younger age (<40) is associated with IDH-mutant gliomas. The available MRI metadata does not provide features strongly indicative of either IDH-mutant (e.g., low grade features, specific morphology) or IDH-wildtype (e.g., necrosis, rapid growth markers). The tumor is large (37.879 mL), solitary, and involves the cortex and deep white matter (implied by cortical involvement and size), which can be seen in both types but larger size and cortical involvement are more common in higher grade tumors which are often IDH-wildtype in older adults. However, the lack of specific features like necrosis or significant edema crossing the midline argues against a definitive IDH-wildtype diagnosis based solely on MRI. Given the age and lack of definitive features pointing towards IDH-mutant status, IDH-wildtype is slightly more probable, but the evidence is weak.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided MRI metadata does not contain any information regarding 1p/19q co-deletion status. This status cannot be determined from the available sequences (T1w, T2w, T2-FLAIR, T1-Gd) or derived metrics.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 62 years old with a large tumor volume (37.879 mL). The tumor shows cortical involvement and marked enhancement with a thick enhancing margin (>3mm). While deep white matter invasion is absent and ependymal invasion is absent, the large size, cortical involvement, marked enhancement, and patient age suggest a high-grade glioma. The presence of necrosis (Proportion Necrosis: 30.36%) further supports a higher grade. Although edema crossing the midline is absent and ventricular asymmetry is absent, these features are not definitive for grading. Given the combination of age, large size, cortical involvement, marked enhancement with thick margin, and necrosis in an adult patient, WHO Grade 4 is the most likely diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Asymmetrical Ventricles",
+      "Edema crosses midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

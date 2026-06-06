@@ -1,0 +1,36 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8082656955580532, indicating a high likelihood of IDH mutation. The patient's age (45 years) is also within a range where IDH mutations are more common. The tumor's characteristics, such as its location and imaging features, do not strongly argue against IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutant glioma. For IDH mutant gliomas, the presence of 1p/19q co-deletion is often associated with oligodendroglial features. However, the provided metadata does not directly indicate 1p/19q co-deletion status. The tumor's involvement of multiple regions and its complex imaging characteristics could be seen in either codeleted or non-codeleted tumors. Given the lack of direct evidence, the prediction relies on the typical distribution of molecular subtypes in IDH mutant gliomas, where non-codeleted (astrocytoma) cases are relatively common.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows significant mass effect with midline shift, ependymal invasion, and a large necrotic component (Proportion Necrosis: 66.96%), which are features often associated with higher-grade gliomas. The presence of necrosis and the tumor's aggressive imaging features suggest a high-grade tumor. Given the IDH mutation status is predicted to be 'mutant', the high-grade nature likely corresponds to CNS WHO grade 4 (IDH-mutant glioblastoma).",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0655"
+}

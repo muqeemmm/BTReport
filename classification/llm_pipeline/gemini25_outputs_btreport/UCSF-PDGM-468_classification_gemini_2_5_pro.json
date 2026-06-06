@@ -1,0 +1,45 @@
+{
+  "subject_id": "UCSF-PDGM-468",
+  "idh": {
+    "reasoning": "The patient's age of 38 is a strong predictor for IDH-mutant status, as these tumors are most common in younger adults. The imaging phenotype, specifically a completely non-enhancing and non-necrotic tumor ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0, 'Proportion Necrosis': 0.0), is classic for an IDH-mutant glioma. IDH-wildtype gliomas (glioblastoma) typically occur in older patients and present with significant enhancement and necrosis, both of which are absent here. There are no contradicting features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is based on features that differentiate IDH-mutant astrocytomas (non-codeleted) from oligodendrogliomas (codeleted). While the frontal lobe involvement is common in both, the involvement of the insula ('Region Proportions') and deep gray matter structures ('Anatomical Overlap Regions' including caudate and putamen) is more characteristic of an astrocytoma. The infiltrative nature suggested by 'Deep WM invasion' also favors astrocytoma over the typically more circumscribed oligodendroglioma. Therefore, the evidence points towards a non-codeleted status.",
+    "supporting_features": [
+      "Region Proportions",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The primary imaging features for grading are enhancement and necrosis. The complete absence of both ('Enhancement Quality': 'None', 'Proportion Necrosis': 0.0) is the strongest evidence for a low-grade (WHO grade 2) tumor. However, there is significant mass effect ('midline_shift_present': 'Yes', 'max_shift_mm': 7.0) and a large tumor volume ('Total tumor volume (mL)': 65.423), which are features more commonly associated with higher-grade tumors due to faster growth. On balance, the lack of aggressive signal characteristics (enhancement/necrosis) is a more reliable indicator of lower grade than secondary features like mass effect, which can accumulate over time even with slow growth. Therefore, grade 2 is the most probable diagnosis, but with some uncertainty due to the mass effect.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "A 38-year-old male with a large, non-enhancing, non-necrotic glioma in the left frontal lobe, insula, and deep gray matter. The combination of young age and lack of aggressive imaging features strongly supports an IDH-mutant glioma. The specific location, particularly insular and deep gray involvement, is most consistent with an astrocytoma (1p/19q non-codeleted). The absence of enhancement points to a lower grade, making WHO grade 2 the most likely diagnosis, despite significant mass effect which introduces some uncertainty."
+}

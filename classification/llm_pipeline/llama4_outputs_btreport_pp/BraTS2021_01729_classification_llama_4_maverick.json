@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.7554134050725014) is highly suggestive of an IDH mutant glioma. This feature is strongly associated with IDH mutation status in adult-type diffuse gliomas. Other features like the patient's age (31 years) and the tumor's characteristics (e.g., location, involvement of multiple structures) are also consistent with IDH mutant gliomas, which tend to occur in younger patients. The absence of features strongly indicative of IDH wildtype (such as high-grade necrosis or significant enhancement) further supports this prediction, although they are not definitive on their own.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a T2-FLAIR mismatch is more commonly associated with IDH-mutant astrocytomas, which are typically 1p/19q non-codeleted. While not a direct indicator, this feature leans against 1p/19q codeletion. Additionally, the tumor's characteristics (e.g., location, involvement) do not strongly suggest 1p/19q codeletion, which is more commonly seen in oligodendrogliomas. The absence of clear indicators for codeletion (like specific imaging features or molecular markers) and the presence of features more typical of astrocytomas support the prediction of non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 48.94%) and has a large size (Total tumor volume: 234.97 mL), with a notable mass effect (midline shift present, n_slices_with_shift: 125, max_shift_mm: 9.0). These features are indicative of a high-grade glioma. The presence of ependymal invasion and multiple satellites also suggests aggressive tumor behavior. While the enhancement quality is mild, the thickness of the enhancing margin (>3mm) and the presence of necrosis are concerning for a higher grade. The overall clinical and imaging picture supports a diagnosis of a high-grade glioma, likely WHO grade 4, given the significant necrosis and mass effect.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01729"
+}

@@ -1,0 +1,51 @@
+{
+  "subject_id": "EGD-0521",
+  "idh": {
+    "reasoning": "The patient's young age (39 years) is a strong predictor for IDH-mutant status. This is further supported by the tumor's imaging characteristics, including a frontal lobe location, mild enhancement quality, and very low proportions of enhancement (5.01%) and necrosis (0.84%). The absence of deep white matter invasion also favors an IDH-mutant glioma. However, a significant contradicting feature is the multifocal nature of the tumor ('Multifocal' with 'Number of lesions': 3), which is more classically associated with IDH-wildtype glioblastoma. Despite this, the combination of young age and predominantly non-aggressive imaging features (low enhancement/necrosis) weighs more heavily towards an IDH-mutant prediction.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of 1p/19q status is challenging due to overlapping features. The frontal lobe cortical location is common for both oligodendroglioma (codeleted) and astrocytoma (non-codeleted). There are no classic differentiating features provided, such as well-defined margins or calcifications, that would strongly suggest an oligodendroglioma. The multifocal presentation is somewhat more common in astrocytomas than in oligodendrogliomas. Given the ambiguity and the slight preference for astrocytoma based on multifocality, a non-codeleted status is predicted, but with very low confidence.",
+    "supporting_features": [
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis, even in a small volume ('NCR Volume (mL)': 0.406), is a key histopathological feature that defines a diffuse glioma as CNS WHO grade 4. This is strongly supported by the multifocal nature of the disease ('Multifocal or Multicentric'). While other features like the absence of significant midline shift and the mild enhancement quality might suggest a lower grade, the presence of necrosis and multifocality are overriding factors for a grade 4 designation. The presence of contrast enhancement ('ET Volume (mL)': 2.429) would, at a minimum, suggest grade 3, but the necrosis elevates the grade to 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents conflicting features. The patient's young age and predominantly non-enhancing tumor characteristics strongly suggest an IDH-mutant glioma. However, the multifocality and the presence of a necrotic component are definitive indicators of high-grade disease, pointing to WHO grade 4. The combination of these findings results in a predicted diagnosis of Astrocytoma, IDH-mutant, CNS WHO grade 4. The primary alternative diagnosis, given the multifocality, is Glioblastoma, IDH-wildtype, but this is considered less likely due to the patient's age. Confidence in the molecular markers is consequently reduced."
+}

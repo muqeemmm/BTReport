@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma: age_years is 38, and Tumor Location/Region Proportions show a frontal, insular, cortical-based infiltrative lesion with Cortical involvement, a pattern commonly associated with IDH-mutant glioma. Enhancement Quality is only mild, ET Volume (mL) and Proportion Enhancing are very small, midline_shift_present is minimal, and the lesion is solitary without Ependymal (ventricular) Invasion, all of which argue against a typical aggressive IDH-wildtype glioblastoma phenotype. Features that could support IDH-wildtype biology include Deep WM invasion, large Total tumor volume (mL)/Lesion Sizes APxTVxCC (cm), and high Proportion Necrosis, but these are outweighed by the younger age and predominantly mildly enhancing cortical-frontal/insular presentation. Therefore, the best independent prediction is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.58,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "Assessed independently, the evidence for 1p/19q co-deletion is suggestive but not definitive. Codeletion is supported by age_years of 38, Cortical involvement, and a frontal cortical component in Tumor Location/Region Proportions, with Enhancement Quality only mild and a very small Proportion Enhancing, a pattern compatible with oligodendroglioma. The lesion is also solitary by Multifocal or Multicentric and Number of lesions. Against codeletion, Tumor Location/Region Proportions also include substantial insular and temporal involvement, Deep WM invasion is present, Side of Tumor Epicenter is listed as midline, and Total tumor volume (mL) is large, which are less specific and can fit non-codeleted astrocytoma. Overall, the available MRI metadata slightly favors codeletion, but the confidence is limited because the discriminating imaging evidence is incomplete and mixed.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  },
+  "overall_comment": "Predictions are based only on the provided structural MRI metadata. The molecular calls, especially 1p/19q status, remain uncertain from imaging alone and require tissue-based molecular testing. The grade estimate is limited by conflicting metadata: very small enhancing volume and minimal shift argue against a classic grade 4 imaging phenotype, while the recorded necrosis-related field raises concern for higher grade biology.",
+  "subject_id": "EGD-0241",
+  "who_grade": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "reasoning": "Assessed independently, the grade is most consistent with CNS WHO grade 3. Features arguing above grade 2 include Deep WM invasion, large Total tumor volume (mL) and Lesion Sizes APxTVxCC (cm), ED Volume (mL), and the presence of Mild enhancement with Thickness of enhancing margin >3mm. Features arguing against a confident grade 4 call include the extremely small ET Volume (mL), very low Proportion Enhancing, Minimal midline_shift_present, absent Ependymal (ventricular) Invasion, solitary Multifocal or Multicentric status, and absent Multiple satellites present. The main feature that could argue against grade 3 and toward grade 4 is the high Proportion Necrosis if interpreted as true necrosis. Balancing these mixed findings, grade 3 is the best estimate, with only moderate confidence.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

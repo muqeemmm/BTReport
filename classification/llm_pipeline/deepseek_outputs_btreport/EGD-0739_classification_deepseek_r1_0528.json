@@ -1,0 +1,42 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "reasoning": "IDH mutation status cannot be determined from the provided metadata. The tumor is located in the brainstem, which is atypical for IDH-mutant gliomas. However, no specific features (like enhancement pattern or necrosis) are present to support either IDH mutant or wildtype. The absence of enhancement and necrosis suggests a low-grade glioma, but brainstem gliomas in adults are often wildtype. Given insufficient evidence, the prediction defaults to wildtype with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Adult-type diffuse glioma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "1p/19q co-deletion status cannot be determined from the provided metadata. The tumor is in the brainstem, which is not a typical location for oligodendrogliomas (which are codeleted). Additionally, there is no enhancement or necrosis, which are more common in oligodendrogliomas. However, without molecular data, prediction is uncertain. Defaulting to non-codeleted as brainstem gliomas are usually astrocytic.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "The metadata indicates a brainstem glioma with no enhancement, necrosis, or edema volumes. This is suggestive of a low-grade glioma, but brainstem location in adults is highly associated with diffuse midline glioma, H3 K27-altered (WHO grade 4), which is IDH-wildtype. However, without H3 K27M status, definitive classification is not possible. The absence of enhancement and necrosis contradicts typical grade 4 features, leading to uncertainty in grading.",
+  "subject_id": "EGD-0739",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor is located in the brainstem, which in adults is highly suggestive of diffuse midline glioma, H3 K27-altered (CNS WHO grade 4). However, the absence of enhancement ('Enhancement Quality: None') and necrosis ('Proportion Necrosis: 0.0') are atypical for grade 4 gliomas, which usually show enhancement and necrosis. The text report also indicates no ependymal invasion or deep white matter invasion. This conflicting evidence results in moderate uncertainty, but the brainstem location strongly points to grade 4.",
+    "supporting_features": [
+      "Tumor Location",
+      "Text Report"
+    ]
+  }
+}

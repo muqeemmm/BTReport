@@ -1,0 +1,49 @@
+{
+  "subject_id": "UCSF-PDGM-308",
+  "idh": {
+    "reasoning": "Patient is 45 years old, an age range where IDH\u2011mutant diffuse gliomas are common. The tumor shows only mild contrast enhancement (Enhancement Quality: \"Mild\") and no necrosis (Proportion Necrosis: 0.0), features that favour IDH\u2011mutant over IDH\u2011wildtype glioblastoma, which typically shows strong enhancement and necrosis. Cortical involvement is present (Cortical involvement: \"Present\"), another pattern more typical of IDH\u2011mutant tumours. Conversely, the lesion demonstrates ependymal invasion (Ependymal (ventricular) Invasion: \"Present\") and deep white\u2011matter infiltration (Deep WM invasion: \"Present\"), which can be seen in higher\u2011grade or IDH\u2011wildtype disease, creating some uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Absence of imaging hallmarks that suggest oligodendroglioma, such as calcifications (not assessed) and a typical frontal cortical location, together with deep white\u2011matter and ependymal invasion, points toward a non\u2011codeleted tumour. The temporal location (Tumor Location: \"temporal\") and multifocal pattern (Multifocal or Multicentric: \"Multifocal\") are more frequently observed in astrocytic, non\u2011codeleted tumours. No supporting evidence for codeletion is present.",
+    "supporting_features": [
+      "Tumor Location",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The tumour has mild but definite contrast enhancement (Enhancement Quality: \"Mild\") and a measurable enhancing volume (ET Volume (mL): 0.632) with a proportion of enhancing tissue of 54\u202f% (Proportion Enhancing: 0.54). Presence of ependymal invasion, deep white\u2011matter infiltration, and multifocal disease are features that are more typical of anaplastic (grade\u202f3) astrocytoma than of a low\u2011grade (grade\u202f2) lesion, which usually lacks enhancement and invasive features. However, the lack of necrosis (Proportion Necrosis: 0.0) and the relatively small enhancing component keep the grade from being grade\u202f4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "Predictions are based solely on conventional MRI features; lack of diffusion, perfusion, spectroscopy and calcification data limits certainty, especially for 1p/19q status. The mild enhancement and absence of necrosis keep confidence moderate."
+}

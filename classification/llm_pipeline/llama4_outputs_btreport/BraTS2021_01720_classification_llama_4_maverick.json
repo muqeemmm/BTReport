@@ -1,0 +1,47 @@
+{
+  "id": "patient_0104",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is relatively young (31 years) with a glioma in the temporal cortex region, which is a common location for IDH-mutant gliomas. The tumor is described as mildly enhancing and solitary, with no ependymal invasion or deep white matter invasion. These features are consistent with a lower-grade glioma, which is more likely to be IDH-mutant. The presence of cortical involvement also supports this, as IDH-mutant gliomas often involve the cortex. While the enhancement quality is mild, the presence of any enhancement could suggest a higher likelihood of being IDH-wildtype, but the overall profile leans more towards IDH-mutant given the age and location.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the temporal cortex and involves the cortex, which is more typical of 1p/19q codeleted (oligodendroglial) tumors. The presence of cortical involvement and the tumor being solitary with mild enhancement are features that can be seen in oligodendrogliomas, which are typically 1p/19q codeleted. However, the absence of specific features like calcifications (not assessed here due to data constraints) makes this prediction less certain. Nonetheless, the clinical and radiological profile is suggestive of an oligodendroglial component.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Multifocal or Multicentric"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor has a significant proportion of necrosis (21.98%) and a relatively low proportion of enhancement (0.08%), with mild enhancement quality. The presence of necrosis typically indicates a higher grade. However, the overall volume and the presence of edema suggest a large tumor. The mild enhancement and lack of significant necrosis crossing midline or extensive ependymal invasion might suggest a grade 3 rather than grade 4. Yet, the presence of necrosis is a strong indicator of high-grade tumor, leaning towards grade 3 or 4. Given the age of the patient and the presence of necrosis, grade 3 is a plausible prediction, balancing between the indicators of aggressiveness and the relatively mild enhancement.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Proportion Enhancing",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 3,
+      "confidence": 0.75
+    }
+  ],
+  "subject_id": "BraTS2021_01720"
+}

@@ -1,0 +1,42 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7237294158345262, indicating a high likelihood of IDH mutation. The patient's age (49 years) and the tumor's location and characteristics (e.g., involvement of parietal, cortex, and occipital lobes, midline involvement) are also consistent with this prediction. The evidence strongly supports IDH mutant status over wildtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of IDH mutation is likely, as predicted. For 1p/19q co-deletion status, the 'Cortical involvement' and 'Tumor Location' (involving cortex) along with the presence of 'Ependymal (ventricular) Invasion' could be considered. However, the direct prediction of 1p/19q co-deletion status from the given metadata is challenging without specific molecular or histological markers. Given the IDH mutant status and the tumor's characteristics, we lean towards non-codeleted due to the absence of specific indicators for co-deletion like calcifications or certain enhancement patterns. The confidence is moderate due to the indirect inference.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Ependymal (ventricular) Invasion",
+      "IDH Mutation Status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO Grade": {
+    "reasoning": "Given the IDH mutant status and likely non-codeleted status, the tumor is probably an astrocytoma. The presence of 'Ependymal (ventricular) Invasion', 'Deep WM invasion', and significant edema ('ED Volume (mL)' = 127.815 mL) along with the tumor's size and involvement of multiple regions suggest a higher grade. The 'Proportion Necrosis' is 5.69%, and 'Proportion Enhancing' is 8.45%, indicating some level of aggressiveness. However, the 'Enhancement Quality' is 'Mild', and there's no mention of high-grade features like high mitotic activity. Considering these factors, a grade of 3 is plausible, reflecting an intermediate to high-grade tumor without clear indicators of the highest grade (4).",
+    "supporting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_00294"
+}

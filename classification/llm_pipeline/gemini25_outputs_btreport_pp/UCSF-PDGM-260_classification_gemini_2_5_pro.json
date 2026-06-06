@@ -1,0 +1,44 @@
+{
+  "subject_id": "UCSF-PDGM-260",
+  "idh": {
+    "reasoning": "The patient's age of 56 is more typical for IDH-wildtype gliomas. However, the imaging phenotype strongly suggests an IDH-mutant tumor. Specifically, the complete absence of necrosis (NCR Volume (mL): 0.0) and the presence of only minimal, mild enhancement (ET Volume (mL): 0.18) are classic features of IDH-mutant gliomas and are highly atypical for IDH-wildtype glioblastoma, the most common adult diffuse glioma. The frontal lobe location is also more common in IDH-mutant tumors. The imaging features are considered more compelling than the patient's age in this case.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction assumes an IDH-mutant status. The evidence is conflicting. The absence of the T2-FLAIR mismatch sign (T2-FLAIR Mismatch Present: 0.0) is a strong argument against an IDH-mutant astrocytoma (non-codeleted) and favors an oligodendroglioma (codeleted). However, the tumor has a very sharp transition zone on FLAIR (median_mm: 0.5), which is more characteristic of an astrocytoma, as oligodendrogliomas classically have indistinct margins. Given these directly opposing key features, the confidence is low. I am slightly favoring the morphological feature of a sharp border over the signal intensity-based T2-FLAIR mismatch absence, leading to a prediction of non-codeleted.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of necrosis (NCR Volume (mL): 0.0) makes WHO grade 4 highly unlikely. The distinction is therefore between grade 2 and 3. The presence of contrast enhancement, even if mild (Enhancement Quality: 'Mild', ET Volume (mL): 0.18), is a feature that favors a higher grade. Grade 2 gliomas are typically non-enhancing, whereas enhancement is a common finding in grade 3 tumors. The patient's age of 56 also slightly increases the probability of a higher-grade tumor. Therefore, grade 3 is the most probable grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "This is a 56-year-old female with a small, solitary, cortically-based frontal lobe lesion. The imaging phenotype, characterized by minimal enhancement and no necrosis, is highly suggestive of an IDH-mutant glioma despite the patient's age. The molecular subtype is challenging to predict due to conflicting features: the sharp tumor border suggests an astrocytoma, while the absence of a T2-FLAIR mismatch sign favors an oligodendroglioma, resulting in low confidence for the 1p/19q status prediction. The presence of mild enhancement favors a grade 3 tumor over a grade 2."
+}

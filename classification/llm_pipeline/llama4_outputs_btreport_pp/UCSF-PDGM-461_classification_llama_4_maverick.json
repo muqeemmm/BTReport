@@ -1,0 +1,42 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is a strong indicator of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8753145360037542, both suggesting a high likelihood of T2-FLAIR mismatch, which is commonly associated with IDH-mutant gliomas. Additionally, the patient's age (73 years) is more typical for IDH wildtype gliomas, but the imaging features take precedence in this case.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch typically indicates an IDH-mutant glioma without 1p/19q co-deletion. The 'T2-FLAIR Mismatch Present' and 'T2-FLAIR Mismatch Score' support this. Additionally, the tumor's location and involvement of multiple lobes and deep structures are more typical of astrocytomas (which are IDH-mutant but non-codeleted) than oligodendrogliomas (which are IDH-mutant and codeleted).",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows significant mass effect (midline shift of 3.9096774193548387 mm), ependymal invasion, and a large edema volume (101.292 mL), suggesting an aggressive tumor. The presence of necrosis (Proportion Necrosis: 2.64%) and enhancement (Proportion Enhancing: 10.85%) also indicate a higher grade. The patient's age (73 years) and the tumor's imaging features are consistent with a high-grade glioma. Given the IDH mutation status is predicted as 'mutant', the most likely diagnosis is an IDH-mutant astrocytoma, which would be grade 4 given the aggressive features.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "UCSF-PDGM-461"
+}

@@ -1,0 +1,38 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.888099356811569, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in gliomas according to the WHO CNS5 classification. Other features like age and tumor location also play a role but are not as decisive as the T2-FLAIR mismatch in this context.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, the presence of IDH mutation (predicted with high confidence) is a prerequisite for 1p/19q co-deletion. The tumor's location and characteristics (e.g., frontal lobe involvement, cortical involvement) are more typical of IDH-mutant gliomas with 1p/19q co-deletion. Yet, the absence of specific MRI features that are strongly indicative of 1p/19q co-deletion (like heterogeneous enhancement or specific patterns of necrosis) makes this prediction less certain. Thus, we lean towards non-codeleted given the lack of strong evidence for co-deletion.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 68.8%) and has a large volume (Total tumor volume: 93.786 mL), which are indicators of a higher grade. The presence of ependymal invasion and deep white matter invasion also suggests aggressive tumor behavior. While the enhancement quality is mild, the presence of necrosis and significant mass effect are more aligned with a higher grade tumor. Given these features, a grade 4 tumor is likely. The presence of IDH mutation (predicted) typically associates with lower grades, but the aggressive features here outweigh this consideration.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "idh_status"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01505"
+}

@@ -1,0 +1,55 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "rim_core_adjacency",
+      "boundary_sharpness"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 75 years old, which is more typical for IDH-wildtype glioblastoma. The enhancement is marked with 30.6% enhancing proportion and thick (>3mm) enhancing margin, which are features of IDH-wildtype tumors. However, the T2-FLAIR mismatch sign is present with a high score (0.8969), which is strongly associated with IDH-mutant astrocytomas. The proportion of necrosis is low (3.45%), which is more typical for IDH-mutant tumors. The rim-core adjacency fraction is high (0.99) and boundary sharpness is moderate (2.45), which are ambiguous features. Given the conflicting evidence, particularly the strong T2-FLAIR mismatch sign versus the advanced age and enhancement characteristics, the prediction is IDH-wildtype with low confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (speech motor, motor, vision) and shows deep white matter invasion and ependymal invasion, which are more common in astrocytomas (non-codeleted) than oligodendrogliomas. The location includes parietal, cortex, and temporal lobes, which is non-specific. The T2-FLAIR mismatch sign is present, which is highly specific for IDH-mutant astrocytomas and argues against oligodendroglioma (which would be codeleted). However, the tumor is solitary and midline, which are not typical for oligodendrogliomas. There is no specific feature supporting codeletion. Thus, non-codeleted is predicted with low confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "overall_comment": "The evidence is conflicting for IDH status, with strong T2-FLAIR mismatch sign suggesting IDH-mutant but advanced age and enhancement features suggesting IDH-wildtype. For 1p/19q, features suggest astrocytic lineage. Grade 4 is assigned based on necrosis presence.",
+  "subject_id": "BraTS2021_00128",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "Necrosis is present (Proportion Necrosis: 3.45%), which is a defining feature of grade 4 glioblastoma according to WHO CNS5. The enhancement is marked and the tumor is large (total volume 132.171 mL). The proportion of necrosis is low, but any necrosis qualifies for grade 4. Other features like ependymal invasion and eloquent involvement support high grade. Thus, grade 4 is predicted with high confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

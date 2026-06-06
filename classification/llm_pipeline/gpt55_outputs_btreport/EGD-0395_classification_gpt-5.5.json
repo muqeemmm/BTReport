@@ -1,0 +1,90 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The MRI metadata favors IDH-wildtype glioma because the patient is elderly, and the lesion shows aggressive imaging behavior: large total tumor burden, marked enhancement with a thick enhancing margin, substantial enhancing and necrotic components, extensive edema, midline shift, deep white matter invasion, ependymal invasion, and enhancement/edema crossing midline. These features are more typical of an IDH-wildtype glioblastoma phenotype than a lower-grade IDH-mutant diffuse glioma. Features that could support IDH-mutant status include frontal/cortical involvement and a solitary lesion, but these are nonspecific and are outweighed by the aggressive enhancing-necrotic, infiltrative pattern.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Assessed independently, the metadata favors 1p/19q non-codeleted status because the lesion has marked enhancement, thick enhancing margin, necrotic component, extensive edema, deep white matter invasion, ependymal invasion, and midline-crossing enhancement/edema, which are less typical for classic oligodendroglioma imaging phenotype. Evidence supporting possible codeletion is the frontal cortical location, which is a common oligodendroglioma distribution, but there is no available calcification/SWI information and the aggressive enhancing-necrotic pattern weighs more strongly toward non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. Absence of DWI/ADC, perfusion, spectroscopy, and SWI/GRE limits molecular discrimination, especially for 1p/19q status where calcification-related information would be useful. Imaging strongly suggests an aggressive high-grade diffuse glioma phenotype, but definitive WHO CNS5 classification requires molecular testing.",
+  "subject_id": "EGD-0395",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ],
+    "prediction": 4,
+    "reasoning": "Assessed independently, CNS WHO grade 4 is favored radiologically because the tumor has marked enhancement with a thick enhancing margin, a substantial enhancing component, necrotic component, very large total tumor volume, extensive edema, midline shift, ventricular effacement/asymmetry, deep white matter invasion, ependymal invasion, and enhancement/edema crossing midline. These features argue strongly against grade 2 and are more aggressive than typical grade 3 imaging. The lesion being solitary does not exclude grade 4 but is a minor nonspecific feature that does not add support for the highest grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

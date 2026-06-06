@@ -1,0 +1,77 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The imaging metadata favors an IDH-wildtype diffuse glioma: older age is a strong clinical correlate, and the tumor shows aggressive glioblastoma-like morphology with marked, thick enhancement, a substantial enhancing component, necrotic/non-enhancing component, extensive edema, deep white matter invasion, and ependymal invasion. These features argue against a lower-grade or typical IDH-mutant astrocytoma. The main counterweight is the frontal/cortical/insular location with cortical involvement, which can be seen in IDH-mutant gliomas, but the enhancement burden and invasive features are more compelling for IDH-wildtype disease.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata favors non-codeleted status because the lesion has marked, thick enhancement, a large enhancing volume, extensive edema, necrotic/non-enhancing component, deep white matter invasion, and ependymal invasion, which are less typical for classic oligodendroglioma imaging phenotype. The frontal, cortical, and insular involvement is a meaningful counterpoint because oligodendrogliomas commonly arise in frontal cortical/subcortical regions, but the aggressive enhancement and invasion pattern shifts the estimate toward non-codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility/calcification assessment. The frontal cortical-insular location leaves some residual uncertainty for IDH-mutant and oligodendroglial biology, but the patient age, marked thick enhancement, edema, necrotic component, and ependymal/deep white matter invasion make glioblastoma-like biology most likely.",
+  "subject_id": "BraTS2021_00100",
+  "who_grade": {
+    "confidence": 0.88,
+    "contradicting_features": [
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The grade assessment favors CNS WHO grade 4 because the tumor demonstrates marked, thick enhancement with a sizable enhancing volume, necrotic/non-enhancing component, extensive edema, large overall size, deep white matter invasion, and ependymal invasion. These are imaging features associated with high-grade malignant glioma rather than grade 2 or grade 3 disease. Features arguing against the most aggressive mass-effect phenotype include absent midline shift, absent ventricular asymmetry, and only a small necrotic proportion, but these do not outweigh the substantial enhancement and invasive pattern.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

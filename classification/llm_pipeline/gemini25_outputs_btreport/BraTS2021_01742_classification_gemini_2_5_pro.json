@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_01742",
+  "idh": {
+    "reasoning": "The tumor is located in the left frontal lobe, a classic location for IDH-mutant gliomas. The most compelling evidence is the complete absence of contrast enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0). Non-enhancing tumors in adults are strongly associated with IDH-mutant status. The tumor is solitary and does not invade deep white matter, further supporting a less aggressive, IDH-mutant phenotype. There are no features suggestive of an IDH-wildtype tumor, which typically presents with ring enhancement and significant necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The distinction between an IDH-mutant astrocytoma (non-codeleted) and an oligodendroglioma (codeleted) is difficult with the available data. Both can be non-enhancing and located in the frontal lobe. The tumor has significant cortical involvement, which can be seen in both but is a classic feature of oligodendroglioma. However, the involvement of the motor cortex ('Eloquent Brain Involvement': 'Motor') is somewhat more suggestive of an infiltrative astrocytoma. Without features like the T2-FLAIR mismatch sign or calcification, the evidence is ambiguous. I am making a low-confidence prediction of non-codeleted based on the eloquent brain involvement.",
+    "supporting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of contrast enhancement ('Enhancement Quality': 'None', 'ET Volume (mL)': 0.0) is the strongest feature arguing against a high-grade glioma. WHO grade 4 gliomas are characterized by necrosis and enhancement. While there is a minuscule non-enhancing core volume ('NCR Volume (mL)': 0.007), it is radiologically insignificant and does not represent the macroscopic necrosis required for a grade 4 diagnosis. The lack of enhancement also makes a grade 3 diagnosis less likely. The overall presentation of a solitary, non-enhancing tumor with minimal mass effect ('midline_shift_present': 'No') is highly characteristic of a low-grade (WHO grade 2) glioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging features are highly characteristic of a low-grade, IDH-mutant glioma. The left frontal location and complete lack of contrast enhancement strongly support an IDH-mutant status and a WHO grade 2. The subtyping between astrocytoma and oligodendroglioma is uncertain based on the provided metadata, but motor cortex involvement slightly favors an astrocytoma. The final integrated diagnosis is most likely Astrocytoma, IDH-mutant, CNS WHO grade 2."
+}

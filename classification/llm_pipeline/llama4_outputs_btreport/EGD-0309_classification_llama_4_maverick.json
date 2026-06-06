@@ -1,0 +1,46 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (55 years) and the presence of a large edema volume (62.508 mL) with midline crossing ('Edema crosses midline': 'True') are more typical of IDH wildtype gliomas, which are more common in older adults and tend to be more aggressive. The presence of ependymal invasion and deep white matter invasion also suggests a more aggressive tumor type, consistent with IDH wildtype. While the enhancement quality is 'Mild', the presence of some enhancement and necrosis (Proportion Enhancing: 0.05, Proportion Necrosis: 1.26) further supports this direction. IDH mutant gliomas are less likely given the age and aggressive features.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of ependymal invasion and the tumor's location (parietal, midline) along with its large edematous volume are not typical hallmarks for 1p/19q codeletion status directly. However, IDH mutant gliomas with 1p/19q codeletion are more likely to have a more favorable prognosis and are often associated with oligodendroglioma, which tends to have a more frontal location. Given the midline/parietal location and the likely IDH wildtype status from (a), the likelihood of 1p/19q codeletion is reduced. Thus, based on the tumor's characteristics and likely IDH status, 'non-codeleted' is more probable.",
+    "supporting_features": [
+      "Tumor Location",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "cns_grade": {
+    "reasoning": "Given the large edema volume, presence of necrosis (Proportion Necrosis: 1.26), ependymal invasion, and deep white matter invasion, the tumor exhibits aggressive features. The presence of necrosis and significant edema is more characteristic of higher-grade gliomas. Although the enhancement is mild, the overall tumor volume and aggressive features (e.g., ependymal invasion) suggest a high-grade tumor. Thus, a CNS WHO grade of 4 is likely due to the presence of necrosis and aggressive imaging features.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0309"
+}

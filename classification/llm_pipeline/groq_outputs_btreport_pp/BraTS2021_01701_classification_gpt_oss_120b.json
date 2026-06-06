@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_01701",
+  "idh": {
+    "reasoning": "The T2\u2011FLAIR mismatch is present (T2-FLAIR Mismatch Present = 1) with a high mismatch score (0.89), which is a strong imaging surrogate for IDH\u2011mutant gliomas. However, the tumor shows marked contrast enhancement (Enhancement Quality = Marked), a substantial necrotic component (Proportion Necrosis = 18.95) and the patient is older (age_years = 65), features that are more typical of IDH\u2011wildtype glioblastoma. Balancing these opposing clues, the mismatch evidence outweighs the others, leading to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Age_years",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch strongly favors an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma, and the presence of marked enhancement and necrosis is atypical for oligodendroglioma, which usually shows less enhancement and calcifications. No imaging features suggest a codeleted tumor, so the best inference is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.78
+  },
+  "who_grade": {
+    "reasoning": "The lesion exhibits marked contrast enhancement (Enhancement Quality = Marked) and a notable necrotic fraction (Proportion Necrosis = 18.95), both radiologic hallmarks of high\u2011grade glioma (grade\u202f4). Although the tumor is solitary, does not cross the midline, and lacks deep white\u2011matter or ependymal invasion\u2014features more common in lower\u2011grade tumors\u2014the presence of necrosis outweighs these lower\u2011grade indicators, supporting a WHO grade\u202f4 assignment.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.71
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q non\u2011codeleted astrocytoma, but the marked enhancement and necrosis raise the possibility of an IDH\u2011wildtype glioblastoma. Absence of diffusion, perfusion, and spectroscopy data limits certainty; molecular testing is required for definitive classification."
+}

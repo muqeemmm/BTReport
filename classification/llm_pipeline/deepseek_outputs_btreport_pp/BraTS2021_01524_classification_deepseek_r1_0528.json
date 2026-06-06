@@ -1,0 +1,54 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (23 years), which is more common in IDH-mutant gliomas. The tumor is non-enhancing (Enhancement Quality: None, Proportion Enhancing: 0.0), which is typical for IDH-mutant astrocytomas. The T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high score (1.0) and degree (1.45), strongly suggesting IDH-mutant astrocytoma. However, the absence of enhancement is also seen in some wildtype tumors, and the tumor volume is large (115 mL), which is more common in wildtype glioblastomas.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "IDH-mutant gliomas without 1p/19q co-deletion are astrocytomas. The T2-FLAIR mismatch sign supports IDH-mutant astrocytoma, which is non-codeleted. The tumor involves eloquent areas (Speech motor) and deep white matter, which is more common in astrocytomas than oligodendrogliomas. However, the frontal lobe involvement (Region Proportions) could be seen in oligodendrogliomas, and the tumor is midline, which is atypical for oligodendrogliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The tumor is IDH-mutant astrocytoma, likely WHO grade 4 due to necrosis and volume, but grade cannot be definitively determined without enhancement or mitotic activity.",
+  "subject_id": "BraTS2021_01524",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has a high proportion of necrosis (70.97%), which is a feature of glioblastoma (WHO grade 4). The total tumor volume is large (115 mL), also suggesting high grade. However, there is no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0), which is atypical for glioblastoma. The absence of enhancement makes grade 4 less certain, but necrosis is a strong indicator.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

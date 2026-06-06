@@ -1,0 +1,48 @@
+{
+  "subject_id": "UCSF-PDGM-083",
+  "idh": {
+    "reasoning": "The tumor is located primarily in the frontal lobe and has a very large non-enhancing component (Proportion of Oedema is 87.17%), with only mild enhancement. These features are highly characteristic of IDH-mutant gliomas, which typically present as infiltrative, T2/FLAIR-hyperintense lesions with less aggressive features than their wildtype counterparts. However, the presence of a thick enhancing margin (>3mm) and a small amount of necrosis (0.94%) are features more commonly associated with IDH-wildtype tumors. On balance, the location and the overwhelming proportion of non-enhancing tumor are stronger indicators for an IDH-mutant status, possibly representing a tumor undergoing high-grade transformation.",
+    "supporting_features": [
+      "Region Proportions",
+      "Proportion of Oedema",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor's location in the frontal lobe with cortical involvement is common in 1p/19q co-deleted oligodendrogliomas. However, the presence of a very high proportion of edema (87.17%) is a strong feature against co-deletion and is much more typical of an astrocytic lineage (non-codeleted). The presence of any necrosis (0.94%) and enhancement (11.9%) also favors an astrocytoma over an oligodendroglioma. The imaging phenotype of extensive vasogenic edema strongly outweighs the non-specific frontal location, pointing towards a non-codeleted status.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade on imaging relies heavily on features of aggressive biology. This tumor demonstrates both contrast enhancement (Proportion Enhancing 11.9%) and, critically, necrosis (Proportion Necrosis 0.94%). The presence of necrosis on imaging is a strong indicator of high-grade glioma and is a radiological hallmark of WHO Grade 4. The thick enhancing margin (>3mm) further supports a high grade. While the overall tumor volume is not large and there is no midline shift, the presence of necrosis is the most compelling feature for assigning the highest grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are most consistent with a high-grade astrocytoma. The frontal location and large non-enhancing component suggest an IDH-mutant genotype. The presence of enhancement and a small focus of necrosis are strong indicators of WHO Grade 4. The combination of features points to an Astrocytoma, IDH-mutant, CNS WHO grade 4."
+}

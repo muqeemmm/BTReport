@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Multiple satellites present",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Thickness of enhancing margin",
+      "n_components_enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, the tumor has substantial cortical and temporal/insular involvement, and enhancement is described as mild with a small enhancing volume relative to total tumor volume. These features are more typical of lower-age, infiltrative IDH-mutant glioma than classic IDH-wildtype glioblastoma. Evidence against IDH mutation includes the reported necrosis proportion, multiple satellites, deep white matter invasion, substantial edema volume, thick enhancing margin, and multiple enhancing components, which can be seen in IDH-wildtype high-grade glioma. Balancing the strong age/location signal against these aggressive features, the best estimate is IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the imaging pattern is not strongly specific. Features arguing for a non-codeleted astrocytic pattern include prominent temporal and insular involvement, deep white matter invasion, multiple satellites, substantial edema, and a large necrotic/nonenhancing core component; these are less classic for oligodendroglioma. Features that could support codeletion include cortical involvement, some frontal-lobe component, mild enhancement, absent T2-FLAIR mismatch, and young age, but calcification and other more specific oligodendroglioma markers are not available. Overall, the balance of provided MRI metadata favors non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Multiple satellites present",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility/calcification assessment. The young age and cortical temporo-insular pattern support IDH mutation, but necrosis, satellites, edema, and enhancing components raise concern for high-grade biology. Molecular testing remains required for definitive WHO-CNS5 classification.",
+  "subject_id": "EGD-0758",
+  "who_grade": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the strongest imaging evidence supports grade 4 because the metadata reports a high necrosis proportion, a thick enhancing margin, rim-core adjacency, multiple enhancing components, multiple satellites, large edema volume, deep white matter invasion, and a large total tumor volume. These findings are more consistent with high-grade diffuse glioma than grade 2 or 3. Features arguing against grade 4 include young age, only mild enhancement, small enhancing volume and low enhancing proportion, minimal midline shift, and absent ventricular asymmetry. Despite limited enhancement, the necrosis-related and infiltrative aggressive features make grade 4 the best estimate.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "rim_core_adjacency",
+      "n_components_enhancing",
+      "Multiple satellites present",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

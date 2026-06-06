@@ -1,0 +1,39 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "reasoning": "The metadata does not provide direct evidence for IDH mutation status. The tumor is located in the frontal lobe and cortex, which is more common in IDH-mutant gliomas, but this is not definitive. Without molecular data or specific MRI features like 2HG MRS (not available), the prediction is based on prevalence in frontal lobe gliomas. However, the proportion of necrosis is high (60.27%), which is more typical of IDH-wildtype glioblastomas. This contradiction leads to uncertainty.",
+    "supporting_features": [
+      "Tumor Location",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "No direct evidence for 1p/19q status is available in the metadata. The tumor involves eloquent cortex (motor) and has cortical involvement, which is more typical of astrocytomas (non-codeleted) than oligodendrogliomas. However, frontal lobe location is common in oligodendrogliomas. Without molecular data, prediction relies on location and cortical involvement, but confidence is low due to conflicting indicators.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Cortical involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The prediction is uncertain due to lack of direct molecular markers and conflicting imaging features. High necrosis proportion suggests IDH-wildtype, but frontal location suggests IDH-mutant. Cortical involvement suggests astrocytoma (non-codeleted), but frontal location is common in oligodendrogliomas. Grade 4 is assigned based on necrosis proportion and enhancement.",
+  "subject_id": "EGD-0369",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (60.27% proportion) which is a hallmark of glioblastoma (CNS WHO grade 4). There is mild enhancement, which is less typical for grade 4 tumors that often show ring enhancement, but necrosis is a stronger indicator. The tumor volume is 33.901 mL, which is substantial but not definitive for grade. Eloquent involvement (motor) and cortical location do not directly indicate grade. The presence of necrosis supports grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

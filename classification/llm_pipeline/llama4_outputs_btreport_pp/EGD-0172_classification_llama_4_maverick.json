@@ -1,0 +1,40 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The patient's age (60 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 6.2%) and significant edema (ED Volume: 183.919 mL) are more typical of glioblastoma, which is often IDH wildtype. The T2-FLAIR mismatch score is 0.7937293662481226, which is below the typical threshold for a positive mismatch sign (usually considered >0.9 or 1.0), suggesting that the tumor may not have a significant T2-FLAIR mismatch. This, combined with the patient's age and tumor characteristics, leans towards an IDH wildtype status. However, the presence of T2-FLAIR mismatch to some degree introduces some uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of a significant T2-FLAIR mismatch degree (1.3031354778498423) could be indicative of an astrocytic tumor, which is typically associated with IDH mutation but not 1p/19q co-deletion. The tumor's characteristics, such as being solitary and having a significant necrotic component, are not typical for oligodendrogliomas, which are more likely to be 1p/19q co-deleted. Thus, the evidence leans against 1p/19q co-deletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Degree",
+      "Number of lesions",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor exhibits characteristics associated with high-grade gliomas: significant necrosis (Proportion Necrosis: 6.2%), enhancement (Proportion Enhancing: 8.2%), and a large edema volume (ED Volume: 183.919 mL). The presence of necrosis and the patient's age are particularly indicative of glioblastoma, WHO grade 4. The tumor's size and involvement of deep structures also support a high-grade diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0172"
+}

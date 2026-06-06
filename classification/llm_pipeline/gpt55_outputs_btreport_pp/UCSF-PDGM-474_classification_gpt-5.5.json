@@ -1,0 +1,73 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Edema crosses midline"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI marker in the provided metadata is a reported T2-FLAIR mismatch, which is classically associated with IDH-mutant astrocytoma rather than IDH-wildtype glioblastoma. The patient age of 40 years, mild enhancement, absent necrosis, and very small enhancing volume also fit better with an IDH-mutant diffuse glioma than with a typical IDH-wildtype glioblastoma. Features arguing against IDH-mutant status are multifocal disease, ependymal involvement, deep white matter invasion, large edema burden, edema crossing midline, and midline shift, which are more aggressive and can be seen with IDH-wildtype tumors. Overall, the T2-FLAIR mismatch and age outweigh the aggressive anatomic features, so IDH-mutant is favored.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Cortical involvement",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The reported T2-FLAIR mismatch strongly favors an IDH-mutant astrocytoma pattern and argues against oligodendroglioma, IDH-mutant and 1p/19q-codeleted. The lesion distribution includes occipital, insular, temporal, parietal, ventricular, and midline involvement rather than a classic frontal-predominant oligodendroglioma pattern. Contradicting considerations are cortical involvement, age 40, and mild enhancement, which can be compatible with oligodendroglioma, but these are nonspecific. Overall, the T2-FLAIR mismatch is the most discriminating available feature, so non-codeleted is favored.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Region Proportions",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "Prediction is limited by absence of diffusion, perfusion, spectroscopy, susceptibility/calcification assessment, and molecular data. The T2-FLAIR mismatch favors IDH-mutant, non-codeleted astrocytoma, but multifocality, ependymal invasion, edema crossing midline, and mass effect create substantial concern for biologically aggressive disease. Histopathology and molecular testing remain required.",
+  "subject_id": "UCSF-PDGM-474",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "For grade assessment, the metadata show enhancement, ependymal invasion, deep white matter invasion, multifocal disease, large edema volume, edema crossing midline, and midline shift, all of which support a high-grade diffuse glioma over grade 2. However, there is no necrosis, enhancement is mild, and the enhancing volume is small, which argues against a confident grade 4 call. The reported T2-FLAIR mismatch also lowers confidence because it is often associated with lower-grade IDH-mutant astrocytoma. Balancing these findings, grade 3 is favored as the best estimate: more aggressive than grade 2, but without strong imaging evidence for grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ED Volume (mL)",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

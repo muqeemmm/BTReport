@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The imaging metadata favors IDH-mutant diffuse glioma because age_years is 41, the lesion is nonenhancing by Enhancement Quality, ET Volume (mL), Proportion Enhancing, and n_components_enhancing, and the Tumor Location/Region Proportions with Cortical involvement include frontal, insular, temporal, and cortical disease, a distribution often seen in IDH-mutant glioma. Evidence arguing for IDH-wildtype includes Multifocal or Multicentric disease with Number of lesions 4, Ependymal (ventricular) Invasion, Deep WM invasion, large ED Volume (mL), Edema crosses midline, midline_shift_present, Proportion Necrosis, and absence of a definite T2-FLAIR mismatch by T2-FLAIR Mismatch Present. Overall, the nonenhancing presentation in a 41-year-old with frontal/insular cortical involvement outweighs the aggressive features, so the best estimate is IDH-mutant, with moderate confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.56,
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the evidence is mixed. Non-codeleted status is favored by Tumor Location and Region Proportions showing a broad frontal-insular-temporal distribution rather than a purely frontal cortical tumor, together with Deep WM invasion, Ependymal (ventricular) Invasion, Multifocal or Multicentric disease, Edema crosses midline, and large ED Volume (mL), which are not classic isolated oligodendroglial imaging features. Codeletion is still plausible because Region Proportions and Cortical involvement include frontal/cortical disease, Enhancement Quality with ET Volume (mL) and Proportion Enhancing show no enhancement, and T2-FLAIR Mismatch Present is absent, all of which can be seen in oligodendroglioma. Because the available MRI metadata lacks calcification/SWI and has conflicting features, the best estimate is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Edema crosses midline",
+      "ED Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structural MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histomolecular testing. The most uncertain component is 1p/19q status, because classic calcification assessment is unavailable and the lesion has both oligodendroglial-like frontal/cortical nonenhancing features and more infiltrative/aggressive features. Grade is also uncertain because extensive edema, mass effect, multifocality, and reported nonenhancing core/necrosis are counterbalanced by complete absence of enhancement.",
+  "subject_id": "BraTS2021_01494",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "n_components_enhancing"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, grade 2 is supported by the lack of enhancement in Enhancement Quality, ET Volume (mL), Proportion Enhancing, and n_components_enhancing, but grade 2 is argued against by large Total tumor volume (mL), large ED Volume (mL), midline_shift_present, Ependymal (ventricular) Invasion, Deep WM invasion, Multifocal or Multicentric disease, and Proportion Necrosis. Grade 4 is suggested by Proportion Necrosis, extensive ED Volume (mL), midline_shift_present, and multifocal/invasive disease, but the complete absence of enhancing tumor by Enhancement Quality, ET Volume (mL), Proportion Enhancing, and n_components_enhancing makes imaging grade 4 less secure. Balancing these, the metadata best fits an intermediate high-grade diffuse glioma, CNS WHO grade 3, with moderate-low confidence.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Proportion Necrosis"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

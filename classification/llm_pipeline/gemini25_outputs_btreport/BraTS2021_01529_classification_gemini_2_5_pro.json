@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_01529",
+  "idh": {
+    "reasoning": "The patient's very young age (21 years) is a powerful predictor for IDH-mutant status, as the vast majority of diffuse gliomas in this age group carry the mutation. This is strongly corroborated by the imaging features of a large, entirely non-enhancing tumor. The absence of enhancement (`ET Volume (mL)` of 0.0 and `Enhancement Quality` of 'None') in a large diffuse glioma is a classic radiological sign of an IDH-mutant phenotype. Insular involvement is also more common in IDH-mutant tumors. There are no features to suggest an IDH-wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Assuming an IDH-mutant tumor, the features are more consistent with an astrocytoma (non-codeleted) than an oligodendroglioma (codeleted). The tumor involves the insula and deep gray matter structures (`Anatomical Overlap Regions` including caudate, putamen, pallidum), which are locations more typical for astrocytomas. While non-enhancement is common in oligodendrogliomas, the overall morphology and location in this case favor a non-codeleted status. There are no specific features, such as sharp demarcation (not reported), that would strongly suggest an oligodendroglioma.",
+    "supporting_features": [
+      "Region Proportions",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The complete absence of contrast enhancement (`ET Volume (mL)` is 0.0, `Enhancement Quality` is 'None') is the most critical feature for grading. This strongly argues against a CNS WHO grade 4 diagnosis, which is typically characterized by enhancement and necrosis. While the tumor is large (`Total tumor volume (mL)` of 68.293), which can be seen in higher grades, the lack of any aggressive radiological features is more in keeping with a lower-grade process. The patient's young age also favors a lower grade. Between grade 2 and 3, the lack of enhancement is most characteristic of a CNS WHO grade 2 tumor.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 21-year-old male with a large, non-enhancing glioma involving multiple right-sided lobes including the insula and deep gray matter. The combination of very young age and complete lack of enhancement provides strong evidence for an IDH-mutant glioma. The location and infiltrative pattern are most consistent with an astrocytoma (1p/19q non-codeleted). The absence of enhancement suggests a lower grade, with CNS WHO grade 2 being the most likely diagnosis based on imaging alone."
+}

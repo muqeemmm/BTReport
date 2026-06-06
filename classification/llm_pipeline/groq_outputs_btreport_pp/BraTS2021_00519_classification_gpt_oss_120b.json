@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_00519",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (field \"T2-FLAIR Mismatch Present\" = 1) is a highly specific imaging marker for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted diffuse gliomas. Although marked contrast enhancement (field \"Enhancement Quality\") and ependymal invasion can be seen in IDH\u2011wildtype glioblastoma, the low necrosis proportion and moderate enhancing fraction argue against wildtype. Therefore the balance favors IDH\u2011mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is strongly associated with 1p/19q\u2011non\u2011codeleted IDH\u2011mutant astrocytoma, whereas oligodendrogliomas (codeleted) typically lack this mismatch. No imaging evidence suggests codeletion, so the prediction is non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "Marked contrast enhancement (field \"Enhancement Quality\") and presence of ependymal and deep white\u2011matter invasion suggest a higher grade than grade\u202f2. However, the necrotic component is minimal (field \"Proportion Necrosis\" = 4.34\u202f%) and the enhancing fraction is modest (\u224820\u202f%), which are atypical for grade\u202f4 glioblastoma. This pattern aligns with WHO grade\u202f3 IDH\u2011mutant astrocytoma, which often shows enhancement without extensive necrosis. Therefore grade\u202f3 is most likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Marked Enhancement could suggest grade\u202f4"
+    ],
+    "prediction": 3,
+    "confidence": 0.72
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty, especially for distinguishing grade\u202f3 from grade\u202f4. Nonetheless, the imaging pattern strongly supports an IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma, most consistent with WHO grade\u202f3."
+}

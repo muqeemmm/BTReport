@@ -1,0 +1,43 @@
+{
+  "subject_id": "UCSF-PDGM-439",
+  "idh": {
+    "reasoning": "The patient's age of 38 is more typical for IDH-mutant gliomas. The complete absence of contrast enhancement (ET Volume: 0.0 mL, Enhancement Quality: None) and necrosis (NCR Volume: 0.0 mL) are very strong radiological indicators of IDH-mutant status, as IDH-wildtype gliomas (glioblastomas) are characteristically enhancing and necrotic. The frontal and parietal lobe location is also classic for IDH-mutant astrocytomas. The lack of deep white matter or ependymal invasion further suggests a less aggressive, IDH-mutant phenotype. There are no contradicting features.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "Tumor Location",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is challenging with the available data. The tumor is composed entirely of what is labeled as edema (Proportion of Oedema: 100.0), which in this non-enhancing context likely represents the T2/FLAIR hyperintense tumor itself. This suggests an infiltrative, ill-defined lesion, a feature more commonly associated with astrocytomas (non-codeleted) than with oligodendrogliomas (codeleted), which often have better-defined margins. The significant cortical involvement is also common in astrocytomas. However, key differentiating features like calcification or the T2-FLAIR mismatch sign cannot be assessed from the provided metadata. The evidence weakly favors a non-codeleted status.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The most critical features for grading are enhancement and necrosis. This tumor shows a complete absence of both (ET Volume: 0.0 mL; NCR Volume: 0.0 mL; Enhancement Quality: None). The absence of these features makes a WHO grade 4 diagnosis (glioblastoma) extremely unlikely and a grade 3 diagnosis less likely. Furthermore, the minimal mass effect (midline_shift_present: No) suggests a slow-growing process. These findings are all highly characteristic of a low-grade glioma, making WHO grade 2 the most probable grade.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging features\u2014a young patient with a non-enhancing, non-necrotic, cortically-based frontal/parietal lobe tumor\u2014are classic for a low-grade, IDH-mutant glioma. The infiltrative appearance slightly favors an astrocytoma (non-codeleted). The integrated diagnosis is Astrocytoma, IDH-mutant, CNS WHO grade 2."
+}

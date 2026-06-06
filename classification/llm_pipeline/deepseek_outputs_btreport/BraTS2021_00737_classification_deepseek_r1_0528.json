@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 68 years old, which is advanced age favoring IDH wildtype gliomas. IDH mutant gliomas are more common in younger patients. However, the tumor location in insula and frontal lobe is more typical for IDH mutant tumors. The proportion necrosis is 15.48%, which is moderate and does not strongly favor either subtype. Enhancement quality is marked, which can be seen in both but more common in wildtype. Overall, age is the strongest predictor here.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves insula, frontal lobe, and cortex. Oligodendrogliomas (IDH-mutant and 1p/19q codeleted) typically occur in frontal lobes and cortex, but insular involvement is less common for oligodendrogliomas and more typical for astrocytomas. The tumor is solitary with deep white matter invasion present, which is non-specific. No specific features strongly supporting oligodendroglioma such as calcifications (not assessed). Given the location and lack of strong indicators, non-codeleted is more likely.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the glioma is predicted as IDH-wildtype, non-codeleted, WHO grade 4. Confidence is moderate due to conflicting evidence for IDH status and limited data for 1p/19q. Grade 4 is assigned based on necrosis and enhancement.",
+  "subject_id": "BraTS2021_00737",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [],
+    "prediction": 4,
+    "reasoning": "The presence of necrosis (15.48%) and marked enhancement support WHO grade 4. Proportion necrosis >10% is typical for glioblastoma. Enhancement quality marked and thick enhancing margin (>3mm) also suggest high grade. No features contradicting grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ]
+  }
+}

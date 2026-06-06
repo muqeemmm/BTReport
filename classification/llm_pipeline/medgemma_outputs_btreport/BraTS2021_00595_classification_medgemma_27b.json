@@ -1,0 +1,41 @@
+{
+  "subject_id": "BraTS2021_00595",
+  "idh": {
+    "reasoning": "The patient is 60 years old. Older age (>55) is associated with IDH-wildtype gliomas, while younger age (<40) is associated with IDH-mutant gliomas. The available metadata does not include features strongly indicative of IDH-mutant status (e.g., low grade, specific location like frontal lobe, absence of necrosis). The presence of marked enhancement, deep white matter invasion, and ependymal invasion are more common in high-grade gliomas, which can be either IDH-mutant or IDH-wildtype, but are perhaps slightly more typical of IDH-wildtype in this age group. Given the age and lack of features strongly suggesting IDH-mutant status, IDH-wildtype is the more likely prediction.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata provides no information regarding 1p/19q co-deletion status. Features like low grade (WHO grade 2 or 3) and IDH mutation are typically associated with 1p/19q co-deletion, but the predicted IDH status is wildtype and the WHO grade is likely high (see below). Therefore, 1p/19q co-deletion is unlikely.",
+    "supporting_features": [
+      "id"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (60 years) is older than the typical age for lower-grade gliomas. The tumor exhibits marked enhancement, deep white matter invasion, ependymal invasion, cortical involvement, midline shift, ventricular effacement (right), and significant edema crossing the midline. These features are characteristic of a high-grade glioma (WHO grade 4). While some WHO grade 3 gliomas can show enhancement and invasion, the combination of marked enhancement (>3mm thickness), deep WM invasion, ependymal invasion, cortical involvement and significant mass effect (midline shift) strongly points towards WHO grade 4.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "IDH-wildtype, non-codeleted diffuse astrocytoma, WHO grade 4.",
+  "consistency_check_passed": true,
+  "overall_comment": "The tumor shows features suggestive of a high grade glioma (WHO Grade IV), likely IDH wildtype given the patient's age and lack of features strongly suggesting an IDH mutant tumor."
+}

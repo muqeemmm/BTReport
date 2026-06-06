@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is young, the lesion is nonenhancing with no enhancing or necrotic component, and it is a solitary temporal-cortical lesion with cortical involvement. These features are more typical of lower-grade IDH-mutant glioma than of IDH-wildtype glioblastoma. Features that weaken this call are deep white-matter invasion, a moderate whole-tumor/ED volume, and a reported midline epicenter, which are less specific and can be seen in more aggressive infiltrative tumors. Overall, the age and nonenhancing cortical-temporal phenotype outweigh the contradicting nonspecific infiltrative features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Text Report"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q non-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.57,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The metadata provides limited direct evidence for 1p/19q status. A non-codeleted astrocytic tumor is slightly favored because the lesion is temporal rather than a classic frontal oligodendroglioma pattern, and it shows deep white-matter invasion with involvement of temporal/limbic-deep structures in the overlap list. However, the absence of a T2-FLAIR mismatch reduces support for astrocytoma, and cortical involvement with a nonenhancing phenotype can also be seen in oligodendroglioma. Because key discriminators such as calcification-related information are not available in the allowed metadata, this remains a low-confidence best estimate.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Text Report"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata from T1w, T2w, T2-FLAIR, and T1-Gd. The strongest imaging signal is a young patient with a solitary, nonenhancing temporal-cortical infiltrative lesion, favoring an IDH-mutant lower-grade diffuse glioma. 1p/19q status is the least certain because decisive imaging correlates are not available in the provided metadata. Histomolecular testing remains required for diagnosis.",
+  "subject_id": "UCSF-PDGM-490",
+  "who_grade": {
+    "confidence": 0.81,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Whole Tumor Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The imaging phenotype most strongly supports CNS WHO grade 2 because there is no enhancement, no enhancing tumor volume, no necrosis, no midline shift, and the lesion is solitary without satellites or ependymal invasion. These features argue against imaging-defined high-grade behavior. The main features arguing against grade 2 are deep white-matter invasion and a moderate whole-tumor/ED volume, which indicate infiltrative extent but are not by themselves reliable markers of grade 3 or 4 in the absence of enhancement or necrosis. Overall the nonenhancing, nonnecrotic, solitary presentation supports grade 2 over grade 3 or 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion",
+      "Text Report"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

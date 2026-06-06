@@ -1,0 +1,48 @@
+{
+  "subject_id": "EGD-0253",
+  "idh": {
+    "reasoning": "The presence of a very large necrotic core is the most compelling feature, strongly suggesting an IDH-wildtype glioma, specifically glioblastoma. The `NCR Volume (mL)` is 26.562, and the `Proportion Necrosis` is 58.77%, both of which are hallmarks of IDH-wildtype tumors. The presence of contrast enhancement (`Enhancement Quality`: \"Mild\", `Thickness of enhancing margin`: \">3mm\") further supports this, as IDH-wildtype gliomas are typically enhancing. While the tumor's location in the frontal and insular lobes (`Tumor Location`) is common for IDH-mutant astrocytomas, the aggressive imaging phenotype with extensive necrosis overwhelmingly outweighs the location-based evidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of IDH-wildtype status strongly implies a 1p/19q non-codeleted status, as IDH-wildtype gliomas do not carry the 1p/19q co-deletion. Independently, the imaging features strongly argue against an oligodendroglioma (the only tumor type with co-deletion). The presence of extensive necrosis (`Proportion Necrosis`: 58.77%) and contrast enhancement are highly atypical for oligodendrogliomas and are characteristic of astrocytic lineage tumors or glioblastoma, which are non-codeleted. The involvement of the insula (`Region Proportions`) is also more common in astrocytomas. There are no specific features to suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is primarily driven by the presence of necrosis and/or contrast enhancement. This tumor exhibits both. The most definitive feature is the extensive central necrosis, which is a radiological hallmark of WHO Grade 4. This is quantitatively supported by a `Proportion Necrosis` of 58.77% and an `NCR Volume (mL)` of 26.562. The presence of contrast enhancement (`Enhancement Quality`: \"Mild\", `ET Volume (mL)`: 0.279) also indicates a high-grade tumor (at least grade 3). The combination of contrast enhancement and necrosis is sufficient for a radiological diagnosis of WHO Grade 4. The lack of significant mass effect (`midline_shift_present`: \"No\") is insufficient to argue for a lower grade in the face of definitive high-grade features.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features, particularly the large necrotic core within an enhancing frontal-insular mass, are highly characteristic of a Glioblastoma, IDH-wildtype. The combination of IDH-wildtype status and radiological evidence of necrosis firmly establishes the diagnosis as CNS WHO grade 4."
+}

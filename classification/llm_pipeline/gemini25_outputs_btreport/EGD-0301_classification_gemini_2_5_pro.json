@@ -1,0 +1,54 @@
+{
+  "subject_id": "EGD-0301",
+  "idh": {
+    "reasoning": "The patient's young age (36 years) and the tumor's location in the frontal lobe with cortical involvement are strong indicators for an IDH-mutant glioma. The lesion is overwhelmingly non-enhancing (99.22% edema/T2 hyperintensity) and shows no significant mass effect (no midline shift), which is characteristic of a lower-grade, infiltrative, IDH-mutant phenotype. However, the presence of necrosis (60% of the solid component) is a powerful feature typically associated with IDH-wildtype gliomas (glioblastoma). Weighing these factors, the strong demographic prior (age) and the predominantly non-enhancing character of the bulk of the lesion favor an IDH-mutant status, possibly one undergoing high-grade transformation. The conflicting evidence reduces confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Proportion of Oedema",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor is located in the frontal lobe with cortical involvement, which is common for both oligodendrogliomas (codeleted) and astrocytomas (non-codeleted). However, the presence of necrosis and enhancement, even if minimal in volume, is more characteristic of astrocytomas than oligodendrogliomas. The thick enhancing margin ('>3mm') is also less typical for the classic appearance of an oligodendroglioma. In the absence of features highly specific for oligodendroglioma (e.g., well-defined borders, calcification - not reported), the presence of features suggesting aggressive biology (necrosis) favors an astrocytic lineage, and therefore a non-codeleted status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "While many features suggest a lower-grade process (young age, predominantly non-enhancing, no midline shift), the presence of central necrosis ('NCR Volume (mL)' of 0.19, 'Proportion Necrosis' of 0.6) is a definitive radiological hallmark of a high-grade glioma. According to WHO CNS5 criteria for adult-type diffuse gliomas, the presence of necrosis is sufficient to assign a grade of 4. The small volume of necrosis does not negate its diagnostic importance. Therefore, despite the contradictory low-grade features of the surrounding tumor, the presence of necrosis mandates a grade 4 prediction.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "This case presents conflicting imaging features. The patient's young age and the large, predominantly non-enhancing frontal lobe lesion suggest a lower-grade glioma. However, the definitive presence of a small focus of necrosis is a strong indicator of high-grade malignancy. The integrated prediction is an Astrocytoma, IDH-mutant, CNS WHO grade 4, which represents a tumor that has likely evolved from a lower-grade precursor. The IDH status prediction carries the most uncertainty due to the conflicting evidence."
+}

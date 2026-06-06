@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.9328139573907266, both indicating a strong presence of this feature. T2-FLAIR mismatch is a known imaging biomarker associated with IDH-mutant gliomas. Given the patient's age (80 years), which is relatively older for typical IDH-mutant glioma patients, the presence of this feature strongly supports IDH mutation status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, the presence of T2-FLAIR mismatch typically points towards astrocytic tumors, which are more commonly associated with IDH mutation without 1p/19q co-deletion. The multifocal nature and other imaging features do not directly indicate co-deletion status. Therefore, based on the available information and the association of T2-FLAIR mismatch with astrocytic lineage, it is less likely to be codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor shows significant mass effect with midline shift, ependymal invasion, and is multifocal, indicating aggressive behavior. The presence of necrosis (Proportion Necrosis: 5.74%) and enhancement (Proportion Enhancing: 12.38%) also suggests a higher grade. The patient's age (80 years) and the tumor's imaging features are more typical of a high-grade glioma. WHO grade 4 is more likely given the aggressive features and the presence of necrosis.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0506"
+}

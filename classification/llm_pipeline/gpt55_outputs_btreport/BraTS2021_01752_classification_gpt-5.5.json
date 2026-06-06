@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The metadata show an aggressive infiltrative tumor phenotype: a large overall lesion with substantial non-enhancing/necrotic component, extensive edema, deep white matter invasion, and some enhancing tumor, which favors IDH-wildtype diffuse glioma over IDH-mutant glioma on imaging grounds. The frontal cortical location and cortical involvement argue in the opposite direction because IDH-mutant gliomas, including oligodendroglial tumors, often present in the frontal lobe with cortical/subcortical involvement; mild rather than avid enhancement also tempers the call. On balance, the aggressive edema/necrosis/deep invasion pattern supports IDH-wildtype more strongly than the location supports IDH-mutant.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the frontal cortical location and cortical involvement are imaging features that can support oligodendroglioma and therefore 1p/19q co-deletion. However, the large edema burden, substantial necrotic/non-enhancing component, deep white matter invasion, and measurable enhancing component are less typical for classic lower-grade oligodendroglioma and favor a non-codeleted diffuse glioma phenotype. Because key discriminators such as calcification are not available and enhancement is only mild, the evidence is moderate rather than definitive, but the balance favors non-codeletion.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structured MRI metadata without DWI/ADC, perfusion, spectroscopy, or susceptibility/calcification assessment. The right frontal cortical epicenter is a notable feature that can be seen in IDH-mutant and/or 1p/19q-codeleted tumors, but the necrosis, edema burden, deep white matter invasion, and enhancement pattern favor an aggressive non-codeleted, IDH-wildtype grade 4 phenotype. Molecular confirmation remains required.",
+  "subject_id": "BraTS2021_01752",
+  "who_grade": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "For grade considered independently, the presence of a substantial necrotic/non-enhancing component, a thick enhancing margin, extensive edema, deep white matter invasion, and large total tumor volume strongly favors CNS WHO grade 4 over grades 2 or 3. Grade 2 would be less likely because measurable enhancement, necrosis, and extensive edema are atypical. Grade 3 remains possible because enhancement is described as mild and the enhancing volume is small, with only minimal midline shift and no ventricular asymmetry, but the necrosis-related metadata are most compatible with grade 4 behavior.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

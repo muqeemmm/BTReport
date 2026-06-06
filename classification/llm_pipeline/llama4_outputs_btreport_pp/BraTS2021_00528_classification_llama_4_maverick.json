@@ -1,0 +1,39 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Score' is 0.7804614778972503, which is a strong indicator. Additionally, the patient's age (26 years) is relatively young for a glioma patient, which aligns with the typical demographic for IDH-mutant gliomas. The 'T2-FLAIR Mismatch Present' field is 1.0, further supporting the presence of this feature.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Present",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutation, and the relatively young age of the patient supports this. IDH-mutant gliomas can be either 1p/19q codeleted (oligodendrogliomas) or non-codeleted (astrocytomas). The presence of marked enhancement and necrosis (Proportion Necrosis = 2.8%) might lean towards a more aggressive tumor, but the key discriminator for 1p/19q co-deletion status is not directly available in the metadata. However, the presence of multiple satellites and ependymal invasion could be seen in both types. Given the lack of direct evidence, we lean on the fact that IDH-mutant astrocytomas are more common than oligodendrogliomas, and the presence of necrosis might suggest a higher grade astrocytoma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows significant necrosis (Proportion Necrosis = 2.8%), marked enhancement, and a large size (Total tumor volume = 226.164 mL), indicating a high-grade tumor. The presence of ependymal invasion and multiple satellites also suggests aggressive behavior. For IDH-mutant gliomas, the presence of necrosis and significant enhancement typically correlates with a higher grade. Given that the patient is young and the tumor is IDH-mutant, it is likely to be either grade 3 or 4. The presence of necrosis and the aggressive features lean towards grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_00528"
+}

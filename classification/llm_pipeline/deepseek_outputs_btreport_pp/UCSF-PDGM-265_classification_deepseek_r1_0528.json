@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 44 years old, which is younger than typical for IDH-wildtype glioblastoma. However, there is no enhancement ('Enhancement Quality': 'None'), which is more common in IDH-mutant gliomas. The T2-FLAIR mismatch sign is absent ('T2-FLAIR Mismatch Present': 0.0) and the mismatch score is low (0.4), which argues against IDH-mutant astrocytoma. The tumor involves eloquent speech motor areas, which is non-specific. Overall, evidence for IDH-wildtype is stronger.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent speech motor areas ('Eloquent Brain Involvement': 'Speech motor'), which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas. However, there is no specific feature strongly indicating oligodendroglioma, such as frontal lobe predominance or calcifications (not assessed). The frontal lobe proportion is only 13.7%, and the tumor is midline with insular involvement. Given insufficient evidence, non-codeleted is predicted with low confidence.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "Prediction based on available MRI metadata. Confidence is low for IDH and 1p/19q due to limited evidence.",
+  "subject_id": "UCSF-PDGM-265",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has no enhancement ('Enhancement Quality': 'None') and no necrosis ('Proportion Necrosis': 0.0), which are atypical for grade 4 glioblastoma. However, the tumor volume is large (38.744 mL) and involves eloquent speech motor areas. Deep white matter invasion is present. The absence of enhancement may suggest lower grade, but WHO grade 4 is still possible in non-enhancing tumors. Given the volume and eloquence, grade 4 is predicted with moderate confidence.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion"
+    ]
+  }
+}

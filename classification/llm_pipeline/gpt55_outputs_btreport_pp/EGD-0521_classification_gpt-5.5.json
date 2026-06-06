@@ -1,0 +1,75 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.68,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "ET Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The metadata favors an IDH-mutant diffuse glioma because the patient is relatively young, and the tumor is predominantly frontal/cortical with mild, low-volume enhancement and only minimal necrotic/non-enhancing core, which are common imaging-context features for IDH-mutant glioma. Lack of midline shift also reduces support for a very aggressive IDH-wildtype phenotype. Features arguing against IDH mutation include multifocal disease with three lesions, substantial edema volume/proportion, and definite enhancing tumor, which can be seen with IDH-wildtype or more aggressive tumors. Balancing these, the age and frontal cortical phenotype with limited necrosis/enhancement favor IDH-mutant status, but confidence is moderate because multifocality and edema are atypical for a straightforward lower-grade IDH-mutant presentation.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.61,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "codeleted",
+    "reasoning": "The metadata modestly favors 1p/19q co-deletion because the tumor is frontal and cortically involved in a 39-year-old patient, and T2-FLAIR mismatch is not present; this pattern is more compatible with oligodendroglial phenotype than with the classic T2-FLAIR-mismatch-positive IDH-mutant astrocytoma pattern. Mild enhancement can also occur in oligodendroglioma. Evidence against co-deletion includes multifocality with three lesions, very high edema proportion, and a thick enhancing margin, which are not specific for oligodendroglioma and may reflect a non-codeleted or more aggressive diffuse glioma. Overall, frontal cortical location and absent T2-FLAIR mismatch support a best estimate of codeleted status, but the prediction is only moderately confident because MRI metadata alone is nonspecific.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "MRI metadata alone cannot determine molecular status definitively; tissue-based IDH and 1p/19q testing is required. The imaging pattern is most compatible with an IDH-mutant, 1p/19q-codeleted glioma with an anaplastic/grade 3 phenotype, but multifocality, prominent edema, and definite enhancement increase uncertainty.",
+  "subject_id": "EGD-0521",
+  "who_grade": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "prediction": 3,
+    "reasoning": "For WHO grade, the presence of enhancing tumor, a thick enhancing margin, multifocality, and large edema burden argue against a purely grade 2 imaging phenotype and support a higher-grade lesion. However, enhancement is mild and limited in proportion, necrosis is minimal, the necrotic/non-enhancing core volume is small, there is no midline shift, and ventricular asymmetry is absent, which argues against a classic grade 4 imaging phenotype. The balance of definite but limited enhancement/aggressive features without substantial necrosis or mass effect most strongly supports CNS WHO grade 3.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

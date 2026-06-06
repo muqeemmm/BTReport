@@ -1,0 +1,45 @@
+{
+  "idh_status": {
+    "reasoning": "The tumor is located in the right insula, cortex, frontal lobe, and temporal lobe, with deep white matter invasion and cortical involvement. The absence of enhancement and necrosis suggests a lower-grade glioma, which is more likely to be IDH mutant. Adult-type diffuse gliomas with IDH mutation are more common in lower-grade gliomas. The presence of cortical involvement and deep white matter invasion could be seen in both IDH mutant and wildtype gliomas, but the lack of enhancement favors an IDH mutant tumor.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "IDH mutant gliomas are more likely to have 1p/19q codeletion, especially those involving the frontal lobe. The tumor involves the frontal lobe and insula, which is a common location for IDH mutant gliomas with 1p/19q codeletion. However, the absence of enhancement and the presence of cortical involvement are not specific to codeleted tumors. Without direct evidence of 1p/19q codeletion status, the prediction relies on the likelihood associated with IDH mutation and tumor location.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has no necrosis, and has a relatively low total tumor volume, suggesting a lower-grade glioma. The presence of cortical involvement and deep white matter invasion indicates a diffuse glioma. IDH mutant gliomas without 1p/19q codeletion (likely astrocytomas) can be grade 2 or 3. The absence of significant mass effect (e.g., midline shift, ventricular effacement) and the lack of enhancement favor a grade 2 glioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Cortical involvement"
+    ],
+    "prediction": 2,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-265"
+}

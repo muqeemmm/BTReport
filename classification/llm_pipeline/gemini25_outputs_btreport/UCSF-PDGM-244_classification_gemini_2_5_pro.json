@@ -1,0 +1,46 @@
+{
+  "subject_id": "UCSF-PDGM-244",
+  "idh": {
+    "reasoning": "The tumor is characterized by a very large non-enhancing component, comprising 99.7% of the total volume, with only a tiny focus of mild enhancement and a complete absence of necrosis. The lesion is located in the right frontal lobe and exerts no significant mass effect, as evidenced by the lack of midline shift. This constellation of features\u2014predominantly non-enhancing, non-necrotic, and infiltrative appearance\u2014is highly characteristic of an IDH-mutant glioma and argues strongly against an IDH-wildtype glioblastoma, which typically presents with significant, often ring-like, enhancement and central necrosis.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The differentiation between an IDH-mutant astrocytoma (non-codeleted) and an oligodendroglioma (codeleted) is challenging based on the provided metadata. The frontal lobe location with cortical involvement is common to both. However, the imaging phenotype, dominated by a large, infiltrative-appearing non-enhancing component (labeled as 'Oedema') relative to a very small solid part, is more suggestive of the diffuse growth pattern of an astrocytoma. Oligodendrogliomas, while variable, are often described as having more well-defined margins. The evidence is not strong, but the highly infiltrative appearance slightly favors a non-codeleted status.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The primary determinant of grade on imaging is the presence of enhancement and necrosis. This tumor completely lacks necrosis ('NCR Volume (mL)' is 0.0), which argues strongly against a CNS WHO grade 4 diagnosis. The decision is between grade 2 and 3. The vast majority of the tumor is non-enhancing, a feature typical of a grade 2 glioma. However, there is a small focus of mild enhancement ('ET Volume (mL)' is 0.084). While enhancement can be seen in grade 2 tumors (especially oligodendrogliomas), its presence raises the possibility of a grade 3 tumor. Given the minimal nature of the enhancement and the absence of other aggressive features like necrosis or significant mass effect, a grade 2 designation is most likely.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 2,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly suggestive of a low-grade, IDH-mutant glioma, likely an astrocytoma (CNS WHO grade 2). This is based on the right frontal location, predominantly non-enhancing character, and lack of necrosis or significant mass effect. The presence of minimal enhancement makes a grade 3 tumor a differential consideration, and the distinction from an oligodendroglioma is uncertain based on imaging alone."
+}

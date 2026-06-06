@@ -1,0 +1,46 @@
+{
+  "subject_id": "EGD-0179",
+  "idh": {
+    "reasoning": "The patient's age of 37 years is more typical for an IDH-mutant glioma. The tumor exhibits minimal contrast enhancement (`ET Volume (mL)` of 0.122, `Enhancement Quality`: 'Mild'), which also favors an IDH-mutant status. Furthermore, the very sharp tumor border, indicated by a `Transition Zone Thickness (FLAIR)` median of 0.75 mm, is a feature strongly associated with IDH-mutant tumors. Contradicting this is the presence of a large non-enhancing/necrotic core (`NCR Volume (mL)`: 20.794) and the fact that the tumor crosses the midline, which are aggressive features more commonly seen in IDH-wildtype glioblastoma. However, weighing the combination of young age, sharp borders, and minimal enhancement, the evidence points towards an IDH-mutant glioma.",
+    "supporting_features": [
+      "age_years",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "crosses_ideal_midline"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The most compelling feature for determining 1p/19q status is the tumor's border definition. The `Transition Zone Thickness (FLAIR)` is exceptionally narrow, with a median of 0.75 mm, indicating a very sharply demarcated lesion. This is a classic and strong predictor of 1p/19q co-deletion (oligodendroglioma). The tumor's location in the frontal lobe with cortical involvement is also highly characteristic of this subtype. Additionally, the absence of the T2-FLAIR mismatch sign (`T2-FLAIR Mismatch Present`: 0.0) argues against an IDH-mutant astrocytoma, thereby increasing the relative probability of a codeleted tumor. There are no significant contradicting features.",
+    "supporting_features": [
+      "Transition Zone Thickness (FLAIR)",
+      "Tumor Location",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The presence of contrast enhancement (`ET Volume (mL)`: 0.122) and a very large non-enhancing/necrotic core (`NCR Volume (mL)`: 20.794; `Proportion Necrosis`: 58.6) are definitive features of a high-grade glioma, ruling out WHO grade 2. The tumor also crosses the midline, another indicator of aggressive behavior. While the extensive necrosis is a hallmark of WHO grade 4 tumors (glioblastoma or IDH-mutant astrocytoma), necrosis is also a key feature for diagnosing grade 3 oligodendroglioma. Given that imaging features cannot definitively distinguish between these entities without molecular context, and that grade 3 accounts for both enhancement and necrosis, this is the most appropriate grade assignment. The evidence for a high grade (3 or 4) is strong.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "crosses_ideal_midline"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging features present a challenging case. The extremely well-defined tumor margin is a very strong indicator of 1p/19q co-deletion, suggesting an oligodendroglioma. The patient's young age and minimal enhancement support an IDH-mutant status. The presence of a large non-enhancing/necrotic core and contrast enhancement are indicative of a high-grade tumor, consistent with WHO grade 3 in an oligodendroglioma. The main conflicting feature is the sheer extent of the non-enhancing/necrotic component, which could raise suspicion for a grade 4 astrocytoma or glioblastoma, but this is less likely given the sharply demarcated borders."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "patient_0129",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (40 years) and the tumor's characteristics (frontal lobe location, cortical involvement, mild enhancement, and absence of deep white matter invasion) are considered. IDH mutant gliomas are more common in younger adults and often present with frontal lobe involvement. However, the presence of mild enhancement and relatively large necrotic proportion (42.43%) could suggest a more aggressive tumor, which is less typical for IDH mutant gliomas. The absence of ependymal invasion and the solitary nature of the tumor are noted but are not strongly indicative of IDH status. Overall, the age and location are suggestive of a possible IDH mutation, but the enhancement and necrosis proportion introduce some ambiguity.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.6
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's frontal lobe location and cortical involvement are characteristic of IDH mutant gliomas, among which 1p/19q co-deletion is a subtype. The presence of cortical involvement and frontal lobe location might lean towards a 1p/19q co-deleted status, as these are more common in oligodendrogliomas. However, without direct molecular or histological evidence, this remains an inference based on typical presentations.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.55
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor shows a significant necrotic proportion (42.43%) and mild enhancement, suggesting a high-grade glioma. The presence of necrosis is typically associated with higher grades (3 or 4). The tumor's size and the presence of cortical involvement without deep white matter invasion are noted. The relatively mild enhancement quality might argue against the highest grade, but necrosis is a strong indicator of high grade.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "NCR Volume (mL)",
+        "ED Volume (mL)"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.7
+    }
+  ],
+  "subject_id": "EGD-0122"
+}

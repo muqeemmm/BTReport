@@ -1,0 +1,50 @@
+{
+  "subject_id": "UCSF-PDGM-440",
+  "idh": {
+    "reasoning": "The patient's young age (31 years) is a very strong predictor for an IDH-mutant glioma, as IDH-wildtype gliomas are typically found in patients over 55. Furthermore, the imaging characteristics of a large, purely non-enhancing and non-necrotic tumor are classic for IDH-mutant astrocytomas. The complete absence of enhancement or necrotic components strongly argues against an IDH-wildtype glioblastoma, which characteristically presents with these features. The evidence is highly concordant for an IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor demonstrates a highly infiltrative growth pattern, involving numerous deep structures including the brainstem, thalamus, caudate, putamen, and pallidum. This diffuse infiltration of deep gray and white matter is a hallmark of astrocytomas (1p/19q non-codeleted). In contrast, oligodendrogliomas (1p/19q codeleted) tend to be more cortically-based and well-defined. While there is cortical involvement, the extensive deep infiltration is the dominant feature and strongly points towards a non-codeleted status.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "who_grade": {
+    "reasoning": "The determination of WHO grade is challenging due to conflicting features. The complete absence of contrast enhancement and necrosis are strong indicators of a lower-grade glioma, specifically WHO grade 2. However, the tumor is exceptionally large (over 250 mL) and causes severe mass effect, including an 11mm midline shift and effacement of the right ventricle. This significant mass effect and large tumor burden suggest aggressive growth, which is more typical of a higher-grade tumor like WHO grade 3. While imaging cannot definitively distinguish grade 2 from 3, the profound mass effect makes a grade 3 tumor more likely than a grade 2. Grade 4 is unlikely given the lack of enhancement or necrosis on imaging.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Effaced Ventricle"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "This 31-year-old patient presents with a very large, non-enhancing, infiltrative glioma causing significant mass effect. The combination of young age and absence of enhancement strongly suggests an IDH-mutant glioma. The deep, infiltrative pattern involving the thalamus and brainstem is characteristic of an astrocytoma (1p/19q non-codeleted). The grade is ambiguous on imaging; the lack of enhancement favors a lower grade, but the massive size and mass effect are concerning for a higher-grade (likely grade 3) tumor."
+}

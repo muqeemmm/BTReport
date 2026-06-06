@@ -1,0 +1,55 @@
+{
+  "subject_id": "BraTS2021_00489",
+  "idh": {
+    "reasoning": "The patient's age of 51 is more typical for IDH-wildtype gliomas. The imaging features are highly suggestive of an aggressive, high-grade tumor, which is most commonly IDH-wildtype. Key indicators include the presence of significant central necrosis (NCR Volume (mL) of 8.056) and contrast enhancement (ET Volume (mL) of 19.06) with a thick margin. The tumor's location, with extensive involvement of deep gray matter structures (thalamus, caudate, putamen) and the insula, is also a strong predictor of IDH-wildtype status. Furthermore, the presence of ependymal invasion and extensive vasogenic edema with significant mass effect (max_shift_mm of 13.0) are characteristic of IDH-wildtype glioblastoma. The only mildly contradictory feature is the subjective description of 'Mild' enhancement, but this is heavily outweighed by the objective evidence of necrosis and enhancement volume.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions",
+      "Region Proportions",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly against a 1p/19q co-deleted tumor (oligodendroglioma). The presence of significant central necrosis (NCR Volume (mL) > 0) and a thick enhancing margin ('>3mm') are classic features of an astrocytoma and are highly atypical for an oligodendroglioma. Additionally, the deep location involving the thalamus, basal ganglia, and insula is much more characteristic of an astrocytic lineage (non-codeleted) tumor than an oligodendroglioma, which typically presents as a more cortically-based lesion. While there is cortical and frontal lobe involvement, which can be seen in oligodendrogliomas, the overwhelming evidence of necrosis and deep invasion points strongly to a non-codeleted status.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Anatomical Overlap Regions",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The prediction of CNS WHO grade 4 is made with very high confidence based on the unequivocal imaging evidence of necrosis. The metadata reports a necrotic core volume (NCR Volume (mL)) of 8.056 mL. In an adult-type diffuse glioma, the presence of necrosis, either on imaging or histopathology, is a defining feature of grade 4. This is further supported by other features of high-grade malignancy, including significant contrast enhancement (ET Volume (mL) of 19.06), a thick enhancing margin, extensive vasogenic edema (ED Volume (mL) of 129.186), and profound mass effect (max_shift_mm of 13.0). There is no imaging evidence to support a lower grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a large, solitary left-sided glioma with extensive involvement of the insula and deep gray matter. The MRI features of a large necrotic and enhancing core, extensive surrounding edema, and significant mass effect are all classic radiological hallmarks of a high-grade glioma. The combination of these features with the patient's age (51) makes Glioblastoma, IDH-wildtype, CNS WHO grade 4 the most probable diagnosis with very high confidence. The predictions for IDH status, 1p/19q status, and WHO grade are internally consistent with this diagnosis."
+}

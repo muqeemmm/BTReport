@@ -1,0 +1,50 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 58 years old, which is more typical for IDH-wildtype glioblastoma. There is no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0), which is unusual for IDH-wildtype tumors but can occur. The proportion of necrosis (0.15) is low, which is atypical for IDH-wildtype. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present: 0.0, T2-FLAIR Mismatch Score: 0.4, T2-FLAIR Mismatch Degree: -0.3389), which argues against IDH-mutant astrocytoma. Given the age and absence of T2-FLAIR mismatch, IDH-wildtype is more likely despite the lack of enhancement.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the parietal-cortex region with cortical involvement present. Oligodendrogliomas (IDH-mutant and 1p/19q codeleted) often involve the cortex, but this tumor has no enhancement, which is atypical for oligodendroglioma. Additionally, eloquent brain involvement is absent, which is more common in astrocytomas. However, without IDH mutation status confirmed, the evidence for 1p/19q status is indirect. Given the cortical involvement but lack of enhancement, prediction is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "The tumor is nonenhancing with minimal necrosis and predominantly edema. Age suggests IDH-wildtype, but lack of enhancement is atypical. T2-FLAIR mismatch absent supports IDH-wildtype. Cortical involvement without deep white matter invasion could suggest oligodendroglioma, but no enhancement argues against it. Grade 4 is assigned based on necrosis presence.",
+  "subject_id": "EGD-0518",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 0.15) indicates grade 4 glioma according to WHO criteria. However, the necrosis proportion is low and there is no enhancement, which is unusual for glioblastoma. Enhancement is typically present in grade 4 tumors. Despite this, any necrosis in a diffuse glioma is sufficient for grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 37 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0), which is typically associated with IDH-mutant astrocytomas. However, the T2-FLAIR Mismatch Score is 0.52 and Degree is -0.33, which do not strongly support the mismatch sign. The tumor is located in the frontal lobe and cortex, which is common for IDH-mutant tumors. Enhancement is mild and proportion enhancing is low (0.34), which is more typical of lower-grade IDH-mutant tumors than IDH-wildtype glioblastoma. There is no ependymal invasion or deep white matter invasion, which are more common in aggressive IDH-wildtype tumors. The proportion of necrosis is high (58.6%), which is unusual for IDH-mutant tumors and argues against it. Overall, the evidence for IDH-mutant is stronger than for wildtype, but the high necrosis proportion reduces confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe and cortex, which is common for both oligodendrogliomas and astrocytomas. However, oligodendrogliomas (IDH-mutant and 1p/19q codeleted) often show more prominent enhancement and calcifications, but calcifications are not assessed. The enhancement here is mild, which is less typical for oligodendrogliomas that often have moderate enhancement. The T2-FLAIR mismatch sign is absent, which is characteristic of oligodendrogliomas, but here it is absent, supporting non-codeleted status. The tumor crosses midline in edema and NCR regions, but the enhancing component does not cross midline, which is more typical of astrocytomas. The proportion of necrosis is high, which is unusual for oligodendrogliomas and more common in astrocytomas. Overall, the evidence supports astrocytoma (non-codeleted) over oligodendroglioma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "CET Crosses midline",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "The tumor is an IDH-mutant astrocytoma with high-grade features including significant necrosis (58.6%) and WHO grade 4. The absence of deep white matter invasion and ependymal involvement is noted but does not preclude grade 4. The confidence in IDH mutation is moderate due to conflicting necrosis proportion.",
+  "subject_id": "EGD-0179",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows high proportion of necrosis (58.6%), which is a hallmark of glioblastoma (CNS WHO grade 4). The enhancement is mild and proportion enhancing is low (0.34), which is atypical for glioblastoma that usually shows prominent enhancement. However, necrosis is a key feature for grade 4. The tumor volume is large (35.482 mL), and there is significant edema. The tumor is solitary and located in an eloquent area but reported as 'No involvement'. The absence of ependymal invasion and deep white matter invasion argues against grade 4, but necrosis predominates. The WHO grade is predicted as 4 based on necrosis, but the mild enhancement reduces confidence slightly.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)"
+    ]
+  }
+}

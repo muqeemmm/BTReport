@@ -1,0 +1,39 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (65 years) and the absence of enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) are more typical of IDH wildtype gliomas, which are more common in older adults and often lack significant enhancement. The presence of a non-enhancing tumor with a significant edema volume (ED Volume: 32.084 mL) also aligns with the typical presentation of IDH wildtype glioblastoma. The T2-FLAIR mismatch score is not indicative of an IDH mutant astrocytoma as it is not significantly high (T2-FLAIR Mismatch Score: 0.5411111292248735).",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The absence of 1p/19q co-deletion is more likely given the lack of specific MRI features that are strongly associated with co-deleted tumors, such as a more circumscribed appearance or specific locations like the frontal lobe. The tumor's location in the temporal-cortex region and the absence of enhancement are not specific indicators of co-deletion status. IDH wildtype tumors are more likely to be non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "grade": {
+    "reasoning": "Given the patient's age (65 years), the tumor's significant edema volume (32.084 mL), and the absence of enhancement, these features are consistent with a high-grade glioma. The lack of enhancement and the presence of significant edema are typical for glioblastoma, which is a grade 4 tumor. The absence of specific features like T2-FLAIR mismatch, which is more characteristic of lower-grade IDH mutant astrocytomas, further supports a higher grade.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "UCSF-PDGM-485"
+}

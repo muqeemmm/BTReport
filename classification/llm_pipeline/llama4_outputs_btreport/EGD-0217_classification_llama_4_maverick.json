@@ -1,0 +1,46 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The tumor is located in the frontal lobe, involves the cortex, and is mildly enhancing. The presence of cortical involvement and mild enhancement are more commonly associated with IDH wildtype gliomas. Additionally, the tumor is described as solitary and does not cross the midline, which is consistent with the typical presentation of IDH wildtype glioblastomas. However, the relatively small size and low proportion of necrosis might argue against a high-grade tumor. Despite this, the overall features lean more towards an IDH wildtype tumor.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor involves the frontal lobe and cortex, and is mildly enhancing. IDH-mutant gliomas with 1p/19q co-deletion often present in a similar manner, but the presence of cortical involvement is less typical for 1p/19q co-deleted tumors. Given that we've predicted IDH wildtype status, the likelihood of 1p/19q co-deletion is low since co-deletion is typically associated with IDH mutation. Therefore, the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "Cortical involvement",
+      "IDH mutation status prediction"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor has a mild enhancement quality and a relatively small size. The proportion of necrosis is less than half, and the edema volume is larger than the enhancing and necrotic components. These features might suggest a lower grade tumor. However, the presence of some necrosis and enhancement indicates a potentially higher grade. Given the overall features, a grade 3 tumor is plausible as it balances between the presence of some aggressive features (enhancement, necrosis) and the relatively low volume of these components.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion of Oedema"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "subject_id": "EGD-0217"
+}

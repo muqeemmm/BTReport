@@ -1,0 +1,68 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.72,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Cortical involvement",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "For IDH status considered independently, the strongest MRI-derived evidence favors an IDH-wildtype diffuse glioma: very advanced age is captured by age_years, and the lesion shows aggressive enhancing behavior with Enhancement Quality marked, ET Volume (mL) 9.032, Proportion Enhancing 22.38, Thickness of enhancing margin >3mm, and substantial surrounding abnormality with ED Volume (mL) 31.063 and Proportion of Oedema 76.98. These features are more typical of IDH-wildtype glioblastoma than of an IDH-mutant diffuse glioma. Evidence arguing against IDH-wildtype is the reported T2-FLAIR Mismatch Present with high T2-FLAIR Mismatch Score, which is classically associated with IDH-mutant astrocytoma, and the cortical/frontoparietal involvement described by Cortical involvement, Tumor Location, and Region Proportions can be seen in IDH-mutant gliomas. Balancing the strong age and enhancing high-grade phenotype against the conflicting T2-FLAIR mismatch metadata, the best estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.74,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the metadata more strongly favors a non-codeleted tumor. The reported T2-FLAIR Mismatch Present and high T2-FLAIR Mismatch Score are more characteristic of astrocytoma-like, non-codeleted diffuse glioma than oligodendroglioma. Marked enhancement and substantial enhancing tumor burden, reflected by Enhancement Quality, ET Volume (mL), Proportion Enhancing, and Thickness of enhancing margin, are not specific for oligodendroglioma and do not provide positive support for co-deletion. The main features arguing toward possible co-deletion are cortical/frontoparietal involvement, reflected by Tumor Location, Region Proportions, and Cortical involvement, because oligodendrogliomas commonly involve cortex and often have frontal predilection. However, in the absence of calcification or other oligodendroglial-specific MRI features, and with strong T2-FLAIR mismatch metadata, the best estimate is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histology. The main uncertainty is the conflict between very advanced age with marked enhancement and edema, which favors IDH-wildtype grade 4 disease, versus the reported T2-FLAIR mismatch metadata, which favors an IDH-mutant, non-codeleted astrocytoma phenotype. Molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "BraTS2021_00514",
+  "who_grade": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "midline_shift_present",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": 4,
+    "reasoning": "For CNS WHO grade considered independently, the imaging phenotype most strongly supports grade 4. The lesion has marked enhancement with Enhancement Quality, a measurable enhancing component with ET Volume (mL), a substantial enhancing fraction with Proportion Enhancing, and a thick enhancing margin with Thickness of enhancing margin. There is also extensive surrounding FLAIR abnormality/edema reflected by ED Volume (mL) and Proportion of Oedema, which supports a high-grade infiltrative process. Features arguing against grade 4 include very low necrotic/non-enhancing core burden in Proportion Necrosis and NCR Volume (mL), no midline shift by midline_shift_present, relatively limited size in Lesion Sizes APxTVxCC (cm), and solitary disease without satellites by Multifocal or Multicentric and Multiple satellites present. Despite these mitigating features, the combination of marked thick enhancement and extensive edema is more concerning for grade 4 than grade 2 or 3, so the best estimate is CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,54 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 45 years old, which is younger than typical for IDH-wildtype glioblastoma. However, the T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0, T2-FLAIR Mismatch Score = 0.4, T2-FLAIR Mismatch Degree = -0.3882449885651087), which strongly argues against IDH-mutant astrocytoma. Enhancement is mild (Enhancement Quality: Mild) and proportion enhancing is low (9.14%), which is more consistent with IDH-wildtype tumors. Eloquent brain involvement (Speech motor and Vision) and ependymal invasion (Ependymal (ventricular) Invasion: Present) are common in both types but do not differentiate.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region (Tumor Location: temporal-cortex region) with cortical involvement (Cortical involvement: Present) and deep white matter invasion (Deep WM invasion: Present), which is atypical for oligodendrogliomas that favor frontal lobes and may have less deep invasion. However, the age (45 years) is within the range for oligodendroglioma. The absence of calcifications (not assessed) and lack of specific oligodendroglioma features in the text report suggest non-codeleted status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor shows midline epicenter (Side of Tumor Epicenter: Midline) with significant edema crossing midline (Edema crosses midline: True) and ependymal invasion. The enhancement is mild with a thick rim (>3mm). The T2-FLAIR mismatch sign is absent, favoring IDH-wildtype. The location and invasion pattern suggest astrocytic lineage. Grade 4 is assigned due to necrosis (Proportion Necrosis: 0.08%) and enhancement, though necrosis proportion is low; confidence is moderate due to borderline features.",
+  "subject_id": "BraTS2021_00217",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "Necrosis is present (Proportion Necrosis: 0.08%), which is a hallmark of grade 4 glioblastoma. Enhancement is present (Proportion Enhancing: 9.14%) with a thick rim (Thickness of enhancing margin: >3mm). However, the proportion of necrosis is very low (0.08%), which is atypical for GBM but still meets criteria. Microvascular proliferation is not assessed, but the enhancement pattern supports high grade. Midline shift (midline_shift_present: Yes) and large edema volume (ED Volume (mL): 145.972) also indicate aggressiveness.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "ED Volume (mL)"
+    ]
+  }
+}

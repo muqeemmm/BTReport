@@ -1,0 +1,45 @@
+{
+  "subject_id": "EGD-0211",
+  "idh": {
+    "reasoning": "The strongest evidence for an IDH-wildtype status is the multifocal nature of the tumor, which is highly characteristic of glioblastoma and rare in IDH-mutant gliomas. This is supported by the `Multifocal or Multicentric` field being 'Multifocal' and `Number of lesions` being 2. Furthermore, the very high `Proportion Necrosis` (44.14%) is a classic hallmark of IDH-wildtype tumors. The patient's age of 46 is equivocal but does not argue against this diagnosis. Features that could be seen in IDH-mutant tumors, such as insular involvement (`Tumor Location`) and 'Mild' `Enhancement Quality`, are significantly outweighed by the compelling evidence of multifocality and extensive necrosis.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. The tumor exhibits features strongly associated with an astrocytic (non-codeleted) lineage. The presence of extensive necrosis (`Proportion Necrosis`: 44.14%) and deep white matter invasion (`Deep WM invasion`: 'Present') are classic for astrocytoma and atypical for oligodendroglioma (codeleted). The tumor location involving the insula is also more common in astrocytomas. There are no imaging features in the provided metadata, such as well-defined borders or calcification (not assessed), that would suggest a 1p/19q co-deleted (oligodendroglial) tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The most definitive feature for CNS WHO Grade 4 is the presence of extensive necrosis. The `Proportion Necrosis` is reported as 44.14%, which is a very strong and direct indicator of a Grade 4 tumor (glioblastoma). The presence of contrast enhancement (`ET Volume (mL)` > 0), even if mild, and the multifocal nature of the disease (`Multifocal or Multicentric`: 'Multifocal') further support a high-grade assignment. The significant mass effect (`midline_shift_present`: 'Yes', `max_shift_mm`: -8.0) is also consistent with a rapidly growing, high-grade lesion. There is no substantial evidence to support a lower grade of 2 or 3.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "ET Volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of multifocality and extensive necrosis in a 46-year-old patient provides very strong evidence for a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The imaging phenotype is classic for this diagnosis. While some location metadata appears inconsistent (right-sided volumes vs. left-sided anatomical region list), the core tumor features of multifocality and necrosis are unambiguous and drive the high-confidence classification."
+}

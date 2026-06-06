@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_01731",
+  "idh": {
+    "reasoning": "The patient is young (35 years), which is strongly associated with IDH-mutant gliomas. The tumor is entirely non-enhancing, a classic feature of lower-grade, IDH-mutant tumors. The most compelling evidence is the definitive presence of the T2-FLAIR mismatch sign, which is highly specific for IDH-mutant status. While the tumor is large and involves deep structures, which can be seen in IDH-wildtype tumors, these features are non-specific and are overwhelmingly outweighed by the combination of young age, lack of enhancement, and the T2-FLAIR mismatch sign.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction of IDH-mutant status narrows the possibilities to astrocytoma (non-codeleted) or oligodendroglioma (codeleted). The presence of a T2-FLAIR mismatch is a strong and specific marker for the astrocytic lineage, and therefore predicts non-codeleted status. The tumor's involvement of deep grey matter structures (thalamus, putamen) and the brain-stem is also more characteristic of astrocytomas. While the sharp tumor margins, suggested by a very thin FLAIR transition zone, are more typical of oligodendrogliomas, this is a less specific finding compared to the T2-FLAIR mismatch sign.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "Given the prediction of an IDH-mutant astrocytoma, the grade can be 2, 3, or 4. The complete absence of contrast enhancement makes a WHO grade 4 diagnosis less likely, as this grade is often associated with enhancement and/or central necrosis on imaging. The distinction between grade 2 and 3 is difficult based on imaging alone as it relies on mitotic activity. However, the tumor is very large (91 mL) and exerts significant mass effect, including a 6mm midline shift and effacement of the right ventricle. These features are more consistent with a higher-grade, more proliferative tumor, making grade 3 more probable than grade 2. A grade 4 designation without enhancement would require CDKN2A/B homozygous deletion, which cannot be determined from the available MRI data.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Effaced Ventricle"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 35-year-old female with a large, non-enhancing glioma involving the right temporal lobe and deep grey matter structures. The presence of a definitive T2-FLAIR mismatch sign is the key imaging finding, strongly indicating an IDH-mutant astrocytoma (1p/19q non-codeleted). The lack of enhancement argues against grade 4, while the large size and significant mass effect favor grade 3 over grade 2. The predicted integrated diagnosis is therefore Astrocytoma, IDH-mutant, CNS WHO grade 3."
+}

@@ -1,0 +1,53 @@
+{
+  "subject_id": "EGD-0241",
+  "idh": {
+    "reasoning": "The patient is relatively young (38) which favors IDH\u2011mutant glioma, but the tumor shows a high proportion of necrosis (75.6%) and even though contrast enhancement is mild (6% enhancing, mild quality), necrosis is a strong indicator of IDH\u2011wildtype glioblastoma. The presence of deep white\u2011matter invasion and cortical involvement are non\u2011specific, but the necrotic component outweighs the age argument, leading to an IDH\u2011wildtype prediction.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Oligodendroglioma (codeleted) often occurs in the frontal cortex of younger adults and may show calcifications, which are not assessable here. While the tumor is cortical and involves frontal and insular regions, the high necrosis proportion and lack of calcification evidence argue against 1p/19q codeletion. Therefore the safest inference is non\u2011codeleted.",
+    "supporting_features": [
+      "Region Proportions",
+      "Cortical involvement",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.62
+  },
+  "who_grade": {
+    "reasoning": "Imaging shows a large necrotic component (75% necrosis) and peritumoral edema (24% of volume) with mild contrast enhancement. Necrosis is a hallmark of WHO grade\u202f4 glioblastoma, outweighing the modest enhancement and the patient\u2019s younger age. Thus a grade\u202f4 assignment is most appropriate.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies on conventional MRI features; lack of diffusion, perfusion, and spectroscopy limits certainty, especially given the mild contrast enhancement and young age. Nonetheless, the prominent necrosis supports a high\u2011grade IDH\u2011wildtype glioma."
+}

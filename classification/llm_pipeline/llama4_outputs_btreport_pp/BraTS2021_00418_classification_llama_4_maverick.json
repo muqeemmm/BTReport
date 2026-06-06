@@ -1,0 +1,45 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (78 years) and the presence of a large, enhancing, and necrotic tumor with significant mass effect (midline shift, ventricular asymmetry) are more typical of glioblastoma, IDH-wildtype. The T2-FLAIR mismatch score is 0.76, which is not strongly indicative of IDH-mutant astrocytoma (typically requires a score close to 1). The presence of necrosis (NCR Volume = 4.673 mL) and enhancement (ET Volume = 25.99 mL) also points towards a more aggressive tumor, likely IDH-wildtype glioblastoma.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "midline_shift_present",
+      "volumes_ideal_midline",
+      "T2-FLAIR Mismatch Score",
+      "NCR Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect is more typical of glioblastoma. 1p/19q co-deletion is more commonly associated with oligodendrogliomas, which are less likely given the patient's age and the tumor's aggressive features. The absence of specific indicators for 1p/19q co-deletion in the provided metadata (e.g., specific imaging characteristics unique to oligodendrogliomas) further supports the prediction of non-codeleted status.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as significant necrosis (NCR Volume = 4.673 mL), enhancement (ET Volume = 25.99 mL), and mass effect (midline shift, ventricular asymmetry). These characteristics are typical of WHO grade 4 tumors, particularly glioblastoma. The patient's age (78 years) also supports this diagnosis, as glioblastoma is more common in older adults.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "volumes_ideal_midline"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00418"
+}

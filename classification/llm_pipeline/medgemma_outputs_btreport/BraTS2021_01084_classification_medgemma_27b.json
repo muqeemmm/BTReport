@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_01084",
+  "idh": {
+    "reasoning": "The patient is 63 years old. Older age (>55) is associated with IDH-wildtype gliomas. The tumor is large (Total tumor volume 44.233 mL), solitary, and located in the midline, crossing the midline with significant edema crossing the midline. These features are more common in IDH-wildtype tumors. While age is the strongest indicator here, the other features align better with IDH-wildtype status. There are no features strongly suggesting IDH-mutant status (e.g., younger age, smaller size, peripheral location).",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "crosses_ideal_midline",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not contain any information directly related to 1p/19q co-deletion status (e.g., specific imaging features like calcification or location in the frontal lobe, which are sometimes associated but not definitive). The tumor characteristics (age 63, large size, midline location, deep white matter invasion, ependymal invasion) are more typical of IDH-wildtype tumors, which are almost always 1p/19q non-codeleted. Therefore, based on the strong likelihood of IDH-wildtype status derived from other features, 1p/19q co-deletion is highly unlikely.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The patient is 63 years old with a large (44.233 mL) tumor involving multiple regions including ventricles and corpus callosum ('Tumor Location', 'Region Proportions'). The tumor shows deep white matter invasion ('Deep WM invasion'), ependymal invasion ('Ependymal (ventricular) Invasion'), and crosses the midline ('crosses_ideal_midline', 'CET Crosses midline', 'Edema crosses midline'). The enhancement is marked ('Enhancement Quality') with a thick margin (>3mm). These features collectively point towards a high-grade glioma. Given the age and aggressive features (deep/ependymal invasion, midline crossing), it is most consistent with WHO Grade 4 glioma (Glioblastoma). Grade 2 and Grade 3 are less likely given the combination of extensive invasion and large size in an older adult.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_ideal_midline",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH-wildtype astrocytoma, WHO grade IV",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult (63 years) presenting with a large (44.2 mL), solitary glioma located in the midline involving ventricles and corpus callosum. The tumor demonstrates aggressive features including deep white matter invasion, ependymal invasion, and crossing of the midline with associated edema. These characteristics strongly suggest an IDH-wildtype glioma, specifically Glioblastoma (WHO Grade IV)."
+}

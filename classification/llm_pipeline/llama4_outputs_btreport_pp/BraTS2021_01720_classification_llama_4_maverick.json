@@ -1,0 +1,45 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The patient's age (31 years) and the tumor's characteristics, such as being located in the temporal cortex region, mildly enhancing, and having a relatively low proportion of necrosis (21.98%), are more typical of IDH-mutant gliomas. The T2-FLAIR mismatch score is 0.5248692099065688, which is not strongly indicative of an IDH-mutant astrocytoma as a high score (>0.7-0.8) is typically expected for a positive mismatch. However, the absence of a strong T2-FLAIR mismatch does not rule out IDH mutation. The presence of cortical involvement and the tumor being solitary also align more with IDH-mutant gliomas. Given these features, the likelihood of an IDH mutation is considered higher.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The tumor is located in the temporal cortex, which is a common location for both IDH-mutant astrocytomas and oligodendrogliomas. The presence of mild enhancement and the absence of ependymal invasion or deep white matter invasion are noted. However, the key determinant for 1p/19q co-deletion status is not directly available from the provided metadata. Given the patient is young and has an IDH-mutant glioma (as predicted), and considering that oligodendrogliomas (which are typically 1p/19q co-deleted) often present with a more indolent course and are less likely to have high-grade features, the absence of strong evidence for high-grade features (e.g., significant necrosis or enhancement) might lean towards a co-deleted status. However, the confidence is low due to the lack of direct evidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.55
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor has a relatively low proportion of necrosis (21.98%) and a mild enhancement quality, suggesting it may not be the most aggressive. However, the presence of necrosis and some enhancement indicates a higher grade. The tumor's volume and the involvement of the cortex suggest a significant lesion. Given the predicted IDH mutation status and considering the features, a grade 3 is plausible as it reflects a tumor with more aggressive features than grade 2 but not to the extent of grade 4. The confidence is moderate due to the balance between features suggesting lower and higher grades.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "BraTS2021_01720"
+}

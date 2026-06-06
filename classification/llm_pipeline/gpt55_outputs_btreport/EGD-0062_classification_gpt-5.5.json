@@ -1,0 +1,79 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.62,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The raw MRI pattern has several aggressive features that more often favor an IDH-wildtype diffuse glioma: extensive oedema, midline shift, deep white-matter invasion, ependymal/ventricular invasion, measurable enhancement, and necrotic/non-enhancing core. Against this, the frontal cortical location and mild enhancement are features that can be seen with IDH-mutant glioma, so the evidence is mixed. Overall, the aggressive infiltrative and mass-effect pattern slightly outweighs the frontal cortical/mild-enhancement features, leading to an IDH-wildtype estimate.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.66,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status, the frontal cortical involvement and mild enhancement would support the possibility of an oligodendroglioma-type, codeleted tumor. However, the metadata also show deep white-matter invasion, ependymal/ventricular invasion, extensive oedema with midline crossing, midline shift, measurable enhancement, and necrotic/non-enhancing core, which are less typical for a classic 1p/19q-codeleted oligodendroglioma and more supportive of a non-codeleted diffuse glioma. The balance of the available MRI features therefore favors non-codeletion.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "max_shift_mm",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ]
+  },
+  "overall_comment": "Predictions are based only on conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, patient age, or molecular testing. The IDH and 1p/19q calls are uncertain because frontal cortical location and mild enhancement conflict with the aggressive oedema, invasion, enhancement, and necrosis pattern. There is also an internal enhancement-volume discrepancy in the metadata: ET Volume (mL) and Proportion Enhancing indicate enhancement, while the structured ideal/patient midline ET subvolumes are zero.",
+  "subject_id": "EGD-0062",
+  "who_grade": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "CET Crosses midline"
+    ],
+    "prediction": 4,
+    "reasoning": "For WHO grade, the strongest MRI evidence favors a high-grade lesion: measurable enhancing tumor, necrotic/non-enhancing core, thick enhancing margin, very large oedema burden, midline shift, deep white-matter invasion, and ependymal/ventricular invasion. These features collectively support grade 4 over grades 2 or 3. Mild enhancement, solitary presentation, absence of satellites, and no enhancing tumor crossing the midline temper certainty, but do not outweigh the necrosis, enhancement, invasion, and mass-effect features. The MRI-based estimate is therefore CNS WHO grade 4.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion of Oedema",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

@@ -1,0 +1,44 @@
+{
+  "subject_id": "EGD-0123",
+  "idh": {
+    "reasoning": "The tumor is located in the frontal lobe and is completely non-enhancing. The absence of contrast enhancement is a very strong radiological predictor for IDH-mutant status in adult-type diffuse gliomas. IDH-wildtype tumors, particularly glioblastomas, almost invariably present with significant, often ring-like, enhancement and central necrosis. The provided metadata shows zero enhancing volume (`ET Volume (mL)`: 0.0) and `Enhancement Quality` as 'None'. This constellation of features is classic for an IDH-mutant glioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Given the high likelihood of an IDH-mutant status, the differential is between an astrocytoma (non-codeleted) and an oligodendroglioma (codeleted). The frontal lobe location is common for both subtypes and is therefore non-discriminatory. Key imaging differentiators such as calcification (common in oligodendroglioma) or the T2-FLAIR mismatch sign (specific for astrocytoma) cannot be assessed from the provided metadata. The tumor has a relatively high proportion of surrounding edema (`Proportion of Oedema`: 69.38), which can be more characteristic of the infiltrative nature of astrocytomas compared to the more solid, well-defined nature of many oligodendrogliomas. However, this is a soft sign, and the evidence is weak. The prediction leans slightly towards non-codeleted, but with low confidence.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The primary determinant of grade on conventional MRI is the presence of contrast enhancement and/or necrosis, which are markers of microvascular proliferation and tissue breakdown, respectively. This tumor shows a complete lack of contrast enhancement (`ET Volume (mL)`: 0.0, `Proportion Enhancing`: 0.0). This is the single most important imaging feature suggesting a low-grade (CNS WHO grade 2) glioma. While there is a non-enhancing core (`NCR Volume (mL)`: 4.892), this is not equivalent to the gadolinium-enhancing necrosis required for a high-grade diagnosis on imaging. Without enhancement, there is no radiological evidence to support a grade 3 or 4 diagnosis. A grade 4 IDH-mutant astrocytoma would require molecular markers (CDKN2A/B homozygous deletion) not visible on MRI.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "NCR Volume (mL)"
+    ],
+    "prediction": 2,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly suggestive of a low-grade, non-enhancing glioma. The complete absence of enhancement strongly supports an IDH-mutant status and a CNS WHO grade 2. The differentiation between astrocytoma and oligodendroglioma is uncertain based on the available metadata, but the prediction favors astrocytoma. The final diagnosis will depend on molecular analysis."
+}

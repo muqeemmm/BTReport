@@ -1,0 +1,47 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (25 years) and the presence of a large, enhancing, and necrotic tumor with significant mass effect and midline shift suggest a high-grade glioma. The tumor's location in the frontal lobe, involvement of multiple structures, and presence of ependymal invasion are also indicative of an aggressive tumor. IDH mutant gliomas are more common in younger adults and often have a better prognosis than IDH wildtype gliomas. However, the presence of necrosis and enhancement suggests a high-grade tumor, which is more commonly associated with IDH wildtype status in older patients. Given the patient's relatively young age, an IDH mutation is possible. The T2-FLAIR mismatch score is 0.4, which is not strongly indicative of an IDH mutant astrocytoma (typically associated with a higher T2-FLAIR mismatch). However, the absence of a strong T2-FLAIR mismatch does not rule out IDH mutation entirely. The presence of significant necrosis and enhancement leans towards a more aggressive tumor, but the age of the patient leans towards IDH mutant status. Overall, the evidence is not strongly in favor of either IDH mutant or wildtype status based on the available metadata.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "n_slices_with_shift",
+      "mean_shift_mm"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in the frontal lobe and involves multiple lobes and deep structures. The presence of 1p/19q co-deletion is often associated with oligodendrogliomas, which typically present with calcifications (not assessed here) and have a more favorable prognosis. The tumor's enhancement quality is marked, and there's significant necrosis, which is not typical for codeleted tumors. The patient's age is relatively young for a glioblastoma, which often are IDH wildtype and non-codeleted. However, the presence of a large, enhancing tumor with necrosis and significant mass effect is more suggestive of an astrocytic lineage. The T2-FLAIR mismatch score is low, not supporting IDH mutant astrocytoma strongly, but codeletion status is more closely related to oligodendroglioma, which is typically IDH mutant and 1p/19q codeleted. Without direct evidence of codeletion, we rely on surrogate markers. The presence of significant necrosis and the tumor's aggressive features argue against codeletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits significant mass effect, necrosis, and enhancement, which are hallmarks of high-grade gliomas. The presence of necrosis (Proportion Necrosis = 19.65%) and marked enhancement quality are indicative of a high-grade tumor. The tumor's large size, involvement of multiple structures, and ependymal invasion further support a high-grade diagnosis. The patient's relatively young age might suggest a lower grade, but the tumor's aggressive features outweigh this consideration. The WHO grade is likely to be high (3 or 4). Given the presence of necrosis, the tumor is more likely to be grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "n_slices_with_shift",
+      "mean_shift_mm"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "UCSF-PDGM-089"
+}

@@ -1,0 +1,76 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "reasoning": "Considering IDH status independently, age_years of 44 and a nonenhancing lesion pattern are more typical of an IDH-mutant adult diffuse glioma than an IDH-wildtype glioblastoma. Enhancement Quality is None, ET Volume (mL) is 0.0, Proportion Enhancing is 0.0, NCR Volume (mL) is 0.0, and Proportion Necrosis is 0.0, which argues against the usual imaging phenotype of IDH-wildtype glioblastoma. Tumor Location and Region Proportions show temporal/cortical/insular involvement with Cortical involvement present, a common distribution for lower-grade IDH-mutant glioma. Against IDH-mutant status, Total tumor volume (mL) and ED Volume (mL) are large, midline_shift_present with max_shift_mm of 9.0 indicates substantial mass effect, and Deep WM invasion is present, all of which can be seen with more aggressive IDH-wildtype tumors. Overall, the absence of enhancement/necrosis and the patient age outweigh the aggressive mass-effect features, supporting IDH-mutant as the best estimate.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Considering 1p/19q status independently, the strongest anatomic evidence favors non-codeleted diffuse glioma: Tumor Location and Region Proportions emphasize temporal, cortical, and insular involvement rather than a classic frontal oligodendroglioma pattern, while Deep WM invasion and Anatomical Overlap Regions involving deep gray/mesial temporal structures are less specific for oligodendroglioma. Side of Tumor Epicenter is Midline, which is also not a classic oligodendroglial clue. Evidence against non-codeleted status is that Enhancement Quality is None, ET Volume (mL) is 0.0, Proportion Enhancing is 0.0, Cortical involvement is present, and age_years is 44, all of which can be compatible with oligodendroglioma. However, without calcification/SWI information and with the non-frontal temporal-insular/deep pattern, non-codeleted is the better estimate.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata. Lack of diffusion/ADC, perfusion, spectroscopy, SWI/calcification assessment, and molecular markers limits certainty, especially for 1p/19q status and grade. The large nonenhancing FLAIR-abnormal tumor with mass effect could still represent higher histologic grade despite absent enhancement or necrosis.",
+  "subject_id": "UCSF-PDGM-262",
+  "who_grade": {
+    "confidence": 0.64,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "n_slices_with_shift",
+      "Deep WM invasion",
+      "Effaced Ventricle"
+    ],
+    "prediction": 2,
+    "reasoning": "Considering WHO grade independently, the imaging pattern most strongly supports a lower-grade diffuse glioma because Enhancement Quality is None, ET Volume (mL) is 0.0, Proportion Enhancing is 0.0, NCR Volume (mL) is 0.0, and Proportion Necrosis is 0.0; these fields argue against grade 4 imaging features such as enhancing tumor or necrosis and do not provide strong support for grade 3. Multifocal or Multicentric is Solitary, Multiple satellites present is Absent, and Ependymal (ventricular) Invasion is Absent, which further lowers suspicion for very aggressive disease. Against grade 2, Total tumor volume (mL) and ED Volume (mL) are large, midline_shift_present with max_shift_mm of 9.0 and n_slices_with_shift of 87 indicate substantial mass effect, Deep WM invasion is present, and Effaced Ventricle is Left; these features could accompany grade 3 or grade 4 biology even without enhancement. On balance, absent enhancement and necrosis make CNS WHO grade 2 the best imaging-based estimate, but confidence is limited by mass effect and lack of advanced imaging or histology.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

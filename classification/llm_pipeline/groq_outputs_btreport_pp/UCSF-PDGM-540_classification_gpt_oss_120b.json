@@ -1,0 +1,61 @@
+{
+  "subject_id": "UCSF-PDGM-540",
+  "idh": {
+    "reasoning": "The lesion is non\u2011enhancing (Enhancement Quality = None, Proportion Enhancing = 0.0) and lacks necrosis (Proportion Necrosis = 0.0), features that favor an IDH\u2011mutant diffuse glioma over IDH\u2011wildtype glioblastoma, which typically enhances. Cortical location in the frontal lobe (Tumor Location = frontal_lobe\u2011cortex region, Cortical involvement = Present) and solitary appearance (Multifocal or Multicentric = Solitary) are also characteristic of IDH\u2011mutant tumors, especially oligodendroglioma. The absence of deep white\u2011matter and ependymal invasion further supports a lower\u2011grade, IDH\u2011mutant phenotype. Contradicting factors are the patient\u2019s older age (age_years = 70), the presence of extensive edema crossing the midline (Edema crosses midline = True, Proportion of Oedema = 100.0) and the lack of a T2\u2011FLAIR mismatch (T2\u2011FLAIR Mismatch Present = 0.0), which are more typical of higher\u2011grade or IDH\u2011wildtype disease. Balancing these, the evidence leans toward IDH\u2011mutant status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Tumor Location",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Edema crosses midline",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.68
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor is cortical, frontal, solitary and non\u2011enhancing (Enhancement Quality = None, Proportion Enhancing = 0.0), which are imaging hallmarks of 1p/19q\u2011codeleted oligodendroglioma. Absence of calcification data does not negate this, as calcifications are not mandatory for diagnosis. Supporting features therefore point toward codeletion. Contradicting evidence includes the patient\u2019s advanced age (age_years = 70) and the extensive peritumoral edema crossing the midline (Edema crosses midline = True, Proportion of Oedema = 100.0), which are less typical for classic oligodendroglioma and raise uncertainty. Overall the balance favors a codeleted status.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Edema crosses midline",
+      "Proportion of Oedema"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The lesion shows no enhancement, no necrosis, and a solitary cortical pattern, all suggesting a lower WHO grade (grade 2). The extensive edema and midline crossing are atypical for a pure grade\u20112 tumor and could indicate a higher grade, but without enhancement or necrosis the imaging does not meet criteria for grade 3 or 4. Therefore the most likely grade is 2, acknowledging uncertainty due to the edema burden.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Edema crosses midline",
+      "Proportion of Oedema",
+      "age_years"
+    ],
+    "prediction": 2,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, CNS WHO grade 2",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests an IDH\u2011mutant, 1p/19q\u2011codeleted oligodendroglioma, but the patient\u2019s older age and marked peritumoral edema crossing the midline introduce some uncertainty. Additional molecular testing and advanced imaging (e.g., perfusion, spectroscopy) would be valuable to confirm grade and rule out an IDH\u2011wildtype high\u2011grade glioma."
+}

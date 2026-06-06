@@ -1,0 +1,42 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (44 years) and the tumor's characteristics, such as being located in the parietal-cortex region with deep white matter invasion and mild enhancement, are considered. The tumor is described as solitary and does not cross the midline. The presence of cortical involvement and deep white matter invasion could be indicative of a more aggressive tumor, which is often associated with IDH wildtype status in adult-type diffuse gliomas. However, the absence of ependymal invasion and the mild enhancement quality are noted. Given the age and the tumor's characteristics, an IDH wildtype status is more likely as IDH mutant gliomas are more commonly associated with younger patients and often have different imaging characteristics.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor is located in the parietal-cortex region and has cortical involvement, which is more typical of IDH mutant gliomas with 1p/19q co-deletion often being found in oligodendrogliomas that tend to involve the cortex. However, the presence of necrosis (indicated by NCR Volume) and the enhancement pattern might suggest a more complex pathology. Without direct evidence of 1p/19q co-deletion status from the MRI metadata, we rely on the tumor's location and characteristics. Given the tumor's features and assuming an IDH mutant status is less likely based on the previous prediction, the likelihood of 1p/19q co-deletion is considered low.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows necrosis (NCR Volume = 2.145 mL), has a significant edema volume (ED Volume = 38.732 mL), and mild enhancement with a thickness of the enhancing margin >3mm. These features are indicative of a high-grade glioma. The presence of necrosis is particularly suggestive of a WHO grade 4 tumor, as necrosis is a hallmark of glioblastoma, which is typically classified as grade 4.",
+    "supporting_features": [
+      "NCR Volume",
+      "ED Volume",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0183"
+}

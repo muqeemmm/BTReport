@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_01027",
+  "idh": {
+    "reasoning": "The patient's advanced age (66 years) is a very strong predictor for IDH-wildtype status. The tumor's multifocal nature ('Multifocal or Multicentric': \"Multifocal\", 'Number of lesions': 5) is a classic hallmark of glioblastoma, IDH-wildtype. Furthermore, the presence of necrosis ('NCR Volume (mL)': 0.987), thick contrast enhancement ('Thickness of enhancing margin': \">3mm\"), and crossing of the midline by the enhancing tumor ('CET Crosses midline': \"True\") are all features highly characteristic of an IDH-wildtype glioma. The only contradictory feature is a sharp median FLAIR transition zone, which is less typical for infiltrative IDH-wildtype tumors, but this single metric is overwhelmingly outweighed by the combination of age and aggressive imaging features.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "While 1p/19q status is primarily relevant for IDH-mutant tumors, an independent assessment of MRI features strongly suggests a non-codeleted status. Features typical of oligodendroglioma (the archetypal codeleted tumor), such as a single, well-defined, non-enhancing lesion, are absent. Instead, this tumor is multifocal ('Multifocal or Multicentric': \"Multifocal\"), shows necrosis ('NCR Volume (mL)': 0.987), and has thick enhancement ('Thickness of enhancing margin': \">3mm\"). These are all features more commonly associated with astrocytic lineage (non-codeleted) or IDH-wildtype (by definition non-codeleted) gliomas. The sharp median FLAIR transition zone is a feature sometimes seen in oligodendrogliomas, but it is insufficient to overcome the strong evidence from the tumor's aggressive and multifocal morphology.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "NCR Volume (mL)",
+      "Thickness of enhancing margin",
+      "CET Crosses midline"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of both contrast enhancement and necrosis are key radiological features indicating a high-grade glioma. The metadata confirms the presence of a significant enhancing tumor volume ('ET Volume (mL)': 9.338) with a thick margin ('>3mm') and a necrotic core ('NCR Volume (mL)': 0.987). According to WHO CNS5 criteria for adult-type diffuse gliomas, the presence of either of these features, particularly necrosis, is sufficient to classify the tumor as WHO Grade 4. The multifocal nature of the disease ('Multifocal or Multicentric': \"Multifocal\") and significant mass effect ('midline_shift_present': \"Yes\") further support a high-grade, aggressive tumor. The description of 'Enhancement Quality' as \"Mild\" is the only minor counterpoint, but the objective presence of enhancement and necrosis is definitive.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "Thickness of enhancing margin",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced patient age (66), a multifocal, midline-crossing tumor with both thick contrast enhancement and central necrosis provides overwhelming radiological evidence for a Glioblastoma, IDH-wildtype, CNS WHO grade 4. The predictions for IDH status, 1p/19q status, and WHO grade are internally consistent and strongly supported by the provided MRI metadata."
+}

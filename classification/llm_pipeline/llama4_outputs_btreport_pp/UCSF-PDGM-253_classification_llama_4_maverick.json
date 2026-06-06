@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7863153820938427, indicating a strong likelihood of IDH mutation. The patient's age (25 years) also supports this, as IDH-mutant gliomas are more common in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH mutation is likely, as reasoned earlier. For codeletion status, the tumor's location and characteristics need to be considered. The tumor is located in the temporal cortex region and has a significant cortical involvement. While there's no direct evidence from the given metadata that strongly indicates 1p/19q codeletion, the presence of IDH mutation and cortical involvement might suggest an astrocytic or oligodendroglial lineage. However, without specific markers or features directly indicating 1p/19q codeletion, we must be cautious. The absence of ependymal invasion and deep white matter invasion could be seen in various types of gliomas.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "Given the likely IDH mutation status and the absence of 1p/19q codeletion, the tumor is likely an astrocytoma. The presence of enhancement (Proportion Enhancing = 7.84%) and necrosis (Proportion Necrosis = 10.55%) suggests a higher grade. The tumor's volume and the presence of a significant enhancing component also support a higher grade. However, the absence of high-grade features like significant midline shift or ependymal invasion tempers this. The WHO grade for IDH-mutant astrocytomas can range from 2 to 4 based on various factors including necrosis and enhancement.",
+    "supporting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "UCSF-PDGM-253"
+}

@@ -1,0 +1,55 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 40 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor is solitary, located in the temporal-cortex region, and shows mild enhancement. Mild enhancement is more common in IDH-mutant gliomas. However, enhancement is present, which can occur in both types. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present: 0.0), which supports IDH-mutant astrocytoma. The proportion necrosis is 17.42%, which is moderate and could be seen in both. The absence of deep white matter invasion and ependymal invasion also aligns more with lower-grade IDH-mutant tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region, which is more typical for astrocytomas rather than oligodendrogliomas. Oligodendrogliomas often involve frontal lobes and show more calcifications (not assessed here). The absence of cortical involvement (Cortical involvement: Present) contradicts oligodendroglioma, which typically has cortical involvement. However, the tumor is solitary and midline, which is less common for oligodendrogliomas. The mild enhancement and younger age also support astrocytoma over oligodendroglioma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "Enhancement Quality",
+      "age_years"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma without 1p/19q co-deletion. The CNS WHO grade is estimated as 2 due to mild enhancement, absence of necrosis proportion above 20%, and no deep invasion. However, grade 3 is possible but less likely.",
+  "subject_id": "BraTS2021_01536",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows mild enhancement (Enhancement Quality: Mild) and a proportion necrosis of 17.42%, which is below the typical threshold for glioblastoma (grade 4). The absence of deep white matter invasion and ependymal invasion also suggests lower grade. However, the enhancing volume is small (ET Volume: 2.093 mL), but necrosis is present, which could indicate grade 3. The T2-FLAIR mismatch absence supports grade 2 or 3 IDH-mutant astrocytoma. Given the mild enhancement and moderate necrosis, grade 2 is more likely, but grade 3 cannot be ruled out.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present"
+    ]
+  }
+}

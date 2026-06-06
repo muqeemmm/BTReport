@@ -1,0 +1,51 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 44 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor involves eloquent cortex (Vision) and deep white matter invasion is present, both more common in IDH-mutant gliomas. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0), which supports IDH-mutant status. However, the T2-FLAIR Mismatch Score is 0.67 and Degree is -0.016, which are not strongly indicative.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal lobe and involves cortex and ventricles, which is more typical for astrocytomas than oligodendrogliomas. Deep white matter invasion is present, which is more common in astrocytomas. Oligodendrogliomas often have frontal lobe predilection and may show calcifications (not assessed). The absence of ependymal invasion also argues against oligodendroglioma. However, the patient is relatively young, and oligodendrogliomas can occur in temporal lobe.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma without 1p/19q co-deletion. Grade prediction requires histology.",
+  "subject_id": "BraTS2021_00139",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows marked enhancement and necrosis (Proportion Necrosis = 11.11%), which are features of grade 4 glioblastoma. The proportion enhancing is 21.4%, and the thick enhancing margin (>3mm) also supports high grade. However, the T2-FLAIR mismatch sign is absent, which is more typical for grade 2/3 IDH-mutant tumors. The edema volume is large (67.49% of total tumor volume), which can be seen in both grade 3 and 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Proportion of Oedema"
+    ]
+  }
+}

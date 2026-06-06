@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (62 years) and the presence of a large, enhancing, left-sided parietal tumor with significant edema and mass effect (as indicated by the 'mean_shift_mm' of 2.225806451612903 and 'max_shift_mm' of 5.0) are more typical of glioblastoma, IDH-wildtype. The tumor's characteristics, such as marked enhancement, necrosis (Proportion Necrosis: 3.42%), and significant edema (Proportion of Oedema: 75.9%), are also more commonly associated with IDH-wildtype glioblastomas. Furthermore, the absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.4, Degree: -0.08408892006623248) argues against an IDH-mutant, 1p/19q non-codeleted glioma, which often shows this feature. Therefore, based on the available metadata, the tumor is likely IDH wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "Given the prediction of IDH wildtype status, the likelihood of 1p/19q co-deletion is low because 1p/19q co-deletion is typically associated with IDH-mutant gliomas. The presence of marked enhancement and necrosis, along with the absence of T2-FLAIR mismatch, further supports this, as 1p/19q co-deleted tumors are less likely to present with these aggressive features. Therefore, it is reasonable to conclude that the tumor is non-codeleted.",
+    "supporting_features": [
+      "idh_status.prediction",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor's characteristics, such as significant necrosis (Proportion Necrosis: 3.42%), marked enhancement (Enhancement Quality: 'Marked'), large size (ED Volume: 133.054 mL, ET Volume: 36.248 mL), and significant mass effect, are typical of a high-grade glioma. The presence of necrosis and marked enhancement are particularly indicative of glioblastoma, WHO grade 4. The patient's age and the tumor's aggressive features further support this classification.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00147"
+}

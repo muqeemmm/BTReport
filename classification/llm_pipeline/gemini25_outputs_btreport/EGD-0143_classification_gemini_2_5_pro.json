@@ -1,0 +1,54 @@
+{
+  "subject_id": "EGD-0143",
+  "idh": {
+    "reasoning": "The tumor displays multiple aggressive features strongly associated with IDH-wildtype status. These include a very large necrotic core (Proportion Necrosis: 32.19%), extensive vasogenic edema (ED Volume (mL): 90.648), and significant mass effect (max_shift_mm: 8.0). The tumor's infiltrative nature is highlighted by its crossing of the midline, deep white matter invasion, ependymal invasion, and involvement of deep gray matter structures (thalamus, caudate). The presence of satellite lesions also indicates an aggressive phenotype. While the enhancement is described as 'Mild' and constitutes a small proportion of the tumor, this is heavily outweighed by the overwhelming evidence of necrosis and aggressive infiltration, which are classic hallmarks of IDH-wildtype gliomas (glioblastoma).",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "crosses_ideal_midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "midline_shift_present",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging phenotype is strongly indicative of an astrocytic lineage tumor, which is 1p/19q non-codeleted. Features such as extensive necrosis (Proportion Necrosis: 32.19%), significant edema (ED Volume (mL): 90.648), deep structure involvement (thalamus, caudate), and ependymal invasion are characteristic of high-grade astrocytomas or glioblastomas, not oligodendrogliomas (which are 1p/19q co-deleted). Oligodendrogliomas typically lack significant necrosis and have less extensive edema. The tumor's aggressive, infiltrative pattern with midline crossing is also inconsistent with the typical appearance of a 1p/19q co-deleted tumor. Therefore, based on the astrocytic imaging features, a non-codeleted status is predicted with high confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "crosses_ideal_midline",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic core is a defining radiological feature of a CNS WHO grade 4 glioma. The metadata indicates a substantial necrotic component (Proportion Necrosis: 32.19%; NCR Volume (mL): 43.676). This finding alone is sufficient for a Grade 4 designation. This is further supported by other features of high-grade malignancy, including contrast enhancement (even if mild), extensive peritumoral edema, significant mass effect (max_shift_mm: 8.0), deep infiltration, and ependymal invasion. The presence of satellite lesions also points to a highly aggressive, Grade 4 tumor. The mild quality of enhancement does not argue against a Grade 4 diagnosis in the presence of definitive necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are highly characteristic of a glioblastoma, IDH-wildtype. The large, centrally located mass demonstrates extensive necrosis, significant vasogenic edema, and mass effect, with infiltration across the corpus callosum ('butterfly' pattern) and into deep gray matter structures. These features are definitive for a CNS WHO grade 4 tumor and strongly predictive of IDH-wildtype status. A minor discrepancy exists between quantitative data suggesting a left-sided primary tumor and qualitative fields stating it is right-sided; the quantitative data was prioritized in this assessment."
+}

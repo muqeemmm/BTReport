@@ -1,0 +1,83 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.76,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "Considering IDH status independently, the metadata overall favors an IDH-wildtype diffuse glioma: age_years indicates an older adult, and Enhancement Quality, Proportion Enhancing, ET Volume (mL), Proportion Necrosis, ED Volume (mL), Ependymal (ventricular) Invasion, Deep WM invasion, midline_shift_present, max_shift_mm, Total tumor volume (mL), and Lesion Sizes APxTVxCC (cm) describe a large, markedly enhancing, necrotic, edematous, invasive mass with substantial mass effect, a pattern more typical of IDH-wildtype glioblastoma. Evidence against IDH-wildtype includes T2-FLAIR Mismatch Present, T2-FLAIR Mismatch Score, T2-FLAIR Mismatch Degree, Tumor Location, Region Proportions, and Cortical involvement, which can be associated with IDH-mutant astrocytoma. On balance, the aggressive enhancing-necrotic phenotype in an older adult outweighs the mismatch/location features, so the best MRI-based estimate is IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "Considering 1p/19q status independently, the metadata favors non-codeletion. T2-FLAIR Mismatch Present, T2-FLAIR Mismatch Score, and T2-FLAIR Mismatch Degree are more characteristic of astrocytic, non-codeleted tumors than oligodendroglioma. Tumor Location and Region Proportions show temporal, cortical, and insular predominance rather than a classic frontal oligodendroglioma pattern. Enhancement Quality, Proportion Necrosis, Ependymal (ventricular) Invasion, Deep WM invasion, and Total tumor volume (mL) describe an aggressive phenotype that is not the typical imaging presentation of a 1p/19q-codeleted oligodendroglioma. Evidence against non-codeletion is limited to Cortical involvement and Tumor Location, because oligodendrogliomas can be cortically based and can occur outside the frontal lobe. Overall, the mismatch pattern and non-classic location support non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "overall_comment": "MRI metadata strongly suggests an aggressive adult-type diffuse glioma, but molecular classification cannot be definitive without tissue testing. The enhancement-related fields are not fully concordant: ET Volume (mL), Enhancement Quality, Proportion Enhancing, Text Report, and Thickness of enhancing margin indicate substantial enhancement, whereas volumes_ideal_midline and volumes_patient_midline list et as 0; this discordance should be checked against the segmentation. DWI/ADC, perfusion, spectroscopy, and susceptibility/calcification data were not available and were not used.",
+  "subject_id": "EGD-0742",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "volumes_ideal_midline",
+      "volumes_patient_midline"
+    ],
+    "prediction": 4,
+    "reasoning": "Considering WHO grade independently, the imaging phenotype most strongly supports CNS WHO grade 4. Enhancement Quality, ET Volume (mL), Proportion Enhancing, Thickness of enhancing margin, Proportion Necrosis, NCR Volume (mL), ED Volume (mL), Proportion of Oedema, midline_shift_present, max_shift_mm, Ependymal (ventricular) Invasion, Deep WM invasion, Total tumor volume (mL), and Lesion Sizes APxTVxCC (cm) describe a very large, markedly enhancing tumor with thick enhancing margin, substantial necrosis, edema, invasive behavior, and mass effect; this constellation is far more consistent with grade 4 than grade 2 or grade 3. Evidence against grade 4 includes T2-FLAIR Mismatch Present and T2-FLAIR Mismatch Score, which can be seen in lower-grade IDH-mutant astrocytoma, and the enhancement-volume inconsistency in volumes_ideal_midline and volumes_patient_midline. Despite those caveats, the necrotic, markedly enhancing, mass-effect-producing phenotype supports grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

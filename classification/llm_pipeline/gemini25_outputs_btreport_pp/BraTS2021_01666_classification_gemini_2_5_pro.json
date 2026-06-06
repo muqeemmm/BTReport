@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_01666",
+  "idh": {
+    "reasoning": "The patient's young age (20 years) is a strong demographic predictor for an IDH-mutant glioma. The most compelling imaging evidence is the definitive presence of the T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0, 'T2-FLAIR Mismatch Score': 0.91), which is highly specific for IDH-mutant astrocytomas. Furthermore, the complete absence of contrast enhancement ('ET Volume (mL)': 0.0) is characteristic of IDH-mutant tumors. While the tumor is large and shows significant mass effect, these less specific features are outweighed by the combination of young age and the T2-FLAIR mismatch sign.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "max_shift_mm",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The key differentiating feature is the presence of a T2-FLAIR mismatch sign ('T2-FLAIR Mismatch Present': 1.0). This sign is considered a specific marker for the astrocytic lineage, which are 1p/19q non-codeleted. This strong evidence outweighs a contradictory feature: the very sharp tumor margin ('Transition Zone Thickness (FLAIR)' median_mm: 0.518), which is more typically associated with 1p/19q codeleted oligodendrogliomas. The involvement of deep gray matter structures like the thalamus and basal ganglia also favors an astrocytoma over an oligodendroglioma. Therefore, a non-codeleted status is predicted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "Based on the prediction of an IDH-mutant astrocytoma, the grade can be 2, 3, or 4. The complete absence of enhancement ('ET Volume (mL)': 0.0, 'Enhancement Quality': 'None') argues against the presence of microvascular proliferation, making a WHO grade 4 diagnosis based on imaging features unlikely. However, the tumor's very large size ('Total tumor volume (mL)': 135.724), significant mass effect ('max_shift_mm': 9.0), and infiltrative nature ('Deep WM invasion': 'Present', 'Ependymal (ventricular) Invasion': 'Present') are indicative of high biological activity and are inconsistent with a typical grade 2 tumor. Therefore, WHO grade 3 is the most likely diagnosis, representing a balance between the aggressive size/invasion and the lack of enhancement.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "max_shift_mm",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "consistency_check_passed": true,
+  "overall_comment": "This 20-year-old patient presents with a large, non-enhancing, infiltrative glioma. The definitive T2-FLAIR mismatch sign is the key imaging finding, strongly supporting a diagnosis of an IDH-mutant astrocytoma (1p/19q non-codeleted). Despite the lack of enhancement, the tumor's large size and extensive invasion suggest a higher grade, making CNS WHO grade 3 the most probable diagnosis."
+}

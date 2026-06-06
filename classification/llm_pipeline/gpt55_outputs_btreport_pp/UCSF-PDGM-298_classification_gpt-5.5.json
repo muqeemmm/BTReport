@@ -1,0 +1,70 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.86,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest MRI evidence favors an IDH-mutant diffuse glioma: the lesion is nonenhancing with no necrosis and shows a positive T2-FLAIR mismatch pattern, a classic imaging marker for IDH-mutant astrocytoma in an adult-type diffuse glioma. Frontal cortical involvement also fits the common presentation of IDH-mutant lower-grade glioma. Evidence arguing against IDH mutation is limited; age 48 is not very young and therefore does not strongly exclude IDH-wildtype biology, but it is not old enough to outweigh the imaging pattern. Overall, the metadata supports IDH-mutant over IDH-wildtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "age_years"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "For 1p/19q status considered independently, the positive T2-FLAIR mismatch pattern argues strongly against oligodendroglioma and therefore against 1p/19q co-deletion, favoring a non-codeleted diffuse glioma. Nonenhancement and frontal cortical location can be seen in oligodendroglioma and therefore provide some counterweight toward possible co-deletion, but these are nonspecific and are outweighed by the mismatch pattern. The available MRI metadata therefore favors non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "Prediction is based only on structural MRI metadata without diffusion, perfusion, spectroscopy, susceptibility imaging, or histomolecular data. The positive T2-FLAIR mismatch and nonenhancing frontal cortical FLAIR lesion favor an IDH-mutant, 1p/19q-non-codeleted, lower-grade astrocytoma, but molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "UCSF-PDGM-298",
+  "who_grade": {
+    "confidence": 0.78,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Whole Tumor Volume (mL)",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ],
+    "prediction": 2,
+    "reasoning": "For CNS WHO grade considered independently, the imaging pattern favors grade 2: the lesion is entirely nonenhancing, has no enhancing tumor volume, no necrosis, no ependymal invasion, no deep white matter invasion, is solitary, and has only minimal midline shift. These features argue against grade 4 and against a higher-grade aggressive phenotype. The main counterpoint is that a moderate FLAIR abnormality volume with measurable mass effect can still occur in grade 3 tumors, and lack of enhancement does not fully exclude grade 3. On balance, the structural MRI metadata best supports CNS WHO grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "midline_shift_present"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

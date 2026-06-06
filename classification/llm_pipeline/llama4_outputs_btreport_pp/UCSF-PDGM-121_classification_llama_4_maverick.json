@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (56 years) and the presence of a marked enhancement quality in the tumor suggest a higher likelihood of IDH wildtype status, as IDH mutant gliomas are more commonly associated with younger patients and less aggressive imaging features. The tumor's location in the parietal lobe and involvement of the cortex, along with the presence of a significant enhancing component (Proportion Enhancing: 26.87%), further supports this inclination. Additionally, the absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.5215005727097098, T2-FLAIR Mismatch Degree: -0.07338402522855891) argues against IDH mutant status, as IDH mutant astrocytomas often exhibit this feature. Therefore, based on the available metadata, the prediction leans towards IDH wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Tumor Location",
+      "Cortical involvement",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a significant enhancing component and the absence of T2-FLAIR mismatch are more commonly associated with IDH wildtype glioblastomas or IDH mutant gliomas without 1p/19q codeletion. The tumor's location and imaging characteristics do not strongly suggest 1p/19q codeletion, which is more typically associated with oligodendrogliomas that often present with calcifications (not assessed here) and a more indolent course. Given the lack of specific indicators for 1p/19q codeletion in the provided metadata and the tumor's aggressive features, the prediction leans towards non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as marked enhancement, significant necrosis (Proportion Necrosis: 9.45%), and a large size (Lesion Sizes APxTVxCC: 3.1 x 3.5 x 3.2 cm), which are characteristic of higher-grade gliomas. The presence of necrosis and the enhancement pattern are particularly indicative of a high-grade tumor. Given these features, the tumor is most likely to be classified as CNS WHO grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "UCSF-PDGM-121"
+}

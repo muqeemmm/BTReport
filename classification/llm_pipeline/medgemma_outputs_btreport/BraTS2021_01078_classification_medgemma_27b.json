@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_01078",
+  "idh": {
+    "reasoning": "The patient is 49 years old. Age is a significant factor in IDH mutation status, with IDH-mutant gliomas typically occurring in younger adults (median age ~45) and IDH-wildtype gliomas in older adults (median age ~70). While 49 is closer to the IDH-mutant median, it's not definitively young. The tumor is large (Total tumor volume 122.261 mL), solitary, and involves deep white matter and ependymal invasion. These features are more common in IDH-wildtype tumors, although they can occur in IDH-mutant ones. The tumor crosses the midline ('CET Crosses midline': 'True', 'Edema crosses midline': 'True', 'midline_shift_present': 'Yes'), which is also more characteristic of IDH-wildtype tumors due to their infiltrative nature. The proportion of necrosis (31.24) and edema (57.12) are relatively high, which can be seen in both types but might lean slightly towards wildtype given the large size and infiltrative behavior suggested by midline crossing. Without molecular data or imaging features like T2/FLAIR mismatch or restricted diffusion (which are unavailable), predicting IDH status based solely on these MRI features is challenging. However, the combination of age being closer to the wildtype median, large size, deep invasion, ependymal invasion, and significant midline crossing pushes the prediction towards IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "midline_shift_present",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 49 years old. 1p/19q co-deletion is almost exclusively found in IDH-mutant diffuse astrocytomas, grade 2 (oligodendrogliomas). Given the prediction of IDH-wildtype status based on age and tumor characteristics (large size, deep/ependymal invasion, midline crossing), the likelihood of 1p/19q co-deletion is extremely low. While the age isn't definitively ruling out an IDH-mutant tumor entirely, the other features strongly suggest a wildtype tumor where co-deletion is essentially absent.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features indicative of high grade: deep white matter invasion ('Deep WM invasion': 'Present'), ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), crossing the midline ('CET Crosses midline': 'True', 'Edema crosses midline': 'True', 'midline_shift_present': 'Yes'), significant mass effect causing ventricular asymmetry ('Asymmetrical Ventricles': 'Present', 'Effaced Ventricle': 'Right'), and involvement of eloquent brain regions ('Eloquent Brain Involvement': 'Speech motor'). The large size (Total tumor volume 122.261 mL) also suggests aggressive behavior. While enhancement quality is described as mild ('Enhancement Quality': 'Mild') and the proportion enhancing is relatively low (11.64), these features alone do not rule out a high grade, especially given the extensive infiltration and mass effect. The presence of necrosis (31.24) further supports a higher grade. Based on the combination of deep/ependymal invasion, midline crossing, mass effect, eloquent involvement, and necrosis, a WHO grade 4 diagnosis (glioblastoma) is most likely, especially considering the predicted IDH-wildtype status.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle",
+      "Eloquent Brain Involvement",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

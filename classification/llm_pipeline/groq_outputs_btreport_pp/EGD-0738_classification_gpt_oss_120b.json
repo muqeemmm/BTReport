@@ -1,0 +1,58 @@
+{
+  "subject_id": "EGD-0738",
+  "idh": {
+    "reasoning": "The tumor shows marked contrast enhancement, appreciable necrosis (\u224810%), high proportion of enhancing tissue (\u224838%), and occurs in a 50\u2011year\u2011old patient. These imaging hallmarks are typical of IDH\u2011wildtype glioblastoma. Moreover, the T2\u2011FLAIR mismatch is absent (value 0.0), which argues against an IDH\u2011mutant astrocytoma that usually displays a positive mismatch. While cortical location and frontal lobe predilection can be seen in IDH\u2011mutant oligodendroglioma, the lack of mismatch and presence of necrosis favor wildtype. Therefore the most likely IDH status is wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.78
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "Codeleted oligodendrogliomas often present as cortical frontal lesions with calcifications and less necrosis; they may show modest enhancement. In this case, the tumor has marked enhancement, necrosis, and absence of T2\u2011FLAIR mismatch, all favoring a non\u2011codeleted, IDH\u2011wildtype glioblastoma. The cortical location alone is not sufficient for codeletion. Hence prediction non\u2011codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, necrosis, high edema, large volume (~59\u202fmL), involvement of motor cortex, and lack of T2\u2011FLAIR mismatch are imaging features associated with high\u2011grade (grade\u202f4) glioblastoma. The presence of a solid enhancing component (n_components_enhancing =1) and a sharp boundary also support aggressive behavior. Therefore grade 4 is most likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Present",
+      "n_components_enhancing"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "Imaging strongly suggests IDH\u2011wildtype glioblastoma grade\u202f4. Lack of advanced sequences (DWI, perfusion, spectroscopy) limits definitive molecular confirmation; T2\u2011FLAIR mismatch is absent, supporting wildtype. Cortical frontal location is atypical but does not outweigh high\u2011grade features."
+}

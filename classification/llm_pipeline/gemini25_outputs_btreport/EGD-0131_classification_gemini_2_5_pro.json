@@ -1,0 +1,46 @@
+{
+  "subject_id": "EGD-0131",
+  "idh": {
+    "reasoning": "The patient's age of 60 is a very strong predictor for IDH-wildtype status. The imaging features are classic for a high-grade glioma, most consistent with glioblastoma, IDH-wildtype. Key features include 'Marked' enhancement, a thick enhancing margin ('>3mm'), and the presence of significant necrosis ('Proportion Necrosis' of 9.56%). Furthermore, the tumor is multifocal and shows ependymal invasion, both of which are aggressive features more commonly associated with IDH-wildtype gliomas. There are no imaging features suggestive of an IDH-mutant tumor, which typically occurs in younger patients and often presents with less aggressive features like non-enhancement or thin, wispy enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. The imaging phenotype is strongly against a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically lack the aggressive features seen here. This tumor displays 'Marked' enhancement, a thick margin, and central necrosis ('Proportion Necrosis' > 0). These features are characteristic of a high-grade astrocytic lineage tumor, not an oligodendroglioma. The multifocal nature and ependymal invasion further argue against a 1p/19q co-deleted entity. Therefore, the tumor is predicted to be non-codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis is a defining feature of WHO grade 4 gliomas. The metadata explicitly indicates a 'Proportion Necrosis' of 9.56%. This finding alone is sufficient for a grade 4 prediction. This is strongly corroborated by other features of high-grade malignancy, including 'Marked' enhancement quality, a thick enhancing margin ('>3mm'), multifocality, and ependymal invasion. There is no evidence to support a lower grade; grade 2 tumors are typically non-enhancing, and grade 3 tumors usually lack definitive necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of advanced age (60 years) and MRI features of a multifocal, aggressively enhancing tumor with central necrosis provides a classic presentation for Glioblastoma, IDH-wildtype. All individual predictions (IDH-wildtype, 1p/19q non-codeleted, and WHO grade 4) are made with very high confidence and are internally consistent, leading to the integrated diagnosis."
+}

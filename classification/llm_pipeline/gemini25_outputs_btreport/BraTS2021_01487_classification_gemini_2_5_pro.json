@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_01487",
+  "idh": {
+    "reasoning": "The tumor exhibits multiple strong indicators of IDH-wildtype status. The most compelling feature is its location, with extensive deep gray matter involvement ('Anatomical Overlap Regions' including thalamus, caudate, putamen, and brain-stem) and a 'Side of Tumor Epicenter' reported as 'Midline'. These locations are classic for IDH-wildtype gliomas. Furthermore, the presence of both necrosis ('Proportion Necrosis': 7.02%) and contrast enhancement ('Proportion Enhancing': 7.81%, 'Thickness of enhancing margin': '>3mm') are hallmarks of glioblastoma, the archetypal IDH-wildtype tumor. The significant mass effect ('midline_shift_present': 'Yes') and extensive edema ('ED Volume (mL)': 72.413) also support a high-grade, aggressive phenotype. The only contradicting feature is the patient's relatively young age ('age_years': 40), which is more typical for IDH-mutant gliomas. However, the imaging phenotype is overwhelmingly suggestive of an IDH-wildtype tumor.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging features are highly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). The presence of significant necrosis ('Proportion Necrosis': 7.02%) and thick enhancement ('Thickness of enhancing margin': '>3mm') are characteristic of astrocytomas, not oligodendrogliomas. The deep, infiltrative location involving the thalamus and basal ganglia ('Anatomical Overlap Regions') is also highly atypical for oligodendrogliomas, which tend to be cortically based, often in the frontal lobes. The large amount of associated edema ('ED Volume (mL)': 72.413) further points towards an astrocytic lineage. There are no specific features in the provided metadata to suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Anatomical Overlap Regions",
+      "ED Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The prediction of WHO grade 4 is made with high confidence based on the definitive presence of necrosis. The metadata shows a 'Proportion Necrosis' of 7.02%. Radiologically or histopathologically confirmed necrosis in a diffuse astrocytic glioma is a defining feature of WHO grade 4. This is further supported by other features of high-grade malignancy, including contrast enhancement ('Proportion Enhancing': 7.81%), significant mass effect ('midline_shift_present': 'Yes'), and extensive vasogenic edema ('ED Volume (mL)': 72.413). There is no evidence to support a lower grade, as grade 2 tumors are non-enhancing and grade 3 tumors typically lack necrosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features are highly characteristic of a Glioblastoma, IDH-wildtype. The deep midline location involving the thalamus and basal ganglia, combined with the presence of both contrast enhancement and central necrosis, strongly supports this diagnosis. The patient's age of 40 is younger than typical but not exclusionary. The predictions for IDH status, 1p/19q status, and WHO grade are all internally consistent and point to a single, high-confidence diagnosis."
+}

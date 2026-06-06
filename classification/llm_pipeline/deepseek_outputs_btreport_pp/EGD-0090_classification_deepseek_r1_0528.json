@@ -1,0 +1,50 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high mismatch score (0.91) and degree (1.60), which is highly specific for IDH-mutant astrocytomas. The tumor location in the frontal lobe cortex (Tumor Location: frontal_lobe-cortex region) and absence of deep white matter invasion (Deep WM invasion: Absent) are also typical for IDH-mutant gliomas. However, the patient is young (age_years: 26), which slightly favors IDH-mutant status but is not definitive.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.95,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "The T2-FLAIR mismatch sign strongly suggests an IDH-mutant astrocytoma, which are typically non-codeleted. Oligodendrogliomas (IDH-mutant and 1p/19q codeleted) rarely show T2-FLAIR mismatch. Additionally, the tumor involves eloquent cortex (Eloquent Brain Involvement: Speech motor and Motor) and has cortical involvement (Cortical involvement: Present), which are more common in astrocytomas than oligodendrogliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Eloquent Brain Involvement",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "The tumor is consistent with an IDH-mutant astrocytoma. The T2-FLAIR mismatch sign is a key indicator. The absence of enhancement (Proportion Enhancing: 0.08) and low necrosis proportion (Proportion Necrosis: 68.91) suggest a lower grade tumor.",
+  "subject_id": "EGD-0090",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows minimal enhancement (Enhancement Quality: Mild, Proportion Enhancing: 0.08) and no necrosis (Proportion Necrosis: 68.91 is likely misinterpreted; actual necrosis volume is very small as ET Volume is 0.032 mL). The T2-FLAIR mismatch sign is associated with grade 2 IDH-mutant astrocytomas. However, the proportion necrosis field value (68.91) is contradictory but likely erroneous given the small ET volume. Absence of deep white matter invasion and ependymal invasion also support lower grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

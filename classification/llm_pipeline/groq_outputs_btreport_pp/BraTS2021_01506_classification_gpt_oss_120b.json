@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_01506",
+  "idh": {
+    "reasoning": "The presence of a T2\u2011FLAIR mismatch (T2-FLAIR Mismatch Present = 1.0, high mismatch score) is a strong imaging surrogate for IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma. The patient\u2019s age (43\u202fy) also favors IDH mutation. However, a high proportion of necrosis (30.96\u202f%) and any enhancement can be seen in IDH\u2011wildtype glioblastoma, which opposes the mutant hypothesis. Balancing these, the mismatch evidence outweighs the necrosis, leading to a prediction of IDH\u2011mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Age_years"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.72
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "T2\u2011FLAIR mismatch is characteristic of IDH\u2011mutant, 1p/19q\u2011non\u2011codeleted astrocytoma and is rarely present in 1p/19q\u2011codeleted oligodendroglioma. No imaging features (e.g., calcifications, classic oligodendroglial morphology) suggest codeletion. Therefore the lesion is predicted to be non\u2011codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "Necrosis occupies ~31\u202f% of the tumor and ependymal/deep white\u2011matter invasion, midline crossing, and large total volume (173\u202fmL) are typical of high\u2011grade disease. WHO grade\u202f4 is defined by necrosis or microvascular proliferation, both of which are implied here. The mild enhancement and low proportion of enhancing tissue argue against a classic GBM\u2011type grade\u202f4, but necrosis alone satisfies the grade\u202f4 criterion, so grade\u202f4 is favored.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "CET Crosses midline",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.68
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, 1p/19q-non-codeleted, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "MRI lacks diffusion, perfusion, and spectroscopy, limiting certainty. While T2\u2011FLAIR mismatch strongly supports IDH\u2011mutant, non\u2011codeleted status, the high necrosis proportion pushes the grade toward WHO\u202fIV despite mild enhancement. Consider molecular testing to confirm IDH and 1p/19q status and histopathology for definitive grading."
+}

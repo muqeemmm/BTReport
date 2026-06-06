@@ -1,0 +1,52 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 49 years old, which is younger than the typical age for IDH-wildtype glioblastoma. IDH-mutant gliomas often present in younger patients. The tumor location involves parietal and frontal lobes, which are common sites for IDH-mutant tumors. The enhancement quality is marked, which can be seen in both mutant and wildtype, but the proportion of necrosis (20.03%) is moderate, more suggestive of grade 3 or 4 IDH-mutant glioma rather than wildtype GBM which often has higher necrosis. The T2-FLAIR mismatch is absent (score 0.4, degree 0.61), which is a strong indicator for IDH-mutant astrocytoma. However, the age is borderline as IDH-wildtype can occur in younger patients.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO Grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent motor cortex, which is more common in astrocytomas than oligodendrogliomas. Oligodendrogliomas typically present with frontal lobe involvement and are less likely to involve deep structures or motor cortex. The tumor crosses midline via edema but the enhancing component does not cross midline, which is atypical for oligodendrogliomas that often have more diffuse growth. The T2-FLAIR mismatch is present (score 0.4, degree 0.61) which is characteristic of IDH-mutant astrocytoma and argues against oligodendroglioma. The proportion enhancing (17.94%) is moderate, which can be seen in both, but oligodendrogliomas often have more prominent enhancement.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Eloquent Brain Involvement",
+      "CET Crosses midline",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "The tumor is midline, involving parietal and frontal lobes with motor cortex involvement. Marked enhancement with moderate necrosis and significant edema crossing midline. Ependymal invasion present. Absent T2-FLAIR mismatch suggests IDH-mutant astrocytoma. Grade 4 due to necrosis and enhancement.",
+  "subject_id": "BraTS2021_00005",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (20.03%) and marked enhancement, which are features of grade 4 glioma. The proportion enhancing is 17.94%, which is moderate but still consistent with GBM. Ependymal invasion is present, which is a feature of high-grade gliomas. The tumor volume is large (120.679 mL) and there is significant edema crossing midline. However, the proportion enhancing is lower than typical for GBM, which might suggest grade 3, but the necrosis and ependymal invasion support grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Edema crosses midline"
+    ]
+  }
+}

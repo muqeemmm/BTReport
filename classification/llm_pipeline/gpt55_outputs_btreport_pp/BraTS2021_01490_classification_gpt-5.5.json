@@ -1,0 +1,72 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.82,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The strongest imaging discriminator is the reported T2-FLAIR mismatch, which is a classic MRI marker favoring IDH-mutant astrocytoma when present. The patient's age of 43 years and frontal cortical tumor location also fit better with an IDH-mutant diffuse glioma than with a typical IDH-wildtype glioblastoma. Evidence arguing against IDH mutation includes substantial necrotic component, measurable enhancement, edema, midline shift, and ependymal invasion, which are aggressive features often seen in IDH-wildtype glioblastoma, although they can also occur in high-grade IDH-mutant astrocytoma. Overall, the T2-FLAIR mismatch and demographic/location pattern outweigh the aggressive features for IDH status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "age_years",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The T2-FLAIR mismatch strongly favors an IDH-mutant astrocytoma phenotype and argues against oligodendroglioma with 1p/19q co-deletion. The lesion also shows large necrotic/nonenhancing core and aggressive infiltrative behavior, which is less characteristic of classic 1p/19q-codeleted oligodendroglioma on MRI. Evidence that could support co-deletion includes frontal cortical location and mild enhancement, both compatible with oligodendroglioma, but these are less specific than the T2-FLAIR mismatch pattern. Overall, the MRI metadata favors non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "Predictions are based only on structured conventional MRI metadata without DWI/ADC, perfusion, spectroscopy, SWI/GRE, or histopathology. The T2-FLAIR mismatch drives the IDH-mutant and non-codeleted calls, while necrosis, enhancement, edema, mass effect, and ependymal/deep white matter invasion drive the grade 4 call. Molecular testing remains required for definitive WHO CNS5 classification.",
+  "subject_id": "BraTS2021_01490",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "reasoning": "The grade assessment is driven by aggressive structural features: a very large tumor volume, dominant necrotic/nonenhancing core, measurable contrast-enhancing tumor with a thick enhancing margin, substantial edema, midline shift up to 10 mm, and ependymal plus deep white matter invasion. These features support CNS WHO grade 4 more strongly than grade 2 or grade 3. Findings arguing against grade 4 are the mild enhancement quality, relatively small enhancing proportion, and T2-FLAIR mismatch pattern, which can be associated with lower-grade IDH-mutant astrocytoma, but the extent of necrosis and mass effect outweigh these lower-grade indicators. Overall, the metadata best supports grade 4.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "_seed": 42,
+  "_system_fingerprint": null
+}

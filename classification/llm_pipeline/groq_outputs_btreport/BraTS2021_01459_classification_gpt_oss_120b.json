@@ -1,0 +1,56 @@
+{
+  "subject_id": "BraTS2021_01459",
+  "idh": {
+    "reasoning": "The patient is 76 years old, an age group where IDH\u2011wildtype glioblastoma is far more common than IDH\u2011mutant diffuse glioma. The lesion shows marked contrast enhancement, a necrotic component (13.9\u202f%), and a high proportion of enhancing tissue (40\u202f%), all imaging hallmarks of IDH\u2011wildtype high\u2011grade glioma. While cortical involvement and a solitary lesion can be seen in IDH\u2011mutant tumors, the combination of older age, strong enhancement and necrosis outweighs these. Therefore the evidence favors an IDH\u2011wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Text Report"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q codeletion occurs only in IDH\u2011mutant tumors; given the IDH\u2011wildtype prediction, the tumor must be non\u2011codeleted. Moreover, the marked enhancement and necrosis are atypical for oligodendroglioma, which usually shows less enhancement. Thus the evidence supports a non\u2011codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "Marked enhancement, necrosis, high edema proportion, and age are typical of WHO grade\u202f4 glioblastoma. The lesion does not cross the midline nor invade deep white matter, which are not required for grade\u202f4 classification; the presence of necrosis and strong enhancement fulfills the radiologic criteria for grade\u202f4 in the absence of molecular data. Therefore grade\u202f4 is most likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Proportion Enhancing",
+      "age_years",
+      "Text Report"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The prediction relies solely on conventional MRI features; lack of diffusion, perfusion or spectroscopy limits certainty, especially for distinguishing grade 3 from grade 4. Nonetheless, the combination of marked enhancement, necrosis and patient age provides relatively high confidence in an IDH\u2011wildtype, non\u2011codeleted, WHO grade\u202f4 diagnosis."
+}

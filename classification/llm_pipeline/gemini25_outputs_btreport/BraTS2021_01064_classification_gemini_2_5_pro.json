@@ -1,0 +1,56 @@
+{
+  "subject_id": "BraTS2021_01064",
+  "idh": {
+    "reasoning": "The patient's age of 56 years is more typical for IDH-wildtype gliomas. The most compelling evidence is the tumor's multifocal nature, with 4 distinct lesions noted. Multifocality is a strong predictor for IDH-wildtype status and is exceptionally rare in IDH-mutant gliomas. Additional features supporting an aggressive, wildtype phenotype include ependymal (ventricular) invasion, deep white matter invasion, and involvement of deep gray matter structures like the thalamus and putamen. Contradicting this is the mild quality of enhancement and the low proportion of enhancing and necrotic tissue, which can sometimes be seen in IDH-mutant tumors. However, the combination of age and especially multifocality overwhelmingly favors an IDH-wildtype prediction.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Number of lesions",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This prediction is made independently of the IDH status. The imaging phenotype is inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Features arguing against co-deletion include the tumor's multifocal presentation, deep white matter invasion, ependymal invasion, and involvement of deep gray matter structures (thalamus, putamen). These are all hallmarks of an astrocytic lineage (non-codeleted) tumor. Furthermore, the presence of necrosis, even a small amount, is atypical for oligodendroglioma. There are no specific imaging features in the provided metadata to suggest a 1p/19q co-deletion.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Anatomical Overlap Regions",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The presence of both contrast enhancement (ET Volume (mL) > 0) and a necrotic component (NCR Volume (mL) > 0) on pre-operative MRI are strong indicators of a WHO grade 4 glioma. Although the proportions of enhancement and necrosis are low, their definitive presence is the key imaging correlate for the histopathological features of a glioblastoma. This is further supported by other aggressive imaging features such as the tumor's multifocal nature, deep white matter invasion, and ependymal invasion. The patient's age (56) also increases the a priori probability of a high-grade glioma. The mild quality of enhancement is a minor counterpoint but does not negate the presence of necrosis, which is a sufficient criterion for grade 4.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "age_years",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The combination of patient age (56), multifocality, deep gray matter and ependymal invasion, and the presence of both enhancement and necrosis strongly indicates a diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The multifocal presentation is a particularly high-specificity feature for this diagnosis. The relatively low volume of enhancement and necrosis is noted but does not alter the final integrated diagnosis based on the constellation of aggressive features."
+}

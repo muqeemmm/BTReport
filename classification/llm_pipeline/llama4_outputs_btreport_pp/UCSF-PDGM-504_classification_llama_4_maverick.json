@@ -1,0 +1,38 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is a strong indicator of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7749290329033606, both suggesting a positive T2-FLAIR mismatch. This feature is highly associated with IDH mutant gliomas. Additionally, the patient's age (63 years) is not typical for IDH mutant gliomas, which are more common in younger patients, but the imaging features take precedence over age in this context.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of a T2-FLAIR mismatch is typically associated with IDH mutant astrocytomas rather than oligodendrogliomas, which are more likely to have 1p/19q co-deletion. The 'T2-FLAIR Mismatch Present' and 'T2-FLAIR Mismatch Score' support an IDH mutant status without 1p/19q co-deletion. Additionally, the tumor's imaging characteristics, such as the presence of necrosis (Proportion Necrosis: 39.28%) and the absence of ependymal invasion, are not specific indicators for 1p/19q co-deletion status but are more commonly seen in astrocytomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows a significant proportion of necrosis (39.28%) and enhancement (37.87%), with a marked enhancement quality. The presence of necrosis and the large size of the tumor (Total tumor volume: 57.726 mL) are indicators of a high-grade glioma. The patient's age (63 years) also supports a higher grade. Given the IDH mutation status is predicted as 'mutant', the presence of necrosis and the overall imaging features are more indicative of a grade 4 astrocytoma, IDH mutant.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "UCSF-PDGM-504"
+}

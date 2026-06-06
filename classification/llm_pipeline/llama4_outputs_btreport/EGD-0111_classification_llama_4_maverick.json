@@ -1,0 +1,47 @@
+{
+  "id": "patient_1199",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (68 years) and the presence of a large, enhancing tumor with significant mass effect (midline shift of 3.465 mm, edema crossing midline) and necrosis (Proportion Necrosis: 4.92%) are more typical of glioblastoma, IDH-wildtype. The tumor's aggressive features, such as ependymal invasion and marked enhancement, also support this classification. IDH-mutant gliomas are more commonly associated with younger age and less aggressive features at presentation.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "Edema crosses midline",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "Given the prediction of IDH-wildtype status with high confidence, the likelihood of 1p/19q co-deletion is low because 1p/19q co-deletion is strongly associated with IDH-mutant gliomas. The tumor's aggressive features and lack of characteristics typical of oligodendrogliomas (e.g., calcifications, which are not assessed here) further support the likelihood of non-codeletion.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 4.92%), marked enhancement, large size (Total tumor volume: 259.138 mL), and ependymal invasion. These characteristics are typical of glioblastoma, which is classified as CNS WHO grade 4. The patient's age and the tumor's mass effect also support this grading.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Total tumor volume (mL)",
+        "Ependymal (ventricular) Invasion",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0111"
+}

@@ -1,0 +1,35 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.8075430989436478, T2-FLAIR Mismatch Degree: 0.9897366848449833) is highly suggestive of an IDH mutant glioma. This feature is strongly associated with IDH mutation status in adult-type diffuse gliomas. The patient's age (53 years) and the tumor's characteristics (e.g., location, size, and enhancement pattern) are also consistent with this classification. There are no provided features that directly contradict IDH mutation status; however, the absence of certain features (like calcifications or specific spectroscopy findings) is not available for further support.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are more likely to have 1p/19q co-deletion. The tumor's characteristics, such as its location and enhancement pattern, do not strongly suggest an oligodendroglioma. Therefore, given the IDH mutation status is predicted to be 'mutant', the likelihood of 1p/19q co-deletion is lower. However, the exact status cannot be directly inferred from the provided metadata without specific molecular or histological information.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS_WHO_grade": {
+    "reasoning": "Given the presence of necrosis (Proportion Necrosis: 78.05) and the tumor's aggressive features (e.g., large size, deep white matter invasion, and mild enhancement with a thickness of enhancing margin >3mm), the tumor is likely to be of a higher grade. The presence of IDH mutation (predicted) typically associates with lower grades (2 or 3) in the absence of other aggressive features. However, the significant necrosis and large size suggest a more aggressive tumor, likely grade 4. The confidence is not maximal due to the complexity of grading based solely on MRI metadata without histological confirmation.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Deep WM invasion",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01504"
+}

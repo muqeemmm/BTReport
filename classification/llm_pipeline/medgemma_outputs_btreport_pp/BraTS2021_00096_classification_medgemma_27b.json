@@ -1,0 +1,39 @@
+{
+  "subject_id": "BraTS2021_00096",
+  "idh": {
+    "reasoning": "The patient is 55 years old. Age > 50 is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in older adults. The tumor is solitary, located in the temporal-cortex region, and involves deep white matter and the ependymis. The tumor volume is 119.3 mL, which is relatively large but not definitively indicative of IDH-wildtype status. The proportion of edema (79.2%) is high, which can be seen in both IDH-mutant and wildtype tumors. The enhancement quality is mild, and the proportion enhancing (12.7%) is relatively low. There are no features strongly suggestive of IDH-mutant status (e.g., very young age, specific location like thalamus/brainstem) or strongly suggestive of IDH-wildtype status (e.g., very old age > 70, necrosis). Given the age of 55 and lack of definitive features pointing towards either mutation status based solely on MRI metadata, predicting IDH status with high confidence is difficult. However, statistically, IDH-wildtype becomes more common after age 50. I will predict wildtype based on age being a significant factor, but acknowledge the uncertainty.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information regarding 1p/19q co-deletion status (e.g., specific imaging features like calcification or location strongly associated with codeletion). Therefore, a prediction cannot be made based on the available data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 55 years old with a solitary tumor in the temporal-cortex region involving deep white matter and ependymal invasion. The total tumor volume is 119.3 mL, with a core volume of 24.8 mL and edema volume of 94.4 mL (79% of total). There is cortical involvement and deep white matter invasion ('Deep WM invasion': 'Present'). Ependymal invasion ('Ependymal (ventricular) Invasion': 'Present') is also noted. The enhancement quality is mild ('Enhancement Quality': 'Mild'), and the proportion enhancing is low (12.7%). The presence of deep white matter invasion and ependymal invasion suggests at least Grade III (Anaplastic Astrocytoma) or Grade IV (Glioblastoma). Given the patient's age (55), the relatively large size (119 mL), deep WM invasion, and ependymal invasion, a higher grade is more likely than Grade II (Diffuse Astrocytoma). While necrosis (8.1%) and enhancement are present, they are relatively low proportions for a typical Glioblastoma (Grade IV), which often shows significant necrosis (>10%) and more robust enhancement (>20%). However, the combination of deep WM invasion and ependymal invasion strongly points towards Grade III or IV according to WHO CNS5 criteria for diffuse astrocytomas/glioblastomas without IDH mutation or with IDH mutation respectively if these features were present in an IDH mutant tumor which would be grade III or IV depending on other features like Ki67 proliferation index which we don't have access to here but given the age it's likely wildtype so this would be grade IV if these features were present in an IDH wildtype tumor.. Considering the available features - deep WM invasion and ependymal invasion - these are characteristic features that push towards higher grades (III or IV). Without information on mitotic activity or Ki67 index, distinguishing between Grade III and Grade IV based solely on these MRI features can be challenging but given the combination of features including deep WM invasion and ependymal involvement in an adult patient it leans towards Grade IV.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

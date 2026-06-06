@@ -1,0 +1,52 @@
+{
+  "subject_id": "EGD-0068",
+  "idh": {
+    "reasoning": "The tumor's characteristics strongly suggest an IDH-mutant status. It is predominantly non-enhancing and infiltrative, with a very large T2/FLAIR hyperintense component (Proportion of Oedema: 94.24%) and minimal enhancement (Proportion Enhancing: 1.07%). This appearance, combined with its frontal lobe location (99.9% of the tumor volume), is classic for an IDH-mutant glioma. The lack of significant mass effect (midline_shift_present: 'No') further supports a slower, infiltrative growth pattern typical of this genotype. While a small amount of necrosis is present (Proportion Necrosis: 4.69%), it is not extensive enough to outweigh the overwhelming evidence for an IDH-mutant phenotype, as high-grade IDH-mutant astrocytomas can present with necrosis.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "Proportion Enhancing",
+      "Region Proportions",
+      "midline_shift_present",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The prediction between codeleted and non-codeleted status is challenging as the frontal lobe location is common to both oligodendrogliomas and astrocytomas. However, the presence of necrosis (Proportion Necrosis: 4.69%) and contrast enhancement (Proportion Enhancing: 1.07%), even if minimal, are more characteristic of an astrocytic lineage (non-codeleted) than an oligodendroglial lineage (codeleted). Oligodendrogliomas, particularly lower grades, are typically non-enhancing and non-necrotic. The reported thick enhancing margin (Thickness of enhancing margin: '>3mm') also favors an astrocytoma over the typically faint, wispy enhancement sometimes seen in oligodendrogliomas. Therefore, the balance of evidence points towards a non-codeleted status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis on imaging (NCR Volume (mL): 1.917) is a key feature of high-grade glioma and is the strongest determinant for this prediction. According to WHO CNS5 criteria, necrosis in an adult-type diffuse astrocytic glioma corresponds to WHO grade 4, regardless of IDH status. The presence of contrast enhancement (ET Volume (mL): 0.438), although mild, further supports a high-grade designation over grade 2. While the large non-enhancing component and lack of midline shift are features often seen in lower-grade tumors, the definitive presence of a necrotic component radiologically mandates a high-grade prediction, making grade 4 the most likely diagnosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "midline_shift_present",
+      "Proportion of Oedema"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are most consistent with an Astrocytoma, IDH-mutant, CNS WHO grade 4. The tumor's infiltrative, largely non-enhancing nature and frontal location strongly favor an IDH-mutant genotype. However, the definitive presence of a necrotic component on imaging is a hallmark of high-grade disease, elevating the diagnosis to WHO grade 4. The combination of features points away from an oligodendroglioma. Note: There is a discrepancy in the provided metadata regarding tumor laterality; volumetric data clearly indicates a left-sided lesion, which was used for this interpretation."
+}

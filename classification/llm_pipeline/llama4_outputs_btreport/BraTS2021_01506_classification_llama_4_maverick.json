@@ -1,0 +1,62 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (43 years) and the presence of a large, necrotic tumor with significant mass effect (n_slices_with_shift = 107, mean_shift_mm = 2.077, max_shift_mm = 9.0, midline_shift_present = 'Yes') and ependymal invasion suggest a high-grade glioma. The tumor's location in the frontal lobe with cortical involvement and deep white matter invasion, along with its large size (Total tumor volume = 172.964 mL, Lesion Sizes APxTVxCC = 4.6 x 4.6 x 7.7 cm), are more typical of glioblastoma, which is often IDH wildtype. The mild enhancement quality and presence of necrosis (Proportion Necrosis = 30.96%) also support this. While the absence of calcifications (not assessable from given data) and the presence of necrosis might argue against oligodendroglioma (typically IDH mutant and 1p/19q codeleted), the overall profile leans towards a more aggressive, IDH wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "midline_shift_present",
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of a large, necrotic tumor with significant mass effect and ependymal invasion, along with its frontal lobe location and cortical involvement, is less typical for oligodendroglioma, which is more likely to be 1p/19q codeleted. The tumor's aggressive features (large size, necrosis, significant mass effect) are more characteristic of glioblastoma or astrocytoma, which are typically non-codeleted. The absence of specific features like calcifications (not assessable) makes it harder to definitively classify as oligodendroglioma. Thus, the tumor is more likely to be non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor exhibits aggressive features: large size (Total tumor volume = 172.964 mL, Lesion Sizes APxTVxCC = 4.6 x 4.6 x 7.7 cm), significant necrosis (Proportion Necrosis = 30.96%), and substantial mass effect (n_slices_with_shift = 107, mean_shift_mm = 2.077, max_shift_mm = 9.0, midline_shift_present = 'Yes'). These characteristics are typical of high-grade gliomas. The presence of ependymal invasion and cortical involvement further supports a high-grade diagnosis. The proportion of necrosis and the tumor's overall profile are most consistent with glioblastoma, which is WHO grade 4.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "subject_id": "BraTS2021_01506"
+}

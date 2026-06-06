@@ -1,0 +1,46 @@
+{
+  "subject_id": "EGD-0486",
+  "idh": {
+    "reasoning": "The tumor displays multiple features strongly indicative of an IDH-wildtype status. There is 'Marked' enhancement with a thick margin ('>3mm'), which is a hallmark of glioblastoma. The tumor boundaries are unusually sharp, evidenced by a very low median 'Transition Zone Thickness (FLAIR)' of 0.63 mm. This is contrary to the typically diffuse, ill-defined margins of IDH-mutant astrocytomas. Furthermore, the 'T2-FLAIR Mismatch Present' sign is absent (value 0.0), which argues against an IDH-mutant astrocytoma. While the tumor's small size ('Total tumor volume (mL)': 5.871) is less common for a glioblastoma, the combination of aggressive enhancement and sharp margins strongly favors an IDH-wildtype prediction.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification must be performed independently of the IDH prediction. The tumor exhibits features that are highly atypical for a 1p/19q-codeleted glioma (oligodendroglioma). Specifically, the 'Enhancement Quality' is 'Marked' and the 'Thickness of enhancing margin' is '>3mm'. Oligodendrogliomas, particularly lower-grade ones, typically show minimal to no enhancement. Additionally, the tumor margins are very sharp ('Transition Zone Thickness (FLAIR)' median 0.63 mm), whereas oligodendrogliomas classically have indistinct, infiltrative borders. While the frontal lobe location is common for oligodendrogliomas, this is a non-specific finding that is strongly outweighed by the features arguing against co-deletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of necrosis is a key determinant of WHO grade 4 in adult-type diffuse gliomas. The metadata explicitly reports a non-zero 'NCR Volume (mL)' of 0.034, indicating the presence of necrosis. In the context of an IDH-wildtype diffuse astrocytic glioma, necrosis is sufficient for a WHO grade 4 diagnosis. This is further supported by other high-grade features, including 'Marked' 'Enhancement Quality' and 'Deep WM invasion'. The very small 'Total tumor volume (mL)' is atypical for a grade 4 tumor but does not override the definitive presence of necrosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient has a small, solitary frontal lobe tumor with imaging features highly suggestive of a high-grade glioma. The combination of marked, thick-rim enhancement, sharp tumor borders, and central necrosis strongly supports the diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4. The small tumor size is an atypical feature but does not contradict the diagnosis in the face of definitive high-grade characteristics. The absence of patient age is a notable limitation."
+}

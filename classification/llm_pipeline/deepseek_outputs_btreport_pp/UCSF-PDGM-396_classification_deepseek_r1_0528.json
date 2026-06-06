@@ -1,0 +1,50 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 36 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor location involves cortex and insula, which is common in IDH-mutant tumors. Enhancement is mild, which is more typical for IDH-mutant tumors than wildtype. The T2-FLAIR mismatch score is 0.54, which is above 0.5, suggesting possible IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves parietal, cortex, insula and frontal lobes, which are cortical regions. Oligodendrogliomas (1p/19q codeleted) are typically frontal and cortical. However, the tumor also involves midline structures and thalamus, which is atypical for oligodendrogliomas. Deep white matter invasion is present, which can occur in both astrocytomas and oligodendrogliomas. The mild enhancement and younger age are more suggestive of astrocytoma than oligodendroglioma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "age_years"
+    ]
+  },
+  "overall_comment": "The tumor is likely an IDH-mutant astrocytoma. The grade is assigned as 4 due to necrosis present (NCR volume 0.27 mL, Proportion Necrosis 0.3%) and enhancement, though the necrosis volume is small. The midline involvement and thalamic extension are unusual for grade 2/3 tumors.",
+  "subject_id": "UCSF-PDGM-396",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "There is necrosis present (NCR volume 0.27 mL), which is a feature of grade 4 glioblastoma. Enhancement is present, though mild. The tumor volume is large (90.777 mL), which is more typical of high-grade tumors. However, the proportion of necrosis is very low (0.3%), and the enhancing volume is small (2.037 mL), which may suggest a lower grade. The midline shift and edema volume are substantial, indicating mass effect.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "Edema crosses midline",
+      "midline_shift_present"
+    ]
+  }
+}

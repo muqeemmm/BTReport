@@ -1,0 +1,55 @@
+{
+  "subject_id": "UCSF-PDGM-166",
+  "idh": {
+    "reasoning": "The presence of marked, thick-walled enhancement and a large volume of central necrosis are classic imaging features of glioblastoma, IDH-wildtype. The tumor is large, with extensive peritumoral edema and significant mass effect. While the frontal lobe location can be seen in IDH-mutant tumors, the overwhelmingly aggressive features such as prominent necrosis ('NCR Volume (mL)': 18.676), thick enhancement ('Thickness of enhancing margin': \">3mm\"), and ependymal invasion strongly favor an IDH-wildtype status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification is performed independently of the IDH status prediction. 1p/19q co-deleted tumors (oligodendrogliomas) typically present with indistinct margins and minimal to no enhancement or necrosis. This tumor exhibits features that are the antithesis of a typical oligodendroglioma: marked, thick enhancement ('Enhancement Quality': \"Marked\") and a large necrotic core ('NCR Volume (mL)': 18.676). These findings are highly characteristic of an astrocytic lineage tumor, which are 1p/19q non-codeleted. The deep white matter and deep gray matter invasion further support an astrocytic phenotype over an oligodendroglial one.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.98
+  },
+  "who_grade": {
+    "reasoning": "The CNS WHO grading criteria for diffuse gliomas are heavily influenced by imaging features of high-grade malignancy. The definitive presence of a large necrotic core ('NCR Volume (mL)': 18.676, 'Proportion Necrosis': 18.52) is a key histopathological and radiological feature that defines a grade 4 lesion. This is further supported by other aggressive features, including marked, thick-walled contrast enhancement ('Enhancement Quality': \"Marked\", 'Thickness of enhancing margin': \">3mm\"), extensive vasogenic edema, and significant mass effect ('midline_shift_present': \"Yes\"). There are no features to suggest a lower grade.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI features are classic for a glioblastoma, IDH-wildtype. The large, solitary, frontally located mass demonstrates thick, marked ring enhancement, a substantial necrotic core, extensive vasogenic edema, and significant mass effect. These findings are highly indicative of a CNS WHO grade 4 tumor. The molecular predictions of IDH-wildtype and 1p/19q non-codeleted status are made with high confidence based on this aggressive imaging phenotype."
+}

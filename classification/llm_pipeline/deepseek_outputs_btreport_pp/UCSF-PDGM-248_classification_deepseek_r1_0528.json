@@ -1,0 +1,49 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 46 years old, which is borderline for IDH-mutant gliomas that typically present younger. The tumor is nonenhancing, which is more common in IDH-mutant tumors, but the T2-FLAIR mismatch sign is absent (score 0.429 < 0.5), which strongly argues against IDH-mutant astrocytoma. Deep white matter invasion is present, which can occur in both types. Given the conflicting evidence, wildtype is slightly favored due to the mismatch sign.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex and frontal lobe, which is typical for oligodendrogliomas, but it is nonenhancing and midline, which is unusual for oligodendrogliomas. The T2-FLAIR mismatch sign is absent, which supports non-codeleted status. Deep white matter invasion is present, which can occur in both. Overall, non-codeleted is favored.",
+    "supporting_features": [
+      "Tumor Location",
+      "T2-FLAIR Mismatch Score",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor is midline, nonenhancing, with significant edema crossing midline. No necrosis or enhancement present. Deep white matter invasion noted. T2-FLAIR mismatch sign absent. Given the midline location and absence of enhancement, glioblastoma IDH-wildtype is considered despite the younger age.",
+  "subject_id": "UCSF-PDGM-248",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has no necrosis (Proportion Necrosis 0.0) and no enhancement (Enhancement Quality None), which are atypical for grade 4 glioblastoma. However, the tumor is midline, crosses midline via edema, and has deep white matter invasion. The WHO CNS5 allows grade 4 designation for IDH-wildtype tumors without microvascular proliferation or necrosis if they have specific molecular features, but molecular data is not available. Given the aggressive features (midline crossing, edema volume), grade 4 is assigned.",
+    "supporting_features": [
+      "Side of Tumor Epicenter",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

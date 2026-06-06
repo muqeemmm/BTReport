@@ -1,0 +1,40 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8579277728963544, indicating a strong likelihood of IDH mutation. The patient's age (74 years) is not typical for IDH-mutant gliomas, which are more common in younger patients, but the imaging features take precedence in this assessment.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are more likely to have 1p/19q co-deletion. Therefore, despite the presence of features like cortical involvement and heterogeneous enhancement, the T2-FLAIR mismatch suggests a lower likelihood of 1p/19q co-deletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows marked enhancement, significant necrosis (Proportion Necrosis: 24.38%), and a large size (Total tumor volume: 156.547 mL), which are features concerning for a higher grade. The presence of IDH mutation (predicted) typically correlates with lower grade (2 or 3) in adult-type diffuse gliomas, but the aggressive imaging features here suggest a higher grade. Given the patient's age and the tumor's aggressive features, a grade of 4 is plausible despite the IDH mutation.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "IDH mutation status"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "subject_id": "EGD-0648"
+}

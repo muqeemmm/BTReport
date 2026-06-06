@@ -1,0 +1,47 @@
+{
+  "id": "patient_0767",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (50 years) and the presence of a large, enhancing tumor with significant mass effect (midline shift, ventricular asymmetry, and ependymal invasion) are more typical of IDH wildtype glioblastoma. The tumor's location in the frontal lobe and its aggressive features (marked enhancement, necrosis, and large size) also support this prediction. While not definitive, these characteristics are less common in IDH mutant gliomas, which tend to occur in younger patients and often have a more indolent course.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion",
+        "midline_shift_present",
+        "Asymmetrical Ventricles"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of a large, enhancing frontal lobe tumor with ependymal invasion and significant mass effect is more typical of IDH wildtype or IDH mutant but 1p/19q non-codeleted gliomas. Given the likely IDH wildtype status (from the first prediction), the probability of 1p/19q co-deletion is low. 1p/19q co-deleted tumors are more commonly associated with IDH mutation and oligodendroglial features.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Ependymal (ventricular) Invasion",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.85
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor's aggressive features (large size, marked enhancement, necrosis, significant mass effect, and ependymal invasion) are characteristic of a high-grade glioma. The presence of necrosis (Proportion Necrosis = 10.55%) and marked enhancement are particularly indicative of glioblastoma, WHO grade 4. The tumor's size and the presence of significant mass effect further support this grading.",
+      "supporting_features": [
+        "Lesion Sizes APxTVxCC (cm)",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00240"
+}

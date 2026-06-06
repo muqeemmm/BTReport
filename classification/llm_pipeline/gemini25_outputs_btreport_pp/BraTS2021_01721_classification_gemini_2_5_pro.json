@@ -1,0 +1,52 @@
+{
+  "subject_id": "BraTS2021_01721",
+  "idh": {
+    "reasoning": "The presence of a very large non-enhancing/necrotic core (Proportion Necrosis: 39.15%) is a strong radiological hallmark of IDH-wildtype glioma, specifically glioblastoma. The presence of contrast enhancement (Enhancement Quality: 'Mild') further supports this prediction. Additionally, the absence of a T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) argues against the most common IDH-mutant subtype, astrocytoma. While the patient's age of 39 is more typical for IDH-mutant tumors, and the tumor borders are relatively sharp, the overwhelming evidence of necrosis strongly favors an IDH-wildtype status.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "boundary_sharpness",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.9
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "This classification must be performed independently of the IDH prediction. The key imaging features arguing against 1p/19q co-deletion are the presence of a large necrotic core (Proportion Necrosis: 39.15%) and contrast enhancement (Enhancement Quality: 'Mild'). Necrosis is exceptionally rare in 1p/19q co-deleted oligodendrogliomas. While some features like relatively sharp borders can be seen in oligodendrogliomas, the presence of necrosis is a very strong contraindication. The overall imaging phenotype is much more consistent with an astrocytic lineage tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "boundary_sharpness",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The CNS WHO classification defines grade 4 in adult-type diffuse gliomas by the presence of necrosis or microvascular proliferation. The provided metadata indicates a very large proportion of the tumor is necrotic (Proportion Necrosis: 39.15%; NCR Volume (mL): 19.272). This is a definitive imaging correlate of grade 4 histology. The presence of contrast enhancement (ET Volume (mL): 1.62), particularly with a thick margin (Thickness of enhancing margin: '>3mm'), further solidifies the diagnosis of a high-grade glioma. The evidence for grade 4 is overwhelming.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.98
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The imaging findings are highly characteristic of a high-grade glioma. The substantial necrotic core is the dominant feature, strongly indicating an IDH-wildtype status and CNS WHO grade 4, consistent with a diagnosis of Glioblastoma. The patient's age is younger than typical for this diagnosis, but the imaging evidence is compelling."
+}

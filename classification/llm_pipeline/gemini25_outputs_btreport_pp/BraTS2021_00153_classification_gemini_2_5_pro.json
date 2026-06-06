@@ -1,0 +1,50 @@
+{
+  "subject_id": "BraTS2021_00153",
+  "idh": {
+    "reasoning": "The patient's age of 62 years strongly favors an IDH-wildtype diagnosis. The imaging phenotype provides compelling convergent evidence. The tumor displays marked, thick-rimmed enhancement with a large necrotic core, a classic presentation for glioblastoma, IDH-wildtype. The very sharp tumor border, evidenced by a narrow `Transition Zone Thickness (FLAIR)` (median 0.75 mm), is highly characteristic of IDH-wildtype gliomas and argues against the diffusely infiltrative pattern of IDH-mutant tumors. Furthermore, the absence of a T2-FLAIR mismatch (`T2-FLAIR Mismatch Present`: 0.0) is a strong negative predictor for IDH-mutant astrocytoma. The relatively low edema volume is a minor atypical feature but does not outweigh the extensive evidence for IDH-wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Transition Zone Thickness (FLAIR)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.98
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The imaging features are strongly inconsistent with a 1p/19q co-deleted tumor (oligodendroglioma). Oligodendrogliomas typically show minimal to no enhancement and lack necrosis. This tumor, in contrast, has marked enhancement (`Enhancement Quality`: \"Marked\") comprising over half its volume (`Proportion Enhancing`: 52.24) and a substantial necrotic core (`Proportion Necrosis`: 30.36). Additionally, the tumor border is very sharp (`Transition Zone Thickness (FLAIR)` median 0.75 mm), whereas oligodendrogliomas characteristically have indistinct margins. These features\u2014prominent enhancement, necrosis, and sharp borders\u2014are all strong negative predictors for 1p/19q co-deletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Transition Zone Thickness (FLAIR)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The presence of a large necrotic core is the most definitive imaging feature of a WHO grade 4 glioma. This is clearly indicated by the `NCR Volume (mL)` of 11.499 and a `Proportion Necrosis` of 30.36%. This finding, in the context of an adult diffuse glioma, is sufficient for a grade 4 designation. This is further supported by the marked, thick-rimmed contrast enhancement (`Enhancement Quality`: \"Marked\", `Thickness of enhancing margin`: \">3mm\") and the patient's advanced age (62 years), which is typical for glioblastoma. The absence of deep white matter invasion is noted but does not preclude a grade 4 diagnosis, especially when definitive features like necrosis are present.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.99
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype, CNS WHO grade 4",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a 62-year-old female with a solitary, multi-lobar tumor. The combination of advanced age, a ring-enhancing lesion with a large necrotic core, and a sharp tumor-brain interface on FLAIR provides a classic and highly confident imaging diagnosis of Glioblastoma, IDH-wildtype, CNS WHO grade 4."
+}
