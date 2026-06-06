@@ -1,0 +1,40 @@
+{
+  "subject_id": "BraTS2021_01142",
+  "idh": {
+    "reasoning": "The patient is 74 years old. Older age (>65) is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it significantly increases the likelihood of IDH-wildtype status. No other features in the metadata strongly suggest IDH-mutant status (e.g., younger age, specific location patterns often seen in IDH-mutant tumors). The tumor size (Total tumor volume 163.578 mL) and presence of multiple satellites are more common in IDH-wildtype tumors, although they can occur in IDH-mutant ones. The midline location and significant mass effect (midline shift, ventricular effacement) are also more typical of higher-grade, often IDH-wildtype, tumors. Given the strong age association and lack of contradictory features, IDH-wildtype is the most probable status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information directly related to 1p/19q co-deletion status (e.g., specific imaging features strongly associated with it, or molecular data). Features like older age and larger tumor size are more commonly associated with non-codeleted tumors, but these are weak indicators without molecular confirmation. The presence of multiple satellites could be seen in both codeleted and non-codeleted tumors, but is perhaps slightly more common in non-codeleted ones. Without specific features pointing towards co-deletion (which are often subtle on conventional MRI), predicting co-deletion is highly uncertain. Therefore, based solely on the available conventional MRI metadata, the most likely status is non-codeleted due to the lack of positive indicators for co-deletion.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (74) is a significant factor favoring a higher grade (Grade 4). The large tumor volume (163.578 mL), presence of multiple satellites, deep white matter invasion, ependymal invasion, cortical involvement, marked enhancement (>3mm thickness), and significant mass effect (midline shift present, effaced left ventricle) are all features indicative of aggressive behavior typically seen in high-grade gliomas (Grade 3 or 4). The proportion enhancing (48.63%) and necrosis (16.29%) are substantial. While these features can be seen in Grade 3 gliomas (anaplastic astrocytoma), their combination in an elderly patient strongly suggests a Grade 4 glioma (glioblastoma). Given the constellation of aggressive features and advanced age, Grade 4 is the most likely diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Multiple satellites present",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Effaced Ventricle"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Diffuse Astrocytoma, IDH-wildtype, WHO grade",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's advanced age combined with imaging features such as large tumor size, multiple satellites, deep white matter invasion, ependymal invasion, marked enhancement with thick margins and significant mass effect strongly suggest a high-grade glioma consistent with WHO grade IV glioblastoma which is typically IDH wildtype."
+}

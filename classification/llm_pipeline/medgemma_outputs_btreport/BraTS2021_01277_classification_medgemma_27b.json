@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_01277",
+  "idh": {
+    "reasoning": "The patient is 55 years old. Age > 50 is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in older adults. The tumor is solitary, infiltrative (deep WM invasion, cortical involvement), and involves the ventricles and temporal lobe. There are no features strongly suggestive of IDH-mutant status (e.g., small size, cystic components, calcification - none available) or strongly suggestive of IDH-wildtype status (e.g., large size, necrosis, hemorrhage - necrosis is present but relatively low proportion). Given the age and infiltrative nature, IDH-wildtype is slightly more likely, but the evidence is weak. The presence of ependymal invasion might slightly favor IDH-mutant, but this is not a strong predictor. Without molecular data or imaging features like DWI/perfusion/MRS, predicting IDH status based solely on morphology and age is challenging. I will predict wildtype based on age being over 50 and the tumor's infiltrative nature.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q co-deletion is typically found in IDH-mutant oligodendrogliomas (Grade 2 or 3). Since I predicted the tumor to be IDH-wildtype based on age and morphology, it is highly unlikely to have 1p/19q co-deletion. While rare exceptions exist, the strong association between IDH-wildtype status and absence of co-deletion makes 'non-codeleted' the most probable prediction.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The tumor shows deep white matter invasion and cortical involvement, indicating infiltrative growth characteristic of high-grade gliomas (Grade 3 or 4). Ependymal invasion is also present. The tumor volume is substantial (73.657 mL). While the enhancement quality is described as 'mild' and the proportion enhancing is relatively low (9.73%), the presence of deep WM invasion, cortical involvement, and ependymal invasion points towards at least Grade 3. Given the patient's age (55) and the infiltrative nature including deep WM invasion and ependymal involvement, Grade 4 (glioblastoma) is a strong possibility, especially if it turns out to be IDH-wildtype. However, without definitive features like significant necrosis (>10%), microvascular proliferation, or pseudopalisading necrosis (not assessable from metadata), distinguishing between Grade 3 and Grade 4 based solely on these features is difficult. The presence of deep WM invasion pushes towards Grade 3 or higher. Given the combination of deep WM invasion, cortical involvement, ependymal invasion in a 55 year old patient with a large tumor volume, Grade 4 seems more likely than Grade 2 or Grade 3 if it's IDH wildtype; if it were IDH mutant it would likely be grade 2 or 3.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

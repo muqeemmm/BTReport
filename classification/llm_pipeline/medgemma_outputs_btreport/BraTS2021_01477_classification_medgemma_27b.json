@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_01477",
+  "idh": {
+    "reasoning": "The patient is 50 years old. Age > 50 is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in older adults. The tumor is solitary, involves deep white matter, and shows significant edema (60.09% of total volume). These features are more common in IDH-wildtype tumors, particularly glioblastoma. However, the lack of enhancement (Proportion Enhancing: 0.0) and the presence of ependymal invasion are less typical for classic glioblastoma (IDH-wildtype Grade 4) but can be seen in other high-grade gliomas. Given the age and features like deep WM invasion and significant edema, IDH-wildtype is statistically more likely, but the lack of enhancement makes it less certain. Without molecular data or advanced imaging (DWI/perfusion), this prediction is uncertain.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q co-deletion is strongly associated with IDH-mutant oligodendrogliomas (Grade 2 or 3). Given the prediction of IDH-wildtype status above, 1p/19q co-deletion is highly unlikely. The tumor's location involving deep white matter and thalamus doesn't specifically argue for or against co-deletion, but the overall picture points away from an oligodendroglioma phenotype.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The tumor involves deep white matter ('Deep WM invasion': 'Present'), shows significant edema ('Proportion of Oedema': 60.09), involves eloquent brain regions ('Eloquent Brain Involvement': 'Speech motor and Vision'), causes midline shift ('midline_shift_present': 'Yes'), and effaces the right ventricle ('Effaced Ventricle': 'Right'). These features suggest aggressive behavior. Although there is no enhancement ('Proportion Enhancing': 0.0), which might argue against a Grade 4 glioblastoma, the combination of deep invasion, significant edema, eloquent involvement, and midline shift points towards a high grade (Grade 3 or 4). Given the prediction of IDH-wildtype status, Grade 4 (glioblastoma) becomes a strong possibility despite the lack of enhancement; however, some high-grade astrocytomas (IDH-wildtype Grade 3) can also present similarly without prominent enhancement. The presence of ependymal invasion also suggests a higher grade. Balancing these factors, Grade 4 is slightly favored due to the combination of aggressive features and likely IDH-wildtype status.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Proportion of Oedema",
+      "Eloquent Brain Involvement",
+      "midline_shift_present",
+      "Effaced Ventricle",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "Diffuse glioma",
+  "consistency_check_passed": true,
+  "overall_comment": "The tumor has features suggestive of a high grade glioma given its size, location involving eloquent brain regions and deep white matter structures, midline shift and edema. The lack of enhancement is atypical for glioblastoma but can be seen in other high grade gliomas or sometimes in glioblastomas with specific molecular profiles or treatment effects (though this is pre-operative). The age >50 favors IDH wildtype status statistically."
+}

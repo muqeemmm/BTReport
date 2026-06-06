@@ -1,0 +1,42 @@
+{
+  "subject_id": "BraTS2021_00128",
+  "idh": {
+    "reasoning": "The patient is 75 years old. Older age (>65) is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it significantly increases the likelihood of IDH-wildtype status. No features strongly suggest IDH-mutant status (e.g., younger age, specific imaging patterns like prominent cystic changes or calcification, which are absent). The tumor size (4.6x4.5x5.7 cm) and location (midline, involving deep structures like thalamus, caudate, putamen, pallidum) are common for both IDH-mutant and wildtype tumors but perhaps slightly more typical for wildtype given the age and size. The presence of deep white matter invasion and ependymal invasion are also seen in both types but can be more aggressive in wildtype tumors. Given the strong age association and lack of contradictory features, IDH-wildtype is the most probable status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 75 years old, which is strongly associated with IDH-wildtype tumors. 1p/19q co-deletion is mutually exclusive with IDH mutation and is almost exclusively found in IDH-mutant astrocytomas (typically grade 2 or 3). Therefore, given the high likelihood of IDH-wildtype status based on age, 1p/19q co-deletion is highly unlikely.",
+    "supporting_features": [
+      "age_years",
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (75) strongly suggests an IDH-wildtype glioma. The tumor exhibits significant features of high grade: large size (4.6x4.5x5.7 cm), midline shift ('Yes', 'level_max_shift': 'fourth ventricle'), involvement of eloquent brain regions ('Speech motor, Motor and Vision'), deep white matter invasion ('Present'), ependymal invasion ('Present'), marked enhancement ('Marked'), and a relatively large enhancing component (30.6% of total volume). The presence of midline shift and involvement of deep structures points towards aggressive behavior often seen in high-grade gliomas. While the tumor is solitary and does not cross the midline grossly ('CET Crosses midline': 'False', 'Edema crosses midline': 'False'), the combination of advanced age, large size, deep invasion, marked enhancement, and eloquent region involvement strongly favors a WHO grade 4 diagnosis (glioblastoma), which is the most common high-grade glioma in this age group and typically IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "midline_shift_present",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Lesion Sizes APxTVxCC (cm)",
+      "level_max_shift"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

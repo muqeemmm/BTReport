@@ -1,0 +1,39 @@
+{
+  "subject_id": "BraTS2021_00274",
+  "idh": {
+    "reasoning": "The patient's age is 82 years. Older age is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it significantly increases the likelihood of IDH-wildtype status. No other features in the provided metadata strongly suggest IDH-mutant status (e.g., younger age, specific imaging patterns like prominent T2/FLAIR mismatch or diffusion restriction, which are not available). Given the advanced age, IDH-wildtype is the more probable status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information directly related to 1p/19q co-deletion status (e.g., specific imaging features like calcification or cystic changes, or molecular data). The features present (age, location, enhancement pattern) do not strongly point towards either codeletion or non-codeletion. IDH-wildtype tumors are typically non-codeleted, and given the prediction of IDH-wildtype based on age, non-codeletion is the most likely scenario. However, without direct evidence or stronger indicators for IDH-mutant status (which would be associated with codeletion), this prediction relies heavily on the inferred IDH status.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The patient is 82 years old, and the tumor is predicted to be IDH-wildtype and non-codeleted based on age. IDH-wildtype, non-codeleted diffuse gliomas are classified as WHO Grade 4 according to the CNS5 criteria. The tumor shows marked enhancement and significant volume (45.8 mL), consistent with a high-grade glioma. While specific features like deep white matter invasion are absent, the combination of advanced age and predicted molecular profile strongly points towards Grade 4.",
+    "supporting_features": [
+      "age_years",
+      "idh",
+      "one_p_nineteen_q",
+      "Enhancement Quality",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

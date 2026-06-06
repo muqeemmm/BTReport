@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00220",
+  "idh": {
+    "reasoning": "The patient is 49 years old. Age > 40 is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in older adults. The tumor is multifocal with multiple satellites, which is more common in IDH-wildtype tumors. The tumor volume is relatively large (37.883 mL). The proportion of enhancing tumor (42.39%) and necrosis (9.4%) are present. The presence of cortical involvement and eloquent brain involvement (speech motor and motor) are noted. There are no features strongly suggestive of IDH-mutant status (e.g., low grade features, specific location like thalamus/brainstem, or very young age). Given the age, multifocal nature, and size, IDH-wildtype is more likely, but the age alone isn't definitive.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Total tumor volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 49 years old and the tumor is likely IDH-wildtype based on the reasoning above. 1p/19q co-deletion is mutually exclusive with IDH mutation and typically found in secondary glioblastomas (IDH-wildtype). However, the provided metadata lacks specific features strongly associated with 1p/19q co-deletion, such as a history of lower-grade glioma or specific imaging characteristics beyond those already considered for IDH status. The tumor morphology (multifocal, enhancing) could be seen in both codeleted and non-codeleted IDH-wildtype GBMs. Without molecular data or more specific imaging features (like diffusion/perfusion), predicting co-deletion status based solely on these structural MRI features is highly uncertain.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The patient is 49 years old with a large (37.883 mL) multifocal tumor involving cortical regions and eloquent areas ('Speech motor and Motor'). The tumor shows marked enhancement ('Enhancement Quality': 'Marked'), significant necrosis ('Proportion Necrosis': 9.4%), and edema ('Proportion of Oedema': 48.22%). It has multiple satellite lesions ('Multiple satellites present': 'Present'). These features collectively point towards a high-grade glioma. Given the likely IDH-wildtype status (see reasoning above), this constellation of findings strongly suggests a WHO Grade 4 glioma (glioblastoma). While Grade 3 astrocytoma can show enhancement and necrosis, the combination of marked enhancement, significant necrosis, multifocality with satellites, and large size in an adult patient makes Grade 4 the most probable diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Multiple satellites present",
+      "Cortical involvement",
+      "Eloquent Brain Involvement",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a large, multifocal enhancing lesion involving multiple lobes including eloquent areas, consistent with a high-grade glioma. Based on age and morphology, IDH wildtype status is suspected."
+}

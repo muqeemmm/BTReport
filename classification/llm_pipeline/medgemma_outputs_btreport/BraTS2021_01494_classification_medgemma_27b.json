@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_01494",
+  "idh": {
+    "reasoning": "The patient is 41 years old. Younger age (<50) is associated with IDH-mutant gliomas. The tumor is multifocal and involves deep structures (thalamus, caudate, putamen, pallidum, hippocampus, amygdala, accumbens area, ventral DC) and shows ependymal invasion. These features are more common in IDH-mutant tumors. The tumor is non-enhancing, which can be seen in both IDH-mutant (especially lower grade) and IDH-wildtype (especially glioblastoma), but the overall picture leans towards IDH-mutant given the age and multifocal nature with deep involvement. There are no features strongly suggesting IDH-wildtype status (e.g., older age, significant necrosis/enhancement).",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Anatomical Overlap Regions",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 41 years old, which is more typical for IDH-mutant tumors. IDH-mutant gliomas are further classified based on 1p/19q co-deletion status. Co-deletion is typically found in lower-grade gliomas (WHO grade 2 or 3). The tumor is non-enhancing and has a relatively low proportion of necrosis (22%). While the tumor involves deep structures and shows ependymal invasion, these features don't definitively rule out co-deletion. However, the presence of multiple lesions ('Multifocal') makes co-deletion less likely as it's strongly associated with astrocytomas rather than oligodendrogliomas which are more commonly co-deleted. Without molecular data or specific imaging features strongly suggestive of oligodendroglioma (like calcification or specific DWI patterns - which are unavailable), predicting co-deletion is difficult. Given the multifocal nature and lack of other strong indicators for co-deletion, 'non-codeleted' is slightly more probable.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The patient is 41 years old with a non-enhancing multifocal glioma involving deep structures and showing ependymal invasion. The tumor has a significant edema component (77.93%) and causes midline shift ('midline_shift_present': 'Yes', 'Edema crosses midline': 'True'). The presence of cortical involvement ('Cortical involvement': 'Present') and deep white matter invasion ('Deep WM invasion': 'Present') indicates infiltrative growth. The lack of enhancement ('Proportion Enhancing': 0.0) suggests a lower grade or a specific subtype like diffuse astrocytoma, IDH-mutant. However, the significant edema, midline shift, deep structure involvement, and ependymal invasion raise concern for higher grade potential even without enhancement. Given the age (<50), non-enhancing nature, but infiltrative behavior with significant edema and deep involvement including ependymal spread, a WHO grade 3 (Astrocytoma, IDH-mutant) seems most likely. Grade 2 is less likely due to the extent of infiltration and edema/mass effect causing midline shift. Grade 4 (glioblastoma) is unlikely given the lack of enhancement and necrosis typically seen in GBM.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-mutant",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a multifocal glioma involving deep structures with significant edema causing midline shift but without enhancement or necrosis on MRI sequences provided."
+}

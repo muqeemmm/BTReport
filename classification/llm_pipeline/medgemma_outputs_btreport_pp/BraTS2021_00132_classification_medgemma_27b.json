@@ -1,0 +1,54 @@
+{
+  "subject_id": "BraTS2021_00132",
+  "idh": {
+    "reasoning": "The patient's age (81 years) is a significant factor favoring IDH-wildtype glioma, as IDH-mutant gliomas are more common in younger adults. While age alone is not definitive, it strongly biases the prediction towards wildtype status. There are no features present that strongly suggest IDH-mutation (e.g., low grade features, specific imaging patterns strongly associated with mutant status). The tumor characteristics like marked enhancement, deep white matter invasion, and ependymal invasion are compatible with high-grade gliomas, which can be either IDH-mutant or wildtype, but the advanced age makes wildtype more probable.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The 1p/19q co-deletion is typically associated with oligodendrogliomas, which are often IDH-mutant and lower grade (WHO grade 2 or 3). Given the patient's advanced age (81) and the tumor characteristics suggesting a potentially high-grade process (marked enhancement, deep WM invasion, ependymal invasion), an IDH-wildtype glioma (often glioblastoma) is more likely. While co-deletion can occur in other glioma types, it is much less common in the context of likely IDH-wildtype tumors in older adults. There are no specific imaging features provided that suggest 1p/19q co-deletion.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features indicative of high malignancy: marked enhancement, deep white matter invasion, ependymal invasion, midline shift, cortical involvement, and eloquent brain involvement. The presence of these aggressive features points towards a WHO grade 4 glioma (glioblastoma). Although the patient is elderly and the tumor is solitary without multiple satellites or necrosis >10% (Proportion Necrosis: 6.75%), the combination of deep invasion and marked enhancement strongly suggests Grade 4. A Grade 2 or 3 tumor would typically show less aggressive infiltrative behavior and potentially less intense enhancement.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Cortical involvement",
+      "Eloquent Brain Involvement",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Text Report",
+      "Tumor Location",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Side of Tumor Epicenter",
+      "level_max_shift",
+      "Anatomical Overlap Regions",
+      "Left Ventricle Volume (mm^3)",
+      "Right Ventricle Volume (mm^3)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH-wildtype astrocytoma, WHO grade IV.",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is elderly with a solitary enhancing lesion demonstrating aggressive features including deep white matter invasion and ependymal involvement. These findings are most consistent with an IDH-wildtype astrocytoma WHO grade IV."
+}

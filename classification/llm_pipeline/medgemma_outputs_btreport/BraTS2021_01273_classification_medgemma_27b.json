@@ -1,0 +1,39 @@
+{
+  "subject_id": "BraTS2021_01273",
+  "idh": {
+    "reasoning": "The patient is 66 years old. Older age (>60) is associated with IDH-wildtype gliomas, while younger age (<40) is associated with IDH-mutant gliomas. The available metadata does not include features strongly indicative of IDH-mutant status (e.g., low grade, specific imaging patterns like cystic changes or calcification, which are not available anyway). The age is the primary factor pointing towards IDH-wildtype. While age alone isn't definitive, in the absence of contrary evidence, it's the most significant predictor available.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 66 years old and the tumor appears aggressive based on features like marked enhancement and cortical involvement. 1p/19q co-deletion is strongly associated with IDH-mutant oligodendrogliomas, which typically occur in younger patients and often have distinct imaging features (though these are not available here). Given the patient's age and lack of features suggestive of oligodendroglioma, co-deletion is unlikely. The absence of specific features supporting co-deletion leads to this prediction.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The patient is 66 years old, suggesting a higher likelihood of IDH-wildtype glioma. The tumor shows marked enhancement, cortical involvement, and a relatively large size (Total tumor volume 7.012 mL). These features are consistent with a high-grade glioma (Grade 4). While deep white matter invasion and ependymal invasion are absent, the marked enhancement and cortical involvement in an older adult strongly suggest Grade 4 astrocytoma (glioblastoma), which is typically IDH-wildtype. Grade 2 or 3 are less likely given the combination of age and aggressive imaging features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Total tumor volume"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "IDH-wildtype, non-codeleted, WHO Grade 4 astrocytoma (glioblastoma)",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult (66 years) with a solitary frontal lobe lesion showing marked enhancement and cortical involvement. The absence of deep white matter or ependymal invasion argues against higher grade infiltration but the marked enhancement and cortical involvement in this age group strongly suggest a high grade glioma. Given the age and imaging features, an IDH-wildtype glioblastoma (WHO Grade IV) is the most likely diagnosis."
+}

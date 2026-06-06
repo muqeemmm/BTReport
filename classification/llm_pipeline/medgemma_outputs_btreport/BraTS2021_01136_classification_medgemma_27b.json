@@ -1,0 +1,40 @@
+{
+  "subject_id": "BraTS2021_01136",
+  "idh": {
+    "reasoning": "The patient is 77 years old. Older age (>65-70) is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it significantly increases the likelihood of IDH-wildtype status. No other features in the provided metadata strongly suggest IDH-mutant status (e.g., younger age, specific location patterns often seen in IDH-mutant tumors). The tumor size and location are non-specific regarding IDH status. Therefore, based primarily on the advanced age, the prediction leans towards IDH-wildtype.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information directly related to 1p/19q co-deletion status (e.g., specific imaging features like calcification or location patterns strongly associated with oligodendrogliomas, which are typically 1p/19q co-deleted). The tumor is large, infiltrative (deep WM invasion, ependymal invasion), and crosses the midline, which are features more commonly seen in high-grade gliomas, including IDH-wildtype glioblastomas. While 1p/19q co-deletion is characteristic of oligodendrogliomas (often IDH-mutant), its absence doesn't rule it out completely, especially in diffuse astrocytomas. However, without any supporting evidence and given the patient's age suggesting a higher likelihood of IDH-wildtype disease (where 1p/19q co-deletion is rare), the prediction is non-codeleted. The confidence is low due to the complete lack of relevant information.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features indicative of high grade: large size (Total tumor volume 174.626 mL), significant enhancement (Proportion Enhancing 42.99%, Marked Enhancement Quality), crossing the midline (CET Crosses midline: True, Edema crosses midline: True), deep white matter invasion (Deep WM invasion: Present), ependymal invasion (Ependymal (ventricular) Invasion: Present), ventricular effacement/asymmetry (Effaced Ventricle: Left, Asymmetrical Ventricles: Present), and involvement of eloquent brain regions (Eloquent Brain Involvement: Speech motor and Motor). These features strongly suggest a WHO Grade 4 glioma (glioblastoma). While Grade 3 astrocytomas can also be infiltrative and enhancing, the combination of midline crossing, ependymal invasion, and significant mass effect points towards Grade 4. Grade 2 gliomas are typically less aggressive and lack these extensive infiltrative features.",
+    "supporting_features": [
+      "CET Crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Effaced Ventricle",
+      "Asymmetrical Ventricles",
+      "Eloquent Brain Involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "Based on the provided metadata, the most likely diagnosis is a WHO Grade 4 IDH-wildtype diffuse glioma, consistent with glioblastoma given the patient's age and aggressive imaging features including midline crossing, deep white matter invasion, and ependymal involvement."
+}

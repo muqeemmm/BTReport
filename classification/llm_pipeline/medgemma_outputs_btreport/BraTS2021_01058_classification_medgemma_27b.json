@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_01058",
+  "idh": {
+    "reasoning": "The patient is 68 years old. Older age (>60) is associated with IDH-wildtype gliomas. The tumor is large (Total tumor volume 104.384 mL), multifocal, and shows significant mass effect (midline shift present, effaced right ventricle, asymmetrical ventricles). These features are more typical of IDH-wildtype tumors. While IDH-mutant tumors can occur in older adults, the constellation of features points towards wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not provide any direct information regarding 1p/19q co-deletion status. Features like age and IDH status can be associated with co-deletion status (co-deletion is typically found in younger patients with IDH-mutant gliomas), but the predicted IDH status here is wildtype, making co-deletion highly unlikely. However, without specific molecular data or imaging features strongly suggestive of co-deletion (which are not available here), a definitive prediction cannot be made based solely on the provided MRI metadata.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The patient is 68 years old with a large (104.384 mL), multifocal tumor demonstrating significant mass effect (midline shift, effaced ventricle, asymmetrical ventricles). The tumor shows cortical involvement, deep white matter invasion, and ependymal invasion. The predicted IDH status is wildtype. Based on WHO CNS5 criteria, an IDH-wildtype diffuse glioma with these aggressive features (large size, multifocal nature, significant mass effect, deep/ependymal invasion) would be classified as Grade 4 (glioblastoma). Even if the IDH status were mutant, the combination of deep WM invasion and ependymal invasion would place it at Grade 3.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "diffuse astrocytoma",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult with a large, multifocal glioma exhibiting significant mass effect and invasive features. The predicted IDH-wildtype status aligns with the patient's age and aggressive tumor characteristics. The WHO grade of IV reflects the combination of IDH-wildtype status and aggressive features."
+}

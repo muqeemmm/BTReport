@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_00195",
+  "idh": {
+    "reasoning": "The patient is 56 years old. Age over 50 is associated with IDH-wildtype gliomas, but not definitively. The tumor is solitary and located near the midline, involving the thalamus and caudate. There is significant edema (93.14% of total volume) and deep white matter invasion. The enhancing component is relatively small (6.2% of total volume) and has a thick margin (>3mm). The tumor core sphericity is high (0.83), suggesting a more compact core, which can be seen in both IDH-mutant and wildtype tumors. The FLAIR mismatch score is low (0.4), which might slightly favor IDH-mutant, but this feature alone is not strongly indicative. Given the age > 50, large edema proportion, deep WM invasion, and thick enhancing margin, IDH-wildtype is more likely than IDH-mutant, although the evidence isn't overwhelmingly strong.",
+    "supporting_features": [
+      "age_years",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score",
+      "tumor_core_sphericity"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 56 years old, which makes IDH-wildtype status more likely. IDH-wildtype gliomas are typically associated with 1p/19q co-deletion negativity. While age alone isn't definitive for co-deletion status, the higher likelihood of IDH-wildtype strongly suggests the absence of 1p/19q co-deletion. No other features in the metadata directly inform co-deletion status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (56) and tumor characteristics suggest an IDH-wildtype glioma (predicted above). IDH-wildtype diffuse gliomas are classified as WHO Grade 4 according to CNS5 criteria. Features supporting this include the patient's age > 50, significant edema (93.14%), deep white matter invasion, and thick enhancing margin (>3mm). Although the tumor is solitary and lacks ependymal invasion or crossing the midline with enhancement (CET), these features do not preclude a Grade 4 diagnosis in the context of likely IDH-wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

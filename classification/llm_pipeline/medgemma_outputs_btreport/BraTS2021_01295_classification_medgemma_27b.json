@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_01295",
+  "idh": {
+    "reasoning": "The patient is 63 years old. Older age (>55) is associated with IDH-wildtype gliomas, while younger age is associated with IDH-mutant gliomas. The MRI metadata does not provide any features strongly suggestive of IDH-mutant status (e.g., small size, well-defined margins, absence of necrosis or edema). The tumor size (3.9x4.3x3.8 cm) and volume (38.239 mL) are relatively large, which is more typical of IDH-wildtype tumors. The presence of necrosis (Proportion Necrosis: 24.32) and edema (Proportion of Oedema: 35.79) also leans towards IDH-wildtype status, although these features can be seen in high-grade IDH-mutant tumors as well. Given the patient's age and the tumor characteristics (size, necrosis, edema), IDH-wildtype is the more likely status.",
+    "supporting_features": [
+      "age_years",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided MRI metadata does not contain any information regarding 1p/19q co-deletion status. This status is typically determined by molecular testing, not standard MRI sequences like T1w, T2w, T2-FLAIR, or T1-Gd. Therefore, a prediction cannot be reliably made based solely on the given data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (63 years) and the presence of cortical involvement suggest a higher grade glioma. The tumor is large (Total tumor volume: 38.239 mL), enhancing (Proportion Enhancing: 39.89), and has necrosis (Proportion Necrosis: 24.32) and edema (Proportion of Oedema: 35.79). These features are characteristic of high-grade gliomas (Grade 3 or 4). The absence of deep white matter invasion or ependymal invasion argues against Grade 4 astrocytoma based on WHO CNS5 criteria alone, but the combination of age, size, enhancement, necrosis, and edema strongly points towards at least Grade 3 astrocytoma or Grade 4 glioblastoma if IDH-wildtype (which was predicted). Given the significant necrosis and enhancement in an older patient, Grade 4 is highly probable if IDH-wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Total tumor volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-mutant",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is a young adult with a solitary lesion in the parietal lobe showing cortical involvement but no deep white matter invasion or ependymal invasion. The lesion has marked enhancement and some necrosis/edema but lacks significant mass effect or midline shift."
+}

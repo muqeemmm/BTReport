@@ -1,0 +1,44 @@
+{
+  "subject_id": "BraTS2021_01491",
+  "idh": {
+    "reasoning": "The patient is 62 years old. Older age (>55) is associated with IDH-wildtype gliomas, while younger age (<40) is associated with IDH-mutant gliomas. The tumor is solitary, located in the frontal lobe cortex, and has a large size (4.4x2.9x3.9 cm). While solitary tumors can be either IDH-mutant or wildtype, larger size and older age lean towards IDH-wildtype. The absence of enhancement and deep white matter invasion are less specific for IDH status but are more common in lower-grade tumors, which are often IDH-mutant. However, the high proportion of necrosis (88.1%) and the patient's age strongly suggest an IDH-wildtype status, consistent with glioblastoma or other high-grade IDH-wildtype astrocytomas.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q co-deletion is typically found in secondary glioblastomas, which arise from lower-grade diffuse astrocytomas (IDH-mutant). Given the prediction of IDH-wildtype status based on age and necrosis, 1p/19q co-deletion is highly unlikely. While MRI features alone are not definitive for co-deletion status, the strong suspicion for an IDH-wildtype tumor makes co-deletion improbable.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (62) and the high proportion of necrosis (88.1%) strongly suggest a high-grade glioma (WHO Grade 4). The large tumor size (4.4x2.9x3.9 cm) also supports a higher grade. Although there is no enhancement reported ('Enhancement Quality': 'None'), which might suggest a lower grade, the extensive necrosis in an older adult points towards Grade 4 disease, likely an IDH-wildtype glioblastoma or similar high-grade astrocytoma.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Lesion Sizes APxTVxCC (cm)",
+      "idh"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

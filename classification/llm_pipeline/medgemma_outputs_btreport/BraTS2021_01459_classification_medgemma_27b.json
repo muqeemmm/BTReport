@@ -1,0 +1,40 @@
+{
+  "subject_id": "BraTS2021_01459",
+  "idh": {
+    "reasoning": "The patient is 76 years old. Older age (>65-70) is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it significantly increases the likelihood of IDH-wildtype status. No other features in the metadata strongly suggest IDH-mutant status (e.g., younger age, specific location patterns, or imaging features typically associated with lower-grade gliomas). The tumor size (21.9 mL) and enhancement pattern are non-specific regarding IDH status. Given the strong age association, IDH-wildtype is the more probable status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata lacks features typically associated with 1p/19q co-deletion, such as younger age, lower WHO grade (oligodendroglioma), or specific imaging characteristics. The patient's age (76) makes 1p/19q co-deletion less likely, as it is predominantly found in younger patients and often associated with lower-grade gliomas (WHO grade 2 or 3). The tumor characteristics described (size, enhancement, location) do not provide specific evidence for or against co-deletion. Therefore, based on the available information and the patient's age, non-codeletion is the more likely scenario.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (76) strongly suggests an IDH-wildtype glioma, which typically presents as WHO grade 4 (glioblastoma). The tumor volume (21.9 mL) is substantial. The presence of cortical involvement and marked enhancement are common in high-grade gliomas. While deep white matter invasion and ependymal invasion are absent, these are not required for a grade 4 diagnosis in the context of an IDH-wildtype tumor in an adult. The 'Thickness of enhancing margin' (>3mm) can be seen in both grade 3 and 4 tumors but doesn't exclude grade 4. Given the advanced age and tumor characteristics consistent with aggressive behavior (marked enhancement, cortical involvement), a WHO grade 4 diagnosis is most probable.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH wildtype diffuse astrocytoma, WHO CNS5 grade IV",
+  "consistency_check_passed": true,
+  "overall_comment": "Patient is elderly with a large enhancing lesion involving cortex and multiple lobes consistent with high grade glioma likely glioblastoma given age."
+}

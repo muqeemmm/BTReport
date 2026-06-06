@@ -1,0 +1,41 @@
+{
+  "subject_id": "BraTS2021_00280",
+  "idh": {
+    "reasoning": "The patient is 62 years old. Older age (>55) is associated with IDH-wildtype gliomas. The tumor is solitary, located in the temporal lobe, and involves the cortex. While these features are not specific, they are more commonly seen in IDH-wildtype tumors. The tumor has marked enhancement and a relatively large size (3.2x2.9x3.5 cm). The proportion of edema (61.08%) is high, which can be seen in both IDH-mutant and wildtype tumors but is often more pronounced in wildtype. The lack of DWI/ADC or MRS 2HG data prevents definitive assessment based on those sequences. Given the age and lack of features strongly suggesting IDH-mutant status (e.g., younger age, specific location like thalamus/brainstem, low grade), IDH-wildtype is the more likely status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 62 years old, which makes IDH-wildtype status more likely, and IDH-wildtype gliomas are typically non-codeleted for 1p/19q. The tumor morphology (marked enhancement, large size) does not strongly suggest a codeleted status, which is characteristic of oligodendrogliomas (often IDH-mutant and 1p/19q codeleted). Without molecular testing confirmation, predicting codeletion based solely on MRI metadata in an older patient with a likely IDH-wildtype tumor is highly improbable.",
+    "supporting_features": [
+      "age_years",
+      "id"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (62) and the tumor characteristics suggest a higher grade glioma. The tumor exhibits marked enhancement ('Enhancement Quality': 'Marked'), cortical involvement ('Cortical involvement': 'Present'), and a relatively large size ('Lesion Sizes APxTVxCC (cm)': [3.2, 2.9, 3.5]). While deep white matter invasion ('Deep WM invasion': 'Absent') and ependymal invasion ('Ependymal (ventricular) Invasion': 'Absent') are absent, the marked enhancement and cortical involvement point towards at least Grade 3 or 4. Given the age and marked enhancement without clear features of lower grade (like minimal enhancement or cystic components), Grade 4 (glioblastoma) is a strong possibility, especially if IDH-wildtype as predicted above. Grade 3 (anaplastic astrocytoma/oligodendroglioma) is less likely given the age and marked enhancement pattern typical of GBMs in older adults.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Lesion Sizes APxTVxCC (cm)",
+      "id"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "IDH-wildtype diffuse astrocytoma, WHO CNS grade unknown",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's age suggests a higher likelihood of an IDH-wildtype glioma. The tumor characteristics are consistent with a high-grade glioma but lack specific features to definitively assign a WHO grade without further information."
+}

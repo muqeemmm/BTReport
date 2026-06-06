@@ -1,0 +1,39 @@
+{
+  "subject_id": "BraTS2021_00187",
+  "idh": {
+    "reasoning": "The patient is 82 years old. Advanced age (>65) is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it significantly increases the likelihood of IDH-wildtype status. No other features in the provided metadata strongly suggest IDH-mutant status (e.g., younger age, specific imaging patterns often seen in IDH-mutant tumors like focal lesions or less extensive edema). The tumor is multifocal and involves deep structures including ventricles and basal ganglia, which can be seen in both IDH-mutant and wildtype, but the extensive edema and midline crossing are more typical of higher-grade, often IDH-wildtype tumors. Given the strong age association and lack of contradictory features, IDH-wildtype is the more probable status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information directly related to 1p/19q co-deletion status (e.g., specific imaging features strongly associated with codeletion, or molecular data). The tumor characteristics (multifocal, deep invasion, significant edema, midline crossing) are compatible with both codeleted (typically oligodendroglioma grade II/III) and non-codeleted gliomas (including astrocytomas and glioblastomas). Without specific indicators, predicting co-deletion status based solely on these structural MRI features is unreliable. Therefore, I will predict non-codeleted as the default state in the absence of evidence for co-deletion.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features indicative of high grade. It is multifocal, involves deep structures (basal ganglia, ventricles), shows ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), deep white matter invasion ('Deep WM invasion': 'Present'), and significant edema ('Proportion of Oedema': 77.84) that crosses the midline ('Edema crosses midline': 'True'). The enhancement quality is marked ('Enhancement Quality': 'Marked') with a thick enhancing margin (>3mm), suggesting aggressive behavior. The large size ('Lesion Sizes APxTVxCC (cm)': [4.2, 5.2, 5.0]) and total volume (171 mL) also point towards a higher grade. While some features like cortical involvement could be seen in lower grades, the combination of deep invasion, ependymal spread, significant edema with midline shift ('midline_shift_present': 'Yes'), and marked enhancement strongly favors a WHO Grade 4 diagnosis (Glioblastoma). Grade 3 (Anaplastic Astrocytoma/Oligodendroglioma) is less likely given the ependymal invasion and extensive edema/midline shift typically seen in Grade 4. Grade 2 is highly unlikely given these aggressive features.",
+    "supporting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Edema crosses midline",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "Proportion of Oedema",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Diffuse astrocytic tumor, IDH-wildtype, WHO grade\u00a04",
+  "consistency_check_passed": true,
+  "overall_comment": "The\u00a0tumor\u00a0is\u00a0multifocal\u00a0and\u00a0involves\u00a0deep\u00a0structures\u00a0including\u00a0ventricles\u00a0and\u00a0basal\u00a0ganglia."
+}

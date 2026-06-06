@@ -1,0 +1,47 @@
+{
+  "subject_id": "BraTS2021_01063",
+  "idh": {
+    "reasoning": "The patient is 55 years old. Age > 50 is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in older adults. The tumor is solitary, located in the temporal, cortex, and occipital lobes, and involves deep white matter and ependymal invasion. These features are not strongly indicative of either IDH-mutant or IDH-wildtype status based solely on morphology and location. The enhancement quality is mild, and the proportion enhancing is relatively low (10.55%), which might slightly favor IDH-mutant, but this is not a strong predictor. Given the age and lack of definitive morphological features pointing strongly towards either subtype, predicting IDH status based only on this metadata is challenging. However, the presence of deep white matter invasion and ependymal invasion are more commonly seen in higher-grade gliomas which can be either IDH-mutant or wildtype. Without molecular markers like 2HG or specific imaging sequences (DWI/perfusion), a definitive prediction is difficult. I will predict mutant based on the relatively low enhancement proportion and lack of features strongly suggesting wildtype.",
+    "supporting_features": [
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 55 years old. 1p/19q co-deletion is almost exclusively found in IDH-mutant astrocytomas, particularly those classified as WHO grade 2 or 3 (oligodendrogliomas or astrocytomas, IDH-mutant, 1p/19q-codeleted). Given the prediction of IDH-mutant status above (albeit with low confidence), there is a possibility of co-deletion. However, the tumor involves deep white matter and ependymal invasion, which are features often associated with astrocytomas rather than oligodendrogliomas where co-deletion is more common. The tumor location (temporal, cortex, occipital) does not strongly favor or disfavor co-deletion. Without knowing the specific histology (astrocytoma vs oligodendroglioma) or definitive molecular testing results for IDH mutation first, predicting co-deletion status remains speculative. Based on the weak evidence for IDH mutation and lack of specific features favoring oligodendroglioma morphology or location, I predict non-codeleted.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "idh"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The patient is 55 years old with a solitary tumor involving temporal, cortex, and occipital lobes. Key features include cortical involvement ('Present'), deep white matter invasion ('Present'), ependymal invasion ('Present'), effaced right ventricle ('Right'), midline shift ('Yes'), and eloquent brain involvement ('Vision'). The tumor volume is substantial (189.893 mL). The enhancement quality is 'Mild' with a low proportion enhancing (10.55%). The presence of deep white matter invasion and ependymal invasion points towards a higher grade glioma (Grade 3 or 4). Cortical involvement is common in diffuse gliomas but doesn't strongly differentiate grade within this context. Midline shift suggests mass effect consistent with a larger tumor volume or infiltrative growth pattern often seen in higher grades. Eloquent brain involvement indicates potential functional impact but doesn't directly determine grade based on WHO criteria alone using these metadata fields. Given the combination of deep WM invasion and ependymal invasion without clear signs of necrosis (Proportion Necrosis: 2.3%) or significant enhancement (>3mm margin but only 10.55% proportion), this could represent either a Grade 3 astrocytoma (IDH-mutant) or potentially a Grade 4 astrocytoma if IDH wildtype (though less likely given the mild enhancement). However, ependymal invasion specifically pushes towards at least Grade 3 according to WHO CNS5 criteria for astrocytomas.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "Effaced Ventricle"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

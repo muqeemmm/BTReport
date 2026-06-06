@@ -1,0 +1,51 @@
+{
+  "subject_id": "BraTS2021_00033",
+  "idh": {
+    "reasoning": "The patient is 29 years old, which is young for a typical IDH-wildtype glioma. However, the tumor is solitary, has a relatively well-defined enhancing component ('Solid' thickness of enhancing margin), and involves eloquent brain regions (speech motor, vision). The tumor volume is substantial (163.5 mL) with significant edema (97.66% proportion). While age favors IDH-mutant, the other features are not strongly indicative of either type. Given the lack of definitive features pointing towards IDH-wildtype (like older age, multifocality, or necrosis) and the presence of some features more common in IDH-mutant tumors (younger age), I lean towards IDH-mutant. However, the evidence is weak.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor is solitary and located near the midline but does not cross it ('CET Crosses midline': 'False', 'Edema crosses midline': 'False'). It involves deep white matter and shows ependymal invasion. The patient is young (29 years old). These features are more commonly associated with IDH-mutant gliomas, which are often codeleted. While 1p/19q co-deletion is strongly associated with oligodendrogliomas (a subtype of IDH-mutant glioma), it can also occur in astrocytomas. The lack of strong features pointing towards IDH-wildtype status increases the likelihood of an IDH-mutant tumor, and thus potentially codeletion. However, without definitive molecular markers or specific imaging features strongly suggestive of oligodendroglioma (like calcification, which cannot be assessed here), predicting co-deletion remains uncertain.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is young (29 years old). The tumor is solitary and involves deep white matter structures ('Deep WM invasion': 'Present') and ependymal surfaces ('Ependymal (ventricular) Invasion': 'Present'). It shows cortical involvement ('Cortical involvement': 'Present') and significant edema ('Proportion of Oedema': 97.66). The enhancement quality is mild ('Enhancement Quality': 'Mild'), and the enhancing margin is solid ('Thickness of enhancing margin': 'Solid'). The tumor involves eloquent brain regions ('Eloquent Brain Involvement': 'Speech motor and Vision'). These features suggest an infiltrative process. Given the deep white matter invasion, ependymal involvement, cortical involvement, and significant edema in a young patient, this points towards a higher grade glioma. While mild enhancement might suggest lower grade, the overall picture including deep invasion and eloquent region involvement favors Grade 3 or 4. Without definitive molecular markers like IDH status or 1p/19q status, distinguishing between Grade 3 (IDH-mutant astrocytoma) and Grade 4 (IDH-wildtype glioblastoma or IDH-mutant astrocytoma with specific features) based solely on these MRI features is difficult. However, the combination of deep invasion, ependymal spread, cortical involvement and significant edema in a young adult often correlates with Grade 3 or 4.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Proportion of Oedema",
+      "Eloquent Brain Involvement",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "Diffuse Astrocytoma, IDH-mutant",
+  "consistency_check_passed": true,
+  "overall_comment": "The model's predictions align with the WHO CNS5 classification criteria based on the provided MRI metadata."
+}
