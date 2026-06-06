@@ -1,0 +1,35 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.8) is highly suggestive of an IDH-mutant glioma. The tumor's characteristics, such as its location and imaging features, are consistent with this classification. There are no strong indicators in the provided metadata that would suggest IDH wildtype status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH-mutant astrocytomas, which are usually non-codeleted. While not definitive, the absence of features strongly indicative of 1p/19q co-deletion (such as specific imaging characteristics or molecular markers) in the context of an IDH-mutant tumor leans towards non-codeleted status. The confidence is not maximal due to the indirect inference.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS_WHO_grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 65.04%) and has a large size (Total tumor volume: 109.834 mL), with mild enhancement and ependymal invasion. These features are more characteristic of a higher-grade glioma. The presence of IDH mutation (inferred from T2-FLAIR mismatch) typically associates with lower grades (2 or 3) in the WHO CNS5 classification, but the high necrosis proportion and large tumor volume suggest a more aggressive tumor, likely grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01490"
+}

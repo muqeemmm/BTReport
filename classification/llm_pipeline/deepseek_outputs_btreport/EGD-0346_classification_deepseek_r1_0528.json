@@ -1,0 +1,43 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 30 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor involves cortical regions and insula, which are common in IDH-mutant gliomas. However, the age is not definitive.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves cortical regions and insula, which are typical for astrocytomas rather than oligodendrogliomas. Oligodendrogliomas often have frontal lobe predominance but are less likely to involve insula extensively. The multifocal nature is more common in astrocytomas. However, frontal lobe involvement is present.",
+    "supporting_features": [
+      "Tumor Location",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The grade is predicted as WHO grade 4 due to necrosis and enhancement, but confidence is moderate.",
+  "subject_id": "EGD-0346",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (27.87%) and enhancement (mild, with proportion enhancing 0.91), which are features of high-grade glioma. The presence of necrosis is a hallmark of glioblastoma (WHO grade 4). However, the proportion necrosis is not extremely high, and enhancement is mild, which might suggest grade 3, but necrosis is a strong indicator for grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  }
+}

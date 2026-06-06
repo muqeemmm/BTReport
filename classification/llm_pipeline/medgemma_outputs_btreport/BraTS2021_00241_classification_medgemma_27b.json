@@ -1,0 +1,42 @@
+{
+  "subject_id": "BraTS2021_00241",
+  "idh": {
+    "reasoning": "The patient is 64 years old. Older age (>55) is associated with IDH-wildtype gliomas. The tumor is multifocal and involves the cortex and deep white matter (implied by temporal, occipital, parietal involvement). While cortical involvement is common in both IDH-mutant and wildtype, the combination of older age, multifocal presentation, and significant tumor volume (43.568 mL) leans towards IDH-wildtype. There are no features strongly suggesting IDH-mutant status (e.g., younger age, focal lesion, specific location like thalamus). The lack of information on DWI/ADC or MRS prevents definitive assessment, but based on age and multifocality, IDH-wildtype is more likely.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Tumor Location",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 64 years old. 1p/19q co-deletion is almost exclusively found in IDH-mutant astrocytomas, particularly glioblastoma (WHO grade 4). Given the higher likelihood of IDH-wildtype status based on age and multifocality, the probability of 1p/19q co-deletion is very low. There are no specific features in the metadata that suggest co-deletion.",
+    "supporting_features": [
+      "age_years",
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient is 64 years old with a multifocal glioma involving the cortex and deep white matter structures (temporal, occipital, parietal lobes). The total tumor volume is substantial (43.568 mL). While there is no deep white matter invasion explicitly stated as 'present', the involvement of temporal, occipital and parietal lobes suggests deep structures are involved. The enhancement quality is mild with a thick margin (>3mm), and the proportion enhancing is relatively low (14.24%). The lack of deep WM invasion and ependymal invasion might argue against Grade 4, but the older age, multifocal nature, large size, and cortical involvement are concerning features often seen in higher grades. Given the age and multifocality without clear signs of lower grade (like younger age or focal lesion), Grade 3 or 4 are possibilities. However, the absence of deep WM invasion and ependymal invasion makes Grade 4 less likely than Grade 3 in an IDH-wildtype context (which is the most likely scenario based on age). Therefore, Grade 3 seems the most probable classification.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Tumor Location",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-mutant",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's age (64) and multifocal presentation favor an IDH-wildtype glioma. However, without further molecular data or imaging sequences like DWI/ADC or perfusion to assess aggressiveness markers typically associated with higher grades in IDH-wildtype tumors (like necrosis extent), a definitive grade assignment remains challenging based solely on these structural MRI features. The absence of deep WM invasion and ependymal invasion argues against Grade IV but doesn't exclude Grade III in an IDH-wildtype context."
+}

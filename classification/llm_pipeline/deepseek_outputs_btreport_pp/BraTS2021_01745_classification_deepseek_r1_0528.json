@@ -1,0 +1,51 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 75 years old, which is advanced age favoring IDH wildtype gliomas. The tumor location in frontal lobe and cortex involvement is non-specific. Enhancement quality is mild, which is more common in wildtype gliomas. No T2-FLAIR mismatch is present (T2-FLAIR Mismatch Present=0.0), which strongly argues against IDH mutant astrocytoma. The proportion of necrosis is low (1.42%), which is atypical for GBM but possible in wildtype tumors.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (Speech motor and Motor), which is more common in astrocytomas (non-codeleted) than oligodendrogliomas. The tumor crosses midline and has midline epicenter, which is rare in oligodendrogliomas. Enhancement is mild, which can occur in both but oligodendrogliomas often have less enhancement. However, frontal lobe location is common in oligodendrogliomas.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Side of Tumor Epicenter",
+      "CET Crosses midline",
+      "Enhancement Quality",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely IDH-wildtype glioblastoma. Confidence in IDH status is high due to age and absence of T2-FLAIR mismatch. 1p/19q status prediction is non-codeleted with moderate confidence due to midline involvement and eloquent area invasion. WHO grade is predicted as 4 due to necrosis presence and enhancement.",
+  "subject_id": "BraTS2021_01745",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The presence of necrosis (Proportion Necrosis=1.42%) indicates WHO grade 4. Enhancement is present (Proportion Enhancing=12.33%) and the tumor shows deep white matter invasion. The patient's age (75) also supports high-grade glioma. Low proportion of necrosis is atypical for GBM but still compatible.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Deep WM invasion",
+      "age_years"
+    ]
+  }
+}

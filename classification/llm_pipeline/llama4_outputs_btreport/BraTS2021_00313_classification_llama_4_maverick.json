@@ -1,0 +1,45 @@
+{
+  "id": "patient_0824",
+  "predictions": [
+    {
+      "type": "IDH Mutation Status",
+      "reasoning": "The patient's age (71 years) is more typical for IDH wildtype gliomas, which are more common in older adults. The tumor's imaging characteristics, such as mild enhancement and absence of deep white matter invasion or ependymal invasion, do not strongly suggest IDH mutation. IDH mutant gliomas are more commonly associated with younger age and different imaging features. Given the age and the lack of specific indicators for IDH mutation, the evidence leans towards IDH wildtype.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Enhancement Quality",
+        "Deep WM invasion",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q Co-deletion Status",
+      "reasoning": "IDH mutant gliomas are more likely to have 1p/19q co-deletion. Given the prediction of IDH wildtype status, the likelihood of 1p/19q co-deletion is lower. The imaging features do not directly indicate 1p/19q co-deletion status, but the absence of specific features associated with oligodendrogliomas (more likely to be 1p/19q co-deleted) such as calcifications (not assessed here) and the overall clinical context lean towards non-codeleted status.",
+      "supporting_features": [
+        "age_years",
+        "IDH Mutation Status prediction"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.75
+    },
+    {
+      "type": "CNS WHO Grade",
+      "reasoning": "The tumor shows significant edema (ED Volume = 28.303 mL), necrosis (Proportion Necrosis = 11.41%), and mild enhancement with a thickness of the enhancing margin >3mm. These features are indicative of a high-grade glioma. The patient's age and the tumor's imaging characteristics, such as the presence of necrosis and significant edema, are more consistent with a higher grade. The total tumor volume and the presence of cortical involvement also support a more aggressive tumor. Given these features, the tumor is likely to be Grade 4.",
+      "supporting_features": [
+        "age_years",
+        "ED Volume (mL)",
+        "Proportion Necrosis",
+        "Thickness of enhancing margin",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_00313"
+}

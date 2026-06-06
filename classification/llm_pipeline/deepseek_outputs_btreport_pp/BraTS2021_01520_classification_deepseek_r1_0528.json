@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (27 years old), which strongly favors IDH-mutant glioma. The tumor is located in the frontal lobe cortex, which is common in IDH-mutant tumors. T2-FLAIR mismatch is present with a high score (0.875), which is highly specific for IDH-mutant astrocytoma. Enhancement is mild and proportion enhancing is low (32%), consistent with IDH-mutant tumors. However, the proportion necrosis is high (65.57%), which is more typical of IDH-wildtype glioblastoma, but the young age and T2-FLAIR mismatch outweigh this.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is common in both oligodendroglioma and astrocytoma. However, the presence of T2-FLAIR mismatch strongly suggests astrocytoma, which is non-codeleted. Oligodendrogliomas typically do not show T2-FLAIR mismatch. The young age also favors astrocytoma over oligodendroglioma, which tends to present slightly later. No features strongly suggest oligodendroglioma, such as calcifications (not assessed) or specific enhancement patterns.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "age_years"
+    ]
+  },
+  "overall_comment": "The tumor is an IDH-mutant astrocytoma, likely grade 4 due to high necrosis proportion, but grade cannot be definitively determined without histology.",
+  "subject_id": "BraTS2021_01520",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "reasoning": "The proportion necrosis is high (65.57%), which is characteristic of glioblastoma (grade 4). Enhancement is present but mild, and the tumor volume is moderate (34.221 mL). However, the patient is young (27 years), and grade 4 gliomas are less common in this age group. The T2-FLAIR mismatch suggests lower grade, but necrosis is a strong indicator of grade 4. Eloquent brain involvement (speech motor and motor) does not directly indicate grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "patient_1116",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient is 34 years old, which is relatively young for a glioma patient. The tumor is located in the frontal lobe and involves the cortex, with significant edema and mass effect (midline shift present). The enhancement quality is marked, and there's ependymal invasion. While these features can be seen in both IDH mutant and wildtype gliomas, the age and location are more suggestive of an IDH mutant glioma. However, the presence of marked enhancement and significant mass effect could also be seen in IDH wildtype gliomas. Given the age and location, IDH mutant is considered more likely.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Cortical involvement",
+        "Ependymal (ventricular) Invasion",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality",
+        "midline_shift_present",
+        "n_slices_with_shift"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The tumor is located in the frontal lobe, involves the cortex, and has marked enhancement. These features are more commonly associated with 1p/19q codeleted gliomas. The presence of cortical involvement and frontal lobe location are particularly suggestive. However, the absence of specific features like calcifications (not available in the metadata) makes the prediction less certain. Nonetheless, based on the available information, 1p/19q codeletion is considered likely.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.65
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor shows marked enhancement, significant necrosis (Proportion Necrosis: 18.42%), and a large size (Total tumor volume: 129.587 mL). These features are typically associated with higher-grade gliomas. The presence of ependymal invasion and significant mass effect (midline shift) also supports a higher grade. While the age of the patient and some features like cortical involvement could suggest a lower grade, the overall aggressive features point towards a higher grade. Given the significant necrosis and marked enhancement, a grade of 4 is considered most likely.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "Ependymal (ventricular) Invasion",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [
+        "age_years"
+      ],
+      "prediction": 4,
+      "confidence": 0.8
+    }
+  ],
+  "subject_id": "BraTS2021_01441"
+}

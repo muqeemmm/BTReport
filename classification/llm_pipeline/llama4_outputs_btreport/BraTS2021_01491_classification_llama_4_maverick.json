@@ -1,0 +1,47 @@
+{
+  "id": "patient_0201",
+  "predictions": [
+    {
+      "type": "IDH Mutation Status",
+      "reasoning": "The patient's age (62 years) and the absence of contrast enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) are indicative of a higher likelihood of IDH wildtype status, as IDH mutant gliomas are more commonly associated with younger age and sometimes show less aggressive features. The presence of necrosis ('Proportion Necrosis': 88.1) also aligns with a more aggressive tumor type, typically seen in IDH wildtype glioblastomas. While the absence of ependymal invasion and deep white matter invasion could be seen in either type, the overall profile leans towards IDH wildtype due to the age and necrotic proportion.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Cortical involvement"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q Co-deletion Status",
+      "reasoning": "The absence of contrast enhancement and the presence of necrosis are not typical for 1p/19q co-deleted tumors, which are more often associated with oligodendroglial features and sometimes show a more favorable prognosis. IDH mutant gliomas with 1p/19q co-deletion tend to have a better prognosis and are less likely to show high necrotic proportions. Given the high necrotic proportion (88.1%) and the absence of enhancement, it is less likely to be a 1p/19q co-deleted tumor. The prediction leans towards non-codeleted based on these features and the overall clinical profile.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Proportion Enhancing"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.75
+    },
+    {
+      "type": "CNS WHO Grade",
+      "reasoning": "The high proportion of necrosis (88.1%) and the presence of a significant tumor volume (Total tumor volume: 23.84 mL) with a large necrotic component are characteristic features of high-grade gliomas. The absence of contrast enhancement is less typical but can be seen in glioblastomas, particularly if they are necrotic. The age of the patient (62 years) also supports a higher grade. WHO grade 4 is more likely given these aggressive features.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Total tumor volume (mL)"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_01491"
+}

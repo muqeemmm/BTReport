@@ -1,0 +1,53 @@
+{
+  "id": "patient_0057",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (42 years) and the absence of enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) are more typical of IDH-mutant gliomas. The tumor's location in the frontal lobe and involvement of the cortex also align with IDH-mutant characteristics. However, the presence of significant mass effect ('midline_shift_present': 'Yes', 'mean_shift_mm': 2.1032258064516127) and ependymal invasion could be seen in more aggressive tumors, which are often IDH-wildtype. The lack of enhancement and the tumor being solitary and non-multicentric lean towards IDH-mutant. Thus, considering the balance of these features, IDH mutation status is predicted as 'mutant'.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "Tumor Location",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [
+        "midline_shift_present",
+        "mean_shift_mm",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "IDH-mutant gliomas are more likely to have 1p/19q co-deletion. Given the prediction of IDH mutation status as 'mutant', we can infer a higher likelihood of 1p/19q co-deletion. The tumor's location in the frontal lobe and cortical involvement are also characteristic of 1p/19q co-deleted tumors (oligodendrogliomas). The absence of enhancement further supports this, as oligodendrogliomas are often non-enhancing. Thus, 'codeleted' is predicted.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.65
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor shows significant mass effect and ependymal invasion, suggesting a higher grade. However, the lack of enhancement and necrosis, along with the tumor being non-multicentric and solitary, are less typical of the most aggressive (Grade 4) gliomas. IDH-mutant gliomas with 1p/19q co-deletion (predicted here) are often lower grade (Grade 2 or 3). Given the presence of significant edema and mass effect, Grade 3 is more likely than Grade 2. Thus, CNS WHO grade is predicted as 3.",
+      "supporting_features": [
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion",
+        "ED Volume (mL)",
+        "Proportion of Oedema"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "Multifocal or Multicentric"
+      ],
+      "prediction": 3,
+      "confidence": 0.75
+    }
+  ],
+  "subject_id": "UCSF-PDGM-489"
+}

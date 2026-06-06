@@ -1,0 +1,43 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (41 years) and the tumor's characteristics, such as being located in the temporal cortex region, mildly enhancing, and having a significant proportion of necrosis (62.19%), are considered. IDH mutant gliomas are more common in younger adults and often have a better prognosis. The presence of necrosis and enhancement could suggest a higher grade, but IDH mutant tumors can still have these features. However, the lack of specific MRI features directly indicative of IDH mutation status (such as those related to diffusion or perfusion characteristics not available in this dataset) means the prediction relies on demographic and general tumor characteristics. The age and location are somewhat suggestive of an IDH mutant tumor, as these are more common in younger adults and can occur in various locations including the temporal lobe.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "codeletion_status": {
+    "reasoning": "1p/19q co-deletion is more commonly associated with oligodendrogliomas, which often present with calcifications (not assessed here) and have a more favorable prognosis. The tumor's location in the temporal cortex and mild enhancement could be consistent with an oligodendroglioma, but the absence of specific features like calcifications and the lack of direct evidence for 1p/19q status means the prediction is uncertain. IDH mutant tumors with 1p/19q co-deletion tend to have a better prognosis, and while the IDH status was predicted as mutant with some confidence, the co-deletion status is harder to infer directly from the available metadata.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.55
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis = 62.19%) and mild enhancement, along with a significant tumor volume (Total tumor volume = 65.99 mL), suggests a high-grade tumor. The WHO CNS5 classification correlates necrosis and enhancement with higher grades, particularly grade 4 for glioblastomas, which are typically IDH wildtype but can be IDH mutant. Given the predicted IDH mutant status, the presence of necrosis still suggests a high grade, likely grade 3 or 4. The significant necrosis proportion leans more towards a grade 4 classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "subject_id": "EGD-0240"
+}

@@ -1,0 +1,41 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8911170192030917, indicating a high likelihood of T2-FLAIR mismatch. This feature is strongly associated with IDH mutant gliomas. The patient's age (62 years) is not typical for IDH mutant gliomas, which are more common in younger patients, but the imaging evidence strongly supports IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH mutant astrocytomas rather than oligodendrogliomas, which are more likely to have 1p/19q co-deletion. The 'T2-FLAIR Mismatch Present' and 'T2-FLAIR Mismatch Score' support the likelihood of an astrocytoma, suggesting non-codeletion. Additionally, the tumor's multifocal nature and involvement of multiple lobes may suggest a more aggressive astrocytoma. However, the absence of specific features directly indicating 1p/19q status means the prediction relies heavily on the inference from IDH mutation status and tumor characteristics.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor is multifocal, has a significant enhancing component, and shows ependymal invasion, suggesting an aggressive tumor. The presence of necrosis (Proportion Necrosis: 1.84%) and a large edema volume (ED Volume: 138.58 mL) further support a higher grade. The patient's age (62 years) and the tumor's aggressive features are consistent with a higher-grade glioma. Given the IDH mutation status is predicted as mutant, and considering the aggressive features, a grade 3 or 4 is likely. The presence of necrosis and significant edema leans towards a grade 4, but the IDH mutant status typically associates with a slightly better prognosis than IDH wildtype glioblastomas.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "IDH mutation status"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "subject_id": "EGD-0431"
+}

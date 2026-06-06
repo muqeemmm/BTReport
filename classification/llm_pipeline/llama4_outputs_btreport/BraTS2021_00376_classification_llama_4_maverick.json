@@ -1,0 +1,43 @@
+{
+  "id": "patient_0870",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (75 years) is more typical for IDH wildtype gliomas, which are more common in older adults. The tumor's imaging characteristics, such as mild enhancement and absence of deep white matter invasion or ependymal invasion, do not strongly suggest IDH mutation. IDH mutant gliomas are more commonly associated with younger age and different imaging features. Given the age and the characteristics of the tumor, IDH wildtype is more likely.",
+      "supporting_features": [
+        "age_years"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "IDH mutant gliomas are more likely to have 1p/19q codeletion. Given the prediction of IDH wildtype status, the likelihood of 1p/19q codeletion is low. The imaging features do not directly indicate codeletion status, but the absence of features typical for oligodendrogliomas (e.g., calcifications, which are not assessed here) and the age of the patient further reduce the likelihood of codeletion.",
+      "supporting_features": [
+        "age_years"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor shows mild enhancement, has a significant edema volume (31.513 mL), and a relatively large total tumor volume (34.352 mL), indicating aggressive features. The presence of cortical involvement and the absence of deep white matter invasion or ependymal invasion are noted. The age of the patient and the tumor's characteristics are more suggestive of a high-grade glioma. Given these features, a grade 4 glioma is likely, as it aligns with the typical presentation of glioblastoma, which is common in this age group and consistent with IDH wildtype status.",
+      "supporting_features": [
+        "age_years",
+        "ED Volume (mL)",
+        "Total tumor volume (mL)",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Deep WM invasion",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_00376"
+}

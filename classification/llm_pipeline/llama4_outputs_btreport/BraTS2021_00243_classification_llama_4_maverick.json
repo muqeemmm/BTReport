@@ -1,0 +1,55 @@
+{
+  "id": "patient_0770",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (29 years) and the presence of a multifocal lesion with mild enhancement and significant edema suggest a potentially lower-grade glioma. IDH mutant gliomas are more common in younger adults. The absence of necrosis (NCR Volume = 0.0 mL) and the presence of cortical involvement also lean towards an IDH mutant status, as IDH mutant gliomas are more likely to involve the cortex and have a less aggressive appearance on MRI. However, the tumor's multifocal nature and involvement of deep white matter could suggest a more aggressive tumor, which is sometimes associated with IDH wildtype status. Despite this, the overall profile leans more towards an IDH mutant status due to the patient's age and the tumor's characteristics.",
+      "supporting_features": [
+        "age_years",
+        "Cortical involvement",
+        "NCR Volume (mL)",
+        "Multifocal or Multicentric",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Deep WM invasion",
+        "Multifocal or Multicentric"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of cortical involvement and the tumor being multifocal with mild enhancement could be indicative of an oligodendroglial component, which is often associated with 1p/19q co-deletion. However, the tumor's location in the cortex-brainstem region and its multifocality are not typical for oligodendrogliomas. The absence of ependymal invasion and the presence of deep white matter invasion are noted, but these features are not strongly indicative of 1p/19q co-deletion status. Given the uncertainty and the lack of specific MRI features that strongly correlate with 1p/19q co-deletion status, the prediction leans towards non-codeleted due to the tumor's unusual location and multifocality.",
+      "supporting_features": [
+        "Cortical involvement",
+        "Multifocal or Multicentric",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Tumor Location",
+        "Deep WM invasion"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.6
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor's multifocal nature, significant edema, and deep white matter invasion suggest a higher grade. However, the absence of necrosis and the mild enhancement quality are less typical for the highest grade gliomas. The presence of cortical involvement and the lack of ependymal invasion are also noted. Given the mix of features, the tumor is likely to be of a higher grade due to its multifocality and aggressive features like deep white matter invasion. However, the absence of necrosis and the relatively mild enhancement quality temper this, suggesting it may not be the highest grade. Thus, a grade 3 is a reasonable prediction, balancing between the aggressive and less aggressive features.",
+      "supporting_features": [
+        "Multifocal or Multicentric",
+        "Deep WM invasion",
+        "ED Volume (mL)",
+        "NCR Volume (mL)",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "prediction": 3,
+      "confidence": 0.65
+    }
+  ],
+  "subject_id": "BraTS2021_00243"
+}

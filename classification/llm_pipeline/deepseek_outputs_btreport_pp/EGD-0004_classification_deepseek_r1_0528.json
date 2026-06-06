@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 45 years old, which is typical for IDH-mutant gliomas. The tumor is located in the frontal lobe, which is a common site for IDH-mutant tumors. There is cortical involvement and eloquent brain involvement (motor), which are more common in IDH-mutant gliomas. The enhancement is mild, which is more typical of IDH-mutant tumors. However, the proportion of necrosis is high (25.22%), which is more typical of IDH-wildtype gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe, which is a common site for oligodendrogliomas (which are codeleted). However, there is eloquent brain involvement (motor), which is more common in astrocytomas (non-codeleted). The tumor does not cross midline, which is more common in oligodendrogliomas, but this is not a strong indicator. The enhancement is mild, which is more typical of oligodendrogliomas, but the proportion of necrosis is high, which is more typical of astrocytomas.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "The tumor is likely an IDH-mutant astrocytoma with CNS WHO grade 3. The high proportion of necrosis suggests a higher grade, but the mild enhancement and frontal location support IDH-mutant. The eloquent involvement and lack of deep white matter invasion support astrocytoma over oligodendroglioma.",
+  "subject_id": "EGD-0004",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor has a high proportion of necrosis (25.22%), which is indicative of grade 4 glioblastoma. However, the enhancement is mild, which is more typical of grade 3 tumors. The tumor volume is 21.393 mL, which is moderate. The eloquent brain involvement (motor) suggests a higher grade. The transition zone thickness on FLAIR is thin (median 0.75mm), which is more typical of higher grade tumors.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement",
+      "Transition Zone Thickness (FLAIR).median_mm"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The large size of the tumor (Total tumor volume = 201.669 mL, Lesion Sizes APxTVxCC = 6.4 x 6.8 x 9.4 cm), presence of necrosis (Proportion Necrosis = 72.05%), and significant mass effect (midline_shift_present = Yes, n_slices_with_shift = 121, max_shift_mm = -7.0) are indicative of a high-grade glioma. The presence of necrosis and the large size are more commonly associated with IDH wildtype glioblastomas, which are typically more aggressive. While the metadata does not directly assess IDH mutation status, the aggressive features suggest a wildtype status, as IDH mutant tumors tend to have a relatively better prognosis and less aggressive features on average.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of cortical involvement and the tumor's location in the frontal lobe cortex region are noted. However, 1p/19q co-deletion status is typically associated with oligodendrogliomas, which are more likely to have a more favorable prognosis and specific radiological features such as calcifications (not assessed here). The tumor's aggressive features (large size, necrosis, significant mass effect) are not typical for oligodendrogliomas. Without direct evidence or specific features strongly associated with 1p/19q co-deletion (like calcifications), and given the tumor's aggressive nature suggesting a higher grade glioma, it is less likely to be codeleted.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis = 72.05%), a large size (Total tumor volume = 201.669 mL, Lesion Sizes APxTVxCC = 6.4 x 6.8 x 9.4 cm), and considerable mass effect (midline_shift_present = Yes, max_shift_mm = -7.0). These features are characteristic of glioblastoma, a grade 4 tumor. The presence of necrosis is particularly indicative of grade 4, as it is a hallmark of glioblastoma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "midline_shift_present",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01513"
+}

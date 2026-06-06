@@ -1,0 +1,41 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location"
+    ],
+    "prediction": "mutant",
+    "reasoning": "IDH mutant gliomas are more common in younger patients and supratentorial locations. The patient is 38 years old, which is younger than typical IDH wildtype gliomas. However, the tumor is located in the brainstem, which is infratentorial and more commonly associated with IDH wildtype gliomas like diffuse midline glioma. This creates conflicting evidence.",
+    "supporting_features": [
+      "age_years"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "1p/19q codeletion is typically associated with oligodendrogliomas, which are supratentorial tumors. This tumor is located in the brainstem, an infratentorial location where oligodendrogliomas are rare. No features strongly suggest oligodendroglial histology.",
+    "supporting_features": []
+  },
+  "overall_comment": "The tumor location in brainstem strongly suggests a diffuse midline glioma, which are IDH-wildtype by definition. However, the patient age (38) is atypical for DMG which usually occurs in children. This creates uncertainty.",
+  "subject_id": "BraTS2021_01035",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": 4,
+    "reasoning": "Grade 4 gliomas typically show marked enhancement and necrosis. This tumor has 'Marked' enhancement quality and a thick enhancing margin (>3mm). However, the proportion of necrosis is low (2.83%) and the tumor volume is relatively small (3.71 mL), which are atypical for GBM.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ]
+  }
+}

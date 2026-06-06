@@ -1,0 +1,37 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7756236019949116, indicating a strong presence of this feature. T2-FLAIR mismatch is a known imaging biomarker associated with IDH-mutant gliomas. Therefore, the evidence strongly supports the presence of an IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, the presence of IDH mutation and certain imaging features can guide the prediction. IDH-mutant gliomas can be either 1p/19q co-deleted (oligodendrogliomas) or non-co-deleted (astrocytomas). The presence of cortical involvement and a relatively well-defined enhancing margin may suggest an oligodendroglioma, which is often associated with 1p/19q co-deletion. However, these features are not definitive. Given the uncertainty and the lack of specific markers for 1p/19q co-deletion in the provided metadata, the prediction leans towards non-codeleted due to the higher prevalence of astrocytomas among IDH-mutant gliomas.",
+    "supporting_features": [
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The WHO grade can be inferred from the presence of certain aggressive features. The tumor shows ependymal invasion and has a significant enhancing component (Proportion Enhancing = 10.4%), which are features concerning for higher grade. The presence of necrosis (Proportion Necrosis = 0.95%) also supports a higher grade. However, the absence of deep white matter invasion and the relatively low proportion of necrosis argue against the highest grade. Given the presence of enhancement and necrosis, a grade of 3 or 4 is likely. The age of the patient (54 years) and the presence of significant enhancement favor a higher grade. Considering these factors, a grade of 4 is plausible but not certain.",
+    "supporting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "UCSF-PDGM-113"
+}

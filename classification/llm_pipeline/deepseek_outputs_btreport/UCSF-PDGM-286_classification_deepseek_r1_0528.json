@@ -1,0 +1,63 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 39 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor is nonenhancing (Enhancement Quality: None) with no necrosis (Proportion Necrosis: 0.0) and predominantly edema (Proportion of Oedema: 100.0), which is more common in lower-grade gliomas. However, the absence of enhancement and necrosis could also be consistent with IDH-mutant gliomas or lower-grade tumors. The tumor volume is large (71.373 mL), which is more typical of higher-grade tumors, but without enhancement or necrosis, it is ambiguous. The location involves cortex, parietal and frontal lobes, and deep white matter invasion is present, which can occur in both IDH-mutant and wildtype tumors. The age supports IDH-mutant, but the large volume without enhancement or necrosis is atypical. Overall, the evidence for IDH-mutant is stronger due to age and nonenhancing nature, but confidence is low due to conflicting features.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Anatomical Overlap Regions",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex, parietal and frontal lobes, with deep white matter invasion present. It also involves eloquent areas (Speech motor and Motor). These features are more typical of astrocytomas (non-codeleted) rather than oligodendrogliomas (codeleted). Oligodendrogliomas often present with calcifications and are more commonly frontal, but calcifications are not assessed here. The absence of enhancement and necrosis does not strongly differentiate. The location overlapping with putamen might suggest basal ganglia involvement, which is more common in astrocytomas. However, without specific features like calcifications or more typical oligodendroglioma locations, the evidence for non-codeleted is stronger but not definitive.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor is nonenhancing with no necrosis, predominantly edema, large volume (71.373 mL), located in cortex, parietal and frontal lobes, with deep white matter invasion and eloquent area involvement. The patient is 39 years old. Based on the metadata, the tumor is likely an IDH-mutant astrocytoma without 1p/19q codeletion. However, the large volume without enhancement or necrosis is unusual for grade 2, suggesting possible grade 3, but without enhancement or necrosis, grade 2 is more consistent. Confidence is moderate for IDH-mutant and non-codeleted, low for grade.",
+  "subject_id": "UCSF-PDGM-286",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor is nonenhancing (Enhancement Quality: None) with no necrosis (Proportion Necrosis: 0.0) and predominantly edema (Proportion of Oedema: 100.0). These features are typical of WHO grade 2 gliomas. However, the total tumor volume is large (71.373 mL), which is more common in higher-grade tumors. The absence of enhancement and necrosis strongly suggests a lower grade, but the large volume is contradictory. Deep white matter invasion and eloquent area involvement can occur in both grade 2 and 3 tumors. Given the lack of enhancement and necrosis, grade 2 is more likely, but confidence is low due to the large volume.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ]
+  }
+}

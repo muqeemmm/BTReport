@@ -1,0 +1,45 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 28 years old, which is young for glioma. IDH-mutant gliomas are more common in younger patients. The tumor is located in the frontal lobe, which is typical for IDH-mutant gliomas. Enhancement is mild, which is more common in IDH-mutant tumors. However, the age is not extremely young, and there is no specific molecular marker provided.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex (speech motor), which is more common in astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often have frontal lobe location but typically do not involve eloquent areas as frequently. The enhancement is mild, which can be seen in both, but oligodendrogliomas may have more calcifications (not assessed here).",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "The tumor is IDH-mutant astrocytoma, likely WHO grade 2 based on mild enhancement, low ET volume, and absence of necrosis. However, grade cannot be definitively determined without histology.",
+  "subject_id": "EGD-0705",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor has mild enhancement and low ET volume (0.052 mL), suggesting lower grade. Proportion necrosis is 16.05%, which is ambiguous as necrosis is typically associated with grade 4 glioblastoma. However, the necrosis value might be misinterpreted or partial. Absence of deep white matter invasion and ependymal invasion also favors lower grade. Given conflicting evidence on necrosis, confidence is moderate.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

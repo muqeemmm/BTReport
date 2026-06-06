@@ -1,0 +1,45 @@
+{
+  "id": "patient_1225",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (47 years) and the presence of a multifocal tumor with significant edema and mass effect (midline shift, ventricles involved) could suggest a more aggressive tumor type. IDH wildtype gliomas are more common in older patients and tend to be more aggressive. The presence of necrosis (Proportion Necrosis: 4.79) and enhancement (Proportion Enhancing: 4.96) also supports a more aggressive tumor, which is more likely to be IDH wildtype. However, the absence of specific features like high-grade necrosis or significant heterogeneity doesn't strongly point towards IDH mutant status either. Given the age and some aggressive features, IDH wildtype is more likely.",
+      "supporting_features": [
+        "age_years",
+        "Multifocal or Multicentric",
+        "Proportion Necrosis",
+        "Proportion Enhancing"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "IDH mutant gliomas are more likely to have 1p/19q co-deletion. Given the prediction of IDH wildtype status with a reasonable confidence, it's less likely to have 1p/19q co-deletion. The tumor's multifocal nature and aggressive features (e.g., significant edema, ependymal invasion) are more typical of IDH wildtype glioblastomas or astrocytomas, which are less likely to be codeleted. Thus, non-codeleted is more probable.",
+      "supporting_features": [
+        "Multifocal or Multicentric",
+        "Ependymal (ventricular) Invasion",
+        "id"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.75
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 4.79), enhancement (Proportion Enhancing: 4.96), significant edema (Proportion of Oedema: 90.25), and mass effect (midline shift) are indicative of a high-grade glioma. The tumor is multifocal, involves multiple regions including deep structures, and has ependymal invasion, all of which suggest aggressive behavior. These features are characteristic of WHO grade 4 gliomas. The predicted IDH wildtype status further supports this, as IDH wildtype glioblastomas are typically grade 4.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Proportion Enhancing",
+        "Proportion of Oedema",
+        "Multifocal or Multicentric",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "EGD-0193"
+}

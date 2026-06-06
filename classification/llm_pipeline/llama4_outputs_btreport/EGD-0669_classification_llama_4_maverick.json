@@ -1,0 +1,61 @@
+{
+  "id": "patient_1396",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis (NCR Volume = 1.15 mL, Proportion Necrosis = 11.15%) and significant edema (ED Volume = 1.791 mL, Proportion of Oedema = 17.36%) suggests a high-grade glioma. The tumor's location in the ventricles, frontal lobe, and corpus callosum, along with deep white matter invasion, indicates an aggressive tumor. IDH-wildtype glioblastomas are more common in adults and typically present with these aggressive features. The marked enhancement quality and thickness of the enhancing margin (>3mm) also support a more aggressive, IDH-wildtype tumor. While the metadata does not directly assess IDH status, the presence of necrosis and significant enhancement are more typical of IDH-wildtype glioblastomas.",
+      "supporting_features": [
+        "NCR Volume (mL)",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Proportion of Oedema",
+        "Enhancement Quality",
+        "Thickness of enhancing margin",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Multifocal or Multicentric",
+        "Multiple satellites present"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q codeletion status",
+      "reasoning": "The tumor's location and characteristics (e.g., involvement of ventricles, frontal lobe, and corpus callosum, with deep white matter invasion) are not typical for 1p/19q codeleted oligodendrogliomas, which are more commonly associated with frontal lobe involvement without deep nuclear or callosal involvement. The presence of necrosis and marked enhancement quality is less typical for codeleted tumors, which are generally lower grade (WHO Grade 2 or 3). The absence of cortical involvement and ependymal invasion does not strongly support either codeletion status. Given the aggressive features (necrosis, significant edema, large size), it is less likely to be codeleted.",
+      "supporting_features": [
+        "Tumor Location",
+        "Deep WM invasion",
+        "NCR Volume (mL)",
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of necrosis (NCR Volume = 1.15 mL, Proportion Necrosis = 11.15%), marked enhancement quality, and significant edema (ED Volume = 1.791 mL) are characteristic features of high-grade gliomas. The tumor's large size (Total tumor volume = 10.314 mL, Lesion Sizes APxTVxCC = 3.5 x 3.1 x 2.2 cm) and aggressive features such as deep white matter invasion also support a high-grade classification. WHO Grade 4 glioblastomas typically present with necrosis and significant enhancement, aligning with the observed features. While the absence of certain features like ependymal invasion or cortical involvement might be noted, the overall profile is most consistent with a Grade 4 tumor.",
+      "supporting_features": [
+        "NCR Volume (mL)",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Enhancement Quality",
+        "Lesion Sizes APxTVxCC (cm)",
+        "Total tumor volume (mL)",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Ependymal (ventricular) Invasion",
+        "Cortical involvement"
+      ],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0669"
+}

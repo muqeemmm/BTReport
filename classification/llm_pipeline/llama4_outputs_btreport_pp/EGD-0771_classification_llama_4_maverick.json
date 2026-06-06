@@ -1,0 +1,43 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7369362206338415, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in gliomas according to the WHO CNS5 classification. The patient's age (38 years) is also consistent with the demographic profile more commonly associated with IDH mutant gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutant glioma. For IDH mutant gliomas, the presence of 1p/19q co-deletion is typically associated with oligodendrogliomas. However, the metadata does not directly indicate 1p/19q co-deletion status. The 'Cortical involvement' and 'Deep WM invasion' suggest a more diffuse involvement, which could be seen in either oligodendroglioma or astrocytoma. The lack of significant enhancement ('Enhancement Quality': 'Mild', 'Proportion Enhancing': 0.01) is more typical of lower-grade gliomas. Without direct molecular or histological evidence, we must rely on imaging features. The presence of 'T2-FLAIR Mismatch' is more commonly associated with astrocytomas than oligodendrogliomas, suggesting non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows significant mass effect ('n_slices_with_shift': 127, 'mean_shift_mm': 3.0211640211640214, 'midline_shift_present': 'Yes'), indicating a potentially higher grade. However, the 'Enhancement Quality' is 'Mild' and 'Proportion Enhancing' is low (0.01), which are not typical of high-grade gliomas. The 'T2-FLAIR Mismatch' is present, suggesting an IDH mutant astrocytoma, which can be either grade 2 or 3 based on the presence of mitotic activity or other histological features not directly assessable from the provided MRI metadata. The large tumor size ('Total tumor volume (mL)': 335.839) and significant edema ('ED Volume (mL)': 229.152) could suggest a higher grade, but the lack of significant enhancement argues against a grade 4 tumor. Therefore, a grade 3 is plausible given the size and mass effect, but the absence of strong enhancement and necrosis proportion ('Proportion Necrosis': 31.75) being less typical for glioblastoma, suggests a grade 3.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "midline_shift_present",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "subject_id": "EGD-0771"
+}

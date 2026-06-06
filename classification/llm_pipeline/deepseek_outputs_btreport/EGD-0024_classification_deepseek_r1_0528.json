@@ -1,0 +1,42 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 43 years old, which is younger than typical for IDH-wildtype glioblastomas. IDH-mutant gliomas are more common in younger patients. However, no specific molecular markers are available.",
+    "supporting_features": [
+      "age_years"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (speech motor and motor) and has cortical involvement, which is more typical of astrocytomas than oligodendrogliomas. Oligodendrogliomas often present with frontal lobe involvement but are less likely to involve deep eloquent structures. However, frontal lobe predominance is common in both.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The prediction for IDH mutation status is mutant based on age, but confidence is moderate due to lack of direct molecular evidence. For 1p/19q, non-codeleted is predicted due to eloquent involvement, but confidence is low because frontal lobe location is common in both types. Grade 4 is assigned based on necrosis proportion >10% and enhancement.",
+  "subject_id": "EGD-0024",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The proportion of necrosis is 41.85%, which exceeds the 10% threshold for WHO grade 4. Enhancement is present (mild) and the enhancing margin is thick (>3mm), supporting high-grade features. Mild enhancement is less typical for GBM but necrosis is a strong indicator.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin"
+    ]
+  }
+}

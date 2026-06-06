@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.95,
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "reasoning": "The patient is 52 years old, which is within the typical age range for IDH-mutant gliomas. IDH-mutant gliomas often present in younger adults compared to IDH-wildtype gliomas. Additionally, the tumor location involves the temporal lobe, cortex, and insula, which are common sites for IDH-mutant gliomas. The enhancement is mild, which is more characteristic of IDH-mutant tumors. The proportion necrosis is 21.31%, which is moderate and consistent with IDH-mutant gliomas. There is no evidence of ependymal invasion, which is more common in IDH-wildtype gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the temporal lobe, cortex, and insula, which are cortical regions. Oligodendrogliomas (IDH-mutant and 1p/19q codeleted) typically arise in the frontal lobe and are less common in the temporal lobe. The presence of cortical involvement and deep white matter invasion is more suggestive of astrocytoma than oligodendroglioma. The tumor epicenter is midline, which is atypical for oligodendrogliomas. However, the age of 52 is within the range for oligodendrogliomas, and the enhancement is mild, which can be seen in both types.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The absence of ependymal invasion and mild enhancement support this. The midline epicenter and temporal location argue against oligodendroglioma. Confidence in IDH mutation is high due to age and location; confidence in non-codeletion is moderate due to location and epicenter.",
+  "subject_id": "EGD-0633",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor has a proportion necrosis of 21.31%, which is above the typical threshold for grade 2 gliomas. The enhancement is mild, which is more consistent with grade 3 than grade 4. Grade 4 gliomas typically show ring enhancement and higher necrosis. The tumor volume is 131.603 mL, which is large and suggests a higher grade. However, the mild enhancement and absence of significant necrosis argue against grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

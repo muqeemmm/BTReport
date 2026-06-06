@@ -1,0 +1,49 @@
+{
+  "id": "patient_0878",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (76 years) is more typical for IDH wildtype gliomas, which are more common in older adults. The tumor's location in the temporal lobe and involvement of the cortex also aligns with characteristics often seen in IDH wildtype glioblastomas. The presence of necrosis (Proportion Necrosis: 9.62%) and enhancement (Proportion Enhancing: 11.73%) further supports a more aggressive tumor type, typically associated with IDH wildtype status. While the absence of ependymal invasion and deep white matter invasion might be less typical, the overall profile leans towards an IDH wildtype tumor.",
+      "supporting_features": [
+        "age_years",
+        "Region Proportions",
+        "Proportion Necrosis",
+        "Proportion Enhancing",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "IDH mutant gliomas are more likely to have 1p/19q codeletion, but given the prediction of IDH wildtype status with high confidence, the likelihood of 1p/19q codeletion is low. The tumor's characteristics, such as age and aggressive features, are not typical for 1p/19q codeleted tumors, which are more commonly associated with IDH mutant gliomas. Therefore, it is reasonable to infer a non-codeleted status.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Proportion Enhancing"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The presence of necrosis (9.62%) and a significant proportion of enhancement (11.73%) along with the patient's age and the tumor's location and involvement of critical structures suggest a high-grade glioma. The total tumor volume and the presence of cortical involvement further support an aggressive tumor. Given these features, a grade 4 tumor is most likely, as it aligns with the characteristics of glioblastoma, which is common in this age group and typically presents with necrosis and enhancement.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Proportion Enhancing",
+        "Cortical involvement",
+        "Total tumor volume (mL)"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00384"
+}

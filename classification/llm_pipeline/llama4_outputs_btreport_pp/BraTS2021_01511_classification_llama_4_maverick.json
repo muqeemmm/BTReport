@@ -1,0 +1,40 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8675583280092735, indicating a strong presence of this feature. This is a characteristic imaging feature associated with IDH-mutant gliomas. The patient's age (29 years) also aligns with the demographic more commonly associated with IDH-mutant gliomas, which tend to occur in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutation, but it does not directly indicate 1p/19q co-deletion status. However, the absence of enhancement ('Enhancement Quality': 'None') and the presence of a non-enhancing tumor ('Proportion Enhancing': 0.0) are more commonly seen in IDH-mutant astrocytomas. The clinical and radiological profile does not strongly suggest an oligodendroglioma, which is typically associated with 1p/19q co-deletion. Therefore, it is more likely that the tumor is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows significant mass effect ('n_slices_with_shift': 117, 'mean_shift_mm': 2.825806451612903, 'midline_shift_present': 'Yes'), and a large tumor volume ('Total tumor volume (mL)': 180.105). The presence of ependymal invasion ('Ependymal (ventricular) Invasion': 'Present') and deep white matter invasion ('Deep WM invasion': 'Present') are features concerning for a higher grade. The proportion of necrosis ('Proportion Necrosis': 53.6) is also indicative of a high-grade tumor. These features collectively suggest a high-grade glioma, likely WHO grade 4.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "midline_shift_present",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01511"
+}

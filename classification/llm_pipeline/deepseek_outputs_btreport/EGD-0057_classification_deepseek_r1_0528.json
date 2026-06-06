@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The tumor is nonenhancing (Enhancement Quality: None) which is more common in IDH-mutant gliomas. Additionally, the tumor is located in the frontal lobe (Tumor Location: frontal_lobe-cortex region), which is a typical location for IDH-mutant gliomas. However, the absence of enhancement is not exclusive to IDH-mutant tumors.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor shows cortical involvement (Cortical involvement: Present), which is more typical of astrocytomas (non-codeleted) rather than oligodendrogliomas (codeleted). However, the frontal lobe location is common for both, and without molecular testing, confidence is moderate.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on MRI features: solitary nonenhancing frontal lobe tumor with cortical involvement and no deep white matter invasion. Consistent with IDH-mutant astrocytoma. Grade 2 assigned due to absence of necrosis and enhancement.",
+  "subject_id": "EGD-0057",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "Absence of enhancement (Enhancement Quality: None) and necrosis (ET Volume: 0.0) suggests lower grade. Proportion Necrosis is reported as 67.42% but ET Volume is 0.0, indicating inconsistency; relying on ET Volume=0 as necrosis absence. No deep white matter invasion or ependymal involvement also supports grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

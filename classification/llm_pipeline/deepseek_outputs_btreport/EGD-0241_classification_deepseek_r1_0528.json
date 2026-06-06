@@ -1,0 +1,45 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 38 years old, which is younger than the typical age for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor involves eloquent cortex (speech motor) and deep white matter, which is consistent with diffuse gliomas including IDH-mutant types. However, the age is not definitive as IDH-wildtype gliomas can occur in younger patients.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the insula and temporal lobes, which are locations more typical for astrocytomas (non-codeleted) rather than oligodendrogliomas (codeleted). Oligodendrogliomas often present in the frontal lobe, but here the frontal lobe involvement is only partial (47.5% proportion) and there is significant involvement of other regions. The midline epicenter is also less common for oligodendrogliomas.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma with CNS WHO grade 4. Key features include young age, eloquent cortex involvement, deep white matter invasion, and high proportion of necrosis. The absence of 1p/19q codeletion is suggested by insular and temporal involvement. Confidence is moderate due to limited molecular markers and absence of advanced sequences.",
+  "subject_id": "EGD-0241",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows a high proportion of necrosis (75.61%), which is a hallmark of glioblastoma (CNS WHO grade 4). Enhancement is mild, which might argue against grade 4, but the presence of necrosis overrides this. The thick enhancing margin (>3mm) and deep white matter invasion also support high-grade features. The solitary lesion and absence of multifocality do not contradict grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Deep WM invasion"
+    ]
+  }
+}

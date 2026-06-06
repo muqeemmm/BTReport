@@ -1,0 +1,43 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (21 years), which is more common in IDH-mutant gliomas. However, the absence of enhancement (Enhancement Quality: None) is atypical for IDH-mutant gliomas, which often show patchy enhancement. The tumor is located in the frontal lobe and cortex, which is common for IDH-mutant tumors. There is no necrosis or enhancing component, which supports a lower grade tumor often associated with IDH mutation. The evidence is conflicting: young age and location support mutant, but lack of enhancement argues against it. Given the young age is a strong predictor, I lean toward mutant but with low confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex (Cortical involvement: Present), which is more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often have a frontal lobe predilection but typically show calcifications and enhancement, which are not reported here. However, without specific features like calcifications (not available) or strong enhancement, the evidence is weak. The absence of deep white matter invasion (Deep WM invasion: Absent) is non-specific. Given the cortical involvement and lack of typical oligodendroglioma features, I predict non-codeleted, but confidence is low due to insufficient evidence.",
+    "supporting_features": [
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma, but confidence is low due to conflicting evidence for IDH status and insufficient evidence for 1p/19q status. The absence of enhancement and necrosis suggests a lower grade (grade 2 or 3), but without diffusion/perfusion data, grade 4 is less likely. Assigning grade 2 with low confidence.",
+  "subject_id": "EGD-0297",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion of Oedema"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None), no necrosis (Proportion Necrosis: 0.0), and no enhancing tumor volume (ET Volume: 0.0). These features are typical of grade 2 gliomas. However, there is significant edema (Proportion of Oedema: 100%), which can occur in higher grades, but without enhancement or necrosis, grade 3 or 4 is less likely. The absence of ependymal invasion and eloquent brain involvement also supports lower grade. Given the lack of high-grade features, grade 2 is predicted, but edema volume introduces some uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume"
+    ]
+  }
+}

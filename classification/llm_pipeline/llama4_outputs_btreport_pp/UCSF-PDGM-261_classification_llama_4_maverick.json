@@ -1,0 +1,45 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (29 years) and the tumor's characteristics (non-enhancing, located in the temporal cortex region, absence of ependymal invasion, and no deep white matter invasion) are suggestive of a lower-grade glioma. The presence of cortical involvement and the tumor being non-enhancing are more typical of IDH-mutant gliomas. The T2-FLAIR mismatch score is 0.4, which is not strongly indicative of an IDH-mutant astrocytoma (typically associated with a higher T2-FLAIR mismatch score). However, the absence of enhancement and necrosis, along with the patient's relatively young age, supports the likelihood of an IDH mutation.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Tumor Location",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.75
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in the temporal cortex region and is non-enhancing, which is more typical of IDH-mutant gliomas. The presence of cortical involvement also supports this. However, the T2-FLAIR mismatch score is not high enough to be strongly indicative of an IDH-mutant astrocytoma. Given the IDH mutation status is predicted to be mutant, the codeletion status could be either. However, the absence of specific features strongly indicative of 1p/19q codeletion (such as a more frontal lobe location) makes it less likely. The presence of cortical involvement could be seen in both codeleted and non-codeleted tumors.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has no necrosis, and is relatively well-defined, which are characteristics more commonly associated with lower-grade gliomas (WHO Grade 2 or 3). The absence of enhancement and the presence of cortical involvement are typical of lower-grade gliomas. The patient's age also supports a lower grade. However, the presence of significant edema (ED Volume = 20.418 mL) and the tumor's impact on surrounding structures (e.g., minimal midline shift) could suggest a more aggressive tumor, potentially grade 3. The lack of clear indicators of high-grade features like necrosis or enhancement leans towards a lower grade.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "n_slices_with_shift",
+      "mean_shift_mm"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-261"
+}

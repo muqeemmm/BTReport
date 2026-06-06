@@ -1,0 +1,33 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.9140239839817785, indicating a strong presence of this feature. This is a characteristic imaging feature associated with IDH-mutant gliomas. Therefore, the evidence strongly supports the presence of an IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of IDH mutation is established, but the status of 1p/19q co-deletion is not directly inferable from the given metadata. However, the 'T2-FLAIR Mismatch' is more commonly associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are typically 1p/19q co-deleted. Therefore, based on the available information and the typical association of T2-FLAIR mismatch with astrocytomas, it is less likely to be codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS_WHO_grade": {
+    "reasoning": "The tumor shows significant necrosis (Proportion Necrosis: 57.89%) and has a mild enhancement quality with a thickness of enhancing margin >3mm. These features are typically associated with higher-grade gliomas. The presence of IDH mutation suggests it is not a grade 4 wildtype glioblastoma but could be an IDH-mutant astrocytoma. Given the necrosis and significant mass effect, it is likely to be grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01722"
+}

@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 28 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger patients. The tumor involves eloquent areas (Speech motor and Vision) which is common in diffuse gliomas but not specific to mutation status. The enhancement is mild, which is more typical of IDH-mutant tumors than wildtype. Proportion of necrosis is 42.75%, which is high but not exclusive to wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor location involves cortex, temporal, insula, and frontal lobes, which is more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often present with frontal lobe predominance but this tumor is multifocal across lobes. The presence of deep white matter invasion is more common in astrocytomas. The T2-FLAIR mismatch sign is absent (score 0.4, degree 0.27), which supports non-codeleted status as oligodendrogliomas rarely show this sign.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "overall_comment": "The tumor is midline, solitary, with mild enhancement and high necrosis proportion. Deep white matter invasion present. No ependymal invasion. Based on age and imaging features, IDH-mutant astrocytoma grade 4 is likely.",
+  "subject_id": "EGD-0758",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis 42.75%) and enhancement (Proportion Enhancing 1.72%), which are features of grade 4 glioblastoma. However, the enhancement is mild and necrosis proportion is high but not definitive. Microvascular proliferation is not assessed in metadata. The tumor volume is large (110.97 mL) and involves eloquent areas, supporting high grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

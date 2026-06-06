@@ -1,0 +1,48 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (38 years) and the tumor's characteristics (non-enhancing, large edema volume, deep white matter invasion, and involvement of cortex, frontal lobe, and insula) are more typical of IDH mutant gliomas, which are more common in younger adults. The absence of enhancement and necrosis also aligns with a lower-grade glioma, which is more likely to be IDH mutant. However, the presence of significant mass effect (midline shift, cortical involvement) could suggest a more aggressive tumor, but this is not exclusive to IDH wildtype tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "midline_shift_present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor involves the frontal lobe and insula, and is non-enhancing, which are characteristics that can be seen in 1p/19q codeleted gliomas. However, the absence of specific features like ependymal invasion being 'Absent' and the tumor being 'Solitary' doesn't strongly support or refute codeletion. The presence of cortical involvement and deep white matter invasion could be seen in various molecular subtypes. Without more specific indicators like enhancement quality or calcifications (not available), prediction is challenging. IDH mutant tumors are more likely to be codeleted, and given the prediction of IDH mutant status, codeletion is plausible but not certain.",
+    "supporting_features": [
+      "Region Proportions",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has a significant edema volume, and involves critical structures, suggesting a diffuse glioma. The absence of necrosis and enhancement suggests a lower grade. However, the presence of significant mass effect (midline shift) and deep white matter invasion could indicate a higher grade. Given the IDH mutant prediction, a grade 3 is plausible due to the aggressive features like significant edema and mass effect, but the lack of enhancement and necrosis argues against grade 4. Grade 2 is less likely due to the significant mass effect and large edema volume.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-468"
+}

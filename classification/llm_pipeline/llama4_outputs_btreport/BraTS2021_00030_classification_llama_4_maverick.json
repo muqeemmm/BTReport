@@ -1,0 +1,47 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (48 years) and the presence of a large, enhancing tumor with significant edema and mass effect (as indicated by the 'n_slices_with_shift', 'max_shift_mm', and 'midline_shift_present' fields) are more typical of glioblastoma, which is often IDH wildtype. The tumor's location in the parietal cortex, its large size (Total tumor volume = 117.543 mL), and the presence of necrosis (Proportion Necrosis = 10.4%) also support this. While the presence of cortical involvement and deep white matter invasion could be seen in various glioma subtypes, the overall profile leans towards a more aggressive tumor, typically associated with IDH wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "midline_shift_present",
+      "Total tumor volume (mL)",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of a large, enhancing tumor with necrosis and significant edema, along with the absence of ependymal invasion and the tumor's location, does not strongly suggest the typical profile of an oligodendroglioma, which is more likely to be IDH mutant and 1p/19q codeleted. The tumor's characteristics (e.g., large size, necrosis, marked enhancement) are more suggestive of a glioblastoma or an astrocytoma, which are typically 1p/19q non-codeleted. The absence of specific features that are more commonly associated with oligodendrogliomas (e.g., calcifications, which are not available but often considered in the differential) further supports this prediction.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor's large size, significant edema, necrosis (Proportion Necrosis = 10.4%), and marked enhancement are indicative of a high-grade glioma. The presence of necrosis is particularly suggestive of glioblastoma, which is WHO grade 4. The tumor's aggressive features (e.g., large size, significant mass effect, necrosis) support a higher grade. While the absence of certain features (e.g., ependymal invasion) might argue against the highest grade in some contexts, the overall profile is most consistent with WHO grade 4.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00030"
+}

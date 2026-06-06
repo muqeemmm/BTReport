@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 51 years old, which is younger than typical for IDH-wildtype glioblastoma but older than typical for IDH-mutant astrocytoma. The lesion is solitary, midline, and involves the temporal cortex. Enhancement is mild, which is more common in IDH-mutant tumors. However, the age is borderline.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex (vision), which is more common in astrocytomas than oligodendrogliomas. Oligodendrogliomas typically present in frontal lobes and are less likely to involve eloquent areas. The tumor location is temporal-cortex region, which is atypical for oligodendroglioma. However, the absence of deep white matter invasion could argue against astrocytoma.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location",
+      "Deep WM invasion",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The tumor shows mild enhancement and involves temporal cortex with vision eloquent area involvement. Necrosis proportion is 25.47%, suggesting high-grade features. Given IDH-mutant prediction and necrosis presence, grade 4 is assigned despite borderline age.",
+  "subject_id": "EGD-0145",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The proportion of necrosis is 25.47%, which exceeds the 10% threshold for necrosis in glioblastoma. Enhancement is present but mild. Microvascular proliferation is not assessed, but necrosis alone suggests grade 4. However, the mild enhancement and absence of other high-grade features like multifocality reduce confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Multifocal or Multicentric"
+    ]
+  }
+}

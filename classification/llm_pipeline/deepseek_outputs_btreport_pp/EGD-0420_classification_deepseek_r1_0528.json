@@ -1,0 +1,41 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is common in IDH-mutant gliomas. There is no enhancement (Enhancement Quality: None), which is more typical of IDH-mutant tumors. However, the proportion of necrosis is high (40.34%), which is unusual for low-grade IDH-mutant gliomas and might suggest a higher grade or wildtype status. Age 52 is borderline, as IDH-mutant gliomas often present younger, but wildtype gliomas are more common in older patients. Overall, the frontal location and lack of enhancement support mutant, but necrosis contradicts.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is typical for both oligodendrogliomas (codeleted) and astrocytomas (non-codeleted). However, there is no enhancement, which is more common in oligodendrogliomas, but the absence of deep white matter invasion (Deep WM invasion: Absent) argues against oligodendroglioma. Oligodendrogliomas often have cortical involvement but also deep white matter invasion. The frontal location alone is not specific. Given the lack of strong indicators for oligodendroglioma, non-codeleted is predicted.",
+    "supporting_features": [
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is non-enhancing, frontal, cortical, with significant edema and necrosis. The IDH mutation status is predicted as mutant with moderate confidence due to conflicting necrosis. 1p/19q is non-codeleted with low confidence. Grade prediction requires necrosis and enhancement assessment.",
+  "subject_id": "EGD-0420",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has a high proportion of necrosis (40.34%), which is a feature of glioblastoma (grade 4). However, there is no enhancement (Enhancement Quality: None), which is atypical for glioblastoma. Glioblastomas typically show ring enhancement. The absence of enhancement contradicts grade 4. But necrosis >10% is a strong indicator of grade 4. Given the necrosis, grade 4 is predicted despite lack of enhancement.",
+    "supporting_features": [
+      "Proportion Necrosis"
+    ]
+  }
+}

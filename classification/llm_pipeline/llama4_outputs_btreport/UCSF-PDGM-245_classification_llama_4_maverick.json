@@ -1,0 +1,52 @@
+{
+  "id": "patient_0010",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (34 years) and the absence of enhancement on MRI (Enhancement Quality: 'None', Proportion Enhancing: 0.0) are more commonly associated with IDH mutant gliomas. The presence of cortical involvement and ependymal invasion could be seen in various glioma subtypes. The lack of necrosis (Proportion Necrosis: 0.0) and enhancement also leans towards a lower grade glioma, which is more likely to be IDH mutant. However, the presence of significant edema (ED Volume: 167.512 mL, Proportion of Oedema: 100.0) and midline shift (midline_shift_present: 'Yes') suggests a potentially higher grade tumor. Despite this, the overall profile (age, lack of enhancement) supports an IDH mutant status.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "ED Volume (mL)",
+        "midline_shift_present"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's frontal lobe location and cortical involvement are characteristic of 1p/19q co-deleted gliomas. The absence of enhancement and necrosis also aligns with this subtype. However, the significant edema and midline shift are less typical. The presence of ependymal invasion and deep white matter invasion could be seen in various molecular subtypes. Given the frontal lobe location and lack of enhancement, a 1p/19q co-deleted status is plausible.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality",
+        "Proportion Enhancing"
+      ],
+      "contradicting_features": [
+        "ED Volume (mL)",
+        "midline_shift_present"
+      ],
+      "prediction": "codeleted",
+      "confidence": 0.6
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The absence of enhancement and necrosis suggests a lower grade glioma. However, the significant edema, midline shift, and ependymal invasion indicate a potentially higher grade. The presence of cortical involvement and deep white matter invasion could be seen in higher grade tumors. Given the mix of features, a grade 3 glioma is plausible as it balances between the indicators of lower grade (lack of enhancement, necrosis) and higher grade (significant edema, midline shift).",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [],
+      "prediction": 3,
+      "confidence": 0.65
+    }
+  ],
+  "subject_id": "UCSF-PDGM-245"
+}

@@ -1,0 +1,45 @@
+{
+  "subject_id": "BraTS2021_00294",
+  "idh": {
+    "reasoning": "The patient is 49 years old. Age is a significant factor in IDH mutation status, with IDH-mutant gliomas typically occurring in younger adults (median age ~45) and IDH-wildtype gliomas in older adults (median age ~70). While 49 is closer to the IDH-mutant median, it's not definitively young. The tumor is large (Total tumor volume 148.864 mL), solitary, and involves deep white matter and ependymal invasion. These features are more common in IDH-wildtype tumors, although they can occur in IDH-mutant ones. The proportion of edema (85.86%) is very high, which can be seen in both types but is often more pronounced in higher-grade tumors, which are more likely to be IDH-wildtype. The enhancement quality is mild, which doesn't strongly favor either type. Given the age is borderline and the tumor characteristics (size, deep/ependymal invasion) lean slightly towards IDH-wildtype patterns, but without definitive features like necrosis or specific location biases typically associated with wildtype, predicting mutant status based solely on this metadata is uncertain. However, the age of 49 slightly favors mutant status over wildtype.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion of Oedema"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information regarding 1p/19q co-deletion status. Features like age or tumor location could provide weak clues, but without specific genetic or imaging markers (like DWI/perfusion which are unavailable), a prediction cannot be reliably made based on the given data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 49 years old with a large tumor (148.864 mL) involving deep white matter ('Deep WM invasion': 'Present'), ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), cortical involvement ('Cortical involvement': 'Present'), and significant edema ('Proportion of Oedema': 85.86%). The tumor causes midline shift ('midline_shift_present': 'Yes') and ventricular asymmetry ('Asymmetrical Ventricles': 'Present'). The enhancement quality is mild ('Enhancement Quality': 'Mild'), and the enhancing margin is thick (>3mm). These features collectively point towards a high-grade glioma. Deep white matter invasion and ependymal invasion are characteristic of Grade 3 or 4 gliomas. Significant edema and mass effect also suggest higher grade. While mild enhancement might seem less aggressive, it doesn't rule out Grade 4. Given the combination of deep/ependymal invasion, large size, significant edema, and mass effect in a middle-aged adult, a WHO Grade 4 diagnosis is most likely.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Total tumor volume (mL)",
+      "Text Report"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "IDH-mutant, non-codeleted, WHO Grade 4 diffuse astrocytoma",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient presents with a large midline glioma involving multiple lobes with significant edema and mass effect causing midline shift and ventricular asymmetry. Deep white matter and ependymal invasion are present. The patient's age (49) makes IDH mutation possible but not certain; the tumor characteristics lean slightly towards IDH wildtype patterns but are not definitive without molecular testing or additional imaging modalities like DWI/perfusion/MRS which were not available for this analysis."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "patient_0113",
+  "predictions": [
+    {
+      "type": "IDH Mutation Status",
+      "reasoning": "The patient's age (67 years) and the presence of a large, necrotic tumor with significant edema and mass effect (as indicated by the 'Asymmetrical Ventricles' and 'Effaced Ventricle' fields) are more typical of IDH wildtype gliomas, which are more common in older adults. The tumor's aggressive features, such as large size (Lesion Sizes APxTVxCC: 5.2 x 4.1 x 4.2 cm), significant necrosis (Proportion Necrosis: 30.65%), and presence of edema crossing midline, also support the IDH wildtype status as these characteristics are often associated with more malignant behavior.",
+      "supporting_features": [
+        "age_years",
+        "Lesion Sizes APxTVxCC (cm)",
+        "Proportion Necrosis",
+        "Edema crosses midline",
+        "Asymmetrical Ventricles",
+        "Effaced Ventricle"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q Co-deletion Status",
+      "reasoning": "The presence of a large, frontal lobe tumor with cortical involvement and significant necrosis is more typical of IDH mutant gliomas, but the IDH status is predicted to be wildtype. IDH wildtype gliomas are less likely to have 1p/19q co-deletion. The tumor's characteristics, such as being solitary and having ependymal invasion, do not strongly suggest 1p/19q co-deletion, which is more commonly associated with oligodendrogliomas that typically have a more favorable prognosis and are IDH mutant.",
+      "supporting_features": [
+        "IDH Mutation Status prediction",
+        "Solitary",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "frontal_lobe region involvement"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO Grade",
+      "reasoning": "The tumor exhibits aggressive features such as large size, significant necrosis (Proportion Necrosis: 30.65%), and substantial edema that crosses the midline. The presence of necrosis and the large size are indicative of a high-grade tumor. Given the predicted IDH wildtype status, these features strongly suggest a CNS WHO Grade 4 glioma, as IDH wildtype glioblastomas are characterized by their aggressive behavior and poor prognosis.",
+      "supporting_features": [
+        "Lesion Sizes APxTVxCC (cm)",
+        "Proportion Necrosis",
+        "Edema crosses midline",
+        "IDH Mutation Status prediction"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_01744"
+}

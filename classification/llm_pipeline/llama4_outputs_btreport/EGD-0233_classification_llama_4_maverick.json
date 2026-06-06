@@ -1,0 +1,41 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The tumor is located in the frontal lobe, involves the cortex, and is described as mildly enhancing with a significant proportion of necrosis and edema. The presence of cortical involvement and the location in the frontal lobe are more commonly associated with IDH wildtype gliomas. Additionally, the tumor's enhancement quality being 'Mild' and the presence of necrosis are features that can be seen in both IDH mutant and wildtype gliomas, but the overall profile leans towards a more aggressive type, which is often IDH wildtype. The absence of deep white matter invasion and ependymal invasion could suggest a less infiltrative pattern, but this alone is not conclusive for IDH status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor is located in the frontal lobe and involves the cortex. IDH mutant gliomas with 1p/19q co-deletion (oligodendrogliomas) typically present with cortical involvement and often have a more frontal location. However, the prediction of 1p/19q co-deletion status directly from the given metadata is challenging without knowing the IDH mutation status. Given that the IDH status is predicted as wildtype with a certain confidence, and knowing that 1p/19q co-deletion is associated with IDH mutant tumors, the likelihood of this tumor being 1p/19q co-deleted is low.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "IDH mutation status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor has a significant proportion of necrosis (32.76%) and edema (66.52%), and it is mildly enhancing with a thickness of the enhancing margin >3mm. These features are indicative of a high-grade glioma. The presence of necrosis is particularly associated with glioblastoma, which is WHO grade 4. The total tumor volume and the involvement of eloquent brain areas (motor) also suggest an aggressive tumor. Given the predicted IDH wildtype status, which is commonly associated with glioblastoma, the likelihood of this tumor being WHO grade 4 is high.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0233"
+}

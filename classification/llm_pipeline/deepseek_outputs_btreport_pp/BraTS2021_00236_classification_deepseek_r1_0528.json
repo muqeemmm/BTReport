@@ -1,0 +1,52 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 69 years old, which is more typical for IDH-wildtype glioblastoma. However, the T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present: 0.0) and the mismatch score is low (0.4), which strongly suggests IDH-mutant glioma. The tumor location in frontal lobe and insula is also more common in IDH-mutant tumors. The absence of ependymal invasion and the presence of cortical involvement further support IDH-mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent speech motor areas and is located in the frontal lobe, cortex, and insula, which are typical for astrocytomas rather than oligodendrogliomas. Oligodendrogliomas often have frontal lobe involvement but are less likely to involve eloquent cortex. The absence of calcifications (not assessed) and the presence of deep white matter invasion also favor astrocytoma. However, the frontal lobe location provides some weak support for oligodendroglioma.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The absence of T2-FLAIR mismatch sign strongly supports IDH-mutant status despite the older age. The frontal lobe and insular involvement with eloquent cortex involvement suggests astrocytoma rather than oligodendroglioma. The grade is assigned as 4 due to necrosis and enhancement.",
+  "subject_id": "BraTS2021_00236",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis: 9.48%) and marked enhancement (Enhancement Quality: Marked), which are features of grade 4 glioblastoma. The proportion enhancing is 50.83%, indicating significant enhancement. Although necrosis proportion is relatively low, its presence combined with marked enhancement strongly suggests WHO grade 4. The tumor volume is large (45.076 mL) and crosses midline, further supporting high-grade features.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)",
+      "CET Crosses midline"
+    ]
+  }
+}

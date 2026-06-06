@@ -1,0 +1,40 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (73 years) is more typical for wildtype IDH gliomas, which are more common in older adults. The tumor's location in the temporal lobe, cortex, and insula, along with its significant mass effect (midline shift of 1.361 mm, asymmetrical ventricles, and effaced ventricle on the left), suggests an aggressive tumor. The presence of necrosis (Proportion Necrosis: 29.52%) and marked enhancement quality also point towards a more aggressive tumor type, typically associated with IDH wildtype status. While the involvement of the cortex and insula could be seen in various glioma subtypes, the overall profile leans towards an IDH wildtype tumor due to the patient's age and tumor characteristics.",
+    "supporting_features": [
+      "age_years",
+      "Region Proportions",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of IDH wildtype status prediction reduces the likelihood of 1p/19q co-deletion, as this genetic feature is more commonly associated with IDH mutant gliomas. The tumor's aggressive features (necrosis, marked enhancement) and the patient's age further support a lower likelihood of 1p/19q co-deletion, which is more typical in oligodendrogliomas that are usually IDH mutant. Thus, given the likely IDH wildtype status, the tumor is more likely to be non-codeleted.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor exhibits aggressive features such as significant necrosis (29.52%), marked enhancement, and substantial mass effect (midline shift, asymmetrical ventricles). These characteristics are typical of high-grade gliomas. The presence of necrosis and the tumor's overall appearance (enhancement quality, size) are particularly indicative of a high-grade tumor. Given the likely IDH wildtype status and the absence of 1p/19q co-deletion, the tumor is most likely a glioblastoma, WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01043"
+}

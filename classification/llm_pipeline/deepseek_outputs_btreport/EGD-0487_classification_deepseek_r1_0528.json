@@ -1,0 +1,57 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The lesion is nonenhancing (Enhancement Quality: None, Proportion Enhancing: 0.0, ET Volume: 0.0) which is more common in IDH-mutant gliomas. However, the tumor location in parietal-cortex region and cortical involvement are non-specific. The absence of deep white matter invasion and ependymal invasion may slightly favor mutant, but these features are not definitive. The confidence is low due to lack of strong predictors like calcifications or specific enhancement patterns.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Cortical involvement",
+      "Tumor Location",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the parietal-cortex region with cortical involvement, which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often involve deep white matter or frontal lobes, which is absent here (Deep WM invasion: Absent). However, without frontal lobe involvement or calcifications, the evidence is weak. Confidence is low due to insufficient discriminatory features.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The prediction is based solely on available MRI metadata. Key limitations include absence of diffusion/perfusion data and lack of enhancement. Confidence is low for IDH and 1p/19q due to non-specific features. Grade prediction relies on necrosis proportion and enhancement absence.",
+  "subject_id": "EGD-0487",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None) and no necrosis volume (NCR Volume: 1.036mL, Proportion Necrosis: 11.65% which is low). WHO grade 4 gliomas typically show necrosis and enhancement. However, the proportion necrosis of 11.65% is present but low, and absence of enhancement favors lower grade. The solitary nature and no deep invasion also suggest lower grade. Confidence is moderate as necrosis is present but minimal.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "Deep WM invasion"
+    ]
+  }
+}

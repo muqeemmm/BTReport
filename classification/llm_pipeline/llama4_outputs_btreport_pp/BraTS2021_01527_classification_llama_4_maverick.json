@@ -1,0 +1,37 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8111794825100815, indicating a strong presence of this feature. This is a characteristic imaging feature associated with IDH-mutant gliomas. The patient's age (27 years) also aligns with a higher likelihood of IDH mutation, as IDH-mutant gliomas tend to occur in younger patients.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutation, and the likelihood of 1p/19q co-deletion is higher in IDH-mutant gliomas that are oligodendrogliomas. However, the direct evidence for 1p/19q co-deletion status is not available in the provided metadata. Given the patient's age and the presence of T2-FLAIR mismatch, it is plausible to lean towards a diagnosis that could be associated with 1p/19q co-deletion (i.e., oligodendroglioma). However, without explicit molecular or histological evidence, this remains an educated guess.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits a significant necrotic component (Proportion Necrosis: 71.86%) and a relatively large size (Total tumor volume: 86.166 mL), which are features more commonly associated with higher-grade gliomas. The presence of necrosis is typically associated with WHO grade 4 gliomas. While the patient's age and the presence of T2-FLAIR mismatch suggest an IDH-mutant glioma, which could be grade 2 or 3, the high proportion of necrosis points more towards a grade 4 tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01527"
+}

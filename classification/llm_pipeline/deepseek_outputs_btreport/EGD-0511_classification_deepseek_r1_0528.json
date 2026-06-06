@@ -1,0 +1,53 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (32 years), which is more common in IDH-mutant gliomas. The tumor is nonenhancing (Enhancement Quality: None, Proportion Enhancing: 0.0) and lacks necrosis (Proportion Necrosis: 0.0), both features more typical of lower-grade IDH-mutant gliomas. However, the absence of enhancement and necrosis could also be seen in some wildtype tumors, and the frontal lobe location is non-specific.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex (Tumor Location: frontal_lobe-cortex region) with cortical involvement (Cortical involvement: Present) and no deep white matter invasion (Deep WM invasion: Absent), which is more characteristic of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas typically show frontal lobe involvement but often have deep white matter invasion and calcifications (not assessed here). The midline epicenter (Side of Tumor Epicenter: Midline) is atypical for oligodendrogliomas, which are usually hemispheric. However, the frontal location alone provides weak support for oligodendroglioma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is nonenhancing with pure edema, no necrosis, and located in the frontal cortex/midline. The young age favors IDH-mutant status, while the cortical location without deep WM invasion favors astrocytoma (non-codeleted). Grade is indeterminate from MRI alone but absence of enhancement/necrosis suggests lower grade (2 or 3). Confidence is low due to limited molecular predictors.",
+  "subject_id": "EGD-0511",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) and no necrosis (Proportion Necrosis: 0.0), which are features of WHO grade 2 gliomas. However, grade 3 gliomas can occasionally be nonenhancing, and the absence of necrosis does not exclude grade 3. The edema volume (ED Volume: 2.195 mL) is small, but this is non-specific. Without diffusion/perfusion data, grade assessment is limited.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)"
+    ]
+  }
+}

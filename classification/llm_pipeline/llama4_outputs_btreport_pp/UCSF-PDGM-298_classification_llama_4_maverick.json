@@ -1,0 +1,42 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is a strong indicator of IDH mutation. The 'T2-FLAIR Mismatch Score' is 0.7322440580188623, which is a significant value indicating a high likelihood of T2-FLAIR mismatch. This feature is commonly associated with IDH-mutant gliomas. The absence of enhancement and necrosis also aligns with the typical imaging characteristics of IDH-mutant gliomas, which are often non-enhancing.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is more commonly associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are typically 1p/19q co-deleted. The absence of enhancement and the presence of a non-enhancing tumor are consistent with IDH-mutant astrocytoma. The 'Cortical involvement' and 'frontal_lobe-cortex region' location are also typical for gliomas, but do not specifically indicate co-deletion status. Given the IDH mutation status is predicted as 'mutant', and considering the lack of specific indicators for 1p/19q co-deletion in the provided metadata, the likelihood of co-deletion is lower.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor is non-enhancing, has a significant edema volume, and involves the frontal lobe and cortex. The absence of enhancement and necrosis, along with the presence of T2-FLAIR mismatch, suggests a lower grade glioma. IDH-mutant gliomas with these characteristics are often grade 2 or 3. Given the patient's age (48 years) and the tumor's characteristics, a grade 2 is plausible. The lack of aggressive features like enhancement or significant necrosis supports a lower grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.8
+  },
+  "subject_id": "UCSF-PDGM-298"
+}

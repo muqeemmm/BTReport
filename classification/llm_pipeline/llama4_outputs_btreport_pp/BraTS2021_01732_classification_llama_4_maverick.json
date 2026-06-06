@@ -1,0 +1,46 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (23 years) and the presence of ependymal invasion, deep white matter invasion, and cortical involvement are indicative of a potentially aggressive tumor. However, the T2-FLAIR mismatch score is 0.5535633697795489, and the degree is -0.1897596223627236, which does not strongly suggest a T2-FLAIR mismatch. The presence of mild enhancement and the tumor's location in the frontal lobe are also noted. IDH mutant gliomas are more common in younger patients and often have a better prognosis. The absence of a clear T2-FLAIR mismatch (T2-FLAIR Mismatch Present = 0.0) argues against an IDH mutant astrocytoma. However, the patient's young age supports the likelihood of an IDH mutation. Given these factors, the prediction leans towards IDH mutant status due to the patient's age and the tumor's characteristics.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "one_p_nineteen_q_co_deletion_status": {
+    "reasoning": "The tumor is located in the frontal lobe and involves the cortex, with ependymal invasion and deep white matter invasion. The presence of cortical involvement and the tumor's location could be associated with various molecular subtypes. The 1p/19q co-deletion is often seen in oligodendrogliomas, which tend to have a more favorable prognosis. However, the absence of a clear T2-FLAIR mismatch and the presence of mild enhancement do not strongly support a specific co-deletion status. Given the lack of direct evidence for 1p/19q co-deletion status from the provided metadata, the prediction is based on the tumor's characteristics and typical associations. IDH mutant tumors with 1p/19q co-deletion often present with certain features like calcifications (not available in the metadata) and tend to be more common in frontal lobe tumors.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor has a significant necrotic component (Proportion Necrosis = 38.18%) and a large edema volume (ED Volume = 123.43 mL), with edema crossing the midline. The presence of necrosis and significant edema are typically associated with higher-grade gliomas. The tumor also shows ependymal invasion and involves eloquent brain areas, indicating a potentially aggressive nature. The patient's young age and the tumor's characteristics, such as the presence of necrosis and significant edema, support a higher grade. Given these features, the tumor is likely to be of a higher grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01732"
+}

@@ -1,0 +1,47 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (56 years) and the presence of a multifocal tumor with ependymal invasion and deep white matter invasion are more commonly associated with IDH wildtype gliomas. The tumor's mild enhancement and the absence of T2-FLAIR mismatch also lean towards IDH wildtype. The presence of necrosis (Proportion Necrosis: 1.13) further supports a more aggressive tumor, typically seen in IDH wildtype gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a multifocal tumor with significant edema and ependymal invasion, along with the absence of T2-FLAIR mismatch, suggests a lower likelihood of 1p/19q co-deletion. IDH mutant gliomas with 1p/19q co-deletion often show more favorable radiological features. Given the aggressive features and the likely IDH wildtype status, 1p/19q co-deletion is less likely.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present",
+      "idh_status"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis, multifocality, ependymal invasion, and significant edema are indicative of a high-grade glioma. The likely IDH wildtype status further supports a higher grade. The proportion of necrosis (1.13) and the presence of enhancement also suggest a more aggressive tumor, consistent with WHO grade 4.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis",
+      "idh_status",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01064"
+}

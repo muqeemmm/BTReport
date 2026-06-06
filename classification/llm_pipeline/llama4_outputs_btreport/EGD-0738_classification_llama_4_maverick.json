@@ -1,0 +1,48 @@
+{
+  "id": "patient_1415",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The presence of a large, enhancing frontal lobe tumor with necrosis and significant edema suggests a high-grade glioma. IDH mutant gliomas are more common in younger patients and often have a better prognosis. However, the given metadata does not directly indicate the patient's age or specific molecular characteristics. The tumor's location in the frontal lobe and the presence of cortical involvement are consistent with both IDH mutant and wildtype gliomas. The marked enhancement and presence of necrosis are more typical of IDH wildtype glioblastomas, which are more aggressive and common in older adults. Without age or specific molecular information, we lean towards IDH wildtype due to the aggressive imaging features.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Cortical involvement",
+        "Tumor Location"
+      ],
+      "contradicting_features": [
+        "Cortical involvement"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the frontal lobe with cortical involvement and has a significant enhancing component. 1p/19q co-deleted gliomas are typically IDH mutant and often have an oligodendroglial component. The presence of marked enhancement and necrosis is less typical for 1p/19q co-deleted tumors, which tend to have a more favorable prognosis and less necrosis. Given the presence of necrosis and the prediction of IDH wildtype status, 1p/19q co-deletion is less likely.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Tumor Location"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor shows marked enhancement, significant necrosis (9.91%), and a large size, indicating a high-grade glioma. The presence of necrosis is a hallmark of glioblastoma (WHO grade 4). The proportion of necrosis and the enhancement quality are more typical of higher-grade gliomas. Given these features, the tumor is likely to be WHO grade 4.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "ED Volume (mL)",
+        "NCR Volume (mL)"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0738"
+}

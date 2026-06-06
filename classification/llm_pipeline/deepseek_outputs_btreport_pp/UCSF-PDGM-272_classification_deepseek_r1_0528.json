@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is strongly positive (T2-FLAIR Mismatch Present=1.0, Score=0.9058), which is highly specific for IDH-mutant astrocytomas. The tumor is non-enhancing (Enhancement Quality=None, Proportion Enhancing=0.0) and lacks necrosis (Proportion Necrosis=0.0), consistent with lower-grade IDH-mutant tumors. However, the patient is relatively young (35 years), which slightly favors IDH-mutant status but is not definitive.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The T2-FLAIR mismatch sign strongly suggests an IDH-mutant astrocytoma, which are typically 1p/19q non-codeleted. Oligodendrogliomas (IDH-mutant and 1p/19q codeleted) rarely show T2-FLAIR mismatch. The frontal lobe location is common in oligodendrogliomas but the mismatch sign overrides this.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "overall_comment": "The tumor exhibits a strong T2-FLAIR mismatch sign, non-enhancement, and absence of necrosis, strongly suggesting an IDH-mutant astrocytoma. The midline location and deep white matter invasion are noted but do not contradict this classification. Confidence in IDH status is high due to the mismatch sign; confidence in 1p/19q status is moderate as it relies on the astrocytoma inference.",
+  "subject_id": "UCSF-PDGM-272",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years",
+      "Deep WM invasion"
+    ],
+    "prediction": 2,
+    "reasoning": "The absence of enhancement and necrosis suggests a lower-grade tumor (grade 2). However, the presence of deep white matter invasion (Deep WM invasion=Present) and midline shift (midline_shift_present=Yes) may indicate more aggressive behavior. The T2-FLAIR mismatch sign is typically associated with grade 2/3 IDH-mutant astrocytomas. Given the conflicting features, grade 2 is most consistent with the non-enhancing phenotype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ]
+  }
+}

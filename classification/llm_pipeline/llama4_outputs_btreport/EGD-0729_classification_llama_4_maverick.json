@@ -1,0 +1,45 @@
+{
+  "id": "additional_patient_50",
+  "predictions": [
+    {
+      "type": "IDH Mutation Status",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis (Proportion Necrosis: 46.15) and significant mass effect (midline shift present, max_shift_mm: 13.0) suggests a high-grade glioma. The tumor's location and involvement of multiple lobes (temporal, cortex, parietal, insula) along with ependymal invasion and deep white matter invasion are indicative of aggressive features. IDH-wildtype glioblastomas are more likely to present with such aggressive features compared to IDH-mutant gliomas. Therefore, the evidence supports IDH wildtype status.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "max_shift_mm",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q Co-deletion Status",
+      "reasoning": "The tumor's imaging characteristics, such as significant necrosis and enhancement, are not typical for 1p/19q co-deleted tumors, which are more commonly associated with oligodendrogliomas that tend to have a more homogeneous appearance and less necrosis. The presence of marked enhancement and necrosis suggests a glioblastoma or astrocytoma, which are less likely to be 1p/19q co-deleted. Therefore, the evidence argues against 1p/19q co-deletion.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO Grade",
+      "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 46.15), marked enhancement (Enhancement Quality: Marked), and substantial mass effect (midline shift present, max_shift_mm: 13.0). These characteristics are typical of high-grade gliomas. The presence of necrosis and marked enhancement is particularly suggestive of WHO Grade 4. The tumor's large size and involvement of multiple structures further support this grading.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "midline_shift_present",
+        "max_shift_mm"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0729"
+}

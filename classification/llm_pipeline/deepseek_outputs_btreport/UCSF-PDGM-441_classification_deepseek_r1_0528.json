@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.95,
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (26 years old), which is strongly associated with IDH-mutant gliomas. The tumor is located in the frontal lobe, a common site for IDH-mutant tumors. Enhancement is mild and proportion enhancing is low (0.01), which is more typical of IDH-mutant gliomas. There is no necrosis, which is uncommon in IDH-wildtype glioblastomas.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex and frontal lobe without deep white matter invasion, which is more typical of astrocytomas than oligodendrogliomas. Oligodendrogliomas often show more heterogeneous enhancement and calcifications, but calcifications are not assessed here. The absence of deep white matter invasion argues against oligodendroglioma.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor characteristics suggest a low-grade glioma in a young patient. The absence of necrosis and minimal enhancement support a lower grade. However, the large edema volume and motor eloquent involvement may indicate higher aggressiveness.",
+  "subject_id": "UCSF-PDGM-441",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor has minimal enhancement (Proportion Enhancing 0.01), no necrosis (Proportion Necrosis 0.0), and small enhancing component volume (ET Volume 0.005 mL). These features are typical of WHO grade 2 gliomas. However, the large edema volume (70.138 mL) and involvement of motor eloquent area may suggest higher grade, but without necrosis or significant enhancement, grade 2 is more likely.",
+    "supporting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ET Volume (mL)"
+    ]
+  }
+}

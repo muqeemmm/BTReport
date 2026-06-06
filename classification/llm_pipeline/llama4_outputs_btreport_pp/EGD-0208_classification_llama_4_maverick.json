@@ -1,0 +1,35 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.70519180313856, indicating a significant mismatch. This feature is strongly associated with IDH-mutant gliomas. The patient's age (41 years) is also within a range where IDH mutations are more common. Therefore, the evidence supports an IDH mutant status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutation, which is consistent with either IDH-mutant astrocytoma or oligodendroglioma. However, the '1p/19q co-deletion status' cannot be directly inferred from the given metadata. Nonetheless, the presence of cortical involvement and the tumor's complex location (involving cortex, insula, frontal and temporal lobes) might lean towards an oligodendroglioma, which is more likely to have 1p/19q co-deletion. However, without direct evidence or specific molecular markers, this remains speculative. Thus, the prediction leans towards non-codeleted due to the lack of definitive evidence for co-deletion.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows significant necrosis (Proportion Necrosis: 52.46%) and has a large size (Total tumor volume: 116.594 mL), with a mild enhancement quality. The presence of necrosis and large tumor size are indicators of higher grade gliomas. The 'Multiple satellites present' field also suggests a more aggressive tumor. Given the IDH mutant status predicted earlier, these features are consistent with a WHO grade 4 astrocytoma, IDH-mutant. The presence of significant necrosis is a key factor distinguishing grade 4 from lower grades.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0208"
+}

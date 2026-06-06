@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 65 years old, which is more typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger patients. However, there is no enhancement or necrosis, which is atypical for wildtype glioblastoma. The tumor is nonenhancing and located in the temporal-cortex region, which can occur in both types.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region, which is more typical for astrocytomas (non-codeleted) rather than oligodendrogliomas (codeleted). Oligodendrogliomas often involve frontal lobes and show cortical involvement, but here cortical involvement is present and deep white matter invasion is absent, which is not specific. The absence of enhancement does not strongly differentiate.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely IDH-wildtype glioblastoma due to the patient's age, but the absence of enhancement and necrosis lowers confidence. 1p/19q is likely non-codeleted due to temporal location. Grade is assigned as 4 due to the aggressive features despite absence of enhancement.",
+  "subject_id": "UCSF-PDGM-485",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The patient is elderly with a large tumor volume (32.084 mL) and significant edema. Although there is no enhancement or necrosis, which are typical for grade 4, the age and tumor behavior suggest high grade. WHO CNS5 allows grade 4 designation for IDH-wildtype tumors based on molecular features, but here molecular status is predicted wildtype.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

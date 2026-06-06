@@ -1,0 +1,40 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (85 years) is more typical for wildtype IDH gliomas, which are more common in older adults. The tumor's imaging characteristics, such as marked enhancement and large size (Total tumor volume = 58.149 mL), are also more suggestive of a high-grade glioma, which is more likely to be IDH wildtype. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score = 0.4, T2-FLAIR Mismatch Degree = 0.07248016446041716) further argues against an IDH mutant tumor, as this feature is often associated with IDH mutant gliomas. While the presence of cortical involvement and the tumor's location could be seen in various glioma subtypes, the overall profile leans towards an IDH wildtype tumor.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of IDH wildtype status predicted above makes 1p/19q codeletion less likely, as codeletion is more commonly associated with IDH mutant gliomas. The imaging features do not strongly suggest a specific 1p/19q status, but the absence of certain features like T2-FLAIR mismatch (more typical of IDH mutant astrocytomas) aligns with the likelihood of non-codeletion. Given the IDH wildtype status and the lack of specific indicators for 1p/19q codeletion in the provided metadata, non-codeleted is the more probable status.",
+    "supporting_features": [
+      "age_years",
+      "idh_mutation_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor's large size (Total tumor volume = 58.149 mL), marked enhancement, and significant necrosis proportion (Proportion Necrosis = 24.0) are indicative of a high-grade glioma. The presence of necrosis and the rim-core adjacency with a high adjacency fraction also support a diagnosis of glioblastoma, which is WHO grade 4. The patient's age (85 years) further supports this, as glioblastoma is more common in older adults. The absence of features like T2-FLAIR mismatch and the presence of marked enhancement also align with a high-grade, IDH wildtype glioblastoma.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "rim_core_adjacency"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "subject_id": "BraTS2021_01265"
+}

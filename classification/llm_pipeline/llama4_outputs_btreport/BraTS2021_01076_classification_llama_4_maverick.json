@@ -1,0 +1,46 @@
+{
+  "id": "patient_0994",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (67 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 1.21) are more commonly associated with IDH wildtype gliomas, which are more frequent in older adults and tend to be more aggressive. The absence of deep white matter invasion and the presence of ependymal invasion could be seen in various glioma subtypes. However, the overall profile (age, enhancement quality, necrosis proportion) leans towards an IDH wildtype status, which is typical for glioblastomas, a common adult-type diffuse glioma in this age group.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Ependymal (ventricular) Invasion"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of a mildly enhancing tumor with a significant proportion of edema and the absence of deep white matter invasion or multiple satellites are noted. However, the key determinant for 1p/19q co-deletion status is typically molecular or histological. Radiologically, IDH-mutant tumors with 1p/19q co-deletion often present with certain characteristics, but these are not definitive. Given the likely IDH wildtype status (from the first prediction), 1p/19q co-deletion is less likely as it is more commonly associated with IDH-mutant oligodendrogliomas. Thus, a 'non-codeleted' status is predicted based on the inferred IDH status and the absence of specific features strongly indicative of oligodendroglioma.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "IDH_status prediction"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 1.21), mild enhancement, and significant edema (Proportion of Oedema: 90.81) are features commonly associated with high-grade gliomas. The patient's age and the tumor's characteristics (e.g., enhancement, necrosis) are consistent with a glioblastoma, which is WHO grade 4. The absence of features typical for lower-grade gliomas (e.g., lack of mention of characteristic oligodendroglioma features) further supports this grading.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Proportion of Oedema"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_01076"
+}

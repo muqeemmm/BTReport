@@ -1,0 +1,51 @@
+{
+  "id": "patient_0809",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (49 years) and the presence of a large, enhancing tumor with significant edema and mass effect (midline shift, ventricular asymmetry) are more typical of IDH wildtype gliomas, which are more common in older adults and tend to be more aggressive. The tumor's location in the parietal, cortex, and occipital lobes, and its enhancement pattern (mildly enhancing with a thick margin) also align with features often seen in IDH wildtype glioblastomas. While the absence of diffusion, perfusion, or spectroscopy data limits the assessment, the available metadata supports a prediction of IDH wildtype due to the tumor's aggressive features and the patient's age.",
+      "supporting_features": [
+        "age_years",
+        "ED Volume (mL)",
+        "ET Volume (mL)",
+        "Edema crosses midline",
+        "midline_shift_present",
+        "Enhancement Quality",
+        "Thickness of enhancing margin"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of a large, solitary, enhancing tumor with significant edema and mass effect, along with the patient's age and the tumor's location, is less typical for 1p/19q co-deleted gliomas, which are more commonly associated with oligodendroglial features and often have a more frontal location. The tumor's characteristics (e.g., significant mass effect, ependymal invasion, and mild enhancement) are not strongly indicative of 1p/19q co-deletion. Given the lack of specific MRI features that are strongly associated with 1p/19q co-deletion status and the tumor's overall appearance, a prediction of non-codeleted is more likely.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Multifocal or Multicentric",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor's significant size, enhancement, necrosis proportion (5.69%), and substantial edema with mass effect (midline shift, ventricular asymmetry) are characteristic of high-grade gliomas. The presence of ependymal invasion and deep white matter invasion further supports a high-grade diagnosis. The proportion of necrosis and the enhancement pattern are particularly suggestive of a glioblastoma (WHO grade 4). While the absence of certain MRI sequences (e.g., DWI, perfusion) limits the assessment, the available metadata strongly supports a high-grade tumor.",
+      "supporting_features": [
+        "ED Volume (mL)",
+        "ET Volume (mL)",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00294"
+}

@@ -1,0 +1,38 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (71 years) is more typical for wildtype IDH status, as IDH mutant gliomas are more common in younger patients. The tumor's location in the temporal lobe and involvement of multiple lobes (temporal, cortex, insula, and frontal lobe) could be seen in both IDH mutant and wildtype gliomas. However, the presence of a large, enhancing tumor with necrosis (Proportion Necrosis: 10.94%) and marked enhancement quality are more suggestive of a high-grade glioma, which is more likely to be IDH wildtype in this age group. The absence of ependymal invasion and deep white matter invasion does not strongly influence IDH status directly.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The likelihood of 1p/19q codeletion is lower in older patients and in those with IDH wildtype status, as codeletion is more commonly associated with IDH mutant gliomas. Given the prediction of IDH wildtype status, the probability of 1p/19q codeletion is low. Additionally, the tumor's imaging characteristics (e.g., marked enhancement, presence of necrosis) are not typical for codeleted tumors, which are often associated with oligodendrogliomas that tend to have more homogeneous enhancement and less necrosis.",
+    "supporting_features": [
+      "age_years",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "cns_who_grade": {
+    "reasoning": "The presence of a large, enhancing tumor with significant necrosis (Proportion Necrosis: 10.94%) and marked enhancement quality strongly suggests a high-grade glioma. The tumor's size, enhancement characteristics, and presence of necrosis are more typical of WHO grade 4 gliomas. The patient's age and the predicted IDH wildtype status further support this classification, as IDH wildtype glioblastomas are more common in older adults and have aggressive imaging features.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "age_years",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "subject_id": "BraTS2021_00542"
+}

@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "reasoning": "The metadata does not provide direct evidence for IDH mutation status. IDH-mutant gliomas often show frontal lobe involvement and cortical involvement, which are present here ('Region Proportions' includes frontal_lobe and cortex, 'Cortical involvement' is 'Present'). However, IDH-wildtype gliomas are more likely to have midline involvement and larger volumes. The tumor is midline ('Side of Tumor Epicenter' is 'Midline'), and the total tumor volume is large (78.997 mL), which is more typical of IDH-wildtype gliomas. Since there is conflicting evidence and no definitive features, the prediction is wildtype with low confidence.",
+    "supporting_features": [
+      "Region Proportions",
+      "Cortical involvement",
+      "Side of Tumor Epicenter",
+      "Total tumor volume (mL)"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "There is no direct evidence for 1p/19q co-deletion status. Oligodendrogliomas (which are codeleted) often present with frontal lobe involvement and cortical involvement, which are present here ('Region Proportions' includes frontal_lobe and cortex, 'Cortical involvement' is 'Present'). However, they typically do not show midline involvement or large volumes. The tumor is midline ('Side of Tumor Epicenter' is 'Midline') and has a large volume (78.997 mL), which is atypical for oligodendrogliomas. Additionally, the enhancement quality is 'Marked', which is more common in astrocytomas (non-codeleted). Given the lack of clear evidence and conflicting features, the prediction is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Region Proportions",
+      "Cortical involvement",
+      "Side of Tumor Epicenter",
+      "Total tumor volume (mL)",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "The tumor is large, midline, and shows marked enhancement with cortical involvement. However, key molecular features are not directly assessed in the MRI metadata, leading to low confidence in predictions. The absence of ependymal invasion and ventricular asymmetry may suggest against aggressive features, but the large volume and midline location are concerning.",
+  "subject_id": "EGD-0710",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [],
+    "prediction": 4,
+    "reasoning": "Grade 4 gliomas (glioblastoma) typically show marked enhancement, necrosis, and large volumes. Here, 'Enhancement Quality' is 'Marked', 'Proportion Necrosis' is 14.9%, and 'Total tumor volume (mL)' is 78.997 mL, which are consistent with glioblastoma. The tumor also involves deep white matter ('Deep WM invasion' is 'Present') and cortex ('Cortical involvement' is 'Present'). However, the absence of ependymal invasion ('Ependymal (ventricular) Invasion' is 'Absent') and midline shift ('midline_shift_present' is 'No') may argue against the most aggressive features, but necrosis presence is a key indicator for grade 4. Thus, grade 4 is predicted with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Cortical involvement"
+    ]
+  }
+}

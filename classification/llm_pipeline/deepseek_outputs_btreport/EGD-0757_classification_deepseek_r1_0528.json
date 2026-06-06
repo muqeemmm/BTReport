@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 30 years old, which is younger than typical for IDH-wildtype glioblastomas that peak around 60-70 years. IDH-mutant gliomas are more common in younger adults. The tumor is located in the frontal lobe, which is a common site for IDH-mutant gliomas. Enhancement is mild, which is more typical for lower-grade IDH-mutant tumors than wildtype glioblastomas which often show ring enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (speech motor and motor), which is more common in astrocytomas (non-codeleted) than oligodendrogliomas (codeleted). Oligodendrogliomas typically occur in non-eloquent frontal lobes. However, the frontal lobe location could support oligodendroglioma. The mild enhancement and younger age are non-specific.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The frontal lobe location and young age support IDH-mutation, while eloquent involvement argues against 1p/19q co-deletion. The grade is estimated as 2 due to mild enhancement and low necrosis proportion, but confidence is limited by absence of key sequences.",
+  "subject_id": "EGD-0757",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The enhancement is mild and the proportion of necrosis is high (52.79%), which would suggest higher grade. However, IDH-mutant gliomas can have necrosis even at grade 2. The tumor volume is large (121.02 mL) but this is not specific for grade. Absence of ependymal invasion and minimal midline shift support lower grade. The conflicting evidence lowers confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ]
+  }
+}

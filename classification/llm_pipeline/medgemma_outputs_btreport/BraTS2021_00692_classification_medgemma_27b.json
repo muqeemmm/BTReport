@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_00692",
+  "idh": {
+    "reasoning": "The patient is 64 years old. Older age (>60) is associated with IDH-wildtype gliomas. The tumor is large (Total tumor volume 67.827 mL), solitary, and located near the midline ('Side of Tumor Epicenter': 'Midline'). While these features can be seen in both IDH-mutant and IDH-wildtype tumors, they are more typical of IDH-wildtype, especially the combination of older age and large size. The lack of information on specific molecular markers (like 1p/19q co-deletion or MGMT methylation) or advanced imaging (DWI, perfusion, MRS) makes a definitive prediction difficult. However, given the age and tumor size, IDH-wildtype is statistically more likely. The presence of cortical involvement and deep white matter invasion are common in both types.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Number of lesions",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 64 years old. 1p/19q co-deletion is strongly associated with IDH-mutant oligodendrogliomas, which typically occur in younger patients (mean age ~45). Given the patient's age, 1p/19q co-deletion is less likely. Furthermore, the tumor morphology described (large volume, deep white matter invasion) is not specifically suggestive of oligodendroglioma features often associated with co-deletion. Without molecular testing results or specific imaging features strongly pointing towards oligodendroglioma (e.g., calcification on CT, which is not available here), predicting co-deletion based solely on these MRI metadata is unreliable. The absence of information about IDH status further complicates this prediction.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "who_grade": {
+    "reasoning": "The patient is 64 years old with a large tumor (Total tumor volume 67.827 mL) showing cortical involvement ('Cortical involvement': 'Present'), deep white matter invasion ('Deep WM invasion': 'Present'), marked enhancement ('Enhancement Quality': 'Marked'), and edema crossing the midline ('Edema crosses midline': 'True'). These features suggest aggressive behavior. While the tumor is solitary and does not show ependymal invasion ('Ependymal (ventricular) Invasion': 'Absent'), the combination of older age, large size, significant edema, deep invasion, and marked enhancement points towards a high-grade glioma. Given the likely IDH-wildtype status (based on age), this would typically correspond to WHO Grade 4 (glioblastoma). If it were IDH-mutant (less likely based on age), Grade 3 (anaplastic astrocytoma) would be possible but less probable given the extensive edema and deep invasion.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

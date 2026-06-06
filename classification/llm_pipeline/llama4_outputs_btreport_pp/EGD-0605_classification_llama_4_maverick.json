@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (62 years) and the presence of a large, enhancing tumor with significant mass effect (midline shift, edema crossing midline) are more typical of IDH wildtype glioblastoma. The T2-FLAIR mismatch score is 0.6129, which is below the threshold typically associated with IDH mutant gliomas. Additionally, the presence of necrosis (Proportion Necrosis: 8.84%) and marked enhancement quality are features more commonly seen in IDH wildtype glioblastomas.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score",
+      "midline_shift_present",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect is more typical of glioblastoma, which is usually IDH wildtype and non-codeleted. The 1p/19q co-deletion is more commonly associated with IDH mutant gliomas, particularly oligodendrogliomas. Given the likely IDH wildtype status, the probability of 1p/19q co-deletion is low.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (8.84%), marked enhancement, and significant mass effect (midline shift, large edema volume) are characteristic features of glioblastoma, which is WHO grade 4. The tumor's large size and aggressive features further support this classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "midline_shift_present",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0605"
+}

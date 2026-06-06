@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (75 years) and the presence of a multifocal, bilateral tumor with significant edema and mass effect (midline shift present) are more typical of glioblastoma, which is commonly IDH wildtype. The T2-FLAIR mismatch score is 0.81, which is not strongly indicative of IDH mutation (typically associated with a score closer to 1). The presence of ependymal invasion and deep white matter invasion also suggests a more aggressive tumor, consistent with IDH wildtype glioblastoma.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "T2-FLAIR Mismatch Score",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a multifocal, bilateral tumor with significant mass effect and the absence of features typically associated with oligodendroglioma (e.g., calcifications, which are not assessed here) suggest a lower likelihood of 1p/19q co-deletion. IDH wildtype tumors are less likely to have 1p/19q co-deletion. Given the predicted IDH wildtype status, it is reasonable to infer non-codeleted status.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor's characteristics, including its multifocality, significant edema, mass effect (midline shift), ependymal invasion, and deep white matter invasion, are indicative of a high-grade glioma. The predicted IDH wildtype status further supports a diagnosis of glioblastoma, WHO grade 4.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0146"
+}

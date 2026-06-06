@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (24 years), which favors IDH-mutant glioma. The tumor is frontal lobe predominant, which is common in IDH-mutant tumors. Enhancement is mild, which is more typical of IDH-mutant than wildtype. However, the T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0), which strongly supports IDH-mutant astrocytoma. The proportion necrosis is high (24.64%), which is unusual for low-grade IDH-mutant tumors but possible in grade 3 or 4. Overall, evidence supports mutant.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is frontal lobe predominant, which is common in both oligodendroglioma and astrocytoma. However, the T2-FLAIR mismatch sign is present, which is highly specific for IDH-mutant astrocytoma and argues against oligodendroglioma (which typically shows codeletion). The absence of deep white matter invasion and cortical involvement being present do not strongly differentiate. Given the T2-FLAIR mismatch, non-codeleted is favored.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Deep WM invasion",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma. The T2-FLAIR mismatch sign strongly supports this. Grade is challenging: necrosis suggests grade 4, but enhancement is mild and T2-FLAIR mismatch is more typical of grade 2/3. Considering WHO CNS5, necrosis alone does not define grade 4 in IDH-mutant tumors; microvascular proliferation is required. Since no perfusion data is available, grade 3 is assigned with moderate confidence.",
+  "subject_id": "EGD-0577",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor shows necrosis (24.64% proportion), which in IDH-wildtype glioblastoma would indicate grade 4. However, for IDH-mutant tumors, necrosis alone does not upgrade to grade 4 without microvascular proliferation. Enhancement is mild, which is atypical for grade 4. The T2-FLAIR mismatch sign is more common in grade 2/3 astrocytomas. Eloquent involvement (motor) may suggest higher grade but is not definitive. Given absence of perfusion data for microvascular proliferation assessment, grade 3 is assigned.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

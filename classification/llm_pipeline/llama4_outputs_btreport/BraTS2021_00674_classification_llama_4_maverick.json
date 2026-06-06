@@ -1,0 +1,48 @@
+{
+  "id": "patient_0477",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (64 years) and the presence of a multifocal tumor with marked enhancement and necrosis (Proportion Necrosis: 13.53%) are more typical of IDH wildtype glioblastoma. The tumor's aggressive features, such as crossing the midline and deep white matter invasion, also support this classification. IDH mutant gliomas are less likely to present with such aggressive features at this age.",
+      "supporting_features": [
+        "age_years",
+        "Multifocal or Multicentric",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "crosses_ideal_midline",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of a multifocal tumor with marked enhancement and significant necrosis is less typical for 1p/19q codeleted tumors, which are more commonly associated with oligodendrogliomas that typically present with a more indolent course. The aggressive features and the patient's age are more suggestive of a non-codeleted tumor. Additionally, the lack of specific indicators for 1p/19q codeletion in the provided metadata makes it less likely.",
+      "supporting_features": [
+        "age_years",
+        "Multifocal or Multicentric",
+        "Enhancement Quality",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor exhibits aggressive features such as marked enhancement, necrosis (Proportion Necrosis: 13.53%), multifocality, and deep white matter invasion. These characteristics are hallmarks of a high-grade glioma. The presence of necrosis and marked enhancement strongly supports a diagnosis of glioblastoma, which corresponds to CNS WHO grade 4. The tumor's large size and significant edema also support this grading.",
+      "supporting_features": [
+        "Multifocal or Multicentric",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Deep WM invasion",
+        "ED Volume (mL)"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00674"
+}

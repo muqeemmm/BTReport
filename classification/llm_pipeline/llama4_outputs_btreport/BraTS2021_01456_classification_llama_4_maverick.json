@@ -1,0 +1,54 @@
+{
+  "id": "patient_1128",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (30 years) and the presence of cortical involvement, deep white matter invasion, and ependymal invasion are more commonly associated with IDH mutant gliomas in younger adults. However, the presence of marked enhancement and necrosis (Proportion Necrosis: 4.31%) can be seen in both IDH mutant and wildtype gliomas. The tumor's location in the temporal cortex and the presence of ependymal invasion are also consistent with IDH mutant gliomas. Given the age and some imaging features, IDH mutant status is more likely.",
+      "supporting_features": [
+        "age_years",
+        "Cortical involvement",
+        "Deep WM invasion",
+        "Ependymal (ventricular) Invasion",
+        "Tumor Location"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality",
+        "Proportion Necrosis"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's location in the temporal cortex and the presence of cortical involvement are more typical of IDH mutant gliomas. The presence of ependymal invasion and marked enhancement could be seen in both 1p/19q codeleted and non-codeleted tumors. However, given that the tumor is likely IDH mutant (from the first prediction), and considering the cortical involvement and temporal location, it is less likely to be 1p/19q codeleted, as codeleted tumors are more commonly found in the frontal lobe.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.65
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of marked enhancement, necrosis (Proportion Necrosis: 4.31%), and a significant proportion of edema (Proportion of Oedema: 69.33%) are indicative of a high-grade glioma. The tumor's large size (Total tumor volume: 110.182 mL) and the presence of multiple satellites also suggest aggressive features. These characteristics are more typical of WHO grade 4 gliomas. However, the absence of significant midline shift and the tumor being solitary could suggest a slightly lower grade. Nonetheless, the overall imaging features lean towards a high-grade tumor.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "Total tumor volume (mL)",
+        "Multiple satellites present"
+      ],
+      "contradicting_features": [
+        "midline_shift_present",
+        "Multifocal or Multicentric"
+      ],
+      "prediction": 4,
+      "confidence": 0.8
+    }
+  ],
+  "subject_id": "BraTS2021_01456"
+}

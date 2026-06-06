@@ -1,0 +1,34 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "reasoning": "The metadata does not provide direct evidence for IDH mutation status. IDH-mutant gliomas often show frontal lobe preference and cortical involvement, which are present here ('Tumor Location': 'frontal_lobe-cortex region', 'Cortical involvement': 'Present'). However, IDH-mutant gliomas typically have lower grade features and less enhancement. Here, enhancement is mild ('Enhancement Quality': 'Mild') and proportion enhancing is low (2.83%), which could support mutant. But without molecular data or specific sequences like MRS for 2HG, the evidence is insufficient. Given the rules, when evidence is insufficient, confidence must be 0.50-0.60, and for binary tasks confidence must be >=0.50. Since no strong indicators are present, I assign wildtype as a default with low confidence.",
+    "supporting_features": []
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "No metadata fields directly indicate 1p/19q status. Oligodendrogliomas (codeleted) often present with frontal lobe location, cortical involvement, and calcifications (not assessed). However, calcifications are not available, and multifocality ('Multifocal or Multicentric': 'Multifocal') is more common in glioblastoma. Without specific molecular data, evidence is insufficient. Confidence must be 0.50-0.60, and prediction defaults to non-codeleted.",
+    "supporting_features": []
+  },
+  "overall_comment": "The metadata suggests a left frontal lobe glioma with mild enhancement, multifocal lesions, cortical involvement, and motor eloquent area involvement. The high proportion of edema (97.03%) and low proportion of necrosis (0.13%) and enhancing tumor (2.83%) are noted. However, key molecular features are not assessed. Grade prediction relies on enhancement and necrosis: mild enhancement and minimal necrosis suggest lower grade, but multifocality and eloquent involvement may indicate higher grade. Given insufficient evidence for grade, assign WHO grade 4 with low confidence based on multifocality and eloquent involvement, but note conflicting features.",
+  "subject_id": "UCSF-PDGM-243",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Proportion Necrosis: 0.13",
+      "Enhancement Quality: Mild"
+    ],
+    "prediction": 4,
+    "reasoning": "WHO grade 4 gliomas typically show necrosis and robust enhancement. Here, necrosis is minimal ('Proportion Necrosis': 0.13) and enhancement is mild ('Enhancement Quality': 'Mild'), which argue against grade 4. However, multifocality ('Multifocal or Multicentric': 'Multifocal') and involvement of eloquent area ('Eloquent Brain Involvement': 'Motor') are features associated with higher grade gliomas. The total tumor volume is 29.578 mL, which is substantial. Since necrosis is a key criterion for grade 4 but is very low, and enhancement is mild, the evidence is conflicting. Assigning grade 4 based on multifocality and eloquent involvement, but with low confidence due to minimal necrosis.",
+    "supporting_features": [
+      "Multifocal or Multicentric: Multifocal",
+      "Eloquent Brain Involvement: Motor",
+      "Total tumor volume (mL): 29.578"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (27 years old), which is more common in IDH-mutant gliomas. The tumor is located in the temporal-cortex region and involves eloquent areas minimally ('Eloquent Brain Involvement': 'No involvement'), which is typical for IDH-mutant tumors. Enhancement is mild ('Enhancement Quality': 'Mild'), which is more characteristic of lower-grade IDH-mutant gliomas. However, the age is not extremely young, so there is some uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region and involves cortical areas ('Cortical involvement': 'Present'), which is more typical of astrocytomas (non-codeleted) rather than oligodendrogliomas. Oligodendrogliomas often involve frontal lobes and may have calcifications (not assessed here). The absence of deep white matter invasion ('Deep WM invasion': 'Absent') also argues against oligodendroglioma. However, the tumor is midline ('Side of Tumor Epicenter': 'Midline'), which is unusual for both, but temporal location favors astrocytoma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is classified as Astrocytoma, IDH-mutant, CNS WHO grade 2 or 3. Grade cannot be determined precisely due to lack of mitotic activity or necrosis assessment; however, mild enhancement and low ET volume suggest lower grade.",
+  "subject_id": "EGD-0236",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows mild enhancement ('Enhancement Quality': 'Mild') and low enhancing tumor volume (ET Volume: 0.069 mL), which are more characteristic of grade 2 gliomas. However, there is a significant proportion of necrosis (41.08%) which is unusual for grade 2 and suggests grade 4. The absence of deep white matter invasion and ependymal invasion also supports lower grade. Given conflicting evidence, grade 2 is predicted with low confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

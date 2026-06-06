@@ -1,0 +1,39 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Score' is 0.88, and 'T2-FLAIR Mismatch Degree' is 0.38, both indicating a positive T2-FLAIR mismatch. This feature is strongly associated with IDH-mutant gliomas. The tumor's location and other characteristics do not directly contradict this inference.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, the presence of IDH mutation (predicted with high confidence) is a prerequisite for 1p/19q co-deletion. The tumor's characteristics, such as cortical involvement and a relatively well-defined enhancing margin, might be seen in 1p/19q co-deleted tumors, but these are not definitive. The absence of clear indicators for or against co-deletion (like specific imaging features or molecular markers) makes this prediction uncertain.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor shows significant mass effect (midline shift of 3mm), ependymal invasion, and marked enhancement, suggesting a high-grade lesion. The presence of necrosis (Proportion Necrosis: 7.28%) and a large enhancing component also support a higher grade. While the T2-FLAIR mismatch suggests IDH mutation, which is often associated with lower-grade gliomas initially, the presence of necrosis and significant enhancement points towards a higher grade, likely grade 4.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_00136"
+}

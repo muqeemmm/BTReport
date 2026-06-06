@@ -1,0 +1,40 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8081796742179003, indicating a high likelihood of T2-FLAIR mismatch. This feature is strongly associated with IDH mutant gliomas. Additionally, the patient's age (75 years) is not typical for IDH mutant gliomas, which are more common in younger patients, but the imaging features take precedence over age in this context.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH mutant gliomas that are not co-deleted for 1p/19q. The high 'T2-FLAIR Mismatch Score' supports the likelihood of an IDH mutant status, and the absence of specific features like calcifications (not available) or other characteristic features of oligodendrogliomas (e.g., frontal lobe involvement is present but not specific) makes it less likely to be co-deleted. However, the definitive determination of 1p/19q co-deletion status typically requires molecular testing. Given the information available, we lean towards non-codeleted based on the T2-FLAIR mismatch and the typical association of this feature with astrocytomas rather than oligodendrogliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 32.15%) and the marked enhancement quality suggest a high-grade tumor. The large size of the tumor (Total tumor volume: 116.328 mL) and the presence of ependymal invasion also support a higher grade. The age of the patient (75 years) is also more typical for higher-grade gliomas. While the T2-FLAIR mismatch suggests an IDH mutant glioma, which can sometimes be lower grade, the presence of necrosis and other aggressive features points towards a higher grade, likely grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0664"
+}

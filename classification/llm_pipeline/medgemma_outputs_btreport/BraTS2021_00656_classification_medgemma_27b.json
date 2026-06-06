@@ -1,0 +1,42 @@
+{
+  "subject_id": "BraTS2021_00656",
+  "idh": {
+    "reasoning": "The provided metadata lacks definitive features for IDH status. Features like small tumor size, minimal edema, and lack of midline shift are often associated with IDH-mutant gliomas, but these are not present here. The tumor is large (Total tumor volume 124.619 mL), has significant edema (Proportion of Oedema 95.53), and causes midline shift (midline_shift_present: Yes). These features are more commonly seen in IDH-wildtype tumors. However, the presence of multiple lesions (Multifocal or Multicentric: Multifocal) can occur in both IDH-mutant and wildtype tumors. Given the large size, significant edema, and midline shift, IDH-wildtype is slightly more likely, but the evidence is weak without more specific features.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not contain any information regarding 1p/19q co-deletion status. Features like IDH mutation status, age, and specific imaging characteristics (e.g., calcification, which is not available) are typically used to infer this status, but none are provided or strongly suggestive here. Therefore, a prediction cannot be reliably made based on the given data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits features suggestive of a high grade. It is large (Total tumor volume 124.619 mL), multifocal (Multifocal or Multicentric: Multifocal), involves deep white matter (Deep WM invasion: Present), causes midline shift (midline_shift_present: Yes), and has cortical involvement (Cortical involvement: Present). The enhancement quality is mild (Enhancement Quality: Mild), but the proportion enhancing is relatively low (Proportion Enhancing: 3.85). The presence of deep white matter invasion and significant mass effect points towards at least Grade 3 or 4. Given the large size, multifocality, deep invasion, and mass effect without clear features pointing towards Grade 2 (like minimal edema or small size), Grade 4 is the most likely diagnosis based on these structural MRI features alone.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-mutant",
+  "consistency_check_passed": true,
+  "overall_comment": "The model's predictions align with the WHO CNS5 classification criteria based on the provided MRI metadata."
+}

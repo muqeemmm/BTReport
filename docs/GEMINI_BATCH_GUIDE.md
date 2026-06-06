@@ -1,6 +1,6 @@
 # Gemini Batch Classification — Implementation Guide
 
-This document explains how `classify_glioma_gemini.py` works and how to run it.
+This document explains how `classify_glioma_gemini25.py` works and how to run it.
 It is the Gemini counterpart of `classify_glioma_groq.py`: same task, same
 Chain-of-Thought Confidence Elicitation (CoT CE) schema, same metrics — but
 inference goes through Gemini's **asynchronous Batch API** to get the documented
@@ -23,7 +23,7 @@ forces a three-phase design instead of one loop:
 | **metrics** | Score saved outputs against ground truth | identical to Groq |
 
 Because submit and fetch can be minutes-to-hours apart, the job names are saved
-to `gemini_outputs_<json_type>/batch_state.json` so you can submit now and fetch
+to `gemini25_outputs_<json_type>/batch_state.json` so you can submit now and fetch
 later from a separate process.
 
 Key trade-off: batch is **half price and higher throughput**, but **not
@@ -78,7 +78,7 @@ To keep the two models directly comparable, these are copied verbatim:
   `subject_id`.
 - **Output file naming** — `<folder>_classification_<model_slug>.json`, e.g.
   `EGD-0008_classification_gemini_2_5_pro.json`. The metrics reader you already
-  have works unchanged once you point it at `gemini_outputs_<json_type>/`.
+  have works unchanged once you point it at `gemini25_outputs_<json_type>/`.
 
 What changed: the inference layer, the schema representation (JSON Schema →
 Pydantic), and the phased CLI.
@@ -203,7 +203,7 @@ relative to cwd).
 One-shot (submit → poll → fetch → score). Blocks until the job finishes:
 
 ```bash
-python3 classification/llm_pipeline/classify_glioma_gemini.py run \
+python3 classification/llm_pipeline/classify_glioma_gemini25.py run \
     --json-type btreport --model gemini-2.5-pro
 ```
 
@@ -211,17 +211,17 @@ Decoupled (recommended for large cohorts — submit, walk away, collect later):
 
 ```bash
 # 1. fire off the jobs (returns immediately)
-python3 .../classify_glioma_gemini.py submit  --json-type btreport
+python3 .../classify_glioma_gemini25.py submit  --json-type btreport
 
 # 2. check progress any time
-python3 .../classify_glioma_gemini.py status  --json-type btreport
+python3 .../classify_glioma_gemini25.py status  --json-type btreport
 
 # 3. once SUCCEEDED, download + save + score
-python3 .../classify_glioma_gemini.py fetch   --json-type btreport
-python3 .../classify_glioma_gemini.py metrics --json-type btreport
+python3 .../classify_glioma_gemini25.py fetch   --json-type btreport
+python3 .../classify_glioma_gemini25.py metrics --json-type btreport
 ```
 
-Outputs land in `classification/llm_pipeline/gemini_outputs_btreport/`:
+Outputs land in `classification/llm_pipeline/gemini25_outputs_btreport/`:
 per-subject `*_classification_gemini_2_5_pro.json`, `batch_state.json`,
 `timings.csv`, and `metrics.json` — mirroring the Groq output folder so any
 downstream leaderboard code keeps working.

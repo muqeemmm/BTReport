@@ -1,0 +1,39 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of a large, enhancing frontal lobe tumor with cortical involvement and a significant proportion of edema suggests a high-grade glioma. IDH-mutant gliomas are more likely to have a better prognosis and are often associated with certain imaging features such as less aggressive appearance on MRI. However, the given MRI metadata does not directly indicate IDH mutation status. The tumor's location in the frontal lobe and its enhancement quality being 'Marked' could be seen in both IDH mutant and wildtype gliomas. Given the lack of direct evidence, we lean towards the more common type in adult-type diffuse gliomas, which is IDH wildtype for high-grade gliomas.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The 1p/19q co-deletion status is typically associated with oligodendrogliomas, which often present with calcifications and have a more frontal lobe predominance. The given metadata indicates a frontal lobe location, which is consistent with oligodendroglioma. However, without direct evidence of calcification or other specific features of oligodendroglioma, and given that the task is to predict based on available MRI metadata which does not include calcification data, we must be cautious. The presence of a marked enhancement and significant edema could be seen in various types of gliomas.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor has a significant proportion of enhancement (22.41%), necrosis (3.33%), and a large volume of edema (74.26%), indicating a high-grade glioma. The presence of marked enhancement and necrosis is typically associated with higher grades (3 or 4). The total tumor volume is 16.62 mL, with a significant portion being enhancing, which suggests an aggressive tumor. The absence of ependymal invasion and deep white matter invasion might slightly argue against the highest grade, but the overall features lean towards a high-grade tumor.",
+    "supporting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_00705"
+}

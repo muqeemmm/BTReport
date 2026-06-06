@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (36 years) and the tumor's characteristics, such as being largely non-enhancing (Proportion Enhancing: 0.41, Enhancement Quality: Mild) and having a significant proportion of necrosis (Proportion Necrosis: 45.29), are considered. IDH mutant gliomas are more common in younger adults and often have less aggressive imaging features. However, the presence of necrosis and the mild enhancement could suggest a more complex tumor biology. The absence of clear indicators of IDH wildtype (such as high-grade features like significant enhancement or necrosis in a older patient) and the patient's relatively young age lean towards an IDH mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "IDH mutant gliomas can be further classified based on 1p/19q co-deletion status. The tumor's location in the frontal lobe and involvement of the cortex and insula, along with the patient's relatively young age, are factors that could be associated with 1p/19q co-deleted gliomas. However, the absence of specific indicators for 1p/19q co-deletion status in the provided metadata makes this prediction challenging. Given the IDH mutation status prediction, if the tumor follows typical patterns, 1p/19q co-deletion is plausible.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 45.29) and mild enhancement (Enhancement Quality: Mild) are indicators of a higher grade tumor. However, the tumor's overall volume and the extent of edema are not extreme. The presence of necrosis typically indicates a higher grade (3 or 4). Given the patient's age and other tumor characteristics, a grade 3 is plausible if considering an IDH mutant tumor, but the significant necrosis leans more towards a grade 4. However, grade 4 IDH mutant gliomas are less common than grade 3, and typically, the presence of necrosis would be a strong indicator. The final grade prediction must balance these factors.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "subject_id": "EGD-0744"
+}

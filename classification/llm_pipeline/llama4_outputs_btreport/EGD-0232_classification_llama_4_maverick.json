@@ -1,0 +1,46 @@
+{
+  "id": "patient_1241",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (79 years) is significantly higher than the typical age range for IDH-mutant gliomas, which are more common in younger adults. The presence of a large, enhancing tumor with necrosis (22.34% proportion) and significant mass effect (midline shift of 1.3386243386243386 mm) is more characteristic of IDH-wildtype glioblastomas, which are more aggressive and prevalent in older adults. The tumor's location in the frontal lobe and cortex, while not specific, is consistent with glioblastoma. The absence of ependymal invasion and deep white matter invasion does not strongly influence IDH status directly, but the overall imaging profile leans towards a more aggressive, IDH-wildtype tumor.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "mean_shift_mm",
+        "midline_shift_present",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.95
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "IDH-mutant gliomas are more likely to have 1p/19q co-deletion, but given the high likelihood of IDH-wildtype status (as reasoned above), the probability of 1p/19q co-deletion is low. The tumor's imaging characteristics (large, enhancing, necrotic) are not typical for 1p/19q co-deleted tumors, which are often associated with oligodendrogliomas that tend to be more indolent and less likely to show necrosis. Thus, without direct molecular information, the imaging features suggest a non-codeleted status.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.9
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of a large, enhancing tumor with significant necrosis (22.34% proportion), marked enhancement quality, and substantial mass effect (midline shift) strongly suggests a high-grade glioma. The patient's age and the tumor's aggressive imaging features are characteristic of glioblastoma, WHO grade 4. The absence of features typical for lower-grade gliomas (e.g., lack of mention of calcifications, relatively low proportion of edema compared to enhancing and necrotic components) further supports this assessment.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "mean_shift_mm",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.98
+    }
+  ],
+  "subject_id": "EGD-0232"
+}

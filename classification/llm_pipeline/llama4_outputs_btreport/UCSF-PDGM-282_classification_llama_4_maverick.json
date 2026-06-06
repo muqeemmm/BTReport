@@ -1,0 +1,49 @@
+{
+  "id": "patient_0027",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (48 years) and the presence of a mildly enhancing tumor with cortical involvement and deep white matter invasion are more typical of IDH-wildtype gliomas. The absence of ependymal invasion and the tumor being solitary also align with common characteristics of IDH-wildtype glioblastomas. While the enhancement quality is mild, the presence of any enhancement, along with the significant edema and the tumor's location in the parietal-cortex region, supports a more aggressive tumor type, which is often associated with IDH-wildtype status.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Cortical involvement",
+        "Deep WM invasion",
+        "Proportion Enhancing"
+      ],
+      "contradicting_features": [
+        "Proportion of Oedema"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of cortical involvement and the tumor being located in the parietal-cortex region, along with the absence of ependymal invasion, are not typical hallmarks for 1p/19q co-deletion. IDH-mutant, 1p/19q co-deleted tumors often present with more frontal lobe involvement. Given the likely IDH-wildtype status from the first prediction, the probability of 1p/19q co-deletion is low, as this molecular feature is typically associated with IDH-mutant gliomas.",
+      "supporting_features": [
+        "Cortical involvement",
+        "Tumor Location",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.85
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor's characteristics, such as mild enhancement, significant edema (Proportion of Oedema = 97.1%), and deep white matter invasion, along with the patient's age, suggest a high-grade glioma. The absence of necrosis (Proportion Necrosis = 0.0%) might seem atypical for a glioblastoma (WHO grade 4), but the presence of enhancement and significant edema supports a high-grade tumor. Given the likely IDH-wildtype status and the aggressive features, a WHO grade of 4 is plausible.",
+      "supporting_features": [
+        "age_years",
+        "Proportion of Oedema",
+        "Deep WM invasion",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": 4,
+      "confidence": 0.75
+    }
+  ],
+  "subject_id": "UCSF-PDGM-282"
+}

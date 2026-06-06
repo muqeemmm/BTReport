@@ -1,0 +1,46 @@
+{
+  "id": "patient_0161",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (52 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 38.21%) and a significant edema (Proportion of Oedema: 58.94%) are more typical of glioblastoma, which is often IDH wildtype. The tumor's location in the frontal lobe and its solitary nature also align with glioblastoma characteristics. While these features do not directly indicate IDH status, they collectively suggest a more aggressive tumor, which is more likely to be IDH wildtype.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Enhancing",
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of a mildly enhancing tumor with a significant necrotic component (Proportion Necrosis: 38.21%) and the absence of features like ependymal invasion or deep white matter invasion are noted. However, the key predictors for 1p/19q co-deletion status, such as IDH mutation status, are not directly available. Given the tumor's characteristics and the fact that 1p/19q co-deletion is more common in IDH-mutant gliomas, the prediction relies on the likelihood of the tumor being IDH wildtype (as predicted earlier). IDH wildtype tumors are less likely to have 1p/19q co-deletion. Thus, it is reasonable to predict non-codeleted status.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits characteristics such as significant necrosis (Proportion Necrosis: 38.21%), mild enhancement (Enhancement Quality: Mild), and a large edema (Proportion of Oedema: 58.94%). These features, along with the patient's age and the tumor's location, are indicative of a high-grade glioma. The presence of necrosis is particularly suggestive of glioblastoma, which is WHO grade 4. The tumor's size and the involvement of eloquent areas further support the aggressive nature of the tumor.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "Enhancement Quality",
+        "Eloquent Brain Involvement"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0453"
+}

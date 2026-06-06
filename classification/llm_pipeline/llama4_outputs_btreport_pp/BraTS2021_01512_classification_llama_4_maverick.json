@@ -1,0 +1,41 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (69 years) and the presence of a large, necrotic tumor with significant mass effect (n_slices_with_shift = 88, mean_shift_mm = -2.2129032258064516, midline_shift_present = 'Yes') are more typical of glioblastoma, which is often IDH wildtype. The T2-FLAIR mismatch score is 0.8143552621229867, indicating a possible IDH mutation, but this feature is not strongly conclusive on its own. However, the presence of necrosis (Proportion Necrosis = 63.72) and the large tumor size (Total tumor volume = 147.786 mL) are more characteristic of IDH wildtype glioblastoma. Therefore, considering the age and aggressive tumor features, IDH wildtype is more likely.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "midline_shift_present",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of a high T2-FLAIR mismatch score (0.8143552621229867) is suggestive of an IDH-mutant astrocytoma, which is typically non-codeleted. The tumor's aggressive features and the patient's age are not typical for 1p/19q codeleted oligodendrogliomas, which are more commonly seen in younger patients. Therefore, given the likely IDH mutation status is wildtype, and the tumor's characteristics, 1p/19q codeletion is unlikely.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis = 63.72), large size (Total tumor volume = 147.786 mL), and mass effect (midline_shift_present = 'Yes'), which are characteristic features of glioblastoma, a WHO grade 4 tumor. The presence of necrosis is a hallmark of glioblastoma. The patient's age (69 years) also supports this diagnosis, as glioblastoma is more common in older adults.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "subject_id": "BraTS2021_01512"
+}

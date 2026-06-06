@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 45 years old, which is younger than typical for IDH-wildtype glioblastoma. However, the tumor is located in the brainstem, which is more commonly associated with IDH-wildtype tumors like diffuse midline glioma. Enhancement is mild and proportion enhancing is low (0.12), which could suggest a lower-grade tumor but does not strongly indicate IDH status. The absence of necrosis proportion (0.84) might suggest higher grade, but necrosis can occur in both IDH-mutant and wildtype tumors. Overall, brainstem location is a stronger indicator for wildtype.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Diffuse midline glioma, H3 K27-altered",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "1p/19q codeletion is typically associated with oligodendrogliomas, which are supratentorial and rarely occur in midline structures like the brainstem. The tumor location in the brainstem strongly argues against oligodendroglioma and thus against 1p/19q codeletion. No features supporting oligodendroglioma are present.",
+    "supporting_features": [
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the brainstem location and WHO CNS5 classification, this is likely a diffuse midline glioma, H3 K27-altered. However, H3 K27 status cannot be assessed from MRI alone. IDH mutation is unlikely in midline gliomas. Grade is assigned as 4 due to brainstem location and diffuse midline glioma classification.",
+  "subject_id": "EGD-0564",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor is located in the brainstem, which by WHO CNS5 criteria defines diffuse midline glioma as grade 4 regardless of histological features. Mild enhancement and low proportion enhancing (0.12) might suggest lower grade, but the brainstem location overrides this. Proportion necrosis is high (0.84), which is typical for grade 4 tumors.",
+    "supporting_features": [
+      "Tumor Location",
+      "Proportion Necrosis"
+    ]
+  }
+}

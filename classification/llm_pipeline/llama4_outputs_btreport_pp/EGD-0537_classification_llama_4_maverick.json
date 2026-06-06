@@ -1,0 +1,35 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.84126690201582, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in gliomas according to recent studies. The patient's age (38 years) also aligns with the demographic more likely to have IDH mutant gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH mutant astrocytomas rather than oligodendrogliomas, which are more likely to have 1p/19q co-deletion. The strong T2-FLAIR mismatch (score of 0.84126690201582) suggests that this tumor is likely an astrocytoma, making 'non-codeleted' the more probable status. Additionally, the clinical and radiological features do not strongly suggest oligodendroglioma characteristics.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows significant necrosis (Proportion Necrosis: 64.26%) and has a large size (Total tumor volume: 153.026 mL), with a mild enhancement quality and a thickness of enhancing margin >3mm. These features are more characteristic of higher-grade gliomas. The presence of IDH mutation (predicted) typically associates with lower grades (2 or 3) in the WHO CNS5 classification, but the significant necrosis and large size suggest a higher grade. Given the IDH mutant status, a grade of 4 is less common but possible, especially with aggressive features like high necrosis proportion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Thickness of enhancing margin",
+      "IDH Mutation Status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "subject_id": "EGD-0537"
+}

@@ -1,0 +1,37 @@
+{
+  "subject_id": "BraTS2021_00281",
+  "idh": {
+    "reasoning": "The patient is 65 years old. Older age (>60) is associated with IDH-wildtype gliomas, while younger age (<40) is associated with IDH-mutant gliomas. The available metadata does not include features strongly indicative of IDH-mutant status (e.g., low grade, specific location like temporal lobe, absence of necrosis). The presence of deep white matter invasion and cortical involvement are non-specific. Given the patient's age, IDH-wildtype is more likely.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not contain any features that are typically associated with 1p/19q co-deletion, such as IDH mutation (which is required for co-deletion), low grade (WHO grade 2), or specific locations like frontal lobe (though it is present here). The presence of deep white matter invasion and cortical involvement are non-specific regarding co-deletion status. Without information about IDH status or WHO grade, predicting co-deletion status is highly uncertain.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 65 years old, which favors a higher grade glioma. The tumor shows deep white matter invasion and cortical involvement, which are features often seen in higher grades (Grade 3 or 4). The presence of edema crossing the midline suggests significant mass effect and potentially aggressive behavior, often seen in Grade 4 gliomas. The enhancement quality is described as 'Mild', and the proportion enhancing is relatively low (12.19%), which might argue against a highly aggressive Grade 4 GBM, but Grade 3 anaplastic astrocytomas can also have variable enhancement. Given the age, deep invasion, cortical involvement, and midline crossing edema, a Grade 3 or 4 diagnosis is most likely. Without definitive molecular markers (IDH/1p/19q), distinguishing between Grade 3 and Grade 4 based solely on these MRI features is difficult. However, the combination of features leans towards a higher grade.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

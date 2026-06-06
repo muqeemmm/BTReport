@@ -1,0 +1,53 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is present with a high score (0.805) and degree (0.748), which is highly specific for IDH-mutant astrocytomas. The tumor location in frontal lobe and insula is common in IDH-mutant tumors. However, mild enhancement and low proportion enhancing (3.85%) are atypical for IDH-mutant gliomas which usually show minimal enhancement, but the thickness >3mm contradicts typical thin enhancement. The absence of midline shift and young age (47) support IDH-mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "age_years",
+      "midline_shift_present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent speech motor areas and shows frontal lobe predominance, which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often involve non-eloquent frontal lobes. The T2-FLAIR mismatch sign strongly suggests IDH-mutant astrocytoma, which are non-codeleted. However, multifocality and cortical involvement are more common in oligodendrogliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Eloquent Brain Involvement",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The tumor shows classic T2-FLAIR mismatch sign indicating IDH-mutant astrocytoma. Grade 2 is assigned due to low enhancement proportion, absence of necrosis proportion (23.09% is necrotic core volume, not proportion necrosis), and young age. Note: Proportion Necrosis field may misinterpreted; actual necrosis proportion is NCR_volume / total = 21.234/91.961=23.09%, which is high but consistent with grade 4. Correction: WHO grading for IDH-mutant astrocytomas considers histology; here MRI shows necrosis which suggests grade 4. Re-evaluating: ET volume is small (3.541mL), enhancement is mild, but necrosis is present. This is ambiguous. Confidence lowered.",
+  "subject_id": "BraTS2021_01776",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "The presence of necrotic core (NCR volume 21.234mL, Proportion Necrosis 23.09%) strongly suggests grade 4 glioma. However, enhancement is mild with proportion enhancing only 3.85%, and ET volume is small (3.541mL), which are atypical for GBM. The tumor is multifocal with ependymal invasion, supporting high grade. Given conflicting features, grade 4 is assigned with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

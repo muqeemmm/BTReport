@@ -1,0 +1,38 @@
+{
+  "subject_id": "BraTS2021_00213",
+  "idh": {
+    "reasoning": "The patient is 69 years old. Older age (>60) is associated with IDH-wildtype gliomas, while younger age is associated with IDH-mutant gliomas. The MRI metadata does not provide any features strongly suggestive of IDH-mutant status (e.g., low grade features, specific locations like thalamus or optic pathway, or lack of necrosis/enhancement). The presence of marked enhancement and necrosis, while not definitive, are more commonly seen in IDH-wildtype tumors, especially in older patients. Given the age and lack of features pointing towards IDH-mutant status, IDH-wildtype is the more likely prediction.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available MRI metadata provides no information regarding 1p/19q co-deletion status. This requires molecular testing. Therefore, a prediction cannot be reliably made based solely on the provided structural MRI features.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 69 years old with a solitary tumor in the frontal lobe cortex. The tumor exhibits marked enhancement, necrosis (proportion 0.6), and cortical involvement. The total tumor volume is 7.475 mL and the enhancing component constitutes 63.61% of the tumor volume. These features (marked enhancement, necrosis, cortical involvement) are characteristic of high-grade gliomas (WHO grade 4). While some grade 3 gliomas can show enhancement and necrosis, the combination in an older patient points strongly towards grade 4. The absence of deep white matter invasion or ependymal invasion does not exclude a grade 4 diagnosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH-wildtype, non-codeleted glioblastoma (WHO Grade 4)",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older male with a solitary frontal lobe tumor exhibiting marked enhancement and necrosis. These features are highly suggestive of a high-grade glioma (WHO Grade IV). Given the age and lack of features pointing towards IDH mutation, IDH-wildtype status is predicted."
+}

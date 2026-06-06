@@ -1,0 +1,41 @@
+{
+  "subject_id": "BraTS2021_00352",
+  "idh": {
+    "reasoning": "The patient is 86 years old. Older age (>65-70) is strongly associated with IDH-wildtype gliomas. While age alone is not definitive, it significantly increases the likelihood of IDH-wildtype status. No other features in the metadata strongly suggest IDH-mutant status (e.g., younger age, specific location, or imaging characteristics typically associated with lower-grade gliomas). The tumor size (44.17 mL) and marked enhancement are more common in higher-grade tumors, which are more frequently IDH-wildtype in older adults. Therefore, based primarily on the advanced age, the prediction leans towards IDH-wildtype.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "There are no features provided in the metadata that specifically indicate 1p/19q co-deletion status. This status is typically associated with IDH-mutant oligodendrogliomas (WHO grade 2 or 3). Given the prediction of IDH-wildtype based on age, 1p/19q co-deletion is highly unlikely as it is mutually exclusive with IDH-wildtype status in diffuse gliomas according to WHO CNS5 criteria. Therefore, the prediction is non-codeleted.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (86 years) strongly suggests an IDH-wildtype glioma. The tumor volume (44.17 mL) is substantial. The enhancement quality is described as 'Marked', and the proportion enhancing (28.88%) indicates significant vascularity/breakdown of the blood-brain barrier. Cortical involvement is present ('Present'). While deep white matter invasion and ependymal invasion are absent, the combination of advanced age, large tumor size, marked enhancement, and cortical involvement points towards a high WHO grade. In the context of an older adult with likely IDH-wildtype glioma, these features are most consistent with WHO grade 4 (glioblastoma). Grade 2 and 3 are less likely given the age and aggressive features like marked enhancement and large size.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Cortical involvement",
+      "Total tumor volume (mL)",
+      "idh"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

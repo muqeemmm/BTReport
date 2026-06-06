@@ -1,0 +1,37 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (21 years) and the presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 1.0) are strong indicators of IDH mutation. T2-FLAIR mismatch is a known radiological feature associated with IDH-mutant gliomas, particularly in the context of the new WHO CNS5 classification. The tumor's location and other characteristics do not strongly contradict this association.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of IDH mutation is predicted with high confidence. For IDH-mutant gliomas, the presence of 1p/19q co-deletion is a critical factor for further classification. However, the provided MRI metadata does not directly indicate 1p/19q co-deletion status. The tumor's characteristics such as location and enhancement pattern do not strongly suggest or rule out 1p/19q co-deletion. Given the lack of direct evidence, a prediction is made based on the general prevalence and characteristics of IDH-mutant gliomas.",
+    "supporting_features": [
+      "idh_mutation_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "CNS_WHO_grade": {
+    "reasoning": "Given the IDH mutation status is predicted as 'mutant' and 1p/19q co-deletion status as 'non-codeleted', the tumor is likely to be an astrocytoma, IDH-mutant. The presence of necrosis (Proportion Necrosis: 32.19) and the tumor's aggressive features such as ependymal invasion and deep white matter invasion suggest a higher grade. However, the enhancement quality is 'Mild', and there's no mention of high-grade features like significant necrosis or high mitotic activity directly. The age of the patient and the presence of T2-FLAIR mismatch support a diagnosis of a lower-grade glioma initially, but the presence of necrosis and significant mass effect (midline shift) indicate a higher grade, likely grade 4.",
+    "supporting_features": [
+      "idh_mutation_status",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0143"
+}

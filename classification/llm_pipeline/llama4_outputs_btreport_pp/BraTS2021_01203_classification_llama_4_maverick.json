@@ -1,0 +1,44 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8036185581491975, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in gliomas according to the WHO CNS5 classification. The patient's age (52 years) and the tumor's location (temporal lobe, cortex, and insula) are also consistent with the profile of IDH mutant gliomas, although these are not definitive indicators on their own.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutant glioma. For IDH mutant gliomas, the presence of 1p/19q co-deletion is typically associated with oligodendrogliomas. However, the given metadata does not directly indicate 1p/19q co-deletion status. The tumor's location and characteristics (e.g., cortical involvement, deep WM invasion) are not specific enough to conclusively determine 1p/19q status. Given the lack of direct evidence, we must rely on the typical associations: IDH mutant gliomas are more likely to be either astrocytomas (non-codeleted) or oligodendrogliomas (codeleted). The presence of cortical involvement and the tumor's location could be seen in both types. Without molecular or histological evidence, we lean towards the more common type among IDH mutants, which are astrocytomas (non-codeleted).",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows significant mass effect (n_slices_with_shift = 123, mean_shift_mm = 0.7483870967741936, max_shift_mm = 4.0) and has a large volume (Total tumor volume = 67.007 mL, ED Volume = 51.298 mL). The presence of necrosis (Proportion Necrosis = 13.67%) and enhancement (Proportion Enhancing = 9.77%, Enhancement Quality = 'Mild', Thickness of enhancing margin = '>3mm') are indicative of a higher grade. The tumor's characteristics (e.g., significant edema, necrosis, and enhancement) are more typical of a higher-grade glioma. For IDH mutant gliomas, these features are associated with grade 3 or 4. Given the presence of necrosis and significant mass effect, a grade of 4 is plausible. However, the relatively mild enhancement quality might argue against the highest grade. Thus, a grade 4 is considered but with some caution.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01203"
+}

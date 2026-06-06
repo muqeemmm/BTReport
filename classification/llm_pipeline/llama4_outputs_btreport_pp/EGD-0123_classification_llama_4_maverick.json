@@ -1,0 +1,40 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The patient's tumor shows a 'T2-FLAIR Mismatch Score' of 0.4 and a 'T2-FLAIR Mismatch Degree' of -0.6238871162238242, indicating a lack of significant T2-FLAIR mismatch. This feature is often associated with IDH wildtype status in adult-type diffuse gliomas. Additionally, the tumor's 'Enhancement Quality' is 'None', and 'Proportion Enhancing' is 0.0, which aligns more with IDH mutant gliomas but is not conclusive on its own. However, the absence of T2-FLAIR mismatch and the presence of necrosis (Proportion Necrosis: 30.61) are more indicative of an IDH wildtype tumor, which tends to be more aggressive. The age of the patient (45 years) is also within a range where IDH wildtype glioblastomas are more common.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The tumor does not show significant enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0), which is more typical of IDH mutant gliomas. Given that we've predicted IDH mutant status is less likely (predicted IDH wildtype), the co-deletion status is less relevant for the final classification but typically, 1p/19q co-deletion is associated with IDH mutant tumors. The lack of clear indicators for 1p/19q co-deletion (such as specific MRI features that are not directly available) makes it challenging to assert co-deletion status directly from the given metadata. However, given the IDH wildtype prediction, it's less likely to be codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The presence of necrosis ('Proportion Necrosis': 30.61) and a significant tumor volume ('Total tumor volume (mL)': 15.979) with edema crossing the midline ('Edema crosses midline': 'True') are indicative of a high-grade glioma. The lack of enhancement ('Enhancement Quality': 'None') does not necessarily preclude a high grade as some glioblastomas may not enhance. Given the IDH wildtype prediction, the tumor is likely a glioblastoma, which corresponds to WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0123"
+}

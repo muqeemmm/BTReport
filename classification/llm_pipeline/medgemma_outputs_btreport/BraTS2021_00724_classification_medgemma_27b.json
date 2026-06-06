@@ -1,0 +1,44 @@
+{
+  "subject_id": "BraTS2021_00724",
+  "idh": {
+    "reasoning": "The patient is 66 years old. Older age (>60) is associated with IDH-wildtype gliomas. The tumor is large (Total tumor volume 118.619 mL), solitary, and located in the frontal lobe cortex with deep white matter invasion and ependymal invasion. While these features can be seen in both IDH-mutant and IDH-wildtype tumors, the combination of older age and large size leans towards IDH-wildtype status. There are no specific features strongly suggesting IDH-mutant status (e.g., smaller size, specific location like temporal lobe, absence of necrosis). Given the age and size, IDH-wildtype is more probable.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Number of lesions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not include information typically associated with 1p/19q co-deletion, such as specific imaging features (e.g., calcification, cystic changes) or molecular markers (e.g., ATRX loss). The tumor characteristics provided (age 66, large size, deep/ependymal invasion) are more commonly associated with IDH-wildtype tumors, which are typically non-codeleted. While 1p/19q co-deletion is strongly associated with IDH-mutant gliomas (specifically oligodendrogliomas), its absence doesn't rule it out completely in the context of limited data. However, based on the higher likelihood of IDH-wildtype status derived from age and size, the probability of co-deletion is low.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The patient is 66 years old with a large solitary tumor (118.6 mL) involving the frontal lobe cortex with deep white matter invasion and ependymal invasion. The tumor exhibits marked enhancement and significant edema crossing the midline ('Edema crosses midline': 'True'). The presence of deep white matter invasion and ependymal invasion are features associated with higher grades. Given the patient's age, large tumor size, deep/ependymal invasion, and midline crossing edema, a WHO Grade 4 diagnosis is most likely. Grade 2 or 3 are less likely given the aggressive features like significant edema crossing midline and ependymal invasion in an older adult.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "Midline shift present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "integrated_diagnosis": "IDH wildtype diffuse astrocytoma WHO grade IV",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult presenting with a large solitary glioma involving the frontal lobe cortex with deep white matter and ependymal invasion, significant edema crossing the midline, and marked enhancement. These features strongly suggest a high-grade glioma. The patient's age (>60) makes an IDH wildtype glioma more likely than an IDH mutant one. Given the aggressive features including deep/ependymal invasion and midline crossing edema in an older adult, a WHO Grade IV diagnosis is most probable."
+}

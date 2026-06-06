@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 76 years old, which is advanced age typically associated with IDH wildtype gliomas. However, the tumor involves the occipital lobe and cortex, which are less common for IDH wildtype tumors that often affect frontal lobes. The T2-FLAIR mismatch score is 0.4, which is below the typical threshold of 0.8 for IDH mutant astrocytomas, but the mismatch degree is negative, which is atypical. The absence of deep white matter invasion and ependymal invasion also slightly favors IDH mutant. Given the conflicting evidence, IDH mutant is predicted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "integrated_diagnosis": "IDH mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in occipital, parietal, and temporal lobes, which is atypical for oligodendrogliomas that favor frontal lobes. The absence of deep white matter invasion also argues against oligodendroglioma. However, the tumor involves cortex, which is common in oligodendrogliomas. The T2-FLAIR mismatch is absent (score 0.4 < 0.8), which is more typical for oligodendroglioma than astrocytoma. Given the mixed evidence, non-codeleted is predicted with low confidence.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "The evidence is conflicting for both IDH and 1p/19q status. Age strongly suggests IDH wildtype, but other features are atypical. Tumor location is not frontal, making oligodendroglioma less likely. Grade 4 is predicted due to necrosis and enhancement.",
+  "subject_id": "BraTS2021_01459",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis 13.94%) and marked enhancement (Enhancement Quality: Marked), which are features of glioblastoma (grade 4). The proportion enhancing is 40.1%, and the thickness of enhancing margin is >3mm, both supporting high grade. There is no evidence contradicting grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ]
+  }
+}

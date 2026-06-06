@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (71 years) is more typical for wildtype IDH status, as IDH mutant gliomas are more common in younger patients. The tumor's location in the temporal, frontal lobe, cortex, and insula, along with its mild enhancement and absence of ependymal invasion, are consistent with either IDH mutant or wildtype status. However, the presence of deep white matter invasion and the tumor being solitary with no midline crossing by the enhancing region are more typical of glioblastoma, which is often IDH wildtype in this age group. The lack of necrosis (NCR Volume = 0.0 mL) is somewhat atypical but not conclusive. Overall, the age and certain imaging features lean towards IDH wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH mutation is a prerequisite for 1p/19q codeletion. Given the prediction of IDH wildtype status with high confidence, the likelihood of 1p/19q codeletion is extremely low because codeletion is associated with IDH mutant gliomas. Therefore, without needing further evidence, the codeletion status is predicted as non-codeleted.",
+    "supporting_features": [
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "cns_who_grade": {
+    "reasoning": "The patient's age and the tumor's imaging characteristics, such as mild enhancement, presence of deep white matter invasion, and significant edema, are suggestive of a high-grade glioma. The absence of necrosis (NCR Volume = 0.0 mL) is unusual for a glioblastoma (WHO Grade 4), but the overall clinical and radiological picture, including the patient's age and the tumor's aggressive features like deep white matter invasion, supports a high-grade tumor. Given the IDH wildtype status predicted, a WHO Grade 4 is more likely than Grade 2 or 3.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "subject_id": "BraTS2021_00621"
+}

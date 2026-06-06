@@ -1,0 +1,53 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 67 years old, which is more typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger patients. The tumor is midline, which is also more common in IDH-wildtype tumors. Enhancement is mild, which is less specific but can be seen in both. No T2-FLAIR mismatch is present (score 0.4, degree -0.11), which argues against IDH-mutant astrocytoma.",
+    "supporting_features": [
+      "age_years",
+      "Side of Tumor Epicenter",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (speech motor and motor) and shows deep white matter invasion, which are features more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often present with frontal lobe involvement and cortical involvement, but eloquent involvement and deep invasion are less common. The tumor is midline, which is rare for oligodendrogliomas. Enhancement is mild, which can occur in both.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "The tumor is midline, which is unusual for gliomas and may suggest a more aggressive phenotype. The presence of ependymal invasion and midline shift also support a high-grade tumor.",
+  "subject_id": "BraTS2021_00474",
+  "who_grade": {
+    "confidence": 0.95,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis 4.22%), which is a hallmark of glioblastoma (WHO grade 4). Additionally, there is significant edema (88.38% of total tumor volume), midline shift (present with mean shift 1.78mm, max 6mm), and ependymal invasion. Enhancement is present but mild, and the proportion enhancing is low (7.4%), but necrosis is a key feature for grade 4. Age 67 also supports higher grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "midline_shift_present",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "age_years"
+    ]
+  }
+}

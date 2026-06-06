@@ -1,0 +1,38 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (33 years) and the tumor's characteristics (non-enhancing, large edema proportion) are suggestive of an IDH mutant glioma, as IDH mutant gliomas are more common in younger adults and often present with non-enhancing features. The absence of enhancement (Enhancement Quality: 'None', Proportion Enhancing: 0.0) further supports this, as IDH mutant gliomas tend to have less or no enhancement compared to IDH wildtype gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "IDH mutant gliomas are more likely to have 1p/19q co-deletion if they involve the frontal lobe and have a characteristic cortical involvement, among other features. The tumor involves the frontal lobe and cortex, and is located in the insula, which could be suggestive of an oligodendroglioma, a subtype associated with 1p/19q co-deletion. However, the absence of ependymal invasion and the presence of cortical involvement are not exclusive to codeleted tumors. The presence of necrosis proportion (Proportion Necrosis: 0.61) might argue against codeletion, as codeleted tumors tend to have lower necrosis proportions.",
+    "supporting_features": [
+      "Region Proportions",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The high proportion of edema (Proportion of Oedema: 99.39) and the presence of necrosis (Proportion Necrosis: 0.61) are indicative of a high-grade glioma. The absence of enhancement does not necessarily indicate a lower grade, as some high-grade gliomas, particularly IDH mutant ones, may not enhance. The presence of necrosis is a hallmark of glioblastoma (WHO grade 4), but the patient's age and some tumor characteristics (e.g., non-enhancing) might suggest a lower grade. However, given the necrosis proportion, a higher grade is likely.",
+    "supporting_features": [
+      "Proportion of Oedema",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "subject_id": "UCSF-PDGM-300"
+}

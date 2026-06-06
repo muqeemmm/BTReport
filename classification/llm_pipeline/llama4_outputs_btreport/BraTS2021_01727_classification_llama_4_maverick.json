@@ -1,0 +1,48 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (54 years) and the presence of a large, non-enhancing tumor with significant necrosis (Proportion Necrosis: 60.72%) and edema (Proportion of Oedema: 39.28%) are more typical of IDH wildtype glioblastoma, which is common in older adults. The absence of enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) also aligns with a necrotic core, often seen in glioblastoma. While the tumor's location in the right hemisphere involving multiple lobes (temporal, insula, frontal_lobe) and deep structures could be seen in either IDH mutant or wildtype gliomas, the overall profile leans towards an IDH wildtype tumor due to the patient's age and tumor characteristics.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, necrotic tumor with significant cortical involvement and deep white matter invasion, along with the absence of enhancement, is more typical of glioblastoma, which is usually IDH wildtype and non-codeleted. 1p/19q co-deletion is more commonly associated with oligodendrogliomas, which tend to be more frontal, often enhance, and have a better prognosis. The tumor's characteristics and location (involving temporal, insula, and frontal_lobe) do not strongly suggest a codeleted tumor.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "grade": {
+    "reasoning": "The tumor's large size (Total tumor volume: 82.918 mL), significant necrosis (Proportion Necrosis: 60.72%), and the presence of deep white matter invasion are characteristic of high-grade gliomas. The absence of enhancement does not necessarily indicate a lower grade, as glioblastomas can have necrotic centers without enhancement. The clinical and radiological profile is most consistent with a WHO grade 4 tumor, likely glioblastoma given the patient's age and tumor characteristics.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01727"
+}

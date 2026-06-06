@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (70 years) and the presence of a large, enhancing tumor with significant edema and mass effect (midline shift, ventricular asymmetry) are more typical of IDH wildtype glioblastoma. The T2-FLAIR mismatch score is 0.777, which is below the typical threshold for IDH mutant astrocytomas (score > 0.8). The presence of enhancement and necrosis (NCR Volume = 7.9 mL) also argues against IDH mutant status, as IDH mutant gliomas tend to have less necrosis and enhancement. However, the T2-FLAIR mismatch degree is not negligible (0.171), suggesting some degree of mismatch.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "NCR Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, enhancing tumor with significant mass effect and necrosis is more typical of 1p/19q non-codeleted tumors. IDH mutant, 1p/19q codeleted tumors (oligodendrogliomas) tend to have more homogeneous signal intensity and less necrosis. Given the predicted IDH wildtype status, the likelihood of 1p/19q codeletion is very low.",
+    "supporting_features": [
+      "age_years",
+      "NCR Volume (mL)",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (NCR Volume = 7.9 mL), significant enhancement (Enhancement Quality = Mild), and large tumor size with mass effect (midline shift, ventricular asymmetry) are characteristic of WHO grade 4 glioblastoma. The predicted IDH wildtype status further supports this diagnosis.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "idh_status",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00103"
+}

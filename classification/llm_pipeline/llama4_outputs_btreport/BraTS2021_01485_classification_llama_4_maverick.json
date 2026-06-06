@@ -1,0 +1,46 @@
+{
+  "id": "patient_0200",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The tumor is located in the frontal lobe with cortical involvement and is mildly enhancing. The presence of cortical involvement and mild enhancement are more commonly associated with IDH wildtype tumors. The tumor is solitary and does not cross the midline, which is consistent with either IDH mutant or wildtype gliomas. However, the lack of deep white matter invasion and ependymal invasion could be seen in both types. Given the frontal lobe location and cortical involvement, IDH wildtype is more likely.",
+      "supporting_features": [
+        "Cortical involvement",
+        "Enhancement Quality",
+        "Tumor Location"
+      ],
+      "contradicting_features": [
+        "Lesion Sizes APxTVxCC (cm)"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the frontal lobe and involves the cortex. IDH-mutant gliomas with 1p/19q co-deletion often present in the frontal lobe. However, the prediction of IDH mutation status was wildtype, which makes 1p/19q co-deletion less likely since co-deletion is typically associated with IDH mutant tumors. Therefore, non-codeleted is more probable given the likely IDH wildtype status.",
+      "supporting_features": [
+        "Tumor Location",
+        "IDH mutation status prediction"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor shows mild enhancement and has a significant edema volume (38.388 mL) compared to its necrotic and enhancing components. The presence of cortical involvement and eloquent brain involvement suggests an aggressive tumor. The proportion of edema is high (97.89%), indicating significant tumor-related edema. The thickness of the enhancing margin is >3mm, which is indicative of a higher grade. Given these features, a higher grade (4) is likely.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion of Oedema",
+        "Thickness of enhancing margin",
+        "Eloquent Brain Involvement"
+      ],
+      "contradicting_features": [
+        "Lesion Sizes APxTVxCC (cm)"
+      ],
+      "prediction": 4,
+      "confidence": 0.75
+    }
+  ],
+  "subject_id": "BraTS2021_01485"
+}

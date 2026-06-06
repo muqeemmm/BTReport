@@ -1,0 +1,47 @@
+{
+  "id": "patient_0137",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (46 years) and the presence of a multifocal tumor with significant necrosis (Proportion Necrosis: 44.14%) and mild enhancement (Enhancement Quality: Mild) are more commonly associated with IDH wildtype gliomas, which are typically seen in older patients and have more aggressive features. The tumor's location and involvement of deep structures also support this, as IDH wildtype glioblastomas often present with more aggressive imaging characteristics.",
+      "supporting_features": [
+        "age_years",
+        "Multifocal or Multicentric",
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "Given the prediction of IDH wildtype status, the likelihood of 1p/19q co-deletion is low because 1p/19q co-deletion is typically associated with IDH mutant gliomas, particularly oligodendrogliomas. The presence of necrosis and the multifocal nature of the tumor further argue against 1p/19q co-deletion, as these features are less common in co-deleted tumors.",
+      "supporting_features": [
+        "Multifocal or Multicentric",
+        "Proportion Necrosis",
+        "IDH mutation status prediction"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.85
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of significant necrosis (Proportion Necrosis: 44.14%), multifocality, and mild enhancement are characteristic features of glioblastoma, which is WHO grade 4. The tumor's aggressive features, such as deep white matter invasion and involvement of multiple lobes, further support a high-grade tumor. The patient's age and the tumor's imaging characteristics are consistent with a diagnosis of glioblastoma, IDH wildtype, which is classified as WHO grade 4.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Multifocal or Multicentric",
+        "Deep WM invasion",
+        "age_years"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0211"
+}

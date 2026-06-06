@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (39 years) and the tumor's characteristics, such as being located in the frontal lobe, cortex, and insula, with ependymal invasion and deep white matter invasion, are considered. The T2-FLAIR mismatch score is 0.6071730856727252, which is not strongly indicative of an IDH mutant astrocytoma as it is below the typical threshold for a clear mismatch. However, the presence of a relatively low-grade appearance (mild enhancement, no necrosis) could suggest an IDH mutant tumor. The proportion of necrosis is 61.61%, which is high and more commonly associated with IDH wildtype glioblastomas. Given these mixed features, the prediction leans towards 'mutant' due to the patient's relatively young age and the tumor's location, but with caution due to the high necrosis proportion.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in the frontal lobe, cortex, and insula, and has ependymal invasion. The presence of ependymal invasion and the tumor's location could be seen in both codeleted and non-codeleted tumors. However, 1p/19q codeletion is more commonly associated with oligodendrogliomas, which typically show a more favorable prognosis and specific molecular features. The given metadata does not directly indicate 1p/19q codeletion status. Given the lack of direct evidence and the fact that the tumor has a significant necrotic component, which is less typical for codeleted tumors, the prediction leans towards 'non-codeleted'.",
+    "supporting_features": [
+      "Tumor Location",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "cns_grade": {
+    "reasoning": "The tumor has a significant necrotic component (61.61%), which is typically associated with higher-grade gliomas. The presence of ependymal invasion and deep white matter invasion also suggests an aggressive tumor. The enhancement quality is mild, but the presence of necrosis and the large size of the tumor (Total tumor volume = 102.847 mL) are more indicative of a high-grade tumor. Therefore, despite the mild enhancement, the overall features suggest a CNS WHO grade of 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0439"
+}

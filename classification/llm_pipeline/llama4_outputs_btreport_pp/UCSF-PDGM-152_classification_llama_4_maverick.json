@@ -1,0 +1,38 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Score' is 0.7354054592520914, and 'T2-FLAIR Mismatch Present' is 1.0, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in gliomas according to the WHO CNS5 classification. Other features like the patient's age (58 years) and the tumor's characteristics (e.g., location, enhancement quality) are less directly informative for IDH status but are consistent with a glioma diagnosis.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutant status, which is a prerequisite for 1p/19q co-deletion. However, T2-FLAIR mismatch is more commonly associated with IDH-mutant astrocytomas rather than oligodendrogliomas (which typically have 1p/19q co-deletion). The tumor's characteristics, such as being solitary and having marked enhancement, do not strongly indicate 1p/19q co-deletion. Therefore, while IDH mutant status is likely, the likelihood of 1p/19q co-deletion is lower based on the available metadata.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows marked enhancement and has a significant necrotic component (Proportion Necrosis: 17.94%), suggesting a higher grade. The presence of necrosis and the overall tumor characteristics (e.g., enhancement quality, size) are indicative of a more aggressive tumor. IDH mutant gliomas with these features are likely to be classified as CNS WHO grade 4, especially given the presence of necrosis which is a hallmark of glioblastoma, IDH-mutant.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "UCSF-PDGM-152"
+}

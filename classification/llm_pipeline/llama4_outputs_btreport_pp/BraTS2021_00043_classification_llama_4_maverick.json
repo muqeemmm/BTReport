@@ -1,0 +1,43 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Score' is 0.9263285316828105, and 'T2-FLAIR Mismatch Degree' is 1.4615804115624516, both indicating a strong presence of T2-FLAIR mismatch. This feature is strongly associated with IDH mutant gliomas. The patient's age (32 years) also supports the likelihood of an IDH mutant status, as IDH mutations are more common in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH mutation is likely based on the T2-FLAIR mismatch. For codeletion status, the absence of ependymal invasion and the presence of cortical involvement might be considered. However, the direct prediction of 1p/19q codeletion status from the given metadata is not straightforward without specific molecular or histological features. Given the IDH mutant status is likely, and considering the tumor involves the cortex and is located in the temporal lobe, it might lean towards an astrocytic or oligodendroglial lineage. However, without explicit indicators like calcification or specific MRI patterns directly linked to codeletion, we must be cautious. The 'Text Report' mentions 'no ependymal invasion' and 'cortical involvement', which could be seen in both codeleted and non-codeleted tumors. Thus, we lean on the likelihood of IDH mutant status being associated with either astrocytoma or oligodendroglioma, with the latter being codeleted. However, the confidence is not high due to the lack of direct evidence.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor shows significant mass effect with midline shift (mean_shift_mm = 2.7225806451612904, max_shift_mm = 8.0), and involves critical structures. The presence of necrosis (Proportion Necrosis = 7.38%) and enhancement (Proportion Enhancing = 11.42%) with a 'Mild' enhancement quality and 'Thickness of enhancing margin' >3mm suggests a high-grade tumor. The large edema volume (ED Volume = 80.05 mL) and significant tumor volume (Total tumor volume = 98.585 mL) also support a higher grade. The presence of necrosis is particularly indicative of a higher grade, typically grade 4 or aggressive grade 3 tumors. Given the IDH mutant status is likely, and considering the aggressive features, a grade 4 is plausible but the IDH mutation might temper this towards a potentially lower grade within the high-grade category.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_00043"
+}

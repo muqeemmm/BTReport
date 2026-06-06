@@ -1,0 +1,42 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 31 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas often present in younger adults. The tumor is non-enhancing ('Enhancement Quality': 'None'), which is more common in IDH-mutant gliomas. However, the proportion of necrosis is high (72.74%), which is more typical of IDH-wildtype tumors. The presence of ependymal invasion and deep white matter invasion are non-specific. Overall, the younger age and lack of enhancement support IDH-mutant status, but the high necrosis is contradictory.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent brain regions ('Eloquent Brain Involvement': 'Vision'), which is more common in astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas typically present with frontal lobe involvement and calcifications, but calcifications are not assessed here. The tumor location includes temporal, parietal, and occipital lobes, which is less specific. The absence of enhancement does not strongly differentiate. Overall, the eloquent involvement suggests astrocytoma (non-codeleted), but without frontal predominance or calcification data, confidence is low.",
+    "supporting_features": [
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "The reasoning for IDH mutation status is conflicted by high necrosis, lowering confidence. For 1p/19q, the eloquent involvement supports non-codeleted status but without frontal lobe data, confidence is moderate. Grade prediction relies on necrosis proportion and ependymal invasion.",
+  "subject_id": "BraTS2021_01534",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows a high proportion of necrosis (72.74%), which is a feature of glioblastoma (CNS WHO grade 4). Ependymal invasion ('Ependymal (ventricular) Invasion': 'Present') is also associated with higher grade tumors. However, there is no enhancement ('Enhancement Quality': 'None'), which is atypical for grade 4 gliomas that usually show enhancement. The absence of enhancement suggests a lower grade, but the necrosis proportion strongly indicates grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (32 years old), which is more common in IDH-mutant gliomas. The tumor involves the frontal lobe and cortex, which is typical for IDH-mutant tumors. Enhancement is mild, which is more common in IDH-mutant gliomas. However, enhancement is present, which can occur in both mutant and wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "astrocytoma, IDH-mutant, CNS WHO grade 3",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe and cortex, which is more common in astrocytomas (non-codeleted) than oligodendrogliomas (codeleted). However, frontal lobe location can occur in both.",
+    "supporting_features": [
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma. The grade is estimated as 3 due to the presence of enhancement and necrosis, but the proportion of necrosis is relatively low (22.65%) and enhancement is mild, which could also suggest grade 2. Confidence in grade is lower.",
+  "subject_id": "EGD-0553",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor shows mild enhancement and necrosis (22.65%), which are features of grade 3 gliomas. However, the proportion of necrosis is relatively low, and enhancement is mild, which could also be seen in grade 2 tumors. The absence of ependymal invasion and eloquent brain involvement argues against grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

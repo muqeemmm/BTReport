@@ -1,0 +1,50 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is present with a high score (0.883) and degree (0.701), which is highly specific for IDH-mutant astrocytomas. The tumor is non-enhancing (Enhancement Quality: None) and located in the frontal lobe/cortex, consistent with IDH-mutant tumors. However, the patient is young (21 years), which slightly favors IDH-mutant status but is not definitive.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe/cortex (Region Proportions) and shows cortical involvement, which is more typical of astrocytomas than oligodendrogliomas. The absence of enhancement and presence of T2-FLAIR mismatch further support an astrocytic lineage. However, eloquent brain involvement (Speech motor and Motor) is more common in oligodendrogliomas, though not exclusive.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "overall_comment": "The tumor characteristics strongly suggest an IDH-mutant astrocytoma. The T2-FLAIR mismatch sign is a key indicator. Grade 2 is assigned due to absence of necrosis and enhancement, though the large size and edema warrant caution.",
+  "subject_id": "EGD-0160",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "There is no enhancement (Enhancement Quality: None) and no necrosis (ET Volume: 0.0 mL, Proportion Necrosis: 67.8% appears inconsistent but ET=0 suggests no necrosis). The tumor volume is large (41.8 mL) with significant edema (13.5 mL), which may suggest higher grade, but absence of enhancement and necrosis are strong indicators of grade 2. The proportion necrosis field may be misinterpreted; since ET=0, necrosis is absent.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Necrosis"
+    ]
+  }
+}

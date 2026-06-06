@@ -1,0 +1,48 @@
+{
+  "id": "patient_1410",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis (NCR Volume = 11.773 mL, Proportion Necrosis = 14.9%) and significant edema (ED Volume = 36.601 mL, Proportion of Oedema = 46.33%) suggests a high-grade glioma. The tumor's location in the parietal lobe with cortical involvement and deep white matter invasion also supports an aggressive tumor type. IDH-wildtype glioblastomas are more common in adults and tend to be more aggressive. The enhancement quality being 'Marked' and the presence of necrosis are more typical of IDH-wildtype glioblastomas. While there's no direct evidence from the metadata that conclusively determines IDH status, the features suggest a more aggressive tumor, which is more likely to be IDH wildtype.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "NCR Volume (mL)",
+        "Proportion Necrosis",
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Eloquent Brain Involvement"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's significant enhancement and necrosis are less typical of 1p/19q co-deleted tumors, which are more commonly associated with oligodendrogliomas that tend to have a more indolent course. The presence of marked enhancement and necrosis suggests a more aggressive tumor type, which is less characteristic of 1p/19q co-deleted gliomas. While the metadata does not directly assess 1p/19q status, the aggressive features lean towards a non-codeleted status.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "NCR Volume (mL)",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.75
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of a large, enhancing tumor with significant necrosis (NCR Volume = 11.773 mL, Proportion Necrosis = 14.9%) and edema (ED Volume = 36.601 mL) indicates a high-grade glioma. The tumor's marked enhancement and the presence of necrosis are characteristic features of glioblastoma, which is WHO grade 4. The tumor's aggressive features, including cortical involvement and deep white matter invasion, further support a high-grade classification.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "NCR Volume (mL)",
+        "Proportion Necrosis",
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0710"
+}

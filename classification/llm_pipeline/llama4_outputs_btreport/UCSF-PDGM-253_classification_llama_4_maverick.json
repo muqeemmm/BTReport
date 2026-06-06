@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (25 years) and the tumor's location in the temporal lobe are suggestive of a higher likelihood of IDH mutation. The tumor is described as mildly enhancing and involves the cortex, which is consistent with the characteristics of IDH-mutant gliomas. The absence of ependymal invasion and deep white matter invasion also aligns with typical features of IDH-mutant tumors. While the enhancement quality is mild, the presence of enhancement could indicate a higher grade within the IDH-mutant category.",
+    "supporting_features": [
+      "age_years",
+      "Region Proportions",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor's cortical involvement and temporal lobe location are more typical of IDH-mutant gliomas with 1p/19q co-deletion (oligodendrogliomas). The mild enhancement quality is also consistent with this subtype. However, without direct evidence of 1p/19q co-deletion status from the MRI metadata, this prediction relies on associations. The presence of cortical involvement and the tumor's characteristics lean towards a codeleted status, assuming the tumor is IDH-mutant.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Region Proportions",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "Given the presence of enhancement (>3mm thick margin) and a significant proportion of necrosis (10.55%), this suggests a higher grade tumor. The total tumor volume and the presence of edema also support a more aggressive tumor. For IDH-mutant gliomas, these features are more typical of grade 3 or 4. The presence of necrosis is particularly indicative of a higher grade, likely grade 4 if considering the aggressive features, but given the IDH mutation status predicted, it is more likely to be grade 3.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "subject_id": "UCSF-PDGM-253"
+}

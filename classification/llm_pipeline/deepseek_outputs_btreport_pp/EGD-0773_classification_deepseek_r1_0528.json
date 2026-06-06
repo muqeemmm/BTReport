@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (36 years), which is more common in IDH-mutant gliomas. The tumor is located in the frontal lobe and cortex, which are typical for IDH-mutant tumors. Enhancement is mild, and proportion enhancing is low (0.27), which is more consistent with IDH-mutant gliomas. However, T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0), which argues against IDH-mutant astrocytoma. Despite this contradiction, the age and location strongly support IDH-mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (Speech motor and Motor) and has cortical involvement, which are more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Deep white matter invasion is absent, which is more common in oligodendrogliomas, but this absence argues against oligodendroglioma. The frontal lobe location is common in both, but the eloquent involvement and cortical presentation favor astrocytoma.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma without 1p/19q codeletion. The CNS WHO grade is estimated as 2 due to the absence of necrosis and low enhancement, but confidence is moderate due to limited grading features.",
+  "subject_id": "EGD-0773",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows mild enhancement and low proportion enhancing (0.27), which is typical for grade 2 gliomas. Proportion necrosis is reported as 20.54%, which is high and suggests grade 4, but this value may be misinterpreted as necrosis is typically minimal in grade 2. Given the contradiction, confidence is moderate-low.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  }
+}

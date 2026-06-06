@@ -1,0 +1,51 @@
+{
+  "id": "patient_0128",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (50 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 17.54) and edema crossing the midline suggest a more aggressive tumor, which is more commonly associated with IDH wildtype status. The tumor's location in the parietal-cortex region and deep white matter invasion also support this, as IDH wildtype glioblastomas often present with these characteristics. While the absence of ependymal invasion and the presence of cortical involvement are noted, they do not strongly sway the prediction either way. Overall, the evidence leans towards an IDH wildtype status due to the tumor's aggressive features.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Edema crosses midline",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of a mildly enhancing tumor with a significant proportion of necrosis and the absence of ependymal invasion are noted. However, the key determinant for 1p/19q co-deletion status is not directly available in the provided metadata. IDH mutant tumors are more likely to have 1p/19q co-deletion, but given the prediction of IDH wildtype status with high confidence, it is less likely that this tumor is codeleted. Therefore, based on the association between IDH mutation status and 1p/19q co-deletion, and the tumor's characteristics, a non-codeleted status is predicted.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Ependymal (ventricular) Invasion",
+        "IDH mutation status prediction"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 17.54), edema crossing the midline, and deep white matter invasion. The presence of necrosis and the tumor's size (Total tumor volume: 82.875 mL) are particularly indicative of a high-grade tumor. Given these characteristics and the predicted IDH wildtype status, a CNS WHO grade of 4 is most likely, as these features are typical of glioblastoma, IDH wildtype.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Edema crosses midline",
+        "Deep WM invasion",
+        "Total tumor volume (mL)"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0118"
+}

@@ -1,0 +1,52 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years",
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 46 years old, which is younger than typical for IDH-wildtype glioblastoma but overlaps with both IDH-mutant and wildtype age ranges. The tumor location in ventricles is atypical for IDH-mutant gliomas which are usually hemispheric. Enhancement is mild, which is more common in IDH-mutant tumors, but the proportion necrosis is 5.9% which suggests necrosis presence. Eloquent involvement (speech motor) and ependymal invasion are present, favoring wildtype. Multifocality also supports wildtype. However, the absence of strong enhancement and necrosis proportion being low creates uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor location in ventricles is highly atypical for oligodendrogliomas which are typically cortical/subcortical. The tumor crosses midline (edema crosses midline) which is rare in oligodendrogliomas. Enhancement is mild, which can occur in oligodendrogliomas, but the presence of ependymal invasion and deep white matter invasion are not typical. The absence of cortical involvement (though 'Cortical involvement' is present) contradicts oligodendroglioma, but note that 'Deep WM invasion' is present which is common. However, the ventricular location strongly argues against oligodendroglioma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor is midline ventricular with ependymal invasion, multifocal, mild enhancement, and low necrosis proportion. Age 46 is ambiguous. Confidence in IDH wildtype is moderate due to conflicting features. Confidence in non-codeleted is higher due to location.",
+  "subject_id": "EGD-0244",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis 5.9%) which is a hallmark of grade 4 glioma. Enhancement is present but mild, which might suggest lower grade, but necrosis overrides this. Ependymal invasion is present, which is a feature of high-grade tumors. The tumor volume is large (219.984 mL) and multifocal, both associated with grade 4. The proportion of edema is very high (93.71%), typical for GBM. The only contradicting feature is mild enhancement, but necrosis confirms grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric",
+      "Proportion of Oedema"
+    ]
+  }
+}

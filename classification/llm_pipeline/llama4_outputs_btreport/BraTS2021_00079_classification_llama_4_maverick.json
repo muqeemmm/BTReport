@@ -1,0 +1,49 @@
+{
+  "id": "additional_patient_06",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The presence of a large edematous volume (ED Volume = 110.845 mL) and significant tumor volume (Total tumor volume = 115.725 mL) with multifocality and deep white matter invasion suggests an aggressive tumor. IDH-wildtype gliomas are more commonly associated with such aggressive features and higher grades compared to IDH-mutant gliomas. The enhancement quality is mild, but the presence of enhancement and ependymal invasion also points towards a more aggressive nature, which is often seen in IDH-wildtype tumors.",
+      "supporting_features": [
+        "ED Volume (mL)",
+        "Total tumor volume (mL)",
+        "Multifocal or Multicentric",
+        "Deep WM invasion",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "IDH-wildtype gliomas are less likely to have 1p/19q co-deletion. Given the prediction of IDH wildtype status with high confidence, it is reasonable to infer that the tumor is likely non-codeleted. The presence of multifocality and significant edema also aligns more with IDH-wildtype glioblastomas, which are typically non-codeleted.",
+      "supporting_features": [
+        "Multifocal or Multicentric",
+        "ED Volume (mL)",
+        "IDH mutation status prediction"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.85
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The large edematous volume, significant tumor volume, multifocality, and presence of ependymal invasion are indicative of a high-grade glioma. The tumor's aggressive features, such as deep white matter invasion and mild enhancement, are more characteristic of WHO grade 4 tumors. The presence of necrosis (Proportion Necrosis = 0.19) further supports a high-grade classification.",
+      "supporting_features": [
+        "ED Volume (mL)",
+        "Total tumor volume (mL)",
+        "Multifocal or Multicentric",
+        "Deep WM invasion",
+        "Ependymal (ventricular) Invasion",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00079"
+}

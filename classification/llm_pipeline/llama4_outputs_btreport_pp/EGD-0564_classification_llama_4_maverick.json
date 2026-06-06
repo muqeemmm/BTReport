@@ -1,0 +1,37 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.773238810880972, indicating a strong presence of this feature. T2-FLAIR mismatch is a known imaging biomarker associated with IDH-mutant gliomas. The tumor's location in the brainstem and other features such as the absence of ependymal invasion and presence of deep white matter invasion are noted, but the key determinant here is the T2-FLAIR mismatch.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, the presence of IDH mutation (predicted with high confidence) is often associated with either 1p/19q co-deleted or non-co-deleted status. The imaging features provided do not directly indicate 1p/19q co-deletion status. Given the tumor's location in the brainstem and the absence of certain features like cortical involvement, we lean towards a non-codeleted status as brainstem gliomas are less likely to be codeleted. However, this is an inference based on limited information.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The WHO grade of the tumor can be inferred from the available metadata. The presence of necrosis (Proportion Necrosis: 0.84) and the mild enhancement quality suggest a higher grade. The tumor's large edema volume (ED Volume: 21.722 mL) and the presence of deep white matter invasion also support a higher grade. However, the absence of ependymal invasion and the relatively low enhancement volume (ET Volume: 0.027 mL) are noted. Given these features, a grade of 4 is plausible due to the presence of necrosis and significant edema, but the relatively low enhancement might argue against it. A grade of 3 is also possible. However, the presence of necrosis is a strong indicator for a higher grade, leaning towards grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0564"
+}

@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (28 years) and the tumor's characteristics (non-enhancing, large edema volume, and involvement of the cortex) are suggestive of an IDH-mutant glioma. IDH mutations are more common in younger adults and are often associated with lower-grade gliomas that may not show enhancement on MRI. The absence of enhancement and the presence of significant edema are consistent with this profile.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor's location in the temporal cortex and the absence of enhancement are features that can be seen in IDH-mutant gliomas with 1p/19q codeletion (oligodendrogliomas). However, the presence of significant edema and the lack of specific information on calcifications or other characteristic features of oligodendrogliomas make the prediction less certain. Given the IDH mutation status is likely 'mutant', and considering the tumor's characteristics, a codeletion status of 'codeleted' is plausible but not definitive.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor's large edema volume and significant cortical involvement could suggest a higher grade. However, the absence of enhancement, necrosis, and ependymal invasion are more typical of lower-grade gliomas. Given the likely IDH mutation status and possible 1p/19q codeletion, a grade 2 or 3 is plausible. The presence of significant edema might lean towards a grade 3.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "subject_id": "UCSF-PDGM-256"
+}

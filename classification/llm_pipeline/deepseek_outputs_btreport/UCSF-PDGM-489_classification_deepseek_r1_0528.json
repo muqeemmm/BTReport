@@ -1,0 +1,60 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 42 years old, which is younger than typical for IDH-wildtype glioblastoma. However, the tumor shows no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0), no necrosis (Proportion Necrosis: 0.0), and no non-contrast tumor volume (ET Volume: 0.0, NCR Volume: 0.0). These features are atypical for IDH-wildtype gliomas which often show enhancement and necrosis. The presence of ependymal invasion and deep white matter invasion suggests aggressiveness more consistent with IDH-wildtype tumors. The midline location and cortical involvement are non-specific. Given conflicting evidence, IDH-wildtype is predicted with low confidence.",
+    "supporting_features": [
+      "age_years",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-wildtype, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Side of Tumor Epicenter",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is midline (Side of Tumor Epicenter: Midline) and involves cortex (Cortical involvement: Present) and deep white matter (Deep WM invasion: Present). These features are atypical for oligodendrogliomas which are usually hemispheric and cortical. Oligodendrogliomas typically show enhancement and calcifications, but enhancement is absent here. The absence of enhancement and necrosis does not strongly support oligodendroglioma. However, the frontal lobe location is common in oligodendrogliomas. Given the midline location and deep invasion, non-codeleted is predicted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ]
+  },
+  "overall_comment": "The tumor shows aggressive features like ependymal invasion and deep white matter invasion without enhancement or necrosis, suggesting a high-grade glioma. The midline location is unusual for gliomas. Molecular testing is strongly recommended.",
+  "subject_id": "UCSF-PDGM-489",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows ependymal invasion (Ependymal Invasion: Present) and deep white matter invasion (Deep WM invasion: Present), which are features of high-grade gliomas. However, there is no enhancement (Enhancement Quality: None), no necrosis (Proportion Necrosis: 0.0), and no measurable enhancing tumor volume (ET Volume: 0.0). These features are atypical for WHO grade 4 glioblastoma which typically shows ring enhancement and necrosis. The presence of significant edema (ED Volume: 196.818 mL) and midline shift (midline_shift_present: Yes) suggests mass effect consistent with high grade. Given the invasive features but absence of classic imaging hallmarks, CNS WHO grade 4 is predicted with moderate confidence.",
+    "supporting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

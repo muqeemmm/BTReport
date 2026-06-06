@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 28 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor is solitary, located in the frontal lobe cortex, with mild enhancement and no deep white matter invasion, which aligns with IDH-mutant astrocytoma characteristics. However, the age is not definitive.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Tumor Location",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is common for both oligodendrogliomas and astrocytomas. However, the absence of deep white matter invasion and the presence of cortical involvement are more typical of astrocytomas. Oligodendrogliomas often show more calcifications and heterogeneous enhancement, but calcifications are not assessed here. The mild enhancement and frontal location could support oligodendroglioma, but the evidence is not strong.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The young age supports IDH mutation, while the frontal cortical location and mild enhancement are consistent with this subtype. The absence of deep white matter invasion argues against oligodendroglioma. The proportion of necrosis (32.76%) and the presence of enhancement suggest a higher grade, likely CNS WHO grade 4. Confidence is moderate due to limited molecular markers.",
+  "subject_id": "EGD-0233",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows a high proportion of necrosis (32.76%), which is a hallmark of glioblastoma (CNS WHO grade 4). Additionally, there is enhancement (71% proportion enhancing) with a thick enhancing margin (>3mm). However, the tumor volume is moderate (54.726 mL), and the patient is young, which might suggest a lower grade, but necrosis strongly indicates grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing"
+    ]
+  }
+}

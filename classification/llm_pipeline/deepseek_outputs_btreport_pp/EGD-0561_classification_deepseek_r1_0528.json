@@ -1,0 +1,51 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 43 years old, which is younger than the typical age for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. However, the absence of necrosis and minimal enhancement are atypical for IDH-wildtype tumors. The T2-FLAIR mismatch sign is absent (score 0.4, degree -0.19), which is more common in IDH-mutant astrocytomas. The tumor is solitary, frontal lobe, cortical involvement without deep white matter invasion, which aligns with IDH-mutant characteristics. But the age is borderline, and enhancement is present though mild.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is common for oligodendrogliomas that are 1p/19q codeleted. However, the absence of calcifications (not assessed) and the presence of cortical involvement without deep white matter invasion may suggest astrocytoma. The enhancement is mild, which is less typical for oligodendrogliomas that often show minimal enhancement. The T2-FLAIR mismatch sign is absent, which is more common in IDH-mutant astrocytomas than oligodendrogliomas. But without specific features like calcifications, the evidence is weak.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "overall_comment": "The tumor is IDH-mutant astrocytoma with CNS WHO grade 4. Confidence is low due to limited molecular features.",
+  "subject_id": "EGD-0561",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows mild enhancement and minimal necrosis (Proportion Necrosis 1.51%), which are atypical for grade 4 glioblastoma. However, the presence of any enhancement and necrosis, however small, suggests higher grade. The tumor volume is 4.445 mL, which is small for a glioblastoma. The WHO grade 4 is assigned based on the presence of necrosis, even if minimal, and enhancement. But the small size and mild enhancement lower confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ]
+  }
+}

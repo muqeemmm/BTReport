@@ -1,0 +1,53 @@
+{
+  "id": "patient_0814",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (70 years) and the presence of a large, enhancing tumor with necrosis (NCR Volume: 22.889 mL, ET Volume: 35.912 mL, Proportion Necrosis: 13.49%) are more typical of IDH wildtype glioblastoma, which is common in older adults. The tumor's aggressive features, such as significant mass effect (midline shift present, max shift: -10mm), ependymal invasion, and deep white matter invasion, also support this prediction. IDH mutant gliomas are less likely given the patient's age and the tumor's aggressive imaging characteristics.",
+      "supporting_features": [
+        "age_years",
+        "NCR Volume (mL)",
+        "ET Volume (mL)",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "max_shift_mm",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.95
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect is more typical of IDH wildtype glioblastoma or IDH mutant astrocytoma rather than 1p/19q codeleted oligodendroglioma. The lack of specific features characteristic of oligodendroglioma (e.g., calcifications, which are not assessable with the available sequences) and the tumor's aggressive features argue against 1p/19q codeletion. Given the likely IDH wildtype status (from the first prediction), 1p/19q codeletion is highly unlikely.",
+      "supporting_features": [
+        "age_years",
+        "NCR Volume (mL)",
+        "ET Volume (mL)",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "max_shift_mm"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.9
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor's aggressive imaging features, including large size (Total tumor volume: 169.679 mL), significant necrosis (NCR Volume: 22.889 mL, Proportion Necrosis: 13.49%), marked enhancement, ependymal invasion, and deep white matter invasion, are characteristic of a high-grade glioma. The presence of necrosis and significant enhancement is more typical of WHO grade 4 tumors. The patient's age and the tumor's aggressive features further support this grading.",
+      "supporting_features": [
+        "Total tumor volume (mL)",
+        "NCR Volume (mL)",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.95
+    }
+  ],
+  "subject_id": "BraTS2021_00300"
+}

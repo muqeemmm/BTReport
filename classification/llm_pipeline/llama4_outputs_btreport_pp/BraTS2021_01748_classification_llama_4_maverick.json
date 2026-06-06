@@ -1,0 +1,41 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The patient's age (51 years) and the presence of a large, enhancing, and necrotic tumor with significant mass effect (midline shift, ventricular asymmetry) suggest a high-grade glioma. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.5904997019898827, T2-FLAIR Mismatch Degree: 0.13834620910132678) argues against an IDH-mutant tumor, as T2-FLAIR mismatch is a characteristic feature of IDH-mutant astrocytomas. The presence of necrosis (Proportion Necrosis: 40.1%) and enhancement (Proportion Enhancing: 8.42%) further supports a diagnosis of a more aggressive tumor, typically associated with IDH wildtype status in adult-type diffuse gliomas.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect, along with the absence of T2-FLAIR mismatch, suggests a high-grade glioma. IDH wildtype tumors are more likely to be either astrocytoma or glioblastoma. The lack of specific features like oligodendroglial morphology or classic 'butterfly' pattern makes it difficult to predict 1p/19q co-deletion directly from the given metadata. However, given the likely IDH wildtype status (from the first prediction), 1p/19q co-deletion is less likely as it is more commonly associated with IDH-mutant oligodendrogliomas.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 40.1%), enhancement (Proportion Enhancing: 8.42%), and mass effect (midline shift, ventricular asymmetry), which are characteristic features of high-grade gliomas. The presence of necrosis is particularly indicative of glioblastoma, WHO grade 4. The large size of the tumor and its aggressive features further support this classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01748"
+}

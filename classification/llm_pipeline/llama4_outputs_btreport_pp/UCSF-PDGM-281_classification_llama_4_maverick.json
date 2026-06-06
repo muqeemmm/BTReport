@@ -1,0 +1,41 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's MRI metadata shows a non-enhancing tumor with a significant edema volume (51.196 mL) and no enhancement. The T2-FLAIR mismatch score is 0.5469058397636583, which is not strongly indicative of a T2-FLAIR mismatch. However, the presence of a non-enhancing tumor with significant edema and involvement of multiple lobes (cortex, insula, temporal, and frontal lobe) could suggest a lower-grade glioma, which is more likely to be IDH mutant. The age of the patient (46 years) is also within a range where IDH mutations are relatively more common. However, the absence of a clear T2-FLAIR mismatch, a feature often associated with IDH mutant astrocytomas, introduces uncertainty. Therefore, while the features are not strongly indicative, they lean slightly towards an IDH mutant status due to the non-enhancing nature and the patient's age.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor is described as non-enhancing and involves multiple regions including the cortex, insula, temporal, and frontal lobe. The absence of enhancement and significant edema suggests a lower-grade glioma. IDH mutant gliomas can be either 1p/19q codeleted (oligodendrogliomas) or non-codeleted (astrocytomas). The presence of cortical involvement and a relatively well-defined tumor (as suggested by the boundary sharpness) might be seen in oligodendrogliomas, which are more likely to be 1p/19q codeleted. However, the lack of specific MRI features that are strongly associated with 1p/19q codeletion (such as calcifications, which are not available in the metadata) makes this prediction uncertain. Given the uncertainty and the absence of strong evidence, the prediction leans towards non-codeleted due to the slightly higher prevalence of IDH mutant astrocytomas among adult-type diffuse gliomas.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor is non-enhancing, has a significant edema volume, and involves multiple lobes. These features can be seen in lower-grade gliomas. The absence of enhancement and necrosis suggests a lower grade. However, the significant edema and involvement of multiple regions could also be seen in higher-grade gliomas. The patient's age and the tumor's characteristics do not strongly indicate a high-grade glioma (grade 4), as there is no enhancement or necrosis. Grade 2 and 3 gliomas are possible, but the lack of clear indicators such as T2-FLAIR mismatch or specific molecular information makes the distinction challenging. Given the non-enhancing nature and the significant edema, a grade 2 or 3 is plausible. The confidence in distinguishing between grade 2 and 3 is low due to the lack of specific features that would strongly support one over the other.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Proportion Enhancing",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.55
+  },
+  "subject_id": "UCSF-PDGM-281"
+}

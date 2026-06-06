@@ -1,0 +1,51 @@
+{
+  "id": "patient_0537",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (69 years) and the presence of a large, enhancing tumor with necrosis (Proportion Necrosis: 21.98%) and significant mass effect (midline shift present, asymmetrical ventricles, effaced ventricle) are more typical of IDH wildtype glioblastoma, which is common in older adults. The tumor's aggressive features, such as ependymal invasion and marked enhancement, also support this prediction. IDH mutant gliomas are more commonly associated with younger patients and less aggressive features.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "Asymmetrical Ventricles",
+        "Effaced Ventricle",
+        "Ependymal (ventricular) Invasion",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect, along with the patient's age, is more typical of glioblastoma, which is usually IDH wildtype and non-codeleted. The absence of features typical for 1p/19q codeleted tumors (e.g., oligodendroglioma-like features) and the presence of necrosis and marked enhancement argue against 1p/19q codeletion. However, the frontal lobe location could be seen in both codeleted and non-codeleted tumors.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Tumor Location"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 21.98%), marked enhancement, ependymal invasion, and substantial mass effect (midline shift, asymmetrical ventricles). These characteristics are typical of a high-grade glioma. The presence of necrosis and the large size of the tumor are particularly indicative of WHO grade 4.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion",
+        "midline_shift_present",
+        "Asymmetrical Ventricles"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00756"
+}

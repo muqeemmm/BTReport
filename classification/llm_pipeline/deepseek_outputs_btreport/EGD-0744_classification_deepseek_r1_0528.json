@@ -1,0 +1,43 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 36 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor involves eloquent cortex (speech motor) which is more common in lower grade gliomas that are often IDH-mutant. However, the age is not definitive as IDH-wildtype can occur in younger patients.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe and involves cortex and insula, which is typical for astrocytomas. Oligodendrogliomas often involve frontal lobes but also frequently involve deep white matter, which is absent here. The lack of deep white matter invasion argues against oligodendroglioma. However, frontal location alone is not definitive.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The grade is estimated as WHO grade 2 due to low enhancement and small enhancing volume, but confidence is moderate due to lack of key sequences.",
+  "subject_id": "EGD-0744",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows mild enhancement and a thick enhancing margin (>3mm), which is atypical for high-grade gliomas that usually have irregular thin enhancement. The proportion of necrosis is high (45.29%) which is concerning for higher grade, but without diffusion/perfusion data it's difficult to confirm true necrosis. The small ET volume (0.043mL) suggests limited enhancement. Overall features are ambiguous for grading.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "ET Volume (mL)"
+    ]
+  }
+}

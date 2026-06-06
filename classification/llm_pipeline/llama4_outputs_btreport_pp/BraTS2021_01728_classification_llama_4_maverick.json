@@ -1,0 +1,50 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (66 years) and the presence of a large, necrotic, mildly enhancing tumor with significant mass effect (midline shift of 2.264 mm, n_slices_with_shift = 116) and ependymal invasion are more typical of glioblastoma, IDH-wildtype. The lack of T2-FLAIR mismatch (T2-FLAIR Mismatch Score = 0.39836914399061335, which is not indicative of mismatch) also argues against IDH-mutant astrocytoma. The presence of necrosis (Proportion Necrosis = 49.71%) further supports a high-grade tumor, typically IDH-wildtype glioblastoma in this age group.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "median_shift_mm",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, necrotic, and enhancing tumor with significant mass effect and ependymal invasion, along with the patient's age, is typical of glioblastoma. 1p/19q co-deletion is more commonly associated with oligodendrogliomas, which are less likely given the patient's age and the tumor's imaging characteristics (e.g., presence of necrosis, enhancement). The lack of T2-FLAIR mismatch also makes IDH-mutant astrocytoma less likely, and by extension, a tumor with 1p/19q co-deletion is even less likely.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "cns_grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis = 49.71%), is large (Total tumor volume = 111.386 mL), and has a significant mass effect (midline shift present). These features are characteristic of high-grade gliomas. The presence of necrosis is particularly indicative of glioblastoma, WHO grade 4. The patient's age (66 years) also supports this diagnosis, as glioblastoma is more common in older adults.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "n_slices_with_shift"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "subject_id": "BraTS2021_01728"
+}

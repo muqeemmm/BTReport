@@ -1,0 +1,47 @@
+{
+  "id": "patient_0601",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The tumor is located in the frontal lobe, cortex, and insula, and is described as mostly enhancing with a significant proportion of necrosis. The presence of necrosis and the enhancement quality being 'Marked' are more commonly associated with IDH wildtype tumors, which are typically more aggressive. The tumor's location and enhancement pattern are consistent with a higher-grade glioma, which is more likely to be IDH wildtype.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Necrosis",
+        "Tumor Location",
+        "Region Proportions"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor involves the frontal lobe and insula, and has a significant cortical involvement. IDH-mutant tumors with 1p/19q co-deletion often involve the frontal lobe. However, given the prediction of IDH wildtype status, the likelihood of 1p/19q co-deletion is low because 1p/19q co-deletion is typically associated with IDH-mutant tumors.",
+      "supporting_features": [
+        "Tumor Location",
+        "Region Proportions",
+        "IDH mutation status"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.85
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor has a significant proportion of necrosis (35.96%), marked enhancement, and a large size (Total tumor volume = 88.104 mL). These features are indicative of a high-grade glioma. The presence of necrosis and the enhancement pattern are more typical of glioblastoma, which is WHO grade 4. The tumor's aggressive features, such as significant necrosis and marked enhancement, support a higher grade.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Total tumor volume (mL)",
+        "Lesion Sizes APxTVxCC (cm)"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "UCSF-PDGM-182"
+}

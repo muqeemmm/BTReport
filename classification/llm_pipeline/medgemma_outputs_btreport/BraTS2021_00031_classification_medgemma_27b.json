@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_00031",
+  "idh": {
+    "reasoning": "The patient is 56 years old. Older age (>50) is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in this age group. The tumor is solitary, involves deep white matter, shows cortical involvement, and has ependymal invasion. These features are common in both IDH-mutant and IDH-wildtype tumors. The tumor is midline, which is more common in IDH-wildtype tumors, but not exclusive. The enhancement quality is mild, and the proportion enhancing is low (5.97%). Low enhancement can be seen in both types, but very low enhancement might slightly favor IDH-wildtype. However, the available data lacks definitive features like necrosis proportion (2.37% is low but not specific), diffusion restriction (not available), or perfusion characteristics (not available). Given the age and midline location as the only suggestive features against IDH-mutant status, and the lack of strong positive indicators for either type based solely on morphology and location from standard MRI sequences, predicting IDH status with high confidence is difficult. I will predict wildtype based on age and midline location being more typical for wildtype, but acknowledge the uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Side of Tumor Epicenter"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 56 years old. 1p/19q co-deletion is almost exclusively found in younger patients (<40-50 years) with IDH-mutant astrocytomas (oligodendrogliomas). Given the patient's age of 56, the likelihood of 1p/19q co-deletion is very low. While not impossible, it's highly improbable in this age group. No other features in the metadata provide information relevant to 1p/19q status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient has a solitary tumor with cortical involvement ('Cortical involvement': 'Present'), deep white matter invasion ('Deep WM invasion': 'Present'), and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'). The tumor crosses the midline with edema ('Edema crosses midline': 'True') and causes significant mass effect ('midline_shift_present': 'Yes', 'Asymmetrical Ventricles': 'Present', 'Effaced Ventricle': 'Right'). The tumor involves eloquent brain regions ('Eloquent Brain Involvement': 'Speech motor, Motor and Vision'). These features suggest aggressive behavior. The presence of deep white matter invasion and ependymal invasion are characteristic of high-grade gliomas (Grade 3 or 4). While the enhancement quality is mild ('Enhancement Quality': 'Mild') and proportion enhancing is low (5.97%), these findings alone do not rule out a high grade, especially given the extensive infiltration described by other features. The combination of deep white matter invasion, ependymal invasion, midline crossing edema, mass effect, and involvement of eloquent structures points towards a WHO Grade 4 glioma (glioblastoma). Although IDH status isn't confirmed here (predicted wildtype), even IDH-wildtype gliomas can be Grade 4.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

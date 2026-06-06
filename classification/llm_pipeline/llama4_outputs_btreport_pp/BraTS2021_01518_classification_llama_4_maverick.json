@@ -1,0 +1,39 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7486008043095405, indicating a significant mismatch. This feature is strongly associated with IDH mutant gliomas. Additionally, the patient's age (33 years) is relatively young for a wildtype glioma, further supporting the likelihood of an IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of a significant T2-FLAIR mismatch, as indicated by the 'T2-FLAIR Mismatch Present' and 'T2-FLAIR Mismatch Score', is more commonly associated with IDH-mutant astrocytomas rather than oligodendrogliomas. While not definitive, this suggests a lower likelihood of 1p/19q co-deletion. Additionally, the clinical and radiological features do not strongly suggest the typical profile of an oligodendroglioma (e.g., calcifications are not mentioned).",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 48.33%) and has a large necrotic volume, which is typically associated with higher-grade gliomas. The presence of midline shift and significant edema also suggests a high-grade tumor. While the enhancement quality is 'Mild', the presence of any enhancement, along with the large size and aggressive features (e.g., ependymal invasion, deep white matter invasion), supports a high-grade classification. IDH-mutant glioblastomas (WHO Grade 4) are a consideration in this age group, especially given the presence of necrosis and significant mass effect.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "n_slices_with_shift",
+      "midline_shift_present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01518"
+}

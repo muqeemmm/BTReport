@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 40 years old, which is younger than typical for IDH-wildtype glioblastoma. However, there is no enhancement (Enhancement Quality: None) and no necrosis (Proportion Necrosis: 0.0), which are more common in IDH-mutant gliomas. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present: 0.0), which argues against IDH-mutant astrocytoma. The tumor involves eloquent cortex (Eloquent Brain Involvement: Motor) and is midline, which are non-specific. Overall, the absence of T2-FLAIR mismatch and lack of enhancement suggest IDH-wildtype, but the young age is contradictory.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves cortex (Cortical involvement: Present) and eloquent areas (Eloquent Brain Involvement: Motor), which is more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often have calcifications, but we cannot assess that. The tumor is solitary and frontal, which could support oligodendroglioma, but cortical involvement argues against it. There is insufficient evidence for 1p/19q co-deletion prediction.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "Insufficient evidence for confident molecular subtyping. Consider additional molecular testing.",
+  "subject_id": "UCSF-PDGM-255",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has no enhancement (Enhancement Quality: None) and no necrosis (Proportion Necrosis: 0.0), which are atypical for grade 4 glioblastoma. However, the tumor involves eloquent cortex (Eloquent Brain Involvement: Motor) and has significant edema (ED Volume: 1.875 mL). The WHO grade cannot be determined confidently from imaging alone without enhancement or necrosis. Given the eloquent involvement and edema, grade 4 is possible but not definitive.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "ED Volume (mL)"
+    ]
+  }
+}

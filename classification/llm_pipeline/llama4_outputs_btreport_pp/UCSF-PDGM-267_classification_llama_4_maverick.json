@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (45 years) and the tumor's characteristics (non-enhancing, solitary, no ependymal invasion, deep white matter invasion present) are considered. The 'T2-FLAIR Mismatch Score' is 0.6734021305666743, which is not strongly indicative of a T2-FLAIR mismatch. However, the absence of enhancement and the presence of edema are features that can be seen in IDH-mutant gliomas. The tumor's location and involvement of deep structures also suggest a diffuse glioma. Given these features, an IDH mutation is plausible. However, the lack of a clear T2-FLAIR mismatch (score is not high enough to be definitive) and other specific indicators means the prediction is not straightforward.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, IDH-mutant gliomas can be further classified based on their 1p/19q status. Given that we've predicted IDH mutation status as 'mutant' with some confidence, we need to consider features that might suggest co-deletion. The tumor's location in the frontal lobe and insula, and its non-enhancing nature, could be compatible with an oligodendroglioma, which is typically IDH-mutant and 1p/19q co-deleted. However, without more specific imaging features or molecular information, this remains uncertain.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.55
+  },
+  "grade": {
+    "reasoning": "To predict the CNS WHO grade, we consider the tumor's characteristics. The tumor is non-enhancing, has a significant edema volume (51.697 mL), and involves deep structures. The absence of enhancement and necrosis suggests a lower grade. However, the presence of significant edema and deep structure involvement could indicate a higher grade. Given the IDH mutation status is predicted as 'mutant', and considering the tumor's characteristics, a grade 2 or 3 is plausible. The lack of enhancement and necrosis leans towards a lower grade, but the significant edema volume is a concerning feature.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-267"
+}

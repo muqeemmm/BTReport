@@ -1,0 +1,45 @@
+{
+  "id": "patient_0050",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (34 years) and the absence of enhancement on MRI (Enhancement Quality: 'None', Proportion Enhancing: 0.0) are suggestive of an IDH-mutant glioma, as IDH-mutant gliomas are more common in younger adults and often present without enhancement. The tumor's location in the temporal lobe (Region Proportions: 'temporal', 0.37480232954393167) also supports this, as IDH-mutant gliomas frequently occur in this region. The presence of cortical involvement and deep white matter invasion could be seen in various glioma subtypes but is consistent with an IDH-mutant profile.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "Region Proportions"
+      ],
+      "contradicting_features": [],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The absence of enhancement and the tumor's location in the temporal lobe, along with cortical involvement, could suggest an IDH-mutant glioma. IDH-mutant gliomas can be further divided into 1p/19q co-deleted (oligodendrogliomas) and non-co-deleted (astrocytomas). The presence of cortical involvement is more typical of 1p/19q co-deleted tumors. However, the lack of specific features like calcifications (not assessed here) makes this prediction challenging. Given the available information, a 1p/19q co-deleted status is plausible but not strongly supported.",
+      "supporting_features": [
+        "Cortical involvement",
+        "Region Proportions"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.6
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor is non-enhancing (Enhancement Quality: 'None'), which is more typical of lower-grade gliomas. The presence of significant edema (ED Volume: 142.151 mL, Proportion of Oedema: 100.0) and mass effect (midline_shift_present: 'Yes', mean_shift_mm: 2.167741935483871) could indicate a higher grade. However, the absence of necrosis (Proportion Necrosis: 0.0) and enhancement argues against a high-grade glioma (Grade 4). The clinical and radiological features are most consistent with a Grade 2 or 3 glioma. Given the patient's age and the tumor's characteristics, a Grade 2 glioma is plausible.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "ED Volume (mL)",
+        "midline_shift_present",
+        "mean_shift_mm",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [],
+      "prediction": 2,
+      "confidence": 0.7
+    }
+  ],
+  "subject_id": "UCSF-PDGM-473"
+}

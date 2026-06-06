@@ -1,0 +1,41 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Score' is 0.9240585323387422, which is a strong indicator. Additionally, the patient's age (71 years) is more typical for wildtype gliomas, but the imaging features take precedence over age in this context. The T2-FLAIR mismatch feature is a known marker for IDH-mutant gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.9
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutation, which is a prerequisite for 1p/19q co-deletion. However, the absence of specific features like 'T1-Gd' characteristics or other molecular markers makes it challenging to directly infer 1p/19q co-deletion status. Given the IDH mutant status predicted, we look for other clues. The tumor's location and characteristics (e.g., frontal lobe involvement) are more typical of 1p/19q co-deleted tumors. However, without direct evidence or more specific markers, the confidence remains moderate.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows significant mass effect (midline shift present, 'n_slices_with_shift': 109), large size (ED Volume: 234.188 mL, Total tumor volume: 287.701 mL), and necrosis (Proportion Necrosis: 5.61%). These features are indicative of a high-grade glioma. The presence of enhancement (Enhancement Quality: Mild, Proportion Enhancing: 12.99%) and ependymal invasion also supports a higher grade. Given the IDH mutant status, these aggressive features suggest a grade 3 or 4 tumor. The presence of necrosis and significant mass effect leans towards grade 4.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "midline_shift_present",
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0062"
+}

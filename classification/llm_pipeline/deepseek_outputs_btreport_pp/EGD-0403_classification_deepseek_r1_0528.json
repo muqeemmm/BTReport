@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high mismatch degree (0.628), which is highly specific for IDH-mutant astrocytomas. The tumor is located in the frontal lobe cortex, which is common in IDH-mutant gliomas. Enhancement is mild, which is more typical for IDH-mutant than wildtype tumors. However, mild enhancement can occur in both, so this slightly contradicts.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Degree",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "IDH-mutant gliomas without 1p/19q co-deletion are astrocytomas. The T2-FLAIR mismatch sign strongly suggests IDH-mutant astrocytoma, which are non-codeleted. The tumor involves cortex (Cortical involvement: Present) and eloquent motor area, which is more common in astrocytomas than oligodendrogliomas. However, frontal lobe location can be seen in both, so this is a weak contradiction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "Based on T2-FLAIR mismatch sign and location, high confidence for IDH-mutant astrocytoma (non-codeleted). Grade 2-3 possible but grade 4 unlikely due to low enhancement and necrosis proportion.",
+  "subject_id": "EGD-0403",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor shows mild enhancement (Enhancement Quality: Mild) and low proportion of necrosis (10.19%), which is below the typical threshold for glioblastoma (grade 4). However, the presence of any necrosis (>0%) suggests at least grade 3. The tumor volume is large (64.274 mL), which is more typical of grade 3-4. Eloquent involvement (Motor) may indicate aggressiveness but is not grading criteria. Overall, grade 3 is most likely, but grade 2 cannot be ruled out due to low necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

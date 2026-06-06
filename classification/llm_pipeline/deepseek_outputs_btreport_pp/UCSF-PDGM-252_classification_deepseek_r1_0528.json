@@ -1,0 +1,51 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Eloquent Brain Involvement",
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (35 years), which is more common in IDH-mutant gliomas. There is no enhancement ('Enhancement Quality': 'None'), which is more typical of IDH-mutant tumors. The T2-FLAIR mismatch sign is absent ('T2-FLAIR Mismatch Present': 0.0), which is associated with IDH-mutant astrocytomas. However, the T2-FLAIR mismatch score is low (0.4), which is not strongly indicative. The tumor involves eloquent cortex ('Vision'), which is more common in IDH-wildtype gliomas. Overall, the evidence is conflicting, with age and lack of enhancement supporting mutant, but eloquent involvement arguing against it. Given the uncertainty, prediction is mutant with low confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex ('Vision') and is located in occipital, parietal, and cortex lobes, which is more typical of astrocytomas (non-codeleted) than oligodendrogliomas. There is no enhancement ('Enhancement Quality': 'None'), which is more common in oligodendrogliomas but can occur in both. Oligodendrogliomas often show enhancement and are frontal. The evidence is insufficient to strongly support either, so prediction is non-codeleted with low confidence.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor is a solitary nonenhancing lesion with 100% edema proportion and no necrosis. The patient is young. The evidence for molecular subtyping is limited and conflicting, leading to low confidence predictions.",
+  "subject_id": "UCSF-PDGM-252",
+  "who_grade": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "prediction": 2,
+    "reasoning": "There is no enhancement ('Enhancement Quality': 'None') and no necrosis ('Proportion Necrosis': 0.0), which are features of lower-grade gliomas (WHO grade 2). However, the proportion of edema is 100%, which can be seen in both low and high grade gliomas. The tumor volume is moderate (15.642 mL) but not indicative of grade. Without necrosis or enhancement, grade 4 is unlikely. Grade 3 gliomas may show enhancement but not always. Given the absence of high-grade features, prediction is WHO grade 2 with moderate confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

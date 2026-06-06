@@ -1,0 +1,44 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The patient's age (76 years) is more typical for wildtype IDH gliomas. The tumor's location in the temporal lobe and involvement of the cortex also aligns with characteristics often seen in IDH wildtype gliomas. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.4, Degree: -0.473) further argues against an IDH mutant glioma, as T2-FLAIR mismatch is a characteristic feature of IDH mutant astrocytomas. The presence of mild enhancement and necrosis (Proportion Necrosis: 9.62%) is more typical of glioblastoma, which is often IDH wildtype in older patients.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The tumor's characteristics, such as its location and enhancement pattern, do not strongly suggest a 1p/19q co-deleted tumor. IDH mutant tumors with 1p/19q co-deletion typically have a more favorable prognosis and are less likely to present with necrosis or significant mass effect at an advanced age. Given the patient's age and the tumor's aggressive features (e.g., necrosis, mild enhancement), it is less likely to be 1p/19q co-deleted. The prediction of IDH wildtype status further reduces the likelihood of 1p/19q co-deletion, as this molecular feature is typically associated with IDH mutant gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "IDH Mutation Status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 9.62%), mild enhancement (Enhancement Quality: Mild), and significant tumor volume (Total tumor volume: 51.249 mL) are indicative of a high-grade glioma. The patient's age (76 years) and the tumor's aggressive imaging features are most consistent with glioblastoma, which is classified as CNS WHO grade 4. The absence of T2-FLAIR mismatch and the presence of necrosis further support this classification.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00384"
+}

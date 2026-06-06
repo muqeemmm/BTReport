@@ -1,0 +1,45 @@
+{
+  "id": "patient_0106",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is relatively young (29 years) with a glioma in the frontal lobe, which is a common location for IDH-mutant gliomas. The tumor is described as mildly enhancing and solitary, with no ependymal invasion or deep white matter invasion. These features are consistent with IDH-mutant gliomas, which are more likely to occur in younger patients and have a better prognosis. The presence of cortical involvement also supports this prediction, as IDH-mutant gliomas often involve the cortex.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the frontal lobe and involves the cortex, which is consistent with oligodendrogliomas that are typically IDH-mutant and 1p/19q co-deleted. The mild enhancement quality also aligns with this subtype. However, the absence of specific features like calcifications (not assessed here) makes the prediction less certain. Given the frontal lobe location and cortical involvement, a codeleted status is plausible.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor has a significant necrotic component (Proportion Necrosis: 69.23%) and a mild enhancement quality, suggesting a high-grade glioma. The presence of necrosis is typically associated with higher-grade tumors. The tumor's size and the involvement of eloquent areas also suggest an aggressive tumor. However, the absence of more aggressive features like significant midline shift or ependymal invasion tempers the grading. Overall, the presence of necrosis and significant tumor size point towards a high-grade tumor, likely grade 4.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Lesion Sizes APxTVxCC (cm)",
+        "Eloquent Brain Involvement"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_01724"
+}

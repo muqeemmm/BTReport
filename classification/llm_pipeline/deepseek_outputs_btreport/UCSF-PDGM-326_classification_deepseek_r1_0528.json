@@ -1,0 +1,45 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (32 years old), which is more common in IDH-mutant gliomas. The tumor is non-enhancing ('Enhancement Quality': 'None'), which is typical for IDH-mutant gliomas. However, the absence of enhancement could also be seen in some wildtype tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the frontal lobe and cortex, which is more common in astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas typically involve the frontal lobe but are less likely to have cortical involvement. However, without specific molecular testing, this is indirect evidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The tumor shows features suggestive of IDH-mutant astrocytoma with non-codeleted 1p/19q status. The presence of ependymal invasion and deep white matter invasion, along with midline shift and significant edema, suggest aggressive behavior. However, the absence of necrosis or enhancement is atypical for glioblastoma, leading to uncertainty in grading.",
+  "subject_id": "UCSF-PDGM-326",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows ependymal invasion ('Ependymal (ventricular) Invasion': 'Present') and deep white matter invasion ('Deep WM invasion': 'Present'), which are features of high-grade gliomas. There is significant midline shift ('midline_shift_present': 'Yes') and edema ('ED Volume (mL)': 109.386). However, there is no necrosis ('Proportion Necrosis': 0.0) or enhancement ('Proportion Enhancing': 0.0), which are typical for glioblastoma. This creates uncertainty, but the invasive features and midline shift suggest WHO grade 4.",
+    "supporting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "ED Volume (mL)"
+    ]
+  }
+}

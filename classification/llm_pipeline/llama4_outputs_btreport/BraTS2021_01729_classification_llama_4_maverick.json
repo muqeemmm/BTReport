@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (31 years) and the presence of a large, infiltrative tumor with significant mass effect (midline shift, asymmetrical ventricles, effaced ventricle) could be seen in both IDH mutant and wildtype gliomas. However, the presence of ependymal invasion, deep white matter invasion, and cortical involvement are more commonly associated with aggressive tumors. IDH mutant gliomas are more likely to occur in younger patients, but the presence of necrosis (Proportion Necrosis: 48.94%) and the aggressive features suggest a higher grade tumor. The enhancement quality is mild, which is not strongly indicative of either IDH status. Given the age and some aggressive features, it is not straightforward to predict IDH status based solely on the provided metadata. However, the presence of necrosis and significant mass effect might lean towards a more aggressive tumor type, which is often associated with IDH wildtype status in adult-type diffuse gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of cortical involvement and the tumor's location (frontal lobe, cortex, and insula) might suggest a more aggressive tumor type. 1p/19q codeletion is more commonly associated with oligodendrogliomas, which tend to have a more favorable prognosis. The provided metadata does not directly indicate 1p/19q codeletion status. However, the presence of necrosis and significant mass effect, along with the tumor's aggressive features, might argue against the typical profile of codeleted tumors, which are often associated with lower grade features and better prognosis. Thus, based on the aggressive features and the lack of specific indicators for codeletion, a non-codeleted status is predicted.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Proportion Necrosis",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits significant mass effect (midline shift, asymmetrical ventricles), necrosis (Proportion Necrosis: 48.94%), and ependymal invasion, all of which are indicative of a high-grade tumor. The presence of necrosis is particularly suggestive of a WHO Grade 4 tumor, as necrosis is a hallmark of glioblastoma, which is typically classified as Grade 4. The large size of the tumor and its aggressive features further support this classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01729"
+}

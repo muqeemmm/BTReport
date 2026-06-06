@@ -1,0 +1,44 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 1.0) is highly suggestive of an IDH-mutant glioma. The patient's age (23 years) also supports this prediction as IDH-mutant gliomas are more common in younger adults. The absence of enhancement (Enhancement Quality: 'None', Proportion Enhancing: 0.0) is consistent with this interpretation, as IDH-mutant gliomas are less likely to show enhancement compared to IDH-wildtype gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH-mutant glioma. Given that the tumor does not show enhancement (Enhancement Quality: 'None') and has a significant non-enhancing component, it is likely to be either an astrocytoma or an oligodendroglioma. The absence of clear indicators for 1p/19q co-deletion (such as calcifications, which are not available in the metadata) makes it challenging to definitively predict co-deletion status. However, the presence of cortical involvement and the tumor's location (involving multiple lobes including frontal, temporal, and parietal) could be seen in both types. The lack of specific indicators for 1p/19q co-deletion leans towards a cautious prediction of non-codeleted, as astrocytomas are more common than oligodendrogliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows a high proportion of necrosis (Proportion Necrosis: 70.97) and significant mass effect (midline shift present, n_slices_with_shift: 67), indicating a high-grade tumor. The absence of enhancement (Enhancement Quality: 'None') might seem contradictory for a high-grade tumor, but IDH-mutant glioblastomas can sometimes lack significant enhancement. The large size of the tumor (Total tumor volume: 115.032 mL, NCR Volume: 81.643 mL) and its aggressive features (deep white matter invasion, ependymal invasion) support a high-grade classification. Given the patient's age and the presence of IDH mutation suggested by T2-FLAIR mismatch, a grade 4 (glioblastoma, IDH-mutant) is plausible despite the lack of enhancement.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "Total tumor volume (mL)",
+      "NCR Volume (mL)",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01524"
+}

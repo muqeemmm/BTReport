@@ -1,0 +1,41 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (21 years old), which is more common in IDH-mutant gliomas. The tumor is nonenhancing (Enhancement Quality: None), which is typical for IDH-mutant tumors. Proportion Necrosis is high (67.8%), which is more common in IDH-mutant gliomas. Cortical involvement is present, which is more frequent in IDH-mutant tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex (Region Proportions: frontal_lobe 0.9867546333601934, cortex 0.6260576148267526), which is more common in astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often involve subcortical white matter, but Deep WM invasion is absent here. However, frontal lobe location can also be seen in oligodendrogliomas, so confidence is moderate.",
+    "supporting_features": [
+      "Region Proportions",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor is nonenhancing with high necrosis proportion, cortical involvement, and frontal lobe location, suggesting IDH-mutant astrocytoma. Absence of deep white matter invasion argues against oligodendroglioma. Grade 4 is assigned due to necrosis presence.",
+  "subject_id": "EGD-0160",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [],
+    "prediction": 4,
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 67.8%) is a hallmark of glioblastoma (CNS WHO grade 4) according to WHO CNS5 criteria. Enhancement is absent, but necrosis alone is sufficient for grade 4 in IDH-mutant tumors. No microvascular proliferation is reported, but necrosis is definitive.",
+    "supporting_features": [
+      "Proportion Necrosis"
+    ]
+  }
+}

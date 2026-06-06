@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 52 years old, which is typical for IDH-wildtype gliomas. The tumor is midline and multifocal, features more common in IDH-wildtype tumors. Enhancement is mild with a thick margin (>3mm), which is atypical for IDH-mutant tumors that often show minimal enhancement. However, the proportion enhancing is low (1.56%), which is more typical of IDH-mutant tumors, creating uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is common in oligodendrogliomas (codeleted). However, there is eloquent brain involvement (motor), which is less common in oligodendrogliomas. The tumor is midline and multifocal, features not typical for oligodendrogliomas. The evidence is conflicting, but the midline location and multifocality lean towards non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "The prediction for IDH status is wildtype with low confidence due to conflicting enhancement features. For 1p/19q, non-codeleted is predicted with low confidence due to location vs. midline/multifocal conflict. Grade 4 is assigned based on necrosis presence.",
+  "subject_id": "EGD-0474",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "There is necrosis present (Proportion Necrosis 4.31%), which is a hallmark of glioblastoma (grade 4). The enhancement is mild, which is atypical for grade 4 tumors that often show strong enhancement, but necrosis presence overrides this. The tumor volume is large (50.592 mL), supporting high grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

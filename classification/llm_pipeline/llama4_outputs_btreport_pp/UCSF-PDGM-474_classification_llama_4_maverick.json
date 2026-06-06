@@ -1,0 +1,40 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7933614960479957, indicating a strong likelihood of IDH mutation. The age of the patient (40 years) is also within a range where IDH mutations are more common. Therefore, based on the T2-FLAIR mismatch and age, the prediction is IDH mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of IDH mutation is likely based on T2-FLAIR mismatch. For IDH-mutant gliomas, the presence of a 'Solid' enhancement pattern and the absence of 'Multiple satellites present' might lean towards astrocytoma rather than oligodendroglioma, which often shows a more heterogeneous enhancement pattern and sometimes multiple satellites. However, the definitive determination of 1p/19q co-deletion status requires molecular data. Given the multifocal nature and the presence of ependymal invasion, the tumor is aggressive. The 'Cortical involvement' and 'Deep WM invasion' are non-specific. The prediction leans towards non-codeleted due to the lack of specific indicators for codeletion in the provided metadata.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Multiple satellites present",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor shows significant edema (ED Volume: 82.899 mL), ependymal invasion, and is multifocal, indicating a high level of aggressiveness. The presence of midline shift and asymmetrical ventricles further suggests significant mass effect. The tumor's large volume and involvement of multiple regions (cortex, occipital, insula, ventricles, temporal, and parietal lobes) also point towards a higher grade. While the proportion of necrosis is 0.0, the presence of significant edema and mass effect, along with the multifocal nature, supports a higher grade. Given these features, a grade of 3 or 4 is likely. The presence of IDH mutation (predicted) typically associates with lower grades (2 or 3) in the WHO CNS5 classification, but the aggressive features here suggest grade 3.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric",
+      "midline_shift_present",
+      "Asymmetrical Ventricles"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.8
+  },
+  "subject_id": "UCSF-PDGM-474"
+}

@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 29 years old, which is younger than typical for IDH-wildtype gliomas that usually occur in older patients. IDH-mutant gliomas are more common in younger adults. The tumor is nonenhancing ('Enhancement Quality': 'None'), which is more typical of IDH-mutant gliomas. The tumor involves the temporal cortex and deep white matter ('Cortical involvement': 'Present', 'Deep WM invasion': 'Present'), which is consistent with diffuse gliomas. However, the age is not extremely young, and IDH-wildtype gliomas can occur in younger patients, though less commonly.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region ('Tumor Location': 'temporal-cortex region') and involves deep white matter ('Deep WM invasion': 'Present'). Oligodendrogliomas, which are typically 1p/19q codeleted, often involve the frontal lobe and may have cortical involvement but are less common in the temporal lobe. Astrocytomas, which are non-codeleted, can occur in temporal lobes. The absence of enhancement ('Enhancement Quality': 'None') is non-specific but more common in oligodendrogliomas; however, the temporal location argues against oligodendroglioma. The evidence is somewhat conflicting.",
+    "supporting_features": [
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor is nonenhancing and involves temporal cortex and deep white matter. The patient is young (29 years), favoring IDH-mutant status. The temporal location suggests astrocytoma rather than oligodendroglioma, thus non-codeleted. Grade is difficult to determine without enhancement or necrosis, but the large edema volume and deep invasion suggest at least grade 3.",
+  "subject_id": "UCSF-PDGM-490",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor shows no necrosis ('Proportion Necrosis': 0.0) and no enhancement ('Enhancement Quality': 'None'), which are features of lower-grade gliomas (grade 2). However, there is significant edema ('ED Volume (mL)': 47.752, 'Proportion of Oedema': 100.0) and deep white matter invasion ('Deep WM invasion': 'Present'), which are features associated with higher-grade tumors. The absence of necrosis argues against grade 4, but the edema volume and invasion suggest grade 3. The evidence is conflicting, leading to moderate confidence.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion"
+    ]
+  }
+}

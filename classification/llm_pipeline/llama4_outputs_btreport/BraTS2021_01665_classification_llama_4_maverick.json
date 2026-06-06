@@ -1,0 +1,51 @@
+{
+  "id": "patient_0101",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (30 years) and the presence of a large, mildly enhancing tumor with significant edema and mass effect (midline shift, asymmetrical ventricles, effaced ventricle) could suggest a high-grade glioma. However, the presence of a relatively large tumor with significant edema and some enhancement, along with deep white matter invasion and ependymal invasion, does not directly indicate IDH status. Younger age is more commonly associated with IDH mutant gliomas. The tumor's characteristics (e.g., enhancement quality, proportion enhancing, and necrosis) are not strongly indicative of IDH status on their own. Given the age and the absence of specific features that are strongly associated with IDH wildtype (such as very high age or specific imaging features like necrosis being highly suggestive of glioblastoma), a prediction of IDH mutant is considered due to the patient's relatively young age.",
+      "supporting_features": [
+        "age_years"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "Proportion Necrosis"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q codeletion status",
+      "reasoning": "The tumor's location (temporal, cortex, and parietal lobes) and the presence of cortical involvement could be suggestive of a 1p/19q codeleted tumor, as these tumors often involve the frontal lobe but can occur in other locations. However, the absence of specific features like frontal lobe involvement makes this less clear. The presence of ependymal invasion and deep white matter invasion is noted, but these are not specific markers for 1p/19q codeletion status. Given the lack of direct evidence or strong indirect evidence (such as specific tumor location or morphology), the prediction leans towards non-codeleted due to the absence of classic features associated with 1p/19q codeletion (e.g., frontal lobe involvement).",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement"
+      ],
+      "contradicting_features": [
+        "Region Proportions"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.6
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits significant mass effect (midline shift, asymmetrical ventricles), large edema volume (138.723 mL), and a notable enhancing component (11.757 mL) with mild enhancement quality. The presence of necrosis (Proportion Necrosis: 0.67%) and the overall tumor volume (151.492 mL) are indicators of a high-grade tumor. The ependymal invasion and deep white matter invasion also suggest aggressive tumor behavior. While the proportion of necrosis is not very high, the overall imaging features (significant edema, mass effect, and enhancement) are more suggestive of a high-grade glioma. Given these features, a grade of 3 or 4 is likely. The presence of significant necrosis is not quantified as high here, but other features like large tumor volume and significant mass effect lean towards a higher grade.",
+      "supporting_features": [
+        "ED Volume (mL)",
+        "ET Volume (mL)",
+        "Total tumor volume (mL)",
+        "midline_shift_present",
+        "n_slices_with_shift",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": 4,
+      "confidence": 0.8
+    }
+  ],
+  "subject_id": "BraTS2021_01665"
+}

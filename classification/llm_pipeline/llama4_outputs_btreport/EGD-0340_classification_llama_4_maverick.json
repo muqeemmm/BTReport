@@ -1,0 +1,48 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (52 years) and the presence of a mildly enhancing tumor with a large edema volume (23.585 mL) and a small enhancing tumor volume (0.021 mL) are more typical of IDH wildtype gliomas, which are more common in older adults and often present with more aggressive features such as enhancement. The tumor's location in the temporal lobe and its solitary nature also align with characteristics often seen in IDH wildtype glioblastomas. While the absence of necrosis (Proportion Necrosis: 0.03) and the mild enhancement quality might suggest a lower grade tumor, the overall profile leans towards an IDH wildtype due to the patient's age and the presence of enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of a mildly enhancing tumor with a significant edema volume and a small enhancing component is not typical for 1p/19q co-deleted tumors, which are more often associated with oligodendrogliomas that typically show calcifications (not available in the metadata) and have a more indolent course. The tumor's characteristics and the patient's age are more suggestive of an astrocytic lineage tumor, which is less likely to have 1p/19q co-deletion. Therefore, the prediction leans towards non-codeleted.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows mild enhancement and has a significant edema volume with a relatively small enhancing component and minimal necrosis. The presence of enhancement and edema suggests a higher grade tumor. However, the proportion of necrosis is low (0.03), and the enhancing volume is small (0.021 mL), which might argue against the highest grade. Given the patient's age and the tumor's characteristics, a grade 3 is plausible, balancing between the presence of enhancement (suggesting higher grade) and the relatively low necrosis and small enhancing volume (suggesting lower grade).",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "subject_id": "EGD-0340"
+}

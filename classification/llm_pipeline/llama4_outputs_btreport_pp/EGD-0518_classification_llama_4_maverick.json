@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (58 years) and the absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.4, T2-FLAIR Mismatch Degree: -0.3389) are indicative of a lower likelihood of IDH mutation. Adult-type diffuse gliomas in older patients are more likely to be IDH wildtype. The lack of enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) and the presence of a non-enhancing tumor also align more with IDH mutant gliomas, but the age and absence of T2-FLAIR mismatch are stronger indicators for IDH wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The absence of T2-FLAIR mismatch and the patient's age are not typical for IDH mutant gliomas with 1p/19q codeletion. Since the IDH status is predicted to be wildtype, the likelihood of 1p/19q codeletion is very low as codeletion is typically associated with IDH mutant gliomas.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "cns_who_grade": {
+    "reasoning": "The large edema volume (ED Volume: 28.527 mL) and the presence of a significant tumor volume (Total tumor volume: 28.572 mL) with minimal necrosis (Proportion Necrosis: 0.15) and no enhancement (Enhancement Quality: None) are features that can be seen in high-grade gliomas. The patient's age and the absence of IDH mutation (predicted) also suggest a higher grade glioma, likely grade 4.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0518"
+}

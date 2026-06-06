@@ -1,0 +1,52 @@
+{
+  "id": "patient_0055",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (45 years) and the presence of a non-enhancing tumor with significant edema (ED Volume = 157.551 mL, Proportion of Oedema = 100%) and ependymal invasion are noted. The tumor's characteristics, such as being non-enhancing and having a large edema volume, are more commonly associated with IDH-mutant gliomas, which often present with more extensive edema. However, the absence of enhancement and the presence of ependymal invasion can also be seen in IDH-wildtype gliomas. Given the patient's age and the tumor's characteristics, it is challenging to definitively predict IDH mutation status based solely on the provided metadata. Nonetheless, the presence of significant edema and non-enhancing nature slightly leans towards an IDH-mutant status, but with considerable uncertainty.",
+      "supporting_features": [
+        "age_years",
+        "ED Volume (mL)",
+        "Proportion of Oedema",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Ependymal (ventricular) Invasion"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.6
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is described as being in the frontal lobe-cortex region, bilateral, and non-enhancing. IDH-mutant gliomas with 1p/19q co-deletion (oligodendrogliomas) often present in the frontal lobe. Given the tumor's location and the previous prediction leaning towards IDH mutation, the presence of a non-enhancing tumor in the frontal lobe could suggest a possible 1p/19q co-deletion. However, the bilateral nature and ependymal invasion are less typical for classic oligodendrogliomas. The absence of clear evidence for 1p/19q co-deletion status based on the provided metadata means this prediction carries significant uncertainty.",
+      "supporting_features": [
+        "Tumor Location",
+        "Region Proportions",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Side of Tumor Epicenter",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "prediction": "codeleted",
+      "confidence": 0.55
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor is non-enhancing, has significant edema, and involves the ependymal lining, which can be indicative of a higher grade glioma. However, the absence of necrosis and enhancement suggests a lower grade. IDH-mutant gliomas, which this tumor might be based on the previous prediction, can range from grade 2 to 4. The presence of significant edema and ependymal invasion might suggest a higher grade, but the lack of enhancement and necrosis argues against grade 4. Thus, a grade 3 is a reasonable estimate given the mix of features suggestive of both lower and higher grade characteristics.",
+      "supporting_features": [
+        "ED Volume (mL)",
+        "Ependymal (ventricular) Invasion",
+        "Enhancement Quality",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "NCR Volume (mL)",
+        "ET Volume (mL)"
+      ],
+      "prediction": 3,
+      "confidence": 0.65
+    }
+  ],
+  "subject_id": "UCSF-PDGM-482"
+}

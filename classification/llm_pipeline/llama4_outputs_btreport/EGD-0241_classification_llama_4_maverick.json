@@ -1,0 +1,54 @@
+{
+  "id": "patient_0142",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (38 years) and the presence of cortical involvement, deep white matter invasion, and a relatively mild enhancement quality are considered. IDH mutant gliomas are more common in younger adults and often have a more favorable prognosis. However, the presence of a large necrotic volume (Proportion Necrosis: 75.61%) and a significant tumor volume (Total tumor volume: 62.322 mL) could suggest a more aggressive tumor, which is less typical for IDH mutant gliomas. Despite these conflicting features, the patient's relatively young age supports the likelihood of an IDH mutation.",
+      "supporting_features": [
+        "age_years",
+        "Cortical involvement",
+        "Deep WM invasion",
+        "Proportion Necrosis",
+        "Total tumor volume (mL)"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis",
+        "Total tumor volume (mL)"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.6
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor involves the frontal lobe and insula, and has cortical involvement, which are common in 1p/19q co-deleted gliomas. However, the presence of a high proportion of necrosis and a significant tumor volume might argue against it, as 1p/19q co-deleted tumors tend to have a more favorable prognosis. The enhancement quality is mild, which is not strongly indicative either way. Given the uncertainty and mixed evidence, the prediction leans towards non-codeleted due to the aggressive features (high necrosis proportion).",
+      "supporting_features": [
+        "Region Proportions",
+        "Cortical involvement",
+        "Proportion Necrosis",
+        "Total tumor volume (mL)"
+      ],
+      "contradicting_features": [
+        "Region Proportions",
+        "Cortical involvement"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.6
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor has a large necrotic volume (Proportion Necrosis: 75.61%) and a significant total tumor volume (62.322 mL), with a mild enhancement quality. The presence of necrosis is typically associated with higher-grade gliomas. The tumor's size and necrotic proportion strongly suggest a high-grade tumor. Therefore, despite the patient's relatively young age, the tumor is likely to be high-grade.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "NCR Volume (mL)",
+        "ED Volume (mL)"
+      ],
+      "contradicting_features": [
+        "age_years"
+      ],
+      "prediction": 4,
+      "confidence": 0.8
+    }
+  ],
+  "subject_id": "EGD-0241"
+}

@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00210",
+  "idh": {
+    "reasoning": "The patient is 71 years old. Older age (>65) is associated with IDH-wildtype gliomas. The tumor is large (Total tumor volume 31.229 mL), solitary, and located near the midline ('Side of Tumor Epicenter': 'Midline', 'Anatomical Overlap Regions': ['brain-stem', 'right lateral ventricle', 'right thalamus', 'right caudate', 'right putamen', 'right pallidum']). While IDH-mutant tumors can occur in older adults, the combination of advanced age and large tumor size favors an IDH-wildtype status. There are no features strongly suggesting IDH-mutant status (e.g., smaller size, specific location).",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Side of Tumor Epicenter",
+      "Anatomical Overlap Regions",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not provide any direct information regarding 1p/19q co-deletion status. Features like age, tumor size, location, and enhancement pattern are not specific enough to reliably predict co-deletion status without molecular testing. The patient's age (71) makes IDH-wildtype more likely, and 1p/19q co-deletion is almost exclusively found in IDH-mutant gliomas, but this is indirect evidence. Given the lack of specific indicators, a prediction cannot be made with high confidence.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "who_grade": {
+    "reasoning": "The patient is 71 years old with a large (31.229 mL) solitary tumor involving deep structures ('Anatomical Overlap Regions': ['brain-stem', 'right thalamus', 'right caudate', 'right putamen', 'right pallidum'], 'Deep WM invasion': 'Present', 'Ependymal (ventricular) Invasion': 'Present') and crossing the midline ('crosses_ideal_midline': {'et': true, 'ed': true, 'ncr_et': true}, 'Edema crosses midline': 'True'). The tumor shows marked enhancement ('Enhancement Quality': 'Marked') with a high proportion enhancing (73.91%) and necrosis (9.88%). Ependymal invasion and deep white matter invasion are present. These features, particularly the large size, deep invasion, midline crossing, marked enhancement, and older age, are highly suggestive of a high-grade glioma (WHO Grade 4). While Grade 3 cannot be entirely excluded based solely on MRI metadata without molecular information confirming IDH mutation or lack thereof, the overall picture strongly points towards Grade 4.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "crosses_ideal_midline",
+      "Edema crosses midline",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH wildtype diffuse astrocytoma WHO grade IV",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an elderly male with a large solitary glioma involving deep structures including the thalamus and ventricles with ependymal invasion and crossing the midline. Marked enhancement and necrosis are present. These features are highly suggestive of a high grade glioma likely WHO grade IV."
+}

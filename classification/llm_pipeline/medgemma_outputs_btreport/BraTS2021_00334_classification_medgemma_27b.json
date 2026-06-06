@@ -1,0 +1,53 @@
+{
+  "subject_id": "BraTS2021_00334",
+  "idh": {
+    "reasoning": "The patient is 42 years old, which is within the typical age range for IDH-mutant gliomas, although IDH-wildtype gliomas can also occur at this age. The tumor is large (Total tumor volume = 48.049 mL) and infiltrative, involving deep white matter ('Deep WM invasion': 'Present'), the ependyma ('Ependymal (ventricular) Invasion': 'Present'), and crossing the midline ('CET Crosses midline': 'True', 'Edema crosses midline': 'True'). These features are more commonly associated with IDH-wildtype tumors, particularly glioblastoma. However, the absence of specific features strongly pointing towards IDH-wildtype (like extensive necrosis or hemorrhage, which are not assessed here) and the patient's age make it difficult to definitively exclude an IDH-mutant glioma. Given the infiltrative nature and midline crossing, IDH-wildtype is slightly more likely, but the age makes it uncertain.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Total tumor volume"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The tumor is large (48.049 mL), infiltrative ('Deep WM invasion': 'Present', 'Ependymal (ventricular) Invasion': 'Present'), and crosses the midline ('CET Crosses midline': 'True', 'Edema crosses midline': 'True'). These features are characteristic of high-grade gliomas. 1p/19q co-deletion is typically found in lower-grade gliomas (WHO grade 2) or anaplastic astrocytomas (WHO grade 3), specifically IDH-mutant ones. Given the aggressive features suggesting a higher grade, 1p/19q co-deletion is less likely. The available metadata does not provide specific features strongly associated with co-deletion (e.g., specific location like frontal lobe, lack of necrosis). Therefore, based on the overall aggressive phenotype suggested by size, infiltration, and midline crossing, non-co-deletion is predicted.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Total tumor volume"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "who_grade": {
+    "reasoning": "The patient is 42 years old with a large tumor (48.049 mL). The tumor demonstrates significant infiltrative growth ('Deep WM invasion': 'Present', 'Ependymal (ventricular) Invasion': 'Present') and causes mass effect with ventricular effacement ('Effaced Ventricle': 'Right') and significant midline shift ('midline_shift_present': 'Yes', 'CET Crosses midline': 'True', 'Edema crosses midline': 'True'). The enhancement quality is marked ('Enhancement Quality': 'Marked'), and there is a substantial enhancing component ('Proportion Enhancing': 44.65). These features collectively point towards a high-grade glioma. While IDH status is uncertain (predicted wildtype with low confidence), the combination of large size, deep infiltration, ependymal invasion, ventricular effacement, and significant enhancement strongly suggests WHO grade 4.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Effaced Ventricle",
+      "midline_shift_present",
+      "CET Crosses midline",
+      "Edema crosses midline",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Total tumor volume"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "IDH wildtype diffuse astrocytoma WHO grade IV",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings suggest a high-grade glioma with features more consistent with IDH wildtype status and WHO grade IV."
+}

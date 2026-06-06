@@ -1,0 +1,44 @@
+{
+  "id": "patient_1093",
+  "predictions": [
+    {
+      "type": "IDH Mutation Status",
+      "reasoning": "The patient's age (46 years) and the tumor's location (thalamus, brainstem, parietal and corpus callosum lobes, midline) along with its characteristics (marked enhancement, deep white matter invasion, and significant necrosis proportion) are more typical of glioblastoma, which is often IDH wildtype. The presence of necrosis (Proportion Necrosis: 17.59%) and marked enhancement also supports a more aggressive tumor type, typically associated with IDH wildtype status in adult-type diffuse gliomas.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q Co-deletion Status",
+      "reasoning": "The tumor's characteristics (marked enhancement, significant necrosis, and deep white matter invasion) and its location (thalamus, brainstem) are not typical for 1p/19q co-deleted gliomas, which are more commonly found in the frontal lobe and have a more favorable prognosis. The presence of necrosis and the tumor's aggressive features argue against 1p/19q co-deletion.",
+      "supporting_features": [
+        "Tumor Location",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.85
+    },
+    {
+      "type": "CNS WHO Grade",
+      "reasoning": "The tumor shows aggressive features such as marked enhancement, significant necrosis (17.59%), and deep white matter invasion. These characteristics are typical of high-grade gliomas. The presence of necrosis is particularly indicative of a higher grade. Given the patient's age and the tumor's characteristics, a grade of 4 is more likely than grade 2 or 3.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_01276"
+}

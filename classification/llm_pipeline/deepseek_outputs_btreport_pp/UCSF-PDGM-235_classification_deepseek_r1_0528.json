@@ -1,0 +1,85 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "volumes_ideal_midline.ncr.left",
+      "volumes_ideal_midline.ncr.right",
+      "volumes_ideal_midline.et.left",
+      "volumes_ideal_midline.et.right",
+      "volumes_ideal_midline.ncr_et.left",
+      "volumes_ideal_midline.ncr_et.right",
+      "volumes_patient_midline.ncr.left",
+      "volumes_patient_midline.ncr.right",
+      "volumes_patient_midline.et.left",
+      "volumes_patient_midline.et.right",
+      "volumes_patient_midline.ncr_et.left",
+      "volumes_patient_midline.ncr_et.right",
+      "n_components_enhancing.n_components",
+      "n_components_nonenhancing.n_components",
+      "rim_core_adjacency.rim_touches_core",
+      "rim_core_adjacency.core_boundary_voxels",
+      "rim_core_adjacency.contact_voxels",
+      "rim_core_adjacency.adjacency_fraction",
+      "Transition Zone Thickness (FLAIR)",
+      "Transition Zone Thickness (T1CE)",
+      "tumor_core_sphericity"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (34 years), which favors IDH-mutant glioma. There is no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0), no necrosis (Proportion Necrosis: 0.0), and the tumor consists entirely of edema (Proportion of Oedema: 100.0). The tumor core volume is 0.0 mL, indicating absence of enhancing tumor or necrotic core. These features are typical of IDH-mutant gliomas, particularly oligodendrogliomas or astrocytomas. However, the absence of enhancement and necrosis could also be seen in low-grade tumors regardless of IDH status. The T2-FLAIR mismatch score is 0.4, which is low and does not strongly support IDH-mutant astrocytoma. The location is frontal lobe-cortex, which is common for IDH-mutant tumors. Deep white matter invasion is present, which can occur in both mutant and wildtype. Overall, the young age and non-enhancing nature support IDH-mutant, but the lack of classic T2-FLAIR mismatch and absence of necrosis reduces confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe-cortex region with cortical involvement and deep white matter invasion. IDH-mutant tumors with 1p/19q codeletion (oligodendroglioma) often involve cortex and are frontal, but they typically do not show deep white matter invasion to the same extent as astrocytomas. The absence of enhancement and necrosis is more typical of oligodendroglioma, but the deep white matter invasion argues against it. The eloquent brain involvement (motor) is non-specific. Given the IDH-mutant prediction, the cortical involvement supports oligodendroglioma, but deep white matter invasion favors astrocytoma. The evidence is conflicting, leading to low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "The tumor is non-enhancing, entirely edematous, with no necrosis or enhancing components. It involves the frontal lobe cortex with deep white matter invasion and motor eloquent area. The young age suggests IDH-mutant glioma. The absence of T2-FLAIR mismatch and presence of deep white matter invasion favor IDH-mutant astrocytoma over oligodendroglioma. Grade is estimated as 2 due to absence of enhancement and necrosis.",
+  "subject_id": "UCSF-PDGM-235",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None), no necrosis (Proportion Necrosis: 0.0), and consists entirely of edema (Proportion of Oedema: 100.0). These features are characteristic of WHO grade 2 gliomas. However, there is deep white matter invasion and involvement of motor eloquent area, which can be seen in higher-grade tumors but are not exclusive. The absence of enhancement strongly suggests low grade. The T2-FLAIR mismatch score of 0.4 is low, not typical of grade 4. Overall, the lack of enhancement and necrosis supports grade 2, but the eloquent involvement introduces some uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (82 years) and the presence of a large, enhancing tumor with significant mass effect (midline shift of 1.375 mm, effaced right ventricle) are more typical of glioblastoma, IDH-wildtype. The T2-FLAIR mismatch score is 0.745, which is not strongly indicative of IDH-mutant astrocytoma (typically requires a score closer to 1). The presence of necrosis (Proportion Necrosis: 6.61%) and marked enhancement also supports a more aggressive tumor type, typically associated with IDH-wildtype glioblastoma in this age group.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect is more typical of glioblastoma. 1p/19q co-deletion is more commonly associated with oligodendrogliomas, which are less likely given the patient's age and the tumor's aggressive features. The absence of specific indicators for 1p/19q co-deletion in the provided metadata (e.g., specific imaging characteristics unique to oligodendrogliomas) further supports the likelihood of non-codeletion.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "n_slices_with_shift",
+      "mean_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as marked enhancement, necrosis (6.61%), significant mass effect (midline shift), and large size. These characteristics are typical of WHO grade 4 glioblastoma, especially in an 82-year-old patient. The presence of necrosis and the high proportion of enhancement are key indicators of high-grade glioma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0110"
+}

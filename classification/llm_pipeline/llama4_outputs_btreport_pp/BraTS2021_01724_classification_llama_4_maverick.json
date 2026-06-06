@@ -1,0 +1,38 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8639320455403663, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in gliomas according to recent studies. The patient's age (29 years) also aligns with a higher likelihood of IDH mutant glioma, as IDH mutations are more common in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests IDH mutation, and the glioma is likely to be an astrocytoma or oligodendroglioma. However, the '1p/19q Co-deletion Status' cannot be directly inferred from the given metadata. Nonetheless, the presence of cortical involvement and the absence of ependymal invasion might lean towards a diagnosis that could be either astrocytoma or oligodendroglioma. Given the lack of direct evidence for 1p/19q co-deletion, we must consider the likelihood based on the tumor's characteristics. The tumor's characteristics do not strongly suggest 1p/19q co-deletion (e.g., no specific mention of calcifications which are more common in oligodendrogliomas). Thus, a cautious prediction leans towards non-codeleted, which is more common in astrocytomas.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows a high proportion of necrosis (69.23%) and a significant enhancing component (Proportion Enhancing = 0.66), which are indicators of a higher grade. The presence of necrosis is particularly associated with glioblastoma, which is WHO grade 4. Although the patient is young (29 years), which is more typical for lower-grade gliomas, the presence of necrosis and significant enhancement suggests a more aggressive tumor. The IDH mutation status predicted earlier (mutant) aligns with the possibility of an IDH-mutant glioblastoma or a high-grade astrocytoma. Given these features, a higher grade is likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "n_slices_with_shift",
+      "mean_shift_mm"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01724"
+}

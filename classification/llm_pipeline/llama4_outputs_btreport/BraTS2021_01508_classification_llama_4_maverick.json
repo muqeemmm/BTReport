@@ -1,0 +1,50 @@
+{
+  "id": "patient_0081",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (41 years) and the tumor's characteristics (frontal lobe location, cortical involvement, mild enhancement, and absence of deep white matter invasion) are considered. IDH mutant gliomas are more common in younger adults and often have a more favorable prognosis. The presence of cortical involvement and mild enhancement could be seen in both IDH mutant and wildtype gliomas. However, the absence of deep white matter invasion and ependymal invasion might lean towards a less aggressive tumor, which is more typical of IDH mutant gliomas. Yet, the size of the tumor and its necrotic proportion suggest a potentially higher grade glioma, which can be seen in both IDH mutant and wildtype cases. Given the age and some tumor characteristics, IDH mutation is plausible.",
+      "supporting_features": [
+        "age_years",
+        "Cortical involvement",
+        "Enhancement Quality",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.6
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the frontal lobe with cortical involvement and is mildly enhancing. 1p/19q co-deletion is more commonly associated with oligodendrogliomas, which often present with frontal lobe involvement and are more likely to have a better prognosis. The presence of cortical involvement and the frontal lobe location are consistent with the possibility of 1p/19q co-deletion. However, the absence of specific MRI features that are strongly indicative of 1p/19q co-deletion (like calcifications) and the presence of a significant necrotic proportion might argue against it. Still, given the frontal lobe location and cortical involvement, 1p/19q co-deletion is considered plausible.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Region Proportions"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": "codeleted",
+      "confidence": 0.55
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor has a significant necrotic proportion (66.46%) and a mild enhancement quality, with a substantial total tumor volume (35.701 mL). The presence of necrosis is typically associated with higher-grade gliomas. The tumor's size and the proportion of necrosis suggest a high-grade tumor. While the enhancement quality is mild, the overall tumor volume and necrosis proportion are more indicative of a grade 4 tumor. The absence of deep white matter invasion and ependymal invasion might be seen in lower-grade tumors, but the necrosis proportion takes precedence in grading.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "ED Volume (mL)",
+        "NCR Volume (mL)"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.8
+    }
+  ],
+  "subject_id": "BraTS2021_01508"
+}

@@ -1,0 +1,46 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (29 years) and the presence of a large edema volume (93.779 mL) with a relatively small enhancing tumor volume (1.231 mL) could suggest a lower-grade glioma, which is more commonly associated with IDH mutations. However, the presence of a mild enhancement and the involvement of deep white matter could also be seen in higher-grade gliomas. The T2-FLAIR mismatch score is 0.4, which is not strongly indicative of an IDH mutant astrocytoma (typically, a score > 0.7 is considered significant for T2-FLAIR mismatch). Given the age and some imaging features, there is a leaning towards IDH mutant status, but it's not conclusive. The confidence is moderate due to the lack of strong evidence.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.65
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a solitary lesion with mild enhancement and no ependymal invasion might be seen in various glioma subtypes. The codeletion status is closely related to the IDH mutation status and the presence of 1p/19q co-deletion is more commonly associated with oligodendrogliomas, which are typically IDH mutant. Given the prediction of IDH mutant status, if the tumor were to be an oligodendroglioma, it would likely be codeleted. However, the T2-FLAIR mismatch score is not strongly positive, which might argue against a clear oligodendroglioma signature. The confidence in codeletion status is thus tied to the confidence in IDH mutation status and the likelihood of an oligodendroglioma subtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "idh_status"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.55
+  },
+  "grade": {
+    "reasoning": "The tumor has a large edema volume (93.779 mL) relative to its enhancing volume (1.231 mL), and there's deep white matter invasion, suggesting a potentially aggressive tumor. However, the enhancement is mild, and there's no clear indication of necrosis or significant mass effect that would categorically indicate a grade 4 tumor. The presence of a significant edema and the involvement of deep structures could suggest a higher grade. The age of the patient (29 years) and some features like the lack of significant necrosis might argue against the highest grade. Thus, a grade 3 is considered likely due to the balance of these features.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Deep WM invasion",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "subject_id": "BraTS2021_00525"
+}

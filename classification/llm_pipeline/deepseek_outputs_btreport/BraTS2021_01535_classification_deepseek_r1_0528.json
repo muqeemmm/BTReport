@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 44 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor is nonenhancing (Enhancement Quality: None), which is more common in IDH-mutant gliomas. However, the proportion of necrosis is high (61.02%), which is more typical of IDH-wildtype tumors. The absence of enhancement and younger age support IDH-mutant, but high necrosis contradicts.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex (Vision) and is located in cortex, temporal, insula and frontal_lobe lobes, which are not typical for oligodendrogliomas. Oligodendrogliomas often involve frontal lobes but are less likely to involve temporal and insular regions extensively. The absence of deep white matter invasion (Deep WM invasion: Absent) is atypical for oligodendroglioma, which often shows subcortical involvement. However, the tumor is midline-centered, which is uncommon for both astrocytomas and oligodendrogliomas. Overall, features suggest astrocytic lineage more than oligodendroglial.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "The tumor is midline-centered, which is unusual for diffuse gliomas and may indicate a different entity. Confidence is reduced due to conflicting features.",
+  "subject_id": "BraTS2021_01535",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has a high proportion of necrosis (61.02%), which is a feature of grade 4 glioblastoma. However, there is no enhancement (Enhancement Quality: None), which is atypical for glioblastoma and more suggestive of lower grade. The absence of enhancement contradicts grade 4, but high necrosis supports it. Given the necrosis proportion, grade 4 is assigned with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ]
+  }
+}

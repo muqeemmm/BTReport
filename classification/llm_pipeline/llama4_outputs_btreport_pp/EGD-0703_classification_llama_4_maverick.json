@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7350427285562078, indicating a significant mismatch. This feature is strongly associated with IDH-mutant gliomas. The patient's age (73 years) is not typical for IDH-mutant gliomas, which are more common in younger patients, but the imaging feature is a strong indicator.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH mutation is predicted, and the tumor is likely to be either astrocytoma or oligodendroglioma. The 'Cortical involvement' is present, and 'Deep WM invasion' is absent, which could suggest a more diffuse growth pattern. However, the key determinant for 1p/19q co-deletion status is not directly available from the given metadata. Given the IDH mutation status, the likelihood of co-deletion can be considered in the context of other features. The tumor's characteristics do not strongly suggest a typical oligodendroglioma profile (e.g., calcifications are not mentioned, and the enhancement quality is mild). Thus, a default prediction leans towards non-codeleted based on the prevalence in IDH-mutant gliomas.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor shows mild enhancement and has a significant edema volume (8.26 mL) relative to its total volume (8.947 mL). The presence of cortical involvement and the absence of deep white matter invasion are noted. The age of the patient (73 years) and the presence of a mildly enhancing tumor with significant edema could suggest a higher grade. However, the necrosis proportion is relatively low (0.25%), and the enhancement quality is mild, which might argue against a very high grade. The WHO grade for IDH-mutant gliomas can be influenced by the presence of necrosis and the extent of enhancement. Given the patient's age and some aggressive features, a higher grade is considered.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.7
+  },
+  "subject_id": "EGD-0703"
+}

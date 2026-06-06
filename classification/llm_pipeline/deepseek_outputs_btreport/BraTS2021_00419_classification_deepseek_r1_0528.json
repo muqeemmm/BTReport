@@ -1,0 +1,43 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 45 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor involves the temporal cortex and has mild enhancement, which is more common in IDH-mutant gliomas. The proportion of necrosis is low (10.19%), which is atypical for IDH-wildtype tumors that often show extensive necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal cortex region, which is more typical for astrocytomas (non-codeleted) rather than oligodendrogliomas (codeleted). Oligodendrogliomas often involve frontal lobes and show more heterogeneous enhancement. However, the mild enhancement and cortical involvement could be seen in both, so confidence is low.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma. The grade is assigned as 4 due to the presence of necrosis, though the proportion is low. Confidence in grade is moderate due to limited necrosis quantification.",
+  "subject_id": "BraTS2021_00419",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 10.19%) indicates CNS WHO grade 4 for IDH-mutant astrocytomas. However, the necrosis proportion is relatively low, and enhancement is mild, which might suggest lower grade, but necrosis is a defining feature for grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The T2-FLAIR Mismatch Score is 0.9101389534635055, which is a strong indicator. Additionally, the patient's age (20 years) is relatively young for a glioma patient, which aligns with the demographic more commonly associated with IDH mutant gliomas. The absence of enhancement and the presence of a non-enhancing tumor also support this prediction, as IDH mutant gliomas are less likely to show enhancement.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutant glioma. Given that the tumor is IDH mutant, the next step is to determine the 1p/19q co-deletion status. The absence of enhancement and the presence of a large non-enhancing tumor are more typical of astrocytomas (which are IDH mutant but not necessarily 1p/19q co-deleted) than oligodendrogliomas (which are IDH mutant and 1p/19q co-deleted). The tumor's involvement of multiple lobes and deep structures also doesn't strongly suggest a typical oligodendroglioma profile.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor shows significant necrosis (Proportion Necrosis: 44.29%) and has a large size (Total tumor volume: 135.724 mL), indicating a high-grade tumor. The presence of midline shift and edema crossing the midline also suggests a more aggressive tumor. While the absence of enhancement is less typical for high-grade gliomas, the overall tumor size, necrosis, and mass effect are more indicative of a grade 4 tumor. The patient's young age might suggest a lower grade, but the presence of necrosis and significant mass effect outweighs this consideration.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01666"
+}

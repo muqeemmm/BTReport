@@ -1,0 +1,46 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (39 years) and the tumor's characteristics (non-enhancing, large necrotic component) could suggest either IDH mutant or wildtype status. However, the absence of enhancement and the presence of a significant necrotic component (Proportion Necrosis: 43.62%) are more commonly associated with IDH mutant gliomas, particularly in younger adults. The tumor's location in the temporal lobe also supports an IDH mutant status, as IDH mutant gliomas frequently occur in this region. While the presence of necrosis might also suggest a higher grade, IDH mutant gliomas can exhibit necrosis, especially if they are of higher grade (e.g., grade 4 astrocytoma).",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "n_slices_with_shift",
+      "midline_shift_present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in the temporal lobe with cortical involvement and is non-enhancing, which are features that can be seen in both codeleted and non-codeleted tumors. However, the absence of 1p/19q co-deletion is more likely in IDH mutant astrocytomas. Given the significant necrotic component and the likelihood of the tumor being IDH mutant (as reasoned earlier), it is more probable that the tumor is non-codeleted, as IDH mutant astrocytomas are typically non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "Proportion Enhancing",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The presence of a significant necrotic component (43.62%), a large tumor volume (82.814 mL), and the presence of midline shift suggest a high-grade tumor. The absence of enhancement does not necessarily indicate a lower grade, as some high-grade gliomas, particularly IDH mutant glioblastomas, can be non-enhancing. The patient's relatively young age and the likelihood of the tumor being IDH mutant (as previously reasoned) suggest that it could be a grade 4 astrocytoma, which is a category introduced in the WHO CNS5 classification for IDH mutant gliomas with certain high-grade features.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "n_slices_with_shift"
+    ],
+    "contradicting_features": [
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01499"
+}

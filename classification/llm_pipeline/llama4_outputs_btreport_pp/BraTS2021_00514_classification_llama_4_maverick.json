@@ -1,0 +1,38 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (86 years) is more typical for wildtype IDH status, as IDH mutant gliomas are more common in younger patients. The presence of a marked enhancement and a relatively large tumor volume (40.35 mL) with a significant proportion of enhancement (22.38%) also points towards a more aggressive tumor, which is more likely to be IDH wildtype. Furthermore, the T2-FLAIR mismatch score is not strongly indicative of IDH mutation (score = 0.7584727781943483), as a higher score typically suggests IDH mutation with 1p/19q non-codeletion. The absence of T2-FLAIR mismatch (degree = -0.03997399175486649) also argues against IDH mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "Given the prediction of IDH wildtype status, the likelihood of 1p/19q codeletion is low because codeletion is more commonly associated with IDH mutant gliomas. The T2-FLAIR mismatch score and degree do not strongly support IDH mutant status with non-codeletion, but this does not directly inform codeletion status in IDH wildtype tumors. However, IDH wildtype tumors are less likely to have 1p/19q codeletion.",
+    "supporting_features": [
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor shows marked enhancement, a significant proportion of enhancement (22.38%), and a relatively large volume (40.35 mL), which are features more commonly associated with higher-grade gliomas. The presence of necrosis (Proportion Necrosis = 0.63%) and the rim_core_adjacency (rim_touches_core = true) also suggest a high-grade tumor. The age of the patient (86 years) further supports the likelihood of a high-grade glioma, as these are more common in older adults. Therefore, the features collectively point towards a grade 4 glioma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "rim_core_adjacency"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00514"
+}

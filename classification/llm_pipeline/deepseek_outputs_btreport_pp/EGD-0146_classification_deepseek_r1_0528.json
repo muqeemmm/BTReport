@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 75 years old, which is more typical for IDH-wildtype glioblastoma. IDH-mutant gliomas often present at younger ages. Enhancement is mild and proportion enhancing is low (0.09), which is atypical for IDH-wildtype tumors that usually show strong enhancement. However, the T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high score (0.8117680445646678), which is highly specific for IDH-mutant astrocytomas. This conflicting evidence leads to uncertainty.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (Speech motor and Motor) and is multifocal, which is more common in astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas typically present with frontal lobe involvement and calcifications (not assessed here), but the absence of calcifications assessment and the multifocality argue against oligodendroglioma. However, the tumor location includes frontal lobe and insula, which can be seen in both, but multifocality is less common in oligodendrogliomas.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "The evidence is conflicting for IDH status due to the T2-FLAIR mismatch sign suggesting mutant but age and enhancement suggesting wildtype. For 1p/19q, multifocality and eloquent involvement favor astrocytoma. Grade is assigned as 4 due to necrosis and enhancement.",
+  "subject_id": "EGD-0146",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "There is necrosis present (Proportion Necrosis: 0.04) and enhancement (Proportion Enhancing: 0.09), which are features of glioblastoma (grade 4). The tumor volume is large (177.612 mL) and involves eloquent areas. However, the proportion of necrosis is low, which is atypical for GBM but still consistent with grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Eloquent Brain Involvement",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

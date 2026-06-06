@@ -1,0 +1,35 @@
+{
+  "subject_id": "BraTS2021_00523",
+  "idh": {
+    "reasoning": "The available metadata provides limited information to directly infer IDH mutation status. Features like age, tumor size, location, and enhancement pattern are not specific enough to reliably distinguish between IDH-mutant and IDH-wildtype gliomas. The tumor is multifocal, involves deep white matter and cortex, has mild enhancement, and a large edema component. These features can be seen in both IDH-mutant (especially grade 2/3) and IDH-wildtype (typically grade 4) gliomas. The absence of specific sequences like DWI/ADC or MRS (2HG) further limits the ability to make a confident prediction based solely on the provided structural MRI metadata. Given the lack of distinguishing features, I will default to the more common IDH-mutant status in adult diffuse gliomas, but with low confidence.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information related to 1p/19q co-deletion status. This requires molecular testing, which is not reflected in the structural MRI features given. Therefore, a prediction cannot be made based on the available data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits features suggestive of a higher grade glioma. It is multifocal, involves deep white matter ('Deep WM invasion': 'Present'), shows cortical involvement ('Cortical involvement': 'Present'), and has a significant edema component ('Proportion of Oedema': 97.53). The enhancement is described as 'Mild' with a thick margin (>3mm), and the 'Proportion Enhancing' is relatively low (2.34), which might argue against a typical high-grade (Grade 4) glioblastoma pattern often associated with strong, irregular enhancement and necrosis. However, deep white matter invasion is a key feature often associated with Grade 3 or 4 gliomas. The involvement of eloquent brain structures ('Eloquent Brain Involvement': 'Vision') also suggests a potentially aggressive tumor. Given the deep white matter invasion and multifocal nature alongside cortical involvement, Grade 3 (anaplastic astrocytoma or anaplastic oligodendroglioma) or Grade 4 (glioblastoma) are possibilities. Without definitive molecular markers (IDH status, 1p/19q status), distinguishing between Grade 3 and Grade 4 based solely on these structural features is challenging. The mild enhancement and relatively low enhancing proportion might favor Grade 3 over Grade 4, but deep invasion points towards higher grade. I will predict Grade 3 as a slightly more likely scenario given the mild enhancement pattern described.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "integrated_diagnosis": "IDH-mutant, non-codeleted, WHO Grade 3 diffuse glioma.",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

@@ -1,0 +1,41 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Score' is 0.9374250870013644, which is a strong indicator. Additionally, the patient is relatively young (34 years), which aligns with the demographic more likely to have IDH mutant gliomas. The absence of enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) also supports the likelihood of an IDH mutant glioma, as these are less likely to enhance compared to IDH wildtype gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutant glioma. For IDH mutant gliomas, the absence of enhancement and the presence of a non-enhancing tumor are more commonly associated with astrocytomas rather than oligodendrogliomas, which often have 1p/19q co-deletion. The 'Tumor Location' being 'frontal_lobe-cortex region' and 'Cortical involvement' being 'Present' could be seen in both types, but the lack of clear indicators for 1p/19q co-deletion (like specific imaging features or calcifications which are not available) leans towards a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor is non-enhancing ('Enhancement Quality': 'None'), which is more typical of lower-grade gliomas. The presence of T2-FLAIR mismatch and the IDH mutant status inferred from it also aligns with a lower grade. However, the significant mass effect ('midline_shift_present': 'Yes', 'Edema crosses midline': 'True') and the involvement of deep structures ('Deep WM invasion': 'Present', 'Ependymal (ventricular) Invasion': 'Present') suggest a more aggressive tumor. Given these mixed indicators, a grade 3 is plausible as it reflects a higher grade than 2 due to the aggressive features but not as high as 4 due to the lack of enhancement and necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score",
+      "midline_shift_present",
+      "Edema crosses midline",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "subject_id": "UCSF-PDGM-245"
+}

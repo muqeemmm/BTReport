@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (50 years) and the presence of a large, necrotic tumor with significant mass effect (midline shift, ventricular asymmetry) and ependymal invasion suggest a more aggressive tumor type. The lack of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.5977810515946561, T2-FLAIR Mismatch Degree: 0.19347950536119463) argues against an IDH-mutant, 1p/19q non-codeleted glioma, which often shows this feature. The presence of necrosis (Proportion Necrosis: 53.45%) and mild enhancement (Enhancement Quality: Mild) are also more typical of IDH-wildtype glioblastoma. Therefore, the evidence supports an IDH wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "midline_shift_present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score and Degree) makes an IDH-mutant, 1p/19q non-codeleted tumor less likely. The tumor's aggressive features (large size, necrosis, ependymal invasion) are more typical of IDH-wildtype glioblastoma or possibly IDH-mutant, 1p/19q codeleted tumors if they were lower grade. However, the presence of necrosis and significant mass effect leans more towards a higher-grade tumor. Given the likely IDH wildtype status, 1p/19q codeletion status is less relevant but typically, IDH-wildtype glioblastomas are not codeleted. Therefore, a non-codeleted status is more likely.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The presence of significant necrosis (Proportion Necrosis: 53.45%), large tumor size (Total tumor volume: 170.853 mL), and substantial mass effect (midline shift, ventricular asymmetry) strongly suggest a high-grade tumor. The mild enhancement and presence of ependymal invasion also support this. According to the WHO CNS5 classification, these features are most consistent with a Grade 4 tumor, likely glioblastoma, IDH-wildtype.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0356"
+}

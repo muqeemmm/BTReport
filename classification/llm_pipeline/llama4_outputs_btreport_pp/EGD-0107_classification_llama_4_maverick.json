@@ -1,0 +1,40 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.8125952318105188) is highly suggestive of an IDH-mutant glioma. This feature is strongly associated with IDH mutation status. The patient's age (23 years) also supports this prediction as IDH-mutant gliomas are more common in younger adults. The tumor's location and other characteristics do not strongly argue against IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is more commonly associated with IDH-mutant astrocytomas, which are typically non-codeleted. The absence of specific features like calcifications (not available) or other characteristic features of oligodendrogliomas (e.g., frontal lobe involvement is present but not specific) makes it difficult to definitively predict codeletion status based solely on the available metadata. However, given the strong presence of T2-FLAIR mismatch and the age of the patient, a non-codeleted status is more likely.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis: 58.83) and has a large volume (Total tumor volume: 118.869 mL), which are features more commonly associated with higher-grade gliomas. The presence of midline shift and edema crossing the midline also suggests a more aggressive tumor. However, the patient's age and the presence of T2-FLAIR mismatch suggest an IDH-mutant glioma, which can have a more favorable prognosis. Despite this, the high proportion of necrosis and significant mass effect are more indicative of a higher grade. Given these features, a grade of 4 is likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0107"
+}

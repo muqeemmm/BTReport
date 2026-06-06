@@ -1,0 +1,43 @@
+{
+  "idh_status": {
+    "reasoning": "The tumor is located in the left hemisphere but the necrosis and edema are predominantly on the right side according to the 'primary_side_ideal_midline' and 'volumes_ideal_midline' fields, suggesting a possible mislabeling or complexity in tumor presentation. However, the key to determining IDH status lies in other features. The presence of necrosis (NCR Volume = 9.248 mL) and the proportion of necrosis (12.89%) along with a significant proportion of enhancement (46.64%) and edema (40.47%) are more commonly associated with IDH wildtype glioblastomas. The 'Enhancement Quality' being 'Marked' also supports this, as IDH wildtype tumors often show robust enhancement. Therefore, based on the presence of necrosis, significant enhancement, and the overall tumor composition, the tumor is likely IDH wildtype.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q codeletion status is challenging without direct molecular or histological evidence. However, certain radiological features can provide clues. Tumors with 1p/19q codeletion often present with certain characteristics such as frontal lobe involvement, cortical involvement, and a more defined tumor margin. The given tumor involves the temporal, parietal, and insula lobes, and cortex, but lacks frontal lobe involvement. The 'Cortical involvement' is present, which is a feature sometimes seen in codeleted tumors, but not exclusively. Given the lack of frontal lobe involvement and the presence of necrosis, which is less common in codeleted tumors, it is less likely to be codeleted. Therefore, based on the available information and the absence of strong indicators for codeletion, the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "Region Proportions",
+      "Cortical involvement",
+      "NCR Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (NCR Volume = 9.248 mL) and a significant proportion of necrosis (12.89%) are hallmarks of high-grade gliomas. The 'Enhancement Quality' being 'Marked' and the presence of a substantial enhancing component (Proportion Enhancing = 46.64%) also support a higher grade. Additionally, the tumor's large size (Total tumor volume = 71.755 mL) and involvement of multiple regions further suggest an aggressive tumor. These features are characteristic of WHO Grade 4 tumors. Therefore, based on the presence of necrosis, significant enhancement, and large tumor volume, the tumor is likely Grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Enhancement Quality",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0535"
+}

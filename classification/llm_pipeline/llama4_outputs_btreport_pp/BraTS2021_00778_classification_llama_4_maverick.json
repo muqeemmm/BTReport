@@ -1,0 +1,37 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (62 years) and the presence of a marked enhancement quality in the tumor are more commonly associated with IDH wildtype gliomas. IDH mutant gliomas are more typically found in younger patients. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) also argues against an IDH mutant glioma, as IDH mutant astrocytomas often exhibit this feature. The tumor's aggressive features, such as significant enhancement and large size, are more characteristic of IDH wildtype glioblastomas.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a marked enhancement and the absence of T2-FLAIR mismatch are more typical of glioblastomas or IDH wildtype gliomas, which are not associated with 1p/19q codeletion. IDH mutant and 1p/19q codeleted tumors (oligodendrogliomas) tend to have more homogeneous signal characteristics and less aggressive enhancement patterns. Given the predicted IDH wildtype status, the likelihood of 1p/19q codeletion is low.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as marked enhancement, significant necrosis (Proportion Necrosis: 7.8%), and a large size (Total tumor volume: 48.028 mL), which are characteristic of high-grade gliomas. The presence of necrosis and marked enhancement are hallmarks of glioblastoma (WHO grade 4). The predicted IDH wildtype status further supports this classification, as IDH wildtype glioblastomas are typically grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "subject_id": "BraTS2021_00778"
+}

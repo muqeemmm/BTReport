@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (48 years) and the presence of a large, necrotic tumor with significant edema and mass effect (as indicated by the 'n_slices_with_shift' and 'mean_shift_mm') could suggest a wildtype IDH status, as IDH wildtype gliomas are more common in older adults and tend to be more aggressive. The tumor's characteristics, such as high 'Proportion Necrosis' (68.8%) and significant 'ED Volume' (28.191 mL), also align with a more aggressive tumor type, which is often associated with IDH wildtype status. However, the absence of midline shift ('midline_shift_present': 'No') and the tumor's location ('frontal_lobe-cortex region') are not strongly indicative of either IDH mutant or wildtype status. Given the available information, the tumor's aggressive features lean towards an IDH wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "n_slices_with_shift",
+      "mean_shift_mm"
+    ],
+    "contradicting_features": [
+      "midline_shift_present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, necrotic tumor with significant edema and the absence of features like calcifications (not directly assessable but often associated with oligodendrogliomas which are more likely to be codeleted) make it challenging to predict 1p/19q co-deletion status directly from the given metadata. However, IDH mutant gliomas are more likely to be codeleted, and given that we've predicted IDH wildtype status with high confidence, it suggests a lower likelihood of codeletion. Thus, the prediction leans towards 'non-codeleted'.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor's characteristics, such as high 'Proportion Necrosis' (68.8%), significant 'ED Volume' (28.191 mL), and large size ('Lesion Sizes APxTVxCC (cm)': [5.3, 5.2, 8.0]), indicate a high-grade tumor. The presence of necrosis and significant edema typically corresponds to a higher grade. Given the predicted IDH wildtype status, which is often associated with more aggressive tumors, and the tumor's features, a CNS WHO grade of 4 is likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01505"
+}

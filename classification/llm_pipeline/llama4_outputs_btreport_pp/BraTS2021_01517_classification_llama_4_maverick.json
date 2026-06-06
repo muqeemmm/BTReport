@@ -1,0 +1,45 @@
+{
+  "id": "patient_0086",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.8434445851371498) is highly suggestive of an IDH mutant glioma. The patient's age (62 years) is somewhat atypical for IDH mutant gliomas, which are more common in younger patients, but the imaging feature is a strong indicator. There are no direct indicators of IDH wildtype status in the provided metadata.",
+      "supporting_features": [
+        "T2-FLAIR Mismatch Present",
+        "T2-FLAIR Mismatch Score"
+      ],
+      "contradicting_features": [
+        "age_years"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of T2-FLAIR mismatch is more commonly associated with IDH mutant astrocytomas rather than oligodendrogliomas, which are typically 1p/19q co-deleted. The absence of significant enhancement and the presence of a non-enhancing tumor also lean towards astrocytoma. Thus, the likelihood of 1p/19q co-deletion is low.",
+      "supporting_features": [
+        "T2-FLAIR Mismatch Present",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor shows significant necrosis (Proportion Necrosis: 41.21) and has a large volume (Total tumor volume: 158.539 mL), with evidence of ependymal invasion and multifocality. These features are indicative of a high-grade glioma. The absence of enhancement does not rule out high grade as IDH mutant glioblastomas can be non-enhancing. Given the patient's age and the aggressive features, a grade 4 is likely.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "Multifocal or Multicentric",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_01517"
+}

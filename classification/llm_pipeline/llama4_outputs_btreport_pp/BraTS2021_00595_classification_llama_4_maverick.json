@@ -1,0 +1,42 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The patient's age (60 years) and the presence of a large, enhancing tumor with significant mass effect (midline shift, ventricular asymmetry) are more typical of IDH wildtype glioblastoma. The T2-FLAIR mismatch score is 0.7146846933672387, which is not strongly indicative of IDH mutant status as a high score typically suggests. The enhancement quality is marked, and there's a significant necrotic component, again pointing towards a more aggressive tumor like IDH wildtype glioblastoma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score",
+      "n_slices_with_shift",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect is less typical for 1p/19q co-deleted tumors, which are more commonly associated with oligodendrogliomas that are IDH mutant. Given the prediction of IDH wildtype status, the likelihood of 1p/19q co-deletion is low because co-deletion is strongly associated with IDH mutation. Thus, without direct evidence for co-deletion status, we infer it is likely non-codeleted based on the IDH status prediction.",
+    "supporting_features": [
+      "IDH Mutation Status",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor's characteristics, such as marked enhancement, significant necrosis, large size, and substantial mass effect, are indicative of a high-grade glioma. The presence of necrosis and the enhancement pattern are particularly suggestive of glioblastoma, which is WHO grade 4. The patient's age and the tumor's aggressive features further support this classification.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "n_slices_with_shift",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00595"
+}

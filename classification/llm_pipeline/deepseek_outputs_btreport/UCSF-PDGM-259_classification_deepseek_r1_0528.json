@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (28 years old), which is more typical for IDH-mutant gliomas. However, the absence of enhancement and necrosis suggests a lower grade tumor, which is also more common in IDH-mutant gliomas. The tumor involves eloquent areas (speech motor) and deep white matter invasion is present, which can occur in both mutant and wildtype gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the frontal lobe, cortex, and insula lobes, which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas (codeleted). Oligodendrogliomas often involve the frontal lobe but are less likely to involve the insula and cortex extensively. However, the absence of enhancement and necrosis does not strongly differentiate between the two.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The tumor is nonenhancing, solitary, with no necrosis, and involves eloquent areas. The presence of midline shift and significant edema volume suggests mass effect. The young age favors IDH-mutant glioma, and the location favors astrocytoma over oligodendroglioma. Grade 2 is assigned due to absence of enhancement and necrosis.",
+  "subject_id": "UCSF-PDGM-259",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "midline_shift_present"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None) and no necrosis (Proportion Necrosis: 0.0), which are features of lower-grade gliomas (WHO grade 2). However, the significant edema volume (78.18 mL) and midline shift present could be seen in higher-grade tumors, but in the absence of enhancement and necrosis, grade 2 is more likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The T2-FLAIR mismatch score is 0.5196310253751312, which is below the typical threshold for a positive T2-FLAIR mismatch sign (usually considered around 0.7 or higher). The presence of this sign is often associated with IDH-mutant astrocytomas. Given the score is not high, it suggests the tumor may not have a strong T2-FLAIR mismatch. Additionally, the age of the patient (59 years) and the presence of necrosis (Proportion Necrosis: 72.46%) and enhancement (Enhancement Quality: Mild, Proportion Enhancing: 1.62%) are more commonly associated with IDH wildtype glioblastomas. Therefore, based on the available metadata, the tumor is likely IDH wildtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of a mild enhancement and significant necrosis (Proportion Necrosis: 72.46%) along with the tumor's large size and involvement of multiple lobes suggests a high-grade glioma. IDH-mutant tumors with 1p/19q co-deletion typically present as oligodendrogliomas, which are less likely to have significant necrosis. Given the high necrosis proportion and the likely IDH wildtype status from the previous prediction, 1p/19q co-deletion is less likely. Therefore, the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "IDH mutation status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "CNS WHO grade": {
+    "reasoning": "The presence of significant necrosis (Proportion Necrosis: 72.46%), mild enhancement (Enhancement Quality: Mild), and a large tumor size (Total tumor volume: 100.483 mL) are characteristic features of glioblastoma, which is typically classified as CNS WHO grade 4. The patient's age (59 years) also aligns with the demographic commonly affected by glioblastoma. The likely IDH wildtype status further supports this classification, as most glioblastomas are IDH wildtype.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "age_years",
+      "IDH mutation status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00366"
+}

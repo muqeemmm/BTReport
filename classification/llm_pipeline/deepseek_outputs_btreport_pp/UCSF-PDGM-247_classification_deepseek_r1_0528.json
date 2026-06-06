@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (26 years), which is more common in IDH-mutant gliomas. The tumor is nonenhancing ('Enhancement Quality': 'None'), which is typical for IDH-mutant tumors. However, eloquent brain involvement ('Motor') is more common in IDH-wildtype gliomas, and the absence of deep white matter invasion ('Deep WM invasion': 'Absent') is less typical for IDH-mutant tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex ('Eloquent Brain Involvement': 'Motor') and is located in the frontal lobe ('Tumor Location': 'frontal_lobe-cortex region'), which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often show frontal lobe involvement but typically have less eloquent cortex involvement. The absence of deep white matter invasion ('Deep WM invasion': 'Absent') is less typical for oligodendrogliomas, which often invade white matter.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the MRI metadata, the tumor is classified as Astrocytoma, IDH-mutant. The absence of enhancement and young age support IDH-mutant status. The frontal lobe location and eloquent involvement suggest non-codeleted status. The grade is estimated as 2 due to the absence of enhancement and necrosis.",
+  "subject_id": "UCSF-PDGM-247",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement ('Enhancement Quality': 'None') and no necrosis ('Proportion Necrosis': 0.0), which are features of lower-grade gliomas (WHO grade 2). However, involvement of eloquent cortex ('Motor') is a feature that may suggest a higher grade, though it can occur in grade 2 tumors.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

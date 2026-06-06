@@ -1,0 +1,63 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (50 years) and the presence of a large, unilateral tumor with significant mass effect (midline shift of 1.793 mm, asymmetrical ventricles, and effaced ventricle on the left) are more typical of IDH wildtype gliomas, which are more common in older adults and tend to be more aggressive. The presence of necrosis (NCR Volume = 1.233 mL, Proportion Necrosis = 1.26%) and enhancement (ET Volume = 7.824 mL, Enhancement Quality = Mild, Thickness of enhancing margin >3mm) also supports this, as IDH wildtype glioblastomas often show necrosis and enhancement. While the tumor's location in the temporal lobe and involvement of deep structures could be seen in either IDH mutant or wildtype gliomas, the overall profile leans towards IDH wildtype due to the patient's age and the tumor's aggressive features.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "median_shift_mm",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "midline_shift_present",
+      "volumes_ideal_midline",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle",
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a unilateral tumor with significant mass effect and necrosis, along with the patient's age, is more typical of IDH wildtype glioblastomas, which are not typically associated with 1p/19q co-deletion. IDH mutant gliomas with 1p/19q co-deletion are more likely to be found in younger patients and often have a more favorable prognosis. The tumor's characteristics here (necrosis, enhancement, significant mass effect) are less typical of 1p/19q co-deleted tumors, which tend to be more oligodendroglial in nature and less likely to show necrosis. Therefore, it is more likely that this tumor is non-codeleted.",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "median_shift_mm",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "midline_shift_present",
+      "NCR Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (NCR Volume = 1.233 mL) and enhancement (ET Volume = 7.824 mL) with a thickened enhancing margin (>3mm) are hallmarks of glioblastoma, which is WHO grade 4. The significant mass effect (midline shift, asymmetrical ventricles, effaced ventricle) and large tumor volume (Total tumor volume = 97.635 mL) further support a high-grade tumor. While the proportion of necrosis is relatively low (1.26%), the overall profile is still most consistent with a high-grade glioma, specifically glioblastoma, WHO grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "midline_shift_present",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00090"
+}

@@ -1,0 +1,43 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (40 years) and the tumor characteristics (non-enhancing, located in the frontal lobe, cortex, and eloquent areas, with no ependymal invasion, no deep white matter invasion, and no enhancement) are suggestive of a lower-grade glioma. The T2-FLAIR mismatch score is 0.5880915086724067, which is not strongly indicative of a T2-FLAIR mismatch. However, the absence of enhancement and the presence of cortical involvement are more commonly seen in IDH-mutant gliomas. Given these features, the likelihood of an IDH mutation is higher.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in the frontal lobe and involves the cortex, which is more typical of 1p/19q codeleted tumors. However, the absence of enhancement and the lack of clear evidence for 1p/19q codeletion from the provided metadata make this prediction uncertain. The presence of cortical involvement and frontal lobe location supports the possibility of codeletion, but it's not definitive.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has a significant proportion of edema (99.99%), and lacks necrosis or enhancement, suggesting a lower grade. The absence of enhancement and the presence of cortical involvement are more typical of lower-grade gliomas. However, the presence of eloquent brain involvement and the patient's age could suggest a potentially higher grade. Given the available information, a grade 2 or 3 is plausible, but grade 2 is more likely due to the lack of aggressive features like enhancement or necrosis.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "age_years"
+    ],
+    "prediction": 2,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-255"
+}

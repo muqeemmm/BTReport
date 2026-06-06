@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (51 years) and the tumor's characteristics (non-enhancing, large edema volume relative to tumor core volume, and location in the temporal cortex) are suggestive of an IDH mutant glioma. The T2-FLAIR mismatch score is 0.474, which is below the typical threshold for a positive mismatch sign (usually considered around 0.7-0.8), but the presence of a non-enhancing tumor in the temporal lobe is highly suggestive of an IDH mutant glioma, particularly in an adult patient. The absence of enhancement and the large proportion of edema relative to the tumor core volume also support this interpretation.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion of Oedema",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in the temporal cortex and is non-enhancing, which is more typical of IDH mutant gliomas. IDH mutant gliomas that are 1p/19q codeleted tend to have a more frontal lobe predominance and often show more distinct imaging features such as a more homogeneous signal. The lack of specific indicators for 1p/19q codeletion status in the provided metadata (such as specific location or enhancement pattern) makes it challenging to predict codeletion status directly. However, given the temporal lobe location and the absence of enhancement, if the tumor is IDH mutant (as predicted), it is less likely to be codeleted, as codeleted tumors are more commonly associated with frontal lobe involvement and oligodendroglioma morphology.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor has a large edema volume (17.387 mL) relative to its necrotic core volume (0.064 mL), is non-enhancing, and has a significant proportion of edema. These features, in the context of an IDH mutant glioma (as predicted), are more suggestive of a lower grade glioma. However, the presence of a significant amount of edema and the patient's age could also suggest a more aggressive tumor. The absence of enhancement and the relatively low tumor core volume suggest a lower grade. Given the IDH mutant status prediction, a grade 2 or 3 is plausible. The presence of significant edema and the patient's age lean towards a grade 3.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.75
+  },
+  "subject_id": "EGD-0022"
+}

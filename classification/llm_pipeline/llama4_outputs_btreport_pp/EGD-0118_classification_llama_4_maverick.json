@@ -1,0 +1,43 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (50 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 17.54) and a relatively large edema volume (ED Volume: 68.324 mL) are more typical of glioblastoma, which is often IDH wildtype. The T2-FLAIR mismatch score is 0.5093697455277176, which is not strongly indicative of an IDH mutant astrocytoma (typically requires a score closer to 1). The absence of T2-FLAIR mismatch argues against IDH mutation. The presence of necrosis and the enhancement quality being 'Mild' with a 'Thickness of enhancing margin' <3mm are not strongly indicative of IDH mutant status. Overall, the evidence leans towards IDH wildtype due to the age of the patient and the imaging characteristics suggestive of a more aggressive tumor.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of a mildly enhancing tumor with a low proportion enhancing (0.01) and the absence of ependymal invasion are noted. However, the key determinant for 1p/19q co-deletion status is not directly available in the provided metadata. Typically, oligodendrogliomas (which are more likely to be 1p/19q co-deleted) tend to have calcifications and are more likely to be located in the frontal lobe. The tumor is located in the parietal-cortex region, not typically associated with 1p/19q co-deletion. The absence of specific features like calcifications and the non-frontal location make 1p/19q co-deletion less likely. Given the IDH status is predicted as wildtype, which is less commonly associated with 1p/19q co-deletion, it further supports the prediction of non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Proportion Enhancing",
+      "Ependymal (ventricular) Invasion",
+      "age_years",
+      "IDH mutation status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "CNS WHO grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 17.54), a significant edema volume (ED Volume: 68.324 mL), and a mildly enhancing tumor with a large size (Lesion Sizes APxTVxCC: 3.4 x 3.1 x 3.4 cm) are indicative of a high-grade glioma. The patient's age (50 years) also supports this, as glioblastomas (WHO grade 4) are more common in this age group. The absence of T2-FLAIR mismatch and the presence of necrosis further argue against a lower grade. The overall imaging characteristics are most consistent with a glioblastoma, which is WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Lesion Sizes APxTVxCC (cm)",
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0118"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "patient_0912",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (62 years) and the presence of a large, enhancing tumor with necrosis (NCR Volume = 3.714 mL, Proportion Necrosis = 5.56%) and significant edema (ED Volume = 52.227 mL, Proportion of Oedema = 78.12%) are more typical of IDH wildtype glioblastoma, which is common in older adults. The tumor's aggressive features, such as ependymal invasion and deep white matter invasion, also support this prediction. While there's no direct evidence from the metadata that conclusively proves IDH wildtype status, the overall clinical and radiological picture is more suggestive of IDH wildtype.",
+      "supporting_features": [
+        "age_years",
+        "NCR Volume (mL)",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Proportion of Oedema",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis and significant edema, along with the patient's age, is more typical of IDH wildtype glioblastoma or IDH mutant astrocytoma rather than 1p/19q codeleted oligodendroglioma. The absence of features like calcifications (not directly assessable but often associated with oligodendrogliomas) and the tumor's aggressive features (e.g., ependymal invasion) argue against 1p/19q codeletion. Thus, based on the available metadata and the typical presentation of adult-type diffuse gliomas, 1p/19q codeletion is less likely.",
+      "supporting_features": [
+        "age_years",
+        "NCR Volume (mL)",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor exhibits aggressive features such as necrosis (NCR Volume = 3.714 mL), significant edema (ED Volume = 52.227 mL), ependymal invasion, and deep white matter invasion. The presence of necrosis and significant enhancement (Enhancement Quality = 'Marked', Proportion Enhancing = 16.32%) are hallmarks of high-grade gliomas. The patient's age and the tumor's radiological characteristics are most consistent with a high-grade glioma, specifically WHO grade 4.",
+      "supporting_features": [
+        "NCR Volume (mL)",
+        "ED Volume (mL)",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion",
+        "Enhancement Quality",
+        "Proportion Enhancing"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00430"
+}

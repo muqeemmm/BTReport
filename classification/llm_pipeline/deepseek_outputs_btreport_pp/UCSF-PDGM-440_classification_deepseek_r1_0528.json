@@ -1,0 +1,51 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (31 years), which favors IDH-mutant glioma. The tumor is nonenhancing ('Enhancement Quality': 'None'), which is more common in IDH-mutant tumors. The T2-FLAIR mismatch sign is present ('T2-FLAIR Mismatch Present': 1.0) with a high score (0.96), strongly suggesting IDH-mutant astrocytoma. However, the absence of enhancement argues against higher-grade IDH-mutant tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas ('Eloquent Brain Involvement': 'Speech motor and Vision') and has deep white matter invasion ('Deep WM invasion': 'Present'), which are more typical of astrocytomas (non-codeleted) than oligodendrogliomas. The location in temporal-cortex region ('Tumor Location') and ependymal invasion ('Ependymal (ventricular) Invasion': 'Present') also favor astrocytoma. However, the midline epicenter ('Side of Tumor Epicenter': 'Midline') is unusual for oligodendrogliomas but not definitive.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Tumor Location",
+      "Ependymal (ventricular) Invasion",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "Based on the MRI metadata, this is a nonenhancing tumor with T2-FLAIR mismatch sign, suggesting IDH-mutant astrocytoma. The absence of necrosis and enhancement supports WHO grade 2. Confidence is moderate due to lack of direct molecular data.",
+  "subject_id": "UCSF-PDGM-440",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": 2,
+    "reasoning": "There is no enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) and no necrosis ('Proportion Necrosis': 0.0), which are hallmarks of WHO grade 2 gliomas. The tumor volume is large (251.5 mL) but volume alone doesn't upgrade without other features. The T2-FLAIR mismatch sign is typically seen in grade 2 IDH-mutant astrocytomas. However, the presence of ependymal invasion and eloquent involvement might suggest higher grade, but without enhancement or necrosis, grade 2 is more likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Present"
+    ]
+  }
+}

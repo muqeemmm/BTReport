@@ -1,0 +1,49 @@
+{
+  "id": "patient_1248",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (72 years) and the presence of a large, enhancing, midline-crossing tumor with necrosis and significant mass effect (midline shift of 13mm, ependymal invasion, and asymmetrical ventricles) are more typical of glioblastoma, IDH-wildtype. The tumor's aggressive features, such as marked enhancement, large size (7.7 cm in CC dimension), and involvement of multiple lobes and deep structures, further support this. IDH-mutant gliomas are less likely to present with such aggressive features at this age.",
+      "supporting_features": [
+        "age_years",
+        "max_shift_mm",
+        "Enhancement Quality",
+        "Lesion Sizes APxTVxCC (cm)",
+        "Ependymal (ventricular) Invasion",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.95
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "Given the prediction of IDH-wildtype status with high confidence, the likelihood of 1p/19q co-deletion is low because 1p/19q co-deleted tumors are typically IDH-mutant. The aggressive features and absence of characteristics typical for oligodendroglioma (e.g., calcifications, which are not assessed here) further support non-codeleted status.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Lesion Sizes APxTVxCC (cm)",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.9
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor's aggressive imaging features (large size, necrosis, marked enhancement, significant mass effect, ependymal invasion) are characteristic of glioblastoma, WHO grade 4. The patient's age and the tumor's growth pattern (crossing midline, involving multiple lobes) also support this diagnosis. The presence of necrosis (Proportion Necrosis = 2.56%) and marked enhancement quality are particularly indicative of high-grade glioma.",
+      "supporting_features": [
+        "age_years",
+        "Lesion Sizes APxTVxCC (cm)",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.98
+    }
+  ],
+  "subject_id": "EGD-0254"
+}

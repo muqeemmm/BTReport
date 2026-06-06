@@ -1,0 +1,39 @@
+{
+  "subject_id": "BraTS2021_00778",
+  "idh": {
+    "reasoning": "The patient is 62 years old. Older age (>55) is associated with IDH-wildtype gliomas, while younger age (<40) is associated with IDH-mutant gliomas. The available metadata does not include features strongly indicative of IDH-mutant status (e.g., low grade, specific locations like thalamus or optic pathway, or absence of necrosis/enhancement). The presence of marked enhancement and necrosis, along with a relatively large tumor volume (48 mL), are more commonly seen in IDH-wildtype tumors, particularly glioblastoma. However, these features can also be present in high-grade IDH-mutant gliomas. Given the patient's age and the presence of enhancement/necrosis, IDH-wildtype is statistically more likely, but the evidence is not definitive without molecular testing. The lack of features strongly pointing towards IDH-mutant status pushes the prediction towards wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata lacks any information regarding 1p/19q co-deletion status. Features like tumor location (e.g., frontal lobe), morphology (e.g., diffuse infiltration), or specific MRI characteristics (e.g., absence of necrosis) that might suggest 1p/19q co-deletion are not present or are ambiguous. Therefore, a prediction cannot be reliably made based on the available data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 62 years old with a solitary tumor located in the temporal-cortex region. The tumor demonstrates marked enhancement, necrosis (7.8%), and significant edema (66.17%). Cortical involvement is present, but deep white matter invasion and ependymal invasion are absent. The total tumor volume is 48 mL. The combination of older age, marked enhancement, and presence of necrosis strongly suggests a high-grade glioma (WHO Grade 4). While Grade 3 astrocytomas can show enhancement and some necrosis, the marked enhancement and significant volume in an older adult point more towards Grade 4 (glioblastoma). Grade 2 gliomas typically lack significant enhancement and necrosis.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion: Absent",
+      "Ependymal (ventricular) Invasion: Absent"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-mutant, WHO grade ?",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult presenting with a solitary enhancing lesion in the temporal lobe with associated edema and necrosis. The features are most consistent with a high-grade glioma. However, without molecular data or biopsy confirmation, precise subtyping remains uncertain."
+}

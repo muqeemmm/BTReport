@@ -1,0 +1,34 @@
+{
+  "subject_id": "BraTS2021_00163",
+  "idh": {
+    "reasoning": "The provided metadata lacks features strongly indicative of either IDH-mutant or IDH-wildtype status. Features like age, tumor size, necrosis proportion, and enhancement pattern are not sufficiently discriminatory without additional information (e.g., DWI, perfusion, MRS). The tumor is solitary, has a relatively high proportion of edema (78.47%), and moderate necrosis (21.4%). While IDH-wildtype tumors are often larger and more necrotic, these features are not definitive. The 'midline_shift_present' is 'Minimal', suggesting some mass effect but not necessarily indicative of high grade or wildtype status. Given the lack of strong differentiating features in the available metadata, a prediction cannot be made with high confidence. However, IDH-mutant gliomas are more common overall in adults. Without more specific imaging characteristics (like diffusion restriction or significant perfusion), I will default to the more common status.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not contain any information related to 1p/19q co-deletion status. This requires molecular testing, which is not reflected in the provided MRI metadata fields.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits cortical involvement ('Cortical involvement': 'Present') and significant edema ('Proportion of Oedema': 78.47%, 'Edema crosses midline': 'True'). The enhancement is mild ('Enhancement Quality': 'Mild') and the enhancing margin is thin ('Thickness of enhancing margin': '<3mm'). There is no deep white matter invasion ('Deep WM invasion': 'Absent') or ependymal invasion ('Ependymal (ventricular) Invasion': 'Absent'). The tumor is solitary ('Multifocal or Multicentric': 'Solitary') and has a moderate necrosis proportion (21.4%). The presence of cortical involvement and significant edema crossing the midline suggests at least a Grade 2 or 3 glioma. The absence of deep WM or ependymal invasion argues against Grade 4 (GBM). While the necrosis proportion is notable, it's not extremely high (>50%) which might push towards Grade 4 in some contexts, especially without other features like pseudopalisading necrosis (not assessable here). Given the cortical involvement and edema crossing midline but lack of deep/ependymal invasion, Grade 3 (Anaplastic Astrocytoma) seems most likely based on WHO CNS5 criteria applied to these specific MRI features.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Proportion of Oedema",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma, WHO grade 3.",
+  "consistency_check_passed": true,
+  "overall_comment": "The provided metadata suggests an IDH-mutant astrocytoma, WHO grade III based on cortical involvement and edema crossing the midline without deep white matter or ependymal invasion."
+}

@@ -1,0 +1,53 @@
+{
+  "id": "patient_0008",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is relatively young (30 years) with a glioma in the frontal lobe, which is a common location for IDH-mutant gliomas. The tumor is described as mildly enhancing and solitary, with deep white matter invasion but no ependymal invasion. These features are consistent with IDH-mutant gliomas, which are more likely to occur in younger patients and often have a frontal lobe location. The absence of necrosis (NCR Volume = 0.0 mL) and the mild enhancement quality also support the likelihood of an IDH-mutant tumor, as IDH-wildtype glioblastomas often present with more aggressive features like necrosis and stronger enhancement.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Enhancement Quality",
+        "NCR Volume (mL)",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "CET Crosses midline",
+        "Edema crosses midline"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the frontal lobe and involves the cortex, which is typical for 1p/19q co-deleted oligodendrogliomas. The presence of cortical involvement and the frontal lobe location are characteristic features. The tumor is also mildly enhancing and lacks necrosis, which aligns with the typical presentation of oligodendrogliomas. Given the IDH mutation status is predicted as 'mutant', the likelihood of 1p/19q co-deletion is higher because oligodendrogliomas are IDH-mutant and 1p/19q co-deleted.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality",
+        "NCR Volume (mL)"
+      ],
+      "contradicting_features": [
+        "Side of Tumor Epicenter"
+      ],
+      "prediction": "codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor shows mild enhancement and lacks necrosis, suggesting a lower grade. The presence of cortical involvement and deep white matter invasion indicates a more infiltrative nature, consistent with a grade 2 or 3 glioma. Given the predicted IDH mutation status is 'mutant' and the likely 1p/19q co-deletion status is 'codeleted', the tumor is likely an oligodendroglioma. Oligodendrogliomas are typically graded as 2 or 3 based on features like cellular atypia, mitotic activity, and microvascular proliferation. The absence of necrosis and the mild enhancement quality support a lower grade, likely grade 2 or 3. However, without explicit information on mitotic activity or microvascular proliferation, the distinction between grade 2 and 3 is challenging. The presence of eloquent brain involvement and deep white matter invasion might suggest a higher grade (3), but the overall radiological features lean towards a lower grade.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "NCR Volume (mL)",
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Eloquent Brain Involvement"
+      ],
+      "prediction": 2,
+      "confidence": 0.6
+    }
+  ],
+  "subject_id": "UCSF-PDGM-241"
+}

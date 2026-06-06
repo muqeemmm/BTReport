@@ -1,0 +1,53 @@
+{
+  "id": "patient_1340",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The presence of a large edema volume (4.689 mL) and significant cortical involvement along with deep white matter invasion suggests an aggressive tumor. The tumor is located in the frontal lobe with midline involvement and has a marked enhancement quality. These features are more commonly associated with IDH wildtype gliomas, which tend to be more aggressive and have a worse prognosis compared to IDH mutant gliomas. The absence of ependymal invasion and the presence of a solitary lesion also align with typical presentations of IDH wildtype glioblastomas.",
+      "supporting_features": [
+        "Cortical involvement",
+        "Deep WM invasion",
+        "ED Volume (mL)",
+        "Enhancement Quality",
+        "Tumor Location"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's location in the frontal lobe and its cortical involvement could be suggestive of an oligodendroglial component, which is often associated with 1p/19q co-deletion. However, the marked enhancement quality and the absence of ependymal invasion are not typical hallmarks for 1p/19q co-deleted tumors. Given the presence of a significant edema and the tumor's aggressive features (e.g., deep white matter invasion), it is less likely to be codeleted. The IDH mutation status prediction as wildtype further supports this, as 1p/19q co-deletion is typically associated with IDH mutant gliomas.",
+      "supporting_features": [
+        "Cortical involvement",
+        "Deep WM invasion",
+        "Enhancement Quality",
+        "IDH mutation status"
+      ],
+      "contradicting_features": [
+        "Tumor Location"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.75
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits aggressive features such as significant edema (4.689 mL), cortical involvement, deep white matter invasion, and marked enhancement quality. The presence of a large edema volume and the tumor's aggressive imaging characteristics are indicative of a high-grade glioma. The predicted IDH wildtype status further supports a higher grade, as IDH wildtype glioblastomas are typically grade 4. The proportion of necrosis is relatively low (0.58%), but the overall tumor behavior suggested by other features points towards a high-grade tumor.",
+      "supporting_features": [
+        "ED Volume (mL)",
+        "Cortical involvement",
+        "Deep WM invasion",
+        "Enhancement Quality",
+        "IDH mutation status"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "EGD-0486"
+}

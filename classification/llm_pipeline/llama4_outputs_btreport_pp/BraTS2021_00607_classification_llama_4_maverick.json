@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (75 years) and the presence of a multifocal tumor with significant edema and mass effect (as indicated by 'n_slices_with_shift': 132, 'mean_shift_mm': 1.116, 'Asymmetrical Ventricles': 'Present', 'Effaced Ventricle': 'Left') are more typical of glioblastoma, which is commonly IDH wildtype in older adults. The 'T2-FLAIR Mismatch Score': 0.4 and 'T2-FLAIR Mismatch Degree': -0.362 suggest the absence of T2-FLAIR mismatch, a feature often associated with IDH mutant gliomas. Therefore, the evidence points towards an IDH wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Multifocal or Multicentric",
+      "n_slices_with_shift",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a multifocal tumor with significant mass effect and the absence of T2-FLAIR mismatch are more typical of glioblastoma or IDH wildtype gliomas, which are less likely to have 1p/19q co-deletion. The 'T2-FLAIR Mismatch Score' and 'T2-FLAIR Mismatch Degree' further support an IDH mutant astrocytoma or glioblastoma, but 1p/19q co-deletion is not characteristic of these tumors. Therefore, it is likely that the tumor is non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Multifocal or Multicentric"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_grade": {
+    "reasoning": "The patient's age, the presence of a multifocal tumor, significant edema ('ED Volume (mL)': 85.909), and mass effect ('n_slices_with_shift': 132) are indicative of a high-grade glioma. The tumor's characteristics, such as 'Enhancement Quality': 'Mild', 'Thickness of enhancing margin': '>3mm', and 'rim_core_adjacency': {'rim_touches_core': true}, are consistent with glioblastoma, which is WHO grade 4. The absence of T2-FLAIR mismatch also argues against a lower grade IDH mutant glioma.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "ED Volume (mL)",
+      "n_slices_with_shift",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "rim_core_adjacency"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00607"
+}

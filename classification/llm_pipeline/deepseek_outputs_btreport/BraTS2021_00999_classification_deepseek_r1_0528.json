@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 31 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor involves eloquent areas (Speech motor and Motor) and shows mild enhancement, which is more typical of lower-grade gliomas that are often IDH-mutant. However, the age is not extremely young, so confidence is moderate.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is midline and involves thalamus, basal ganglia, and ventricles, which are locations more typical of astrocytomas (non-codeleted) rather than oligodendrogliomas. Oligodendrogliomas are usually hemispheric and cortical. However, the frontal lobe involvement and cortical involvement could suggest oligodendroglioma, but midline location argues against it.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Side of Tumor Epicenter",
+      "Tumor Location",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "The tumor shows features suggestive of IDH-mutant astrocytoma. Despite the young age, the midline location, ventricular invasion, and eloquent involvement point to an aggressive tumor. The presence of necrosis (36.33%) and enhancement crossing midline suggest grade 4, but without diffusion/perfusion data, confidence is moderate.",
+  "subject_id": "BraTS2021_00999",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has necrosis (36.33%) and enhancement crossing midline, which are features of glioblastoma (CNS WHO grade 4). The proportion of necrosis is high, and the enhancement is present. However, the patient is young (31 years) which is atypical for grade 4 IDH-wildtype, but since IDH-mutant grade 4 exists, and necrosis is a key feature, grade 4 is predicted. Mild enhancement quality lowers confidence slightly.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "CET Crosses midline",
+      "Enhancement Quality"
+    ]
+  }
+}

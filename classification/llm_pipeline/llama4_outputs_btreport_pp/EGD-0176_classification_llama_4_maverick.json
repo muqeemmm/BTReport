@@ -1,0 +1,35 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.797633097202863, indicating a strong presence of this feature. T2-FLAIR mismatch is a known imaging biomarker associated with IDH-mutant gliomas. Therefore, the evidence strongly supports the presence of an IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, the presence of a T2-FLAIR mismatch is more commonly associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are typically 1p/19q co-deleted. The tumor's imaging characteristics, such as being solitary and having a significant enhancing component, do not strongly suggest a specific codeletion status. Therefore, based on the available information and the association of T2-FLAIR mismatch with IDH-mutant astrocytomas, it is less likely to be codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor shows marked enhancement and has a significant necrotic component (Proportion Necrosis: 0.3), which are features often associated with higher-grade gliomas. The presence of necrosis and enhancement quality suggests a more aggressive tumor. IDH-mutant gliomas with these features are likely to be grade 4. The age of the patient (53 years) also aligns with the possibility of a higher-grade glioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0176"
+}

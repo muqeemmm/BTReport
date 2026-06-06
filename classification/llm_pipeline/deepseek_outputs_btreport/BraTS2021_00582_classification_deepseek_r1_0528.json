@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 36 years old, which is younger than typical for IDH-wildtype gliomas that peak around 60. However, no direct molecular markers are available. The tumor involves eloquent cortex (vision) and shows marked enhancement, which are non-specific. Given the age, IDH-mutant is more likely but confidence is low due to lack of definitive features.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the parietal-cortex region, which is atypical for oligodendrogliomas that favor frontal lobes. Oligodendrogliomas often show calcifications or cortical involvement, but calcifications are not assessed here. The absence of deep white matter invasion argues against oligodendroglioma. However, cortical involvement is present, which can occur in both. Given the location and lack of classic features, non-codeleted is slightly favored.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The prediction is based solely on MRI metadata without molecular testing. Confidence is low due to absence of key sequences like DWI/ADC or perfusion. The tumor is midline parietal-cortex based, solitary, with marked enhancement and no necrosis. Grade 2 is assigned due to low necrosis proportion and absence of microvascular proliferation indicators.",
+  "subject_id": "BraTS2021_00582",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 2,
+    "reasoning": "The proportion of necrosis is very low (0.71%), which is atypical for grade 4 glioblastoma. Enhancement is marked but thickness is >3mm, suggesting a well-defined margin rather than irregular GBM enhancement. No microvascular proliferation or necrosis is reported. However, marked enhancement can occur in grade 3 tumors. Given low necrosis and solitary lesion without multifocality, grade 2 is most consistent.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Multifocal or Multicentric",
+      "Number of lesions"
+    ]
+  }
+}

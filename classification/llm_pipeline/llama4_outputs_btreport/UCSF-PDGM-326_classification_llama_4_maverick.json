@@ -1,0 +1,49 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (32 years) and the presence of a non-enhancing tumor with significant edema (ED Volume = 109.386 mL) and ependymal invasion suggest a possible IDH mutant glioma, as IDH mutant gliomas are more common in younger adults and often present with non-enhancing features. The absence of enhancement (Enhancement Quality = 'None', Proportion Enhancing = 0.0) also aligns with the typical imaging characteristics of IDH mutant gliomas, which are less likely to show robust enhancement compared to IDH wildtype gliomas. However, the presence of significant mass effect (midline shift present, asymmetrical ventricles, effaced ventricle) could be seen in both IDH mutant and wildtype gliomas, though it's more typical of higher-grade tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a non-enhancing glioma with significant edema and ependymal invasion, along with the patient's relatively young age, might suggest an IDH mutant glioma. 1p/19q co-deletion is more commonly associated with IDH mutant oligodendrogliomas. The absence of enhancement and the presence of cortical involvement are features that can be seen in oligodendrogliomas. However, the lack of specific information on calcifications or the precise histological features makes this prediction challenging. Given the clinical and imaging features, a codeleted status is plausible, especially if considering an oligodendroglioma subtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Multiple satellites present"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The significant mass effect (midline shift, asymmetrical ventricles, effaced ventricle) and the large edema volume suggest a high-grade tumor. The presence of ependymal invasion also supports a more aggressive tumor. However, the absence of enhancement (Enhancement Quality = 'None') and necrosis (Proportion Necrosis = 0.0) might argue against the highest grade. WHO grade 3 gliomas can present with significant mass effect and non-enhancing features, making it a plausible diagnosis. Yet, the overall clinical and imaging profile leans more towards a higher grade due to the aggressive features like significant midline shift and ependymal invasion.",
+    "supporting_features": [
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "confidence": 0.8
+  },
+  "subject_id": "UCSF-PDGM-326"
+}

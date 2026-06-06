@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 27 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. The tumor is located in the frontal lobe, which is a common site for IDH-mutant gliomas. Enhancement is mild, which is more typical for lower-grade gliomas often associated with IDH mutation. However, the proportion of necrosis is high (65.57%), which is more typical of IDH-wildtype glioblastoma. The confidence is moderate due to conflicting evidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (Speech motor and Motor), which is more common in astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas (codeleted) often present in non-eloquent frontal regions, but this tumor involves motor and speech areas. The frontal lobe location is common for both, but eloquent involvement favors astrocytoma. Confidence is moderate as location supports oligodendroglioma but eloquent involvement contradicts.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor is midline frontal lobe glioma with mild enhancement and high necrosis proportion. Age suggests IDH-mutant, but necrosis suggests GBM. Eloquent involvement suggests astrocytoma. Grade 4 assigned due to necrosis proportion >10% and enhancement.",
+  "subject_id": "BraTS2021_01520",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "reasoning": "The proportion of necrosis is 65.57%, which exceeds the 10% threshold for necrosis in glioblastoma (CNS WHO grade 4). There is enhancement present (Proportion Enhancing 0.32), and the enhancing margin is thick (>3mm). These features are characteristic of glioblastoma. However, the patient is young (27 years), which is atypical for GBM, lowering confidence slightly.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ]
+  }
+}

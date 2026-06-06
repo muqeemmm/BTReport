@@ -1,0 +1,42 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high mismatch score (0.7147), which is strongly associated with IDH-mutant astrocytomas. Additionally, the tumor location involves temporal regions and ventricles, which is common in IDH-mutant gliomas. However, the patient's age (60 years) is older than typical for IDH-mutant gliomas, which usually present in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.9,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "IDH-mutant gliomas are typically non-codeleted. The T2-FLAIR mismatch sign further supports an astrocytic lineage rather than oligodendroglioma, which would be codeleted. No features suggest oligodendroglial morphology.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor exhibits features consistent with IDH-mutant astrocytoma despite the older age. The presence of necrosis (Proportion Necrosis: 2.01%) and marked enhancement (Enhancement Quality: Marked) suggest CNS WHO grade 4.",
+  "subject_id": "BraTS2021_00595",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis: 2.01%) and marked enhancement, which are features of glioblastoma (CNS WHO grade 4). However, the proportion of necrosis is relatively low, and IDH-mutant glioblastomas may have less necrosis than IDH-wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

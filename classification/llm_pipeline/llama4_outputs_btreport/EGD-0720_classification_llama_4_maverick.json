@@ -1,0 +1,53 @@
+{
+  "id": "patient_0179",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (34 years) and the presence of cortical involvement, deep white matter invasion, and eloquent brain involvement are more commonly associated with IDH mutant gliomas in younger adults. The tumor is located in the frontal lobe, which is a typical location for IDH mutant gliomas. The mild enhancement quality and absence of ependymal invasion also align with characteristics often seen in IDH mutant gliomas. While the presence of necrosis (Proportion Necrosis: 12.99%) could suggest a higher grade tumor, it does not directly indicate IDH status. Overall, the clinical and radiological features support an IDH mutant status.",
+      "supporting_features": [
+        "age_years",
+        "Cortical involvement",
+        "Deep WM invasion",
+        "Eloquent Brain Involvement",
+        "Tumor Location",
+        "Region Proportions"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's location in the frontal lobe and cortical involvement are consistent with 1p/19q codeleted oligodendrogliomas. The presence of mild enhancement and the absence of ependymal invasion are also characteristic. However, the presence of necrosis (12.99%) is less typical for codeleted tumors, which are generally associated with lower grade features. Given the patient's age and the tumor's location, a codeleted status is plausible, but the presence of necrosis introduces some uncertainty.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": "codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 12.99%) and the significant edema (Proportion of Oedema: 86.11%) suggest a higher grade tumor. The tumor's size (Total tumor volume: 122.294 mL) and the presence of deep white matter invasion also support a higher grade. However, the mild enhancement quality is less typical for the highest grade tumors. Given these features, a grade 3 is plausible, balancing between the presence of necrosis and the relatively mild enhancement.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "Total tumor volume (mL)",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 3,
+      "confidence": 0.75
+    }
+  ],
+  "subject_id": "EGD-0720"
+}

@@ -1,0 +1,52 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 43 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor involves eloquent areas (speech motor and motor) and shows ependymal invasion, both more common in IDH-mutant tumors. The T2-FLAIR mismatch sign is present with a score of 0.71 and degree of 0.82, which is highly specific for IDH-mutant astrocytoma. However, mild enhancement and low proportion enhancing (3.38%) argue against IDH-mutant status as mutant tumors typically show less enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe, cortex, and insula, which are common locations for oligodendroglioma. However, the presence of ependymal invasion and deep white matter invasion are more typical of astrocytomas. The T2-FLAIR mismatch sign is present, which is highly specific for IDH-mutant astrocytoma and argues against oligodendroglioma (which is IDH-mutant and 1p/19q codeleted).",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma without 1p/19q co-deletion. The T2-FLAIR mismatch sign strongly supports IDH-mutant status, while the frontal location and cortical involvement are less specific. Grade prediction is challenging without necrosis or mitotic features, but the presence of enhancement and ependymal invasion suggest at least grade 3.",
+  "subject_id": "EGD-0024",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor shows mild enhancement with a proportion enhancing of 3.38%, which is low. Necrosis proportion is 41.85%, which is high and typically associated with grade 4 glioblastoma. However, IDH-mutant tumors may have necrosis at lower grades. Ependymal invasion is present, which can occur in grade 3 or 4 tumors. The absence of significant enhancement argues against grade 4, but the high necrosis proportion supports grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  }
+}

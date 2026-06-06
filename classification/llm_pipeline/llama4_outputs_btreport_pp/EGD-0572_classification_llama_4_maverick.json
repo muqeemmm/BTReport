@@ -1,0 +1,35 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' and 'T2-FLAIR Mismatch Score' fields are both 1.0, indicating a strong presence of this feature. Additionally, the 'T2-FLAIR Mismatch Degree' is 0.9226715397481733, further supporting the presence of T2-FLAIR mismatch. This imaging feature is strongly associated with IDH mutant gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or specific imaging biomarkers. However, IDH mutant gliomas can be further classified based on their 1p/19q status. Given the IDH mutation status is 'mutant', we look for other clues. The presence of cortical involvement and the tumor location in the frontal lobe might be more typical of IDH mutant gliomas with 1p/19q co-deletion (oligodendrogliomas). However, without a clear indicator like 'T2-FLAIR mismatch' for IDH mutation, the confidence in predicting 1p/19q co-deletion status is lower. The 'Cortical involvement' and 'Tumor Location' fields suggest a possible oligodendroglioma subtype, which is often associated with 1p/19q co-deletion.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "To predict the CNS WHO grade, we consider the presence of necrosis (Proportion Necrosis: 24.66%) and the enhancement quality (Mild). The presence of necrosis typically indicates a higher grade (3 or 4). The 'Thickness of enhancing margin' is '>3mm', and 'Enhancement Quality' is 'Mild', which might not strongly indicate a very high grade like 4 but suggests some level of aggressiveness. Given the IDH mutant status, the presence of necrosis leans towards a grade 4 classification, but the mild enhancement quality might argue against it. However, necrosis is a strong indicator of higher grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0572"
+}

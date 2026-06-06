@@ -1,0 +1,42 @@
+{
+  "id": "patient_1197",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.9759306436189531) is highly suggestive of an IDH mutant glioma. The patient's age (68 years) is somewhat atypical for IDH mutant gliomas, which are more common in younger patients, but the imaging feature is a strong indicator. There are no direct indicators of IDH wildtype status in the provided metadata.",
+      "supporting_features": [
+        "T2-FLAIR Mismatch Present",
+        "T2-FLAIR Mismatch Score"
+      ],
+      "contradicting_features": [
+        "age_years"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q codeletion status",
+      "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH mutant astrocytomas rather than oligodendrogliomas, which are more likely to have 1p/19q codeletion. The multifocal nature of the tumor and its aggressive features (e.g., large size, marked enhancement) could be seen in either subtype, but the T2-FLAIR mismatch leans towards a non-codeleted tumor. There is no direct evidence of 1p/19q codeletion status.",
+      "supporting_features": [
+        "T2-FLAIR Mismatch Present"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits aggressive features such as multifocality, large size (Total tumor volume: 89.974 mL), marked enhancement, and significant necrosis (Proportion Necrosis: 7.75%). These features are more typical of higher-grade gliomas. The presence of IDH mutation (predicted above) does not preclude a high grade; IDH mutant glioblastomas (WHO Grade 4) exist. The combination of these aggressive features and the patient's age suggests a high-grade tumor.",
+      "supporting_features": [
+        "Multifocal or Multicentric",
+        "Total tumor volume (mL)",
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "EGD-0109"
+}

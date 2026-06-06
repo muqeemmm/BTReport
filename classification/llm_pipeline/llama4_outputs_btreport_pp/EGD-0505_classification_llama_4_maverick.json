@@ -1,0 +1,38 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.853, indicating a strong presence of this feature. T2-FLAIR mismatch is a known radiological marker associated with IDH-mutant gliomas. Therefore, the evidence strongly supports the presence of an IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, the presence of IDH mutation (predicted with high confidence) is a prerequisite for 1p/19q co-deletion in the WHO CNS5 classification. The tumor's location and characteristics (e.g., involvement of deep structures, lack of cortical involvement) might suggest a higher likelihood of non-codeleted status, as codeleted tumors are often associated with more classical oligodendroglioma features. However, the available metadata does not directly inform codeletion status. Given the uncertainty and lack of direct evidence, a cautious prediction is made.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor shows marked enhancement, a significant proportion of which is enhancing (97.38%), and has a relatively large size (Total tumor volume = 5.89 mL). The presence of necrosis (Proportion Necrosis = 0.95%) and the thickness of the enhancing margin (>3mm) are features concerning for higher grade. The tumor's involvement of deep structures and the brainstem-thalamus region also suggests an aggressive nature. While the absence of midline shift and the solitary nature of the tumor might suggest a less aggressive tumor, the overall features lean towards a higher grade. Given the presence of necrosis and significant enhancement, a grade of 4 is more likely than grade 2 or 3.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0505"
+}

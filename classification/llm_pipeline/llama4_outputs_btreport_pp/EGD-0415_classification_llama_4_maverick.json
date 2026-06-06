@@ -1,0 +1,50 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (35 years) and the tumor's characteristics (e.g., frontal lobe location, mild enhancement, and absence of ependymal invasion) are consistent with a lower-grade glioma, which is more likely to be IDH mutant. The T2-FLAIR mismatch score is 0.6615799020665757, which is below the typical threshold for a positive mismatch (>0.7), but the degree is 0.42919821329738395, suggesting some degree of mismatch. However, the absence of a clear T2-FLAIR mismatch makes it less likely to be a strong indicator for IDH mutation. The presence of cortical involvement and the tumor being solitary also aligns with IDH mutant gliomas. Overall, the evidence leans towards IDH mutant due to the patient's age and tumor characteristics, despite the T2-FLAIR mismatch not being strongly positive.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The tumor is located in the frontal lobe and involves the cortex, which is more typical of 1p/19q codeleted oligodendrogliomas. However, the presence of a significant necrotic proportion (61.93%) and the mild enhancement might also be seen in other types of gliomas. The T2-FLAIR mismatch is not strongly positive, which is more typical of astrocytomas. Without strong evidence for or against codeletion based on the available metadata, the prediction leans towards non-codeleted due to the presence of necrosis and the lack of a clear T2-FLAIR mismatch.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "cns_who_grade": {
+    "reasoning": "The tumor has a significant necrotic proportion (61.93%), which is typically associated with higher-grade gliomas. The presence of necrosis and mild enhancement suggests a higher grade. However, the tumor's overall characteristics, such as being solitary and not crossing the midline, along with the patient's relatively young age, might suggest a lower grade. The presence of necrosis is more indicative of a higher grade (3 or 4). Given the significant necrosis and the mild enhancement, a grade of 3 or 4 is likely. The absence of more aggressive features like ependymal invasion or multiple satellites leans slightly against the highest grade (4), but the presence of necrosis is a strong indicator for a high grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "n_slices_with_shift",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 3,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0415"
+}

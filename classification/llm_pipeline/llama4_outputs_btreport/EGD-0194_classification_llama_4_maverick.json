@@ -1,0 +1,45 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The tumor is located in the left temporal-cortex region, is multifocal, and has mild enhancement. The presence of cortical involvement and the location in the temporal lobe could suggest a higher likelihood of IDH wildtype given the typical presentation of glioblastoma. However, the absence of deep white matter invasion and ependymal invasion, along with the mild enhancement, doesn't strongly point towards a specific IDH status. The multifocal nature could be more indicative of a more aggressive tumor, often associated with IDH wildtype glioblastoma. Yet, the lack of significant necrosis (Proportion Necrosis: 0.35) and the relatively small size of the enhancing tumor (ET Volume: 4.34 mL) compared to the edema (ED Volume: 124.83 mL) might not strongly support a glioblastoma (typically IDH wildtype) diagnosis. Thus, the prediction leans towards IDH wildtype due to multifocality and cortical involvement but with significant uncertainty.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor is located in the left temporal-cortex region and involves the cortex. The presence of cortical involvement is more typical of IDH-mutant tumors, but 1p/19q co-deletion status is not directly inferred from the given metadata. However, oligodendrogliomas (which are 1p/19q co-deleted) often present with cortical involvement. The mild enhancement and absence of deep white matter invasion could be consistent with an oligodendroglioma. Yet, the multifocal nature is less typical for oligodendrogliomas. Given the uncertainty and lack of direct evidence, the prediction is uncertain.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.55
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor is multifocal, has a significant edema volume compared to the enhancing tumor volume, and shows mild enhancement. The proportion of necrosis is relatively low (0.35), and the enhancing tumor volume is not very large (4.34 mL). These features could suggest a lower grade tumor. However, the multifocal nature and cortical involvement might suggest a higher grade. The absence of significant necrosis and the mild enhancement quality might argue against a grade 4 tumor. Thus, a grade 3 tumor is considered due to the balance between these features, leaning towards a more aggressive tumor than grade 2 but not as aggressive as grade 4.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "EGD-0194"
+}

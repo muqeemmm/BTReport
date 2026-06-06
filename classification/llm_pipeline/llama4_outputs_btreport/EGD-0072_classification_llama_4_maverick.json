@@ -1,0 +1,45 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient is 27 years old, which is relatively young for a glioma patient. The tumor is located in the frontal lobe, cortex, insula, and temporal lobes, and has a significant edema volume (150.549 mL) with edema crossing the midline. The presence of ependymal invasion and deep white matter invasion suggests an aggressive tumor. However, the enhancement quality is mild, and the proportion of necrosis is 22.3%, which is not extremely high. Younger age and the presence of edema crossing midline are more commonly associated with IDH mutant gliomas. However, the presence of necrosis and significant mass effect (midline shift present) could also be seen in IDH wildtype gliomas. Given the age and some features like ependymal invasion, IDH mutant status is considered, but the presence of necrosis and significant mass effect introduces uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "n_slices_with_shift"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.6
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor involves the frontal lobe, cortex, and insula, which is a typical location for 1p/19q codeleted oligodendrogliomas. The presence of cortical involvement also supports this. However, the presence of ependymal invasion and significant necrosis is less typical for codeleted tumors. The enhancement quality is mild, which is not strongly indicative either way. Given the tumor location and cortical involvement, codeletion is considered plausible.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.55
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor has a significant necrosis proportion (22.3%), which is typically associated with higher-grade gliomas. The presence of ependymal invasion and deep white matter invasion also suggests a high-grade tumor. The edema volume is large (150.549 mL), and there is a significant mass effect (midline shift present). These features are more commonly associated with grade 4 gliomas. However, the enhancement quality is mild, which might be more typical of lower-grade tumors. The presence of necrosis and significant mass effect outweighs the mild enhancement quality, suggesting a higher grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0072"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "patient_1327",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (66 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 0.24%) are more commonly associated with IDH wildtype gliomas, as IDH mutant gliomas are more typically found in younger patients and often have less aggressive imaging features. The tumor's location in the temporal cortex and its solitary nature also align more with the typical presentation of IDH wildtype glioblastoma in older adults.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Enhancing",
+        "Proportion Necrosis",
+        "Tumor Location"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The presence of a mildly enhancing tumor without significant calcification or specific features suggestive of oligodendroglioma (e.g., frontal lobe involvement), along with the patient's age and the absence of features typical for 1p/19q co-deleted tumors, makes 'non-codeleted' more likely. IDH mutant gliomas with 1p/19q co-deletion often present with more indolent features and are less likely in this age group with this enhancement pattern.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Tumor Location"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 0.24%), mild enhancement, and a significant edema volume (ED Volume: 19.491 mL) are indicative of a high-grade glioma. The patient's age and the tumor's imaging characteristics are most consistent with a glioblastoma, which is WHO grade 4. The absence of features suggesting a lower grade tumor (e.g., lack of clear demarcation, presence of necrosis, significant edema) supports this grading.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "EGD-0447"
+}

@@ -1,0 +1,38 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (61 years) and the presence of a marked enhancement quality on MRI are more typical of IDH wildtype gliomas, which are more common in older adults. The T2-FLAIR mismatch score is 0.86, which is not strongly indicative of an IDH mutant glioma as T2-FLAIR mismatch is typically associated with IDH mutant astrocytomas. The presence of necrosis (Proportion Necrosis: 11.99%) and marked enhancement also leans towards a more aggressive tumor, typically seen in IDH wildtype glioblastomas.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH wildtype status predicted above makes 1p/19q codeletion less likely since codeletion is typically associated with IDH mutant gliomas. The MRI features do not strongly suggest codeletion (e.g., no specific mention of features like frontal lobe predominance or characteristic imaging features associated with oligodendrogliomas).",
+    "supporting_features": [
+      "age_years",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (11.99%), marked enhancement, and a large tumor volume (47.69 mL) are indicative of a high-grade glioma. The patient's age and these aggressive imaging features are more consistent with a WHO grade 4 tumor, typically glioblastoma, IDH wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00573"
+}

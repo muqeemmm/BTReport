@@ -1,0 +1,48 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (35 years) and the tumor's location in the brainstem, along with its non-enhancing nature (Enhancement Quality: 'None', ET Volume: 0.0 mL, Proportion Enhancing: 0.0), are more typical of IDH mutant gliomas, which are more common in younger adults. However, brainstem involvement is less typical for IDH mutant gliomas, which more commonly occur in the frontal lobe. The absence of enhancement and necrosis is consistent with a lower grade glioma, which is more likely to be IDH mutant. Despite the unusual location for an IDH mutant glioma, the age and lack of enhancement favor an IDH mutant status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Anatomical Overlap Regions"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in the brainstem and is non-enhancing, which is not typical for 1p/19q codeleted gliomas. These tumors are more commonly found in the frontal lobe and often show some degree of enhancement. The absence of cortical involvement and ependymal invasion, along with the presence of deep white matter invasion, does not strongly support either codeletion status. Given the unusual location and characteristics, it's challenging to predict codeletion status with high confidence. However, the lack of typical features associated with 1p/19q codeleted tumors (e.g., frontal lobe location, cortical involvement) leans towards a non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "idh_status"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.65
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing (Enhancement Quality: 'None', ET Volume: 0.0 mL), which is more characteristic of lower grade gliomas (WHO Grade 2 or 3). The presence of edema crossing the midline and deep white matter invasion could suggest a more aggressive tumor. However, the absence of necrosis and enhancement typically points towards a lower grade. Given the IDH mutant prediction and the non-enhancing nature, a WHO Grade 2 or 3 is likely. The presence of significant edema and brainstem involvement might lean towards a Grade 3, but the overall features are not strongly indicative of a high-grade (Grade 4) glioma.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ET Volume (mL)",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Edema crosses midline",
+      "Deep WM invasion"
+    ],
+    "prediction": 3,
+    "confidence": 0.6
+  },
+  "subject_id": "UCSF-PDGM-274"
+}

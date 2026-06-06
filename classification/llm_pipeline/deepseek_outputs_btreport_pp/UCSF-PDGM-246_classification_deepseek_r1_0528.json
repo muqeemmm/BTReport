@@ -1,0 +1,58 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 46 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor involves eloquent cortex (speech motor) and cortical regions, which are more common in IDH-mutant gliomas. However, there is no enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0), no necrosis (Proportion Necrosis: 0.0), and no tumor core volume (Tumor Core Volume: 0.0, ET Volume: 0.0, NCR Volume: 0.0), which is unusual for IDH-mutant gliomas that typically show some enhancement or necrosis. The high proportion of edema (100%) suggests a diffuse infiltrative pattern, which could be consistent with either. Given the age and location, IDH-mutant is slightly favored but with low confidence due to lack of typical features.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement",
+      "Cortical involvement",
+      "Region Proportions"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves cortical regions (cortex, insula, temporal, frontal_lobe) and eloquent cortex (speech motor), which is more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often involve deep white matter and are less likely to be purely cortical. However, Deep WM invasion is absent, which is atypical for oligodendrogliomas that often show mixed cortical and subcortical involvement. The absence of enhancement and necrosis also argues against oligodendroglioma. Therefore, non-codeleted is favored but with low confidence due to limited features.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Eloquent Brain Involvement",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The tumor is non-enhancing, non-necrotic, and consists entirely of edema (100%), with no measurable tumor core. This is atypical for adult-type diffuse gliomas. The patient's age (46) and cortical involvement suggest IDH-mutant astrocytoma, but the absence of any enhancing or necrotic component makes grading challenging. Given WHO CNS5 criteria, grade 2 is assigned due to lack of microvascular proliferation or necrosis, but confidence is low.",
+  "subject_id": "UCSF-PDGM-246",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Tumor Core Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement (Enhancement Quality: None), no necrosis (Proportion Necrosis: 0.0), and no tumor core volume (Tumor Core Volume: 0.0). According to WHO CNS5, grade 2 gliomas are characterized by diffuse growth without microvascular proliferation or necrosis. The high proportion of edema (100%) suggests diffuse infiltration without solid tumor components. However, the absence of any measurable tumor core is unusual and may indicate sampling limitations. Given the lack of high-grade features, grade 2 is assigned, but confidence is low due to the atypical presentation.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ]
+  }
+}

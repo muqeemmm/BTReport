@@ -1,0 +1,55 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 56 years old, which is more typical for IDH-wildtype glioblastoma. Enhancement is mild with low proportion enhancing (6.2%), which is atypical for wildtype GBM that usually shows strong enhancement. T2-FLAIR mismatch is absent (score 0.4, degree -0.6), which is a strong indicator for IDH-mutant astrocytoma. However, IDH-mutant tumors are more common in younger patients and frontal lobes, while this tumor involves parietal and frontal lobes but midline epicenter. The evidence is conflicting.",
+    "supporting_features": [
+      "age_years",
+      "Side of Tumor Epicenter",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent motor cortex and deep white matter invasion is present, which is more typical for astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often present in frontal lobes with cortical involvement but less commonly involve deep structures or motor cortex. The tumor has cortical involvement and frontal lobe predominance, which could suggest oligodendroglioma. However, midline epicenter and motor involvement argue against oligodendroglioma. Evidence is conflicting.",
+    "supporting_features": [
+      "Side of Tumor Epicenter",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Evidence for IDH status and 1p/19q status is conflicting. Grade 4 is assigned based on necrosis proportion (0.66%) and enhancement.",
+  "subject_id": "BraTS2021_00195",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (NCR volume 0.462mL, proportion necrosis 0.66%) and enhancement (Proportion Enhancing 6.2%). Although enhancement is mild, the presence of necrosis is a hallmark of glioblastoma (grade 4). The tumor volume is large (70.393mL) and involves eloquent motor cortex. These features strongly support grade 4.",
+    "supporting_features": [
+      "NCR Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

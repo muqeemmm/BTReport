@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "IDH-mutant gliomas are more common in younger patients and often show less enhancement. The patient is 58 years old, which is older than typical IDH-mutant patients, and enhancement is mild, which supports IDH-mutant. However, the age is borderline, and mild enhancement can occur in both types.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "1p/19q codeleted tumors are typically oligodendrogliomas, which are often frontal, cortical, and may have calcifications (not assessed). This tumor is frontal-cortical, supporting oligodendroglioma. However, multifocality and involvement of eloquent areas (speech motor and motor) are more common in astrocytomas. The absence of calcification assessment limits certainty.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions"
+    ]
+  },
+  "overall_comment": "The tumor is midline, multifocal, with ependymal invasion and deep white matter invasion. Enhancement is mild, and edema crosses midline. The proportion of edema is high (97.1%), and necrosis is present (Proportion Necrosis 1.03). The T2-FLAIR mismatch is absent (score 0.4, degree 0.10), which is atypical for IDH-mutant astrocytomas. The grade is likely 4 due to necrosis and enhancement, but the absence of strong T2-FLAIR mismatch and older age introduce uncertainty.",
+  "subject_id": "BraTS2021_01495",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": 4,
+    "reasoning": "CNS WHO grade 4 gliomas typically show necrosis and/or microvascular proliferation. Here, necrosis is present (Proportion Necrosis 1.03) and enhancement is present (mild). However, the enhancement is only mild, and T2-FLAIR mismatch is absent, which are more typical of lower grades. The ependymal invasion and multifocality support higher grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric"
+    ]
+  }
+}

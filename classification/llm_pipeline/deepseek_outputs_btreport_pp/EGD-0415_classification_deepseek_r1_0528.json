@@ -1,0 +1,50 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 35 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor is located in the frontal lobe cortex, a common site for IDH-mutant gliomas. Enhancement is mild and proportion enhancing is low (0.26), which is more consistent with IDH-mutant tumors. However, necrosis proportion is high (61.93%), which is atypical for IDH-mutant tumors and more common in wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe cortex, which is common for both oligodendrogliomas and astrocytomas. However, oligodendrogliomas often show more prominent cortical involvement and may have calcifications (not assessed here). The absence of deep white matter invasion and the solitary nature could support either. The mild enhancement and low proportion enhancing are not specific. Without specific features favoring oligodendroglioma, astrocytoma is more likely.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The high necrosis proportion is unusual for IDH-mutant tumors and lowers confidence in IDH prediction. The location and imaging features do not strongly support 1p/19q codeletion. Grade prediction is challenging without diffusion/perfusion data; grade 3 is assigned based on enhancement presence but confidence is low.",
+  "subject_id": "EGD-0415",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor shows mild enhancement and a proportion enhancing of 0.26, which suggests grade 3 in IDH-mutant tumors. However, necrosis proportion is high (61.93%), which is atypical for grade 2 and more suggestive of grade 4. Without diffusion/perfusion to assess cellularity or microvascular proliferation, grade assignment is uncertain. Based on enhancement presence, grade 3 is predicted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ]
+  }
+}

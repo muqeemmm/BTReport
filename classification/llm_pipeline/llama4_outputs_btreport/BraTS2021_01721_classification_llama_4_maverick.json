@@ -1,0 +1,55 @@
+{
+  "id": "patient_0105",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (39 years) and the presence of cortical involvement suggest a possible IDH mutant status, as IDH mutations are more common in younger adults. The tumor's mild enhancement and relatively large size could be consistent with either IDH mutant or wildtype status. However, the absence of deep white matter invasion and ependymal invasion might lean slightly towards IDH mutant gliomas, which are often associated with a more favorable prognosis and different imaging characteristics. Despite these hints, the evidence is not strong, and the prediction relies on subtle features.",
+      "supporting_features": [
+        "age_years",
+        "Cortical involvement",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis",
+        "Thickness of enhancing margin"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.6
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's cortical involvement and the fact that it is located in the parietal, cortex, and occipital lobes could be indicative of an oligodendroglial component, which is often associated with 1p/19q co-deletion. The mild enhancement quality is also consistent with this subtype. However, the absence of calcifications (not directly assessed but can be inferred from the lack of mention in the context of typical oligodendroglioma features) and other specific features like a more diffuse or heterogeneous enhancement pattern makes this prediction uncertain. The presence of necrosis (Proportion Necrosis: 39.15%) argues against a typical 1p/19q co-deleted tumor, which tends to have a more favorable prognosis.",
+      "supporting_features": [
+        "Cortical involvement",
+        "Region Proportions",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis",
+        "Thickness of enhancing margin"
+      ],
+      "prediction": "codeleted",
+      "confidence": 0.55
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of necrosis (Proportion Necrosis: 39.15%) and a significant proportion of edema (Proportion of Oedema: 57.56%) along with a mild but thick (>3mm) enhancement suggests a high-grade glioma. The tumor's size and the presence of a significant necrotic component are more typical of higher-grade gliomas. However, the absence of significant midline shift or ventricular asymmetry and the relatively mild enhancement quality might suggest a slightly lower grade within the high-grade category. Given these features, a grade 4 is plausible due to the presence of necrosis, but the overall appearance is not typical for a glioblastoma (IDH wildtype). The age and some imaging features might suggest an IDH mutant glioma, which could be grade 3 or 4. The presence of necrosis leans towards grade 4.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "Thickness of enhancing margin",
+        "ED Volume (mL)",
+        "NCR Volume (mL)"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality",
+        "midline_shift_present"
+      ],
+      "prediction": 4,
+      "confidence": 0.7
+    }
+  ],
+  "subject_id": "BraTS2021_01721"
+}

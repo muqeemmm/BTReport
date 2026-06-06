@@ -1,0 +1,45 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The tumor involves eloquent areas (Vision) and shows ependymal invasion, which are features more common in IDH-mutant gliomas. However, the patient is 66 years old, which is more typical for IDH-wildtype gliomas. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present=0.0, Score=0.398, Degree=-0.528), which argues against IDH-mutant astrocytoma. The evidence is conflicting.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor shows cortical involvement and deep white matter invasion, which are more typical of astrocytomas (non-codeleted). Oligodendrogliomas (codeleted) often have a frontal lobe predilection and may show calcifications (not assessed here). The tumor location includes temporal, cortex, and parietal lobes, which does not strongly favor oligodendroglioma. However, without strong indicators, the prediction is non-codeleted with low confidence.",
+    "supporting_features": []
+  },
+  "overall_comment": "The evidence is insufficient for confident molecular subtyping. Age favors IDH-wildtype, but eloquent involvement and ependymal invasion suggest IDH-mutant. T2-FLAIR mismatch is absent. For 1p/19q, cortical involvement suggests astrocytoma. Grade 4 is assigned due to necrosis proportion >10% and enhancement.",
+  "subject_id": "BraTS2021_01728",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis=49.71% >10%) and enhancement (Proportion Enhancing=0.81), which are features of CNS WHO grade 4 glioma. Mild enhancement quality may argue against grade 4, but necrosis is a strong indicator. Midline shift is present, supporting high grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "midline_shift_present"
+    ]
+  }
+}

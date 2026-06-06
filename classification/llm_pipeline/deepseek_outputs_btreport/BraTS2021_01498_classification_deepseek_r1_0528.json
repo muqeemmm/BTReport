@@ -1,0 +1,41 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 57 years old, which is older than typical for IDH-mutant gliomas. However, frontal lobe involvement is more common in IDH-mutant tumors. The metadata does not provide definitive molecular markers like 2HG MRS. Given the conflicting evidence and lack of direct molecular data, the prediction defaults to wildtype with low confidence.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves midline structures and crosses the midline, which is atypical for oligodendrogliomas that are usually codeleted. Frontal lobe involvement is common in both codeleted and non-codeleted tumors. Without direct molecular data, the prediction defaults to non-codeleted with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "CET Crosses midline"
+    ]
+  },
+  "overall_comment": "The prediction is based solely on MRI metadata without molecular confirmation. Confidence is low due to absence of key sequences like DWI/ADC and perfusion. Clinical correlation and histopathology are required for definitive diagnosis.",
+  "subject_id": "BraTS2021_01498",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (26.9%) and enhancement (13.2%) with thick enhancing margin (>3mm), which are features of glioblastoma (WHO grade 4). However, enhancement is mild rather than ring-enhancing, which is less typical. The presence of ependymal invasion and multifocality also support high grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin",
+      "Ependymal (ventricular) Invasion",
+      "Multifocal or Multicentric"
+    ]
+  }
+}

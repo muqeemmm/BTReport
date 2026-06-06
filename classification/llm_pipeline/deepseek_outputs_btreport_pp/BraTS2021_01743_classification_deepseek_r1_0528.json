@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 74 years old, which is advanced age favoring IDH-wildtype gliomas. However, no enhancement is present ('Enhancement Quality': 'None'), which is more common in IDH-mutant tumors. The absence of necrosis ('Proportion Necrosis': 0.0) also aligns with lower-grade IDH-mutant tumors. The frontal lobe location ('Tumor Location': 'frontal_lobe-cortex region') is non-specific. Given the strong age association with wildtype but conflicting imaging features, prediction leans wildtype with low confidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "reasoning": "No direct evidence for 1p/19q status is available from MRI. The tumor is midline ('Side of Tumor Epicenter': 'Midline') and involves cortex ('Cortical involvement': 'Present'), which may suggest astrocytic lineage favoring non-codeleted. However, frontal lobe location ('Tumor Location': 'frontal_lobe-cortex region') is common in oligodendrogliomas. Without molecular data, prediction defaults to non-codeleted with low confidence.",
+    "supporting_features": [
+      "Side of Tumor Epicenter",
+      "Cortical involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Prediction based solely on MRI metadata. IDH-wildtype favored due to age but contradicted by lack of enhancement/necrosis. 1p/19q non-codeleted favored due to midline/cortical involvement but frontal location is ambiguous. Grade 4 assigned due to age and edema proportion, but no enhancement/necrosis contradicts. Confidence low across all predictions.",
+  "subject_id": "BraTS2021_01743",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "Patient age (74) strongly suggests high-grade glioma (WHO grade 4). High proportion of edema ('Proportion of Oedema': 100.0) is associated with higher grades. However, absence of enhancement ('Enhancement Quality': 'None') and necrosis ('Proportion Necrosis': 0.0) are atypical for grade 4 glioblastoma. Midline location may indicate glioblastoma. Grade 4 is predicted with low confidence due to conflicting features.",
+    "supporting_features": [
+      "age_years",
+      "Proportion of Oedema",
+      "Side of Tumor Epicenter"
+    ]
+  }
+}

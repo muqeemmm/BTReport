@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (31 years old), which is more common in IDH-mutant gliomas. The tumor is non-enhancing (Enhancement Quality: None, Proportion Enhancing: 0.0), which is typical for IDH-mutant tumors. The T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high score (0.835), which is highly specific for IDH-mutant astrocytomas. However, the tumor involves eloquent areas (Vision) and shows ependymal invasion, which are more common in aggressive tumors that could be wildtype.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves multiple lobes including temporal, cortex, occipital, parietal, and ventricles, which is atypical for oligodendrogliomas that are usually frontal. Ependymal invasion is present, which is rare in oligodendrogliomas. The T2-FLAIR mismatch sign is present, which is specific for astrocytomas and argues against oligodendroglioma (which would be codeleted). However, the tumor is non-enhancing and has a high proportion of necrosis, which can be seen in both types.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor is IDH-mutant astrocytoma without 1p/19q codeletion. Grade 4 is likely due to necrosis and ependymal invasion.",
+  "subject_id": "BraTS2021_01534",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis: 72.74%) which is a hallmark of glioblastoma (grade 4). Ependymal invasion is present, which is associated with higher grade. However, the patient is young (31 years) and the tumor is non-enhancing, which are atypical for grade 4 gliomas. The absence of enhancement usually suggests lower grade, but necrosis overrides this in the presence of other features.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

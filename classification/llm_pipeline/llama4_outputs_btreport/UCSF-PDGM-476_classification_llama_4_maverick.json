@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (22 years) and the tumor's characteristics (non-enhancing, located in the frontal lobe and insula, with cortical involvement) are suggestive of an IDH-mutant glioma. IDH mutations are more common in younger adults and are often associated with lower-grade gliomas. The absence of enhancement and necrosis also points towards a lower-grade glioma, which is more likely to be IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor involves the frontal lobe and insula, and is non-enhancing. IDH-mutant gliomas with 1p/19q co-deletion often involve the frontal lobe and are more likely to be oligodendrogliomas. Given the patient's age and the tumor's location, a 1p/19q co-deletion is plausible. However, the absence of enhancement is not strongly indicative of co-deletion status.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has a relatively small volume (3.347 mL), and lacks necrosis and significant mass effect (minimal midline shift). These features are more characteristic of lower-grade gliomas. However, the presence of cortical involvement and eloquent brain involvement (speech motor) could suggest a more aggressive tumor. Given the patient's age and the tumor's characteristics, a grade 2 or 3 glioma is likely. The absence of enhancement and necrosis favors a grade 2 glioma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 2,
+    "confidence": 0.75
+  },
+  "subject_id": "UCSF-PDGM-476"
+}

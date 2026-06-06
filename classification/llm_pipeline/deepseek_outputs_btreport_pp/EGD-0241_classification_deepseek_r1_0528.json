@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.95,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 38 years old, which is typical for IDH-mutant gliomas. The T2-FLAIR mismatch sign is present with a high score (0.96) and degree (0.81), strongly suggesting IDH-mutant astrocytoma. Enhancement is mild and proportion enhancing is low (0.06), which aligns with IDH-mutant tumors. However, mild enhancement and low proportion enhancing could also be seen in some wildtype tumors, but the T2-FLAIR mismatch is highly specific.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent speech motor areas and is located in cortex, frontal lobe, insula, and temporal lobes, which are typical for astrocytomas rather than oligodendrogliomas. The T2-FLAIR mismatch sign is present, which is highly specific for IDH-mutant astrocytoma and argues against 1p/19q codeletion. No features strongly support codeletion.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ]
+  },
+  "overall_comment": "Based on the MRI metadata, this is likely an IDH-mutant astrocytoma with CNS WHO grade 4. The T2-FLAIR mismatch sign is a strong indicator for IDH-mutant status. The high proportion of necrosis (75.61%) and involvement of eloquent areas suggest high-grade features.",
+  "subject_id": "EGD-0241",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows a high proportion of necrosis (75.61%), which is a feature of glioblastoma (CNS WHO grade 4). Enhancement is mild, but the thickness of enhancing margin is >3mm, which can be seen in high-grade tumors. Deep white matter invasion is present. However, the patient is young (38 years), and IDH-mutant glioblastomas can have less aggressive imaging features. The absence of ependymal invasion and minimal midline shift argue against grade 4, but necrosis is a strong indicator.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Deep WM invasion"
+    ]
+  }
+}

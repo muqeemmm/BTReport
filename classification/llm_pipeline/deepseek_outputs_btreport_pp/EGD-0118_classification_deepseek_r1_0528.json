@@ -1,0 +1,56 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 50 years old, which is typical for IDH-wildtype glioblastoma. The tumor is solitary, midline, with mild enhancement and a thin enhancing margin (<3mm). There is no T2-FLAIR mismatch (T2-FLAIR Mismatch Present = 0.0), which is characteristic of IDH-wildtype tumors. The proportion of necrosis is 17.54%, which is more common in IDH-wildtype glioblastomas. However, the tumor location in the parietal cortex and deep white matter invasion are non-specific. The absence of ependymal invasion and eloquent brain involvement does not strongly favor either subtype.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Side of Tumor Epicenter",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex and deep white matter, which is more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often present with frontal lobe involvement and calcifications, but calcifications are not assessed here. The midline location and parietal involvement are less common for oligodendrogliomas. However, the absence of strong enhancement and the presence of mild enhancement could be seen in both, but oligodendrogliomas often have more heterogeneous enhancement. The evidence is limited and somewhat conflicting.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is classified as Glioblastoma, IDH-wildtype, CNS WHO grade 4. Confidence in IDH status is moderate due to age and imaging features, but limited by absence of key sequences. 1p/19q status prediction has low confidence due to insufficient specific features.",
+  "subject_id": "EGD-0118",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis = 17.54%), which is a hallmark of grade 4 glioblastoma. The presence of enhancement, even if mild, and the large proportion of edema (82.44%) support high grade. The tumor volume is large (82.875 mL), which is more typical of high-grade gliomas. However, the enhancement is mild and the enhancing margin is thin (<3mm), which might suggest lower grade, but necrosis overrides this.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema"
+    ]
+  }
+}

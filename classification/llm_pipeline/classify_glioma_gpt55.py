@@ -1,7 +1,7 @@
 """
 Glioma classification via the OpenAI Batch API (gpt-5.5 by default).
 
-This is the OpenAI counterpart of `classify_glioma_gemini.py`. It performs the
+This is the OpenAI counterpart of `classify_glioma_gemini25.py`. It performs the
 SAME task — joint prediction of IDH status, 1p/19q co-deletion and CNS WHO grade
 from structured pre-operative MRI metadata, under WHO CNS5 (2021) — using the
 SAME Chain-of-Thought Confidence Elicitation (CoT CE) schema, but routes
@@ -64,7 +64,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
 from tqdm import tqdm
 
 
-# --- Prompt (identical to classify_glioma_gemini.py) --------------------------
+# --- Prompt (identical to classify_glioma_gemini25.py) ------------------------
 
 SYSTEM_PROMPT = (
     "You are an expert neuroradiologist performing pre-operative molecular "
@@ -251,7 +251,7 @@ def load_ground_truth(xlsx_path: Path) -> dict:
 def _binary_metrics(y_true, y_pred, pos_label) -> dict:
     if not y_true:
         return {"n": 0, "accuracy": None, "sensitivity": None,
-                "specificity": None, "f1": None}
+                "specificity": None, "f1": None, "weighted_f1": None}
     all_labels = sorted(set(y_true) | set(y_pred))
     neg_candidates = [l for l in all_labels if l != pos_label]
     neg_label = neg_candidates[0] if neg_candidates else (
@@ -260,6 +260,7 @@ def _binary_metrics(y_true, y_pred, pos_label) -> dict:
     acc = accuracy_score(y_true, y_pred)
     f1  = f1_score(y_true, y_pred, pos_label=pos_label, average="binary",
                    zero_division=0)
+    wf1 = f1_score(y_true, y_pred, average="weighted", zero_division=0)
     cm  = confusion_matrix(y_true, y_pred, labels=[pos_label, neg_label])
     TP, FN = cm[0, 0], cm[0, 1]
     FP, TN = cm[1, 0], cm[1, 1]
@@ -271,16 +272,19 @@ def _binary_metrics(y_true, y_pred, pos_label) -> dict:
         "sensitivity": round(sens, 4) if sens is not None else None,
         "specificity": round(spec, 4) if spec is not None else None,
         "f1":          round(f1, 4),
+        "weighted_f1": round(wf1, 4),
     }
 
 
 def _grade_metrics(y_true, y_pred) -> dict:
     if not y_true:
         return {"n": 0, "accuracy": None, "sensitivity": None,
-                "specificity": None, "f1": None}
+                "specificity": None, "f1": None, "weighted_f1": None}
     classes = [2, 3, 4]
     acc = accuracy_score(y_true, y_pred)
     f1  = f1_score(y_true, y_pred, labels=classes, average="macro",
+                   zero_division=0)
+    wf1 = f1_score(y_true, y_pred, labels=classes, average="weighted",
                    zero_division=0)
     cm = confusion_matrix(y_true, y_pred, labels=classes)
     sens_list, spec_list = [], []
@@ -297,6 +301,7 @@ def _grade_metrics(y_true, y_pred) -> dict:
         "sensitivity": round(sum(sens_list) / len(sens_list), 4),
         "specificity": round(sum(spec_list) / len(spec_list), 4),
         "f1":          round(f1, 4),
+        "weighted_f1": round(wf1, 4),
     }
 
 
@@ -333,7 +338,7 @@ def compute_metrics(predictions: dict, gt: dict) -> dict:
 def print_metrics(metrics: dict) -> None:
     col_w = 22
     header = (f"{'Subset':<{col_w}} {'Task':<12} {'N':>5}  "
-              f"{'Acc':>6}  {'Sens':>6}  {'Spec':>6}  {'F1':>6}")
+              f"{'Acc':>6}  {'Sens':>6}  {'Spec':>6}  {'F1':>6}  {'WF1':>6}")
     sep = "=" * len(header)
     print(f"\n{sep}\nCLASSIFICATION METRICS\n{sep}")
     print(header)
@@ -347,7 +352,8 @@ def print_metrics(metrics: dict) -> None:
                 return f"{v:.4f}" if v is not None else "  N/A"
             print(f"{bucket:<{col_w}} {label:<12} {m['n']:>5}  "
                   f"{_fmt(m['accuracy']):>6}  {_fmt(m['sensitivity']):>6}  "
-                  f"{_fmt(m['specificity']):>6}  {_fmt(m['f1']):>6}")
+                  f"{_fmt(m['specificity']):>6}  {_fmt(m['f1']):>6}  "
+                  f"{_fmt(m['weighted_f1']):>6}")
         print()
 
 

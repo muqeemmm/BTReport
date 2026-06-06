@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (52 years) and the presence of a large, enhancing, midline tumor with significant mass effect (midline shift of 2.65 mm, edematous volume of 151.64 mL, and enhancing volume of 39.536 mL) are more typical of glioblastoma, IDH-wildtype. The tumor's involvement of multiple deep structures (thalamus, caudate, putamen, pallidum, accumbens area) and crossing of the midline also suggest an aggressive tumor. While these features alone do not definitively determine IDH status, they collectively point towards a more aggressive, IDH-wildtype glioblastoma.",
+    "supporting_features": [
+      "age_years",
+      "mean_shift_mm",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "crosses_ideal_midline",
+      "Anatomical Overlap Regions"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, enhancing tumor with significant mass effect and involvement of deep structures is less typical of 1p/19q co-deleted tumors, which are more commonly associated with oligodendrogliomas. The absence of specific features like calcifications (not assessed here due to data constraints) and the presence of necrosis (Proportion Necrosis: 9.1%) argue against a typical oligodendroglioma profile. Thus, the likelihood of 1p/19q co-deletion is lower.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ET Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "grade": {
+    "reasoning": "The tumor's large size, significant enhancement, necrosis (9.1%), and substantial mass effect (midline shift, edematous volume) are characteristic of high-grade gliomas. The presence of necrosis and the large enhancing component are particularly indicative of glioblastoma, WHO grade 4. The clinical and radiological features collectively support a high-grade tumor.",
+    "supporting_features": [
+      "ET Volume (mL)",
+      "Proportion Necrosis",
+      "mean_shift_mm",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01045"
+}

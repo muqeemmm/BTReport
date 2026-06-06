@@ -1,0 +1,51 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 34 years old, which is younger than typical for IDH-wildtype glioblastoma. The T2-FLAIR mismatch sign is present with a high score (0.937), strongly suggesting IDH-mutant astrocytoma. Enhancement is absent, which is more common in IDH-mutant tumors. However, the absence of enhancement could also be seen in some wildtype tumors.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent speech motor areas and shows ependymal invasion, which are features more typical of astrocytomas (non-codeleted) than oligodendrogliomas. The T2-FLAIR mismatch sign also supports an astrocytic lineage. However, frontal lobe location is common in both types.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is classified as IDH-mutant astrocytoma. The absence of enhancement and presence of T2-FLAIR mismatch strongly support IDH-mutant status. The tumor involves eloquent speech areas and shows ependymal invasion, favoring non-codeleted status. The CNS WHO grade is assigned as 4 due to the presence of necrosis (NCR volume 0 mL indicates no necrosis, but edema volume is large and midline shift is present, suggesting mass effect).",
+  "subject_id": "UCSF-PDGM-245",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "NCR Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows significant mass effect with midline shift (max shift -10mm), large edema volume (167.512 mL), and effaced right ventricle. These features suggest high-grade behavior. However, there is no necrosis (NCR volume 0 mL) or enhancing tumor (ET volume 0 mL), which are typical for grade 4. The presence of ependymal invasion and deep white matter invasion support higher grade.",
+    "supporting_features": [
+      "midline_shift_present",
+      "max_shift_mm",
+      "ED Volume (mL)",
+      "Effaced Ventricle",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ]
+  }
+}

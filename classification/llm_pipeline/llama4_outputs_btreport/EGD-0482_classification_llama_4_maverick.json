@@ -1,0 +1,48 @@
+{
+  "id": "patient_1338",
+  "predictions": [
+    {
+      "type": "IDH Mutation Status",
+      "reasoning": "The patient's age (56 years) and the presence of a large, enhancing tumor with necrosis (Proportion Necrosis: 16.44%) and significant mass effect (midline shift present, n_slices_with_shift: 133) are more typical of glioblastoma, IDH-wildtype. The tumor's aggressive features, such as ependymal invasion and deep white matter invasion, also support this. IDH-mutant gliomas are less likely to present with such aggressive features at this age.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "n_slices_with_shift",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q Co-deletion Status",
+      "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect, along with the patient's age, suggests a high-grade glioma. IDH-wildtype glioblastomas are more common than 1p/19q codeleted tumors in this age group. The absence of features specifically suggestive of oligodendroglioma (e.g., calcifications, which are not available but typically associated with 1p/19q codeletion) and the tumor's aggressive features lean towards non-codeleted status.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "n_slices_with_shift"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO Grade",
+      "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 16.44%), marked enhancement, ependymal invasion, and deep white matter invasion. These characteristics are typical of a high-grade glioma. The presence of necrosis and the large size of the tumor are particularly indicative of WHO Grade 4.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion",
+        "n_slices_with_shift"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "EGD-0482"
+}

@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 62 years old, which is more typical for IDH-wildtype glioblastoma. IDH-mutant gliomas often present at a younger age. However, the T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0), which is a strong indicator for IDH-mutant astrocytoma. The T2-FLAIR Mismatch Score is 0.457 and Degree is -0.060, not indicating mismatch. This absence argues against IDH-mutant. The enhancement is marked, which is more common in IDH-wildtype tumors. The tumor location involves cortex and temporal lobe, which is non-specific. Given the age and absence of T2-FLAIR mismatch, IDH-wildtype is more likely, but the evidence is not strong.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex (Cortical involvement: Present) and temporal lobe, which is common in oligodendrogliomas that are 1p/19q codeleted. However, deep white matter invasion is absent, which is more typical for astrocytomas. Oligodendrogliomas often have indistinct borders and may involve cortex, but the absence of deep WM invasion suggests astrocytic lineage. The tumor is solitary and does not cross midline, which is non-specific. Given the cortical involvement but absence of deep WM invasion, non-codeleted is more likely.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor shows marked enhancement and necrosis (Proportion Necrosis: 13.05%), which are features of high-grade glioma. The absence of T2-FLAIR mismatch and older age suggest IDH-wildtype. Cortical involvement without deep WM invasion suggests astrocytic lineage. The tumor volume is large (20.725 mL) and has necrosis, supporting WHO grade 4.",
+  "subject_id": "BraTS2021_01522",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [],
+    "prediction": 4,
+    "reasoning": "The tumor has necrosis (Proportion Necrosis: 13.05%) and marked enhancement, which are hallmarks of glioblastoma (WHO grade 4). The total tumor volume is 20.725 mL, which is substantial. There is no ependymal invasion or deep white matter invasion, but necrosis is a key feature for grade 4. The proportion of enhancing tissue is 18.31%, and necrosis is present, fulfilling criteria for glioblastoma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

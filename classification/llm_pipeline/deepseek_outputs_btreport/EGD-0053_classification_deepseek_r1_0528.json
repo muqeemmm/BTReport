@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "IDH-mutant gliomas typically occur in younger patients, but this patient is 56 years old which is older than typical IDH-mutant cases. However, the tumor location in temporal-cortex region and cortical involvement are more common in IDH-mutant gliomas. The absence of ependymal invasion also supports IDH-mutant status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "1p/19q co-deletion is associated with oligodendrogliomas which typically occur in frontal lobes and are less likely to involve midline structures. This tumor is midline and involves temporal-cortex region, which is atypical for oligodendroglioma. Deep white matter invasion is present, which is more common in astrocytomas.",
+    "supporting_features": [
+      "Side of Tumor Epicenter",
+      "Tumor Location",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "Based on MRI features, this is likely an IDH-mutant astrocytoma. The midline location and temporal involvement argue against oligodendroglioma. Grade prediction is limited without diffusion/perfusion data.",
+  "subject_id": "EGD-0053",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "Grade 4 glioblastoma typically shows marked enhancement and necrosis. This tumor has marked enhancement, 31.51% necrosis, and a thick enhancing margin (>3mm), which are features of GBM. However, without perfusion or diffusion data to confirm microvascular proliferation or necrosis, confidence is moderate. The large edema volume crossing midline also suggests aggressiveness.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Thickness of enhancing margin",
+      "Edema crosses midline"
+    ]
+  }
+}

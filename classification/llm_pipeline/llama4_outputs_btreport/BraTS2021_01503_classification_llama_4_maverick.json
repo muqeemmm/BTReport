@@ -1,0 +1,52 @@
+{
+  "id": "patient_0204",
+  "predictions": [
+    {
+      "type": "IDH Mutation Status",
+      "reasoning": "The patient's age (53 years) and the presence of a large, necrotic tumor with significant edema and mass effect (as indicated by the 'n_slices_with_shift' and 'volumes_ideal_midline' fields) are more typical of IDH wildtype gliomas, which are more common in older adults and tend to be more aggressive. The tumor's characteristics, such as high 'Proportion Necrosis' (31.55) and significant 'ED Volume' (31.182 mL), also support this prediction. While the 'Enhancement Quality' is 'Mild', the presence of enhancement and necrosis is often associated with higher-grade gliomas, which are more likely to be IDH wildtype.",
+      "supporting_features": [
+        "age_years",
+        "volumes_ideal_midline",
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Cortical involvement",
+        "Deep WM invasion"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q Co-deletion Status",
+      "reasoning": "The tumor's location in the frontal lobe and cortical involvement could be suggestive of an oligodendroglial component, which is often associated with 1p/19q co-deletion. However, the presence of significant necrosis and the overall imaging characteristics are more typical of a higher-grade astrocytic tumor. Given the lack of specific MRI features that are strongly indicative of 1p/19q co-deletion (such as calcifications, which are not available in the metadata), and considering the tumor's aggressive features, it is more likely to be non-codeleted.",
+      "supporting_features": [
+        "Region Proportions",
+        "Cortical involvement",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Tumor Location"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO Grade",
+      "reasoning": "The tumor exhibits significant necrosis ('Proportion Necrosis' = 31.55), a large edema volume ('ED Volume' = 31.182 mL), and a substantial necrotic and enhancing component ('NCR Volume' = 14.413 mL), all of which are characteristic of high-grade gliomas. The presence of 'Multiple satellites present' also suggests a high-grade tumor. These features are most consistent with a WHO Grade 4 tumor.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "ED Volume (mL)",
+        "NCR Volume (mL)",
+        "Multiple satellites present"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_01503"
+}

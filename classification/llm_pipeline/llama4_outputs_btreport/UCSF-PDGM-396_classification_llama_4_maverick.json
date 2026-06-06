@@ -1,0 +1,48 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of a large edema volume (88.47 mL) and significant mass effect indicated by midline shift (mean_shift_mm = -1.8129032258064517, midline_shift_present = 'Yes') suggests a more aggressive tumor. The tumor's location and involvement of multiple lobes (parietal, cortex, insula, and frontal lobe) along with deep white matter invasion are also indicative of a potentially higher grade glioma. IDH-wildtype gliomas are more commonly associated with such aggressive features compared to IDH-mutant gliomas. The mild enhancement quality and absence of ependymal invasion are less specific but do not strongly suggest IDH mutation.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "mean_shift_mm",
+      "Deep WM invasion",
+      "Tumor Location",
+      "Region Proportions"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor's location in the parietal, cortex, insula, and frontal lobe, along with the absence of ependymal invasion and presence of deep white matter invasion, does not strongly suggest a specific 1p/19q co-deletion status based on location alone. However, the presence of a significant edema and mass effect, along with the tumor being solitary and mildly enhancing, leans more towards a non-codeleted status as codeleted tumors are often associated with IDH mutation and a more favorable prognosis. Given the likely IDH wildtype status from the previous prediction, the probability of 1p/19q co-deletion is lower.",
+    "supporting_features": [
+      "Tumor Location",
+      "Region Proportions",
+      "ED Volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO grade": {
+    "reasoning": "The presence of significant edema (88.47 mL), mass effect (midline shift), and deep white matter invasion suggests a high-grade tumor. The tumor's large size and involvement of multiple regions also support a higher grade. The mild enhancement and absence of necrosis (Proportion Necrosis = 0.3) might slightly temper this, but overall, the features point towards a high-grade glioma. Given the likely IDH wildtype status, a grade 4 glioma is more probable than grade 2 or 3.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Deep WM invasion",
+      "Tumor Location",
+      "Region Proportions",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "UCSF-PDGM-396"
+}

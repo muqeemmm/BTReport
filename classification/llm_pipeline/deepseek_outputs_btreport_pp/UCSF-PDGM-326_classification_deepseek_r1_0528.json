@@ -1,0 +1,49 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Tumor Core Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (32 years), which is more common in IDH-mutant gliomas. The tumor is non-enhancing ('Enhancement Quality': 'None') and has no tumor core volume ('Tumor Core Volume (mL)': 0.0), which is typical for IDH-mutant astrocytomas. However, the absence of enhancement and tumor core volume could also be seen in some low-grade gliomas regardless of IDH status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Tumor Core Volume (mL)",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas ('Eloquent Brain Involvement': 'Speech motor and Motor') and shows ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), which are more characteristic of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas typically present with frontal lobe involvement and calcifications, but calcifications are not assessed here. The absence of enhancement also supports astrocytoma over oligodendroglioma, as oligodendrogliomas often show patchy enhancement.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "The tumor is non-enhancing, involves eloquent areas, and shows ependymal invasion. The T2-FLAIR mismatch sign is present, which is highly specific for IDH-mutant astrocytomas. However, the absence of tumor core volume and enhancement limits grading certainty.",
+  "subject_id": "UCSF-PDGM-326",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no necrosis ('Proportion Necrosis': 0.0) and no enhancement ('Proportion Enhancing': 0.0), which are features of CNS WHO grade 2 gliomas. However, the tumor volume is large (109.386 mL) and involves eloquent areas, which may suggest a higher grade. Ependymal invasion is present, which can be seen in both grade 2 and grade 3 tumors. The absence of mitotic activity assessment limits grading.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

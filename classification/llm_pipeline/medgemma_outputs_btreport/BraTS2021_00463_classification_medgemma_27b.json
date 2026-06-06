@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00463",
+  "idh": {
+    "reasoning": "The patient is 57 years old. Age > 50 is associated with IDH-wildtype gliomas, but IDH-mutant gliomas can occur in older adults. The tumor is solitary, infiltrative (deep WM invasion, ependymal invasion), and involves eloquent brain regions (speech motor). These features are common in both IDH-mutant and IDH-wildtype tumors. The large size (Total tumor volume 143.167 mL) and significant edema (Proportion of Oedema 71.95) can be seen in both types, although very large size might slightly favor wildtype. The presence of multiple satellites is more common in IDH-mutant tumors, but can occur in wildtype. Without molecular markers like 1p/19q or MGMT methylation status, or advanced imaging like DWI/perfusion/MRS, predicting IDH status based solely on these structural MRI features is highly uncertain. Given the age and large size, there's a slight lean towards wildtype, but the presence of satellites and infiltrative nature doesn't strongly contradict mutant status. Therefore, I will predict wildtype with low confidence due to the lack of definitive features.",
+    "supporting_features": [
+      "age_years",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Multiple satellites present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 57 years old. 1p/19q co-deletion is almost exclusively found in IDH-mutant diffuse astrocytomas (WHO grade 2 or 3). Since I predicted IDH-wildtype based on age and tumor characteristics (large size, significant edema), it is highly unlikely that this tumor has a 1p/19q co-deletion. The presence of deep white matter invasion and ependymal invasion are also less typical for classic oligodendrogliomas which are often codeleted, although they can occur.",
+    "supporting_features": [
+      "age_years",
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient is 57 years old with a large tumor (143 mL) showing cortical involvement, deep white matter invasion, and ependymal invasion. The tumor exhibits marked enhancement with a thick enhancing margin (>3mm) and significant necrosis (Proportion Necrosis 10.21). It involves eloquent brain regions (speech motor). These features strongly suggest a high-grade glioma. Given the infiltrative nature (deep WM invasion, ependymal invasion), marked enhancement, necrosis, and involvement of eloquent areas in an adult patient, WHO grade 4 (glioblastoma) is the most likely diagnosis. While grade 3 astrocytoma could present with some similar features, the combination of marked enhancement, necrosis, deep WM invasion and ependymal invasion points more strongly towards grade 4.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement",
+      "Total tumor volume (mL)",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

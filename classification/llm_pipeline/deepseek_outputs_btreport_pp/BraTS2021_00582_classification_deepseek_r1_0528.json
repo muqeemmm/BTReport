@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 36 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger patients. The tumor is solitary, located in the parietal cortex, and shows marked enhancement with a thick enhancing margin (>3mm), which can be seen in both IDH-mutant and wildtype tumors. The proportion of necrosis is low (0.71%), which is more typical of lower-grade gliomas or IDH-mutant tumors. However, the age is the strongest indicator here.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the parietal cortex, which is a cortical region. Oligodendrogliomas (which are 1p/19q codeleted) are more commonly frontal and involve subcortical white matter. This tumor has cortical involvement but no deep white matter invasion, which is atypical for oligodendroglioma. The absence of deep white matter invasion argues against oligodendroglioma. However, the tumor is midline, which is unusual for both astrocytoma and oligodendroglioma, creating some uncertainty.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Side of Tumor Epicenter"
+    ]
+  },
+  "overall_comment": "The tumor shows features suggestive of an IDH-mutant glioma. The parietal cortical location and lack of deep white matter invasion favor astrocytoma over oligodendroglioma. The marked enhancement and necrosis suggest higher grade, but the low proportion of necrosis and young age point to grade 3 or 4. The midline location is unusual.",
+  "subject_id": "BraTS2021_00582",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows marked enhancement with a thick enhancing margin (>3mm), which is typical of high-grade gliomas. There is necrosis present (Proportion Necrosis 0.71%), which is a feature of grade 4 glioblastoma. However, the proportion of necrosis is very low compared to typical glioblastomas, which often have higher necrosis. The edema volume is large (ED Volume 42.273 mL), which can be seen in both grade 3 and 4. The young age might suggest lower grade, but the enhancement pattern supports grade 4.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Proportion Necrosis",
+      "ED Volume (mL)"
+    ]
+  }
+}

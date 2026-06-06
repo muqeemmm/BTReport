@@ -1,0 +1,43 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (27 years) and the tumor's location in the temporal lobe with cortical involvement are suggestive of an IDH mutant glioma, as IDH mutations are more common in younger adults and often involve the frontal, temporal, or insular regions. The mild enhancement quality and absence of ependymal invasion also align with characteristics often seen in IDH mutant gliomas. However, the presence of a significant necrotic proportion (41.08%) could argue against IDH mutation, as IDH mutant gliomas typically have lower necrosis proportions. Despite this, the overall profile leans towards an IDH mutant status due to the patient's age and tumor location.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "IDH mutant gliomas are more likely to have 1p/19q co-deletion if they are located in the frontal lobe and have certain other characteristics. This tumor is located in the temporal lobe, which is less typical for 1p/19q co-deleted tumors. The absence of ependymal invasion and the presence of cortical involvement are noted, but the key determinant for 1p/19q co-deletion status is not directly available in the metadata. Given the temporal location and the likelihood of IDH mutation, the co-deletion status is uncertain, but the temporal location slightly argues against co-deletion.",
+    "supporting_features": [
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The presence of a significant necrotic proportion (41.08%) and a mild enhancement quality suggests a high-grade glioma. The total tumor volume is 24.109 mL, with a notable necrotic component, indicating aggressive tumor characteristics. The patient's age and the tumor's location could suggest a lower grade IDH mutant glioma, but the presence of necrosis and the tumor's overall profile lean towards a higher grade. Given the necrotic proportion and the overall tumor characteristics, a grade of 4 is plausible. However, the absence of certain features like high enhancement quality or significant ependymal invasion might argue against the highest confidence in grade 4. Still, the presence of significant necrosis supports a high-grade classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "NCR Volume (mL)",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0236"
+}

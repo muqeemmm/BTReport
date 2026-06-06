@@ -1,0 +1,60 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (38 years) and the tumor's location (temporal lobe, cortex, and insula) are consistent with a higher likelihood of IDH mutation. The tumor is non-enhancing, which is also more typical of IDH-mutant gliomas. The absence of necrosis and enhancement further supports this, as IDH-mutant gliomas are less likely to have these features. However, the presence of significant edema and mass effect (as indicated by the 'Asymmetrical Ventricles' and 'Effaced Ventricle' features) could be seen in either IDH mutant or wildtype tumors. Overall, the clinical and radiological features lean towards an IDH-mutant glioma.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "median_shift_mm",
+      "max_shift_mm",
+      "p95_shift_mm",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor's location in the temporal lobe, cortex, and insula, along with the patient's relatively young age, could suggest a higher likelihood of 1p/19q codeletion, which is often associated with oligodendrogliomas. However, the absence of specific radiological features typical of oligodendrogliomas (such as calcifications, which are not available in the provided metadata) and the presence of significant edema make this less certain. The non-enhancing nature and lack of necrosis are consistent with either codeleted or non-codeleted IDH-mutant gliomas. Given the information available, a definitive prediction is challenging.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Region Proportions",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing and lacks necrosis, which are features more commonly associated with lower-grade gliomas. The presence of significant edema and mass effect (as indicated by ventricular asymmetry and effacement) could suggest a higher grade, but these features can also be seen in lower-grade gliomas, especially if they are IDH-mutant. The absence of enhancement and necrosis, along with the tumor's characteristics, leans towards a lower grade. However, the significant edema and mass effect introduce some uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "NCR Volume (mL)",
+      "ET Volume (mL)"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "median_shift_mm",
+      "Asymmetrical Ventricles",
+      "Effaced Ventricle"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "subject_id": "UCSF-PDGM-437"
+}

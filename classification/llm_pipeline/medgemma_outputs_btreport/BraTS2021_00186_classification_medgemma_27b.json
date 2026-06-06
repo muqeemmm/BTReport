@@ -1,0 +1,44 @@
+{
+  "subject_id": "BraTS2021_00186",
+  "idh": {
+    "reasoning": "The available metadata provides limited information to directly infer IDH mutation status. Features like tumor size (Total tumor volume 117.131 mL), location (frontal_lobe, cortex, parietal and midline lobes), and enhancement pattern (Marked, Proportion Enhancing 18.03) are non-specific regarding IDH status. The presence of deep white matter invasion, ependymal invasion, cortical involvement, and midline crossing suggests a high-grade glioma, which could be either IDH-mutant or IDH-wildtype. Without features like age (often younger in IDH-mutant), specific imaging characteristics strongly associated with IDH-mutant tumors (e.g., smaller size, less necrosis, less edema - though this case has significant edema), or molecular markers (not available), a definitive prediction is difficult. Given the large size and significant edema/enhancement, IDH-wildtype is slightly more likely in adults, but the evidence is weak. I will predict wildtype based on the large volume and significant edema/enhancement often seen in IDH-wildtype glioblastomas, while acknowledging the uncertainty.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "ED Volume (mL)",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata does not contain any information related to 1p/19q co-deletion status. Features like tumor size, location, enhancement pattern, and invasion characteristics are not predictive of co-deletion status. Therefore, a prediction cannot be made based on the available data.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features indicative of a high WHO grade. The presence of 'Deep WM invasion', 'Ependymal (ventricular) Invasion', 'Cortical involvement', and 'Midline shift present' points towards aggressive behavior. The large 'Total tumor volume (mL)' (117.131 mL) and significant 'Proportion of Oedema' (76.55) are also common in high-grade gliomas. The 'Enhancement Quality' is described as 'Marked', and the tumor crosses the midline ('CET Crosses midline': True). These features collectively suggest a Grade 4 glioma according to WHO CNS5 criteria, which includes features like necrosis (Proportion Necrosis: 5.42), microvascular proliferation (implied by marked enhancement), and mitotic activity (not directly assessed but suggested by aggressive invasion). While Grade 3 cannot be entirely excluded without histology or molecular markers, the combination of extensive invasion and large size strongly favors Grade 4.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Midline shift present",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "CET Crosses midline",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH-wildtype, non-codeleted diffuse astrocytoma WHO Grade 4.",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient has a large enhancing lesion with significant edema and mass effect causing midline shift and ventricular asymmetry. The lesion involves multiple lobes including frontal cortex and parietal cortex with deep white matter invasion and ependymal invasion suggesting aggressive behavior consistent with high grade glioma."
+}

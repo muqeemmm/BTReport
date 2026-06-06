@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (59 years) and the presence of a large, enhancing tumor with necrosis (Proportion Necrosis: 36.44%) and significant mass effect (mean_shift_mm: 1.1741935483870967, max_shift_mm: 4.0) are more typical of glioblastoma, which is commonly IDH wildtype in older adults. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.4, T2-FLAIR Mismatch Degree: -0.03304993598917516) also argues against IDH mutant astrocytoma. The marked enhancement and presence of necrosis further support a more aggressive tumor type, typically associated with IDH wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, enhancing tumor with necrosis and significant mass effect, along with the patient's age, is more typical of glioblastoma, which is rarely associated with 1p/19q codeletion. The absence of features typical for oligodendroglioma (e.g., calcifications, which are not available but often associated with codeletion) and the presence of necrosis argue against codeletion. IDH wildtype tumors are also less likely to have codeletion.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features: large size (Lesion Sizes APxTVxCC: 4.4 x 4.3 x 6.2 cm), marked enhancement, significant necrosis (Proportion Necrosis: 36.44%), and substantial mass effect (mean_shift_mm: 1.1741935483870967, max_shift_mm: 4.0). These characteristics are typical of CNS WHO grade 4 tumors, particularly glioblastoma. The presence of necrosis is a hallmark of grade 4 tumors.",
+    "supporting_features": [
+      "Lesion Sizes APxTVxCC (cm)",
+      "Proportion Necrosis",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "subject_id": "BraTS2021_01458"
+}

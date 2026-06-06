@@ -1,0 +1,45 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high mismatch score (0.808), which is strongly associated with IDH-mutant astrocytomas. Additionally, the lesion is multifocal (Multifocal or Multicentric: Multifocal) and involves the cortex (Cortical involvement: Present), which are more common in IDH-mutant tumors. However, the patient's age (59 years) is older than typical for IDH-mutant gliomas, which usually present in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Multifocal or Multicentric",
+      "Cortical involvement"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Multifocal or Multicentric",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "IDH-mutant astrocytomas typically lack 1p/19q co-deletion. The presence of T2-FLAIR mismatch and cortical involvement support an astrocytic lineage. However, multifocality is more common in oligodendrogliomas, which are codeleted, but the strong T2-FLAIR mismatch outweighs this.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "overall_comment": "Based on the T2-FLAIR mismatch sign and other features, this is likely an IDH-mutant astrocytoma without 1p/19q co-deletion. Grade prediction requires enhancement characteristics.",
+  "subject_id": "UCSF-PDGM-367",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor shows mild enhancement (Enhancement Quality: Mild) and a low proportion of necrosis (Proportion Necrosis: 0.02), which are atypical for grade 4 glioblastoma. The thick enhancing margin (>3mm) and absence of necrosis suggest grade 3. However, mild enhancement is less typical for grade 3 astrocytomas which often lack enhancement.",
+    "supporting_features": [
+      "Thickness of enhancing margin",
+      "Proportion Necrosis"
+    ]
+  }
+}

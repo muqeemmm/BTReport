@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_00768",
+  "idh": {
+    "reasoning": "The provided metadata lacks features strongly indicative of either IDH-mutant or IDH-wildtype status. Features like small size, well-defined margins, or specific locations (e.g., temporal lobe) are absent. Conversely, features suggesting IDH-wildtype (large size, necrosis, significant edema, crossing midline) are present but not definitive. The tumor is large (109.2 mL), has necrosis (0.3 proportion), significant edema (96.02 proportion), and crosses the midline with edema ('Edema crosses midline': 'True'). These features are more common in IDH-wildtype tumors. However, the 'Enhancement Quality' is 'Mild' and 'Thickness of enhancing margin' is '>3mm', which can be seen in both types. The location ('ventricles-corpus_callosum region') is not strongly associated with either type. Given the presence of several features more typical of IDH-wildtype (large size, necrosis, significant edema, midline crossing edema) but without definitive markers for either type and absence of features strongly favoring IDH-mutant, I lean towards wildtype.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Edema crosses midline"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin",
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.6
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The metadata does not contain any information regarding 1p/19q co-deletion status. There are no features like cortical involvement or specific enhancement patterns that would strongly suggest codeletion versus non-codeletion in the absence of molecular data. Therefore, a prediction cannot be reliably made based on the provided MRI metadata.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features associated with higher WHO grades. It is large ('Total tumor volume (mL)': 109.201), has necrosis ('Proportion Necrosis': 0.3), significant edema ('Proportion of Oedema': 96.02), deep white matter invasion ('Deep WM invasion': 'Present'), ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), and crosses the midline with edema ('Edema crosses midline': 'True'). The presence of necrosis and deep white matter invasion points towards at least Grade 3 or 4. Ependymal invasion and significant edema further support a higher grade. While cortical involvement is present ('Cortical involvement': 'Present'), which can be seen in Grade 4 tumors, its absence doesn't rule out Grade 4 either based on other criteria like necrosis and deep invasion alone according to WHO CNS5 criteria for diffuse astrocytoma/oligodendroglioma IDH-wildtype.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Edema crosses midline",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

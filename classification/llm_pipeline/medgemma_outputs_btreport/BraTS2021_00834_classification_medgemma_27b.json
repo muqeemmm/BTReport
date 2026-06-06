@@ -1,0 +1,40 @@
+{
+  "subject_id": "BraTS2021_00834",
+  "idh": {
+    "reasoning": "The patient is 56 years old. Older age (>50) is associated with IDH-wildtype gliomas, while younger age (<40) is associated with IDH-mutant gliomas. The presence of multiple lesions (multifocal) and a large tumor volume (73.379 mL) are also more characteristic of IDH-wildtype tumors. While age alone is not definitive, the combination of age, multifocality, and large volume points towards IDH-wildtype status. There are no features strongly suggesting IDH-mutant status (e.g., younger age, single lesion).",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not contain any information directly related to 1p/19q co-deletion status. Features like age, tumor size, location, or enhancement pattern are not reliable predictors of 1p/19q status on their own. Therefore, a prediction cannot be made with any certainty based solely on the provided MRI metadata.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The patient is 56 years old with a multifocal glioma involving the temporal, cortex, and occipital lobes. The tumor has marked enhancement, cortical involvement, and a large total volume (73.379 mL). The proportion of enhancing tissue is 30.95%, and necrosis is 6.19%. The combination of older age, multifocality, large size, and marked enhancement suggests a higher grade glioma. While deep white matter invasion and ependymal invasion are absent, the overall picture aligns more closely with WHO Grade 4 (glioblastoma) than Grade 2 or 3. The absence of deep WM invasion argues against Grade 4 but doesn't exclude it; Grade 3 astrocytoma is possible but less likely given the multifocality and size in this age group.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "IDH-wildtype, non-codeleted diffuse astrocytoma WHO Grade 4.",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

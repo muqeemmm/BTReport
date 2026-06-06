@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of a large tumor with significant necrosis (Proportion Necrosis: 49.71%) and mild enhancement (Enhancement Quality: Mild) suggests a high-grade glioma. The tumor's location in the left temporal lobe with involvement of the cortex and deep white matter invasion, along with ependymal invasion, are features more commonly associated with IDH-wildtype glioblastomas. IDH-mutant gliomas tend to have a more favorable prognosis and are less likely to present with such aggressive features at initial diagnosis.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor's characteristics, such as significant necrosis and mild enhancement, are not typical for 1p/19q co-deleted gliomas, which are more commonly associated with IDH mutations and often present with more homogeneous enhancement. The absence of features like calcifications (not assessed here) and the presence of necrosis argue against a codeleted status. IDH-wildtype status predicted above further reduces the likelihood of codeletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The presence of significant necrosis (Proportion Necrosis: 49.71%), mild enhancement, and large tumor size (Total tumor volume: 111.386 mL) are indicative of a high-grade glioma. The tumor's aggressive features, such as ependymal invasion and deep white matter invasion, further support a high-grade classification. Given the IDH-wildtype prediction, a grade 4 classification is most likely according to the WHO CNS5 criteria.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01728"
+}

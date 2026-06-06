@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high score (0.757), which is strongly associated with IDH-mutant astrocytomas. The mismatch degree is negative (-0.050), which may indicate a slight discrepancy but does not negate the overall presence. Additionally, the tumor is located in the frontal lobe, which is common in IDH-mutant gliomas. However, the negative mismatch degree slightly contradicts the typical strong mismatch.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma, WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas (Speech motor and Motor) and shows marked enhancement, which are more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often have less enhancement and may avoid eloquent areas. However, the frontal location and cortical involvement could support oligodendroglioma, but the strong enhancement argues against it.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "The tumor shows features consistent with IDH-mutant astrocytoma. The T2-FLAIR mismatch is present but with a negative degree, slightly reducing confidence. The strong enhancement and eloquent involvement suggest non-codeleted status. The high proportion of necrosis and marked enhancement indicate WHO grade 4.",
+  "subject_id": "UCSF-PDGM-166",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has marked enhancement (Enhancement Quality: Marked) and a high proportion of necrosis (18.52%), which are hallmarks of glioblastoma (WHO grade 4). The necrosis proportion is slightly below the typical threshold (around 10-20% is ambiguous), but combined with marked enhancement, it strongly suggests grade 4. The edema crosses midline and ependymal invasion are also supportive.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion"
+    ]
+  }
+}

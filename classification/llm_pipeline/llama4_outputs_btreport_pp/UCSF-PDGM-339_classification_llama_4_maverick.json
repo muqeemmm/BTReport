@@ -1,0 +1,40 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The T2-FLAIR mismatch score is 0.4564725697166806 and the degree is 0.18313978294033761, both of which are below the threshold typically used to indicate IDH mutation status. The presence of marked enhancement and necrosis (Proportion Necrosis: 19.7%) suggests a more aggressive tumor, which is more commonly associated with IDH wildtype status. Additionally, the patient's age (50 years) is more typical for IDH wildtype glioblastoma. Therefore, based on the available metadata, the tumor is likely IDH wildtype.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of marked enhancement and a significant necrotic component (Proportion Necrosis: 19.7%) is less typical for 1p/19q co-deleted tumors, which are more commonly associated with oligodendrogliomas that typically show less aggressive features. The absence of T2-FLAIR mismatch does not support the diagnosis of an astrocytoma, but the presence of necrosis and enhancement quality suggests a more aggressive tumor type, likely glioblastoma or IDH wildtype astrocytoma, both of which are less likely to be co-deleted. Therefore, based on the available metadata, the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.75
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The presence of marked enhancement, significant necrosis (Proportion Necrosis: 19.7%), and a large tumor volume (Total tumor volume: 48.232 mL) are indicative of a high-grade glioma. The patient's age (50 years) and the tumor's aggressive features (e.g., midline shift, cortical involvement) further support this. The necrosis and enhancement are characteristic of glioblastoma, which is WHO grade 4. Therefore, based on the available metadata, the tumor is likely WHO grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "Cortical involvement",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "UCSF-PDGM-339"
+}

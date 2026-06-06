@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (36 years) and the MRI characteristics of the tumor (non-enhancing, large edema volume, frontal lobe involvement, cortical involvement, and absence of necrosis or enhancement) are more typical of IDH-mutant gliomas. IDH-mutant gliomas are more common in younger adults and often present with these features. The absence of enhancement (\"Enhancement Quality\": \"None\") and necrosis (\"Proportion Necrosis\": 0.0) also aligns with a lower-grade glioma, which is more likely to be IDH-mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor's location in the frontal lobe and cortical involvement are characteristic of IDH-mutant gliomas, which are more likely to have 1p/19q co-deletion if they are oligodendrogliomas. However, the absence of enhancement and the presence of a large edematous component could be seen in either codeleted or non-codeleted tumors. Given the clinical and radiological features suggesting an IDH-mutant glioma, and considering that 1p/19q co-deletion is a characteristic of oligodendroglioma, a subtype of IDH-mutant glioma, it is plausible that this tumor could be codeleted. However, the absence of specific features that are strongly indicative of codeletion (like calcifications, which are not available in the provided metadata) introduces uncertainty.",
+    "supporting_features": [
+      "Region Proportions",
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing (\"Enhancement Quality\": \"None\"), has a significant edematous component (\"ED Volume (mL)\": 37.162), and lacks necrosis (\"Proportion Necrosis\": 0.0) or enhancement (\"Proportion Enhancing\": 0.0). These features are more typical of lower-grade gliomas. The absence of necrosis and enhancement suggests a lower grade. However, the presence of significant edema and eloquent brain involvement could suggest a higher grade. Given the mix of features, a grade 3 is plausible as it reflects a tumor with potentially aggressive behavior but lacking the most malignant features (e.g., necrosis, enhancement).",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": 3,
+    "confidence": 0.7
+  },
+  "subject_id": "UCSF-PDGM-231"
+}

@@ -1,0 +1,42 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is present with a score of 0.72, which is strongly associated with IDH-mutant astrocytomas. However, the patient's age (78 years) is atypical for IDH-mutant gliomas, which are more common in younger adults. Mild enhancement is also less common in IDH-mutant tumors.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "IDH-mutant gliomas are typically astrocytomas and do not have 1p/19q co-deletion. The tumor location in parietal, cortex, and occipital lobes is more typical for astrocytomas than oligodendrogliomas, which favor frontal lobes.",
+    "supporting_features": [
+      "idh_prediction"
+    ]
+  },
+  "overall_comment": "Based on the T2-FLAIR mismatch sign, the tumor is likely IDH-mutant astrocytoma. However, the advanced age and mild enhancement introduce uncertainty. Grade 4 is assigned due to necrosis presence and age.",
+  "subject_id": "UCSF-PDGM-422",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "Necrosis is present (Proportion Necrosis: 0.36%), which is a hallmark of glioblastoma (CNS WHO grade 4). Mild enhancement is less typical for grade 4 tumors but necrosis overrides this. Age also supports higher grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "age_years"
+    ]
+  }
+}

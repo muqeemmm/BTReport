@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of ependymal invasion and deep white matter invasion along with a large tumor volume and significant necrosis proportion suggests an aggressive tumor. IDH wildtype tumors are more commonly associated with such aggressive features compared to IDH mutant tumors. The tumor's location in the insula, cortex, and frontal lobe, and its enhancement quality being marked also aligns more with IDH wildtype glioblastoma characteristics.",
+    "supporting_features": [
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "IDH mutant tumors are more likely to have 1p/19q codeletion. Given the prediction of IDH wildtype status, the likelihood of 1p/19q codeletion is lower. The absence of features specifically indicating 1p/19q codeletion (such as specific locations or imaging characteristics typical of oligodendrogliomas) further supports this prediction.",
+    "supporting_features": [
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_grade": {
+    "reasoning": "The presence of a large tumor volume, significant necrosis proportion, and marked enhancement quality are indicative of a high-grade tumor. The predicted IDH wildtype status further supports a diagnosis of glioblastoma, which is typically classified as CNS WHO grade 4. The absence of midline shift or significant ventricular asymmetry despite the tumor's size suggests a relatively slow growth or adaptation, but the overall features still point towards a high-grade tumor.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "idh_status"
+    ],
+    "contradicting_features": [
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0664"
+}

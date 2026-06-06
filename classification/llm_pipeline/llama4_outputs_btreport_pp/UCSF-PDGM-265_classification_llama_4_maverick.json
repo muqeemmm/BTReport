@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (44 years) and the tumor's characteristics (non-enhancing, located in the insula, cortex, frontal and temporal lobes, with deep white matter invasion) are consistent with a diffuse glioma. The absence of enhancement and the presence of a significant edema volume (38.744 mL) with no necrosis or enhancement suggest a lower grade glioma. The T2-FLAIR mismatch score is 0.4, which is not strongly indicative of an IDH mutant astrocytoma (typically requires a score closer to 1). However, the lack of enhancement and the tumor's location are more typical of IDH-mutant gliomas. Given these features, the likelihood of an IDH mutation is considered higher than wildtype due to the patient's relatively young age and the tumor's non-aggressive appearance on MRI.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Tumor Location",
+      "Deep WM invasion",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in multiple lobes including the frontal lobe, which is a common location for 1p/19q codeleted oligodendrogliomas. However, the absence of clear T2-FLAIR mismatch (score = 0.4) and the lack of specific indicators for codeletion status in the provided metadata make it challenging to definitively predict codeletion status. Given the tumor's non-enhancing nature and involvement of multiple regions, there's a possibility of it being codeleted, but it's not strongly supported.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has a significant edema volume, and lacks necrosis or enhancement, suggesting a lower grade glioma. The absence of enhancement typically correlates with lower grade (WHO Grade 2 or 3) diffuse gliomas. The presence of deep white matter invasion and eloquent brain involvement could suggest a more aggressive tumor, but the overall MRI characteristics lean towards a lower grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Deep WM invasion",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-265"
+}

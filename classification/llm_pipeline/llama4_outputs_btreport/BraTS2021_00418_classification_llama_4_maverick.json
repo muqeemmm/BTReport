@@ -1,0 +1,50 @@
+{
+  "id": "patient_0903",
+  "predictions": [
+    {
+      "type": "IDH_status",
+      "reasoning": "The patient's age (78 years) and the presence of a large, mildly enhancing tumor with significant mass effect (midline shift, asymmetrical ventricles, effaced ventricle) are more typical of IDH wildtype glioblastoma. The tumor's location in the frontal lobe, cortex, and insula, along with ependymal invasion and deep white matter invasion, are also consistent with aggressive tumor behavior. IDH mutant gliomas are more commonly associated with younger patients and often have a more favorable prognosis.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "midline_shift_present",
+        "Asymmetrical Ventricles",
+        "Effaced Ventricle",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.95
+    },
+    {
+      "type": "1p19q_codeletion",
+      "reasoning": "The presence of a large, enhancing tumor with significant mass effect and ependymal invasion is more typical of glioblastoma or IDH wildtype glioma. 1p/19q co-deletion is more commonly associated with oligodendrogliomas, which tend to have a more favorable prognosis and are often IDH mutant. Given the patient's age and the aggressive features of the tumor, 1p/19q co-deletion is less likely.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.85
+    },
+    {
+      "type": "CNS_WHO_grade",
+      "reasoning": "The tumor's large size, significant mass effect (midline shift, asymmetrical ventricles), ependymal invasion, and deep white matter invasion are indicative of an aggressive tumor. The presence of necrosis (Proportion Necrosis = 2.68%) and enhancement (Proportion Enhancing = 14.91%) also supports a high-grade tumor. These features are most consistent with a WHO grade 4 tumor, likely glioblastoma, IDH wildtype.",
+      "supporting_features": [
+        "midline_shift_present",
+        "Asymmetrical Ventricles",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion",
+        "Proportion Necrosis",
+        "Proportion Enhancing"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.95
+    }
+  ],
+  "subject_id": "BraTS2021_00418"
+}

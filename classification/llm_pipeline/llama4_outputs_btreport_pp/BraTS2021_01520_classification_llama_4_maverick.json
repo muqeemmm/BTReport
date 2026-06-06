@@ -1,0 +1,38 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is a strong indicator of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8754866206283087, both suggesting a high likelihood of T2-FLAIR mismatch. This feature is highly associated with IDH mutant gliomas. The patient's age (27 years) also supports the likelihood of an IDH mutant status, as IDH mutations are more common in younger adults.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutant glioma. For IDH mutant gliomas, the presence of 1p/19q co-deletion is typically associated with oligodendrogliomas. However, the given metadata does not directly indicate 1p/19q co-deletion status. The 'Cortical involvement' is present, and the tumor is located in the frontal lobe, which are features that can be seen in oligodendrogliomas. However, without direct evidence or a clear indication of classic oligodendroglioma features (e.g., calcifications, which are not available), we cannot be certain. Thus, we lean towards non-codeleted based on the lack of definitive evidence for co-deletion.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows mild enhancement and has a significant necrotic proportion (65.57%), suggesting a high-grade tumor. The presence of necrosis and the overall tumor characteristics (e.g., significant volume, involvement of eloquent areas) are concerning for a higher grade. IDH mutant gliomas with such features are likely to be grade 4 (glioblastoma, IDH mutant). The age of the patient (27 years) and the presence of IDH mutation (predicted) might suggest a lower grade, but the presence of necrosis and significant tumor volume leans towards a higher grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01520"
+}

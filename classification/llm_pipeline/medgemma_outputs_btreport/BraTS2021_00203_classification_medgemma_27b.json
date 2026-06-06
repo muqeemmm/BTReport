@@ -1,0 +1,39 @@
+{
+  "subject_id": "BraTS2021_00203",
+  "idh": {
+    "reasoning": "The patient is 67 years old. Older age (>60) is associated with IDH-wildtype gliomas, while younger age is associated with IDH-mutant gliomas. The MRI metadata does not provide any features strongly suggestive of IDH-mutant status (e.g., low grade features, specific locations like optic pathway or cerebellum, or lack of necrosis/enhancement). The presence of marked enhancement, deep white matter invasion, and ependymal invasion are more commonly seen in higher-grade gliomas, which can be either IDH-mutant or wildtype, but the older age pushes towards wildtype. Given the lack of specific features pointing towards mutant status and the patient's age, IDH-wildtype is the more likely status.",
+    "supporting_features": [
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.65
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata lacks information typically associated with 1p/19q co-deletion, such as low grade features (WHO grade 2), specific locations (e.g., frontal lobe), or lack of significant necrosis or enhancement. The presence of marked enhancement, deep white matter invasion, and ependymal invasion are generally inconsistent with 1p/19q co-deleted gliomas, which are almost exclusively WHO grade 2 oligodendrogliomas. Therefore, the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (67) is relatively high for a diffuse glioma. The tumor exhibits marked enhancement, deep white matter invasion, and ependymal invasion. These features are characteristic of high-grade gliomas (WHO grade 3 or 4). While some grade 3 gliomas can show these features, the combination including marked enhancement and deep/ependymal invasion in an older adult strongly suggests a WHO grade 4 glioma (glioblastoma). The absence of features typically associated with lower grades (e.g., minimal enhancement, no necrosis) further supports a higher grade.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "IDH-wildtype, non-1p/19q codeleted diffuse astrocytic tumor, WHO grade 4.",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient is an older adult male presenting with a solitary lesion involving multiple brain regions including the temporal lobe cortex and insula. The lesion demonstrates marked enhancement, deep white matter invasion and ependymal invasion along with significant edema but does not cross the midline based on imaging criteria. These features are highly suggestive of a high-grade glioma. Given the patient's age and the aggressive imaging characteristics (marked enhancement, deep WM invasion), an IDH-wildtype tumor is more likely than an IDH-mutant one. The aggressive features also make co-deletion unlikely as it is typically associated with lower grade oligodendrogliomas."
+}

@@ -1,0 +1,49 @@
+{
+  "subject_id": "BraTS2021_00543",
+  "idh": {
+    "reasoning": "The patient has a large tumor volume (120.305 mL) with significant edema (90.53 proportion), deep white matter invasion, and ependymal invasion. These features are more commonly associated with IDH-wildtype gliomas, which tend to be larger, more infiltrative, and often present with mass effect and edema. While IDH-mutant gliomas can also be infiltrative, the combination of large size, high edema proportion, deep WM invasion, and ependymal invasion points towards IDH-wildtype status. The presence of multiple satellites is not strongly indicative of either IDH status. The 'mild' enhancement quality and thick enhancing margin (>3mm) are less specific for IDH status. The tumor location involving cortex, frontal lobe, insula, temporal lobe, and ventricles is non-specific.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Multiple satellites present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The available metadata does not provide any direct information regarding 1p/19q co-deletion status. Features like IDH mutation status (which is predicted as wildtype here), tumor grade, and specific imaging characteristics (like calcification or cystic changes, which are not assessed) are typically used in conjunction with molecular testing to infer 1p/19q status. Given the prediction of IDH-wildtype status, 1p/19q co-deletion is highly unlikely as it is almost exclusively found in IDH-mutant astrocytomas. However, without molecular data or features strongly suggestive of astrocytoma grade II (like minimal enhancement or necrosis), a definitive prediction based solely on MRI metadata is unreliable. The presence of deep WM invasion and ependymal invasion suggests a higher grade tumor where 1p/19q co-deletion is rare.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "idh.prediction"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits several features indicative of high-grade glioma: large size (120.305 mL), significant edema (90.53 proportion), deep white matter invasion ('Present'), ependymal invasion ('Present'), cortical involvement ('Present'), and crossing the midline with edema ('Edema crosses midline': 'True'). The presence of multiple satellites ('Present') can be seen in high-grade gliomas. Although the enhancement quality is described as 'Mild' and the proportion enhancing is relatively low (8.11%), the combination of extensive infiltration (deep WM, ependymal), large size, significant edema, and cortical involvement strongly suggests a WHO Grade 4 glioma (glioblastoma). A Grade 3 glioma (anaplastic astrocytoma) might show some of these features but typically less extensive infiltration or smaller size/edema compared to what is described here. A Grade 2 glioma is unlikely given the deep WM invasion and ependymal involvement.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Proportion of Oedema",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Cortical involvement",
+      "Edema crosses midline",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "integrated_diagnosis": "IDH-wildtype diffuse astrocytoma WHO grade IV",
+  "consistency_check_passed": true,
+  "overall_comment": "The MRI findings are highly suggestive of an IDH-wildtype glioblastoma WHO grade IV."
+}

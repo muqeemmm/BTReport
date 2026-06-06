@@ -1,0 +1,47 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 64 years old, which is older than typical IDH-mutant gliomas that present in younger adults. However, the tumor location involves temporal, cortex, occipital, and parietal lobes, which is common in IDH-mutant gliomas. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0), which supports IDH-mutant status. Enhancement is mild, which is more typical of IDH-mutant tumors. The proportion necrosis is low (0.36%), which is consistent with IDH-mutant gliomas. The tumor is multifocal, which can occur in both mutant and wildtype but is more common in wildtype. Overall, the absence of T2-FLAIR mismatch and mild enhancement support IDH-mutant, while age and multifocality argue against it.",
+    "supporting_features": [
+      "Tumor Location",
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves temporal, cortex, occipital, and parietal lobes. Oligodendrogliomas (IDH-mutant and 1p/19q codeleted) typically occur in frontal lobes and less commonly in temporal lobes. The absence of frontal lobe involvement and presence in multiple lobes including parietal and occipital suggests against oligodendroglioma. The tumor is multifocal, which is more common in astrocytomas. Enhancement is mild, which can occur in both. There is no deep white matter invasion (Deep WM invasion = Absent), which is atypical for oligodendrogliomas that often involve white matter. Overall, the location and lack of deep white matter invasion support non-codeleted status.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion",
+      "Multifocal or Multicentric"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is classified as astrocytoma, IDH-mutant, CNS WHO grade 4. The IDH mutation status is predicted as mutant with moderate confidence due to conflicting age but supportive imaging features. 1p/19q co-deletion is predicted as non-codeleted with moderate confidence based on location and lack of deep white matter invasion. The grade is predicted as 4 due to necrosis and enhancement.",
+  "subject_id": "BraTS2021_00241",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis = 0.36%) and enhancement (Enhancement Quality = Mild). According to WHO CNS5, necrosis is a hallmark of grade 4 glioblastoma. The proportion necrosis is low but present. Enhancement is mild, which is atypical for glioblastoma that usually shows strong enhancement, but mild enhancement can occur. The tumor volume is large (Total tumor volume = 43.568 mL), which is consistent with high-grade glioma. The presence of necrosis supports grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

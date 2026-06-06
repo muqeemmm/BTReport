@@ -1,0 +1,45 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 48 years old, which is within the typical age range for IDH-mutant gliomas. The tumor is located in the temporal-cortex region, which is common for IDH-mutant tumors. The enhancement is mild, which is more typical of IDH-mutant gliomas. However, the T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0, T2-FLAIR Mismatch Score = 0.4, T2-FLAIR Mismatch Degree = -0.2818796498637868), which argues against IDH-mutant astrocytoma.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Multifocal or Multicentric"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves deep white matter (Deep WM invasion = Present) and eloquent cortex (Eloquent Brain Involvement = Vision), which is more characteristic of astrocytic tumors. Oligodendrogliomas typically present with frontal lobe involvement and may have calcifications, but calcifications are not assessed here. The tumor is multifocal (Multifocal or Multicentric = Multifocal), which is more common in oligodendrogliomas, but the deep white matter invasion strongly suggests astrocytic lineage.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is likely an IDH-mutant astrocytoma. The absence of T2-FLAIR mismatch is noted, but other features support IDH-mutant status. The deep white matter invasion and eloquent cortex involvement suggest astrocytic lineage, hence non-codeleted. The grade is assigned as 4 due to necrosis and enhancement.",
+  "subject_id": "BraTS2021_00378",
+  "who_grade": {
+    "confidence": 0.8,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis = 2.48%) and enhancement (Enhancement Quality = Mild, Proportion Enhancing = 9.46%). Necrosis is a hallmark of glioblastoma (CNS WHO grade 4). However, the enhancement is mild, which is atypical for glioblastoma but can occur. The presence of necrosis outweighs the mild enhancement.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ]
+  }
+}

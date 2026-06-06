@@ -1,0 +1,35 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8049514164357148, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in gliomas according to the WHO CNS5 classification. Other features like the patient's age (47 years) and the tumor's characteristics (multifocal, ependymal invasion) are also consistent with a higher-grade glioma, but the T2-FLAIR mismatch is a specific marker for IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of IDH mutation is established, but the status of 1p/19q co-deletion is not directly indicated by the provided metadata. However, the tumor's characteristics, such as involvement of frontal lobe, cortex, and insula, along with the presence of ependymal invasion and multifocality, are more typical of IDH-mutant gliomas. The absence of clear indicators for 1p/19q co-deletion (like specific molecular or histological features) in the metadata makes it challenging to definitively predict co-deletion status. However, the presence of T2-FLAIR mismatch and other features are more commonly associated with IDH-mutant astrocytomas, which are typically non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO Grade": {
+    "reasoning": "The tumor exhibits aggressive features such as multifocality, ependymal invasion, and significant edema volume (67.186 mL), with a large proportion of necrosis (23.09%). The presence of IDH mutation suggests it is not a grade 4 IDH-wildtype glioblastoma. However, the tumor's aggressive features and large size suggest a high grade. Given the IDH mutant status, the presence of necrosis and multifocality supports a diagnosis of grade 4 IDH-mutant astrocytoma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01776"
+}

@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 34 years old, which is younger than typical for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger patients. The tumor is midline, which is atypical for IDH-mutant tumors that are usually hemispheric. Enhancement is mild, which is more common in IDH-mutant tumors. However, the tumor involves eloquent areas and has deep white matter invasion, which can occur in both types.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is midline and involves eloquent areas including speech motor and motor regions. Oligodendrogliomas (IDH-mutant and 1p/19q codeleted) typically occur in the frontal lobe and are less likely to involve deep structures or midline. The frontal lobe involvement supports oligodendroglioma, but midline location and deep white matter invasion argue against it.",
+    "supporting_features": [
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor is IDH-mutant, non-codeleted astrocytoma. Given the presence of necrosis (12.99%) and enhancement, along with eloquent involvement, it is likely CNS WHO grade 4. However, the proportion of necrosis is relatively low, and enhancement is mild, which may suggest grade 3. The confidence is moderate due to conflicting features.",
+  "subject_id": "EGD-0720",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (12.99%) and enhancement (mild), which are features of high-grade glioma. The eloquent involvement also supports higher grade. However, the proportion of necrosis is not high, and enhancement is only mild, which may be seen in grade 3 tumors. The presence of any necrosis typically indicates grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

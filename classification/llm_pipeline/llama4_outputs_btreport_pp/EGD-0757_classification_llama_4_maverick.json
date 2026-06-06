@@ -1,0 +1,40 @@
+{
+  "IDH Mutation Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The T2-FLAIR Mismatch Score is 0.9763583072753934, which is very high, indicating a strong presence of this feature. Additionally, the patient's age (30 years) is within the range where IDH mutant gliomas are more common. The tumor's location and characteristics, such as being in the frontal lobe and having a significant non-enhancing component, are also consistent with IDH mutant gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q Co-deletion Status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutant glioma. IDH mutant gliomas can be further classified into 1p/19q codeleted (oligodendrogliomas) and non-codeleted (astrocytomas). The tumor's location in the frontal lobe and the presence of cortical involvement are seen in both types. However, the absence of ependymal invasion and the presence of a significant non-enhancing component are more typical of astrocytomas. The mild enhancement quality also leans more towards astrocytoma. Therefore, based on the available metadata, the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO Grade": {
+    "reasoning": "Given the IDH mutation status is predicted to be mutant and 1p/19q co-deletion status is predicted to be non-codeleted, the tumor is likely an astrocytoma. The presence of a significant necrotic component (Proportion Necrosis: 52.79%) and the tumor's large size (Total tumor volume: 121.02 mL) are indicative of a higher grade. The mild enhancement quality and the absence of ependymal invasion might suggest a lower grade, but the presence of necrosis and significant edema typically correlates with higher grades. Therefore, the tumor is likely to be grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0757"
+}

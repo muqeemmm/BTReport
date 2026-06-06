@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is strongly positive (T2-FLAIR Mismatch Present=1.0, Score=0.935) which is highly specific for IDH-mutant astrocytoma. However, the patient is older (52 years) and has marked enhancement, which are more typical of IDH-wildtype glioblastoma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex (temporal, parietal, insula) and has ependymal invasion, which are atypical for oligodendroglioma. However, the T2-FLAIR mismatch sign is more characteristic of astrocytoma than oligodendroglioma.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "Based on the strong T2-FLAIR mismatch sign, this is likely an IDH-mutant astrocytoma. The presence of ependymal invasion and cortical involvement supports non-codeleted status. Grade 3 is assigned due to focal enhancement and necrosis.",
+  "subject_id": "EGD-0508",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 3,
+    "reasoning": "There is focal enhancement (Proportion Enhancing=35.56%) and necrosis (Proportion Necrosis=26.34%), which suggests grade 3. However, the necrosis proportion is substantial but not dominant, and the enhancement is marked but not ring-enhancing.",
+    "supporting_features": [
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ]
+  }
+}

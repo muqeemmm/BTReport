@@ -1,0 +1,46 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (48 years) and the presence of a large, necrotic tumor with significant edema and mass effect (midline shift present, n_slices_with_shift = 115) are more typical of glioblastoma, which is often IDH wildtype. The tumor's location (frontal lobe, cortex, parietal, and ventricles) and characteristics (solitary, mildly enhancing, no ependymal invasion) do not strongly suggest IDH mutant status. The high proportion of necrosis (37.64%) also aligns more with glioblastoma (IDH wildtype).",
+    "supporting_features": [
+      "age_years",
+      "n_slices_with_shift",
+      "midline_shift_present",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, necrotic tumor with significant mass effect and the absence of ependymal invasion or multiple satellites are noted. However, the key determinant for 1p/19q co-deletion status is not directly available in the provided metadata. IDH mutant gliomas are more likely to have 1p/19q co-deletion if they are oligodendrogliomas. Given the tumor's characteristics (necrotic, mildly enhancing, significant edema), it is less typical for an oligodendroglioma, which tends to be more homogeneous and less necrotic. Thus, a non-codeleted status is more likely.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Multiple satellites present"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits significant necrosis (Proportion Necrosis = 37.64%), is large (Total tumor volume = 42.636 mL), and has a substantial mass effect (midline shift present). These features are characteristic of high-grade gliomas. The presence of necrosis and the tumor's aggressive features (e.g., deep white matter invasion, significant edema) are more indicative of WHO grade 4. The mild enhancement and absence of ependymal invasion are noted but do not outweigh the evidence for high-grade features.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "n_slices_with_shift"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0029"
+}

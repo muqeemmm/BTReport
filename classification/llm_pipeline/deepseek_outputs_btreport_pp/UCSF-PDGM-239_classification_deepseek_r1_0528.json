@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 57 years old, which is older than typical IDH-mutant gliomas but younger than wildtype. The tumor is located in the frontal lobe and cortex, common for IDH-mutant tumors. There is no enhancement, which is more common in IDH-mutant tumors. However, the T2-FLAIR mismatch score is 0.4, which is low and not typical for IDH-mutant tumors. The T2-FLAIR mismatch present is 0.0, indicating absence of mismatch, which argues against IDH-mutant. Overall, the frontal location and lack of enhancement support mutant, but the mismatch absence contradicts.",
+    "supporting_features": [
+      "age_years",
+      "Tumor Location",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the frontal lobe and cortex, which is common for both oligodendrogliomas and astrocytomas. However, oligodendrogliomas are more likely to have cortical involvement and calcifications (not assessed). The absence of enhancement and necrosis suggests a lower grade tumor, but without molecular data, we rely on location. Frontal location is more common in oligodendrogliomas, but without other features, the evidence is weak. The prediction is non-codeleted due to lack of strong supporting evidence.",
+    "supporting_features": [
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor is non-enhancing, solitary, frontal lobe-cortex region, with no necrosis or enhancement. The T2-FLAIR mismatch is absent. Age 57 is borderline for IDH-mutant. Confidence is low due to conflicting evidence.",
+  "subject_id": "UCSF-PDGM-239",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows no enhancement ('Enhancement Quality': 'None') and no necrosis ('Proportion Necrosis': 0.0), which are features of grade 2 gliomas. The total tumor volume is 9.305 mL, which is moderate but not indicative of high grade alone. However, the patient is 57 years old, and older age is associated with higher grade. The absence of necrosis and enhancement strongly supports grade 2, but age argues for possible higher grade.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}

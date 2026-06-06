@@ -1,0 +1,41 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (56 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 14.31%) and a significant edema (Proportion of Oedema: 73.05%) are more typical of IDH wildtype glioblastoma, which is common in older adults. The absence of deep white matter invasion and ependymal invasion also aligns with a more aggressive, IDH wildtype tumor. While the enhancement quality is mild, the presence of necrosis and the patient's age are strong indicators of IDH wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of cortical involvement and the absence of ependymal invasion or deep white matter invasion might suggest a more localized tumor. However, the key determinant of 1p/19q co-deletion status is typically molecular or histological features not directly available from the provided MRI metadata. Given the tumor's characteristics (e.g., mild enhancement, presence of necrosis), it is less likely to be associated with 1p/19q co-deletion, which is more commonly seen in oligodendrogliomas that typically show a more indolent course. The prediction leans towards non-codeleted based on the tumor's aggressive features and the patient's age.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "CNS WHO grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 14.31%), mild enhancement, and significant edema (Proportion of Oedema: 73.05%) are characteristic features of a high-grade glioma. The patient's age (56 years) also supports this, as glioblastoma (WHO grade 4) is more common in this age group. The tumor's volume and the presence of necrosis are particularly indicative of a high-grade tumor.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0485"
+}

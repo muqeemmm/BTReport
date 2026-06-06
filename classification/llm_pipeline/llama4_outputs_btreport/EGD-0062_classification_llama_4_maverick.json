@@ -1,0 +1,59 @@
+{
+  "id": "additional_patient_46",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The presence of a large tumor with significant edema and mass effect (midline shift, ventricle compression) along with the involvement of deep white matter and ependymal invasion suggests a more aggressive tumor. IDH-wildtype gliomas are more common in adults and tend to be more aggressive than IDH-mutant gliomas. The tumor's characteristics, such as its large size, significant edema, and presence of necrosis (Proportion Necrosis: 5.61), are more typical of IDH-wildtype glioblastomas. While the enhancement quality is 'Mild', the presence of any enhancement and necrosis is more indicative of a higher-grade tumor, which is often IDH-wildtype.",
+      "supporting_features": [
+        "n_slices_with_shift",
+        "mean_shift_mm",
+        "max_shift_mm",
+        "p95_shift_mm",
+        "midline_shift_present",
+        "Deep WM invasion",
+        "Ependymal (ventricular) Invasion",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the frontal lobe and involves the cortex, which is a common location for 1p/19q co-deleted oligodendrogliomas. However, the presence of significant necrosis (Proportion Necrosis: 5.61) and the large size of the tumor are less typical for 1p/19q co-deleted tumors, which are generally associated with a better prognosis and lower grade. The absence of calcifications (not directly assessed but can be inferred from the lack of mention in the context of typical oligodendroglioma features) and the presence of significant mass effect and necrosis argue against a 1p/19q co-deleted tumor. Thus, based on the aggressive features, it is more likely to be non-codeleted.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "n_slices_with_shift",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [
+        "Tumor Location",
+        "Cortical involvement"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits aggressive features such as significant mass effect (midline shift), large size (Total tumor volume: 287.701 mL), necrosis (Proportion Necrosis: 5.61%), and ependymal invasion. These characteristics are typical of high-grade gliomas. The presence of necrosis and significant edema (Proportion of Oedema: 81.4%) are particularly indicative of a high-grade tumor. While the enhancement is described as 'Mild', the presence of necrosis and significant mass effect points towards a Grade 4 tumor, which is consistent with glioblastoma, IDH-wildtype.",
+      "supporting_features": [
+        "n_slices_with_shift",
+        "mean_shift_mm",
+        "max_shift_mm",
+        "p95_shift_mm",
+        "midline_shift_present",
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "EGD-0062"
+}

@@ -1,0 +1,40 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0 and 'T2-FLAIR Mismatch Score' is 0.8524363128540862, indicating a high likelihood of T2-FLAIR mismatch, which is a characteristic feature of IDH-mutant gliomas. The patient's age (32 years) also aligns with a higher likelihood of IDH mutation, as IDH-mutant gliomas tend to occur in younger patients.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch strongly suggests an IDH mutation, but does not directly inform about 1p/19q co-deletion status. However, the absence of enhancement and the presence of a non-enhancing tumor with significant edema are more commonly seen in IDH-mutant astrocytomas. The 'Enhancement Quality' is 'None', and 'Proportion Enhancing' is 0.0, supporting this. IDH-mutant oligodendrogliomas, which are typically 1p/19q co-deleted, often show some degree of enhancement. Thus, the lack of enhancement leans towards a non-codeleted status.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows significant edema ('ED Volume (mL)' is 164.853) and has a 'midline_shift_present' of 'Yes' with a 'max_shift_mm' of 8.0, indicating a potentially aggressive tumor. However, the lack of enhancement ('Enhancement Quality' is 'None') and necrosis ('Proportion Necrosis' is 0.0) suggests a lower grade. The presence of ependymal invasion and deep white matter invasion indicates a more infiltrative nature. Given the IDH mutation status is predicted as 'mutant', and considering the significant edema and mass effect, the tumor is likely to be grade 3 (IDH-mutant astrocytoma).",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.85
+  },
+  "subject_id": "UCSF-PDGM-444"
+}

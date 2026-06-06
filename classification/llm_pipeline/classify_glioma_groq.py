@@ -205,7 +205,7 @@ def _binary_metrics(y_true, y_pred, pos_label) -> dict:
     """Accuracy, Sensitivity, Specificity, F1 for a binary task."""
     if not y_true:
         return {"n": 0, "accuracy": None, "sensitivity": None,
-                "specificity": None, "f1": None}
+                "specificity": None, "f1": None, "weighted_f1": None}
     all_labels = sorted(set(y_true) | set(y_pred))
     neg_candidates = [l for l in all_labels if l != pos_label]
     # Fallback: derive neg_label from the known label space when only one class present
@@ -215,6 +215,7 @@ def _binary_metrics(y_true, y_pred, pos_label) -> dict:
     acc = accuracy_score(y_true, y_pred)
     f1  = f1_score(y_true, y_pred, pos_label=pos_label, average="binary",
                    zero_division=0)
+    wf1 = f1_score(y_true, y_pred, average="weighted", zero_division=0)
     cm  = confusion_matrix(y_true, y_pred, labels=[pos_label, neg_label])
     TP, FN = cm[0, 0], cm[0, 1]
     FP, TN = cm[1, 0], cm[1, 1]
@@ -226,6 +227,7 @@ def _binary_metrics(y_true, y_pred, pos_label) -> dict:
         "sensitivity": round(sens, 4) if sens is not None else None,
         "specificity": round(spec, 4) if spec is not None else None,
         "f1":          round(f1, 4),
+        "weighted_f1": round(wf1, 4),
     }
 
 
@@ -233,10 +235,12 @@ def _grade_metrics(y_true, y_pred) -> dict:
     """Macro-averaged Accuracy, Sensitivity, Specificity, F1 for grade (2/3/4)."""
     if not y_true:
         return {"n": 0, "accuracy": None, "sensitivity": None,
-                "specificity": None, "f1": None}
+                "specificity": None, "f1": None, "weighted_f1": None}
     classes = [2, 3, 4]
     acc = accuracy_score(y_true, y_pred)
     f1  = f1_score(y_true, y_pred, labels=classes, average="macro",
+                   zero_division=0)
+    wf1 = f1_score(y_true, y_pred, labels=classes, average="weighted",
                    zero_division=0)
     cm = confusion_matrix(y_true, y_pred, labels=classes)
     sens_list, spec_list = [], []
@@ -253,6 +257,7 @@ def _grade_metrics(y_true, y_pred) -> dict:
         "sensitivity": round(sum(sens_list) / len(sens_list), 4),
         "specificity": round(sum(spec_list) / len(spec_list), 4),
         "f1":          round(f1, 4),
+        "weighted_f1": round(wf1, 4),
     }
 
 
@@ -302,7 +307,7 @@ def compute_metrics(predictions: dict, gt: dict) -> dict:
 def print_metrics(metrics: dict) -> None:
     col_w = 22
     header = (f"{'Subset':<{col_w}} {'Task':<12} {'N':>5}  "
-              f"{'Acc':>6}  {'Sens':>6}  {'Spec':>6}  {'F1':>6}")
+              f"{'Acc':>6}  {'Sens':>6}  {'Spec':>6}  {'F1':>6}  {'WF1':>6}")
     sep = "=" * len(header)
     print(f"\n{sep}\nCLASSIFICATION METRICS\n{sep}")
     print(header)
@@ -318,11 +323,38 @@ def print_metrics(metrics: dict) -> None:
                 return f"{v:.4f}" if v is not None else "  N/A"
             print(f"{bucket:<{col_w}} {label:<12} {m['n']:>5}  "
                   f"{_fmt(m['accuracy']):>6}  {_fmt(m['sensitivity']):>6}  "
-                  f"{_fmt(m['specificity']):>6}  {_fmt(m['f1']):>6}")
+                  f"{_fmt(m['specificity']):>6}  {_fmt(m['f1']):>6}  "
+                  f"{_fmt(m['weighted_f1']):>6}")
         print()
 
 
 # --- Run ---------------------------------------------------------------------
+
+def compute_and_save_metrics(output_dir) -> None:
+    """Score already-saved classification outputs (no API calls)."""
+    C, G, D = Fore.CYAN, Fore.GREEN, Style.DIM
+    gt = load_ground_truth(COHORT_XLSX)
+    print(f"\n{D}" + "─" * 72 + Style.RESET_ALL)
+    print(f"{C}Collecting predictions for metric computation...{Style.RESET_ALL}")
+    predictions: dict = {}
+    for out_file in sorted(output_dir.glob("*_classification_gpt_oss_120b.json")):
+        result = json.load(open(out_file))
+        sid = result.get("subject_id",
+                          out_file.stem.replace("_classification_gpt_oss_120b", ""))
+        predictions[sid] = {
+            "idh":        result.get("idh", {}).get("prediction"),
+            "codeletion": result.get("one_p_nineteen_q", {}).get("prediction"),
+            "grade":      result.get("who_grade", {}).get("prediction"),
+        }
+
+    metrics = compute_metrics(predictions, gt)
+    print_metrics(metrics)
+
+    metrics_path = output_dir / "metrics.json"
+    with open(metrics_path, "w") as f:
+        json.dump(metrics, f, indent=2)
+    print(f"{G}Metrics saved{Style.RESET_ALL} → {metrics_path}")
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -333,6 +365,12 @@ def parse_args() -> argparse.Namespace:
         choices=["btreport", "btreport_pp"],
         required=True,
         help="Which metadata JSON variant to use (btreport or btreport_pp).",
+    )
+    parser.add_argument(
+        "--metrics-only",
+        action="store_true",
+        help="Skip inference (no API calls) and only recompute metrics from "
+             "already-saved outputs.",
     )
     return parser.parse_args()
 
@@ -354,6 +392,11 @@ if __name__ == "__main__":
 
     OUTPUT_DIR = HERE / f"groq_outputs_{json_type}"
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Metrics-only mode: no clients, no inference, no API calls.
+    if args.metrics_only:
+        compute_and_save_metrics(OUTPUT_DIR)
+        raise SystemExit(0)
 
     TIMINGS_CSV = OUTPUT_DIR / "timings.csv"
     _csv_is_new = not TIMINGS_CSV.exists()
@@ -382,7 +425,6 @@ if __name__ == "__main__":
     print(f"{C}Loaded {W}{len(clients)}{C} Groq API key(s).  "
           f"Model: {W}{MODEL_ID}{C}  |  Output: {W}{OUTPUT_DIR.name}")
 
-    gt     = load_ground_truth(COHORT_XLSX)
     id_map = load_id_map(COHORT_XLSX)
 
     subjects = sorted(d.name for d in JSONS_DIR.iterdir() if d.is_dir())
@@ -559,23 +601,4 @@ if __name__ == "__main__":
     print(f"{C}Timings saved{Style.RESET_ALL} → {TIMINGS_CSV}")
 
     # --- Metrics -----------------------------------------------------------------
-    print(f"\n{DIVIDER}")
-    print(f"{C}Collecting predictions for metric computation...{Style.RESET_ALL}")
-    predictions: dict = {}
-    for out_file in sorted(OUTPUT_DIR.glob("*_classification_gpt_oss_120b.json")):
-        result = json.load(open(out_file))
-        sid = result.get("subject_id",
-                         out_file.stem.replace("_classification_gpt_oss_120b", ""))
-        predictions[sid] = {
-            "idh":        result.get("idh", {}).get("prediction"),
-            "codeletion": result.get("one_p_nineteen_q", {}).get("prediction"),
-            "grade":      result.get("who_grade", {}).get("prediction"),
-        }
-
-    metrics = compute_metrics(predictions, gt)
-    print_metrics(metrics)
-
-    metrics_path = OUTPUT_DIR / "metrics.json"
-    with open(metrics_path, "w") as f:
-        json.dump(metrics, f, indent=2)
-    print(f"{G}Metrics saved{Style.RESET_ALL} → {metrics_path}")
+    compute_and_save_metrics(OUTPUT_DIR)

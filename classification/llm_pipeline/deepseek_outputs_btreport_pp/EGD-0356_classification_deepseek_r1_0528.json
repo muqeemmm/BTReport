@@ -1,0 +1,48 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 50 years old, which is typical for IDH-mutant gliomas. The tumor involves eloquent areas (Speech motor and Motor) and shows ependymal invasion, both more common in IDH-mutant tumors. The T2-FLAIR mismatch is absent (T2-FLAIR Mismatch Present = 0.0), which strongly supports IDH-mutant status. However, the T2-FLAIR Mismatch Score is 0.60, which is above 0.5, slightly contradicting the absence of mismatch.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement",
+      "Ependymal (ventricular) Invasion",
+      "T2-FLAIR Mismatch Present"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves cortex and deep white matter, which is atypical for oligodendrogliomas (1p/19q codeleted). Oligodendrogliomas often have frontal lobe predominance, which is present here, but cortical involvement and deep WM invasion are more characteristic of astrocytomas. The enhancement is mild, which can occur in both, but the absence of calcifications (not assessed) and the presence of ependymal invasion favor astrocytoma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The absence of T2-FLAIR mismatch is a strong indicator for IDH-mutant status, though the mismatch score is moderately high. The cortical and deep white matter involvement, along with ependymal invasion, suggest astrocytic lineage. The grade is assigned as 4 due to necrosis proportion >10% and eloquent involvement.",
+  "subject_id": "EGD-0356",
+  "who_grade": {
+    "confidence": 0.9,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The proportion of necrosis is 53.45%, which exceeds the 10% threshold for grade 4. There is eloquent brain involvement (Speech motor and Motor), which is a criterion for grade 4. Enhancement is mild, which is atypical for grade 4 glioblastomas that usually show ring enhancement, but the presence of necrosis and eloquent involvement override this.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

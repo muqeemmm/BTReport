@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (26 years) and the tumor's characteristics (non-enhancing, located in the frontal lobe, involving the cortex, and having a high proportion of edema) are suggestive of an IDH-mutant glioma. The absence of enhancement and necrosis also points towards a lower-grade glioma, which is more commonly associated with IDH mutations. The T2-FLAIR mismatch score is 0.4, which is not strongly indicative of an IDH-mutant astrocytoma (typically associated with a higher T2-FLAIR mismatch score). However, the overall clinical and radiological profile leans towards an IDH-mutant tumor.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in the frontal lobe and involves the cortex, which is consistent with both codeleted and non-codeleted tumors. However, the lack of enhancement and the presence of a solitary, non-multifocal lesion are more typical of IDH-mutant gliomas, which can be either codeleted (1p/19q co-deleted) or non-codeleted. The absence of specific features strongly indicative of 1p/19q co-deletion (such as a characteristic ' Swiss cheese' appearance on MRI, which is not directly assessable from the given metadata) makes it challenging to predict codeletion status directly. Given the IDH mutation status is predicted as 'mutant', and considering the tumor's characteristics, a codeletion status of 'non-codeleted' is more likely due to the lack of specific indicators for codeletion.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Multifocal or Multicentric",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has a relatively small volume (6.391 mL), and lacks necrosis or significant mass effect (e.g., no midline shift, no ependymal invasion). These features are more typical of lower-grade gliomas. Given the predicted IDH mutation status is 'mutant' and the codeletion status is 'non-codeleted', the tumor is likely an IDH-mutant astrocytoma. The absence of high-grade features such as significant enhancement, necrosis, or large size suggests a lower grade. Between grade 2 and 3, the lack of significant mass effect and the absence of necrosis or enhancement favor a grade 2 classification.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.75
+  },
+  "subject_id": "UCSF-PDGM-240"
+}

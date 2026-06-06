@@ -1,0 +1,50 @@
+{
+  "id": "patient_0066",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (51 years) and the presence of a large, non-enhancing tumor with significant necrosis (Proportion Necrosis: 54.98%) and edema (Proportion of Oedema: 45.02%) are more typical of IDH wildtype glioblastoma. The absence of enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) is also consistent with this, as IDH wildtype glioblastomas often show minimal or no enhancement despite their aggressive nature. The tumor's involvement of deep structures and ependymal invasion further supports an aggressive tumor type, aligning with IDH wildtype characteristics.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Proportion Enhancing",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The absence of enhancement and the presence of a large necrotic tumor are not typical for 1p/19q codeleted oligodendrogliomas, which are more likely to show some degree of enhancement and have a more favorable prognosis. The tumor's aggressive features (high necrosis proportion, significant edema, and ependymal invasion) are more characteristic of astrocytic or glioblastoma lineage tumors, which are typically non-codeleted. Thus, the evidence points towards a non-codeleted status.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Proportion Enhancing",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Cortical involvement"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.75
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of a large tumor with significant necrosis (54.98%), substantial edema, and ependymal invasion indicates a high-grade tumor. The absence of enhancement is not uncommon in glioblastomas, particularly if they are IDH wildtype. The tumor's aggressive features, such as its size, necrosis, and invasion into deep structures, are characteristic of WHO grade 4 tumors. The patient's age and the tumor's overall appearance on MRI further support this grading.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "age_years",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.85
+    }
+  ],
+  "subject_id": "BraTS2021_01483"
+}

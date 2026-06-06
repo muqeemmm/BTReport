@@ -1,0 +1,45 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (64 years) and the presence of a large, enhancing, and necrotic tumor with significant mass effect (midline shift of 14mm, 'midline_shift_present': 'Yes') and ependymal invasion are more typical of glioblastoma, IDH-wildtype. The T2-FLAIR mismatch score is 0.941, which is typically associated with IDH-mutant astrocytomas, but given the other aggressive features, this seems less likely. However, the presence of necrosis (Proportion Necrosis: 14.42%) and marked enhancement are more characteristic of glioblastoma. The T2-FLAIR mismatch is a strong indicator for IDH-mutant astrocytoma, but its presence in this case with other contradicting features (e.g., age, necrosis, significant enhancement) makes the prediction uncertain.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score",
+      "n_slices_with_shift",
+      "max_shift_mm",
+      "Proportion Necrosis"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a high T2-FLAIR mismatch score (0.941) is typically associated with IDH-mutant astrocytomas, which are usually non-codeleted. The tumor's aggressive features (large size, necrosis, significant enhancement, and ependymal invasion) are not typical for 1p/19q codeleted tumors (oligodendrogliomas), which tend to have a more indolent course. Thus, the likelihood of codeletion is low given these characteristics.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 14.42%), marked enhancement, large size, and ependymal invasion. These characteristics are most consistent with a high-grade glioma. The presence of necrosis is particularly indicative of glioblastoma, WHO grade 4. While the T2-FLAIR mismatch suggests an IDH-mutant astrocytoma, which could be grade 2 or 3, the overall aggressive imaging features point towards a higher grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "UCSF-PDGM-303"
+}

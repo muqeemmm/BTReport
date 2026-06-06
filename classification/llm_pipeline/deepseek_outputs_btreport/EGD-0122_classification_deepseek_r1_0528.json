@@ -1,0 +1,39 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 40 years old, which is younger than the typical age for IDH-wildtype glioblastoma. IDH-mutant gliomas are more common in younger adults. However, no specific molecular markers are available to confirm IDH status.",
+    "supporting_features": [
+      "age_years"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent brain regions (Speech motor), which is more common in astrocytomas (non-codeleted) than oligodendrogliomas (codeleted). However, frontal lobe location is common in both, and no definitive features distinguish codeletion status without molecular testing.",
+    "supporting_features": [
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. However, confidence is low due to lack of molecular markers and limited imaging features. The grade is predicted as 4 due to necrosis proportion >10%, but enhancement is mild which is atypical for grade 4.",
+  "subject_id": "EGD-0122",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The proportion of necrosis is 42.43%, which exceeds the 10% threshold for grade 4 glioma. However, enhancement is mild, which is more typical of lower grades. Necrosis is a strong indicator of grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis"
+    ]
+  }
+}

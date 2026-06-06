@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (29 years old), which is more common in IDH-mutant gliomas. The tumor is nonenhancing (Enhancement Quality: None) and located in the temporal lobe (Tumor Location: temporal-cortex region), both features associated with IDH-mutant tumors. However, the age is not extremely young, which slightly reduces confidence.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Diffuse astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves the cortex (Cortical involvement: Present) and temporal lobe, which are more typical for astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often involve frontal lobes and white matter, but here deep white matter invasion is absent (Deep WM invasion: Absent). However, the absence of frontal lobe involvement is not definitive.",
+    "supporting_features": [
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the glioma is likely IDH-mutant and non-codeleted, suggesting diffuse astrocytoma. Confidence is moderate due to limited molecular markers and absence of enhancement.",
+  "subject_id": "UCSF-PDGM-261",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor is nonenhancing (Enhancement Quality: None) and lacks necrosis (Proportion Necrosis: 0.0), which are features of lower-grade gliomas (WHO grade 2). The absence of enhancement argues against grade 4. However, the tumor volume is substantial (Total tumor volume: 20.418 mL), which can be seen in grade 3 tumors, but without enhancement or necrosis, grade 2 is more likely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ]
+  }
+}

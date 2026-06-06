@@ -1,0 +1,46 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 43 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor is nonenhancing ('Enhancement Quality': 'None'), which is more common in IDH-mutant gliomas. However, the presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0) argues against IDH-mutant astrocytoma, as mismatch is characteristic of IDH-mutant tumors. This creates conflicting evidence.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent areas ('Eloquent Brain Involvement': 'Speech motor and Motor') and has cortical involvement ('Cortical involvement': 'Present'), which are more typical of astrocytomas (non-codeleted) than oligodendrogliomas. Oligodendrogliomas often occur in frontal lobes but typically spare eloquent cortex. The frontal location ('Tumor Location': 'frontal_lobe-cortex region') could support oligodendroglioma, but the eloquent involvement contradicts it.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "Confidence scores reflect conflicting evidence: IDH mutation supported by age and nonenhancement but contradicted by T2-FLAIR mismatch; 1p/19q non-codeletion supported by eloquent/cortical involvement but location is ambiguous. Grade 4 assigned due to ependymal invasion and edema volume.",
+  "subject_id": "UCSF-PDGM-469",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows ependymal invasion ('Ependymal (ventricular) Invasion': 'Present'), which is a feature of CNS WHO grade 4 gliomas. There is no necrosis ('Proportion Necrosis': 0.0) or enhancement ('Enhancement Quality': 'None'), which are typical of grade 4 tumors, but the presence of significant edema ('ED Volume (mL)': 184.86) and midline shift support high-grade features.",
+    "supporting_features": [
+      "Ependymal (ventricular) Invasion",
+      "ED Volume (mL)",
+      "midline_shift_present"
+    ]
+  }
+}

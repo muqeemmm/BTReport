@@ -1,0 +1,45 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 1.0, T2-FLAIR Mismatch Score: 0.7494692731344645) is highly suggestive of an IDH mutant glioma. This feature is strongly associated with IDH mutation status in adult-type diffuse gliomas. The patient's age (50 years) and the tumor's location and characteristics (e.g., involvement of temporal lobe, cortex, and ventricles) are also consistent with the profile of IDH mutant gliomas, although these are not as specific as the T2-FLAIR mismatch. The tumor's mild enhancement and presence of ependymal invasion are also noted, but the key determining factor here is the T2-FLAIR mismatch.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years",
+      "Tumor Location",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of IDH mutation (inferred from T2-FLAIR mismatch) increases the likelihood of 1p/19q codeletion, as IDH mutant gliomas can be further classified into 1p/19q codeleted and non-codeleted types. However, the direct evidence for 1p/19q codeletion status is not available in the provided MRI metadata. The tumor's location and characteristics (e.g., involvement of temporal lobe, cortex) might be more typical of 1p/19q non-codeleted tumors, given that codeleted tumors often involve the frontal lobe. The absence of features strongly indicative of codeletion (like specific frontal lobe involvement) and the presence of features like ependymal invasion and deep white matter invasion might lean towards a non-codeleted status.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Tumor Location",
+      "Cortical involvement",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor shows significant necrosis (Proportion Necrosis: 15.24%) and has a large edema volume (ED Volume: 108.372 mL), which are indicators of a higher grade glioma. The presence of ependymal invasion and deep white matter invasion also suggests aggressive tumor behavior. While the enhancement is mild, the presence of necrosis and significant edema are more aligned with WHO grade 4 gliomas. The tumor's size and involvement of multiple structures also support a higher grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "Lesion Sizes APxTVxCC (cm)"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0133"
+}

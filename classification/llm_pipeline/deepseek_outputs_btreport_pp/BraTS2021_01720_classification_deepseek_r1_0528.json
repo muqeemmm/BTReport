@@ -1,0 +1,50 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 31 years old, which is young for glioblastoma and more typical for IDH-mutant gliomas. The tumor is solitary, located in the temporal-cortex region, with mild enhancement and low proportion of enhancement (8%). The T2-FLAIR mismatch score is 0.52, which is not high enough to strongly suggest IDH-mutant astrocytoma, but the absence of deep white matter invasion and ependymal invasion also supports a less aggressive tumor. However, the proportion of necrosis is high (21.98%), which is more typical of IDH-wildtype tumors. Overall, the young age and mild enhancement suggest IDH-mutant, but the necrosis raises doubt.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "T2-FLAIR Mismatch Score",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region, which is more typical for astrocytomas than oligodendrogliomas. Oligodendrogliomas often involve frontal lobes and show more calcifications (not assessed here). The tumor has cortical involvement and no deep white matter invasion, which could be seen in both, but the location leans towards astrocytoma. The absence of strong enhancement and low ET volume also do not strongly argue for oligodendroglioma. However, without specific features like calcifications, the evidence is indirect.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor is IDH-mutant astrocytoma with high-grade features including necrosis, suggesting CNS WHO grade 4. However, confidence is moderate due to conflicting features.",
+  "subject_id": "BraTS2021_01720",
+  "who_grade": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis 21.98%), which is a hallmark of glioblastoma (CNS WHO grade 4). The enhancement is mild, but the presence of necrosis overrides this. The tumor volume is large (41.899 mL), and there is minimal midline shift. The young age (31) is atypical for grade 4, but the necrosis is a strong indicator. The T2-FLAIR mismatch is not present (score 0.52), which would have suggested lower grade for IDH-mutant tumors.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "midline_shift_present",
+      "T2-FLAIR Mismatch Present"
+    ]
+  }
+}

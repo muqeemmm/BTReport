@@ -1,0 +1,53 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 41 years old, which is younger than typical for IDH-wildtype glioblastoma. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0), which is more common in IDH-mutant astrocytomas. However, the T2-FLAIR Mismatch Score is low (0.4) and the mismatch degree is moderate (0.42), which reduces confidence. Enhancement is mild and proportion enhancing is low (0.36), which is more typical of IDH-mutant tumors. The tumor location involves frontal lobe and cortex, which are common for IDH-mutant gliomas. Deep white matter invasion and ependymal invasion are present, which can occur in both mutant and wildtype.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex (Motor) and has deep white matter invasion, which is more typical of astrocytomas (non-codeleted) than oligodendrogliomas. The location includes frontal lobe, which is common for oligodendrogliomas, but the multifocal nature and ependymal invasion argue against oligodendroglioma. The proportion of edema is very high (99.45%), which is unusual for oligodendrogliomas. However, the absence of calcifications (not assessed) and the mild enhancement pattern could be consistent with either.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Proportion of Oedema"
+    ]
+  },
+  "overall_comment": "The tumor shows features suggestive of IDH-mutant astrocytoma with non-codeleted 1p/19q status. However, the high proportion of edema and multifocality introduce uncertainty. The grade is assigned as 4 based on necrosis presence and ependymal invasion.",
+  "subject_id": "EGD-0426",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "Necrosis is present (Proportion Necrosis = 0.19), which is a criterion for CNS WHO grade 4 in IDH-mutant astrocytomas. Ependymal invasion is present, which is an additional feature of high-grade tumors. The enhancement is mild, but necrosis overrides this. The tumor volume is large (99.961 mL) and multifocal, supporting high grade. However, the proportion of necrosis is relatively low (19%), which slightly reduces confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Total tumor volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 44 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor is nonenhancing (Enhancement Quality: None) and has no necrosis (Proportion Necrosis: 0.0), which is more common in IDH-mutant gliomas. However, the proportion of edema is 100% and the total tumor volume is 33.615 mL, which is large and could suggest a more aggressive tumor. The absence of enhancement and necrosis supports IDH-mutant, but the large edema volume and midline location introduce uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex (Speech motor) and is located in cortex, insula, frontal lobe, and temporal lobes, which are typical for astrocytomas rather than oligodendrogliomas. Oligodendrogliomas often involve frontal lobes but are less likely to involve multiple lobes and eloquent areas. However, the absence of deep white matter invasion (Deep WM invasion: Absent) is atypical for astrocytomas, introducing some uncertainty.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "The tumor is nonenhancing with no necrosis, suggesting a lower-grade glioma, but the large edema volume and midline location are concerning. The involvement of eloquent cortex and multiple lobes supports astrocytoma over oligodendroglioma. Grade 4 is assigned due to the large edema volume and midline location, though definitive features of grade 4 (necrosis or enhancement) are absent.",
+  "subject_id": "UCSF-PDGM-250",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor has no enhancement (Enhancement Quality: None) and no necrosis (Proportion Necrosis: 0.0), which are features of lower-grade gliomas (grade 2 or 3). However, the large edema volume (33.615 mL) and midline shift (minimal but present) suggest mass effect and possible higher grade. The midline location and involvement of eloquent cortex also increase the grade. The absence of necrosis or enhancement argues against grade 4, but the edema volume and midline shift support it.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "Eloquent Brain Involvement",
+      "Side of Tumor Epicenter"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "subject_id": "BraTS2021_00432",
+  "idh": {
+    "reasoning": "The patient is 60 years old. Older age (>55) is associated with IDH-wildtype gliomas, while younger age is associated with IDH-mutant gliomas. The tumor is multifocal and involves deep white matter and ependymal invasion, which can be seen in both IDH-mutant and IDH-wildtype tumors, but deep WM invasion is more common in IDH-wildtype. The tumor volume (175.681 mL) is relatively large, which also favors IDH-wildtype. The proportion of edema (98.23%) is very high, which can be seen in both but might slightly favor IDH-wildtype due to more aggressive infiltration. The enhancement quality is mild, which doesn't strongly favor either subtype. Given the age and tumor characteristics (multifocal, deep WM invasion, large volume), IDH-wildtype is more likely.",
+    "supporting_features": [
+      "age_years",
+      "Deep WM invasion",
+      "Total tumor volume (mL)",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.75
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "1p/19q co-deletion is typically found in IDH-mutant oligodendrogliomas (WHO grade 2 or 3). Since the prediction for IDH status is wildtype, the likelihood of 1p/19q co-deletion is extremely low, as this alteration is mutually exclusive with IDH-wildtype status according to WHO CNS5 criteria.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.99
+  },
+  "who_grade": {
+    "reasoning": "The patient's age (60) and predicted IDH-wildtype status strongly suggest a higher grade glioma. The tumor exhibits deep white matter invasion and ependymal invasion, features often associated with higher grades (Grade 3 or 4). The presence of cortical involvement and eloquent brain involvement also points towards a significant tumor burden. While the enhancement quality is described as mild, the overall infiltrative nature (deep WM, ependymal) and large size (175.681 mL) are characteristic of high-grade gliomas. Given the predicted IDH-wildtype status and infiltrative features like deep WM and ependymal invasion, a WHO Grade 4 diagnosis (glioblastoma) is the most probable outcome.",
+    "supporting_features": [
+      "age_years",
+      "idh",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "Total tumor volume (mL)",
+      "Cortical involvement"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "integrated_diagnosis": "IDH wildtype diffuse astrocytoma, WHO grade IV",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient's age (>55 years), multifocal presentation, deep white matter invasion, ependymal invasion, large tumor volume (>10 cm^3), and high proportion of edema are all features strongly suggestive of an IDH wildtype glioma. Given these characteristics, particularly the infiltrative nature into deep white matter and ependyma along with the large size in an older patient with predicted IDH wildtype status, a WHO Grade IV diagnosis (glioblastoma) is the most likely classification."
+}

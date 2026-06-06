@@ -1,0 +1,52 @@
+{
+  "id": "patient_0054",
+  "predictions": [
+    {
+      "type": "IDH Mutation Status",
+      "reasoning": "The patient is relatively young (37 years) with a non-enhancing glioma located in the frontal lobe involving the cortex. The absence of enhancement and the presence of cortical involvement are features more commonly associated with IDH-mutant gliomas. The tumor is described as solitary and non-enhancing, which aligns with the typical presentation of IDH-mutant gliomas, particularly those that are 1p/19q non-codeleted. While the age and some features are supportive, the lack of specific molecular markers or perfusion data means the assessment relies on morphological and demographic features.",
+      "supporting_features": [
+        "age_years",
+        "Cortical involvement",
+        "Enhancement Quality",
+        "Tumor Location"
+      ],
+      "contradicting_features": [],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q Co-deletion Status",
+      "reasoning": "Given the tumor's location in the frontal lobe, involvement of the cortex, and the absence of enhancement, these features are more typical of IDH-mutant gliomas. The presence of cortical involvement and frontal lobe location could suggest a higher likelihood of 1p/19q codeletion, as oligodendrogliomas (which are typically 1p/19q codeleted) often present in the frontal lobe. However, the absence of calcifications (not directly assessable but often associated with oligodendrogliomas) and the lack of specific enhancement patterns make this less certain. The overall morphology and location suggest a possible codeletion but with less confidence.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Region Proportions"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": "codeleted",
+      "confidence": 0.6
+    },
+    {
+      "type": "CNS WHO Grade",
+      "reasoning": "The tumor is non-enhancing, has a significant edema volume, and involves the cortex, suggesting a diffuse glioma. The absence of necrosis and enhancement typically points towards a lower grade. However, the presence of significant edema and the fact that it crosses the midline could indicate a more aggressive tumor, potentially grade 3. The lack of necrosis and enhancement argues against a grade 4 tumor. Overall, the features suggest a grade 2 or 3 tumor, with grade 2 being more likely due to the absence of enhancement and necrosis.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "NCR Volume (mL)",
+        "ED Volume (mL)",
+        "Edema crosses midline"
+      ],
+      "contradicting_features": [
+        "n_slices_with_shift",
+        "mean_shift_mm",
+        "median_shift_mm",
+        "max_shift_mm",
+        "p95_shift_mm"
+      ],
+      "prediction": 2,
+      "confidence": 0.7
+    }
+  ],
+  "subject_id": "UCSF-PDGM-478"
+}

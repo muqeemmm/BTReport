@@ -1,0 +1,45 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (59 years) and the presence of a large, enhancing, necrotic tumor with significant mass effect (midline shift of 2mm, 'Minimal' as per report) in the left temporal lobe involving the cortex and insula are more typical of glioblastoma, IDH-wildtype. The 'Marked' enhancement quality, presence of necrosis (Proportion Necrosis: 37.49%), and the large size of the tumor (Total tumor volume: 62.823 mL) further support this. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Score: 0.4, Degree: 0.5463333108075217) also argues against IDH-mutant astrocytoma, which often shows this feature. While the presence of cortical involvement and deep white matter invasion could be seen in various glioma subtypes, the overall profile leans towards a more aggressive, IDH-wildtype glioblastoma.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, necrotic, and enhancing tumor with significant cortical involvement and deep white matter invasion, along with the absence of T2-FLAIR mismatch, is not typical for 1p/19q codeleted oligodendrogliomas. The tumor's aggressive features (large size, necrosis, marked enhancement) are more characteristic of glioblastoma or astrocytoma. The IDH-wildtype status predicted earlier further reduces the likelihood of codeletion, as codeletion is more commonly associated with IDH-mutant oligodendrogliomas.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.9
+  },
+  "grade": {
+    "reasoning": "The tumor exhibits aggressive features such as large size (Total tumor volume: 62.823 mL), marked enhancement, significant necrosis (Proportion Necrosis: 37.49%), and a substantial mass effect (midline shift present). These characteristics are typical of a high-grade glioma. Given the predicted IDH-wildtype status and non-codeleted status, the most likely diagnosis is glioblastoma, WHO grade 4.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "mean_shift_mm"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00306"
+}

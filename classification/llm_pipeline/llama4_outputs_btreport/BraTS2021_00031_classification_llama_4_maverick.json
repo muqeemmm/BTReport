@@ -1,0 +1,55 @@
+{
+  "id": "patient_0319",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (56 years) and the presence of a large, enhancing tumor with significant edema and mass effect (midline shift, ventricular asymmetry) are more typical of IDH-wildtype glioblastoma. The tumor's location in the frontal lobe with involvement of deep structures and the presence of ependymal invasion also support this, as IDH-wildtype glioblastomas are more likely to be aggressive and involve multiple brain regions. While the enhancement quality is described as 'Mild', the presence of enhancement and necrosis is still indicative of a high-grade tumor, which is more commonly IDH-wildtype in this age group.",
+      "supporting_features": [
+        "age_years",
+        "ED Volume (mL)",
+        "ET Volume (mL)",
+        "Edema crosses midline",
+        "Ependymal (ventricular) Invasion",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Proportion Enhancing"
+      ],
+      "prediction": "wildtype",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor's imaging characteristics, such as its location and aggressive features (large size, significant edema, ependymal invasion), are not typical for 1p/19q co-deleted tumors, which are more commonly associated with oligodendrogliomas that tend to be more frontal, have calcifications (not assessed here), and show a more indolent course. The presence of significant necrosis and enhancement suggests a higher grade tumor, more likely to be an astrocytoma or glioblastoma, which are typically non-codeleted. Thus, based on the aggressive features and the absence of characteristics typical for oligodendroglioma, the tumor is likely non-codeleted.",
+      "supporting_features": [
+        "Tumor Location",
+        "ED Volume (mL)",
+        "NCR Volume (mL)",
+        "Ependymal (ventricular) Invasion",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Region Proportions"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.75
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The presence of significant necrosis (NCR Volume = 5.03 mL, Proportion Necrosis = 2.37%), enhancement (ET Volume = 12.695 mL, Proportion Enhancing = 5.97%), and substantial edema (ED Volume = 194.938 mL, Proportion of Oedema = 91.67%) along with mass effect (midline shift, ventricular asymmetry) are characteristic of a high-grade glioma. The patient's age and the tumor's aggressive imaging features are most consistent with a WHO grade 4 tumor, typically glioblastoma, IDH-wildtype. The presence of ependymal invasion further supports a high-grade diagnosis.",
+      "supporting_features": [
+        "NCR Volume (mL)",
+        "ET Volume (mL)",
+        "ED Volume (mL)",
+        "Proportion Necrosis",
+        "Proportion Enhancing",
+        "Ependymal (ventricular) Invasion",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_00031"
+}

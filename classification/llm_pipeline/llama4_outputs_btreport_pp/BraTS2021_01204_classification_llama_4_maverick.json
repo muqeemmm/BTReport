@@ -1,0 +1,39 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.8461434934974328, indicating a strong presence of this feature. This is a key indicator for IDH mutant status in gliomas according to the WHO CNS5 classification.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular or histopathological information. However, the presence of IDH mutation (predicted with high confidence) is often associated with 1p/19q co-deletion in oligodendrogliomas. Yet, the absence of specific MRI features directly indicative of 1p/19q co-deletion (like calcifications, which are not assessed here) makes this prediction uncertain. Given the tumor's characteristics, such as cortical involvement and heterogeneous enhancement, which are more typical of oligodendrogliomas that are often IDH-mutant and 1p/19q co-deleted, we lean towards non-codeleted due to the lack of definitive evidence for co-deletion.",
+    "supporting_features": [
+      "Cortical involvement",
+      "T2-FLAIR Mismatch Present"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor shows significant edema (ED Volume: 26.076 mL) and a relatively large enhancing component (ET Volume: 2.993 mL), with a 'Thickness of enhancing margin' >3mm. These features, along with the presence of deep white matter invasion and the absence of ependymal invasion, suggest an aggressive tumor. The presence of necrosis (Proportion Necrosis: 2.46%) and the overall tumor volume (Total tumor volume: 29.802 mL) also support a higher grade. Given the IDH mutant status predicted, these features are consistent with a WHO grade 3 or 4 tumor. However, the relatively low proportion of necrosis and the absence of very high-grade features like significant midline shift or multifocality lean towards a grade 3.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "Thickness of enhancing margin",
+      "Deep WM invasion",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)"
+    ],
+    "contradicting_features": [
+      "midline_shift_present"
+    ],
+    "prediction": 3,
+    "confidence": 0.8
+  },
+  "subject_id": "BraTS2021_01204"
+}

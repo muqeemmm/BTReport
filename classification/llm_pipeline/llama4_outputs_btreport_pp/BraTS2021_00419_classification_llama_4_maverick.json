@@ -1,0 +1,47 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (45 years) and the tumor's characteristics (e.g., location in the temporal cortex, mild enhancement, absence of ependymal invasion) are considered. The T2-FLAIR mismatch score is 0.4, which is below the threshold typically associated with IDH mutant astrocytomas. The presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 10.19%) and the tumor's location and characteristics are more suggestive of a higher-grade glioma. IDH wildtype gliomas are more common in older patients and can present with more aggressive features. While not definitive, these features collectively lean towards an IDH wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "T2-FLAIR Mismatch Score",
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The absence of a clear T2-FLAIR mismatch and the presence of necrosis (Proportion Necrosis: 10.19%) argue against an IDH mutant, 1p/19q codeleted tumor, which typically shows a T2-FLAIR mismatch. The tumor's enhancement and necrosis are more characteristic of higher-grade gliomas. 1p/19q codeletion is more commonly associated with oligodendrogliomas, which tend to have a more favorable prognosis and distinct molecular features. The provided metadata does not strongly support the presence of a codeletion.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "T2-FLAIR Mismatch Score",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 10.19%), mild enhancement (Enhancement Quality: Mild), and a significant proportion of edema (Proportion of Oedema: 75.94%) are indicative of a high-grade glioma. The tumor's volume and the presence of necrosis are particularly suggestive of a WHO grade 4 tumor. The absence of features typical for lower-grade gliomas (e.g., lack of T2-FLAIR mismatch) further supports this assessment.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Enhancement Quality",
+      "ED Volume (mL)"
+    ],
+    "contradicting_features": [
+      "whole_tumor_sphericity",
+      "Tumor Core Volume (mL)"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_00419"
+}

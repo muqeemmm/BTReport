@@ -1,0 +1,41 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (53 years) and the presence of a mildly enhancing tumor with necrosis (Proportion Necrosis: 40.52%) and a relatively large tumor volume (Total tumor volume: 25.293 mL) are more typical of IDH wildtype gliomas, which are more common in older adults and often present with more aggressive features. The absence of ependymal invasion and deep white matter invasion might be seen in either IDH mutant or wildtype tumors, but the overall profile leans towards IDH wildtype due to the age and enhancement characteristics.",
+    "supporting_features": [
+      "age_years",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of cortical involvement and the tumor being located in the frontal lobe-cortex region are features that can be seen in both codeleted and non-codeleted tumors. However, IDH mutant tumors with 1p/19q codeletion often have more distinct characteristics such as being more commonly found in the frontal lobe. Given the prediction of IDH wildtype status, the likelihood of 1p/19q codeletion is low because codeletion is typically associated with IDH mutant tumors. Thus, the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 40.52%), mild enhancement, and a significant tumor volume (Total tumor volume: 25.293 mL) are indicative of a high-grade glioma. The predicted IDH wildtype status further supports a high-grade classification, as IDH wildtype glioblastomas are typically grade 4. The absence of features like ependymal invasion does not detract from this, as not all high-grade gliomas invade the ependyma.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Enhancement Quality",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01500"
+}

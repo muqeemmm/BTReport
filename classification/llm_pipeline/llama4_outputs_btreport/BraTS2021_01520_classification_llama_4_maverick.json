@@ -1,0 +1,45 @@
+{
+  "id": "patient_0088",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is relatively young (27 years) with a glioma in the frontal lobe, which is a common location for IDH-mutant gliomas. The tumor is described as mildly enhancing and solitary, with no ependymal invasion or deep white matter invasion. These features are consistent with IDH-mutant gliomas, which are more likely to occur in younger patients and have a better prognosis. The presence of cortical involvement also supports this prediction, as IDH-mutant gliomas often involve the cortex.",
+      "supporting_features": [
+        "age_years",
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the frontal lobe and involves the cortex, which is consistent with oligodendroglioma, a type of glioma that is often associated with 1p/19q co-deletion. The presence of mild enhancement and the absence of deep white matter invasion or ependymal invasion also support this prediction. However, the absence of calcification information (not available in the metadata) is a limitation, as calcifications are more common in 1p/19q co-deleted tumors.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor has a significant necrotic component (Proportion Necrosis: 65.57%) and a mild enhancement quality, which suggests a high-grade tumor. The presence of necrosis is more commonly associated with glioblastoma (WHO grade 4). However, the patient's age and the tumor's characteristics (e.g., frontal lobe location, cortical involvement) are more typical of lower-grade gliomas. The presence of a significant necrotic component outweighs these factors, suggesting a higher grade.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Enhancement Quality",
+        "age_years"
+      ],
+      "contradicting_features": [
+        "age_years"
+      ],
+      "prediction": 4,
+      "confidence": 0.75
+    }
+  ],
+  "subject_id": "BraTS2021_01520"
+}

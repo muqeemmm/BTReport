@@ -1,0 +1,52 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0), which is typically associated with IDH-wildtype gliomas. However, the tumor involves eloquent cortex (Eloquent Brain Involvement: Motor) and shows marked enhancement (Enhancement Quality: Marked), which are more common in IDH-wildtype tumors. The absence of deep white matter invasion (Deep WM invasion: Absent) and cortical involvement (Cortical involvement: Present) are atypical for IDH-mutant gliomas. The age (50 years) is intermediate and not strongly indicative. Overall, evidence leans toward wildtype but with uncertainty due to lack of definitive markers.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "Enhancement Quality",
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Cortical involvement",
+      "age_years"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.5,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Enhancement Quality"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex (Eloquent Brain Involvement: Motor) and shows marked enhancement (Enhancement Quality: Marked), which are uncommon in oligodendrogliomas (1p/19q codeleted). Oligodendrogliomas typically present with frontal lobe involvement and calcifications (not assessed here), but the absence of deep white matter invasion (Deep WM invasion: Absent) and cortical involvement (Cortical involvement: Present) are not typical. The frontal lobe location (Tumor Location: frontal_lobe) is common in oligodendrogliomas, but other features argue against it. Evidence is conflicting and insufficient for a confident prediction.",
+    "supporting_features": [
+      "Tumor Location",
+      "Deep WM invasion",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "The prediction for IDH status and 1p/19q status has low confidence due to conflicting features. The grade is predicted as 4 based on necrosis proportion and enhancement.",
+  "subject_id": "UCSF-PDGM-339",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis: 19.7%) and marked enhancement (Enhancement Quality: Marked), which are features of grade 4 glioblastoma. The proportion of necrosis exceeds 10%, which is a key criterion for glioblastoma. The tumor volume (Total tumor volume: 48.232 mL) is large, and there is eloquent involvement (Motor), supporting high grade. The absence of ependymal invasion (Ependymal (ventricular) Invasion: Absent) does not contradict grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement"
+    ]
+  }
+}

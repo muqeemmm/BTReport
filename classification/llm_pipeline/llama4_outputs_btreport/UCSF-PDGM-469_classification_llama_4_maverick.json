@@ -1,0 +1,53 @@
+{
+  "id": "patient_0049",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (43 years) and the absence of contrast enhancement ('Enhancement Quality': 'None', 'Proportion Enhancing': 0.0) are more commonly associated with IDH mutant gliomas. However, the presence of significant mass effect ('midline_shift_present': 'Yes', 'Edema crosses midline': 'True') and the large edema volume ('ED Volume (mL)': 184.86) could be seen in both IDH mutant and wildtype gliomas. The lack of enhancement is a strong indicator for IDH mutation, as IDH wildtype glioblastomas are typically enhancing. Therefore, based on the absence of enhancement and the patient's age, IDH mutation status is predicted to be 'mutant'.",
+      "supporting_features": [
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "age_years"
+      ],
+      "contradicting_features": [
+        "midline_shift_present",
+        "Edema crosses midline",
+        "ED Volume (mL)"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor involves the frontal lobe and cortex, and there's a significant edema volume without enhancement. IDH mutant gliomas can be either 1p/19q codeleted (oligodendrogliomas) or non-codeleted (astrocytomas). The presence of cortical involvement and frontal lobe location is more typical of 1p/19q codeleted tumors. However, the absence of calcifications (not directly assessable but often associated with oligodendrogliomas) and the lack of specific mention of other characteristic features like heterogeneous signal or cystic components make this prediction less certain. Given the frontal lobe involvement and cortical invasion, a codeleted status is predicted.",
+      "supporting_features": [
+        "Cortical involvement",
+        "Region Proportions",
+        "Tumor Location"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality",
+        "Proportion Enhancing"
+      ],
+      "prediction": "codeleted",
+      "confidence": 0.6
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor is non-enhancing ('Enhancement Quality': 'None'), has a large edema volume ('ED Volume (mL)': 184.86), and significant mass effect ('midline_shift_present': 'Yes'). These features can be seen in both lower and higher-grade gliomas. However, the absence of necrosis ('Proportion Necrosis': 0.0) and enhancement suggests a lower grade. Given the IDH mutation status is predicted to be 'mutant' and assuming a potential 1p/19q codeletion, the tumor could be an oligodendroglioma. The presence of significant edema and mass effect is somewhat atypical for grade 2, suggesting a grade 3 tumor is more likely due to its more aggressive nature.",
+      "supporting_features": [
+        "ED Volume (mL)",
+        "midline_shift_present",
+        "Edema crosses midline",
+        "Proportion Necrosis",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [
+        "Proportion Enhancing"
+      ],
+      "prediction": 3,
+      "confidence": 0.65
+    }
+  ],
+  "subject_id": "UCSF-PDGM-469"
+}

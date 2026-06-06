@@ -1,0 +1,49 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (25 years), which favors IDH-mutant glioma. The tumor shows mild enhancement, which is more common in IDH-mutant tumors. However, the T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present=0.0), which argues against IDH-mutant astrocytoma. The absence of deep white matter invasion and eloquent brain involvement also aligns with IDH-mutant tumors.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Eloquent Brain Involvement"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves cortical regions (Cortical involvement=Present) and is located in parietal, frontal_lobe, and cortex lobes, which is more typical of astrocytomas (non-codeleted). Oligodendrogliomas often involve frontal lobes but typically show more calcifications (not assessed) and may have different enhancement patterns. The absence of deep white matter invasion also leans toward astrocytoma.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "Deep WM invasion"
+    ]
+  },
+  "overall_comment": "The tumor characteristics suggest an IDH-mutant astrocytoma. The absence of T2-FLAIR mismatch is contradictory but not definitive. Confidence is moderate due to conflicting evidence.",
+  "subject_id": "BraTS2021_00163",
+  "who_grade": {
+    "confidence": 0.6,
+    "contradicting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor has low proportion of necrosis (21.4%) and mild enhancement, which are more consistent with grade 2 glioma. However, the presence of any enhancement and necrosis might suggest higher grade, but the volumes are small (ET Volume=0.032mL) and enhancement is mild. The WHO grade 4 typically shows more necrosis and robust enhancement.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "ET Volume (mL)"
+    ]
+  }
+}

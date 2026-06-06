@@ -1,0 +1,46 @@
+{
+  "id": "patient_0132",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is young (21 years) with a non-enhancing glioma located in the frontal lobe, involving the cortex. The tumor is solitary and does not show ependymal invasion or deep white matter invasion. The absence of enhancement and the presence of cortical involvement are features more commonly associated with IDH-mutant gliomas, particularly in younger patients. The tumor's characteristics and the patient's age support the likelihood of an IDH mutation.",
+      "supporting_features": [
+        "age_years",
+        "Cortical involvement",
+        "Enhancement Quality",
+        "Tumor Location"
+      ],
+      "contradicting_features": [],
+      "prediction": "mutant",
+      "confidence": 0.8
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "The tumor is located in the frontal lobe and involves the cortex, which is consistent with oligodendroglioma, a type of glioma often associated with 1p/19q co-deletion. The absence of enhancement and the presence of cortical involvement are also features that can be seen in 1p/19q co-deleted tumors. Given the likely IDH mutation status, the clinical and radiological profile leans towards a 1p/19q co-deleted tumor, although this is not definitive without molecular data.",
+      "supporting_features": [
+        "Tumor Location",
+        "Cortical involvement",
+        "Enhancement Quality"
+      ],
+      "contradicting_features": [],
+      "prediction": "codeleted",
+      "confidence": 0.7
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor has a significant necrotic component (Proportion Necrosis: 67.8%) and a substantial edema (Proportion of Oedema: 32.2%), indicating a high-grade tumor. The absence of enhancement is less typical for high-grade gliomas, but the presence of necrosis and significant mass effect (asymmetrical ventricles, effaced ventricle) supports a high-grade classification. Given the likely IDH-mutant status and the presence of necrosis, a grade 4 is plausible, although IDH-mutant gliomas with necrosis are typically classified as grade 4 astrocytomas if they lack 1p/19q co-deletion. The confidence is moderate due to the complex interplay between radiological features and molecular classification.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "Asymmetrical Ventricles",
+        "Effaced Ventricle"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.75
+    }
+  ],
+  "subject_id": "EGD-0160"
+}

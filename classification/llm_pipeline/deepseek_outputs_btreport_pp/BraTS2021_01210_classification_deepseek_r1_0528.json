@@ -1,0 +1,52 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 49 years old, which is younger than typical for IDH-wildtype glioblastoma. The tumor involves eloquent cortex (vision) and has cortical involvement, both more common in IDH-mutant tumors. Enhancement is mild and proportion enhancing is low (14.52%), which favors IDH-mutant. However, the age is borderline, enhancement is present though mild, and proportion enhancing is not extremely low.",
+    "supporting_features": [
+      "age_years",
+      "Eloquent Brain Involvement",
+      "Cortical involvement",
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Tumor Location"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves deep structures like thalamus and caudate, which is atypical for oligodendrogliomas. Deep white matter invasion is absent, which is more common in astrocytomas. The tumor location includes parietal and temporal lobes, which can occur in both types, but thalamic involvement argues against oligodendroglioma. However, cortical involvement is present, which is common in oligodendrogliomas.",
+    "supporting_features": [
+      "Anatomical Overlap Regions",
+      "Deep WM invasion",
+      "Cortical involvement"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is likely an IDH-mutant astrocytoma. The absence of deep white matter invasion and involvement of deep gray matter structures favor astrocytoma over oligodendroglioma. The mild enhancement and low proportion of enhancing tissue suggest a lower grade tumor. However, the thalamic involvement and midline epicenter are unusual for typical diffuse gliomas, creating some uncertainty.",
+  "subject_id": "BraTS2021_01210",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor shows mild enhancement and low proportion of necrosis (1.17%), which are features of lower grade gliomas. The proportion enhancing is 14.52%, below the typical threshold for grade 4. However, the tumor volume is substantial (44.579 mL) and there is some necrosis present, which could indicate higher grade. The transition zone thickness on FLAIR is thin (median 0.75mm), suggesting a more infiltrative pattern typical of grade 2.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Transition Zone Thickness (FLAIR).median_mm"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient is 37 years old, which is relatively young for a glioma patient. The tumor is non-enhancing, has a large edema volume (72.684 mL), and involves the parietal, cortex, and occipital lobes. The absence of enhancement and the presence of significant edema are more typical of IDH-mutant gliomas, which often present with non-enhancing features. However, the age and some features like deep white matter invasion could be seen in both IDH mutant and wildtype gliomas. Given the age and non-enhancing nature, IDH mutation is more likely.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "ED Volume (mL)",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor involves the cortex and has a significant proportion of edema, with cortical involvement noted. IDH-mutant gliomas with 1p/19q co-deletion (oligodendrogliomas) often involve the cortex. The tumor is non-enhancing, which is consistent with oligodendroglioma. However, the absence of calcification data (not available in the metadata) is a limitation, as calcifications are more common in oligodendrogliomas. Given the cortical involvement and the likely IDH mutation status, 1p/19q co-deletion is plausible.",
+    "supporting_features": [
+      "Cortical involvement",
+      "IDH mutation status prediction"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor is non-enhancing and has a large edema volume. The presence of significant edema and the involvement of multiple regions (parietal, cortex, and occipital lobes) could suggest a higher grade. However, the absence of enhancement typically points towards a lower grade. Given the likely IDH mutation status and the presence of significant edema and cortical involvement, a grade 3 is plausible, balancing between the aggressive features (edema, deep white matter invasion) and the lack of enhancement.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Cortical involvement",
+      "Deep WM invasion",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-242"
+}

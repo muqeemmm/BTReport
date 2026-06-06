@@ -1,0 +1,50 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is 60 years old, which is older than typical IDH-mutant gliomas that often present in younger adults. However, the tumor location in the frontal lobe cortex and midline epicenter are more common in IDH-mutant tumors. The mild enhancement and multifocal presentation also align with IDH-mutant characteristics. The absence of deep white matter invasion and ependymal involvement further supports IDH-mutant profile. Despite the older age, the frontal location and mild enhancement outweigh the age factor, leading to a prediction of IDH mutant with low confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Side of Tumor Epicenter",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "integrated_diagnosis": "IDH-mutant astrocytoma",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Side of Tumor Epicenter"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor epicenter is midline, which is atypical for oligodendrogliomas that are usually hemispheric. The frontal lobe location is common in both astrocytomas and oligodendrogliomas, but the midline epicenter strongly suggests astrocytic lineage. Additionally, the absence of calcifications (though not assessed) and the mild enhancement pattern are more consistent with astrocytoma. The multifocal nature does not strongly differentiate. Therefore, 1p/19q non-codeleted is predicted with moderate confidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Multifocal or Multicentric",
+      "Enhancement Quality"
+    ]
+  },
+  "overall_comment": "Based on the provided MRI metadata, the tumor is predicted to be IDH-mutant astrocytoma (non-codeleted) with WHO grade 3. Confidence is low for IDH status due to conflicting age evidence, moderate for codeletion status due to midline epicenter contradiction, and moderate for grade due to enhancement and volume.",
+  "subject_id": "BraTS2021_01737",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 3,
+    "reasoning": "The tumor shows mild enhancement, which is atypical for high-grade gliomas that usually exhibit strong enhancement. However, the presence of necrosis (Proportion Necrosis: 9.83%) and multifocal lesions suggest higher grade. The edema volume is large (89.93%), which can be seen in both grade 3 and 4 tumors. The transition zone thickness is thin (mean ~1mm), which is more characteristic of grade 4, but the mild enhancement argues against it. Given the necrosis and multifocality, grade 3 is predicted with moderate confidence.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Multifocal or Multicentric",
+      "Proportion of Oedema",
+      "Transition Zone Thickness (FLAIR)",
+      "Transition Zone Thickness (T1CE)"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (60 years) and the presence of a large, enhancing tumor with necrosis (NCR Volume = 22.461 mL, ET Volume = 77.791 mL) and significant edema (ED Volume = 180.461 mL) that crosses the midline are more typical of glioblastoma, IDH-wildtype. The tumor's aggressive features, such as ependymal invasion, deep white matter invasion, and significant mass effect (midline shift present), also support this interpretation. IDH-mutant gliomas are more commonly associated with younger patients and often have a more favorable prognosis.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a large, enhancing tumor with necrosis and significant edema, along with the patient's age and the tumor's aggressive features, is more typical of glioblastoma. 1p/19q co-deletion is more commonly associated with oligodendrogliomas, which are typically IDH-mutant and have a better prognosis. The tumor's characteristics here are not suggestive of oligodendroglioma.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Enhancement Quality",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "grade": {
+    "reasoning": "The tumor's aggressive features, including large size, necrosis, significant edema that crosses the midline, ependymal invasion, and marked enhancement, are characteristic of a high-grade glioma. The presence of necrosis and significant enhancement is particularly indicative of glioblastoma, WHO grade 4.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "ET Volume (mL)",
+      "NCR Volume (mL)",
+      "Edema crosses midline",
+      "Ependymal (ventricular) Invasion",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.95
+  },
+  "subject_id": "EGD-0366"
+}

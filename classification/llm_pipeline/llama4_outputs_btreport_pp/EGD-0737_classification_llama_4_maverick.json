@@ -1,0 +1,34 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.930649456356297, indicating a strong presence of this feature. This is a characteristic imaging feature associated with IDH-mutant gliomas. Therefore, the evidence strongly supports the presence of an IDH mutation.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p19q_codeletion_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are more likely to have 1p/19q co-deletion. The strong T2-FLAIR mismatch suggests that this tumor is likely an astrocytoma, making 'non-codeleted' more probable. Additionally, the absence of features typical for oligodendroglioma (e.g., calcifications, which are not available but can be inferred to be less likely given the overall profile) further supports this prediction.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS_WHO_grade": {
+    "reasoning": "The tumor shows significant necrosis (Proportion Necrosis: 33.16%) and has a mild enhancement quality with a thickness of enhancing margin >3mm. These features are typically associated with higher-grade gliomas. The presence of IDH mutation (predicted) usually correlates with lower grades (2 or 3) in adult-type diffuse gliomas. However, the significant necrosis and the presence of enhancement suggest a higher grade. Given the IDH mutant status, a grade of 4 is less likely unless it's a glioblastoma, IDH-mutant. The presence of necrosis and enhancement supports a higher grade, likely grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "subject_id": "EGD-0737"
+}

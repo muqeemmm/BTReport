@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (36 years) and the MRI characteristics of the tumor (non-enhancing, solitary, no ependymal invasion, no deep white matter invasion) are more commonly associated with IDH mutant gliomas. IDH mutant gliomas tend to occur in younger patients and often have a more favorable prognosis. The absence of enhancement and necrosis also aligns with a lower grade glioma, which is more likely to be IDH mutant.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "IDH mutant gliomas are more likely to have 1p/19q co-deletion if they are located in the frontal lobe and have a cortical involvement, as seen in this case. However, the absence of enhancement and the presence of a non-enhancing tumor are not specific indicators of 1p/19q co-deletion status. Given the frontal lobe involvement and cortical involvement, there's a possibility of 1p/19q co-deletion, but it's not definitive without molecular or histological evidence.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "idh_status"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.6
+  },
+  "grade": {
+    "reasoning": "The tumor is non-enhancing, has a relatively small volume (10.056 mL), and lacks features such as necrosis, ependymal invasion, and deep white matter invasion. These characteristics are more typical of lower-grade gliomas. Given the IDH mutation status predicted, a grade 2 or 3 is more likely. The absence of significant mass effect or necrosis leans towards a lower grade.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "Enhancement Quality",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 2,
+    "confidence": 0.7
+  },
+  "subject_id": "UCSF-PDGM-305"
+}

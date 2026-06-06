@@ -1,0 +1,47 @@
+{
+  "id": "patient_0032",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient's age (64 years) and the presence of a large, enhancing tumor with significant mass effect (midline shift of 3.56 mm, 'CET Crosses midline': True, 'Edema crosses midline': True) and necrosis (Proportion Necrosis: 14.42%) are more typical of glioblastoma, IDH-wildtype. The tumor's aggressive features, such as ependymal invasion and deep white matter invasion, also support this. IDH-mutant gliomas are more commonly associated with younger age and less aggressive features at presentation.",
+      "supporting_features": [
+        "age_years",
+        "CET Crosses midline",
+        "Edema crosses midline",
+        "Proportion Necrosis",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "IDH-wildtype gliomas are less likely to have 1p/19q co-deletion. Given the prediction of IDH-wildtype status with high confidence, it is reasonable to infer that the tumor is unlikely to be 1p/19q codeleted. The presence of necrosis and the tumor's aggressive features further support a diagnosis more aligned with glioblastoma, which is typically non-codeleted.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Necrosis",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits aggressive features such as significant necrosis (Proportion Necrosis: 14.42%), large size (Total tumor volume: 225.976 mL), marked enhancement, ependymal invasion, and deep white matter invasion. These characteristics are typical of a high-grade glioma. The presence of necrosis, in particular, is a hallmark of glioblastoma, WHO grade 4.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Total tumor volume (mL)",
+        "Enhancement Quality",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "UCSF-PDGM-303"
+}

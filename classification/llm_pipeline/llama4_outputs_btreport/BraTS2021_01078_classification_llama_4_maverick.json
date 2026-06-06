@@ -1,0 +1,48 @@
+{
+  "id": "patient_0995",
+  "predictions": [
+    {
+      "type": "IDH Mutation Status",
+      "reasoning": "The patient's age (49 years) and the presence of a large, enhancing tumor with significant mass effect (midline shift, ventricular asymmetry, and ependymal invasion) are more typical of IDH wildtype glioblastoma. The tumor's characteristics, such as being solitary, having a large size (Lesion Sizes APxTVxCC: 4.4x4.8x5.5 cm), and showing mild enhancement, are consistent with glioblastoma. IDH mutant gliomas are more commonly associated with younger age and less aggressive features. The presence of necrosis (Proportion Necrosis: 31.24%) and significant edema (Proportion of Oedema: 57.12%) also supports a more aggressive tumor type, typically seen in IDH wildtype glioblastoma.",
+      "supporting_features": [
+        "age_years",
+        "Lesion Sizes APxTVxCC (cm)",
+        "Proportion Necrosis",
+        "Proportion of Oedema",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion",
+        "CET Crosses midline"
+      ],
+      "contradicting_features": [],
+      "prediction": "wildtype",
+      "confidence": 0.85
+    },
+    {
+      "type": "1p/19q Co-deletion Status",
+      "reasoning": "IDH mutant gliomas are more likely to have 1p/19q co-deletion, but the patient is predicted to have an IDH wildtype tumor based on the first prediction. Therefore, the likelihood of 1p/19q co-deletion is low. The tumor's aggressive features and lack of characteristics typical of oligodendrogliomas (e.g., calcifications, which are not available but typically associated with 1p/19q co-deleted tumors) support the prediction of non-codeleted status.",
+      "supporting_features": [
+        "age_years",
+        "Proportion Enhancing",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [],
+      "prediction": "non-codeleted",
+      "confidence": 0.8
+    },
+    {
+      "type": "CNS WHO Grade",
+      "reasoning": "The tumor's large size, significant mass effect (midline shift, ventricular asymmetry), presence of necrosis (Proportion Necrosis: 31.24%), and mild enhancement are characteristic of a high-grade glioma. The presence of ependymal invasion and significant edema also supports a high-grade tumor. Given the predicted IDH wildtype status, the most likely diagnosis is glioblastoma, which corresponds to WHO grade 4.",
+      "supporting_features": [
+        "Lesion Sizes APxTVxCC (cm)",
+        "Proportion Necrosis",
+        "midline_shift_present",
+        "Ependymal (ventricular) Invasion",
+        "CET Crosses midline"
+      ],
+      "contradicting_features": [],
+      "prediction": 4,
+      "confidence": 0.9
+    }
+  ],
+  "subject_id": "BraTS2021_01078"
+}

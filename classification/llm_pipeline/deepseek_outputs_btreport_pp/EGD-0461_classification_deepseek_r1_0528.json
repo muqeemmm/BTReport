@@ -1,0 +1,60 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.55,
+    "contradicting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean"
+    ],
+    "prediction": "wildtype",
+    "reasoning": "The patient is 42 years old, which is younger than typical for IDH-wildtype glioblastoma. However, IDH-wildtype gliomas can occur at any age. The tumor is multifocal, which is more common in IDH-wildtype tumors. Enhancement is mild, which is atypical for IDH-wildtype glioblastoma but can occur. The T2-FLAIR mismatch sign is absent (T2-FLAIR Mismatch Present = 0.0), which strongly argues against IDH-mutant astrocytoma. The T2-FLAIR mismatch score and degree are low, further supporting absence of mismatch. Central core T2 mean is higher than FLAIR mean, which is inconsistent with IDH-mutant astrocytoma. Peripheral rim FLAIR mean is lower than central core FLAIR mean, which is not typical for IDH-mutant tumors. Overall, the absence of T2-FLAIR mismatch and multifocality suggest IDH-wildtype, but mild enhancement and younger age introduce uncertainty.",
+    "supporting_features": [
+      "age_years",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "T2-FLAIR Mismatch Degree",
+      "Central Core T2 Mean",
+      "Central Core FLAIR Mean",
+      "Peripheral Rim FLAIR Mean"
+    ]
+  },
+  "integrated_diagnosis": "Glioblastoma, IDH-wildtype",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Cortical involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is located in the temporal-cortex region with cortical involvement, which is typical for oligodendrogliomas. However, oligodendrogliomas are usually IDH-mutant and 1p/19q codeleted. Since IDH status is predicted as wildtype, 1p/19q codeletion is unlikely. Additionally, the tumor is multifocal, which is less common in oligodendrogliomas. The absence of deep white matter invasion and ependymal invasion does not strongly argue for or against codeletion. The mild enhancement is atypical for oligodendrogliomas, which often show minimal enhancement. Given the IDH-wildtype prediction, 1p/19q is likely non-codeleted.",
+    "supporting_features": [
+      "idh.prediction",
+      "Multifocal or Multicentric",
+      "Enhancement Quality",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ]
+  },
+  "overall_comment": "The tumor is multifocal, midline, and involves the temporal cortex. Absence of T2-FLAIR mismatch suggests IDH-wildtype. Mild enhancement and younger age introduce uncertainty in IDH status. Given IDH-wildtype prediction, 1p/19q is non-codeleted. Grade 4 is assigned based on necrosis proportion and enhancement.",
+  "subject_id": "EGD-0461",
+  "who_grade": {
+    "confidence": 0.7,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The tumor shows necrosis (Proportion Necrosis = 5.21%) and enhancement (Proportion Enhancing = 9.09%), which are features of glioblastoma (grade 4). The necrosis proportion is above the threshold for grade 4. Enhancement is mild, which might suggest lower grade, but necrosis is a key feature. The tumor volume is large (Total tumor volume = 54.015 mL), supporting high grade. Multifocality is also associated with higher grade. Absence of deep white matter invasion and ependymal invasion do not contradict grade 4.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Total tumor volume (mL)",
+      "Multifocal or Multicentric"
+    ]
+  }
+}

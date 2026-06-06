@@ -1,0 +1,40 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of a large, multifocal tumor with significant edema and mass effect (midline shift, ventricular enlargement) along with ependymal invasion and deep white matter invasion suggests a high-grade glioma. The tumor's location in the temporal cortex and its multifocal nature are more commonly associated with IDH wildtype gliomas, which are typically more aggressive and have a worse prognosis. The enhancement quality being 'Mild' does not strongly indicate IDH mutation status directly, but the overall aggressive features lean towards IDH wildtype.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "midline_shift_present",
+      "Tumor Location"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "IDH mutant gliomas are more likely to have 1p/19q codeletion, but given the prediction of IDH wildtype status with high confidence, the likelihood of 1p/19q codeletion is low. The aggressive features and lack of specific indicators for codeletion in the provided metadata support this inference.",
+    "supporting_features": [
+      "idh_status"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.85
+  },
+  "cns_who_grade": {
+    "reasoning": "The presence of a multifocal tumor with significant mass effect, ependymal invasion, and deep white matter invasion are indicative of a high-grade glioma. The tumor's large size, mild enhancement, and the presence of necrosis (implied by the presence of NCR volume) further support a high-grade classification. Given the IDH wildtype prediction, a grade 4 glioma is more likely than grade 2 or 3.",
+    "supporting_features": [
+      "Multifocal or Multicentric",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion",
+      "NCR Volume (mL)",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00612"
+}

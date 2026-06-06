@@ -1,0 +1,42 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of a mildly enhancing tumor with a significant proportion of edema (94.24%) and necrosis (4.69%) suggests a high-grade glioma. IDH wildtype gliomas are more likely to be high-grade and show necrosis and enhancement. The tumor's location in the frontal lobe and involvement of eloquent areas also aligns with characteristics often seen in IDH wildtype glioblastomas. While there's no direct evidence from the metadata that conclusively determines IDH status, the presence of necrosis and enhancement favors IDH wildtype.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Tumor Location",
+      "Cortical involvement",
+      "Eloquent Brain Involvement"
+    ],
+    "contradicting_features": [
+      "n_slices_with_shift",
+      "midline_shift_present"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "1p/19q co-deletion is more commonly associated with oligodendrogliomas, which typically present with calcifications and are less likely to show significant necrosis or enhancement. The given metadata indicates a mildly enhancing tumor with necrosis, which is less typical for codeleted tumors. The absence of features like calcification (not directly assessed but inferred from the lack of mention) and the presence of necrosis and enhancement suggest a lower likelihood of 1p/19q co-deletion.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 4.69%) and a significant enhancing component (Proportion Enhancing: 1.07%, though this is a small percentage, the presence of any enhancement is notable) along with a large edema volume (ED Volume: 38.558 mL) suggests a high-grade tumor. The WHO grade is likely to be high (3 or 4). Given the necrosis and the clinical presentation, grade 4 is more likely than grade 3.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "ED Volume (mL)",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "EGD-0068"
+}

@@ -1,0 +1,46 @@
+{
+  "subject_id": "BraTS2021_00735",
+  "idh": {
+    "reasoning": "The patient is 48 years old. While IDH-mutant gliomas are more common in younger adults, they can occur at this age. The tumor is solitary, located in the temporal-cortex region, and shows deep white matter invasion. There is significant edema (92.59% of total volume). The enhancement is mild and solid. These features are not strongly indicative of either IDH-mutant or IDH-wildtype status based solely on morphology and location. However, IDH-wildtype tumors are often larger and more infiltrative, while IDH-mutant tumors tend to be smaller and less infiltrative. The total tumor volume (29.76 mL) and ED volume (27.554 mL) are substantial, suggesting a potentially aggressive tumor, which could lean towards IDH-wildtype. Conversely, the relatively mild enhancement might favor IDH-mutant. Given the age (not extremely young), large volume, significant edema, and deep WM invasion without strong features favoring mutant status (like cystic changes or minimal edema), I lean towards wildtype but with low confidence due to the lack of definitive features.",
+    "supporting_features": [
+      "age_years",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The patient is 48 years old. 1p/19q co-deletion is almost exclusively found in IDH-mutant diffuse astrocytomas, grade 2 or 3 (oligodendrogliomas). Given the prediction of IDH-wildtype status above, the likelihood of 1p/19q co-deletion is extremely low. Even if the IDH status were uncertain or potentially mutant, the available MRI metadata provides no specific features suggestive of co-deletion (e.g., calcification, which is not assessed here anyway). Therefore, based on the likely IDH status and lack of any supporting features from the provided metadata, the prediction is non-codeleted.",
+    "supporting_features": [
+      "idh"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.95
+  },
+  "who_grade": {
+    "reasoning": "The patient is 48 years old with a solitary tumor in the temporal cortex region showing deep white matter invasion and significant edema (92.59% of total volume). The total tumor volume is 29.76 mL and ED volume is 27.554 mL. Cortical involvement is present. Enhancement is mild but solid ('Thickness of enhancing margin': 'Solid'). Eloquent brain involvement ('Vision') is noted. These features suggest an infiltrative glioma with mass effect and potential neurological impact ('Eloquent Brain Involvement'). The combination of deep white matter invasion, cortical involvement, significant edema, substantial size, and eloquent brain involvement points towards a higher grade glioma (Grade 3 or 4). While mild enhancement might sometimes be seen in Grade 3 tumors, solid enhancement combined with deep invasion and eloquent involvement often suggests Grade 4 (glioblastoma). Given the overall picture of aggressive infiltration and mass effect in an adult patient without features strongly suggesting a lower grade lesion (like minimal edema or lack of deep invasion), Grade 4 seems most likely.",
+    "supporting_features": [
+      "Deep WM invasion",
+      "Cortical involvement",
+      "ED Volume (mL)",
+      "Total tumor volume (mL)",
+      "Eloquent Brain Involvement",
+      "Thickness of enhancing margin"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.75
+  },
+  "integrated_diagnosis": "",
+  "consistency_check_passed": true,
+  "overall_comment": ""
+}

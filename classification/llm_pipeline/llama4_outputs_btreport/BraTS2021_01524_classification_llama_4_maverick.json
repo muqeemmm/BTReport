@@ -1,0 +1,51 @@
+{
+  "id": "patient_0090",
+  "predictions": [
+    {
+      "type": "IDH mutation status",
+      "reasoning": "The patient is young (23 years) with a large, non-enhancing tumor (Total tumor volume = 115.032 mL, Enhancement Quality = 'None', Proportion Enhancing = 0.0) involving multiple lobes (temporal, cortex, parietal, insula, frontal_lobe) and deep structures. The presence of ependymal invasion and deep white matter invasion suggests an aggressive tumor. IDH-mutant gliomas are more common in younger patients and often present with non-enhancing features. However, the absence of enhancement and large necrotic proportion (Proportion Necrosis = 70.97) could also be seen in IDH-wildtype glioblastomas, which are typically more aggressive. Given the age and some features like non-enhancement, IDH mutation is considered likely.",
+      "supporting_features": [
+        "age_years",
+        "Enhancement Quality",
+        "Proportion Enhancing",
+        "Proportion Necrosis"
+      ],
+      "contradicting_features": [
+        "Proportion Necrosis"
+      ],
+      "prediction": "mutant",
+      "confidence": 0.7
+    },
+    {
+      "type": "1p/19q co-deletion status",
+      "reasoning": "IDH-mutant gliomas can be further classified into 1p/19q codeleted (oligodendrogliomas) and non-codeleted (astrocytomas). The tumor's involvement of multiple lobes and deep structures, along with ependymal invasion, is noted. While the presence of cortical involvement and a large non-enhancing tumor could be seen in oligodendrogliomas, the significant necrosis (Proportion Necrosis = 70.97) is less typical for oligodendrogliomas. Given the likelihood of IDH mutation and the absence of specific features strongly indicating 1p/19q co-deletion (such as calcifications, which are not available), a cautious prediction leans towards non-codeleted due to the high necrosis proportion, which is more characteristic of astrocytomas.",
+      "supporting_features": [
+        "Proportion Necrosis",
+        "Cortical involvement",
+        "Ependymal (ventricular) Invasion"
+      ],
+      "contradicting_features": [
+        "Cortical involvement"
+      ],
+      "prediction": "non-codeleted",
+      "confidence": 0.65
+    },
+    {
+      "type": "CNS WHO grade",
+      "reasoning": "The tumor exhibits aggressive features such as large size (Total tumor volume = 115.032 mL), significant necrosis (Proportion Necrosis = 70.97), ependymal invasion, and deep white matter invasion. These features are characteristic of high-grade gliomas. Although the tumor is non-enhancing, the presence of necrosis and significant mass effect (midline shift, asymmetrical ventricles) supports a high-grade classification. Given the likely IDH mutation status and the aggressive features, a grade of 4 is plausible if it were IDH-wildtype, but for IDH-mutant, it could be grade 3 or 4. The high necrosis proportion and significant mass effect lean towards grade 4.",
+      "supporting_features": [
+        "Total tumor volume (mL)",
+        "Proportion Necrosis",
+        "Ependymal (ventricular) Invasion",
+        "Deep WM invasion",
+        "midline_shift_present"
+      ],
+      "contradicting_features": [
+        "Enhancement Quality"
+      ],
+      "prediction": 4,
+      "confidence": 0.8
+    }
+  ],
+  "subject_id": "BraTS2021_01524"
+}

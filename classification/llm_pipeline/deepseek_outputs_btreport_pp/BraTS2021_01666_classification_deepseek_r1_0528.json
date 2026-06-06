@@ -1,0 +1,49 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (20 years old), which is more typical for IDH-mutant gliomas. The tumor is non-enhancing ('Enhancement Quality': 'None'), which is common in IDH-mutant tumors. There is a T2-FLAIR mismatch sign present ('T2-FLAIR Mismatch Present': 1.0) with a high mismatch score (0.91), which is highly specific for IDH-mutant astrocytomas. The tumor involves eloquent areas ('Eloquent Brain Involvement': 'Speech motor and Vision') and has deep white matter invasion ('Deep WM invasion': 'Present'), which are consistent with diffuse gliomas but not specific to mutation status. The contradicting feature is the young age, which while common in IDH-mutant, does not rule out wildtype entirely.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 2",
+  "one_p_nineteen_q": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor is IDH-mutant (predicted above), and IDH-mutant gliomas are typically 1p/19q non-codeleted astrocytomas. The tumor involves cortical regions ('Region Proportions' includes cortex and insula) and frontal lobe predominance, which is more typical for astrocytomas than oligodendrogliomas. Oligodendrogliomas often have more circumscribed borders and less edema, but here edema is extensive ('ED Volume (mL)': 75.609, 'Proportion of Oedema': 55.71%). The T2-FLAIR mismatch sign is present, which is specific for astrocytomas and argues against oligodendroglioma. However, the tumor involves multiple lobes including frontal and temporal, which can be seen in both, but oligodendrogliomas often have frontal predominance. The contradicting feature is the frontal lobe involvement, which is common in oligodendrogliomas.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "ED Volume (mL)",
+      "Proportion of Oedema"
+    ]
+  },
+  "overall_comment": "Based on the MRI metadata, the tumor is non-enhancing, shows T2-FLAIR mismatch, and occurs in a young patient, strongly suggesting IDH-mutant astrocytoma. The extensive edema and involvement of eloquent areas support a diffuse glioma. The absence of enhancement and necrosis suggests lower grade, but WHO grade cannot be definitively determined without histology; however, based on non-enhancement and lack of necrosis, grade 2 is most likely.",
+  "subject_id": "BraTS2021_01666",
+  "who_grade": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "prediction": 2,
+    "reasoning": "The tumor is non-enhancing ('Enhancement Quality': 'None') with no enhancing components ('n_components_enhancing': {'n_components': 0}), and no necrosis ('Proportion Necrosis': 44.29% is likely mislabeled as necrosis volume is 0 in 'volumes_ideal_midline' for ET, but NCR volume is present; however, 'ET Volume (mL)' is 0.0, and 'Proportion Necrosis' might refer to non-enhancing core which is not necrotic in grade 2). Typically, WHO grade 2 gliomas are non-enhancing, grade 3 may show patchy enhancement, and grade 4 shows ring enhancement with necrosis. Here, no enhancement or necrosis suggests grade 2. However, the tumor has ependymal invasion ('Ependymal (ventricular) Invasion': 'Present') and involves eloquent areas, which may suggest higher grade, but these features can occur in grade 2. The contradicting features are the deep invasion and ependymal involvement, which are more common in higher grades.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "n_components_enhancing",
+      "ET Volume (mL)"
+    ]
+  }
+}

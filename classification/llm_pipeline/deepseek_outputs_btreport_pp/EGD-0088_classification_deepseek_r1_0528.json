@@ -1,0 +1,44 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.75,
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "mutant",
+    "reasoning": "The T2-FLAIR mismatch sign is present (T2-FLAIR Mismatch Present: 1.0) with a high mismatch score (0.745), which is strongly associated with IDH-mutant astrocytomas. Additionally, the tumor is located in the temporal cortex, which is a common site for IDH-mutant gliomas. However, the patient's age (71 years) is more typical for IDH-wildtype gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant, CNS WHO grade 4",
+  "one_p_nineteen_q": {
+    "confidence": 0.65,
+    "contradicting_features": [
+      "Tumor Location",
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "IDH-mutant astrocytomas typically lack 1p/19q co-deletion. The tumor location in the temporal cortex and involvement of eloquent vision areas are more consistent with astrocytic tumors rather than oligodendrogliomas, which often involve frontal lobes and are less likely to involve eloquent areas. However, without direct molecular testing, there is some uncertainty.",
+    "supporting_features": [
+      "IDH mutation status prediction"
+    ]
+  },
+  "overall_comment": "The tumor shows features suggestive of IDH-mutant astrocytoma despite advanced age. T2-FLAIR mismatch sign supports IDH-mutant status. Grade 4 is assigned due to necrosis presence and enhancement.",
+  "subject_id": "EGD-0088",
+  "who_grade": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 0.55%) and enhancement (Proportion Enhancing: 8.21%) are features of high-grade glioma. The thick enhancing margin (>3mm) also supports grade 4. Mild enhancement quality slightly contradicts but necrosis is a stronger indicator.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion Enhancing",
+      "Thickness of enhancing margin"
+    ]
+  }
+}

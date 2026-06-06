@@ -1,0 +1,44 @@
+{
+  "idh_status": {
+    "reasoning": "The patient's age (32 years) and the tumor's characteristics (mildly enhancing, frontal lobe location, cortical involvement) are more typical of IDH-mutant gliomas. IDH-mutant gliomas are more common in younger adults and often have a better prognosis. The presence of cortical involvement and the tumor being solitary also align more with IDH-mutant gliomas, which are known to frequently involve the frontal lobe.",
+    "supporting_features": [
+      "age_years",
+      "Cortical involvement",
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.8
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor is located in the frontal lobe and involves the cortex, which is consistent with 1p/19q codeleted gliomas. However, the absence of specific features like ependymal invasion or deep white matter invasion does not strongly support or refute codeletion status. Given the IDH mutation status is predicted as mutant, and IDH-mutant gliomas can be either codeleted or non-codeleted, we lean towards codeleted due to the frontal lobe location and cortical involvement, typical of oligodendrogliomas which are IDH-mutant and 1p/19q codeleted.",
+    "supporting_features": [
+      "Tumor Location",
+      "Cortical involvement",
+      "idh_status"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion"
+    ],
+    "prediction": "codeleted",
+    "confidence": 0.7
+  },
+  "grade": {
+    "reasoning": "The tumor shows mild enhancement and has a significant proportion of edema (95.81%) compared to the enhancing and necrotic components. The presence of enhancement and the size of the tumor suggest a higher grade. However, the lack of significant necrosis (Proportion Necrosis: 0.77) and the mild enhancement quality might suggest a lower grade. Given the patient's age and the IDH-mutant status, which is often associated with lower-grade gliomas initially, but considering the size and the presence of enhancement, a grade 3 is plausible. The absence of aggressive features like high necrosis proportion or significant midline shift argues against grade 4.",
+    "supporting_features": [
+      "age_years",
+      "idh_status",
+      "Proportion of Oedema",
+      "Proportion Enhancing",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "ED Volume (mL)",
+      "Total tumor volume (mL)"
+    ],
+    "prediction": 3,
+    "confidence": 0.65
+  },
+  "subject_id": "BraTS2021_01663"
+}

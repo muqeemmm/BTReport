@@ -1,0 +1,44 @@
+{
+  "subject_id": "BraTS2021_00705",
+  "idh": {
+    "reasoning": "The available metadata provides limited information to directly infer IDH mutation status. Features like tumor size (16.62 mL), location (frontal lobe cortex), and enhancement pattern (marked, >3mm margin) are non-specific regarding IDH status. The absence of deep white matter invasion and ependymal invasion might slightly favor IDH-mutant, but these are not definitive. The tumor is solitary and enhancing, which can be seen in both IDH-mutant and wildtype gliomas. Given the lack of specific features strongly associated with either IDH-mutant (e.g., smaller size, cystic components, specific locations like temporal lobe) or IDH-wildtype (e.g., larger size, older age - age not provided, deep white matter invasion), a prediction is difficult. However, the relatively small size (16.62 mL) and cortical location could lean slightly towards IDH-mutant, which are more common in younger patients and often present as smaller, more focal lesions initially. Without more specific imaging features or clinical data (like age), this remains uncertain.",
+    "supporting_features": [
+      "Total tumor volume (mL)",
+      "Tumor Location",
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Thickness of enhancing margin"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.55
+  },
+  "one_p_nineteen_q": {
+    "reasoning": "The provided metadata lacks any features typically associated with 1p/19q co-deletion, such as IDH mutation status (which is a prerequisite for co-deletion), specific tumor locations (often frontal lobe), or characteristic imaging appearances beyond general glioma features. The tumor is enhancing with a thick margin (>3mm), which is not specifically indicative of co-deletion status. The absence of information about the underlying IDH status makes predicting co-deletion impossible based solely on these MRI features.",
+    "supporting_features": [],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.5
+  },
+  "who_grade": {
+    "reasoning": "The tumor exhibits marked enhancement with a thick (>3mm) margin and cortical involvement, suggesting aggressive behavior. The total volume is 16.62 mL, which is moderately sized for a diffuse glioma. While there is no deep white matter invasion or ependymal invasion noted, the marked enhancement and cortical involvement point towards at least Grade 3 or 4. The presence of cortical involvement and marked enhancement are key features considered in grading according to WHO CNS5 criteria. Given the marked enhancement and cortical involvement without clear signs of deep invasion or significant mass effect causing midline shift beyond 'minimal', Grade 4 seems plausible but not definitively confirmed without histology or molecular markers like IDH/1p/19q status. Grade 3 (Anaplastic Astrocytoma/Oligodendroglioma) is also possible given the enhancement pattern and size without definitive high-grade features like necrosis or significant mass effect/invasion seen in many Grade 4 tumors (though necrosis proportion is low at 3.33%). Grade 2 is unlikely given the marked enhancement and cortical involvement.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Cortical involvement",
+      "Thickness of enhancing margin",
+      "Proportion Enhancing"
+    ],
+    "contradicting_features": [
+      "Deep WM invasion",
+      "Ependymal (ventricular) Invasion",
+      "midline_shift_present"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "integrated_diagnosis": "IDH-mutant, non-codeleted, WHO Grade 4 diffuse astrocytoma.",
+  "consistency_check_passed": true,
+  "overall_comment": "The patient has a solitary frontal lobe glioma with marked enhancement and cortical involvement but no deep white matter or ependymal invasion noted on MRI sequences provided."
+}

@@ -1,0 +1,51 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient's age (42 years) and the presence of a large, non-enhancing tumor with significant necrosis (Proportion Necrosis: 53.62%) and edema (Proportion of Oedema: 46.38%) could suggest a high-grade glioma. The absence of enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) is more commonly seen in IDH-mutant gliomas, particularly in the context of a diffuse glioma. However, the presence of necrosis and the large size of the tumor are more typical of IDH-wildtype glioblastomas. The tumor's involvement of multiple regions including the cortex, frontal lobe, temporal lobe, and insula, along with ependymal invasion and deep white matter invasion, suggests an aggressive tumor. Given these mixed features, the prediction leans towards IDH wildtype due to the aggressive features and necrosis, despite the lack of enhancement.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema",
+      "Ependymal (ventricular) Invasion",
+      "Deep WM invasion"
+    ],
+    "contradicting_features": [
+      "Cortical involvement"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor's location and characteristics (involvement of cortex, frontal lobe, temporal lobe, and insula, with ependymal invasion) do not strongly suggest a typical oligodendroglioma profile, which is often associated with 1p/19q co-deletion. The absence of enhancement and the presence of necrosis are not typical for oligodendrogliomas. Therefore, based on the available metadata, the likelihood of 1p/19q co-deletion appears low.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [
+      "Cortical involvement",
+      "Region Proportions"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The presence of significant necrosis (Proportion Necrosis: 53.62%), large tumor size (Total tumor volume: 175.3 mL), and ependymal invasion suggest a high-grade glioma. The absence of enhancement is less typical for glioblastoma but can be seen in IDH-wildtype glioblastoma. The tumor's aggressive features (large size, necrosis, ependymal invasion) support a high-grade classification. Given the necrosis and large size, a grade of 4 is more likely than grade 2 or 3.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Total tumor volume (mL)",
+      "Ependymal (ventricular) Invasion",
+      "n_slices_with_shift",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.85
+  },
+  "subject_id": "BraTS2021_01515"
+}

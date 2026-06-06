@@ -1,0 +1,36 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7068404800950019, indicating a significant mismatch. This feature is strongly associated with IDH mutant gliomas. The patient's age (39 years) is also within a range more commonly associated with IDH mutant gliomas.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is typically associated with IDH mutant astrocytomas rather than oligodendrogliomas, which are more likely to have 1p/19q co-deletion. The absence of specific features like calcifications (not assessed here) and the presence of a significant T2-FLAIR mismatch score suggest that 1p/19q co-deletion is less likely. However, the definitive determination of 1p/19q co-deletion status requires molecular testing. Based on the available MRI metadata, the likelihood of 1p/19q co-deletion is considered low.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor shows significant mass effect with midline shift (mean_shift_mm = 3.8838709677419354, max_shift_mm = 12.0), ependymal invasion, and a large necrotic volume (Proportion Necrosis = 35.68%). These features are indicative of a high-grade glioma. The presence of necrosis and significant mass effect are more commonly associated with WHO grade 4 gliomas. The patient's age and the tumor's aggressive features further support this classification.",
+    "supporting_features": [
+      "n_slices_with_shift",
+      "mean_shift_mm",
+      "max_shift_mm",
+      "Ependymal (ventricular) Invasion",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_01749"
+}

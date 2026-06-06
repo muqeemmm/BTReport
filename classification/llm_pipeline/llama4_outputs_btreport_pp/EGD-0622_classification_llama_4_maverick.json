@@ -1,0 +1,38 @@
+{
+  "idh_mutation_status": {
+    "reasoning": "The patient's age (75 years) and the presence of a marked enhancement quality suggest a higher likelihood of IDH wildtype status, as IDH mutant gliomas are more commonly associated with younger patients and less aggressive imaging features. The absence of T2-FLAIR mismatch (T2-FLAIR Mismatch Present: 0.0) also argues against IDH mutant astrocytoma. The presence of necrosis (Proportion Necrosis: 25.22%) and marked enhancement further supports the likelihood of a more aggressive tumor, typically associated with IDH wildtype status.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "T2-FLAIR Mismatch Present",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "wildtype",
+    "confidence": 0.85
+  },
+  "codeletion_status": {
+    "reasoning": "The presence of a marked enhancement and necrosis is less typical for 1p/19q codeleted tumors, which often present with more homogeneous enhancement and less necrosis. The IDH wildtype status predicted above further reduces the likelihood of 1p/19q codeletion, as codeletion is typically associated with IDH mutant tumors. Therefore, the tumor is likely non-codeleted.",
+    "supporting_features": [
+      "idh_mutation_status",
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "cns_who_grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 25.22%), marked enhancement, and the patient's age (75 years) are indicative of a high-grade glioma. The tumor's aggressive features, such as significant necrosis and marked enhancement, are more characteristic of CNS WHO grade 4. The predicted IDH wildtype status further supports this, as IDH wildtype glioblastomas are typically grade 4.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Necrosis",
+      "idh_mutation_status"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "EGD-0622"
+}

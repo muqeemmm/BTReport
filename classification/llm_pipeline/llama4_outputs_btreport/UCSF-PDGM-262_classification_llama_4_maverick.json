@@ -1,0 +1,48 @@
+{
+  "IDH mutation status": {
+    "reasoning": "The patient is 44 years old with a non-enhancing tumor (Enhancement Quality: None, Proportion Enhancing: 0.0) located in the left temporal lobe, cortex, and insula. The tumor is large (ED Volume: 105.018 mL) and causes significant mass effect (midline shift present, n_slices_with_shift: 87, max_shift_mm: 9.0). Adult-type diffuse gliomas in this age group are more likely to be IDH wildtype if they are high-grade and have significant mass effect. The lack of enhancement does not strongly indicate IDH status as both IDH mutant and wildtype gliomas can be non-enhancing. However, the significant mass effect and large size are more typical of aggressive tumors, which are more likely to be IDH wildtype in this age group.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "n_slices_with_shift",
+      "max_shift_mm"
+    ],
+    "contradicting_features": [
+      "Tumor Location"
+    ],
+    "prediction": "wildtype",
+    "confidence": 0.7
+  },
+  "1p/19q co-deletion status": {
+    "reasoning": "The tumor is located in the left temporal lobe, cortex, and insula, and is non-enhancing. IDH-mutant gliomas with 1p/19q co-deletion often involve the frontal lobe and are less commonly associated with significant mass effect at presentation compared to IDH wildtype gliomas. Given the temporal lobe involvement and significant mass effect, while not definitive, the features slightly lean away from a typical 1p/19q co-deleted profile. However, the prediction is challenging without direct evidence of IDH mutation status or other molecular markers.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality",
+      "midline_shift_present"
+    ],
+    "contradicting_features": [
+      "age_years"
+    ],
+    "prediction": "non-codeleted",
+    "confidence": 0.6
+  },
+  "CNS WHO grade": {
+    "reasoning": "The tumor is large (ED Volume: 105.018 mL) and causes significant mass effect (midline shift present, max_shift_mm: 9.0), indicating a potentially high-grade lesion. The lack of enhancement (Enhancement Quality: None) does not necessarily indicate a low grade as some high-grade gliomas can be non-enhancing. However, the significant mass effect and large size are concerning for a high-grade tumor. Given the age of the patient and the aggressive features, a grade 4 is plausible. The absence of necrosis (Proportion Necrosis: 0.0) and enhancement argues against grade 4, but these features are not always present.",
+    "supporting_features": [
+      "ED Volume (mL)",
+      "midline_shift_present",
+      "max_shift_mm",
+      "age_years"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ],
+    "prediction": 4,
+    "confidence": 0.65
+  },
+  "subject_id": "UCSF-PDGM-262"
+}

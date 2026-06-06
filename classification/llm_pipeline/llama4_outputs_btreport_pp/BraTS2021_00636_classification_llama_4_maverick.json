@@ -1,0 +1,36 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of T2-FLAIR mismatch is highly suggestive of IDH mutation. The 'T2-FLAIR Mismatch Present' field is 1.0, and the 'T2-FLAIR Mismatch Score' is 0.7801821129926784, indicating a significant mismatch. This feature is strongly associated with IDH-mutant gliomas. The patient's age (42 years) is also within the range where IDH mutations are more common. Therefore, based on the T2-FLAIR mismatch and age, the glioma is likely IDH mutant.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "confidence": 0.95
+  },
+  "codeletion_status": {
+    "reasoning": "The prediction of 1p/19q co-deletion status is challenging without direct molecular information. However, the presence of a T2-FLAIR mismatch is more commonly associated with IDH-mutant astrocytomas rather than oligodendrogliomas, which are typically 1p/19q co-deleted. The tumor's imaging characteristics, such as being solitary and having a significant enhancing component, do not strongly suggest a specific co-deletion status. Given the lack of specific indicators for 1p/19q co-deletion in the provided metadata, and considering the T2-FLAIR mismatch, it is less likely that the tumor is co-deleted.",
+    "supporting_features": [
+      "T2-FLAIR Mismatch Present",
+      "T2-FLAIR Mismatch Score"
+    ],
+    "contradicting_features": [],
+    "prediction": "non-codeleted",
+    "confidence": 0.8
+  },
+  "grade": {
+    "reasoning": "The tumor shows marked enhancement and has a significant necrotic component (Proportion Necrosis: 5.42%), which are features often associated with higher-grade gliomas. The presence of necrosis and enhancement typically correlates with WHO grade 4 gliomas. Additionally, the tumor's large size and involvement of multiple regions (frontal lobe, cortex, insula, and parietal lobes) suggest an aggressive tumor. The age of the patient (42 years) and the presence of necrosis further support a higher grade.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Enhancement Quality",
+      "Lesion Sizes APxTVxCC (cm)",
+      "age_years"
+    ],
+    "contradicting_features": [],
+    "prediction": 4,
+    "confidence": 0.9
+  },
+  "subject_id": "BraTS2021_00636"
+}

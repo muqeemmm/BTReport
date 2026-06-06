@@ -1,0 +1,39 @@
+{
+  "idh_status": {
+    "reasoning": "The presence of a non-enhancing tumor with significant edema and necrosis (Proportion of Oedema: 88.35%, Proportion Necrosis: 11.65%) in the parietal-cortex region, along with the absence of ependymal invasion and deep white matter invasion, suggests a glioma. The lack of enhancement (Enhancement Quality: None, Proportion Enhancing: 0.0) is more commonly associated with IDH-mutant gliomas, which often present without significant enhancement. However, the presence of necrosis could also suggest a higher grade tumor, which is sometimes associated with IDH-wildtype gliomas. Despite this, the overall profile leans towards an IDH-mutant glioma due to the non-enhancing nature and the presence of significant edema.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Enhancing",
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Proportion Necrosis"
+    ],
+    "prediction": "mutant",
+    "confidence": 0.7
+  },
+  "codeletion_status": {
+    "reasoning": "The tumor's location in the parietal-cortex region and its non-enhancing nature could be indicative of an IDH-mutant glioma, which is often associated with 1p/19q co-deletion if it is an oligodendroglioma. However, the absence of specific features like calcifications (not assessed here due to data limitations) makes it difficult to definitively predict co-deletion status based solely on the provided MRI metadata. Given the tumor's characteristics and assuming it is an IDH-mutant glioma, the likelihood of 1p/19q co-deletion is considered. Yet, without direct evidence or specific radiological indicators for co-deletion, this remains a probabilistic inference.",
+    "supporting_features": [
+      "Tumor Location",
+      "Enhancement Quality"
+    ],
+    "contradicting_features": [],
+    "prediction": "codeleted",
+    "confidence": 0.55
+  },
+  "grade": {
+    "reasoning": "The presence of necrosis (Proportion Necrosis: 11.65%) within the tumor is a hallmark of higher-grade gliomas. The significant edema (Proportion of Oedema: 88.35%) and the overall tumor volume also suggest a more aggressive tumor. While the lack of enhancement might suggest a lower grade, the presence of necrosis is a strong indicator of a higher grade, typically grade 4 in the context of adult-type diffuse gliomas. The tumor's characteristics, such as significant necrosis and edema, support a higher grade classification.",
+    "supporting_features": [
+      "Proportion Necrosis",
+      "Proportion of Oedema"
+    ],
+    "contradicting_features": [
+      "Enhancement Quality"
+    ],
+    "prediction": 4,
+    "confidence": 0.8
+  },
+  "subject_id": "EGD-0487"
+}

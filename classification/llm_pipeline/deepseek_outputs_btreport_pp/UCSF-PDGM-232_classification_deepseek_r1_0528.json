@@ -1,0 +1,40 @@
+{
+  "consistency_check_passed": true,
+  "idh": {
+    "confidence": 0.95,
+    "contradicting_features": [],
+    "prediction": "mutant",
+    "reasoning": "The patient is young (22 years old), which is a strong predictor for IDH mutation. Additionally, the tumor is non-enhancing ('Enhancement Quality': 'None') and located in the frontal lobe ('Tumor Location': 'frontal_lobe-cortex region'), both features more common in IDH-mutant gliomas.",
+    "supporting_features": [
+      "age_years",
+      "Enhancement Quality",
+      "Tumor Location"
+    ]
+  },
+  "integrated_diagnosis": "Astrocytoma, IDH-mutant",
+  "one_p_nineteen_q": {
+    "confidence": 0.85,
+    "contradicting_features": [
+      "Eloquent Brain Involvement"
+    ],
+    "prediction": "non-codeleted",
+    "reasoning": "The tumor involves eloquent cortex ('Eloquent Brain Involvement': 'Speech motor and Motor') and lacks deep white matter invasion ('Deep WM invasion': 'Absent'), which are more typical of astrocytomas (non-codeleted) than oligodendrogliomas. However, frontal location ('Tumor Location': 'frontal_lobe-cortex region') is common in both.",
+    "supporting_features": [
+      "Eloquent Brain Involvement",
+      "Deep WM invasion",
+      "Tumor Location"
+    ]
+  },
+  "overall_comment": "Based on the provided metadata, the tumor is classified as Astrocytoma, IDH-mutant. Confidence in IDH mutation is high due to young age and non-enhancing frontal tumor. 1p/19q non-codeleted status is supported by eloquent involvement and absence of deep WM invasion, though frontal location is shared with oligodendrogliomas. Grade cannot be determined from available data.",
+  "subject_id": "UCSF-PDGM-232",
+  "who_grade": {
+    "confidence": 0.55,
+    "contradicting_features": [],
+    "prediction": 2,
+    "reasoning": "The tumor lacks enhancement ('Enhancement Quality': 'None') and necrosis ('Proportion Necrosis': 0.0), which are features of lower-grade gliomas (WHO grade 2). However, without diffusion/perfusion data to assess cellularity or microvascular proliferation, grade assignment has uncertainty.",
+    "supporting_features": [
+      "Enhancement Quality",
+      "Proportion Necrosis"
+    ]
+  }
+}
